@@ -1,25 +1,22 @@
 <template>
-  <div class="flex flex-col items-center justify-center gap-4 h-screen">
-    <h1 class="font-bold text-2xl text-(--ui-primary)">
-      Nuxt UI - Starter
-    </h1>
-
-    <div class="flex items-center gap-2">
-      <UButton
-        label="Documentation"
-        icon="i-lucide-square-play"
-        to="https://ui.nuxt.com/getting-started/installation/nuxt"
-        target="_blank"
-      />
-
-      <UButton
-        label="GitHub"
-        color="neutral"
-        variant="outline"
-        icon="i-simple-icons-github"
-        to="https://github.com/nuxt/ui"
-        target="_blank"
-      />
-    </div>
+  <div>
+    <home-hero />
+    <shared-client-list product="kontyRetail" />
+    <home-features />
+    <shared-statistics product="kontyRetail" />
+    <shared-testimonials product="kontyRetail" />
+    <shared-get-started product="kontyRetail" />
+    <shared-pricing product="kontyRetail" />
+    <shared-contact-form />
+    <home-blog-posts />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Konty - Professional POS System for Restaurants & Retail',
+  description: 'Streamline your business operations with Konty\'s comprehensive point-of-sale solution. Perfect for restaurants and retail stores.',
+  ogTitle: 'Konty - Professional POS System',
+  ogDescription: 'Transform your business with our advanced POS system designed for modern restaurants and retail stores.',
+})
+</script>

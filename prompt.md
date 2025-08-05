@@ -4,11 +4,11 @@ Before integrating any external theme (e.g., from https://themeforest.net/item/m
 
 Instructions:
 
-- Install necessary dependencies that are not already present if needed.
-- Set up layouts: Create a default layout including TopBar, Header, AlertBar, main content slot, and Footer.
-- Implement routing with Nuxt pages (auto-generated from /pages directory).
+- Install necessary dependencies that are not already present (only if needed).
+- Set up layouts: Create a default layout including TopBar, Header, AlertBar, main content slot, and Footer. Use NuxtUI where it is appropriate.
+- Implement routing.
 - Create components as specified below: Categorize as Regular (page-specific), Shared (reusable across pages), or Merged (reusable with a 'product' prop: 'kontyRetail' or 'kontyHospitality' to toggle content/display).
-- Use TypeScript for all code where possible for robustness.
+- Use TypeScript for all code.
 
 Website Structure (Global Elements):
 
