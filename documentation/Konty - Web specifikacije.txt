@@ -1,0 +1,364 @@
+﻿Web specifikacije
+
+
+
+
+
+
+Projekt: Konty POS
+
+
+
+
+
+
+________________
+Sadržaj
+
+
+
+
+
+
+
+
+Struktura web stranice i funkcionalnosti        3
+Sitemapa i kategorizacija        4
+Detaljniji komentari na ključne pageove        7
+Konkurentske i druge web stranice u industriji        17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
+Struktura web stranice i funkcionalnosti 
+________________
+
+
+
+
+U nastavku dokumenta, konceptualno rješenje će biti detaljnije prezentirano, a svaki element detaljnije razjašnjen.
+
+
+Važna napomena
+
+
+Rješenja koja se nalaze u ostatku dokumenta su prije svega okvirna idejna rješenja. Određene funkcionalnosti nisu još precizno definirane te su podložne promjenama i doradama. Od dizajnera se očekuje da uzmu taj koncept s rezervom te u konzultaciji s prezentiranim idejama pronađu vizualno i prezentacijski zadovoljavajuće rješenje.
+	
+
+________________
+
+
+Sitemapa i kategorizacija
+________________
+
+
+
+
+Link na glavnu kategorizaciju nove web stranice - 
+
+
+Taksonomija
+ 
+Važna napomena - ovakva razrada kategorizacije će biti temelj redizajna web stranice i ona je potvrđena. Neke finese će se vjerojatno dorađivati u procesu izrade, ali ovakav layout je očekivan kao finalno rješenje te on zadovoljava sve potrebe stranice u ovoj fazi životnog ciklusa.
+	
+
+Niže slijedi kratko pojašnjenje svakog pagea, a u nastavku dokumenta će oni biti detaljnije razrađeni, zajedno s razradom i pojašnjenje pojedinih komponenata svakog pagea.
+
+
+* Homepage - Naslovna stranica, sadržava osnovne informacije o proizvodima, kategorije korištenja i kontakt
+* Products - Page koji izlistava sve proizvode, zajedno s njihovim osnovnim specifikacijama
+   * Konty Retail - Dedicirani page za potrebe prezentacije Retail POS proizvoda
+   * Konty Hospitality - Dedicirani page za potrebe prezentacije Retail POS proizvoda
+   * Product Features - Page koji sadržava evidenciju svih featuresa proizvoda. Dugoročno je najbolje odvojiti da svaki proizvod ima zasebni feature page
+   * FAQ/Documentation - Page sa svom relevantnom dokumentacijom, uputama za instalaciju i najčešćim pitanjima / odgovorima
+   * Pricing - Page koji sadržava informacije o cijenama proizvoda 
+   * Demo - Page s potrebnim informacijama za pokretanje demo instance proizvoda
+* Solutions - Page koji pokazuje sve scenarije/use caseove u kojima je Konty dobar izbor, po uzoru na https://squareup.com/au/en/solutions 
+   * Retail POS - Page koji pokazuje retail scenarije / use caseove u kojima je Konty dobar izbor, po uzoru na https://pos.toasttab.com/retail-pos 
+      * Retail POS use case single - Page koji pokazuje pojedinačne retail scenarije, po uzoru na pos.toasttab.com/retail-pos/grocery-store 
+   * Hospitality POS - Page koji pokazuje hospitality scenarije / use caseove u kojima je Konty dobar izbor, po uzoru na /pos.toasttab.com/retail-pos
+      * Hospitality POS use case single - Page koji pokazuje pojedinačne hospitality scenarije, po uzoru na pos.toasttab.com/retail-pos/grocery-store
+* About - Glavni page za ključne informacije o firmi
+   * Contact - Page sa ključnim kontakt informacijama i kontakt formom
+   * Clients / Case studies - Page sa popisom najvažnijih klijenata, testimoniala i case studija
+      * Clients / Case studies single - Page za pojedinačni case study uspješne implementacije proizvoda
+* Free Demo - Page sa svim informacijama za pokretanje besplatnog demo programa
+* Login - Page za login u sustav
+* Landing pageovi - Pojedinačni landing pageovi za potrebe marketinških aktivnosti
+   * LP template - Generički landing page template za sve potrebne marketinške i oglašivačke aktivnosti
+   * Allegra LP - Tranzicijski landing page sa informacijama o rebranding Allegre za potrebe pojašnjenja rebrandinga ljudima koji i dalje pretražuju proizvod po starom imenu
+   * Aria LP - Tranzicijski landing page sa informacijama o rebranding Arie za potrebe pojašnjenja rebrandinga ljudima koji i dalje pretražuju proizvod po starom imenu
+   * Landing page za partnere - Landing page sa relevantnim informacijama za potencijalne partnere.
+
+
+
+
+
+
+
+
+Informacijska arhitektura
+
+
+Link na Informacijsku arhitekturu nove web stranice - 
+
+
+Informacijska arhitektura - Konty
+
+
+Informacijska arhitektura sadrži popis svih pageova te glavnih komponenata i usability elemenata koji se na njima moraju nalaziti. Dizajneri su dobrodošli po svom nahođenju mijenjati raspored elemenata, ali predlaže se da on prati ovaj prijedlog. Svi ovi elementi će biti detaljnije razrađeni u nastavku ovog dokumenta.
+	
+
+Dodatne tehničke i SEO funkcionalnosti
+
+
+Link na specifične SEO zahtjeve  - 
+
+
+SEO zahtjevi i prijedlozi - backend/frontend
+ 
+S obzirom na prirodu industrije, SEO-friendly web stranica je nužnost. Na gornjem linku je priložen dokument sa specifičnim SEO zahtjevima koji su očekivani na projektu, uglavnom u sklopu CMS funkcionalnosti koje su potrebne za ispravnu konfiguraciju i održavanje SEO-a..
+	________________
+Detaljniji komentari na ključne pageove
+________________
+
+
+
+
+Kategorija
+	Komentar na postojeće stanje i želje za redizajn
+	Glavna navigacija
+	* Glavna navigacija bi trebala biti “sticky” i pratiti korisnika za vrijeme scrolla, pogotovo ako je uključen i free demo button. 
+* Glavna navigacija, pored centralnog kategorijskog dropdowna, sadržava još i 2 courtesy navigacije:
+   * Gornja sadržava osnovne kontakt informacije (telefon, mail) te language switcher za promjenu jezika.
+   * Donja courtesy navigacija je privremena i sadržava jednu malu liniju u kojoj je poruka kojom se jasno naznačuje da su Alegra i Aria rebrandirane u Konty - ovo je klikabilno i vodi na blog post u kojem je to detaljnije raspisano i pojašnjeno. 
+* Glavna navigacija treba sadržavati jasan i uvijek vidljiv CTA button koji poziva na besplatni demo + 5 ključnih kategorija
+   * Product - dropdown sa proizvodima + featuresima
+   * Restaurants - prezentacija glavnih use caseova u kojima se koristi Konty
+   * Retail - prezentacija glavnih use caseova u kojima se koristi Konty
+   * Pricing
+   * About - osnovne informacije o firmi + kontakt
+* Predlažemo da se glavna navigacija obogati opisima i vizualnom prezentacijom ključnih kategorija, kao što je to slučaj na https://www.intercom.com/
+	Detaljniju razradu je moguće vidjeti u dokumentu s wireframeovima.
+	Homepage
+	* Above the fold - na vrhu stranice istaknuti jasan i upečatljiv headline koji jasno komunicira vrijednost proizvoda, ali iz kojeg je vidljivo da je u pitanju POS sustav.
+   * Subheadline kratko i jasno dodatno pojašnjava prednosti sustava: „Jednostavan, pouzdan i moćan POS sustav za retail i hospitality industriju.“
+   * CTA button jasno razdvojiti – jedan „Zatražite besplatnu demo verziju“ za potencijalne nove korisnike i drugi „Kontaktirajte nas“ za neposredan kontakt prodajnog tima.
+* Istaknuti referentne logotipe poznatih klijenata uz jasne brojke: npr. „Više od 500 zadovoljnih korisnika", „10.000+ dnevnih transakcija", "99,9% uptime sustava“.
+* Blok s ključnim kategorijama:
+   * Jasno istaknute ključne kategorije korištenja proizvoda unutar retail sektora (trgovine, butici, marketi) i hospitality industrije (restorani, kafići, hoteli).
+   * Ako je moguće, u sklopu ove sekcije dodati kratki video ili animirani prikaz najvažnijih featuresa sustava: jednostavna naplata, upravljanje zalihama, praćenje prodaje u stvarnom vremenu, detaljna analitika i intuitivno korisničko sučelje. Ako nije moguć video, onda fotografije. 
+   * U svakom slučaju, ovaj blok mora jasno prezentirati i prikazati najvažnije featurese oba proizvoda. 
+* Dodatan blok Konty u brojkama, mogu se iskoristiti podaci koji su i sada aktualni (screenshot)  
+* Kako početi sa e-fiskalizacijom - ovdje predlažem da se konsolidiraju tri postojeća bloka:
+   * Kako početi sa e-fiskalizacijom
+   * Preuzimanje (ESIR i LPFR) te demo verzija
+   * Blok “Želite da samostalno počnete sa radom”
+   * U tri jasna i jednostavna koraka objasniti korisniku proces integracije.
+   * Blok s cjenikom - Uključiti kratak pregled cjenovnih planova („Od osnovnog paketa za manje objekte do premium rješenja za velika poduzeća“), uz jasan CTA button „Pogledajte detaljan cjenik“ koji vodi na zasebnu stranicu s detaljnijim informacijama. Postojeća struktura cjenika je zadovoljavajuća.
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+   * Na dnu ide blok s thumbnailsima najnovije objavljenih blog postova - sam broj nije bitan, bitno je da se pokazuju najnoviji blogovi, ali u pravilu su to 2-3 najnovija posta. 
+	Detaljniju razradu je moguće vidjeti u dokumentu s wireframeovima.
+	Products
+	Page “Products” je jednostavan page koji služi samo za objedinjavanje proizvoda
+   * Above the fold - na vrhu stranice istaknuti jasan i upečatljiv headline koji jasno komunicira vrijednost proizvoda, ali iz kojeg je vidljivo da je u pitanju POS sustav. Jasno istaknuti podjelu proizvoda prema glavnim industrijama – retail i hospitality. Svaka kategorija ima vizualni prikaz (fotografiju ili ikonu), kratki opis ključnih prednosti proizvoda i CTA button („Pogledajte detalje“ ili „Saznajte više“).
+   * Odmah ispod liste proizvoda, dodati jasan CTA button poput „Zatraži demo“ ili „Kontaktirajte nas za ponudu“.
+   * Potrebno je istaknuti i listu glavnih featuresa oba proizvoda. Ako je moguće, idealno, ovo će biti popraćeno i kratkim opisima i screenshotovima/ilustracijama svakog pojedinog featurea.
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Detaljniju razradu je moguće vidjeti u dokumentu s wireframeovima.
+	Product single
+	   * Product single je najvažnija stranica i fokusirana je na prezentaciju svakog pojedinačnog proizvoda (retail i hospitality) te traži najvišu razinu gustoće samih informacija. Mora sadržavati:
+   * Above the fold sekcija - mora imati headline koji jasno navodi ime proizvoda te subheadline koji ima kratki opis ključnih vrijednosti i benefita proizvoda, zajedno s kontakt i free demo CTA buttonima. U sklopu te above the fold sekcije bi se trebao nalaziti ili video ili karusel ili kolaž fotografija koji pokazuje screenshotove najvažnijih funkcionalnosti tih proizvoda. 
+   * Kratki video ili vizualni slideshow (5-7 slika) s demonstracijom glavnih featuresa (primjerice za hospitality: unos narudžbi, upravljanje stolovima, integracija sa sustavima dostave itd.)
+   * Uz video ili slike kratak opis u bulletima („Jednostavno rukovanje“, „Upravljanje zalihama u realnom vremenu“, „Integracija s drugim sustavima“).
+   * Istaknuti referentne logotipe poznatih klijenata uz jasne brojke - ovo treba biti drugačije nego homepage te se mora fokusirati samo na logotipe klijenata iz retaila ili hospitalitija, ovisno o tome koji je proizvod u pitanju. 
+   * Key benefits - (za inspiraciju pogledati blok The heartbeat of your business (Hardware / Software / Payments na https://pos.toasttab.com/products/point-of-sale ili Retail software to simplify and scale na https://www.lightspeedhq.com/pos/retail/)
+   * Zašto odabrati naše rješenje? - U ovoj sekciji koristiti 3-5 vizualno istaknutih benefita s ikonama i kratkim tekstovima. Primjer:
+   * Brza implementacija u 48h
+   * Rad na svim uređajima (iOS, Android, desktop)
+   * Sigurnost i usklađenost sa zakonima (GDPR, fiskalizacija)
+   * Podrška i održavanje uključeni
+   * Modularna nadogradnja
+   * Key features - ispod hero sekcije ide jasno strukturirana lista proizvoda, organizirana po dva glavna segmenta (Retail i Hospitality). Svaki proizvod prikazan je u gridu ili karticama s fotografijom, nazivom, kratkim opisom i jasno vidljivim CTA-om („Više o proizvodu” ili „Detalji”). CTA button u svakoj kartici vodi na detaljni „product single” page. 
+   * Detaljna bullet-lista najvažnijih funkcija relevantnih za industriju.
+   * Npr. za Hospitality:
+   * Mobilne narudžbe
+   * Integracija dostavnih platformi
+   * Pametno upravljanje zalihama
+   * Analitika prodaje u stvarnom vremenu
+   * Sustav rezervacija itd.
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+   * Kako početi sa e-fiskalizacijom - ovdje predlažem da se konsolidiraju tri postojeća bloka:
+   * Kako početi sa e-fiskalizacijom
+   * Preuzimanje (ESIR i LPFR) te demo verzija
+   * Blok “Želite da samostalno počnete sa radom”
+   * U tri jasna i jednostavna koraka objasniti korisniku proces integracije.
+   * Blok s cjenikom - uključiti kratak pregled cjenovnih planova („Od osnovnog paketa za manje objekte do premium rješenja za velika poduzeća“), uz jasan CTA button „Pogledajte detaljan cjenik“ koji vodi na zasebnu stranicu s detaljnijim informacijama. Postojeća struktura cjenika je zadovoljavajuća.
+	Detaljniju razradu je moguće vidjeti u dokumentu s wireframeovima.
+	FAQ/dokumentacija
+	   * Lista pitanja i odgovora - jasno strukturirana, podijeljena u kategorije („Implementacija“, „Održavanje“, „Cijene“, „Tehničke specifikacije“, „Integracije“). Korisniku omogućiti lako otvaranje i zatvaranje odgovora (accordion/dropdown stil).
+   * Dokumentacija za implementaciju - jasno izdvojena sekcija s PDF dokumentima za download. Kratak opis ispod svakog dokumenta što korisnik može očekivati i kome je dokument namijenjen (npr. IT tim, vlasnici lokala, tehnički stručnjaci).
+	Pricing
+	   * Detaljan pregled cjenovnih razreda
+   * Istaknuti 3 glavna cjenovna paketa (sada su to Start, Standard, Premium).
+   * Svaki paket sadrži jasno navedene funkcije, ograničenja, broj lokacija/kasa, uključenu podršku itd.
+   * Vizualno istaknut CTA za kontakt i dogovaranje detaljne ponude („Kontaktiraj prodaju”, „Zatraži demo“).
+   * Dodatne opcije / Add-ons - Ispod osnovnih paketa prikazati dodatne funkcionalnosti koje se mogu posebno dodati uz nadoplatu
+   * Flexible pricing model (ako postoji) – opcija za enterprise klijente - blok s napomenom "Imate kompleksnije potrebe? Nudimo prilagođena enterprise rješenja. Kontaktirajte nas za personaliziranu ponudu."
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+   * FAQ - specifična FAQ pitanja vezana uz cijene (fleksibilnost ugovora, načini plaćanja, mjesečno/godišnje fakturiranje, dodatni troškovi).
+	Demo
+	   * Above the fold - jasni naslov („Rezervirajte besplatni demo već danas!“), kratak opis što korisnik dobiva kroz demo i jednostavna forma za rezervaciju termina (Ime, email, telefon, odabir datuma/vremena - ako je ovo izvedivo).
+   * Što očekivati od demoa - raspisati jasno što korisnik može očekivati od demo pregleda i navesti benefite poput personalizirane demonstracije, vremena trajanja, mogućnost dogovaranja implementacije odmah nakon sastanka itd. Primjer:
+   * Personalizirana prezentacija funkcionalnosti
+   * Prilagođeno vašoj industriji i tipu objekta
+   * Trajanje: cca 30 minuta
+   * Pitanja i odgovori uživo
+   * Mogućnost da odmah dogovorite iduće korake ako ste zainteresirani
+   * (Ako je moguće) social proof - kratke izjave klijenata koji su odradili demo i uveli proizvod nakon toga („od demoa do implementacije sve je bilo brzo i jednostavno”).
+	Features
+	   * Above the fold - jasan i direktan headline i subheadline koji ima ključne prednosti za sve funkcionalnosti (npr. “sve što vam je potrebno za brzo, učinkovito i uspješno poslovanje”)
+   * CTA button za demo i kontakt
+   * Detaljna lista svih featuresa - svaki feature mora imati svoj blok ili karticu s jasnim objašnjenjem i screenshotovima koji to demonstriraju. Primjeri
+   * Brzi rad sa artiklima - skeniranje barkoda, prečaci za popularne artikle
+   * Rad po stolovima - grafički prikaz rasporeda stolova ili upravljanje narudžbama po stolovima
+   * Višestruki cjenovnici - automatsko prebacivanje između različitih cjenovnika, sezonski popusti itd.
+   * Rad s normativima - praćenje potrošnje repromaterijala i automatsko ažuriranje zaliha 
+   * itd.
+   * FAQ - specifična FAQ pitanja vezana uz featurese 
+   * (Ako je moguće) social proof - kratke izjave klijenata, idealno u vezi nekog pojedinčnog featurea. 
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Use case - general
+	   * Above the fold - jasan i direktan headline i subheadline 
+   * CTA button za demo i kontakt
+   * Liste klijenata i brojke - istaknuti klijenti, njihovi logotipi i relevantne brojke
+   * Featuresi - navođenje relevantnih featuresa za oba specifična segmenta (retail ili hospitality) - kratka demonstracija putem videa ili karusela/slidera
+   * Blok s cjenikom - Uključiti kratak pregled cjenovnih planova („Od osnovnog paketa za manje objekte do premium rješenja za velika poduzeća“), uz jasan CTA button „Pogledajte detaljan cjenik“ koji vodi na zasebnu stranicu s detaljnijim informacijama. Postojeća struktura cjenika je zadovoljavajuća.
+   * FAQ - Najčešća pitanja vezana za implementaciju sustava unutar tog segmenta.
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Use case - single
+	(za primjer - Convenience store)
+   * Above the fold - jasan i direktan headline i subheadline 
+   * CTA button za demo i kontakt
+   * Lista klijenata i brojke
+   * Primjeri konkretnih convenience trgovina koje već koriste sustav
+   * Brojke o smanjenju troškova ili povećanju efikasnosti
+   * Demonstracija proizvoda (specifični featuresi za convenience store) kao što su brzo skeniranje barkodova, brzi tasteri, integracija s vagama, brzo ažuriranje cijena
+   * Kratki blok s cjenikom
+   * Naglasak na specifične potrebe convenience trgovina (pristupačnost, brzina instalacije)
+   * FAQ
+   * Specifična pitanja tipična za vlasnike convenience trgovina
+   * Najčešća pitanja vezana za implementaciju sustava unutar tog segmenta.
+	About
+	   * Above the fold - jasan i direktan headline i subheadline 
+   * CTA button za demo i kontakt
+   * Lista klijenata/social proof i istaknuti logotipi klijenata, reference ili brojke poput godina iskustva, broj zadovoljnih klijenata, itd.
+   * Kontakt podaci
+   * Adresa tvrtke, telefon, email, radno vrijeme
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Contact
+	   * Kontakt podaci
+   * Lista klijenata/social proof i istaknuti logotipi klijenata, reference ili brojke poput godina iskustva, broj zadovoljnih klijenata, itd.
+   * Adresa tvrtke, telefon, email, radno vrijeme
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Client case studies
+	   * Popis referenci 
+   * Kompletnu listu svih klijenata koji koriste sustav - što je više toga moguće navesti, to bolje, idealno s logotipom klijenta - grupirano po tipu industrije (hospitality, retail i podgrupe)
+   * Izdvojeni testimoniali zadovoljnih klijenata
+   * Blok sa case studijima izdvojenih implementacija po uzoru na https://pos.toasttab.com/customers (naslov uvijek treba sadržavati problem i rješenje te naziv firme klijenta)
+   * Kontakt forma - (potrebno je još definirati polja koja idu u formu) Jednostavna i kratka kontakt forma za direktan upit (ime, email, telefon, poruka + odabir kategorije (retail, hospitality)  uz jasnu naznaku da će odgovor biti brz („Odgovaramo unutar 24 sata“). Dodati mogućnost preferiranog termina za demo sastanak.
+	Client case single
+	   * Fotografije
+   * Slike stvarne implementacije u poslovanju klijenta
+   * Testimonial i autentična izjava klijenta (2-3 rečenice) - po mogućnosti sa fotografijom
+   * Detaljan opis uspješne implementacije - opis izazova, implementiranog rješenja i postignutih rezultata (brojke)
+   * Blok sa drugim case studijima i primjerima uspješnih implementacija
+   * Na kraju CTA ili kontakt forma
+	Free demo
+	   * Zakazivanje termina
+   * Forma za rezervaciju demo termina (ime, email, telefon, datum i vrijeme)
+   * Opis procesa
+   * Kratki opis kako izgleda demo sastanak
+   * Odabir kategorije poslovanja (retail, hospitality, trgovina itd.) s kratkim opisom benefita sustava za odabranu industriju
+   * Kontakt forma
+   * Opcija dodatnog kontakta za korisnike koji žele postaviti specifična pitanja prije zakazivanja termina
+	Landing page template
+	Odnosi se na template pagea koji se radi za različite marketinške aktivnosti. Treba sadržavati različite module koji se lako mogu ubacivati ovisno o potrebi. Generalne komponente koje su uglavnom sastavni dio landing stranica su:
+   * ATF - headline, subheadline, contact CTA, free demo CTA
+   * Blok sa kratkom demonstracijom proizvoda - osnovni featuresi
+   * Blok sa ključnim kategorijama korištenja proizvoda unutar retaila i hospitalitija
+   * Lista klijenata i brojke
+   * Kratki blok s cjenikom
+   * Kontakt forma
+	Aria / Allegra landing page
+	Unutar “tranzicijskog perioda” potrebno je kreirati landing page koji će služiti isključivo svrsi informiranja posjetitelja o tome da je u pitanju redizajn Allegra/Aria -> Konty + služiti za potrebe posjetitelja koji organskim putem (primarno Google) traže informacije o proizvodu. On treba sadržavati:
+
+
+   * Vidljiva traka koja naglašava da je Konty ex. Aria/Allegra
+   * ATF - headline, subheadline, contact CTA, free demo CTA (mora biti vidljivo da je u pitanju promjena branda)
+   * Blok s kratkim uputama o tome kako početi s proizvodom
+   * Blok sa kratkom demonstracijom proizvoda - osnovni featuresi
+   * Blok sa ključnim kategorijama korištenja proizvoda unutar retaila i hospitalitija
+   * Lista klijenata i brojke
+   * Kratki blok s cjenikom
+   * Kontakt forma
+	Landing page za partnere
+	   * ATF - Headline: Jasna i direktna poruka o partnerstvu (npr. „Postanite naš partner i proširite ponudu za svoje klijente“) , Subheadline - kratko objašnjenje koristi i vrijednosti partnerstva
+   * CTA button - dvije mogućnosti, vjerojatno najbolje kao dva CTA buttona - jedan “Postanite partner” - drugi “Demo”
+   * Social proof blok sa logotipima/popisom postojećih partnera i klijenata iz mreže - istaknute brojke partnera i krajnjih korisnika preko partnera - ako je moguće pribaviti testimonial partnera
+   * Segmentirana rješenja (Retail / Hospitality) - da ne zauzima previše prostora najbolje u dva taba ili paralelni prikaz sa kratkim opisom funkcionalnosti za svaki segment + idealno, dodatna video demonstracija
+   * Detaljan raspis o tome zašto postati partner i koje su prednosti partnerstva sa nabrajanjem liste ključnih benefita (komercijalne pogodnosti, podrška, edukacija i obuka itd.)
+   * Vizualizacija i prikaz toka partnerstva - pojasniti kako izgleda onboarding, komunikacija i podrška i uloga partnera u prodaji i servisu - idealno u nekakvom formatu infografike
+   * Podrška partnerima - dodatni blok koji će pojasniti kakva je podrška partnerima (tehnička, komercijalna, marketinška na primjer)
+   * Kontakt forma
+   * FAQ - neka najčešća pitanja koja partneri postavljaju (na primjer - kako postati partner, koji su uvjeti, što uključuje podrška, kako izgleda proces isporuke
+	
+
+________________
+Konkurentske i druge web stranice u industriji
+________________
+
+
+
+
+Slijedi kratka analiza stranica koje mogu poslužiti kao dobra smjernica za dizajn te primjeri look & feela - svaka od ovih stranica tu je ubačena s razlogom te će taj razlog biti jasno istaknut u samom opisu - kod nekih stranica je riječ samo o uspješnoj implementaciji pojedine komponente, kod nekih stranica je riječ o prezentaciji, a kod nekih je riječ o kombinaciji oba:
+
+
+Octopos
+	https://octopos.rs/
+	   * Od direktnih konkurenata, jedan od najrazrađenijih siteova i generalno dobro postavljen site - proizvod je detaljno razrađen s obiljem dokumentacije za integraciju, odvojenim modulima od kojih je svaki raspisan te detaljnim tehničkim specifikacijama. Unatoč tome, site je zastario, nema dediciranih pageova za specifične user grupe, featuresi proizvoda bi mogli biti razrađeniji i popraćeni s više prikaza osim najosnovnijih screenshotova.
+	Toast
+	https://pos.toasttab.com/
+	   * Od svih POS sistema na US tržištu, Toast vjerojatno ima najbolji web sa odličnim balansom kvalitetne vizualne prezentacije brenda i samog proizvoda. Dizajn je čist, a proizvodi odlično prezentirani s mnogo slika i screenshotova iz interfacea.
+	SquareUp
+	https://squareup.com/
+	   * Moderniji pristup dizajnu i prezentaciji proizvoda što se ne uklapa u ono što Konty trenutačno treba, ali kvaliteta informacija i prezentacije proizvoda je na visokoj razini. Pricing je odlično razrađen, te ima odvojene pricing subpageove za određene komponente funkcionalnosti što je odlično rješenje. 
+	Lightspeed
+	https://www.lightspeedhq.com/
+	   * Iznimno detaljna prezentacija proizvoda, u različitim formatima (audio, tekst), odlično razrađen sustav user grupa i razdvajanje po tipovima biznisa (od kojih svaki ima specifičan content + case studije) - detaljno razrađeni case studiji, prezentirane specifikacije proizvoda s puno screenshotova i detaljno razrađena resources sekcija sa svim relevantnim resursima.
+	Korona
+	https://koronapos.com/
+	   * Dobar primjer “jednostavnijeg” sajta s manje animacija i naprednog frontenda i s relativno jednostavnom, ali preglednom i funkcionalnom organizacijom informacija i prezentacije proizvoda. Homepage je jednostavan i pregledan, use case pageovi sadržavaju sve bitne informacije, a pricing je detaljan i dobro razrađen. Minus je možda prekomplicirana glavna navigacija s mega menijem koji nije jednostavan i intuitivan za snalaženje.
+	TouchBistro
+	https://www.touchbistro.com/
+	   * Dobro organizirana glavna navigacija s direktnim prikazom proizvoda i featuresa (iako samim featuresima nedostaje više screenshotova iz samog interfacea). Stranica s integracijama je opsežna.  
+	BizniSoft
+	https://www.biznisoft.com/
+	   * Od direktnih konkurenata, jedan od najrazrađenijih siteova i generalno dobro postavljen site - proizvod je detaljno razrađen s obiljem dokumentacije za integraciju, odvojenim modulima od kojih je svaki raspisan te detaljnim tehničkim specifikacijama. Unatoč tome, site je zastario, nema dediciranih pageova za specifične user grupe, featuresi proizvoda bi mogli biti razrađeniji i popraćeni s više prikaza osim najosnovnijih screenshotova.

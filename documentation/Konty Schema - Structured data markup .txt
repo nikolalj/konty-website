@@ -1,0 +1,163 @@
+﻿Schema.org - Smernice za implementaciju
+
+
+________________
+
+
+
+
+Ovaj dokument služi kao specifikacija za implementaciju strukturiranih podataka na sajtu Konty, ali i za bolje razumevanje svrhe optimizacije Schema markupa za pretraživače.
+
+
+Članci u nastavku mogu poslužiti kao referenca za generalnu tematiku Schema markupa:
+
+
+* Moz: Schema Structured Data
+* Cognitive SEO: Schema Markup For SEO
+* aHrefs: What is Schema Markup?
+
+
+Šta je Schema Markup?
+
+
+Schema markup (schema.org) je rečnik strukturiranih podataka koji pomaže pretraživačima da izvuku ključne informacije sa stranice kako bi servirale tzv. “rich results” odnosno prikazale ih na rezultatima pretrage (npr. broj dostupnih proizvoda). Ovaj rečnik pomaže pretraživačima i da spoje razne entitete i informacije o tim entitetima u svojim indexerima.
+
+
+Vrste Schema markupa
+Schema.org rečnik uključuje strukturirane podatke za sve vrste “ljudi”, “lokacija” i “stvari” na webu. Puni popis može se naći ovde.
+
+
+Uobičajeno se Schema markup koristi za označavanje:
+
+
+* Članaka
+* Događaja
+* Proizvoda
+* Ljudi
+* Organizacija
+* Recenzija
+* itd.
+
+
+Dodatna referenca za proveru najčešće korišćenih vrsta markupa: SimilarTech Schema.
+
+
+Glavne koristi Schema markupa za SEO
+
+
+Iako nema dokazanih studija o uticaju Schema markupa na rangiranje, dodatne vizualno prikazane informacije (“rich snippets”) imaju direktan uticaj na CTR (click-through-rate) rezultata na pretraživačima i to je pokazano u mnogim studijama slučaja.
+
+
+* Search Engine Journal - Schema Success Stories
+
+
+
+
+Implementacija i preporuke od strane Googlea
+
+
+Postoje 3 različita načina implementacije odnosno jezika koji se mogu koristiti kako bi se izrazili odnosi među entitetima i meta podaci o njima:
+
+
+RDF ili Resource Descriptive Framework. Ovaj oblik je manje korišćen, a može se dodati u bilo koji HTML, XHTML ili XML dokument.
+
+
+Microdata je sličan RDF-u, te sadrži sledeće atribute: itemscope, itemtype, itemprop, itemid i itemref.
+
+
+JSON-LD ili Javascript Object Notation for Linked Objects je najčešće korišćen oblik čija je implementacija najjednostavnija, s obzirom da se može implementirati unutar <head> taga.
+Osim toga, prema dostupnim informacijama, Google takođe lakše povlači podatke s iz JSON-LD markupa s obzirom da ne mora renderovati <body> deo dokumenta. 
+
+
+
+
+Pregled i smernice za vrste Schema markupa relevantne za Konty
+Schema je hijerarhijski sistem od dva nivoa, na vrhu su vrste markupa odnosno type, a svaka vrsta ima skup definisanih svojstava odnosno properties.
+
+
+Vrsta služi za kategorizaciji sadržaja za koji koristimo markup, a svojstva (properties) opisuju taj sadržaj.
+
+
+VAŽNA NAPOMENA:  u nekim od ovih primera korišćene su proizvoljne vrijednosti kod key:valuea parova, na produkciji je važno da je JSON-LD ekvivalentan podacima koji se prikazuju na frontendu (podaci koji su vidljivi i korisniku ili barem u HTML-u u slučaju da su skriveni iza taba). U suprotnom, Google neće prihvatiti prikaz na rezultatima, a postoji i mogućnost algoritamskih penala na temelju “lažno” implementiranog Schema markupa.
+
+
+
+
+Prikladni markupi u slučaju sajta Konty bili bi:
+* Organization
+* Breadcrumbs 
+
+
+Organization 
+* Više detalja
+* Primjenjivo na: Homepage, O nama i Kontakt stranici
+* Sadržaj crveno označenih elemenata treba da se utvrdi nakon promene brendinga.
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Konty",
+  "url": "https://konty.com",
+  "logo": "https://konty.com/logo.webp",
+  "description": "Kompletno rešenje je napravljeno specijalno za maloprodaju i uslužne delatnosti. Pokriva Vaše poslovne procese na efikasan način.",
+  "sameAs": [
+    "https://www.facebook.com/konty/",
+    "https://www.linkedin.com/company/konty/"
+ ],
+"contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+381 116140300",
+    "email": "support@konty.com",
+    "contactType": "customer service"
+ },
+  "address": {
+    "@type": "PostalAddress",
+   "streetAddress": "Naselje Zemun polje Mala pruga 12A",
+    "addressLocality": "Beograd",
+    "addressRegion": "Zemun",
+    "postalCode": "11080",
+    "addressCountry": "RS"
+  }
+}
+</script>
+	
+
+BreadcrumbList
+* Više detalja
+* Primjenjivo na: sve stranice s breadcrumb navigacijom
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Naziv 1.stranice",
+    "item": "URL 1. stranice"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Naziv 2. Stranice ili trenutne ako nema treće razine",
+    "item": "URL 2. Ili trenutne stranice"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "Naziv trenutne ili 3. stranice",
+    "item": "URL trenutne ili 3. stranice"  
+  }]
+}
+</script>
+	
+
+Pomoć pri testiranju implementacije
+
+
+Nakon implementacije, moguće je brzo proveriti validnost markupa putem sledećih toolova:
+* Structured Data Testing Tool od Googlea, mogućnost testiranja URL-a ili dela koda
+* Schema.org validator - službeni validator od Schema.org stranice, mogućnost testiranja URL-a ili dela koda

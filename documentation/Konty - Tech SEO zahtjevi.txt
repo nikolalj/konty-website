@@ -1,0 +1,258 @@
+﻿SEO zahtjevi i prijedlozi - backend/frontend
+Konty
+________________
+
+Osnovni tehnički zahtjevi
+Ovdje se nalazi popis zahtjeva koje tehnička podloga web stranice treba ispuniti kako bi se zadovoljila osnovna razina “čitljivosti” stranice od strane tražilice.
+Meta i drugi HTML tagovi
+Uz pojedini tag naznačeno je treba li tag imati default vrijednost, je li ona statička ili dinamička te na koji način se ta vrijednost treba moći uređivati kroz CMS.
+<head> dio 
+* Tekst u <title> elementu
+Primjer: <title>O nama</title>
+Defaultna vrijednost: {naziv pagea}
+Mogućnost uređivanja u CMS-u: na razini cijele stranice (uz korištenje varijable za naziv pagea) + izmjena na razini pojedinog pagea.
+
+* Vrijednost atributa “content” u <meta name=”description”> elementu
+Primjer: <meta name=”description” content=”Tekst”/>
+Defaultna vrijednost: / [Opcija 1: prazno osim u slučaju ručnog popunjavanja; Opcija 2: automatsko povlačenje kategorijskog opisa s limitom do 155 znakova]
+Mogućnost uređivanja u CMS-u: Da
+
+* Vrijednost atributa “href” u <link rel=”canonical”> elementu
+Primjer: Na pageu https://primjer.com?utm_source=abcd, tag bi trebao izgledati ovako: <link rel=”canonical” href=”https://primjer.com” /> 
+Defaultna vrijednost: URL trenutne stranice, u apsolutnom formatu i bez parametara na kraju URL-a.
+Mogućnost uređivanja u CMS-u: Da, na svakom pageu pojedinačno.
+Googleova dokumentacija: Link
+
+
+
+   * U <link rel=”hreflang”> elementima 
+Primjer: <link rel="alternate" hreflang="en" href="https://primjer.com/en/page-1" />
+Defaultna vrijednost: {apsolutni URL svake druge jezične varijante pagea, ako postoji}
+Mogućnost uređivanja u CMS-u: Ne
+Googleova dokumentacija: Link
+Dodatni info: Ukoliko će web biti jednojezični, nema potrebe za implementacijom hreflang tagova.
+Primjer implementacije hreflanga:
+  
+
+
+      * X-default <link rel=”hreflang”> tag
+Napomena: za slučaj auto-redirekcije s language-neutral homepagea, potrebno je implementirati dodatan x-default hreflang tag na svakom jezičnom homepageu (npr. na /en/ i /hr/ homepageima) koji treba pokazivati na root (defaultnu) adresu.
+Primjer: <link rel="alternate" href="https:/www.konty.com/" hreflang="x-default" />
+- U prethodnom screenshotu je također vidljiv primjer pravilno implementiranog x-default hreflanga
+Defaultna vrijednost: {root adresa/defaultna adresa s koje se redirecta na jezične adrese}
+Mogućnost uređivanja u CMS-u: Ne
+Googleova dokumentacija: Link
+
+
+
+         * Vrijednost atributa “content” u <meta name=”robots”> elementu (može i dvostruki dropdown gdje se biraju vrijednosti follow/nofollow i index/noindex)
+Primjer: <meta name=”robots” content=”follow,noindex”/>
+Defaultna vrijednost: {prazno}
+Mogućnost uređivanja u CMS-u: Da, na razini pojedinog pagea.
+Googleova dokumentacija: Link 
+
+
+
+
+<body> dio 
+
+
+            * Tekst u <h1> elementu i drugim body copy elementima (<h2>,<h3>,<h4>..., <p>, itd.)
+Mogućnost uređivanja u CMS-u: Da, na svakom pageu.
+Važno: Svaka indeksabilna stranica treba imati jedan H1 tag, koji treba biti unikatan i ne bi se trebao duplicirati sa sadržajem drugih stranica. Ovaj heading treba biti prvi po redu u heading strukturi html dokumenta.
+
+            * Vrijednost atributa “alt” u svakom značajnom <img> elementu unutar glavnog dijela sadržaja (slike koje su u vezi s tekstualnim sadržajem na stranici).
+Primjer: <img src=”/naziv-slike-123.png” alt=”naziv slike 123”/> 
+Defaultna vrijednost: {dinamički preuzeto iz sluga naziva slike, ako je moguće ili iz headinga stranice}
+Mogućnost uređivanja u CMS-u: Da, pojedinačno na svakoj slici koja odgovara gore navedenim kriterijima.
+Idealno bi bilo da se svaka slika opiše na način “kao da objašnjavate slijepoj osobi što se nalazi na njoj.” (Npr. “POS sustav za nadzor popunjenosti kafića”)
+Googleova dokumentacija: Link
+
+
+
+
+
+
+
+               * Breadcrumbs navigacija - Tekst u Breadcrumbs elementu (poželjno je graditi HTML prema Schema uputama, referenca na ovim linkovima: https://schema.org/BreadcrumbList i https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
+               * Defaultna vrijednost: Za naslovnicu = root domena, za kategorije i pageve = {naziv pagea/kategorije}
+               * Mogućnost uređivanja u CMS-u: Ne
+Osim same implementacije breadcrumb navigacije vidljive na frontendu, potrebno je implementirati i BreadcrumbList schema markup koji tražilicama dodatno omogućava lakše razumijevanje hijerarhije weba i dodatne prikaze na samom SERP-u.
+
+
+               * Twitter Cards meta data s automatski popunjenim “content” atributima.
+Primjer: <meta name="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.primjer.com"><meta name="twitter:title" content="Primjer pagea"><meta name="twitter:description" content="Uvodni tekst pagea"><meta name="twitter:image" content="http://cdn.primjer.com/slika.png">
+Default vrijednosti: ovisno o vrijednosti “property” atributa: twitter:title = naziv trenutne stranice, twitter:url = URL trenutnog pagea, twitter:image = apsolutni URL glavne slike na stranici (ako postoji), branda ili loga stranice, twitter:description = meta description ili uvodni tekst na stranici (odrezati sve nakon 140 znakova)
+Mogućnost uređivanja u CMS-u: Svi atributi, na razini pagea.
+Više detalja o implementaciji: https://developer.x.com/en/docs/x-for-websites/cards/guides/getting-started
+
+
+
+
+
+
+
+
+                  * Facebook OpenGraph meta data s automatski popunjenim “content” atributima.
+Primjer:<meta property="og:type" content="website" /><meta property="og:site_name" content="Primjer.com” /><meta property="og:url" content="http://www.primjer.com/kategorija/page-1 " /><meta property="og:title" content="Page 1" /><meta property="og:description" content="Uvodni tekst pagea” /><meta property="og:image" content="http://cdn.primjer.com/slika.png">
+Default vrijednosti: ovisno o vrijednosti “property” atributa: og:site_name = ime branda (npr. Primjer.com), og:url = apsolutni URL trenutne stranice, og:title = naziv trenutne stranice, og:description = vrijednost meta descriptiona ili uvodni tekst na stranici (odrezati sve nakon 140 znakova), og:image = apsolutni URL glavne slike na stranici (ako postoji), branda ili loga stranice.
+Mogućnost uređivanja u CMS-u: Svi atributi, na razini pagea.
+Više detalja o implementaciji: https://ogp.me/
+Schema Markup
+Schema markup (schema.org) je strukturirani podatkovni rječnik koji pomaže tražilicama da izvuku ključne informacije s pagea kako bi servirale tzv. “rich results” odnosno prikazale ih na rezultatima tražilice (npr. broj dostupnih proizvoda). Ovaj rječnik pomaže tražilicama i da spoje razne entitete i informacije o tim entitetima u svojim indexerima. Naročito je važan kod webova koji su “JS heavy”.
+
+Za implementaciju schema markupa, referirati se na Googleovu dokumentaciju.
+
+Prikladni markupi u slučaju Kontya  bili bi:
+“Breadcrumbs” za implementiranu breadcrumbs navigaciju
+“Article” za blogove
+
+
+________________
+
+Ostale funkcionalnosti
+                     * Mogućnost ručnog dodavanja tzv. “Featured imagea” koji će biti naslovna slika na samom članku ili stranici. Ova slika bi se koristila i u meta atributima za prikazima na  društvenim mrežama, iako bi bilo idealno da se odabir slika za društvene mreže može customizirati, slično na način kako radi WP plugin Yoast.
+
+                     * Mogućnost dodavanja internih linkova na tekstu, ručnog i putem searcha postojećeg sadržaja i dodatne implementacije “rel” atributa. Primjer:
+  
+
+
+                        * Mogućnost izmjene URL-a stranice. Na svakom pageu trebalo bi biti moguće napraviti custom izmjenu sluga/URL-a.
+
+
+
+
+
+
+
+
+
+
+
+Crawl & indexing funkcionalnosti
+
+
+                        * Automatska 301 redirekcija pri promjeni “sluga” (zadnjeg dijela URL-a koji ovisi o nazivu pagea), sa starog na novi “slug” 
+Primjer: page naziva “O nama” ima path “/kategorija/o-nama”, i mijenjamo njegov naziv u “Kontakt” i slug u “/kategorija/kontakt”. Potrebno je da platforma automatski postavi 301 redirekciju sa starog patha na novi path.
+Mogućnost uređivanja u CMS-u: Jedino u slučaju da nije moguće složiti automatsku redirekciju, gdje bi bilo potrebno omogućiti ručni unos u polje za redirekciju.
+
+                        * Uključenje/isključenje iz XML sitemapa, podešavanje XML parametara “lastmod”, “priority” i “changefreq”. Sve pageve koji su otvoreni (imaju status kod “200 OK” i nisu iza logina) treba automatski uključiti u XML sitemap dokument te koristiti gzip kompresiju. 
+Novo dodane ili maknute pageve sa weba treba automatski uključiti/isključiti iz sitemapa sljedeći puta kada se generira (npr. 1 tjedno). U slučaju prelaska limita od 50 MB ili 10 000 URL-ova po XML sitemapu, potrebno je URL-ove podijeliti na više XML sitemapa i navesti ih unutar sitemap index datoteke. 
+Više informacija oko izgradnje XML sitemapa i sitemap index datoteke: https://www.sitemaps.org/protocol.html i https://developers.google.com/search/docs/advanced/sitemaps/large-sitemaps
+Defaultne vrijednosti: lastmod = zadnji datum izmjene stranice, changefreq = [prazno, ne uključiti po defaultu], priority = 1 za naslovnicu, 0.8 za (pod)kategorije i blog postove, 0.5 za ostale pageve
+Mogućnost uređivanja u CMS-u: ručno uključivanje/isključivanje iz XML sitemapa na kategoriji za sve pageve unutar te kategorije.
+
+Robots.txt file - Potrebno je kreirati robots.txt file koji bi se također nalazio u rootu (domena.com/robots.txt). 
+Ovaj dokument govori tražilicama kojim URL-ovima se (ne)može pristupiti na vašem webu. Ovo se uglavnom koristi kako bi se izbjeglo preopterećenje weba zahtjevima. Također, u samom dokumentu je potrebno dodati link na sitemap dokument.
+Googleova dokumentacija: Link
+
+Rendering
+
+
+Ukoliko će web imati veliki broj podataka koji se redovno ažuriraju i potencijalno biti “JS-heavy”, najviše smisla za sami rendering weba bi bio Server-side rendering (SSR).
+
+
+Jedna od glavnih prednosti SSR-a je ta što omogućuje ažuriranje u stvarnom vremenu. Čim se rezultat promijeni, poslužitelj može generirati novu verziju stranice i poslati je korisnikovom pregledniku. To znači da korisnici mogu vidjeti najnovije rezultate bez potrebe za osvježavanjem stranice.
+
+
+Jedna od mogućih opcija je i kombinacija SSR i CSR kroz tzv. “Rehydration” pristup. Više o toj temi na linku.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sažetak zahtjeva
+
+
+
+
+Title tag
+	Mogućnost uređivanja u CMS-u: na razini cijele stranice (uz korištenje varijable za naziv pagea) + izmjena na razini pojedinog pagea.
+	Meta title tag
+	Mogućnost uređivanja u CMS-u: na razini cijele stranice (uz korištenje varijable za naziv pagea) + izmjena na razini pojedinog pagea.
+	Meta description
+	Mogućnost uređivanja u CMS-u: na razini cijele stranice (defaultno je prazno) + izmjena na razini pojedinog pagea.
+	Canonicali
+	Defaultna vrijednost: URL trenutne stranice, u apsolutnom formatu i bez parametara na kraju URL-a.
+	Hreflang
+	Defaultna vrijednost: {apsolutni URL svake druge jezične varijante pagea, ako postoji}
+	Xdefault
+	Defaultna vrijednost: {root adresa/defaultna adresa s koje se redirecta na jezične adrese}
+	follow/nofollow i index/noindex
+	Primjer: <meta name=”robots” content=”follow,noindex”/>
+Defaultna vrijednost: {prazno}
+	H1 + drugi heading elementi
+	Tekst u <h1> elementu i drugim body copy elementima (<h2> - <h6>, <p>, itd.)
+	Breadcrumbs navigacija + schema markup
+	Radi lakšeg razumijevanja strukture weba, ali i olakšavanja navigacije korisnicima, potrebno je implementirati breadcrumbs navigaciju i breadcrumbList schema markup
+	Image alt atribut
+	Defaultna vrijednost: {dinamički preuzeto iz sluga naziva slike, ako je moguće}
+Mogućnost uređivanja u CMS-u: Da, pojedinačno na svakoj slici koja odgovara gore navedenim kriterijima.
+	OG:Twitter
+	Default vrijednosti: ovisno o vrijednosti “property” atributa: twitter:title = naziv trenutne stranice, twitter:url = URL trenutnog pagea, twitter:image = apsolutni URL glavne slike na stranici (ako postoji), branda ili loga stranice, twitter:description = meta description ili uvodni tekst na stranici (odrezati sve nakon 140 znakova)
+Mogućnost uređivanja u CMS-u: Svi atributi, na razini pagea.
+	OG:Facebook
+	Default vrijednosti: ovisno o vrijednosti “property” atributa: og:site_name = ime branda (npr. Primjer.com), og:url = apsolutni URL trenutne stranice, og:title = naziv trenutne stranice, og:description = vrijednost meta descriptiona ili uvodni tekst na stranici (odrezati sve nakon 140 znakova), og:image = apsolutni URL glavne slike na stranici (ako postoji), branda ili loga stranice.
+	Slug + redirekcije kod izmjene sluga
+	Automatska 301 redirekcija pri promjeni “sluga” (zadnjeg dijela URL-a koji ovisi o nazivu pagea), sa starog na novi “slug”
+Primjer: page naziva “O nama” ima path “/kategorija/o-nama”, i mijenjamo njegov naziv u “Kontakt” i slug u “/kategorija/kontakt”. Potrebno je da platforma automatski postavi 301 redirekciju sa starog patha na novi path.
+Mogućnost uređivanja u CMS-u: Jedino u slučaju da nije moguće složiti automatsku redirekciju, gdje bi bilo potrebno omogućiti ručni unos u polje za redirekciju.
+Mogućnost izmjene URL-a.
+	Sitemap
+	Uključenje/isključenje iz XML sitemapa, podešavanje XML parametara “lastmod”, “priority” i “changefreq”. Sve pageve koji su otvoreni (imaju status kod “200 OK” i nisu iza logina) treba automatski uključiti u XML sitemap te koristiti gzip kompresiju. Novo dodane ili maknute pageve sa sajta treba automatski uključiti/isključiti iz sitemapa sljedeći puta kada se generira (npr. 1 tjedno). U slučaju prelaska limita od 50 MB ili 10 000 URL-ova po XML sitemapu, potrebno je URL-ove podijeliti na više XML sitemapa i navesti ih unutar sitemap index datoteke.
+	Robots.txt
+	Potrebno je kreirati robots.txt file koji bi se također nalazio u rootu (domena.com/robots.txt). Ovaj dokument govori tražilicama kojim URL-ovima se (ne)može pristupiti na vašem webu
+	Featured image
+	Mogućnost dodavanja tzv. “featured”/hero slike koja je glavna slika na članku
+	“Rel” atributi na internim linkovima i dodavanje linkova funkcijom search za postojeći sadržaj
+	Mogućnost dodavanja internih linkova na tekstu, ručnog i putem searcha postojećeg sadržaja i dodatne implementacije “rel” atributa. 
+	Filteri i sortovi - neindeksiranje
+	Za razliku od paginacije, kod dodatnih parametara u url-u koji nastaju sortovima i filterima, potrebno je postaviti canonical tag koji vodi na glavnu kategoriju (stranicu bez parametara). Ovo se ne odnosi na custom stranice koje su indeksabilne, imaju unikatan sadržaj, meta title, H1 i meta description. Osim canonical tagova, crawlanje indexiranje sort rezultata se može blokirati i kroz robots.txt file (ali ne i na oba načina istovremeno).
+	Rendering
+	Za ovakav tip weba preporuča se server-side rendering (SSR) ili rehydration kombinacija SSR i CSR.

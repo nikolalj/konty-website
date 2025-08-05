@@ -1,0 +1,2102 @@
+DIGITALNA STRATEGIJA
+
+UVOD
+
+O projektu i procesu
+
+Pregled projekta
+Svrha ove faze projekta bila je izrada digitalne strategije za Konty, koja će služiti kao temelj za ostvarivanje strateških
+ciljeva kroz digitalne kanale. Uzeli smo u obzir specifičnosti proizvoda i rješenja te smo proveli opširnu analizu ključnih
+digitalnih kanala. Cilj ove analize bio je detektirati komunikacijske kanale, prakse i prilike koje će pozicionirati Konty kao
+prepoznatljiv brend i nezaobilazno POS rješenje u regiji.
+Nalazi analize omogućili su nam dubinsko razumijevanje industrije i identificiranje prostora za diferencijaciju.
+Fokusirali smo se na kanale s najvećim potencijalom i analizirali prakse konkurenata kako bismo razvili strategiju koja
+ističe Konty kao najatraktivniji izbor za ciljnu skupinu. U procesu smo segmentirali ciljnu skupinu, definirali persone i
+njihove potrebe te mapirali ključne razloge koji utječu na donošenje odluke o kupovini softwarea. Sve ove uvide pretočili smo
+u konkretne prijedloge aktivnosti, prioritetno raspoređene prema fazama implementacije i povezane s krovnim
+strateškim ciljevima.
+Konačni rezultat ove faze projekta je cjelovita digitalna strategija koja uključuje dubinsku analizu konkurenata, definiranje
+ključnih pokazatelja uspjeha, razrađene smjernice za razvoj digitalnih kanala i detaljan plan aktivnosti. Dokument pruža jasnu
+viziju digitalnog rasta i konkretne korake za uspješnu provedbu predloženih rješenja, u skladu s raspoloživim resursima i
+prioritetima.
+
+Glavni zaključci
+Pozicionirati Konty kao prepoznatljiv i
+konkurentan POS brend u regiji, gde
+konkurencija nije teška za sustići iz ugla
+digitalnog pozicioniranja
+
+Analizirane aktivnosti - pregled po prioritetima
+​Prema snazi utjecaja na ispunjavanje ciljeva
+
+Web
+
+SEO
+
+Content
+
+Analytics
+
+Ads
+
+Email
+marketing
+
+Konsolidovati brendove Aria i Allegra u
+jedinstven, jasno pozicioniran entitet –
+Konty.
+Snaga brenda ključna je za uspjeh a
+prepoznatljivost brenda osigurava
+dugoročnu održivost i konkurentnost.
+Ostvariti digitalni rast kroz kanale sa
+najvećim potencijalom: SEO, Ads,
+Content.
+
+Social Media
+
+ANALIZA DIGITALNE
+PRISUTNOSTI KONKURENATA
+Rezultati kvantitativne analize konkurenata
+U ovom dijelu analizirali smo osnovne SEO i digitalne metrike konkurenata kako bismo dobili pregled stanja na tržištu i utvrdili koliko
+su konkurenti digitalno prisutni i razvijeni. Za prikaz ovih ključnih uvida koristili smo alat Ahrefs.
+Cilj je bio razumjeti snagu digitalne prisutnosti i pozicije konkurenata, kao i detektirati prostore gdje Konty može ostvariti
+konkurentsku prednost. Iako brojke nisu apsolutne, daju nam dovoljno jasan okvir za donošenje strateških zaključaka.
+
+Jačina domene i broj drugih domena koje linkaju na web stranice promatranih konkurenata
+Domain Rating
+
+# of unique linking domains
+
+100
+
+200K
+
+93
+162,000 92
+
+90
+
+89
+
+85
+
+80
+
+150K
+
+60
+100K
+
+43
+
+40
+
+35
+
+31
+
+27
+
+30,800
+
+20
+
+15,300 16,300
+
+0
+Squ
+
+Up
+ar e
+
+st
+Toa
+
+C
+
+er
+lo v
+
+Lig
+
+ht
+
+3,700
+
+ed
+spe
+
+Sp
+
+n
+o tO
+
+185
+leb
+Ga
+
+INT
+
+200
+
+28
+ter
+Ras
+
+ft
+iSo
+n
+z
+Bi
+
+Sky
+
+26
+35
+
+s
+Po
+
+to
+Oc
+
+21
+67
+
+29
+s
+po
+
+50K
+
+25
+
+r
+Eba
+
+11 18
+
+2
+G
+
+on
+ar s
+
+Di g
+
+it G
+
+p
+r ou
+
+11 21
+
+11 0
+
+3
+
+19
+
+0.6 16
+
+0.2 12
+
+0 15
+
+e
+e
+…
+rs
+rs
+on
+s.m
+s.m
+os.
+os.
+me
+o
+o
+e
+Ter
+p
+p
+g
+p
+a
+a
+p
+a
+gr
+ra
+na
+ar i
+ar i
+Ma
+alle
+lleg
+a
+t
+e
+F le
+
+0
+
+Ovaj graf prikazuje Domain Rating (autoritet domene) i broj linking domena (backlinkova) za konkurente. SquareUp, Toast, Clover,
+Lightspeed i SpotOn izdvajaju se iznimno visokim autoritetom domene i golemom bazom backlinkova, što upućuje na dugogodišnju,
+globalno raširenu link building strategiju. U srednjem rasponu nalaze se Galeb (DR 43; 185 domena) i BizniSoft (DR 31; 200 domena)
+Zanimljivo je primijetiti da Garson postiže solidan DR 21 s tek dvije linking domene – znak vrlo ograničenog, ali relevantnog profila linkova.
+Allegra i Aria webovi su na začelju ljestvice s vrlo niskim vrijednostima (DR 0-3; 12-19 linking domena). Dobro postavljena i kontinuirana
+link-building strategija omogućit će Kontyiju rast i potrebnu vidljivost u digitalnom okruženju.
+
+Mjesečni organski promet i volumen brend ključnih riječi za koje rangiraju web stranice konkurenata
+Monthly organic traffic
+4M
+
+3M
+
+1M
+
+1M
+
+800K
+3M
+
+1.5K
+350K
+
+799K
+
+400K
+
+609K
+
+150K
+254K
+
+SquareUp
+
+2.7K
+
+5K
+
+4.5K
+
+2.5K
+
+600K
+
+500K
+
+1M
+
+3K
+
+Volume of branded keywords
+
+4K
+
+2K
+
+2M
+
+0
+
+Monthly organic traffic
+
+Volume of branded ke…
+
+Toast
+
+Clover
+
+Lightspeed
+
+200K
+58.4K 30K
+SpotOn
+
+0
+
+3K
+
+2.4K
+1.9K
+
+1K
+
+674
+
+1.5K
+661
+575
+
+500
+0
+
+p
+oft
+rou
+niS
+G
+z
+i
+t
+i
+B
+Dig
+
+*S obzirom na velike razlike u rezultatima, konkurenti su podijeljeni u dva grafa radi preglednijeg prikaza
+
+le
+Ga
+
+b
+
+r
+Eba
+
+2K
+395
+
+500 369
+
+os
+top
+c
+O
+
+300
+
+Pos
+Sky
+et
+Fle
+
+M
+
+350
+
+86 100
+
+58
+
+on
+T er
+
+m
+T ea
+
+ent
+m
+e
+g
+ana
+
+INT
+
+22
+te
+Ras
+
+350
+r
+
+Na prvom grafu prikazani su najjači konkurenti. SquareUp, Toast i Clover vode s najvećim volumenom brendiranih ključnih riječi (1M350K) i snažnim organskim prometom (609K-3M), što ukazuje na odličnu prepoznatljivost brenda i uspješnu optimizaciju sadržaja
+za opće pojmove. Drugi graf prikazuje regionalne konkurente sa puno skromnijim organskim prometom (ispod 3K mjesečno)
+Webovi Aria i Allegra ovdje nisu prikazani zbog izrazito niskih vrijednosti koje trenutno onemogućavaju jasnu usporedbu. Za novi
+Konty brend to znači da je ključno kontinuitano paralelno raditi na izgradnji prepoznatljivosti brenda i optimizaciji sadržaja za
+generičke ključne riječi u cilju izgradnje organskog prometa.Kroz kvalitetnu SEO strategiju Konty ima realnu priliku za dostizanje, a
+potom i prestizanje regionalnih konkurenata kroz kvalitetnu SEO strategiju.
+
+1K
+0
+
+ANALIZA DIGITALNE
+PRISUTNOSTI KONKURENATA
+Rezultati kvantitativne analize konkurenata
+Broj ključnih riječi za koje se konkurentski webovi prikazuju u organskim pretragama i broj stranica weba koje rangiraju na pretraživačima
+# of organic keywords
+800K
+
+# of ranking pages
+
+# of organic keywords
+60K
+
+720K
+50,000
+
+787
+
+600K
+40K
+400K
+
+285K
+15,841
+4,294 74.3K
+SquareUp
+
+Toast
+
+Clover
+
+Lightspeed
+
+SpotOn
+
+71
+
+600
+
+60
+
+400
+
+40
+33
+
+196
+
+200
+
+71.9K
+2,346 20.8K 551
+
+80
+
+80
+
+20K
+
+200K
+
+0
+
+800
+
+26
+46
+
+0
+
+# of ranking pages
+
+0
+
+BizniSoft
+
+Sky Pos
+
+Octopos
+
+43
+
+INT Raster
+
+32
+
+17
+
+Galeb
+
+20
+27
+
+8
+
+Digit Group
+
+15
+
+5
+
+Teron
+
+14 8
+Ebar
+
+13 8
+Garson
+
+*S obzirom na velike razlike u rezultatima, konkurenti su podijeljeni u dva grafa radi preglednijeg prikaza
+
+Ovdje prikazujemo broj rangirajućih stranica i organskih ključnih riječi kod konkurenata. SquareUp i ovdje dominira s 72000 organskih
+ključnih riječi i 50000 rangirajućih stranica, što odražava visok SEO potencijal. Toast, Clover i Lightspeed također pokazuju jake brojke, ali s
+manje rangirajućih stranica u odnosu na ukupan broj ključnih riječi, što sugerira koncentriranost sadržaja na manje stranica visoke
+kvalitete.
+Lokalni konkurenti poput BizniSofta (787 ključnih riječi i 80 stranica) imaju skroman, ali realno ostvariv broj stranica i riječi. Za Konty ovo
+znači da će ključni put prema rastu biti kreiranje kvalitetnog sadržaja na većem broju stranica, optimiziranih za specifične ključne
+riječi, kako bi brzo prestigao lokalnu konkurenciju i postavio temelje za daljnji rast prema vodećim globalnim primjerima.
+
+Zaključak kvantitativne analize digitalnog okruženja
+Kvantitativna analiza jasno pokazuje da lokalni konkurenti u industriji POS sustava još nisu iskoristili puni potencijal digitalnih
+kanala. Iako su SquareUp, Toast i Clover globalni primjeri izvrsne prakse, regionalni konkurenti poput BizniSofta i Galeba imaju tek
+skromne rezultate. Analiza tako otkriva značajan prostor za Konty u području izgradnje snažnijeg brenda, optimizacije sadržaja za
+generičke ključne riječi te sustavne izgradnje kvalitetnih backlinkova.
+Za Konty, ključne strateške smjernice uključuju:
+Izgradnju prepoznatljivosti brenda kroz aktivnu prisutnost i ciljani sadržaj prilagođen potrebama lokalnog tržišta
+Iskorištavanje prostora za optimizaciju generičkih ključnih riječi kako bi se povećao organski promet te privukla publika
+Izradu većeg broja optimiziranih stranica za specifične značajke i primjene POS sustava, čime se povećava broj ključnih
+riječi za koje Konty može rangirati
+Ovi uvidi omogućuju stvaranje strategije koja će Kontyju osigurati brzo sustizanje i prestizanje regionalnih konkurenata, uz
+postavljanje kvalitetne baze za budući rast prema najboljim globalnim primjerima.
+
+0
+
+ANALIZA DIGITALNIH
+AKTIVNOSTI KONKURENATA
+Rezultati kvalitativne analize
+U ovom dijelu analize istražili smo koliko se konkurenti temeljito bave aktivnostima unutar 6 digitalnih vertikala. Ocjenjivali smo ih prema
+unaprijed definiranim kriterijima na skali od 0 do 3, s ciljem da dobijemo uvid u razvijenost digitalnih aktivnosti na tržištu. Iako nam ovi
+rezultati ne daju direktan uvid u njihove ostvarene rezultate, omogućuju razumijevanje prioriteta i praksi konkurencije te otkrivanje
+prostora za razvoj digitalnih aktivnosti koje će pomoći u pozicioniranju Konty kao lidera na tržištu.
+
+Web level
+
+SEO Level
+
+Content Level
+
+Analytics Level
+
+Ads Level
+
+Email Level
+MAX SCORE = 18
+
+17.5
+
+15
+
+1
+3
+
+2.5
+
+2
+
+12.5
+
+2
+10
+
+0.5
+
+3
+
+2
+2
+
+2
+
+2
+
+3
+
+7.5
+
+2.5
+
+2.5
+
+2
+
+2
+3
+
+5
+
+1
+
+2
+
+2
+
+3
+2
+3
+
+3
+
+0
+
+ed
+spe
+t
+h
+Li g
+
+T oa
+
+st
+
+1
+
+2
+
+2
+
+2.5
+
+2.5
+
+a re
+Squ
+
+Up
+
+2
+
+v
+Cl o
+
+er
+
+2
+
+1
+
+1.5
+0
+
+2
+
+2
+0.5
+
+2
+
+Pos
+Sky
+
+0.5
+
+1.5
+0
+
+2.5
+
+2
+
+t On
+Spo
+
+2.5
+
+1.5
+0
+0.5
+
+1.5
+
+Oc
+
+os
+t op
+
+rs
+Ga
+
+0.5
+0.5
+
+0.5
+0.5
+
+1.5
+
+0.5
+1
+
+0.5
+1
+
+1
+
+1
+
+1
+
+on
+
+up
+Gro
+t
+i
+Di g
+
+1.5
+oft
+ni S
+Bi z
+
+0.5
+1.5
+0
+0.5
+
+01
+1.5
+
+1
+
+1
+
+1
+
+1
+
+1
+
+r
+
+le
+Ga
+
+E ba
+
+e
+Fl e
+
+a
+tM
+
+0.5
+0
+0.5
+0.5
+1
+0.5
+
+b
+
+eam
+
+na
+
+all
+
+T
+ent
+m
+e
+g
+
+0
+0.5
+0.5
+0.5
+0.5
+
+me
+os.
+p
+a
+egr
+
+0
+0.5
+0.5
+0.5
+0.5
+
+0
+0.5
+0.5
+0.5
+0.5
+
+0
+0.5
+0.5
+0.5
+0.5
+
+0
+0.5
+
+0
+0.5
+0.5
+
+1
+
+.rs
+ter
+me
+s.rs
+os.
+pos
+Ra s
+p
+a
+a po
+i
+r
+T
+a
+r
+g
+a
+IN
+a ri
+alle
+
+on
+Ter
+
+Zaključak kvalitativne analize digitalnog okruženja
+Najviši rezultat u analizi dosegnuo je Lightspeed (15/18), a slijede Toast (14.5/18) i SpotOn (14/18). Ovi globalni brendovi
+ističu se uravnoteženim razvojem svih šest vertikala – Web, SEO, Content, Analytics, Ads i Email – što potvrđuje da
+holistička strategija donosi najveću digitalnu snagu.
+Regionalni igrači (Sky Pos, Octopos, BizniSoft…) ostaju na pola ljestvice: oslanjaju se na osnovni Web/SEO i djelomično
+Content, dok Ads, Email i Analytics skoro da ne koriste. Aria i Allegra webovi klijenta skupljaju tek 2–3 boda.
+Što to znači za Konty?
+Prvo podići web‑temelj, SEO i Content na razinu 2.5–3
+Zatim agresivno ulagati u Ads, Email i napredno Analytics praćenje, vertikale u kojima lokalna konkurencija praktički
+nema bodove – to je najbrži put do diferencijacije i brzog skoka prema gornjem dijelu ljestvice.
+
+Na sljedećim stranicama je pregled uvida iz analize digitalnog okruženja svake pojedine vertikale
+
+ANALIZA DIGITALNOG OKRUŽENJA
+
+CONTENT​i UX
+
+Što smo uočili tijekom analize?
+U nastavku predstavljamo ključne zaključke analize svake pojedine digitalne vertikale, s fokusom na prilike koje Konty može iskoristiti
+za postavljanje temelja svoje digitalne prisutnosti i određivanje prioriteta za buduće aktivnosti.
+
+WEB
+
+Općenito gledajući, lokalna konkurencija nije postavila ljestvicu previsoko - premda većina njih ima kvalitetnije i sadržajnije
+siteove od Allegra/Aria, većinom su u pitanju siteovi jednostavne strukture, bazičnog dizajna i osnovne prezentacije
+proizvoda - proizvodi su u pravilu šturo prezentirani sa samo osnovnim informacijama (uz previše oslanjanja na tehničku
+dokumentaciju da ona odradi posao prezentacije proizvoda), a bilo kakav oblik detaljne razrade featuresa, pogotovo benefita
+i njihove kontekstualizacije u okvirima nekog specifičnog tržišnog segmenta (restorani, kafići i slično) je ili nepostojeća ili
+maksimalno pojednostavljena. Aria i Allegra se tu ni počemu ne izdvajaju (što ide u prilog tezi da je potreban redizajn,
+odnosno izrada potpuno novog sitea) - posjeduju identične probleme, a sve je kondenzirano unutar najosnovnijeg single
+pager sitea koji ni po čemu ne odskače od konkurencije.
+Gledajući globalne (US-based) tržišne lidere, primarno Lightspeed i Toast, moguće je primijetiti na kojoj razini kompleksnosti
+ti webovi mogu i trebaju biti. Načelno, ono što je moguće izvući kao inspiraciju od njih je posvećenost prezentaciji
+proizvoda - proizvodi su jasno segmentirani sa jasno istaknutim featuresima i benefitima, kvalitetnom prezentacijom,
+pregršt screenshotova i videa te kontekstualizacijom proizvoda u vidu izdvajanja specifičnih use caseova prema različitim
+industrijama i podgrupama unutar tih industrija.
+
+U poređenju sa konkurencijom, sajtovi Aria i Alegra imaju značajan prostor za unapređenjem u svim aspektima. Ključne
+tačke uključuju ubacivanje neophodnih tehničkih SEO elemenata, ubacivanje i optimizacija on-page elemenata i
+unapređenje beklink profila. Snažnim beklink profilom na domaćem tržištu se ističe Galeb sa najvećim brojem referring
+domena, dok se kod Biznis Softa i INT Rastera među beklinkovima uočava sajt Poreske uprave.
+Poseban fokus treba staviti na brendiranje, jer se najveći deo organskog saobraćaja u ovoj sferi poslovanja ostvaruje
+putem ključnih reči koje sadrže naziv POS rešenja. Rad na jačanju brenda može značajno doprineti vidljivosti i dugoročnom
+uspehu u organskoj pretrazi. Otvaranje zasebnih stranica koje nude i objašnjavaju rešenja i funkcionalnosti koje pružaju
+Allegra i Aria, pozitivno bi doprineo organskom saobraćaju i boljem rangiranju.
+
+SEO
+
+Većina konkurentskih sajtova koristi višeslojnu strukturu sajta (niše, funkcionalnosti, proizvodi) koja omogućava detaljnije
+predstavljanje rešenja i vodi korisnika do konkretnih odgovora. Trenutni problem kod sajtova Alegra i Aria je nedostatak
+dubine i stranica koje bi pokrivale potrebe različitih korisničkih grupa, što mora biti prioritet za optimizaciju.
+
+CONTENT
+
+Stranice koje uspešno kombinuju vizuale, benefite i strukturu kroz jasno izložene bullet pointe i sekcije imaju veći uticaj na
+konverziju. Copy mora biti benefit-oriented i objašnjavati kako rešenje pomaže konkretno biznisima, ne samo koje funkcije ima.
+Testimonijali i isticanje partnera dodatno pojačavaju kredibilitet i poverenje bilo kroz partnerske logoe ili testimoniale
+pojedinačnih korisnika. Blog sekcije koje prate SEO smernice (meta podatke i strukture teksta po uzoru na glavne ključne reči)
+pokazuju značajan potencijal za stvaranje organskog saobraćaja, ali mora postojati jasna strategija – teme moraju biti
+usmerene na konkretne probleme korisnika i povezane s našom nišom i rešenjima. Video sadržaj i demo sekcije su ključna
+prednost kod nekih konkurenata jer omogućavaju korisniku da se edukuje i stekne poverenje pre kupovine. Stranice koje ne
+sadrže glavnu navigaciju, imaju zastareo dizajn ili koriste generički copy bez fokusa na koristi za korisnika značajno zaostaju u
+korisničkom iskustvu. Jednostavne stranice koje vode direktno na univerzalne narudžbenice bez prethodnog predstavljanja
+proizvoda i benefita nisu konkurentne u odnosu na ostatak tržišta.
+Najuspešniji sajtovi odlikuju se jasno strukturiranim putanjama: Niša → Potproblem → Rešenje → Funkcionalnosti →
+Proizvod → CTA, uz stalnu podršku u vidu internih linkova i edukativnih sadržaja.
+
+Kao i u drugim vertikalama, domaći konkurenti nisu na zavidnoj razini integracije niti na polju analitičkog sustava.
+Aria/Alegra imaju osnovne stvari postavljene, ali postoji još dosta mjesta za napredak. Primjer za uzor je Toast koji ima
+većinu integracija.
+Ono što nedostaje na postojećim siteovima Aria i Alegra, a preporuka je da ih se implementira su: postaviti cookie consent
+temeljem kojeg će biti dopušeno raditi remarketing kampanje, implementacija Meta Pixela za optimizaciju Facebook
+kampanja, postavljanje remarketing tagova za Google Ads.
+Dodatan dio koji je potreban za UX i bolje razumijevanje korisnika je postavljanje heatmap toola poput HotJar ili MS Clarity.
+
+Analytics
+
+ANALIZA DIGITALNOG OKRUŽENJA
+
+SEO, ANALYTICS i EMAIL
+
+Na lokalnim tržištima slabo zastupljena konkurencija po pitanju oglašavanja. Postoji prostor za isticanje u odnosu na
+konkurenciju, tako što će se pokriti glavne platforme za oglašavanje.
+Može biti poprilično lako pozicionirati se na search-u usled slabe prisutnosti konkurenata.
+
+ADS
+
+Koristiti dobro ocenjene konkurente kao inspiraciju za oglašavanje na domaćem tržištu: Lightspeed i SpotOn. Pogotovo
+obratiti pažnju na kreativni deo kada je u pitanju META oglašavanje.
+
+Kod većine konkurenata email/martech vertikala nije dobro zastupljena. Pošto se radi o specifičnoj branši možda i
+newsletter nije neophodan, ali svakako treba maksimalno iskoristiti forme. Postojeći webovi jedino imaju formu za
+instalaciju, ali ona nije automatizirana niti se ikada dobio odgovor na ispunjenu fomu. Većinom su tako i konkurenti
+posloženi, uz maksimalno jednu formu bez automatizacije.
+Smjer u kojem treba ići je smjer kojim idu Toast i SpotOn, a to su forme na kojima je implementiran reCAPTCHA kako bi se
+smanjio broj spam upita, te automatski odgovor. Dodatno uz to je preporuka implementirati chatbot rješenje za rješavanje
+nedoumica posjetitelja weba. Opcija koja se još preporuča je povezivanje kalendara (Calendly) formom za ugovaranje
+termina sastanka za demo prezentaciju.
+
+EMAIL
+
+Brzom analizom društvenih mreža uvidjeli smo da postoji velika razlika između globalnih lidera (Toast, Lightspeed, Clover,
+SpotOn, Square) i regionalnih konkurenata. Globalni brendovi strateški koriste LinkedIn za edukaciju i izgradnju
+povjerenja kroz case studyije, storytelling i kvalitetne vizuale. Aktivni su i na Facebooku/Instagramu, uz dosljedan ton i
+raznolike formate sadržaja.
+
+SOCIAL MEDIA
+
+Regionalni brendovi uglavnom komuniciraju promotivno i neredovito, uz slab content marketing i minimalnu prisutnost na
+LinkedInu, što Kontyju otvara prostor za isticanje kroz strateški pristup i edukativni sadržaj. Ključne prilike su: građenje
+autoriteta na LinkedInu, redovita objava korisnih savjeta, korištenje testimonijala te sadržaja koji humanizira brend.
+Za dugoročni učinak preporučuje se izgradnja zajednice kroz dvosmjernu komunikaciju, konzistentan raspored objava i
+korištenje formata koji potiču engagement (video, infografike, pitanja). Time Konty može izgraditi prepoznatljivost i
+povjerenje u industriji gdje većina konkurenata to još nije ostvarila.
+U ovom dokumentu su detaljiniji zaključci iz analize s okvirnim preporukama kako pristupiti aktivnostima u ovoj vertikali.
+Preporučujemo detalljnije istražiti LinkedIn stranice globalnih konkurenata radi inspiracije za planiranje sadržaja.
+
+PREGLED DIGITALNE STRATEGIJE
+Nakon provedenih analiza i sagledavanja ključnih uvida iz digitalnog okruženja, razrađen je strateški plan s ciljem postizanja maksimalnog
+učinka kroz sve relevantne digitalne vertikale. Specijalisti za svaku vertikalu temeljito su analizirali rezultate, definirali ključne ciljeve na koje
+će aktivnosti utjecati, te prioritizirali zadatke na temelju njihove važnosti za postizanje dugoročnih strateških ciljeva.
+Svaka aktivnost je detaljno razrađena kroz konkretne korake, s objašnjenjima i primjerima dobrih praksi. Aktivnosti su sagledane u
+međuodnosu, utječu jedna na drugu i funkcioniraju kao cjelina te zajedno doprinose ostvarenju utvrđenih ciljeva. Uzimajući to u obzir
+gradimo efektivnu digitalnu strategiju, koja je integrirana u okvire poslovnih ciljeva.
+
+Poslovni cilj
+
+Postaviti i unaprediti online
+akviziciju/prodaju rešenja
+
+Postizanje značajnog
+unapređenja vidljivosti
+brenda / proizvoda u okviru
+target grupa
+
+Osigurati dostupnost i
+vidljivost rešenja na
+ključnim review kanalima
+
+Ostvariti organski rast i
+jačati prepoznatljivost
+muzeja
+
+Osigurati prilagodljivost i
+relevantnost sadržaja
+
+Digitalni cilj
+
+Ključni pokazatelji uspješnosti
+
+Online broj leadova
+
+MQL, SQL, REVENUE*
+Godišnji
+Mjesečni (korigirano prema sezonalnosti​)
+
+Povećanje relevatnog
+saobraćaja
+
+Ostvariti svijest o
+brendu
+Ostvariti i održavati
+pozitivnu online
+reputaciju
+
+REACH*
+
+Social Media, Ads, (Branded) keywords Impressions, Newsletters,
+Media mentions
+
+AVERAGE REVIEW RATING*
+
+Prisutnost na third-party
+platformama
+Razviti i implementirati
+strategiju suradnje s
+prodajnim partnerima
+
+Organski promet na web
+stranici
+
+ORGANIC TRAFFIC*
+
+Jačati autoritet domene
+
+Prikupljati analitičke
+podatke o ponašanju
+korisnika
+Testirati i prilagođavati
+sadržaj web stranice
+
+*Ovdje su navedeni samo highlevel KPI-evi koje je svakako potrebno
+pratiti u svrhu ostvarnja poslovnih ciljeva.
+
+CILJNA SKUPINA
+SEGMENTACIJA CILJNE SKUPINE
+Proces smo započeli analizom strateškog upitnika i postojećih web stranica oba postojeća brenda (Allegra i Aria), uz fokus na dijelove koji se odnose na
+korisnike, modele poslovanja i tržišne smjernice. U analizu smo uključili i konkurentske brendove, kao i dodatne izvore o ponašanju B2B korisnika u
+maloprodaji, ugostiteljstvu i distribuciji softverskih rješenja.
+Segmente smo organizirali hijerarhijski – prvo po industrijama (Retail i Hospitality), zatim po unutarindustrijskim segmentima i na kraju smo definirali
+persone. Partnere smo posebno izdvojili kao zaseban kanal zbog njihove presudne uloge u poslovnom modelu. Za svaki segment definirali smo pripadajuće
+persone, njihove uloge, izazove, vrijednosti koje Konty rješenje donosi te preporučene komunikacijske kanale i ključne poruke.
+Na temelju dostupnih funkcionalnosti jasno smo uskladili poruke s realnim mogućnostima sustava. Ovaj pristup osigurava stratešku osnovu za razvoj sadržaja,
+odabir komunikacijskih kanala i prioritizaciju unutar budućih marketinških aktivnosti. U fazi validacije, ostavili smo prostor za dodatnu doradu nakon potvrde
+ključnih funkcionalnosti i ostalih ciljeva.
+
+1
+
+2
+
+U ovom dokumentu je detaljniji pregled karakteristika segmenata i persona u kojem se mogu vidjeti
+predloženi kanali komunikacije i personalizirane ključne komunikacijske poruke.
+
+IZRADA NOVOG WEBA
+S obzirom na to da je trenutačna web stranica u suštini single-pager, da
+brand prolazi kroz redizajn i rebranding te izazove lokalne i globalne
+konkurencije, izrada nove web stranice je nužnost kako bi se zadovoljile
+tržišne i marketinške utakmice. Novi web je zamišljen ambiciozno, usmjeren
+raznim segmentima potencijalnih kupaca sa snažnim naglaskom na
+featurese proizvoda, ali i specifičnosti korištenja proizvoda u raznim tržišnim
+kontekstima.
+
+WEB Roadmap
+
+Glavna dokumentacija - ovdje su sadržane sve upute za izradu novog weba, a
+niže se nalazi popis i pojašnjenje popratne dokumentacije.
+
+No data
+
+Taksonomija
+Glavna kategorizacija - ovakva razrada kategorizacije će biti temelj redizajna web stranice
+i ona je potvrđena. Neke finese će se vjerojatno dorađivati u procesu izrade, ali ovakav
+layout je očekivan kao finalno rješenje te on zadovoljava sve potrebe stranice u ovoj fazi
+životnog ciklusa..
+
+Informacijska arhitektura
+Informacijska arhitektura sadrži popis svih pageova te glavnih komponenata i usability
+elemenata koji se na njima moraju nalaziti. Dizajneri su dobrodošli po svom nahođenju
+mijenjati raspored elemenata, ali predlaže se da on prati ovaj prijedlog. Svi ovi elementi
+će biti detaljnije razrađeni u nastavku ovog dokumenta.
+
+SEO zahtjevi
+S obzirom na prirodu industrije, SEO-friendly web stranica je nužnost. Na linku je priložen
+dokument sa specifičnim SEO zahtjevima koji su očekivani na projektu, uglavnom u sklopu
+CMS funkcionalnosti koje su potrebne za ispravnu konfiguraciju i održavanje SEO-a.
+
+Wireframeovi
+Na linku je moguće pronaći low-fidelity wireframeove za ključne/najvažnije stranice s
+prijedlogom rasporeda elemenata.
+
+Dokumentacija
+Taksonomija
+
+Dokumentacija
+Informacijska arhitektura
+
+Dokumentacija
+SEO zahtjevi i prijedlozi
+
+Dokumentacija
+Wireframes
+
+STRATEŠKI ROADMAP
+
+SEO
+
+Ovdje je pregled aktivnosti koje je potrebno provesti te stanja implementacije koje možemo pratiti - koliko je prijedloga implementirano i koliko ih je
+još preostalo. Procjena troškova će se generirati kada utvrdimo budžete.
+
+Metrike na koje aktivnosti
+utječu
+
+VISOK PRIORITET
+
+Potrebni resursi
+Developer
+
+Procjena Troškova
+Faza 1
+
+Organski promet na webu
+Search Engine Ranking
+Indeksacija stranica
+
+Min:
+Max:
+
+€0
+€0
+
+Faza 2
+Min:
+Max:
+
+€0
+€0
+
+Faza 3
+
+Odrađeno prijedloga
+
+Min:
+Max:
+
+0
+
+0.0%
+12
+
+SEO Roadmap
+
+No data
+
+€500
+€2,000
+
+Ukupno: €500 - €2000
+
+STRATEŠKI ROADMAP
+
+SEO
+
+FAZA I
+
+X
+
+Prva faza obuhvaća aktivnosti koje provodimo unutar prvog mjeseca implementacije novog Konty weba. To su ključne tehničke postavke koje je nužno
+pravilno implementirati već prilikom same izrade web stranice ili neposredno nakon njenog lansiranja kako bismo postavili dobre temelje za buduću
+optimizaciju i rast organskog prometa. U ovu fazu ulaze sve tehničke SEO aktivnosti nužne za pravilno indeksiranje, praćenje i rangiranje sadržaja od
+strane pretraživača. S obzirom na objedinjavanje dva postojeća weba u novi, dodatno vodimo računa o pravilnom prenošenju sadržaja, sprečavanju
+tehničkih grešaka te usklađivanju SEO postavki kako bi se spriječio gubitak postojećeg SEO potencijala. Ove aktivnosti postavljaju osnovu za daljnju
+optimizaciju sadržaja i ključnih riječi u narednim fazama projekta.
+
+#1 Generisati robots.txt fajl
+
+Razdoblje provedbe: Avgust-Avgust
+Robots.txt fajl treba postaviti u root direktorijum sajta Konty - /robots.txt
+Sajtovi Allegra i Aria trenutno nema robots.txt fajl, što može otežati kontrolu nad indeksiranjem sadržaja. Robots fajl omogućava definisanje pravila za crawlere
+(npr. Googlebot) – šta smeju, a šta ne smeju da crawluju.
+Google dokumentacija za robots.txt fajl
+
+X
+
+#2 Generisati xml sajtmapu
+
+Razdoblje provedbe: Avgust-Avgust
+XML sajtmapa je ključna jer omogućava pretraživačima da efikasno pronađu i indeksiraju sve relevantne stranice sajta. To poboljšava vidljivost u pretragama,
+naročito za dublje ili novije stranice koje inače mogu biti teže dostupne.
+Kreirati XML sajtmapu koja sadrži sve relevantne URL-ove sajta kako bi pretraživači mogli efikasno indeksirati stranice. Sajtmapa treba da uključuje sve bitne
+stranice bez dupliranih ili zastarelih linkova.
+Sajtmapa treba biti dinamička - da se prilikom dodavanja novih pageva oni automatski dodaju u sajmapu, a da se prilikom brisanja automatski uklanjaju.
+Nakon kreiranja, potrebno je sajtmapu:
+-Ubaciti u robots.txt fajl kako bi pretraživači imali lak pristup.
+-Submitovati sajtmapu u Google Search Console (GSC) kako bi Google bio obavešten o njenom postojanju i mogao pravilno indeksirati sajt.
+Google dokumentacija za xml sajtmapu
+
+X
+
+#3 Postaviti canonicale
+
+Razdoblje provedbe: Avgust-Avgust
+Potrebno je postaviti canonical tagove na sve stranice sajta tako da budu self-referencing – svaki URL treba da kao canonical označava samog sebe.
+Trenutno canonical tagovi nisu definisani na sajtovima Allegra i Aria, što može dovesti do problema sa dupliranim sadržajem. Korišćenje canonicala pomaže
+Google-u da identifikuje primarnu verziju stranice, čime se sprečava rasipanje SEO signala i obezbeđuje bolji rang.
+Google dokumentacija za postavljanje canonicala
+
+X
+
+#4 Ispraviti HTML lang element
+
+Razdoblje provedbe: Avgust-Avgust
+Na svim stranicama sajtova Allegra i Aria, HTML lang atribut trenutno je postavljen na en, što označava da je sadržaj na engleskom jeziku. Međutim, sadržaj sajta
+je na srpskom jeziku, te ovaj atribut treba postaviti na sr.
+Pretraživači koriste lang atribut kao signal za određivanje jezika stranice, što im pomaže da pravilno indeksiraju i prikazuju stranicu korisnicima koji govore taj
+jezik. Pogrešna vrednost može dovesti do lošeg rangiranja za korisnike koji pretražuju na srpskom jeziku.
+Potrebno je postaviti lang="sr" radi tačne jezičke identifikacije i bolje lokalizacije.
+Za crnogorski jezik, HTML lang atribut treba postaviti na lang="sr-ME".
+Crnogorski još nema svoj zaseban jezički kod prema ISO standardu, pa se koristi srpski (sr) u kombinaciji sa regionalnim kodom za Crnu Goru (ME).
+Dokumentacija za HTML Language Code Reference
+
+X
+
+#5 AMP greška
+
+Razdoblje provedbe: Avgust-Septembar
+U konzoli za sajt Aria se trenutno pojavljuje greška "A mandatory attribute is missing from an HTML tag" - skrinšot.
+Ova greška se javlja kada neki obavezni atribut na AMP stranici nije pravilno definisan.
+Iako AMP danas ima manji SEO značaj zbog prelaska fokusa na Core Web Vitals, ako se AMP koristi i na budućem sajtu Konty, potrebno je osigurati da svi
+obavezni atributi budu prisutni.
+Za rešavanje, proverite AMP dokumentaciju i dodajte nedostajući atribut u HTML tag.
+AMP HTML dokumentacija
+
+STRATEŠKI ROADMAP
+
+SEO
+
+FAZA II
+
+X
+
+Druga faza obuhvaća aktivnosti koje je poželjno provesti unutar drugog i trećeg mjeseca implementacije. Ovdje se nalaze stavke tehničke optimizacije koje
+nisu hitne za lansiranje, ali značajno utječu na brzinu, korisničko iskustvo i bolje rangiranje web stranice u rezultatima pretrage. Uključuju optimizaciju
+brzine učitavanja, formatiranje i pravilno dimenzioniranje slika te implementaciju strukturiranih podataka. Cilj ove faze je osigurati da stranica radi brzo i
+učinkovito te pruža što kvalitetnije iskustvo za korisnike i optimalne uvjete za pretraživače, čime se dodatno poboljšavaju performanse weba na duži rok.
+
+#1 Page Speed: Core Web Vitals: Largest Contentful Paint element
+
+Razdoblje provedbe: Avgust-Septembar
+Largest Contentful Paint (LCP) metrika ima prostora za značajno poboljšanje na trenutnim sajtovima, koja bi trebalo uzeti u obzir prilikom prelaska na Konty.
+LCP meri vreme potrebno za učitavanje najvećeg vizuelnog elementa na stranici, kao što su slike ili tekst, i ključan je faktor za korisničko iskustvo i SEO.
+Jedan od pristupa je razmatranje eager load opcije za LCP slike, koja podrazumeva njihovo odmah učitavanje bez odlaganja. Ovo je posebno korisno za slike u
+banerima ili u hero sekcijama ili druge kritične vizualne elemente iznad preloma (u prvom view-u), jer obezbeđuje njihov prioritetan prikaz i time poboljšava LCP.
+Ipak, eager load treba koristiti selektivno kako bi se izbeglo opterećenje servera, dok za slike ispod preloma ostaje efikasna primena lazy-loading tehnike.
+Takođe, preporučuje se optimizacija formata slika (npr. WebP) i minimizacija render-blokirajućih resursa poput CSS-a i JavaScript-a kako bi se obezbedila optimalna
+performansa stranice.
+Trenutna merenja na sajtovima Allegra i Aria:
+Homepage Allegra - banner fotografija
+Skrinšot: https://prnt.sc/OrA1PCQWECRU
+Homepage Aria - banner fotografija
+Skrinšot: https://prnt.sc/c-lnR8E7XhqJ
+Google dokumentacija za LPC
+Google dokumentacija za lazy looading
+
+X
+
+#2 Optimizacija veličine i formata slika
+
+Razdoblje provedbe: Avgust-Septembar
+Formati slika “next gen” kao što su AVIF i WebP imaju bolju web kompresiju od PNG ili JPEG. Prebacivanje sa JPEG i PNG na formate nove generacije može pomoći u
+uštedi prostora na serveru jer kompresija slike zadržava oštrinu originalne slike i u velikoj meri smanjuje veličinu datoteke. Fotografije treba da budu u "next gen"
+formatima kao što su WebP i AVIF.
+
+X
+
+#3 Dodati veličinu fotografija u HTML-u
+
+Razdoblje provedbe: Avgust-Septembar
+Trenutno na sajtovima Allegra i Aria, slike na stranicama nemaju definisane width i height atribute u HTML-u. Ovi atributi pomažu browseru da rezerviše prostor
+prilikom učitavanja stranice, što poboljšava performanse i stabilnost layouta.
+Prilikom prelaska na Konty sajt dodati ove elemente na fotografije u HTML-u.
+Nedostatak veličine može negativno uticati na CLS (Cumulative Layout Shift) metriku, što može uzrokovati pomeranje elemenata na stranici tokom učitavanja.
+Potrebno je dodati dimenzije za sve slike direktno u HTML.
+Google dokumentacija za dodavanje veličine fotografija
+
+X
+
+#4 Schema markup
+
+Razdoblje provedbe: Avgust-Septembar
+Potrebno je dodati schema markup na sajtu. Schema pomaže pretraživačima da bolje shvate sadržaj na web stranici. To poboljšava vidljivost i rangiranje u
+rezultatima pretrage.
+Dokumentacija za postavljanje schema markupa
+
+STRATEŠKI ROADMAP
+
+SEO
+
+FAZA III
+
+X
+
+U Fazu III uključene su stavke koje podrazumijevaju nužne popravke nakon lansiranja weba ili one koje nemaju kritičan utjecaj na inicijalnu
+funkcionalnost stranice ili na kratkoročne rezultate, ali njihovo rješavanje dugoročno pridonosi održavanju kvalitete tehničke SEO infrastrukture i
+sprječava pojavu manjih grešaka u budućnosti. Aktivnosti ove faze usmjerene su na kontinuiranu tehničku optimizaciju, otklanjanje manje značajnih
+grešaka i detaljno dotjerivanje tehničkog aspekta stranice, čime se dugoročno osigurava stabilnost i optimalno funkcioniranje weba.
+
+#1 Soft 404 greške
+
+Razdoblje provedbe: Septembar-Oktobar
+Soft 404 je stranica koja izgleda kao da ne postoji (npr. prikazuje poruku „stranica nije pronađena“), ali server vraća status 200 umesto 404. Ovo zbunjuje
+pretraživače jer misle da je stranica validna, što loše utiče na SEO.
+Stranicama koje zaista ne postoje treba vratiti status 404 ili 410. Ako stranica postoji, treba je popuniti relevantnim sadržajem.
+Primer takve stranice se nalazi na početnoj stranici na Allegrapos.rs: https://allegrapos.rs/index.html
+Skrinšot dela koda sa početne stranice koji vodi na Index stranicu: https://prnt.sc/EENCrGNJOXyp
+Obratiti pažnju da se na Konty sajtu ne generišu soft 404 stranice.
+
+X
+
+#2 Duplirani HTML tag za list item u futeru
+
+Razdoblje provedbe: Oktobar-Novembar
+U sekciji "Linkovi" u futeru koriste se dupli <li> tagovi, što nije ispravno. <li> elementi treba da budu direktno ispod <ul> ili <ol> tagova. Potrebno je ukloniti višak i
+ostaviti jedan nivo <li> elemenata.
+Prilikom prelaska na Konty obratiti pažnju da se ne dupliraju li elementi u futeru.
+Skrinšot koda: https://prnt.sc/8GClQwbN4ozt
+
+STRATEŠKI ROADMAP
+
+CONTENT
+
+Ovdje je pregled aktivnosti koje je potrebno provesti te stanja implementacije koje možemo pratiti - koliko je prijedloga implementirano i koliko ih je
+još preostalo. Procjena troškova će se generirati kada utvrdimo budžete.
+
+Metrike na koje aktivnosti
+utječu
+
+VISOK PRIORITET
+
+Organski promet na webu
+Search Engine Ranking
+Jasna i transparentna komunikacija
+s klijentima
+Lead generation
+
+Potrebni resursi
+Content Manager
+Copywriter
+Designer
+
+Procjena troškova
+Faza 1
+Min:
+Max:
+
+€0
+€0
+
+Faza 2
+Min:
+Max:
+
+€0
+€100
+
+Faza 3
+
+Odrađeno prijedloga
+
+Min:
+Max:
+
+0
+
+0.0%
+8
+
+Content Roadmap
+
+No data
+
+€0
+€200
+
+Ukupno: €0 - €300
+
+STRATEŠKI ROADMAP
+
+CONTENT
+
+FAZA I
+
+X
+
+Prva faza podrazumijeva aktivnosti koje je važno u implementirati u startu, budući da postavljaju osnovu za SEO i content strategiju. Uključuju detaljno
+istraživanje ključnih riječi, optimizaciju meta podataka te uspostavu pravilne strukture sadržaja. Ove aktivnosti ključne su za pravilnu indeksaciju
+stranice od strane pretraživača te postavljanje temelja contenta koji će omogućiti efikasno rangiranje na pretraživačima već od lansiranja weba.
+
+#1 Keyword research
+
+Razdoblje provedbe: Jul-Jul
+Po izradi novog web-a trebamo odabrati ključne reči na koje ćemo se fokusirati na svakoj stranici kako bi prikupili saobraćaj za spomenute ključne reči.
+Sledeći dokument prikazuje trenutno stanje pretraga za pojmove koji su nam značajni na domaćem i stranom tržištu.
+Volume kolona predstavlja broj mesečnih pretraga za određeni pojam što će nam dati dojam na koje se ključne reči trebamo fokusirati kako bi dobili najveću dobit.
+
+X
+
+#2 Optimizacija meta podataka
+
+Razdoblje provedbe: Jul-Avgust
+Pre lansiranja novih web stranica moramo postaviti meta podatke po SEO standardima. Konkretno:
+Page Title - Šta ljudi vide u pretrazi. Mora biti između 30-60 karaktera. Treba sadržati glavnu ključnu reč.
+Meta Description - Opis stranice koji se vidi u pretrazi. Mora biti između 120-155 karaktera. Treba sadržati glavnu ključnu reč.
+U sledećem dokumentu se nalazi tablica koja će nam pomoći u raspisu meta podataka i proveri da li ispunjavajuću dužinu. (Prve 2 reda su primeri)
+
+X
+
+#3 Postaviti strukturu h tagova
+
+Razdoblje provedbe: Jul-Avgust
+Na stranicama gde nedostaje, potrebno je dodati h1 tag koji jasno definiše glavnu temu stranice. Svaka stranica treba da sadrži tačno jedan h1 tag. Heading tagovi
+(h1–h6) koriste se za logično strukturiranje sadržaja – h1 je glavni naslov, zatim slede h2 kao podnaslovi, pa h3 za dodatne podsekcije itd.
+Hijerarhija mora biti pravilna: ne treba preskakati nivoe (npr. sa h1 direktno na h4).
+Pravilna upotreba heading tagova poboljšava čitljivost za korisnike i omogućava pretraživačima da lakše razumeju strukturu i važnost informacija na stranici, što
+doprinosi boljem SEO rezultatu.
+Google dokumentacija o primeni headinga
+
+STRATEŠKI ROADMAP
+
+CONTENT
+
+FAZA II
+
+X
+
+Druga faza odnosi se na sadržajne aktivnosti koje ćemo provoditi tijekom drugog i trećeg mjeseca implementacije novog weba. Fokus ove faze je na
+daljnjoj optimizaciji sadržaja kroz kvalitetno interno povezivanje stranica te na produkciji vizualnog sadržaja (poput infografika, animacija i tehničkih
+prikaza), što će dodatno ojačati percepciju brenda te jasno predstaviti proizvode i softverska rješenja korisnicima. U ovoj fazi, cilj je dodatno poboljšati
+korisničko iskustvo te povećati angažman posjetitelja kroz vizualno atraktivan i lako razumljiv sadržaj.
+
+#1 Postavka internih linkova
+
+Razdoblje provedbe: Avgust-Avgust
+Trenutne web stranice ne sadrže interne linkove, što otežava korisnicima i Googleu navigaciju kroz stranicu.
+Nakon izrade novih stranica, moramo odabrati najvažnije stranice, poput stranica proizvoda i stranica rešenja i fokusirati se na povezivanje tih stranica kroz ostatak
+web-a. Osim ciljanih stranica, trebamo olakšati korisniku kretanje po sajtu kroz povezivanje svih spomenutih termina koji sadrže odgovarajuću stranicu.
+Nakon pokretanja blog sekcije, svaki novi članak treba putem internih linkova voditi ka fokus stranicama kao i stranicama koje pospešuju sadržaj.
+
+X
+
+#2 Izrada vizuelnog sadržaja
+
+Razdoblje provedbe: Avgust-Septembar
+Vizuelni sadržaj trenutno ide u dobrom smeru gledajući da konkurencija svoje proizvode prikazuje kroz slide i videe.
+Na temelju izrade novog web-a i blog sekcije trebamo odabrati kako vizuelno prikazati naše proizvode i softvere.
+Strani konkuretni vole prikazivati benefite proizvoda kroz infografike ili kroz animacije prikazati kako njihovi softveri rade, dok tehničke specifikacije prikazuju kroz
+detaljne dokumentacije.
+Razraditi spisak vizuelnog sadržaja proizvoda, softvera i propratnog sadržaja koji bi koristili kroz web i blog sekciju kako ih približili krajnjem korisniku.
+
+FAZA III
+
+X
+
+Treća faza obuhvaća kontinuirane aktivnosti koje ćemo provoditi nakon trećeg mjeseca rada novog weba. Fokus ove faze je na sustavnom razvoju
+sadržaja kroz kreiranje content kalendara, redovitu objavu novih članaka optimiziranih za specifične ključne riječi, kao i implementaciju dodatnih
+stranica koje ciljaju specifične potrebe korisnika. Važan dio ove faze je i prikupljanje te implementacija testimonijala koji će potvrditi kvalitetu Konty
+proizvoda, povećati povjerenje korisnika te pomoći brendu u diferencijaciji od regionalne konkurencije. Sve navedeno osigurat će dugoročan rast
+organskog prometa i kontinuiranu izgradnju autoriteta brenda.
+
+#1 Razvoj content kalendara
+
+Razdoblje provedbe: Avgust-Decembar
+Razvoj dodatnog sadržaja za blog je kontinualni proces koji nam omogućava da se pozicioniramo za dodatne ključne reči i prikupimo veći saobraćaj.
+Kroz ovaj proces na mesečnom nivou trebamo pretraživati nove ključne reči nakon čega bi se raspisivali outline-ovi samih članaka koje bi pisac potom raspisivao.
+Svi članci trebaju biti optimizovani prateći SEO standarde pre nego što budu objavljeni.
+Potencijalne teme:
+Koji fiskalni uređaji su najbolji za ugostitelje?
+Da li je moguće koristiti tablet ili mobilni telefon za fiskalizaciju?
+Kako obučiti osoblje za rad sa e-fiskalnom kasom?
+Upotreba fiskalnih podataka za optimizaciju menija i cena
+Koristiti sledeći template u svrhu organizacije tema i praćenja produkcije sadržaja.
+
+X
+
+#2 Kreiranje dodatnih stranica
+
+Razdoblje provedbe: Septembar-Septembar
+Nakon izrade novog web-a pregledati ključne reči za koje se rangiramo kao i specifične stranice za koje se konkurenti rangiraju a mi ih ne sadržimo.
+Otvoriti dodatne stranice koje pospešuju trenutni sadržaj na sajtu ili targetiraju specifične niširane probleme sa kojima se korisnici susreću.
+
+X
+
+#3 Prikupljanje i implementacija testimoniala
+
+Razdoblje provedbe: Septembar-Septembar
+Prikupiti testimoniale od korisnika koje ćemo moći koristiti na web-u i ostalim kanalima kao što rade kompetitori.
+Obzirom da trenutno imamo brojke korisnika, dodatno bi pospešili sadržaj stranica kada bi za svaku nišu istakli velika imena koja koriste naše proizvode unutar
+njihovog biznisa što nam daje veći kredibilitet obzirom da domaća konkurencija nema ovakav vid sadržaja.
+
+STRATEŠKI ROADMAP
+
+ANALYTICS
+
+Ovdje je pregled aktivnosti koje je potrebno provesti te stanja implementacije koje možemo pratiti - koliko je prijedloga implementirano i koliko ih je
+još preostalo. Procjena troškova će se generirati kada utvrdimo budžete.
+
+Metrike na koje aktivnosti
+utječu
+
+VISOK PRIORITET
+
+Točniji i potpuniji podaci temeljem
+kojih se donose odluke
+Bolje razumijevanje posjetitelja na
+webu
+
+Potrebni resursi
+Analytics Expert
+Developer
+
+Procjena troškova
+Faza 1
+Min:
+Max:
+
+€0
+€0
+
+Faza 2
+Min:
+Max:
+
+€20
+€50
+
+Faza 3
+
+Odrađeno prijedloga
+
+Min:
+Max:
+
+0
+
+0.0%
+7
+
+Analytics Roadmap
+
+No data
+
+Ukupno: €20 - €50
+
+€0
+€0
+
+STRATEŠKI ROADMAP
+
+ANALYTICS
+
+Prva faza obuhvaća ključne inicijalne postavke koje omogućavaju pravilno prikupljanje podataka, jasno praćenje aktivnosti korisnika i donošenje
+kvalitetnih strateških odluka temeljenih na podacima. Sve ove aktivnosti omogućit će detaljnu analizu ponašanja korisnika te kvalitetno i segmentirano
+ciljanje željene publike od samog početka rada nove web stranice.
+
+FAZA I
+
+X
+
+#1 Postaviti Cross-Domain
+
+Razdoblje provedbe: Jul-Jul
+U cross-domain sekciji navesti vlastitu domenu i ostale brendove koji se koriste.
+
+X
+
+#2 Uključiti Google Signals
+
+Razdoblje provedbe: Jul-Jul
+Oni omogućuju praćenje korisnika kroz više uređaja, daje dodatne demografske i interesne podatke te omogućuje napredni remarketing. Dobiva se precizniji
+reporting i bolje ciljanje oglasa.
+
+X
+
+#3 Event Data Retention
+
+Razdoblje provedbe: Jul-Jul
+Povećati s defaultnih 2 mjeseca na 14 mjeseci, time se omogućava dugoročno praćenje poput sezonalnosti, praćenje sporijih ciklusa prodaje (B2B) itd
+
+X
+
+#4 Izrada Measurement plana
+
+Razdoblje provedbe: Jul-Avgust
+Izraditi plan mjerenja za web stranicu kako bi se bolje razumijeli posjetitelji weba.
+
+X
+
+#5 Eventi i Key Eventi
+
+Razdoblje provedbe: Jul-Avgust
+Temeljem plana mjerenja implementirati događaje koji su bitni za poslovanje i optimizaciju kampanja. Temeljem evenata će se bolje i kvalitetnije segmentirati i
+targetirati željena ciljna skupina ljudi.
+
+FAZA II
+
+X
+
+Druga faza usmjerena je na implementaciju naprednijih postavki koje osiguravaju dugoročnu usklađenost s najboljim praksama i zakonskim zahtjevima.
+U ovoj fazi provodi se i kontinuirano održavanje, provjera implementiranih događaja (eventa) te njihova nadogradnja tijekom godine kako bi analitika
+pratila promjene i nove potrebe weba te poslovanja. Ova aktivnost traje kontinuirano kroz cijelu godinu i osigurava aktualnost podataka i njihovu
+relevantnost za donošenje budućih poslovnih odluka.
+
+#1 Implementacija Cookie Consent V2
+
+Razdoblje provedbe: Jul-Avgust
+Iako je kompanija izvan EU preporuka je da se implementira Cookie Consent V2 kojeg većina marketinških alata zahtjeva za potpunu funkcionalnost
+
+X
+
+#2 Provjera evenata i nadogradnja po potrebi
+
+Razdoblje provedbe: Jul-Decembar
+Godišnje održavanje, provjera postojećih evenata, nadogradnja i implementacija novih po potrebi.
+
+STRATEŠKI ROADMAP
+
+ADS
+
+Ovdje je pregled aktivnosti koje je potrebno provesti te stanja implementacije koje možemo pratiti - koliko je prijedloga implementirano i koliko ih je
+još preostalo. Procjena troškova će se generirati kada utvrdimo budžete.
+
+Metrike na koje aktivnosti
+utječu
+
+VISOK PRIORITET
+
+Broj posetilaca sa plaćenih kanala
+Generisanje lead-ova
+Pozicioniranje u odnosu na
+konkurenciju
+Svest o brendu
+
+Potrebni resursi
+Ads Specialist
+Copywriter
+Dizajner
+
+Procjena Troškova
+Faza 1
+Min:
+Max:
+
+€6,000
+€12,000
+
+Faza 2
+Min:
+Max:
+
+€4,800
+€7,200
+
+Faza 3
+
+Odrađeno prijedloga
+
+Min:
+Max:
+
+0
+
+0.0%
+11
+
+Ads Roadmap
+
+No data
+
+€0
+€0
+
+Ukupno: €10800 - €19200
+
+STRATEŠKI ROADMAP
+
+ADS
+
+FAZA I
+
+X
+
+Prva faza obuhvaća aktivnosti koje se pokreću unutar prva dva mjeseca od implementacije novog Konty weba. Cilj ove faze je brzo generiranje prvih
+rezultata i jasnih uvida u ponašanje publike te postavljanje temelja za daljnje optimizacije kampanja. Sve ove aktivnosti omogućuju rano prikupljanje
+podataka, privlačenje korisnika zainteresiranih za POS rješenja te stvaranje osnove za učinkovite remarketing strategije.
+
+#1 Kreiranje i vođenje search kampanje (Google Ads)
+
+Razdoblje provedbe: Januar-Decembar
+Cilj: Privlačenje korisnika koji aktivno traže POS sisteme ili srodna rešenja.
+Struktura:
+* Budžet: 40% ukupnog Google Ads budžeta
+* Bidding strategija: Maximize Conversions
+* Lokacija: Srbija
+* Ad Groups:
+* Ad Group 1: General POS Keywords
+* Ključne reči:
+* POS sistem, softver za restoran, kasa za kafić.
+* Ad Group 2: Advanced POS Keywords
+* Ključne reči:
+* napredni POS sistem, softver za restoranske lance, POS za velike restorane, pos za lance
+* Negativne ključne reči:
+* „besplatno“, „free“, „open source“, „karijere“, „posao“ (kako bi se izbegle irelevantne pretrage).
+
+X
+
+#2 Kreiranje i vođenje PMAX kampanje (Google Ads)
+
+Razdoblje provedbe: Januar-Decembar
+Cilj: Maksimizacija konverzija (leadovi, demo zahtevi)
+Struktura:
+* Budžet: 50% ukupnog Google Ads budžeta
+* Bidding strategija: Maximize Conversions (sa opcionim Target CPA nakon 2–3 nedelje).
+* Lokacija: Srbija (fokus na Beograd, Novi Sad, Niš)
+* Asset Group:
+* Ciljna publika: Vlasnici malih i srednjih ugostiteljskih objekata (restorani, kafići, prodavnice).
+* Signali publike:
+* Interesovanja: Ugostiteljstvo, POS sistemi, elektronska fiskalizacija, malo poslovanje.
+* Search themes: „POS sistem za kafić“, „softver za prodavnicu“, „kasa za restoran“.
+* Custom publike: posetioci web-a, customer lista
+* Sadržaj:
+* Vizuali: Vizuelni prikazi softvera, restorana/kafića, uređaja za naplatu.
+* Video: Kratki demo snimak (15–30 sekundi).
+
+X
+
+#3 Kreiranje publike zasnovane na interesovanjima (Google Ads)
+
+Razdoblje provedbe: Januar-Januar
+Publike bazirane na interesovanjima (Affinity i In-Market)
+* Publika 1: Vlasnici malih i srednjih ugostiteljskih objekata:
+* Tip publike: In-Market Audience.
+* Kategorije:
+* Business Services > Retail & Point of Sale Systems.
+* Business Services > Software for Small Businesses.
+* Food & Dining > Restaurants.
+* Publika 2: Menadžeri većih ugostiteljskih lanaca (AllegraPOS):
+* Tip publike: In-Market Audience.
+* Kategorije:
+* Business Services > Enterprise Software.
+* Business Services > Analytics & Reporting Tools.
+* Food & Dining > Restaurant Management.
+* Publika 3: IT konsultanti:
+* Tip publike: Affinity Audience.
+* Kategorije:
+* Technology > Enterprise Technology.
+* Business Services > IT Services & Consulting.
+
+STRATEŠKI ROADMAP
+
+ADS
+
+X
+
+#4 Kreiranje remarketing publika (Google Ads)
+
+Razdoblje provedbe: Januar-Januar
+* Publika 1: Svi posetioci web-a:
+* Izvor: Website Visitors (putem Google Ads tag-a)
+* Kriterijum: Svi korisnici koji su posetili web poslednjih 30–60 dana.
+* Publika 2: Posetioci specifičnih stranica (cena/funkcionalnosti):
+* Izvor: Website Visitors.
+* Kriterijum: Korisnici koji su posetili stranice „/pricing“, „/features“, ili „/demo“ u poslednjih 30 dana.
+* Publika 3: Korisnici koji su započeli, ali nisu završili konverziju:
+* Izvor: Website Visitors.
+* Kriterijum: Korisnici koji su posetili „/demo“ ili „/contact“, ali nisu izvršili „Lead“ konverziju (npr. popunjavanje forme).
+
+X
+
+#5 Kreiranje i vođenje display kampanje (Google Ads)
+
+Razdoblje provedbe: Januar-Decembar
+Cilj: Ponovno angažovanje korisnika koji su posetili web, ali nisu konvertovali.
+Struktura:
+* Budžet: 10% ukupnog Google Ads budžeta
+* Bidding strategija: Maximize Conversions ili Target CPA (nakon prikupljanja dovoljno podataka).
+* Lokacija: Srbija
+* Ad Groups:
+* Ad Group 1: wesite visitors
+* Ciljna publika:
+* Custom Audience: Svi posetioci u poslednjih 30–60 dana
+* Oglasi:
+* Format: Responsive Display oglasi
+* Komunikacija: „Jednostavan POS za vaš restoran ili prodavnicu – zakažite demo!“
+* Vizuali: Vizuelni prikazi softvera, restorana, ili promotivne ponude
+
+STRATEŠKI ROADMAP
+
+ADS
+
+FAZA II
+
+X
+
+Druga faza se odnosi na aktivnosti koje započinju od trećeg mjeseca implementacije te nastavljaju kontinuirano tijekom godine. Ove stavke mogućavaju
+kontinuirano privlačenje novih i ponovno angažiranje postojećih korisnika, povećavaju stopu konverzije te sustavno proširuju doseg prema relevantnoj
+ciljnoj skupini tijekom cijele godine. Redovno praćenje rezultata i kontinuirana optimizacija ključni su elementi za dugoročni uspjeh kampanja.
+
+#1 Istraživanje publika zasnovanih na interesovanjima (META)
+
+Razdoblje provedbe: Mart-Mart
+Istražiti opcije za različite kategorije interest publika u okviru META platforme.
+* Publika 1: Vlasnici malih i srednjih ugostiteljskih objekata:
+* Demografija: 25–50 godina, muškarci i žene, Srbija (fokus: Beograd, Novi Sad, Niš).
+* Interesovanja:
+* Ugostiteljstvo
+* Restorani
+* Kafići
+* POS sistemi
+* Elektronska fiskalizacija
+* Poslovni softver
+* Malo poslovanje
+* Publika 2: Menadžeri većih ugostiteljskih lanaca:
+* Demografija: 25–50 godina, muškarci i žene, Srbija i region (Hrvatska, BiH, Crna Gora).
+* Interesovanja:
+* Ugostiteljski softver
+* Poslovna analitika
+* Upravljanje lancima
+* Tehnologija za restorane
+* ERP sistemi
+
+X
+
+#2 Kreiranje lookalike publika (META)
+
+Razdoblje provedbe: Mart-Mart
+* Publika 1: Lookalike na osnovu posetilaca web-a:
+* Izvor: Custom Audience od korisnika koji su posetili web u poslednjih 30–60 dana
+* Veličina: 1%–3%
+* Lokacija: Srbija.
+* Publika 2: Lookalike na osnovu leadova:
+* Izvor: Custom Audience od korisnika koji su popunili kontakt formu ili zatražili demo (npr. „Lead“ konverzija).
+* Veličina: 1%
+* Lokacija: Srbija.
+
+X
+
+#3 Kreiranje remarketing publika (META)
+
+Razdoblje provedbe: Mart-Mart
+* Publika 1: Svi posetioci web-a:
+* Izvor: Korisnici koji su webu poslednjih 30–60 dana.
+* Kriterijum: Sve stranice na sajtu.
+* Publika 2: Posetioci specifičnih stranica (cena/funkcionalnosti):
+* Izvor: Korisnici koji su posetili stranice „/pricing“, „/features“, ili „/demo“.
+* Kriterijum: Specifični URL-ovi ili Meta Pixel eventi (npr. „ViewContent“).
+* Publika 3: Korisnici koji su započeli, ali nisu završili konverziju:
+* Izvor: Korisnici koji su posetili stranice „/demo“ ili „/contact“, ali nisu završili „Lead“ konverziju (npr. nisu popunili formu).
+* Kriterijum: Kombinacija Pixel događaja i isključivanje korisnika sa „Lead“ konverzijom.
+* Publika 4: Konvertovani korisnici:
+* Izvor: Korisnici koji su završili „Lead“ ili „CompleteRegistration“ konverziju u poslednjih 60 dana.
+* Kriterijum: Pixel event „Lead“ ili „CompleteRegistration“.
+* Napomena: Ova publika može se koristiti za upselling ili isključivanje iz drugih kampanja.
+
+X
+
+#4 Kreiranje i vođenje Lead Generation kampanje (META)
+
+Razdoblje provedbe: Mart-Decembar
+* Tip kampanje: Lead Generation (kontakt forme unutar Meta platforme).
+* Cilj: Prikupljanje kontakt podataka potencijalnih klijenata (vlasnici restorana, kafića, prodavnica) za demo ili konsultacije.
+* Format oglasa:
+* Carousel oglasi: Prikaz različitih funkcionalnosti (npr. upravljanje zalihama, brza naplata, analitika, integracija sa više lokacija).
+* Video oglasi: Kratki video snimci (15–30 sekundi) koji pokazuju softver u akciji, sa naglaskom na jednostavnost i efikasnost.
+* Budžet: 50% ukupnog Meta budžeta
+
+STRATEŠKI ROADMAP
+
+ADS
+
+X
+
+#5 Kreiranje i vođenje Traffic kampanje (META)
+
+Razdoblje provedbe: Mart-Decembar
+* Tip kampanje: Traffic
+* Cilj: Povećanje traffic-a stranicama sa detaljima o funkcionalnostima i cenama.
+* Format oglasa:
+* Single Image oglasi: Vizuali sa jasnim tekstom o prednostima (npr. „Smanjite troškove uz Konty“).
+* Video oglasi: Demonstracija softvera sa fokusom na elektronsku fiskalizaciju i integraciju.
+* Budžet: 30% ukupnog Meta budžeta
+
+X
+
+#6 Kreiranje i vođenje remarketing kampanje (META)
+
+Razdoblje provedbe: Mart-Decembar
+* Tip kampanje: Conversions (retargeting korisnika koji su posetili sajt).
+* Cilj: Ponovno angažovanje korisnika koji su pokazali interes, ali nisu popunili kontakt formu ili zatražili demo.
+* Format oglasa:
+* Single Image oglasi: Ponuda popusta za prvu godinu korišćenja ili besplatnog probnog perioda.
+* Budžet: 20% ukupnog Meta budžeta
+
+STRATEŠKI ROADMAP
+
+EMAIL
+
+Ovdje je pregled aktivnosti koje je potrebno provesti te stanja implementacije koje možemo pratiti - koliko je prijedloga implementirano i koliko ih je
+još preostalo. Procjena troškova će se generirati kada utvrdimo budžete.
+
+Metrike na koje aktivnosti
+utječu
+
+VISOK PRIORITET
+
+Digitalizacija baze podataka
+Povećanje broja korisnika u bazi
+Bolja povezanost s
+klijentima/kupcima
+
+Potrebni resursi
+Martech ekspert
+Developer
+Copywriter
+Designer
+
+Procjena troškova
+Faza 1
+Min:
+Max:
+
+€200
+€500
+
+Faza 2
+Min:
+Max:
+
+€600
+€1,200
+
+Faza 3
+
+Odrađeno prijedloga
+
+Min:
+Max:
+
+0
+
+0.0%
+4
+
+Email Roadmap
+
+No data
+
+€0
+€0
+
+Ukupno: €800 - €1700
+
+STRATEŠKI ROADMAP
+
+EMAIL
+
+Prva faza uključuje aktivnosti koje će se provoditi kroz prva tri mjeseca od lansiranja Konty weba. Cilj je što prije povezati baze podataka s novom web
+stranicom, uspostaviti sustav za efikasnu komunikaciju s korisnicima te kreirati temelj za kontinuirano prikupljanje i obradu leadova. Ove aktivnosti
+omogućit će učinkovito upravljanje bazama korisnika od samog početka rada novog weba te postaviti čvrste temelje za dugoročni email marketing.
+
+X
+
+#1 Odabir i implementacija CRM-a
+
+Razdoblje provedbe: Jul-Jul
+Potrebno izabrati prigodno rješenje za CRM i mailing.
+
+X
+
+#2 Implementacija CRM i Newsletter toola
+
+Razdoblje provedbe: Jul-Septembar
+Implementacija i povezivanje baza, weba i novog toola.
+
+Druga faza podrazumijeva aktivnosti koje slijede nakon inicijalne implementacije, a odnose se na pripremu za provođenje outreach kampanja. Ove
+aktivnosti omogućuju strukturiran pristup email komunikaciji, učinkovito dosezanje ciljnih skupina te kontinuirano poboljšanje rezultata temeljenih na
+detaljnoj analitici kampanja.
+
+X
+
+#1 Odabir outreach toola
+
+Razdoblje provedbe: Avgust-Avgust
+Odabir alata koji ćemo koristiti za potencijalni outrech u budućnosti.
+
+X
+
+#2 Strateško postavljanje outreach kampanje i praćenje kampanje
+
+Razdoblje provedbe: Avgust-Decembar
+Planiranje i strateški okvri outreacha, izvlačenje baza podataka, implementacija, obogaćivanje, priprema sekvenci i praćenje rezultata.
+
+RESURSI I BUDŽETIRANJE
+Potrebni ljudski resursi za implementaciju strategije
+Popis pozicija i osoba potrebnih da se sve navedeno
+kvalitetno izvrši je na lijevoj strani. Nisu sve osobe
+jednako aktivne kroz cijeli projekt, ali je važno da ljudi s
+tim kompetencijama sudjeluju u određenim fazama.
+Ovo su sve resursi koje treba imati na raspolaganju interno ili u smislu već dogovorenih suradnji, uz
+mogućnost da će se pojaviti potreba za angažiranjem
+dodatnih suradnika iz ovih područja ovisno o
+raspoloživim kapacitetima u pojedinim fazama
+projekta.
+
+Procjena troška projekta za sljedećih 12 mjeseci
+Kako bismo osigurali optimalno korištenje resursa za digitalnu strategiju Muzeja putovanja, predlažemo sljedeću
+raspodjelu budžeta u omjerima, fokusirajući se na ključne vertikale koje zahtijevaju dodatna ulaganja:
+
+Pojašnjenje:
+Računali smo na ukupni godišnji marketing budžet (€32,000), bez
+troškova specijalista. Tako smo Vertikale kojima nije dodijeljen budžet,
+već imaju osigurane resurse (interno, vanjski suradnici). Udjeli
+budžeta raspoređeni su prema prioritetima pojedinih vertikala i
+visinama njihovih troškova te su raspoređeni po predloženim fazama
+projekta u godini. Predviđena je mogućnost optimizacije
+preraspodijele budžeta u tijeku provedbe projekta prema utvrđenim
+potrebama.
+Vertikale smo u budžetiranju prioritizirali prema razinama strateške
+važnosti (definiranim ranije) u odnosu na njihove cjenovne visine,
+prema čemu se veći udio dodjeljivao vertikali visokog strateškog
+prioriteta s visokim cijenama. Potom smo dodijeljene udjele
+raspodijelili po fazama provedbe aktivnosti svake od vertikala, a tu
+smo se prilikom raspodijele budžeta vodili konkretnim planiranim
+aktivnostima u tim fazama.
+Troškovi u konačnici ovise o više faktora, a najvažnija pitanja su:
+- u koje sve aktivnosti ćemo se upustiti,
+- koliko detaljno ćemo se njima baviti,
+- hoćemo li i u kojoj mjeri morati posezati za više eksternih resursa,
+- hoćemo li angažirati skuplje ili povoljnije suradnike?
+
+Ova raspodjela budžeta osigurava fokus na najvažnije digitalne kanale
+koji mogu donijeti najveći povrat ulaganja, u skladu s prioritetima
+identificiranim kroz analize. Uz to, omogućava fleksibilnost za
+prilagodbu strategija prema potrebama i rezultatima koji će se
+kontinuirano pratiti i evaluirati.
+Sljedeći korak je usuglasiti se oko planova aktivnosti, uvidjeti
+ukupni budžet koji se dodjeljuje digitalnim kanalima, te sukladno
+predloženim omjerima utvrditi konkretne troškove za provedbu
+planiranih aktivnosti.
+
+KOJI SU SLJEDEĆI KORACI?
+Nakon završetka faze izrade digitalne strategije, sledeći koraci podrazumevaju konkretizaciju aktivnosti kroz
+faznu implementaciju i uspostavljanje sistema za merenje i optimizaciju performansi. Strategija je osmišljena
+tako da se sprovodi postupno, u skladu sa razvojem brenda, tehničkom infrastrukturom i kapacitetima tima.
+Aktivnosti su podeljene po fazama sa jasno definisanim prioritetima.
+
+Faza 1 – Postavljanje temelja (Mesec 1–2)
+Lansiranje nove web stranice prema definisanoj taksonomiji i wireframe strukturi.
+Implementacija osnovnog tehničkog SEO-a: robots.txt, sitemap.xml, canonical tagovi, jezički atributi.
+Postavljanje GA4, Google Signals, osnovnih eventa i cookie consent sistema.
+Pokretanje inicijalnih kampanja: Google Search Ads i osnovni Meta oglasi za generisanje lead-ova.
+
+Faza 2 – Ubrzanje i skaliranje (Mesec 3–4)
+Optimizacija Core Web Vitals metrika: LCP, CLS, lazy-load, WebP formati.
+Izrada vizuelnih elemenata: infografika, animacija, video demo sadržaja.
+Aktivacija Meta remarketinga, lookalike kampanja i content strategije za LinkedIn.
+Dodavanje schema markup-a, postavljanje internih linkova i optimizacija heading strukture.
+
+Faza 3 – Izgradnja autoriteta i skaliranje sadržaja (Mesec 5–6)
+Razvoj SEO content kalendara i objava optimizovanih blog članaka.
+Prikupljanje i prikazivanje testimonijala po vertikalama (ugostiteljstvo, retail, partneri).
+Kreiranje dodatnih niširanih stranica za konkretne probleme i industrije.
+Evaluacija performansi kampanja, implementacija naprednih tagova i A/B testiranja.
+
+Kontinuirano merenje i evaluacija
+Praćenje ključnih KPI-jeva: organski saobraćaj, leadovi, autoritet domene, stopa konverzije.
+Mesečni sprint izveštaji o napretku i optimizaciji svih digitalnih aktivnosti.
+Usklađivanje taktike sa poslovnim ciljevima i tržišnim promenama kroz kvartalne retrospektive.
+
+DODATNA DOKUMENTACIJA
+Dodatna dokumentacija koja je već linkana unutar teksta:
+DOKUMENTACIJA ZA IZRADU WEBA
+Glavna dokumentacija - web specifikacije
+Taksonomija
+Informacijska arhitektura
+Tech SEO zahtjevi i prijedlozi
+Wireframes
+
+OSTALI DOKUMENTI
+Schema.org - Smernice za implementaciju
+On-Page Optimization
+Editorial Calendar
+Segmentacija ciljne skupine
+Analiza društvenih korištenja društvenih mreža u industriji​
+
+
