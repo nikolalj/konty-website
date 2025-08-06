@@ -1,0 +1,13 @@
+code2prompt . \
+  --exclude="node_modules/**/*" \
+  --exclude="documentation/**/*" \
+  --exclude="code2prompt" \
+  --exclude="prompt" \
+  --exclude="dist/**/*" \
+  --exclude=".nuxt/**/*" \
+  --exclude=".output/**/*" \
+  --exclude="pnpm-lock.yaml" \
+  --exclude="coverage/**/*" \
+  --exclude=".git/**/*" \
+  --exclude=".vscode/**/*" \
+  --exclude="*.log"
