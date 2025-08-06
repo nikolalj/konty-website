@@ -7,10 +7,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Products - Konty POS Solutions',
-  description: 'Discover Konty\'s comprehensive POS solutions for restaurants and retail businesses. Advanced features for modern operations.',
-  ogTitle: 'Konty Products - POS Solutions',
-  ogDescription: 'Explore our range of POS solutions designed for restaurants and retail stores.',
+useCustomSeoMeta({
+  title: 'Proizvodi - Konty POS Rešenja',
+  description: 'Otkrijte Konty sveobuhvatno POS rešenje za restorane i maloprodajne objekte. Napredne funkcionalnosti za moderno poslovanje.',
+  type: 'website'
 })
 </script>

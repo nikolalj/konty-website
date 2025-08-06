@@ -1,5 +1,6 @@
 <template>
   <div>
+    <schema-organization />
     <home-hero />
     <shared-client-list product="kontyRetail" />
     <home-features />
@@ -13,10 +14,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Konty - Professional POS System for Restaurants & Retail',
-  description: 'Streamline your business operations with Konty\'s comprehensive point-of-sale solution. Perfect for restaurants and retail stores.',
-  ogTitle: 'Konty - Professional POS System',
-  ogDescription: 'Transform your business with our advanced POS system designed for modern restaurants and retail stores.',
+useCustomSeoMeta({
+  title: 'Konty - Profesionalni POS Sistem za Restorane i Prodavnice',
+  description: 'Unapredite poslovanje sa Konty kompletnim POS rešenjem. Savršeno za restorane, kafice i maloprodajne objekte.',
+  type: 'website'
 })
 </script>

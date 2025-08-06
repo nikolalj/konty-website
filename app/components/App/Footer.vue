@@ -28,7 +28,7 @@
           </ul>
         </div>
       </div>
-      <hr class="my-8 border-gray-700" />
+      <hr class="my-8 border-gray-700" >
       <div class="text-center text-gray-400">
         <p>&copy; 2025 Konty. All rights reserved.</p>
       </div>

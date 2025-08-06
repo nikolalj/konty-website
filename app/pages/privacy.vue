@@ -174,10 +174,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Privacy Policy - Konty',
-  description: 'Read Konty\'s privacy policy to understand how we collect, use, and protect your personal information.',
-  ogTitle: 'Konty Privacy Policy',
-  ogDescription: 'Learn about our commitment to protecting your privacy and data security.',
+useCustomSeoMeta({
+  title: 'Politika Privatnosti - Konty',
+  description: 'Saznajte kako Konty prikuplja, koristi i štiti vaše lične podatke u skladu sa GDPR propisima.',
+  type: 'website'
 })
 </script>

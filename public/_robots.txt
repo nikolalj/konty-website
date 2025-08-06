@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://konty.com/sitemap.xml
+
+# Block common crawlers from admin areas and unnecessary files
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*utm_source=*
+Disallow: /*?*utm_medium=*
+Disallow: /*?*utm_campaign=*
