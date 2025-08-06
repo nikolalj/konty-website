@@ -1,8 +1,49 @@
+/* app/assets/css/main.css */
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Critical CSS - inline these in production */
+@layer critical {
+  /* Ensure text remains visible during webfont load */
+  .font-sans {
+    font-display: swap;
+  }
+
+  /* Prevent layout shift from images */
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Smooth transitions but respect user preferences */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Optimize font loading */
+  @font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Public Sans'),
+         url('/fonts/public-sans-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Public Sans Bold'),
+         url('/fonts/public-sans-bold.woff2') format('woff2');
+  }
+}
+
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'Public Sans', system-ui, -apple-system, sans-serif;
 
   --color-green-50: #effdf5;
   --color-green-100: #d9fbe8;
@@ -15,4 +56,13 @@
   --color-green-800: #016538;
   --color-green-900: #0a5331;
   --color-green-950: #052e16;
+}
+
+/* Non-critical CSS */
+@layer components {
+  /* Component styles here */
+}
+
+@layer utilities {
+  /* Utility styles here */
 }
