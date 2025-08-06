@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-4xl mx-auto px-6 py-12 bg-white min-h-screen">
+  <div class="px-6 py-12 bg-white min-h-screen">
     <h1 class="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-    
+
     <div class="prose prose-lg max-w-none">
       <p class="text-gray-600 mb-8">
         <strong>Last updated:</strong> {{ new Date().toLocaleDateString() }}

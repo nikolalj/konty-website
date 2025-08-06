@@ -1,16 +1,7 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
-    <UContainer>
-      <div class="text-center">
-        <h1 class="text-5xl font-bold text-gray-900 mb-6">
-          Konty Retail
-        </h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Advanced POS solution designed for retail stores, boutiques, and e-commerce businesses
-        </p>
-      </div>
-    </UContainer>
-  </section>
+  <div class="h-96 bg-amber-100 flex items-center justify-center">
+    <h1 class="text-4xl font-bold text-gray-800">Konty Retail Headline</h1>
+  </div>
 </template>
 
 <script setup lang="ts">

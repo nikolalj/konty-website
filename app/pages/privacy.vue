@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-4xl mx-auto px-6 py-12 bg-white min-h-screen">
+  <div class="px-6 py-12 bg-white min-h-screen">
     <h1 class="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-    
+
     <div class="prose prose-lg max-w-none">
       <p class="text-gray-600 mb-8">
         <strong>Last updated:</strong> {{ new Date().toLocaleDateString() }}
@@ -19,7 +19,7 @@
 
       <section class="mb-8">
         <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
-        
+
         <h3 class="text-xl font-semibold text-gray-800 mb-3">Information You Provide</h3>
         <ul class="list-disc pl-6 text-gray-700 mb-4">
           <li>Account registration information (name, email, business details)</li>
@@ -57,7 +57,7 @@
       <section class="mb-8">
         <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
         <p class="text-gray-700 mb-4">We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
-        
+
         <h3 class="text-xl font-semibold text-gray-800 mb-3">Service Providers</h3>
         <p class="text-gray-700 mb-4">
           We may share information with trusted third-party service providers who assist us in operating our Service, such as payment processors, cloud hosting providers, and customer support tools.
