@@ -199,10 +199,8 @@ export default defineNuxtConfig({
       ignore: ['/admin', '/api']
     },
 
-    // ADD: Better compression
-    compressPublicAssets: {
-      gzip: true,
-      brotli: true
+    externals: {
+      inline: ['unhead'],
     },
 
     routeRules: {
