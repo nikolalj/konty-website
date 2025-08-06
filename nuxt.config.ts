@@ -128,6 +128,9 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     minify: true,
+    externals: {
+      inline: ['unhead'],
+    },
     // Security headers configuration
     routeRules: {
       '/**': {
