@@ -211,6 +211,10 @@ export default defineNuxtConfig({
       ignore: ['/admin', '/api']
     },
 
+    externals: {
+      inline: ['unhead']
+    },
+
     // Compression settings
     compressPublicAssets: {
       gzip: true,
