@@ -1,5 +1,5 @@
 <template>
-  <Transition 
+  <Transition
     enter-active-class="transition-all duration-500 ease-out"
     enter-from-class="transform translate-y-full opacity-0"
     enter-to-class="transform translate-y-0 opacity-100"
@@ -7,8 +7,8 @@
     leave-from-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-full opacity-0"
   >
-    <div 
-      v-if="showBanner" 
+    <div
+      v-if="showBanner"
       class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg"
     >
       <UContainer class="py-4">
@@ -16,36 +16,36 @@
           <!-- Content -->
           <div class="flex-1 text-sm text-gray-700">
             <p class="mb-2 md:mb-0">
-              <strong>Poštovanje privatnosti</strong> - Koristimo kolačiće za poboljšanje korisničkog iskustva, 
-              analitiku i marketinške svrhe. 
+              <strong>Poštovanje privatnosti</strong> - Koristimo kolačiće za poboljšanje korisničkog iskustva,
+              analitiku i marketinške svrhe.
               <NuxtLink to="/privacy" class="text-primary hover:underline">
                 Saznajte više o našoj politici privatnosti
               </NuxtLink>.
             </p>
           </div>
-          
+
           <!-- Actions -->
           <div class="flex flex-col sm:flex-row gap-2 shrink-0">
-            <UButton 
-              variant="outline" 
+            <UButton
+              variant="outline"
               size="sm"
               @click="showPreferences = true"
             >
               Podesi kolačiće
             </UButton>
-            
-            <UButton 
-              color="neutral" 
-              variant="solid" 
+
+            <UButton
+              color="neutral"
+              variant="solid"
               size="sm"
               @click="acceptEssentialOnly"
             >
               Samo neophodni
             </UButton>
-            
-            <UButton 
-              color="primary" 
-              variant="solid" 
+
+            <UButton
+              color="primary"
+              variant="solid"
               size="sm"
               @click="acceptAll"
             >
@@ -65,10 +65,10 @@
           <h3 class="text-lg font-semibold text-gray-900">
             Podešavanja kolačića
           </h3>
-          <UButton 
-            color="neutral" 
-            variant="ghost" 
-            icon="lucide:x" 
+          <UButton
+            color="neutral"
+            variant="ghost"
+            icon="lucide:x"
             @click="showPreferences = false"
           />
         </div>
@@ -79,8 +79,8 @@
         <div class="border-b border-gray-200 pb-4">
           <div class="flex items-center justify-between mb-2">
             <h4 class="font-medium text-gray-900">Neophodni kolačići</h4>
-            <USwitch 
-              v-model="cookieSettings.essential" 
+            <USwitch
+              v-model="cookieSettings.essential"
               disabled
               color="primary"
             />
@@ -94,8 +94,8 @@
         <div class="border-b border-gray-200 pb-4">
           <div class="flex items-center justify-between mb-2">
             <h4 class="font-medium text-gray-900">Analitički kolačići</h4>
-            <USwitch 
-              v-model="cookieSettings.analytics" 
+            <USwitch
+              v-model="cookieSettings.analytics"
               color="primary"
             />
           </div>
@@ -108,8 +108,8 @@
         <div class="pb-4">
           <div class="flex items-center justify-between mb-2">
             <h4 class="font-medium text-gray-900">Marketinški kolačići</h4>
-            <USwitch 
-              v-model="cookieSettings.marketing" 
+            <USwitch
+              v-model="cookieSettings.marketing"
               color="primary"
             />
           </div>
@@ -121,15 +121,15 @@
 
       <template #footer>
         <div class="flex justify-end gap-3">
-          <UButton 
-            color="neutral" 
+          <UButton
+            color="neutral"
             variant="outline"
             @click="showPreferences = false"
           >
             Otkaži
           </UButton>
-          <UButton 
-            color="primary" 
+          <UButton
+            color="primary"
             @click="savePreferences"
           >
             Sačuvaj podešavanja
@@ -188,7 +188,7 @@ onMounted(() => {
 // Apply cookie settings to third-party services
 const applyCookieSettings = () => {
   const config = useRuntimeConfig()
-  
+
   // Analytics cookies
   if (cookieSettings.value.analytics) {
     // Enable Google Analytics if configured
@@ -205,7 +205,7 @@ const applyCookieSettings = () => {
       })
     }
   }
-  
+
   // Marketing cookies
   if (cookieSettings.value.marketing) {
     if (typeof window !== 'undefined' && window.gtag) {
@@ -258,7 +258,7 @@ const saveConsent = () => {
   cookieConsent.value = { ...cookieSettings.value }
   showBanner.value = false
   applyCookieSettings()
-  
+
   // Track consent choice (only if analytics are enabled)
   if (cookieSettings.value.analytics) {
     const { $track } = useNuxtApp()

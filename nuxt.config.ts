@@ -6,18 +6,55 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
+    strict: true,
+    includeWorkspace: true,
     tsConfig: {
       include: [
-        './types/**/*'
-      ]
+        'app/**/*.ts',
+        'app/**/*.d.ts',
+        'app/**/*.tsx',
+        'app/**/*.vue',
+      ],
+      compilerOptions: {
+        paths: {
+          '@/*': ['./*']
+        },
+      }
     }
   },
 
   vite: {
     build: {
       sourcemap: false,
-      minify: 'terser', // Better compression than default
-      cssMinify: true
+      minify: 'terser',
+      cssMinify: true,
+      // Optimize bundle splitting
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vue-vendor': ['vue', 'vue-router'],
+          }
+        }
+      },
+      // Optimize chunk size
+      chunkSizeWarningLimit: 1000,
+      assetsInlineLimit: 4096 // Inline assets < 4kb
+    },
+    // CSS optimization
+    css: {
+      devSourcemap: false
+    }
+  },
+
+  // PostCSS configuration for cssnano
+  postcss: {
+    plugins: {
+      cssnano: {
+        preset: ['default', {
+          discardComments: { removeAll: true },
+          normalizeWhitespace: true
+        }]
+      }
     }
   },
 
@@ -28,12 +65,28 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    '@nuxtjs/critters', // Critical CSS extraction
+    '@nuxtjs/fontaine' // Font metric optimization
   ],
+
+  // Critical CSS configuration
+  critters: {
+    config: {
+      preload: 'swap',
+      pruneSource: true
+    }
+  },
+
+  // Font optimization
+  fontMetrics: {
+    fonts: ['Public Sans']
+  },
 
   image: {
     quality: 85,
     format: ['webp', 'avif'],
+    provider: 'ipx',
     screens: {
       xs: 320,
       sm: 640,
@@ -48,7 +101,8 @@ export default defineNuxtConfig({
           format: 'webp',
           quality: 90,
           width: 1200,
-          height: 600
+          height: 600,
+          fit: 'cover'
         }
       },
       thumbnail: {
@@ -56,10 +110,31 @@ export default defineNuxtConfig({
           format: 'webp',
           quality: 80,
           width: 300,
-          height: 200
+          height: 200,
+          fit: 'cover'
+        }
+      },
+      card: {
+        modifiers: {
+          format: 'webp',
+          quality: 85,
+          width: 600,
+          height: 400,
+          fit: 'cover'
+        }
+      },
+      avatar: {
+        modifiers: {
+          format: 'webp',
+          quality: 90,
+          width: 100,
+          height: 100,
+          fit: 'cover'
         }
       }
-    }
+    },
+    densities: [1, 2], // Support retina displays
+    domains: ['konty.com'] // Allow external image optimization
   },
 
   css: [
@@ -79,6 +154,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     strictNuxtContentPaths: true,
+    cacheMaxAgeSeconds: 3600,
     defaults: {
       changefreq: 'weekly',
       priority: 0.8,
@@ -126,39 +202,37 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-16',
 
   nitro: {
-    compressPublicAssets: true,
     minify: true,
-    externals: {
-      inline: ['unhead'],
+
+    // Prerendering for better performance
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/products', '/pricing'],
+      ignore: ['/admin', '/api']
     },
-    // Security headers configuration
+
+    // Compression settings
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true
+    },
+
     routeRules: {
       '/**': {
         headers: {
-          // Prevent clickjacking attacks
           'X-Frame-Options': 'DENY',
-
-          // Prevent MIME type sniffing
           'X-Content-Type-Options': 'nosniff',
-
-          // Control referrer information
           'Referrer-Policy': 'strict-origin-when-cross-origin',
-
-          // Permissions policy for privacy
           'Permissions-Policy': 'camera=(), microphone=(), location=(), payment=()',
-
-          // XSS protection (legacy support)
           'X-XSS-Protection': '1; mode=block',
-
-          // HSTS - Force HTTPS (uncomment when deployed with SSL)
-          // 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
         }
       },
 
-      // Static assets caching
+      // Enhanced static asset caching
       '/images/**': {
         headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
+          'Cache-Control': 'public, max-age=31536000, immutable',
+          'X-Content-Type-Options': 'nosniff'
         }
       },
 
@@ -168,7 +242,35 @@ export default defineNuxtConfig({
         }
       },
 
-      // API routes (if any)
+      // Font caching
+      '/fonts/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      },
+
+      // HTML caching for static pages with ISR
+      '/': {
+        isr: 3600,
+        headers: {
+          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
+        }
+      },
+
+      '/products': {
+        isr: 3600,
+        headers: {
+          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
+        }
+      },
+
+      '/pricing': {
+        isr: 3600,
+        headers: {
+          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
+        }
+      },
+
       '/api/**': {
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate'
@@ -177,8 +279,6 @@ export default defineNuxtConfig({
     }
   },
 
-
-  // Environment variables
   runtimeConfig: {
     public: {
       googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID || 'GA_MEASUREMENT_ID',
@@ -186,7 +286,6 @@ export default defineNuxtConfig({
     }
   },
 
-  // Multi-language setup (ready for future expansion)
   i18n: {
     defaultLocale: 'sr',
     locales: [
@@ -200,10 +299,40 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root'
+    },
+    strategy: 'prefix_except_default'
+  },
+
+  // Enable performance features
+  experimental: {
+    payloadExtraction: true, // Changed from false
+    crossOriginPrefetch: true,
+    viewTransition: true,
+    componentIslands: true,
+    asyncContext: true,
+    defaults: {
+      nuxtLink: {
+        prefetch: true,
+        prefetchOn: { visibility: true, interaction: true }
+      }
     }
   },
 
-  experimental: {
-    payloadExtraction: false // Reduces HTML size
-  },
+  // App configuration for better hydration
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: false, // Disable for better performance
+    head: {
+      htmlAttrs: {
+        lang: 'sr'
+      },
+      link: [
+        // Preconnect to external domains
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+      ]
+    }
+  }
 })
