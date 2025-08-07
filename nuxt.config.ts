@@ -1,91 +1,98 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // Development
   devtools: { enabled: true },
-
   sourcemap: false,
 
+  // TypeScript - Simplified, letting Nuxt handle most configs
   typescript: {
-    typeCheck: true,
     strict: true,
-    includeWorkspace: true,
-    tsConfig: {
-      include: [
-        'app/**/*.ts',
-        'app/**/*.d.ts',
-        'app/**/*.tsx',
-        'app/**/*.vue',
-      ],
-      compilerOptions: {
-        paths: {
-          '@/*': ['./*']
-        },
-      }
-    }
+    typeCheck: true
   },
 
+  // Vite Build Optimization
   vite: {
     build: {
-      sourcemap: false,
+      // Critical for performance
       minify: 'terser',
       cssMinify: true,
-      // Optimize bundle splitting
       rollupOptions: {
         output: {
           manualChunks: {
-            'vue-vendor': ['vue', 'vue-router'],
+            'vue-vendor': ['vue', 'vue-router']
           }
         }
       },
-      // Optimize chunk size
       chunkSizeWarningLimit: 1000,
-      assetsInlineLimit: 4096 // Inline assets < 4kb
+      assetsInlineLimit: 4096
     },
-    // CSS optimization
     css: {
       devSourcemap: false
-    }
+    },
   },
 
-  // PostCSS configuration for cssnano
+  // PostCSS - Production CSS optimization
   postcss: {
     plugins: {
-      cssnano: {
-        preset: ['default', {
-          discardComments: { removeAll: true },
-          normalizeWhitespace: true
-        }]
-      }
+      ...(process.env.NODE_ENV === 'production' && {
+        cssnano: {
+          preset: ['default', {
+            discardComments: { removeAll: true },
+            reduceIdents: true,
+            mergeRules: true,
+            normalizeWhitespace: true,
+            minifyFontValues: true,
+            minifySelectors: true
+          }]
+        }
+      })
     }
   },
 
+  // Modules - Order matters for optimization
   modules: [
+    // Performance critical modules first
+    '@nuxtjs/critters',     // Critical CSS
+    '@nuxtjs/fontaine',     // Font optimization
+    '@nuxt/image',          // Image optimization
+
+    // Core functionality
     '@nuxt/ui',
-    '@nuxt/eslint',
-    '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
+
+    // Analytics (loads last)
     'nuxt-gtag',
-    '@nuxtjs/critters', // Critical CSS extraction
-    '@nuxtjs/fontaine' // Font metric optimization
+
+    // Development
+    '@nuxt/eslint'
   ],
 
-  // Critical CSS configuration
+  // Critical CSS extraction
   critters: {
     config: {
       preload: 'swap',
-      pruneSource: true
+      pruneSource: true,
+      fonts: true
     }
   },
 
-  // Font optimization
+  // Font metrics to prevent CLS
   fontMetrics: {
-    fonts: ['Public Sans']
+    fonts: [
+      {
+        family: 'Public Sans',
+        fallbacks: ['system-ui', '-apple-system', 'sans-serif'],
+        fallbackName: 'sans-serif'
+      }
+    ]
   },
 
+  // Image optimization
   image: {
-    quality: 85,
-    format: ['webp', 'avif'],
+    quality: 80,
+    format: ['webp'],
     provider: 'ipx',
     screens: {
       xs: 320,
@@ -93,250 +100,230 @@ export default defineNuxtConfig({
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536,
+      xxl: 1536
     },
     presets: {
-      hero: {
-        modifiers: {
-          format: 'webp',
-          quality: 90,
-          width: 1200,
-          height: 600,
-          fit: 'cover'
-        }
-      },
-      thumbnail: {
-        modifiers: {
-          format: 'webp',
-          quality: 80,
-          width: 300,
-          height: 200,
-          fit: 'cover'
-        }
-      },
-      card: {
-        modifiers: {
-          format: 'webp',
-          quality: 85,
-          width: 600,
-          height: 400,
-          fit: 'cover'
-        }
-      },
-      avatar: {
-        modifiers: {
-          format: 'webp',
-          quality: 90,
-          width: 100,
-          height: 100,
-          fit: 'cover'
-        }
-      }
+      hero: { modifiers: { format: 'webp', quality: 90, width: 1200, height: 600, fit: 'cover' }},
+      card: { modifiers: { format: 'webp', quality: 85, width: 600, height: 400, fit: 'cover' }},
+      thumbnail: { modifiers: { format: 'webp', quality: 75, width: 300, height: 200, fit: 'cover' }},
+      avatar: { modifiers: { format: 'webp', quality: 90, width: 100, height: 100, fit: 'cover' }}
     },
-    densities: [1, 2], // Support retina displays
-    domains: ['konty.com'] // Allow external image optimization
+    densities: [1, 2],
+    domains: ['konty.com', 'cdn.konty.com'], // CDN support
+    ipx: {
+      maxAge: 31536000 // 1 year cache
+    }
   },
 
-  css: [
-    '~/assets/css/main.css'
-  ],
+  css: ['~/assets/css/main.css'],
 
+  // SEO Configuration
   site: {
     url: 'https://konty.com',
-    name: 'Konty',
-    description: 'Professional POS System for Restaurants and Retail - Streamline your business operations with Konty\'s comprehensive point-of-sale solution.',
-    defaultLocale: 'sr'
+    name: 'Konty POS',
+    description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
+    defaultLocale: 'sr',
+    identity: {
+      type: 'Organization'
+    },
+    twitter: '@kontypos', // If you have Twitter
+    trailingSlash: false
   },
 
   seo: {
-    redirectToCanonicalSiteUrl: true
+    redirectToCanonicalSiteUrl: true,
+    fallbackTitle: false // Use exact titles
   },
 
+  // Sitemap with better configuration
   sitemap: {
-    strictNuxtContentPaths: true,
     cacheMaxAgeSeconds: 3600,
+    exclude: ['/admin/**', '/api/**', '/test/**'],
     defaults: {
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date().toISOString()
     },
     urls: [
-      {
-        loc: '/',
-        priority: 1.0,
-        changefreq: 'daily'
-      },
-      {
-        loc: '/products',
-        priority: 0.9,
-        changefreq: 'weekly'
-      },
-      {
-        loc: '/konty-retail',
-        priority: 0.9,
-        changefreq: 'weekly'
-      },
-      {
-        loc: '/konty-hospitality',
-        priority: 0.9,
-        changefreq: 'weekly'
-      },
-      {
-        loc: '/pricing',
-        priority: 0.8,
-        changefreq: 'weekly'
-      },
-      {
-        loc: '/demo',
-        priority: 0.8,
-        changefreq: 'monthly'
-      },
-      {
-        loc: '/about',
-        priority: 0.7,
-        changefreq: 'monthly'
-      }
+      { loc: '/', priority: 1.0, changefreq: 'daily' },
+      { loc: '/products', priority: 0.9, changefreq: 'weekly' },
+      { loc: '/konty-retail', priority: 0.9, changefreq: 'weekly' },
+      { loc: '/konty-hospitality', priority: 0.9, changefreq: 'weekly' },
+      { loc: '/pricing', priority: 0.9, changefreq: 'weekly' },
+      { loc: '/demo', priority: 0.8, changefreq: 'monthly' },
+      { loc: '/about', priority: 0.7, changefreq: 'monthly' }
     ]
   },
 
-  compatibilityDate: '2025-07-16',
+  // Internationalization
+  i18n: {
+    baseUrl: 'https://konty.com',
+    defaultLocale: 'sr',
+    locales: [
+      { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
+      { code: 'en', iso: 'en-US', name: 'English' }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: false,
+      fallbackLocale: 'sr'
+    },
+    strategy: 'prefix_except_default',
+  },
 
+  // Nitro - Server optimization
   nitro: {
     minify: true,
-
-    // Prerendering for better performance
-    prerender: {
-      crawlLinks: true,
-      routes: ['/', '/products', '/pricing'],
-      ignore: ['/admin', '/api']
-    },
+    timing: false, // Disable timing in production for security
 
     externals: {
       inline: ['unhead']
     },
 
-    // Compression settings
+    // Prerendering for SEO
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/products', '/pricing', '/konty-retail', '/konty-hospitality'],
+      ignore: ['/admin', '/api', '/__nuxt_error']
+    },
+
+    // Compression
     compressPublicAssets: {
       gzip: true,
       brotli: true
     },
 
+    // Route-specific rules
     routeRules: {
+      // Security headers for all routes
       '/**': {
         headers: {
           'X-Frame-Options': 'DENY',
           'X-Content-Type-Options': 'nosniff',
           'Referrer-Policy': 'strict-origin-when-cross-origin',
-          'Permissions-Policy': 'camera=(), microphone=(), location=(), payment=()',
-          'X-XSS-Protection': '1; mode=block',
+          'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+          'X-XSS-Protection': '1; mode=block'
         }
       },
 
-      // Enhanced static asset caching
-      '/images/**': {
-        headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable',
-          'X-Content-Type-Options': 'nosniff'
-        }
-      },
+      // Immutable assets
+      '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      '/_nuxt/**': {
-        headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
-        }
-      },
+      // ISR for dynamic content
+      '/': { isr: 3600 },
+      '/products': { isr: 7200 },
+      '/pricing': { isr: 86400 }, // Daily
 
-      // Font caching
-      '/fonts/**': {
-        headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
-        }
-      },
-
-      // HTML caching for static pages with ISR
-      '/': {
-        isr: 3600,
-        headers: {
-          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
-        }
-      },
-
-      '/products': {
-        isr: 3600,
-        headers: {
-          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
-        }
-      },
-
-      '/pricing': {
-        isr: 3600,
-        headers: {
-          'Cache-Control': 's-maxage=3600, stale-while-revalidate'
-        }
-      },
-
+      // API configuration
       '/api/**': {
-        headers: {
-          'Cache-Control': 'no-cache, no-store, must-revalidate'
-        }
+        cors: true,
+        headers: { 'cache-control': 'no-store' }
       }
     }
   },
 
+  // Runtime configuration
   runtimeConfig: {
+    // Private keys (server-only)
+    apiSecret: '',
+
+    // Public keys (available on client)
     public: {
-      googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID || 'GA_MEASUREMENT_ID',
-      gtagId: process.env.GOOGLE_ANALYTICS_ID || 'GA_MEASUREMENT_ID'
+      googleAnalyticsId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
+      gtagId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
     }
   },
 
-  i18n: {
-    defaultLocale: 'sr',
-    locales: [
-      {
-        code: 'sr',
-        iso: 'sr-RS',
-        name: 'Srpski'
-      }
-    ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
-    },
-    strategy: 'prefix_except_default'
+  // Google Analytics
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
+    config: {
+      page_title: 'Konty POS',
+      send_page_view: true
+    }
   },
 
-  // Enable performance features
+  // Experimental features for Nuxt 4
   experimental: {
-    payloadExtraction: true, // Changed from false
-    crossOriginPrefetch: true,
-    viewTransition: true,
-    componentIslands: true,
-    asyncContext: true,
+    payloadExtraction: true,      // Extract payload for faster hydration
+    crossOriginPrefetch: true,    // Prefetch cross-origin resources
+    viewTransition: true,         // Native view transitions
+    componentIslands: true,       // Selective hydration
+    asyncContext: true,           // Async component context
+    headNext: true,              // Optimized head management
+
+    // Link prefetching strategy
     defaults: {
       nuxtLink: {
         prefetch: true,
-        prefetchOn: { visibility: true, interaction: true }
+        prefetchOn: {
+          visibility: true,    // Prefetch when visible
+          interaction: true    // Prefetch on hover
+        }
       }
     }
   },
 
-  // App configuration for better hydration
+  // App configuration
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: false, // Disable for better performance
+    layoutTransition: false, // Disabled for performance
+
     head: {
-      htmlAttrs: {
-        lang: 'sr'
-      },
+      htmlAttrs: { lang: 'sr' },
+
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'color-scheme', content: 'light dark' },
+        { name: 'theme-color', content: '#00dc82' }
+      ],
+
       link: [
-        // Preconnect to external domains
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        // Favicon
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+
+        // DNS Prefetch for external resources
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+
+        // Preconnect for critical resources
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+      ],
+
+      script: [
+        // Organization schema for SEO
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Konty',
+            url: 'https://konty.com',
+            logo: 'https://konty.com/logo.png',
+            sameAs: [
+              'https://www.facebook.com/konty',
+              'https://www.linkedin.com/company/konty'
+            ],
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+38267607670',
+              contactType: 'customer service',
+              areaServed: 'ME',
+              availableLanguage: ['Serbian', 'English']
+            }
+          })
+        }
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2025-07-16'
 })
