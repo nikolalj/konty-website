@@ -177,6 +177,7 @@
 useCustomSeoMeta({
   title: 'Politika Privatnosti - Konty',
   description: 'Saznajte kako Konty prikuplja, koristi i štiti vaše lične podatke u skladu sa GDPR propisima.',
-  type: 'website'
+  type: 'website',
+  robots: 'noindex, follow'
 })
 </script>

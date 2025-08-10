@@ -128,10 +128,10 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+useCustomSeoMeta({
   title: 'Terms of Service - Konty',
   description: 'Read Konty\'s terms of service and user agreement for our POS software and services.',
-  ogTitle: 'Konty Terms of Service',
-  ogDescription: 'Terms and conditions governing the use of Konty POS software and services.',
+  type: 'website',
+  robots: 'noindex, follow'
 })
 </script>

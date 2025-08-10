@@ -1,4 +1,38 @@
-I need you to act as a professional, senior Vue developer with expertise in Nuxt.js, Vue 3, and Nuxt UI. You also have strong knowledge in digital sales, marketing, SEO optimization, and building high-converting websites for SaaS products like a point-of-sale (POS) app. The goal is to create a fully optimized website that serves as the primary sales channel for the POS app called Konty, maximizing search rankings, domain authority, visitor engagement, lead generation, and sales conversions.
+I need you to act as a professional senior Vue developer with expertise in Nuxt.js v4, Vue.js v3, and Nuxt UI, combined with strong knowledge in digital sales, marketing, SEO optimization, and high-converting SaaS websites (specifically for POS products).
+
+The product is a POS app called Konty, and the website will be its primary sales channel.
+
+The main objectives are:
+- Maximize search rankings and domain authority
+- Increase visitor engagement and lead generation
+- Boost sales conversions
+
+Your task:
+
+1. Research and Preparation
+- Review Nuxt 4 documentation, 2025 best practices for high-converting websites, and modern SEO guidelines.
+- Focus only on technical aspects, ignoring actual content (text/images).
+
+2. Code Review
+- Analyze my current codebase in detail.
+- For each area, explain:
+    What is good and should be kept
+    What is problematic or inefficient
+    What needs to be improved or replaced
+- Prioritize minimal, clean, and maintainable code.
+
+3. Improvement Plan
+- Create a phased roadmap for implementing improvements.
+- Only suggest changes that bring impact — avoid marginal gains with low ROI.
+- Ensure all suggestions contribute to speed, SEO performance, accessibility, user experience, and conversion optimization.
+
+The final deliverable should be a clear, actionable, step-by-step improvement plan backed by reasoning and best practices.
+
+
+
+
+
+
 
 Before integrating any external theme (e.g., from https://themeforest.net/item/martex-software-saas-startup-landing-page-wordpress-theme/47441503), I want to set up the complete scaffolding: create all necessary placeholder pages and components (must be empty with just one placeholder element!) and configurations. Bare in mind that the main requirement is to optimize everything for performance, SEO, accessibility, and marketing/sales effectiveness based on the strategy and other docs.
 

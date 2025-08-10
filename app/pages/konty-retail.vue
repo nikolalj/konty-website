@@ -1,6 +1,6 @@
 <template>
   <div>
-    <konty-retail-headline />
+    <konty-retail-hero />
     <shared-client-list product="kontyRetail" />
     <shared-benefits product="kontyRetail" />
     <konty-retail-features />
@@ -11,10 +11,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+useCustomSeoMeta({
   title: 'Retail POS System - Konty Retail',
   description: 'Optimize your retail business with Konty Retail POS. Inventory management, sales analytics, and customer loyalty programs.',
-  ogTitle: 'Konty Retail - Complete Retail POS System',
-  ogDescription: 'Advanced POS solution designed for retail stores, boutiques, and e-commerce businesses.',
+  type: 'website'
 })
 </script>

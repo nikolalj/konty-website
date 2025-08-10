@@ -92,27 +92,18 @@ export default defineNuxtConfig({
   // Image optimization
   image: {
     quality: 80,
-    format: ['webp'],
+    format: ['avif', 'webp'],
     provider: 'ipx',
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536
-    },
+    screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536 },
     presets: {
-      hero: { modifiers: { format: 'webp', quality: 90, width: 1200, height: 600, fit: 'cover' }},
-      card: { modifiers: { format: 'webp', quality: 85, width: 600, height: 400, fit: 'cover' }},
-      thumbnail: { modifiers: { format: 'webp', quality: 75, width: 300, height: 200, fit: 'cover' }},
-      avatar: { modifiers: { format: 'webp', quality: 90, width: 100, height: 100, fit: 'cover' }}
+      hero: { modifiers: { format: 'avif', quality: 90, width: 1200, height: 600, fit: 'cover' }},
+      card: { modifiers: { format: 'avif', quality: 85, width: 600, height: 400, fit: 'cover' }},
+      thumbnail: { modifiers: { format: 'avif', quality: 75, width: 300, height: 200, fit: 'cover' }},
+      avatar: { modifiers: { format: 'avif', quality: 90, width: 100, height: 100, fit: 'cover' }}
     },
     densities: [1, 2],
-    domains: ['konty.com', 'cdn.konty.com'], // CDN support
-    ipx: {
-      maxAge: 31536000 // 1 year cache
-    }
+    domains: ['konty.com'],
+    ipx: { maxAge: 31536000 }
   },
 
   css: ['~/assets/css/main.css'],
@@ -275,8 +266,6 @@ export default defineNuxtConfig({
     layoutTransition: false, // Disabled for performance
 
     head: {
-      htmlAttrs: { lang: 'sr' },
-
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -297,31 +286,6 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
       ],
-
-      script: [
-        // Organization schema for SEO
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Konty',
-            url: 'https://konty.com',
-            logo: 'https://konty.com/logo.png',
-            sameAs: [
-              'https://www.facebook.com/konty',
-              'https://www.linkedin.com/company/konty'
-            ],
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+38267607670',
-              contactType: 'customer service',
-              areaServed: 'ME',
-              availableLanguage: ['Serbian', 'English']
-            }
-          })
-        }
-      ]
     }
   },
 

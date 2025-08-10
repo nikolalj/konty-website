@@ -10,10 +10,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+useCustomSeoMeta({
   title: 'About Us - Konty POS Solutions',
   description: 'Learn about Konty\'s mission to revolutionize point-of-sale systems for restaurants and retail businesses worldwide.',
-  ogTitle: 'About Konty - POS Innovation Leaders',
-  ogDescription: 'Discover our story and commitment to providing cutting-edge POS solutions for modern businesses.',
+  type: 'website'
 })
 </script>
