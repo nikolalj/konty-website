@@ -51,10 +51,9 @@ export default defineNuxtConfig({
 
   // Modules - Order matters for optimization
   modules: [
-    // Performance critical modules first
     '@nuxtjs/critters',     // Critical CSS
-    '@nuxtjs/fontaine',     // Font optimization
-    '@nuxt/image',          // Image optimization
+    '@nuxt/fonts',
+    '@nuxt/image',
 
     // Core functionality
     '@nuxt/ui',
@@ -69,6 +68,19 @@ export default defineNuxtConfig({
     '@nuxt/eslint'
   ],
 
+  fonts: {
+    provider: 'local',
+    families: [
+      {
+        name: 'Plus Jakarta Sans',
+        src: '/fonts/PlusJakartaSans-Variable.woff2',
+        weights: ['200 800'],
+        styles: ['normal'],
+        global: true
+      }
+    ]
+  },
+
   // Critical CSS extraction
   critters: {
     config: {
@@ -76,17 +88,6 @@ export default defineNuxtConfig({
       pruneSource: true,
       fonts: true
     }
-  },
-
-  // Font metrics to prevent CLS
-  fontMetrics: {
-    fonts: [
-      {
-        family: 'Public Sans',
-        fallbacks: ['system-ui', '-apple-system', 'sans-serif'],
-        fallbackName: 'sans-serif'
-      }
-    ]
   },
 
   // Image optimization
@@ -279,12 +280,10 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 
         // DNS Prefetch for external resources
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
 
-        // Preconnect for critical resources
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+        // Preload font
+        { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },
       ],
     }
   },
