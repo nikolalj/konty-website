@@ -31,7 +31,7 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   const ogLocale = computed(() => {
     // locales can be array of { code, iso }, prefer iso
     const current = (locales.value as LocaleObject[]).find(l => l.code === locale.value)
-    return current?.iso || 'sr-RS'
+    return current?.language || 'sr-RS'
   })
 
   useSeoMeta({
@@ -72,6 +72,6 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   })
 
   // Let i18n add hreflang alternates + html lang/dir
-  const i18nHead = useLocaleHead({ addDirAttribute: true, addSeoAttributes: true })
+  const i18nHead = useLocaleHead({ dir: true, seo: true })
   useHead(i18nHead)
 }

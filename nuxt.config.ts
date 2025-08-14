@@ -151,8 +151,8 @@ export default defineNuxtConfig({
     baseUrl: 'https://konty.com',
     defaultLocale: 'sr',
     locales: [
-      { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
-      { code: 'en', iso: 'en-US', name: 'English' }
+      { code: 'sr', language: 'sr-RS', name: 'Srpski' },
+      { code: 'en', language: 'en-US', name: 'English' }
     ],
     detectBrowserLanguage: {
       useCookie: true,
