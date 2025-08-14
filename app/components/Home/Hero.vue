@@ -19,7 +19,7 @@
   -->
   <section class="relative isolate">
     <!-- Full-bleed background image (LCP target) -->
-    <NuxtImg
+    <!-- <NuxtImg
       src="/images/hero-main.webp"
       preset="hero"
       :sizes="'100vw'"
@@ -28,7 +28,7 @@
       alt=""
       role="presentation"
       class="pointer-events-none absolute inset-0 h-full w-full object-cover select-none"
-    />
+    /> -->
 
     <!-- Contrast overlay to ensure WCAG-compliant text contrast over the photo -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>

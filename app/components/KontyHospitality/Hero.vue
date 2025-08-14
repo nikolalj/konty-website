@@ -3,14 +3,15 @@
     HOSPITALITY HERO – LCP-optimized, accessible, conversion-focused
 
     TODO (before go-live):
-      1) Put real asset at /public/images/hospitality-hero.webp (≥ 2400×1200 recommended).
+      1) Replace /images/hospitality-hero.webp with your real hero asset (public/images/hero-main.webp).
+         - Prefer 2400×1200 (or larger) source. Nuxt Image will resize via the "hero" preset.
       2) Update H1 + subheading to your finalized copy.
       3) Confirm CTA routes (/demo, /pricing).
       4) Provide real alt text if the image is informative.
   -->
   <section class="relative isolate">
     <!-- LCP image -->
-    <NuxtImg
+    <!-- <NuxtImg
       src="/images/hospitality-hero.webp"
       preset="hero"
       :sizes="'100vw'"
@@ -19,7 +20,7 @@
       alt=""
       role="presentation"
       class="pointer-events-none absolute inset-0 h-full w-full object-cover select-none"
-    />
+    /> -->
 
     <!-- Contrast overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40"></div>
