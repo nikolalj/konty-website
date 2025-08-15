@@ -58,15 +58,20 @@
         <UButton
           to="/demo"
           size="lg"
-          :variant="isHeaderSolid ? 'solid' : 'outline'"
-          :color="isHeaderSolid
-            ? 'primary'
-            : (topTextLight ? 'neutral' : 'primary')"
+          variant="solid"
+          color="primary"
         >
           Free Demo
         </UButton>
       </div>
     </UContainer>
+
+    <div
+      class="transition-[padding] absolute right-3 top-0 h-full flex items-center"
+      :class="!isTopBarCollapsed ? 'pt-10' : ''"
+    >
+      <UColorModeButton />
+    </div>
   </header>
 </template>
 
