@@ -51,20 +51,13 @@ export default defineNuxtConfig({
 
   // Modules - Order matters for optimization
   modules: [
-    '@nuxtjs/critters',     // Critical CSS
     '@nuxt/fonts',
     '@nuxt/image',
-
-    // Core functionality
     '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
-
-    // Analytics (loads last)
     'nuxt-gtag',
-
-    // Development
     '@nuxt/eslint'
   ],
 
@@ -77,17 +70,14 @@ export default defineNuxtConfig({
         weights: ['200 800'],
         styles: ['normal'],
         global: true
+      },
+      {
+        name: 'Plus Jakarta Sans',
+        src: '/fonts/PlusJakartaSans-Variable-Italic.woff2',
+        weights: ['200 800'],
+        styles: ['italic']
       }
     ]
-  },
-
-  // Critical CSS extraction
-  critters: {
-    config: {
-      preload: 'swap',
-      pruneSource: true,
-      fonts: true
-    }
   },
 
   // Image optimization
@@ -189,6 +179,14 @@ export default defineNuxtConfig({
 
     // Route-specific rules
     routeRules: {
+      '/allegra': { redirect: '/' },
+      '/aria': { redirect: '/' },
+      '/allegrapos': { redirect: '/' },
+      '/ariapos': { redirect: '/' },
+      '/product': { redirect: '/products' },
+      '/price': { redirect: '/pricing' },
+      '/contact': { redirect: '/about' },
+
       // Security headers for all routes
       '/**': {
         headers: {
@@ -276,11 +274,9 @@ export default defineNuxtConfig({
       ],
 
       link: [
-        // Favicon
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-
-        // DNS Prefetch for external resources
-        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+        { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: '' },
+        { rel: 'preconnect', href: 'https://www.google-analytics.com', crossorigin: '' },
 
         // Preload font
         { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },

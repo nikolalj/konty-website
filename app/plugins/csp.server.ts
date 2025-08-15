@@ -2,14 +2,9 @@ import { defineNuxtPlugin } from '#app'
 import { setResponseHeader } from 'h3'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  // Access the event from ssrContext
   const event = nuxtApp.ssrContext?.event
-  
-  if (!event) {
-    return
-  }
+  if (!event) return
 
-  // Content Security Policy configuration
   const cspDirectives = {
     'default-src': ["'self'"],
     'script-src': [
@@ -21,12 +16,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     ],
     'style-src': [
       "'self'",
-      "'unsafe-inline'", // Needed for Nuxt UI and Tailwind
-      'https://fonts.googleapis.com'
+      "'unsafe-inline'"
     ],
     'font-src': [
       "'self'",
-      'https://fonts.gstatic.com',
       'data:'
     ],
     'img-src': [
@@ -49,14 +42,9 @@ export default defineNuxtPlugin((nuxtApp) => {
     'upgrade-insecure-requests': []
   }
 
-  // Build CSP header value
   const cspValue = Object.entries(cspDirectives)
-    .map(([directive, sources]) => {
-      if (sources.length === 0) return directive
-      return `${directive} ${sources.join(' ')}`
-    })
+    .map(([directive, sources]) => sources.length ? `${directive} ${sources.join(' ')}` : directive)
     .join('; ')
 
-  // Set the CSP header using the event object
   setResponseHeader(event, 'Content-Security-Policy', cspValue)
 })

@@ -5,7 +5,7 @@
         <NuxtLink to="/" class="text-2xl font-bold text-primary">
           Konty
         </NuxtLink>
-        
+
         <nav class="hidden md:flex items-center space-x-8">
           <NuxtLink to="/products" class="text-gray-700 hover:text-primary transition-colors">
             Products

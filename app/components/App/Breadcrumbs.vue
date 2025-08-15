@@ -1,30 +1,22 @@
 <template>
   <nav aria-label="Breadcrumb" class="py-4">
     <UContainer>
-      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+      <ol class="flex items-center gap-2 text-sm text-gray-600">
         <li v-for="(item, index) in items" :key="item.path" class="flex items-center">
-          <NuxtLink 
-            v-if="index < items.length - 1"
-            :to="item.path" 
-            class="hover:text-primary transition-colors"
-          >
-            {{ item.name }}
-          </NuxtLink>
-          <span v-else class="text-gray-900 font-medium">
-            {{ item.name }}
-          </span>
-          
-          <span 
-            v-if="index < items.length - 1"
-            class="mx-2 text-gray-400"
-          >
-            /
-          </span>
+          <template v-if="index < items.length - 1">
+            <NuxtLink :to="item.path" class="hover:text-primary transition-colors">
+              {{ item.name }}
+            </NuxtLink>
+            <span class="mx-2 text-gray-400" aria-hidden="true">/</span>
+          </template>
+          <template v-else>
+            <span class="text-gray-900 font-medium" aria-current="page">{{ item.name }}</span>
+          </template>
         </li>
       </ol>
     </UContainer>
-    
-    <!-- Add structured data -->
+
+    <!-- Structured data -->
     <schema-breadcrumb-list :items="items" />
   </nav>
 </template>

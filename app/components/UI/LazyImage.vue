@@ -8,6 +8,7 @@
     :loading="eager ? 'eager' : 'lazy'"
     :sizes="sizes"
     :class="imageClass"
+    decoding="async"
     @load="onLoad"
     @error="onError"
   />
