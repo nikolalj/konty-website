@@ -2,9 +2,8 @@
   <div class="min-h-dvh flex flex-col">
     <NuxtLoadingIndicator />
 
-    <AppTopBar />
     <AppHeader />
-    <AppAlertBar />
+    <!-- <AppAlertBar /> -->
 
     <AppBreadcrumbs v-if="breadcrumbs.length > 1" :items="breadcrumbs" />
 
