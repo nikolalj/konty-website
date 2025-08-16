@@ -17,10 +17,12 @@
         <UContainer
           class="h-full flex items-center text-sm transition-colors duration-500"
         >
-          <div class="flex w-full items-center justify-between font-semibold">
-            <div class="flex items-center gap-4">
-              <span>📧 contact@konty.com</span>
-              <span>📞 +38267607670</span>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1">
+              <Icon name="i-lucide-mail" /> contact@konty.com
+            </div>
+            <div class="flex items-center gap-1">
+              <Icon name="i-lucide-phone" /> +38267607670
             </div>
           </div>
         </UContainer>
@@ -48,14 +50,23 @@
         linkLeadingIcon: 'text-gray-900 dark:text-white'
       }"
     >
-      <template #docs-content="{ item }">
+      <template #products-content="{ item }">
         <ul class="grid gap-2 p-4 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
-          <li class="row-span-3">
-            <div class="size-full" />
+          <li class="row-span-2">
+            <UILazyImage
+              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
+              preset="hero"
+              :sizes="'100vw'"
+              loading="eager"
+              fetchpriority="high"
+              alt=""
+              role="presentation"
+              class="h-full"
+            />
           </li>
 
           <li v-for="child in item.children" :key="child.label">
-            <ULink class="text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50">
+            <ULink :to="child.to || '#'" class="inline-block text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50">
               <p class="font-medium text-highlighted">
                 {{ child.label }}
               </p>
@@ -65,6 +76,70 @@
             </ULink>
           </li>
         </ul>
+      </template>
+
+      <template #hospitality-content="{ item }">
+        <div class="grid grid-cols-3 gap-4 p-4">
+          <div class="col-span-1">
+            <UILazyImage
+              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
+              preset="hero"
+              :sizes="'100vw'"
+              loading="eager"
+              fetchpriority="high"
+              alt=""
+              role="presentation"
+              class="h-full w-full object-cover rounded-md"
+            />
+          </div>
+
+          <ul class="col-span-1 space-y-1">
+            <li v-for="child in item.children.slice(0, Math.ceil(item.children.length / 2))" :key="child.label">
+              <ULink :to="child.to || '#'" class="block text-sm text-left rounded-md px-3 py-2 transition-colors hover:bg-elevated/50">
+                <p class="font-medium text-highlighted">
+                  {{ child.label }}
+                </p>
+              </ULink>
+            </li>
+          </ul>
+
+          <ul class="col-span-1 space-y-1">
+            <li v-for="child in item.children.slice(Math.ceil(item.children.length / 2))" :key="child.label">
+              <ULink :to="child.to || '#'" class="block text-sm text-left rounded-md px-3 py-2 transition-colors hover:bg-elevated/50">
+                <p class="font-medium text-highlighted">
+                  {{ child.label }}
+                </p>
+              </ULink>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template #retail-content="{ item }">
+        <div class="grid grid-cols-2 gap-4 p-4">
+          <div class="col-span-1">
+            <UILazyImage
+              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
+              preset="hero"
+              :sizes="'100vw'"
+              loading="eager"
+              fetchpriority="high"
+              alt=""
+              role="presentation"
+              class="h-full w-full object-cover rounded-md"
+            />
+          </div>
+
+          <ul class="col-span-1 space-y-1">
+            <li v-for="child in item.children" :key="child.label">
+              <ULink :to="child.to || '#'" class="block text-sm text-left rounded-md px-3 py-2 transition-colors hover:bg-elevated/50">
+                <p class="font-medium text-highlighted">
+                  {{ child.label }}
+                </p>
+              </ULink>
+            </li>
+          </ul>
+        </div>
       </template>
     </UNavigationMenu>
 
@@ -112,84 +187,48 @@ const items = computed(() => [
   {
     label: 'Products',
     class: 'font-bold',
-    slot: 'docs' as const,
+    slot: 'products' as const,
     children: [
       {
-        label: 'Icons',
-        description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        label: 'Konty for Restaurants',
+        description: 'You have nothing to do, @nuxt/icon will handle it automatically.',
+        to: '/about'
       },
       {
-        label: 'Colors',
-        description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-      },
-      {
-        label: 'Theme',
-        description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+        label: 'Konty for Retail',
+        description: 'Choose a primary and a neutral color from your Tailwind CSS theme.',
+        to: '/about'
       }
     ]
   },
   {
     label: 'Restaurants',
     class: 'font-bold',
-    slot: 'components' as const,
+    slot: 'hospitality' as const,
     to: '/konty-hospitality',
     children: [
-      {
-        label: 'Link',
-        description: 'Use NuxtLink with superpowers.'
-      },
-      {
-        label: 'Modal',
-        description: 'Display a modal within your application.'
-      },
-      {
-        label: 'NavigationMenu',
-        description: 'Display a list of links.'
-      },
-      {
-        label: 'Pagination',
-        description: 'Display a list of pages.'
-      },
-      {
-        label: 'Popover',
-        description: 'Display a non-modal dialog that floats around a trigger element.'
-      },
-      {
-        label: 'Progress',
-        description: 'Show a horizontal bar to indicate task progression.'
-      }
+      { label: 'Bar & Lounge', to: '/about' },
+      { label: 'Casual Dining', to: '/about' },
+      { label: 'Cafe & Bakery', to: '/about' },
+      { label: 'Fine Dining', to: '/about' },
+      { label: 'Enterprise', to: '/about' },
+      { label: 'Food Truck', to: '/about' },
+      { label: 'Pizza', to: '/about' },
+      { label: 'Hotel Restaurant', to: '/about' },
+      { label: 'Catering & Events', to: '/about' },
     ]
   },
   {
     label: 'Retail',
     class: 'font-bold',
     to: '/konty-retail',
-    slot: 'components' as const,
+    slot: 'retail' as const,
     children: [
-      {
-        label: 'Link',
-        description: 'Use NuxtLink with superpowers.'
-      },
-      {
-        label: 'Modal',
-        description: 'Display a modal within your application.'
-      },
-      {
-        label: 'NavigationMenu',
-        description: 'Display a list of links.'
-      },
-      {
-        label: 'Pagination',
-        description: 'Display a list of pages.'
-      },
-      {
-        label: 'Popover',
-        description: 'Display a non-modal dialog that floats around a trigger element.'
-      },
-      {
-        label: 'Progress',
-        description: 'Show a horizontal bar to indicate task progression.'
-      }
+      { label: 'Convenience', to: '/about' },
+      { label: 'Bottle Shop', to: '/about' },
+      { label: 'Grocery', to: '/about' },
+      { label: 'Butcher Shop', to: '/about' },
+      { label: 'Restaurant/Retail Hybrid', to: '/about' },
     ]
   },
   {

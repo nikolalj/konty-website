@@ -58,7 +58,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     'nuxt-gtag',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxt/icon'
   ],
 
   fonts: {
