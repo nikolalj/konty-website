@@ -5,7 +5,7 @@
     <AppHeader />
     <!-- <AppAlertBar /> -->
 
-    <AppBreadcrumbs v-if="breadcrumbs.length > 1" :items="breadcrumbs" />
+    <!-- <AppBreadcrumbs v-if="breadcrumbs.length > 1" :items="breadcrumbs" /> -->
 
     <main id="main" class="grow">
       <slot />

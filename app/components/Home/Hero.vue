@@ -41,7 +41,7 @@
           - Keep it under ~60–70 chars.
           - Only one H1 per page; other sections should use h2/h3.
         -->
-        <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
+        <h1 class="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
           Run Your Retail & Hospitality POS on Konty
         </h1>
 
@@ -49,7 +49,7 @@
           TODO: Replace with subheading that supports the H1.
           - 1–2 short sentences. Focus on outcomes (speed, accuracy, insights).
         -->
-        <p class="mt-4 text-lg text-white/90 md:text-xl">
+        <p class="mt-4 text-lg md:text-xl">
           Faster checkout. Real-time inventory. Clear insights. Everything your team needs to sell smarter.
         </p>
 
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Trust microcopy: reduces friction and boosts CTR on CTAs -->
-        <p class="mt-3 text-sm text-white/80">
+        <p class="mt-3 text-sm">
           No credit card • Live onboarding • Works with existing hardware
         </p>
 
