@@ -1,22 +1,23 @@
 <template>
   <UHeader
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
-    :class="!isHeaderSolid ? 'bg-transparent' : ''"
+    :class="!isHeaderSolid ? 'bg-transparent' : 'bg-white/90 dark:bg-gray-800/90'"
+    mode="slideover"
   >
     <template #top>
       <div
         class="overflow-hidden transition-[height,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-[height,opacity]"
-        :class="isTopBarCollapsed ? 'h-0 opacity-0' : 'h-10 opacity-100'"
+        :class="isTopBarCollapsed ? 'h-0 opacity-0' : 'h-7 opacity-100'"
         :aria-hidden="isTopBarCollapsed ? 'true' : 'false'"
         :inert="isTopBarCollapsed"
       >
         <UContainer
           class="h-full flex items-center text-sm transition-colors duration-500"
         >
-          <div class="flex w-full items-center justify-between">
+          <div class="flex w-full items-center justify-between font-semibold">
             <div class="flex items-center gap-4">
               <span>📧 contact@konty.com</span>
-              <span>📞 +1-555-KONTY</span>
+              <span>📞 +38267607670</span>
             </div>
           </div>
         </UContainer>
@@ -47,7 +48,7 @@
       <template #docs-content="{ item }">
         <ul class="grid gap-2 p-4 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
           <li class="row-span-3">
-            <div class="size-full min-h-48" />
+            <div class="size-full" />
           </li>
 
           <li v-for="child in item.children" :key="child.label">
@@ -63,6 +64,10 @@
         </ul>
       </template>
     </UNavigationMenu>
+
+    <template #body>
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+    </template>
 
     <template #right>
       <UButton
@@ -82,32 +87,23 @@
 </template>
 
 <script setup lang="ts">
-import { useThrottleFn } from '@vueuse/core'
-
-// Scroll state
 const { y } = useWindowScroll()
 
-// Hysteresis thresholds
 const ENTER_SOLID = 56
 const EXIT_SOLID  = 8
 
 const isHeaderSolid = ref(false)
 const isTopBarCollapsed = ref(false)
 
-const update = () => {
+watch(y, () => {
   const cur = y.value
 
-  // Header solid/transparent
   if (!isHeaderSolid.value && cur > ENTER_SOLID) isHeaderSolid.value = true
   else if (isHeaderSolid.value && cur < EXIT_SOLID) isHeaderSolid.value = false
 
-  // Top bar show/hide
   if (!isTopBarCollapsed.value && cur > ENTER_SOLID) isTopBarCollapsed.value = true
   else if (isTopBarCollapsed.value && cur < EXIT_SOLID) isTopBarCollapsed.value = false
-}
-
-// Smooth, stable updates
-watch(y, useThrottleFn(update, 16), { immediate: true })
+}, { immediate: true })
 
 const items = computed(() => [
   {
