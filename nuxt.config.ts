@@ -98,7 +98,9 @@ export default defineNuxtConfig({
     ipx: { maxAge: 31536000 }
   },
 
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/main.css'
+  ],
 
   // SEO Configuration
   site: {
@@ -227,7 +229,7 @@ export default defineNuxtConfig({
       googleAnalyticsId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
       gtagId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
-    }
+    },
   },
 
   // Google Analytics

@@ -1,7 +1,7 @@
 <template>
-  <div class="h-96 bg-cyan-200 flex items-center justify-center">
+  <UContainer class="py-12 sm:py-16">
     <h1 class="text-4xl font-bold text-gray-800">Benefits</h1>
-  </div>
+  </UContainer>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-dvh flex flex-col">
+  <UPage>
     <NuxtLoadingIndicator />
 
     <AppHeader />
@@ -7,16 +7,16 @@
 
     <!-- <AppBreadcrumbs v-if="breadcrumbs.length > 1" :items="breadcrumbs" /> -->
 
-    <main id="main" class="grow">
+    <UPageBody class="mt-0">
       <slot />
-    </main>
+    </UPageBody>
 
     <AppFooter />
 
     <ClientOnly>
       <PrivacyCookieConsent />
     </ClientOnly>
-  </div>
+  </UPage>
 </template>
 
 <script setup lang="ts">

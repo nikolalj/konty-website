@@ -2,12 +2,12 @@
   <div>
     <schema-organization />
     <home-hero />
-    <shared-client-list product="kontyRetail" />
+    <shared-client-list />
     <home-features />
     <shared-statistics product="kontyRetail" />
     <shared-testimonials product="kontyRetail" />
     <shared-get-started product="kontyRetail" />
-    <shared-pricing product="kontyRetail" />
+    <shared-pricing />
     <shared-contact-form />
     <home-blog-posts />
   </div>

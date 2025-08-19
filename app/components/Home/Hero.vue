@@ -1,126 +1,99 @@
+<!-- components/HeroKonty.vue -->
 <template>
-  <!--
-    INSTUCTIONS
+  <section
+    class="relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
+    :aria-label="config.title"
+  >
+    <UContainer class="flex flex-col lg:grid py-32 sm:py-40 lg:py-44 gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
+      <UIAppear direction="left" :distance="64">
+        <div>
+          <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
+            {{ config.tagline }}
+          </div>
 
-    HERO SECTION – LCP-optimized, accessible, conversion-focused
+          <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">
+            {{ config.title }}
+          </h1>
 
-    ✅ What you MUST provide to make this live:
-      1) Replace /images/hero-main.webp with your real hero asset (public/images/hero-main.webp).
-         - Prefer 2400×1200 (or larger) source. Nuxt Image will resize via the "hero" preset.
-      2) Update H1 + paragraph copy (keep it concise; 1–2 lines).
-      3) Confirm CTA routes (/demo, /pricing) and labels.
-      4) If the image is informative (not purely decorative), provide a real alt text.
+          <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">
+            {{ config.description }}
+          </p>
 
-    ⚙️ Why this setup:
-      - <NuxtImg loading="eager" fetchpriority="high">: tells the browser "this is the LCP image".
-      - preset="hero": uses your nuxt.config image preset (width/height/quality) for zero CLS.
-      - sizes="100vw": lets the browser pick the best responsive width.
-      - Decorative image uses alt="" + role="presentation" so SRs jump to H1 immediately.
-  -->
-  <section class="relative isolate">
-    <!-- Full-bleed background image (LCP target) -->
-    <!-- <NuxtImg
-      src="/images/hero-main.webp"
-      preset="hero"
-      :sizes="'100vw'"
-      loading="eager"
-      fetchpriority="high"
-      alt=""
-      role="presentation"
-      class="pointer-events-none absolute inset-0 h-full w-full object-cover select-none"
-    /> -->
-
-    <!-- Contrast overlay to ensure WCAG-compliant text contrast over the photo -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
-
-    <!-- Content container: vertically centers hero content and constrains line-length -->
-    <UContainer class="relative mx-auto flex min-h-[64vh] items-center py-16 md:min-h-[72vh]">
-      <div class="max-w-2xl">
-        <!--
-          TODO: Replace H1 with final localized headline.
-          - Keep it under ~60–70 chars.
-          - Only one H1 per page; other sections should use h2/h3.
-        -->
-        <h1 class="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-          Run Your Retail & Hospitality POS on Konty
-        </h1>
-
-        <!--
-          TODO: Replace with subheading that supports the H1.
-          - 1–2 short sentences. Focus on outcomes (speed, accuracy, insights).
-        -->
-        <p class="mt-4 text-lg md:text-xl">
-          Faster checkout. Real-time inventory. Clear insights. Everything your team needs to sell smarter.
-        </p>
-
-        <!-- Primary actions: put the money CTAs here -->
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <!--
-            TODO: Confirm route (/demo). Keep label action-oriented.
-            - Add @click tracking if you want to record funnel events.
-          -->
-          <UButton
-            size="lg"
-            color="primary"
-            to="/demo"
-            aria-label="Request a free Konty demo"
-            @click="onPrimaryCta"
-          >
-            Request Free Demo
-          </UButton>
-
-          <!--
-            Secondary action: pricing or features.
-            TODO: Confirm route (/pricing) and label.
-          -->
-          <UButton
-            size="lg"
-            variant="outline"
-            color="neutral"
-            to="/pricing"
-            aria-label="View Konty pricing"
-            @click="onSecondaryCta"
-          >
-            View Pricing
-          </UButton>
+          <div class="mt-10">
+            <div class="flex flex-wrap gap-x-6 gap-y-3">
+              <UButton
+                color="primary"
+                size="lg"
+                to="#"
+                class="text-base"
+                @click="onPrimaryCta"
+              >
+                <UIcon name="i-lucide:square-play" class="mr-2 size-6" />
+                {{ config.cta }}
+              </UButton>
+            </div>
+          </div>
         </div>
+      </UIAppear>
 
-        <!-- Trust microcopy: reduces friction and boosts CTR on CTAs -->
-        <p class="mt-3 text-sm">
-          No credit card • Live onboarding • Works with existing hardware
-        </p>
-
-        <!--
-          OPTIONAL: key logos row here (client logos). If you add logos:
-          - Use NuxtImg for each logo (lazy load, width/height set).
-          - Keep height small (e.g., h-6/h-8) and ensure alt text names the brand.
-        -->
-      </div>
+      <!-- Right column: product image -->
+      <UIAppear direction="right" :distance="64">
+        <NuxtImg
+          src="https://martex-nuxtjs.vercel.app/_nuxt/hero-25-img.92cadc81.png"
+          preset="hero"
+          alt="App screenshot"
+          width="1052"
+          height="592"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          role="presentation"
+        />
+      </UIAppear>
     </UContainer>
+
+    <!-- Wave footer -->
+    <div class="wave-shape-bottom">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 170" aria-hidden="true">
+        <path
+          class="fill-white dark:fill-gray-900"
+          fill-opacity="1"
+          d="M0,160L120,160C240,160,480,160,720,138.7C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        />
+      </svg>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-/**
- * Analytics tracking (optional but recommended):
- * Hook into your $track plugin to measure CTA performance and iterate copy/design.
- * If you don't use analytics yet, this is safe to keep (no-ops when $track is missing).
- */
-const { $track } = useNuxtApp()
+const { $track } = useNuxtApp() as {
+  $track?: {
+    ctaClick?: (label: string, area?: string) => void
+    conversion?: (name: string) => void
+  }
+}
 
-const onPrimaryCta = () => {
-  $track?.ctaClick('Request Demo', 'Hero')
+function onPrimaryCta(): void {
+  $track?.ctaClick?.('Besplatan demo', 'Hero')
   $track?.conversion?.('Hero CTA')
 }
 
-const onSecondaryCta = () => {
-  $track?.ctaClick('View Pricing', 'Hero')
-}
+const config = ref({
+  title: 'Konty - POS na koji možete da računate',
+  description: 'Kompletno rešenje za ugostiteljstvo i maloprodaju na jednom mjestu.',
+  tagline: 'Aria i Allegra su sada',
+  cta: 'Besplatan demo'
+})
 </script>
 
 <style scoped>
-/*
-  Optional hero-specific styles can go here.
-  Keep layout in Tailwind for consistency with the rest of the project.
-*/
+.wave-shape-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px; /* hides seam */
+  width: 100%;
+  line-height: 0;
+  pointer-events: none;
+}
 </style>

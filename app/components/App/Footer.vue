@@ -1,40 +1,67 @@
 <template>
-  <footer class="bg-gray-900 text-white">
-    <UContainer class="py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Konty</h3>
-          <p class="text-gray-400">Professional POS System for modern businesses</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Products</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><NuxtLink to="/konty-retail" class="hover:text-white transition-colors">Retail POS</NuxtLink></li>
-            <li><NuxtLink to="/konty-hospitality" class="hover:text-white transition-colors">Restaurant POS</NuxtLink></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Company</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><NuxtLink to="/about" class="hover:text-white transition-colors">About</NuxtLink></li>
-            <li><NuxtLink to="/about#contact" class="hover:text-white transition-colors">Contact</NuxtLink></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><NuxtLink to="/privacy" class="hover:text-white transition-colors">Privacy Policy</NuxtLink></li>
-            <li><NuxtLink to="/terms" class="hover:text-white transition-colors">Terms of Service</NuxtLink></li>
-          </ul>
-        </div>
-      </div>
-      <hr class="my-8 border-gray-700" >
-      <div class="text-center text-gray-400">
-        <p>&copy; 2025 Konty. All rights reserved.</p>
-      </div>
-    </UContainer>
-  </footer>
+  <UContainer>
+    <UFooterColumns :columns="columns">
+      <template #right>
+        <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+          <UInput type="email" class="w-full">
+            <template #trailing>
+              <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
+            </template>
+          </UInput>
+        </UFormField>
+      </template>
+    </UFooterColumns>
+  </UContainer>
 </template>
 
 <script setup lang="ts">
+import type { FooterColumn } from '@nuxt/ui-pro'
+
+const columns: FooterColumn[] = [
+  {
+    label: 'Community',
+    children: [
+      {
+        label: 'Nuxters',
+        to: 'https://nuxters.nuxt.com',
+        target: '_blank'
+      },
+      {
+        label: 'Video Courses',
+        to: 'https://masteringnuxt.com/nuxt3?ref=nuxt',
+        target: '_blank'
+      },
+      {
+        label: 'Nuxt on GitHub',
+        to: 'https://github.com/nuxt',
+        target: '_blank'
+      }
+    ]
+  },
+  {
+    label: 'Solutions',
+    children: [
+      {
+        label: 'Nuxt Content',
+        to: 'https://content.nuxt.com/',
+        target: '_blank'
+      },
+      {
+        label: 'Nuxt DevTools',
+        to: 'https://devtools.nuxt.com/',
+        target: '_blank'
+      },
+      {
+        label: 'Nuxt Image',
+        to: 'https://image.nuxt.com/',
+        target: '_blank'
+      },
+      {
+        label: 'Nuxt UI',
+        to: 'https://ui.nuxt.com/',
+        target: '_blank'
+      }
+    ]
+  }
+]
 </script>
