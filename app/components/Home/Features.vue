@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 bg-gray-50 dark:bg-gray-800">
+  <section class="py-10 bg-[var(--bg-200)]">
     <UContainer>
       <SharedSectionHeading
         v-model="product"

@@ -7,24 +7,26 @@
       :product-switch="!props.product"
     />
 
-    <div class="flex justify-center">
-      <UPricingPlans class="max-w-5xl">
-        <UPricingPlan
-          v-for="(plan, index) in config.plans[productInternal]"
-          :key="index"
-          :title="plan.title"
-          :description="plan.description"
-          :price="plan.price"
-          :features="plan.features"
-          :highlight="plan.highlight"
-          :badge="plan.badge"
-          :billing-cycle="plan.billingCycle"
-          :scale="plan.scale"
-          :button="plan.button"
-          variant="subtle"
-        />
-      </UPricingPlans>
-    </div>
+    <UIAppear direction="none" :animate-on="productInternal">
+      <div class="flex justify-center">
+        <UPricingPlans class="max-w-5xl">
+          <UPricingPlan
+            v-for="(plan, index) in config.plans[productInternal]"
+            :key="index"
+            :title="plan.title"
+            :description="plan.description"
+            :price="plan.price"
+            :features="plan.features"
+            :highlight="plan.highlight"
+            :badge="plan.badge"
+            :billing-cycle="plan.billingCycle"
+            :scale="plan.scale"
+            :button="plan.button"
+            variant="subtle"
+          />
+        </UPricingPlans>
+      </div>
+    </UIAppear>
   </UContainer>
 </template>
 

@@ -1,33 +1,35 @@
 <template>
-  <UContainer class="py-12 sm:py-16">
-    <SharedSectionHeading
-      :title="config.title"
-      :description="config.description"
-    />
+  <section class="py-12 sm:py-16">
+    <UContainer>
+      <SharedSectionHeading
+        :title="config.title"
+        :description="config.description"
+      />
 
-    <!-- Client Logos Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-      <UPageCard
-        v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
-        :key="index"
-        :title="client.name"
-        :to="client.to"
-        description="Nuxt UI v3 integrates with latest."
-        target="_blank"
-        variant="outline"
-        spotlight
-        spotlight-color="primary"
-        :ui="{
-          root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
-        }"
-        class="w-full bg-elevated hover:bg-muted cursor-pointer"
-      >
-        <div class="flex justify-center">
-          <img src="https://martex-nuxtjs.vercel.app/assets/images/png_icons/tool-9.png" alt="Tailwind CSS" class="w-20 h20" />
-        </div>
-      </UPageCard>
-    </div>
-  </UContainer>
+      <!-- Client Logos Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <UPageCard
+          v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
+          :key="index"
+          :title="client.name"
+          :to="client.to"
+          description="Nuxt UI v3 integrates with latest."
+          target="_blank"
+          variant="outline"
+          spotlight
+          spotlight-color="primary"
+          :ui="{
+            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
+          }"
+          class="w-full bg-elevated hover:bg-muted cursor-pointer"
+        >
+          <div class="flex justify-center">
+            <img src="https://martex-nuxtjs.vercel.app/assets/images/png_icons/tool-9.png" alt="Tailwind CSS" class="w-20 h20" />
+          </div>
+        </UPageCard>
+      </div>
+    </UContainer>
+  </section>
 </template>
 
 <script setup lang="ts">

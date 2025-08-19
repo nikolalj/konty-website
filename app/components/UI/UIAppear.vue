@@ -1,149 +1,149 @@
+<template>
+  <!-- Inline CSS variables ensure SSR gets the correct initial direction/values -->
+  <component :is="as" ref="el" class="ui-appear" :style="inlineVars">
+    <slot />
+  </component>
+</template>
+
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref, watch, computed } from 'vue'
 import { getAppearObserver } from '@/utils/appearObserver'
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'none'
 
 const props = withDefaults(defineProps<{
+  as?: string
   direction?: Direction
   distance?: number
-  threshold?: number
-  once?: boolean
   durationMs?: number
   delayMs?: number
   easing?: string
-  as?: string
-  /** How far outside/inside viewport to trigger, e.g. "0px 0px -10% 0px" */
+  threshold?: number
   rootMargin?: string
-  /** Item order for staggering (0-based) */
+  once?: boolean
   stagger?: number
-  /** Per-step stagger increment in ms */
   staggerStepMs?: number
+  animateOn?: unknown
 }>(), {
+  as: 'div',
   direction: 'up',
   distance: 24,
-  threshold: 0.1,
-  once: true,
   durationMs: 700,
   delayMs: 0,
   easing: 'ease-out',
-  as: 'div',
+  threshold: 0.1,
   rootMargin: '0px',
+  once: true,
   stagger: 0,
-  staggerStepMs: 60
+  staggerStepMs: 60,
+  animateOn: undefined
 })
 
 const el = ref<HTMLElement | null>(null)
-let unobserve: (() => void) | null = null
-let clearWillChangeTimer: number | null = null
+const delayTotalMs = computed(() => props.delayMs + props.stagger * props.staggerStepMs)
 
-function initialTransform(dir: Direction, dist: number): string {
-  switch (dir) {
-    case 'up': return `translateY(${dist}px)`
-    case 'down': return `translateY(-${dist}px)`
-    case 'left': return `translateX(${dist}px)`
-    case 'right': return `translateX(-${dist}px)`
-    default: return 'none'
+function dirToTransform(d: Direction, px: number): string {
+  switch (d) {
+    case 'up':    return `translate3d(0, ${px}px, 0)`     // from below → up
+    case 'down':  return `translate3d(0, -${px}px, 0)`    // from above → down
+    case 'left':  return `translate3d(-${px}px, 0, 0)`    // from left  → right
+    case 'right': return `translate3d(${px}px, 0, 0)`     // from right → left
+    default:      return 'none'
   }
 }
 
-const computedDelay = computed(() => props.delayMs + props.stagger * props.staggerStepMs)
+/** SSR-friendly variables bound on the node at render time */
+const inlineVars = computed(() => ({
+  '--appear-duration': `${props.durationMs}ms`,
+  '--appear-delay': `${delayTotalMs.value}ms`,
+  '--appear-ease': props.easing,
+  '--appear-transform': dirToTransform(props.direction, props.distance)
+} as Record<string, string>))
 
-const baseStyle = computed(() => ({
-  opacity: '0',
-  transform: initialTransform(props.direction, props.distance),
-  transitionProperty: 'opacity, transform',
-  transitionDuration: `${props.durationMs}ms`,
-  transitionTimingFunction: props.easing,
-  transitionDelay: `${computedDelay.value}ms`,
-  willChange: 'transform, opacity'
-} as const))
+let observed = false
+let ioPool: ReturnType<typeof getAppearObserver> | null = null
+let handler: ((e: IntersectionObserverEntry) => void) | null = null
+let clearWillChangeTimer: number | null = null
 
-function show() {
-  if (!el.value) return
-  el.value.style.opacity = '1'
-  el.value.style.transform = 'none'
-  // Drop will-change after animation to free memory
+function show(node: HTMLElement): void {
+  node.classList.add('is-visible')
   if (clearWillChangeTimer !== null) window.clearTimeout(clearWillChangeTimer)
-  clearWillChangeTimer = window.setTimeout(() => {
-    if (el.value) el.value.style.willChange = ''
-  }, props.durationMs + computedDelay.value + 50)
+  clearWillChangeTimer = window.setTimeout(() => { node.style.willChange = '' }, props.durationMs + delayTotalMs.value + 50)
 }
 
-function hide() {
-  if (!el.value) return
-  el.value.style.willChange = 'transform, opacity'
-  el.value.style.opacity = '0'
-  el.value.style.transform = initialTransform(props.direction, props.distance)
+function hide(node: HTMLElement): void {
+  node.style.willChange = 'transform, opacity'
+  node.classList.remove('is-visible')
 }
 
-function isInViewport(target: HTMLElement, threshold: number): boolean {
-  const rect = target.getBoundingClientRect()
-  const vw = window.innerWidth || document.documentElement.clientWidth
-  const vh = window.innerHeight || document.documentElement.clientHeight
-  const ix = Math.max(0, Math.min(rect.right, vw) - Math.max(rect.left, 0))
-  const iy = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0))
-  const visibleArea = ix * iy
-  const elArea = Math.max(1, rect.width * rect.height)
-  return visibleArea / elArea >= threshold
+function observe(node: HTMLElement): void {
+  if (!ioPool) ioPool = getAppearObserver(props.threshold, props.rootMargin)
+  if (!handler) {
+    handler = (entry) => {
+      const target = entry.target as HTMLElement
+      if (entry.isIntersecting) {
+        show(target)
+        if (props.once) unobserve(target)
+      } else if (!props.once) {
+        hide(target)
+        void target.offsetHeight // flush for reliable repeats
+      }
+    }
+  }
+  if (!observed) {
+    ioPool.observe(node, handler)
+    observed = true
+  }
 }
 
-function nextFrame(): Promise<void> {
-  return new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)))
+function unobserve(node: HTMLElement): void {
+  if (observed && ioPool) {
+    ioPool.unobserve(node)
+    observed = false
+  }
 }
 
-onMounted(async () => {
-  if (!el.value) return
+async function restart(): Promise<void> {
+  const node = el.value
+  if (!node) return
 
-  // Respect reduced motion: reveal immediately without transition
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    el.value.style.transition = 'none'
-    el.value.style.opacity = '1'
-    el.value.style.transform = 'none'
-    el.value.style.willChange = ''
+    node.style.transition = 'none'
+    node.classList.add('is-visible')
+    node.style.willChange = ''
     return
   }
 
-  // Ensure hidden state takes effect before toggling
-  hide()
-  void window.getComputedStyle(el.value).opacity
+  // snap-hide without transition, then show next frame (vars already bound)
+  const prevTransition = node.style.transition
+  node.style.transition = 'none'
+  hide(node)
+  void node.offsetHeight
+  node.style.transition = prevTransition
+  requestAnimationFrame(() => requestAnimationFrame(() => show(node)))
+}
 
-  // If already visible on load, animate right away
-  if (isInViewport(el.value, props.threshold)) {
-    await nextFrame()
-    show()
-    if (props.once) return
+onMounted(() => {
+  const node = el.value
+  if (!node) return
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    node.classList.add('is-visible')
+    node.style.transition = 'none'
+    node.style.willChange = ''
+    return
   }
 
-  // Shared IO pool
-  const pool = getAppearObserver(props.threshold, props.rootMargin)
-  const handler = (entry: IntersectionObserverEntry) => {
-    if (entry.isIntersecting) {
-      show()
-      if (props.once && el.value) {
-        pool.unobserve(el.value)
-        unobserve = null
-      }
-    } else if (!props.once) {
-      hide()
-      // Flush so repeat animations run reliably
-      if (el.value) void window.getComputedStyle(el.value).opacity
-    }
-  }
-
-  pool.observe(el.value, handler)
-  unobserve = () => pool.unobserve(el.value as Element)
+  // Hidden by default via .ui-appear; IO toggles to visible
+  observe(node)
 })
 
 onBeforeUnmount(() => {
-  if (unobserve) unobserve()
+  const node = el.value
+  if (node) unobserve(node)
   if (clearWillChangeTimer !== null) window.clearTimeout(clearWillChangeTimer)
 })
-</script>
 
-<template>
-  <!-- Polymorphic wrapper; forwards any attrs/classes to root -->
-  <component :is="as" ref="el" :style="baseStyle">
-    <slot />
-  </component>
-</template>
+watch(() => props.animateOn, () => { void restart() }, { flush: 'post' })
+defineExpose({ restart })
+</script>

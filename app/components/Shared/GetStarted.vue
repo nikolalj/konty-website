@@ -6,7 +6,7 @@
     :reverse="product !== 'kontyRetail'"
     :ui="{
       container: '!py-0',
-      root: 'py-10 bg-gray-50 dark:bg-gray-800'
+      root: 'py-10 bg-[var(--bg-200)]'
     }"
   >
     <UILazyImage

@@ -1,11 +1,11 @@
 <!-- components/HeroKonty.vue -->
 <template>
   <section
-    class="relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
+    class="bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
     :aria-label="config.title"
   >
     <UContainer class="flex flex-col lg:grid py-32 sm:py-40 lg:py-44 gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
-      <UIAppear direction="left" :distance="64">
+      <UIAppear direction="right" :distance="64">
         <div>
           <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
             {{ config.tagline }}
@@ -37,7 +37,7 @@
       </UIAppear>
 
       <!-- Right column: product image -->
-      <UIAppear direction="right" :distance="64">
+      <UIAppear direction="left" :distance="64">
         <NuxtImg
           src="https://martex-nuxtjs.vercel.app/_nuxt/hero-25-img.92cadc81.png"
           preset="hero"
@@ -56,7 +56,6 @@
     <div class="wave-shape-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 170" aria-hidden="true">
         <path
-          class="fill-white dark:fill-gray-900"
           fill-opacity="1"
           d="M0,160L120,160C240,160,480,160,720,138.7C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
         />
@@ -88,6 +87,7 @@ const config = ref({
 
 <style scoped>
 .wave-shape-bottom {
+  fill: var(--ui-bg);
   position: absolute;
   left: 0;
   right: 0;

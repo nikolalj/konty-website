@@ -4,17 +4,79 @@
 @theme static {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
-  --color-green-50: #effdf5;
-  --color-green-100: #d9fbe8;
-  --color-green-200: #b3f5d1;
-  --color-green-300: #75edae;
-  --color-green-400: #00dc82;
-  --color-green-500: #00c16a;
-  --color-green-600: #00a155;
-  --color-green-700: #007f45;
-  --color-green-800: #016538;
-  --color-green-900: #0a5331;
-  --color-green-950: #052e16;
+  --ui-primary: #1F6FE2;
+  --ui-primary-foreground: #ffffff;
+
+  --ui-bg: #ffffff;
+
+  --color-primary: var(--ui-primary);
+  --color-primary-50:  color-mix(in oklch, var(--ui-primary), white 95%);
+  --color-primary-100: color-mix(in oklch, var(--ui-primary), white 90%);
+  --color-primary-200: color-mix(in oklch, var(--ui-primary), white 80%);
+  --color-primary-300: color-mix(in oklch, var(--ui-primary), white 70%);
+  --color-primary-400: color-mix(in oklch, var(--ui-primary), white 55%);
+  --color-primary-500: var(--ui-primary);
+  --color-primary-600: color-mix(in oklch, var(--ui-primary), black 8%);
+  --color-primary-700: color-mix(in oklch, var(--ui-primary), black 16%);
+  --color-primary-800: color-mix(in oklch, var(--ui-primary), black 24%);
+  --color-primary-900: color-mix(in oklch, var(--ui-primary), black 32%);
+
+  --bg-50:  #F8FAFD;
+  --bg-100: #F1F6FC;
+  --bg-200: #E5EFFA;
+  --bg-300: #D8E5F5;
+  --bg-400: #C3D5F0;
+  --bg-500: #AEC5EB;
+  --bg-600: #8EA9D6;
+  --bg-700: #6E88B8;
+  --bg-800: #4A5F87;
+  --bg-900: #2E3B56;
+}
+
+/* Dark theme overrides */
+:root.dark, .dark {
+  --ui-primary: #5A9BFF;
+  --ui-primary-foreground: #0B1220;
+
+  --ui-bg: #151A28;
+
+  --color-primary: var(--ui-primary);
+  --color-primary-50:  color-mix(in oklch, var(--ui-primary), black 95%);
+  --color-primary-100: color-mix(in oklch, var(--ui-primary), black 90%);
+  --color-primary-200: color-mix(in oklch, var(--ui-primary), black 80%);
+  --color-primary-300: color-mix(in oklch, var(--ui-primary), black 70%);
+  --color-primary-400: color-mix(in oklch, var(--ui-primary), black 55%);
+  --color-primary-500: var(--ui-primary);
+  --color-primary-600: color-mix(in oklch, var(--ui-primary), white 8%);
+  --color-primary-700: color-mix(in oklch, var(--ui-primary), white 16%);
+  --color-primary-800: color-mix(in oklch, var(--ui-primary), white 24%);
+  --color-primary-900: color-mix(in oklch, var(--ui-primary), white 32%);
+
+  --bg-50:  #101320;
+  --bg-100: #151A28;
+  --bg-200: #1C2233;
+  --bg-300: #202133;
+  --bg-400: #293145;
+  --bg-500: #32405A;
+  --bg-600: #3D4F72;
+  --bg-700: #49608D;
+  --bg-800: #5774A9;
+  --bg-900: #6D8DC7;
 }
 
 html { font-family: var(--font-sans); }
+
+.ui-appear {
+  opacity: 0;
+  transform: var(--appear-transform, translate3d(0, 24px, 0));
+  transition:
+    opacity var(--appear-duration, 700ms) var(--appear-ease, ease-out) var(--appear-delay, 0ms),
+    transform var(--appear-duration, 700ms) var(--appear-ease, ease-out) var(--appear-delay, 0ms);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.ui-appear.is-visible {
+  opacity: 1;
+  transform: none;
+}

@@ -1,7 +1,7 @@
 <template>
   <UHeader
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
-    :class="!isHeaderSolid ? 'bg-transparent' : 'bg-white/90 dark:bg-gray-800/90'"
+    :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[var(--ui-bg)]/90'"
     :ui="{
       container: 'min-h-12'
     }"

@@ -6,11 +6,11 @@
         v-if="props.productSwitch && props.productSwitchPosition === 'top'"
         v-model="productInternal"
         :items="items"
-        class="mt-8 w-lg"
+        class="mt-8 w-full sm:w-lg"
       />
     </UIAppear>
 
-    <UIAppear>
+    <UIAppear :animate-on="props.title">
       <h2
         v-if="props.title"
         class="mt-4 text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted mb-4"
@@ -19,7 +19,7 @@
       </h2>
     </UIAppear>
 
-    <UIAppear>
+    <UIAppear :animate-on="props.description">
       <p
         v-if="props.description"
         class="text-lg leading-8 text-muted max-w-5xl text-center"
@@ -33,7 +33,7 @@
         v-if="props.productSwitch && props.productSwitchPosition === 'bottom'"
         v-model="productInternal"
         :items="items"
-        class="mt-8 w-lg"
+        class="mt-8 w-full sm:w-lg"
       />
     </UIAppear>
   </div>
