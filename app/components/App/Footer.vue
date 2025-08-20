@@ -1,17 +1,19 @@
 <template>
-  <UContainer>
-    <UFooterColumns :columns="columns">
-      <template #right>
-        <UFormField name="email" label="Subscribe to our newsletter" size="lg">
-          <UInput type="email" class="w-full">
-            <template #trailing>
-              <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
-            </template>
-          </UInput>
-        </UFormField>
-      </template>
-    </UFooterColumns>
-  </UContainer>
+  <section class="py-6 sm:py-9">
+    <UContainer>
+      <UFooterColumns :columns="columns">
+        <template #right>
+          <UFormField name="email" label="Prijavite se na newsletter" size="lg">
+            <UInput type="email" class="w-full" placeholder="Vaša e-pošta">
+              <template #trailing>
+                <UButton type="submit" size="xs" color="neutral" label="Prijavi se" />
+              </template>
+            </UInput>
+          </UFormField>
+        </template>
+      </UFooterColumns>
+    </UContainer>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -19,48 +21,29 @@ import type { FooterColumn } from '@nuxt/ui-pro'
 
 const columns: FooterColumn[] = [
   {
-    label: 'Community',
+    label: 'Proizvodi',
     children: [
-      {
-        label: 'Nuxters',
-        to: 'https://nuxters.nuxt.com',
-        target: '_blank'
-      },
-      {
-        label: 'Video Courses',
-        to: 'https://masteringnuxt.com/nuxt3?ref=nuxt',
-        target: '_blank'
-      },
-      {
-        label: 'Nuxt on GitHub',
-        to: 'https://github.com/nuxt',
-        target: '_blank'
-      }
+      { label: 'Konty za ugostiteljstvo', to: '/konty-hospitality' },
+      { label: 'Konty za maloprodaju', to: '/konty-retail' },
+      { label: 'Cene', to: '/pricing' },
+      { label: 'Zakažite demo', to: '/demo' }
     ]
   },
   {
-    label: 'Solutions',
+    label: 'Kompanija',
     children: [
-      {
-        label: 'Nuxt Content',
-        to: 'https://content.nuxt.com/',
-        target: '_blank'
-      },
-      {
-        label: 'Nuxt DevTools',
-        to: 'https://devtools.nuxt.com/',
-        target: '_blank'
-      },
-      {
-        label: 'Nuxt Image',
-        to: 'https://image.nuxt.com/',
-        target: '_blank'
-      },
-      {
-        label: 'Nuxt UI',
-        to: 'https://ui.nuxt.com/',
-        target: '_blank'
-      }
+      { label: 'O nama', to: '/about' },
+      { label: 'Kontakt', to: '/contact' },
+      { label: 'Partneri', to: '/partners' },
+      { label: 'Karijere', to: '/careers' }
+    ]
+  },
+  {
+    label: 'Pravno',
+    children: [
+      { label: 'Politika privatnosti', to: '/privacy' },
+      { label: 'Uslovi korišćenja', to: '/terms' },
+      { label: 'DPA (obrada podataka)', to: '/dpa' }
     ]
   }
 ]

@@ -41,8 +41,8 @@ const props = defineProps({
 })
 
 const config = ref({
-  title: 'Trusted by industry leaders',
-  description: 'Join thousands of companies that build amazing experiences with our platform'
+  title: 'Naši klijenti',
+  description: 'Konty je pouzdan izbor za ugostitelje i trgovce širom regiona'
 })
 
 const clients = ref([

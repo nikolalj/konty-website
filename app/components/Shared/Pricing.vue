@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="py-12 sm:py-16">
+  <UContainer class="py-24 sm:py-32">
     <SharedSectionHeading
       v-model="productInternal"
       :title="config.title"

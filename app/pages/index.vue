@@ -4,8 +4,8 @@
     <home-hero />
     <shared-client-list />
     <home-features />
-    <shared-statistics product="kontyRetail" />
     <shared-testimonials product="kontyRetail" />
+    <shared-statistics product="kontyRetail" />
     <shared-get-started product="kontyRetail" />
     <shared-pricing />
     <shared-contact-form />

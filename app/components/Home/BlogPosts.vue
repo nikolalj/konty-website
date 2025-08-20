@@ -1,19 +1,23 @@
 <template>
-  <UContainer class="py-12 sm:py-16">
-    <UBlogPosts :posts="posts">
-      <UBlogPost
-        v-for="(post, index) in posts"
-        :key="index"
-        :title="post.title"
-        :description="post.description"
-        :image="post.image"
-        :date="post.date"
-        :to="post.to"
-        variant="subtle"
-        target="_blank"
-      />
-    </UBlogPosts>
-  </UContainer>
+  <section class="py-16">
+    <UIAppear>
+      <UContainer>
+        <UBlogPosts :posts="posts">
+          <UBlogPost
+            v-for="(post, index) in posts"
+            :key="index"
+            :title="post.title"
+            :description="post.description"
+            :image="post.image"
+            :date="post.date"
+            :to="post.to"
+            variant="subtle"
+            target="_blank"
+          />
+        </UBlogPosts>
+      </UContainer>
+    </UIAppear>
+  </section>
 </template>
 
 <script setup lang="ts">
