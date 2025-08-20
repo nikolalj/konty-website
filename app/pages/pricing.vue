@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <shared-pricing product="kontyRetail" />
-    <shared-get-started product="kontyRetail" />
+  <div class="py-12 sm:py-16">
+    <shared-pricing />
+    <shared-get-started />
     <shared-contact-form />
   </div>
 </template>

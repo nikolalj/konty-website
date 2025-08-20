@@ -1,10 +1,10 @@
 <!-- components/HeroKonty.vue -->
 <template>
   <section
-    class="bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
+    class="py-24 sm:py-30 bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
     :aria-label="config.title"
   >
-    <UContainer class="flex flex-col lg:grid py-32 sm:py-40 lg:py-44 gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
+    <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
       <UIAppear direction="right" :distance="64">
         <div>
           <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
@@ -28,7 +28,6 @@
                 class="text-base"
                 @click="onPrimaryCta"
               >
-                <UIcon name="i-lucide:square-play" class="mr-2 size-6" />
                 {{ config.cta }}
               </UButton>
             </div>

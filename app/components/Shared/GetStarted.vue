@@ -5,7 +5,7 @@
     :features="config.features"
     :reverse="product !== 'kontyRetail'"
     :ui="{
-      root: 'bg-[var(--bg-200)]',
+      root: 'bg-[var(--bg-100)] dark:bg-[var(--bg-200)]',
     }"
   >
     <UIAppear>

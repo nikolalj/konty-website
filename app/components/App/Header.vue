@@ -153,9 +153,9 @@
         size="lg"
         variant="solid"
         color="primary"
-        aria-label="Free Demo"
+        aria-label="Besplatan demo"
       >
-        Free Demo
+        Besplatan demo
       </UButton>
 
       <UColorModeButton />

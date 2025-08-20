@@ -56,8 +56,9 @@
             <UButton
               type="submit"
               color="primary"
-              class="w-full font-semibold"
+              class="text-center font-semibold"
               size="xl"
+              block
               :loading="loading"
             >
               Pošalji poruku

@@ -1,33 +1,35 @@
 <template>
-  <UContainer class="py-24 sm:py-32">
-    <SharedSectionHeading
-      v-model="productInternal"
-      :title="config.title"
-      :description="config.description"
-      :product-switch="!props.product"
-    />
+  <section class="py-12 sm:py-16">
+    <UContainer>
+      <SharedSectionHeading
+        v-model="productInternal"
+        :title="config.title"
+        :description="config.description"
+        :product-switch="!props.product"
+      />
 
-    <UIAppear direction="none" :animate-on="productInternal">
-      <div class="flex justify-center">
-        <UPricingPlans class="max-w-5xl">
-          <UPricingPlan
-            v-for="(plan, index) in config.plans[productInternal]"
-            :key="index"
-            :title="plan.title"
-            :description="plan.description"
-            :price="plan.price"
-            :features="plan.features"
-            :highlight="plan.highlight"
-            :badge="plan.badge"
-            :billing-cycle="plan.billingCycle"
-            :scale="plan.scale"
-            :button="plan.button"
-            variant="subtle"
-          />
-        </UPricingPlans>
-      </div>
-    </UIAppear>
-  </UContainer>
+      <UIAppear direction="none" :animate-on="productInternal">
+        <div class="flex justify-center">
+          <UPricingPlans class="max-w-5xl">
+            <UPricingPlan
+              v-for="(plan, index) in config.plans[productInternal]"
+              :key="index"
+              :title="plan.title"
+              :description="plan.description"
+              :price="plan.price"
+              :features="plan.features"
+              :highlight="plan.highlight"
+              :badge="plan.badge"
+              :billing-cycle="plan.billingCycle"
+              :scale="plan.scale"
+              :button="plan.button"
+              variant="subtle"
+            />
+          </UPricingPlans>
+        </div>
+      </UIAppear>
+    </UContainer>
+  </section>
 </template>
 
 <script setup lang="ts">
