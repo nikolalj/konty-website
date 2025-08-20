@@ -8,7 +8,7 @@
 
       <UPageMarquee
         pause-on-hover
-        :ui="{ root: '[--gap:--spacing(4)]  [--duration:40s]', content: 'w-auto py-1' }"
+        :ui="{ root: '[--gap:--spacing(4)]  [--duration:60s]', content: 'w-auto py-1' }"
       >
         <UPageCard
           v-for="(testimonial, index) in testimonials"

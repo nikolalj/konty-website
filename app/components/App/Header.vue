@@ -185,59 +185,57 @@ watch(y, () => {
 
 const items = computed(() => [
   {
-    label: 'Products',
+    label: 'Proizvodi',
     class: 'font-bold',
     slot: 'products' as const,
     children: [
       {
-        label: 'Konty for Restaurants',
-        description: 'You have nothing to do, @nuxt/icon will handle it automatically.',
-        to: '/about'
+        label: 'Konty za ugostiteljstvo',
+        description: 'Sve što vam je potrebno za brzo i jednostavno vođenje restorana.',
+        to: '/konty-hospitality'
       },
       {
-        label: 'Konty for Retail',
-        description: 'Choose a primary and a neutral color from your Tailwind CSS theme.',
-        to: '/about'
+        label: 'Konty za trgovinu',
+        description: 'Moderno POS rešenje za trgovinu.',
+        to: '/konty-retail'
       }
     ]
   },
   {
-    label: 'Restaurants',
+    label: 'Ugostiteljstvo',
     class: 'font-bold',
     slot: 'hospitality' as const,
     to: '/konty-hospitality',
     children: [
       { label: 'Bar & Lounge', to: '/about' },
       { label: 'Casual Dining', to: '/about' },
-      { label: 'Cafe & Bakery', to: '/about' },
+      { label: 'Kafić & Pekara', to: '/about' },
       { label: 'Fine Dining', to: '/about' },
       { label: 'Enterprise', to: '/about' },
       { label: 'Food Truck', to: '/about' },
-      { label: 'Pizza', to: '/about' },
-      { label: 'Hotel Restaurant', to: '/about' },
-      { label: 'Catering & Events', to: '/about' },
+      { label: 'Picerija', to: '/about' },
+      { label: 'Hotelski restoran', to: '/about' },
     ]
   },
   {
-    label: 'Retail',
+    label: 'Trgovina',
     class: 'font-bold',
     to: '/konty-retail',
     slot: 'retail' as const,
     children: [
-      { label: 'Convenience', to: '/about' },
-      { label: 'Bottle Shop', to: '/about' },
-      { label: 'Grocery', to: '/about' },
-      { label: 'Butcher Shop', to: '/about' },
-      { label: 'Restaurant/Retail Hybrid', to: '/about' },
+      { label: 'Prodavnica mešovite robe', to: '/about' },
+      { label: 'Prodavnica pića', to: '/about' },
+      { label: 'Supermarket', to: '/about' },
+      { label: 'Mesara', to: '/about' },
     ]
   },
   {
-    label: 'Pricing',
+    label: 'Cene',
     class: 'font-bold',
     to: '/pricing'
   },
   {
-    label: 'About',
+    label: 'O nama',
     class: 'font-bold',
     to: '/about'
   }
