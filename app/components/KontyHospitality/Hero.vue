@@ -23,18 +23,18 @@
     /> -->
 
     <!-- Contrast overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40"/>
 
     <UContainer class="relative mx-auto flex min-h-[64vh] items-center py-16 md:min-h-[72vh]">
       <div class="max-w-2xl">
         <!-- TODO: finalize headline -->
         <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-          Konty Hospitality POS — Faster Tables, Happier Guests
+          {{ $t('hospitalityPage.hero.title') }}
         </h1>
 
         <!-- TODO: refine benefits -->
         <p class="mt-4 text-lg text-white/90 md:text-xl">
-          Seat, fire, and split bills in seconds. Floor plan, kitchen tickets, and analytics built for busy teams.
+          {{ $t('hospitalityPage.hero.subtitle') }}
         </p>
 
         <!-- CTAs -->
@@ -46,7 +46,7 @@
             aria-label="Request a free Konty Hospitality demo"
             @click="onPrimaryCta"
           >
-            Request Demo
+            {{ $t('hospitalityPage.hero.cta') }}
           </UButton>
           <UButton
             size="lg"
@@ -56,12 +56,12 @@
             aria-label="View Konty pricing"
             @click="onSecondaryCta"
           >
-            View Pricing
+            {{ $t('hospitalityPage.hero.viewPricing') }}
           </UButton>
         </div>
 
         <p class="mt-3 text-sm text-white/80">
-          Kitchen display ready • Table & menu management • Delivery integrations
+          {{ $t('hospitalityPage.hero.features') }}
         </p>
       </div>
     </UContainer>

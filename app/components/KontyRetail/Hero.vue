@@ -23,18 +23,18 @@
     /> -->
 
     <!-- Contrast overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"/>
 
     <UContainer class="relative mx-auto flex min-h-[64vh] items-center py-16 md:min-h-[72vh]">
       <div class="max-w-2xl">
         <!-- TODO: finalize headline (≤ ~70 chars) -->
         <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-          Konty Retail POS — Faster Checkout, Smarter Inventory
+          {{ $t('retailPage.hero.title') }}
         </h1>
 
         <!-- TODO: tighten supporting copy to 1–2 sentences focused on outcomes -->
         <p class="mt-4 text-lg text-white/90 md:text-xl">
-          Scan, sell, and restock with confidence. Real-time inventory and clean reports that keep margins healthy.
+          {{ $t('retailPage.hero.subtitle') }}
         </p>
 
         <!-- CTAs -->
@@ -46,7 +46,7 @@
             aria-label="Request a free Konty Retail demo"
             @click="onPrimaryCta"
           >
-            Request Demo
+            {{ $t('retailPage.hero.cta') }}
           </UButton>
           <UButton
             size="lg"
@@ -56,12 +56,12 @@
             aria-label="See Konty pricing"
             @click="onSecondaryCta"
           >
-            See Pricing
+            {{ $t('retailPage.hero.viewDemo') }}
           </UButton>
         </div>
 
         <p class="mt-3 text-sm text-white/80">
-          Barcode ready • Multi-store support • Works with existing hardware
+          {{ $t('retailPage.hero.features') }}
         </p>
       </div>
     </UContainer>

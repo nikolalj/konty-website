@@ -42,6 +42,7 @@
 <script setup lang="ts">
 import type { TabsItem } from '@nuxt/ui'
 
+const { t } = useI18n()
 const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
@@ -69,12 +70,12 @@ watch(productInternal, val => emit('update:modelValue', val))
 
 const items = ref<TabsItem[]>([
   {
-    label: 'Ugostiteljstvo',
+    label: t('common.hospitality'),
     icon: 'i-lucide-utensils-crossed',
     value: 'kontyHospitality'
   },
   {
-    label: 'Trgovina',
+    label: t('common.retail'),
     icon: 'i-lucide-shopping-bag',
     value: 'kontyRetail'
   }

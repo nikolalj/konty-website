@@ -2,8 +2,8 @@
   <section class="py-12 sm:py-16">
     <UContainer>
       <SharedSectionHeading
-        :title="config.title"
-        :description="config.description"
+        :title="$t('testimonials.title')"
+        :description="$t('testimonials.description')"
       />
 
       <UPageMarquee
@@ -30,11 +30,6 @@
 </template>
 
 <script setup lang="ts">
-const config = ref({
-  title: 'Veruju nam vodeći ugostitelji i trgovci',
-  description: 'Pridružite se hiljadama restorana, kafića i prodavnica koje rade brže i profitabilnije uz Konty'
-})
-
 const testimonials = [
   {
     user: {

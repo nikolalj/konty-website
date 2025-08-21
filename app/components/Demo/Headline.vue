@@ -3,10 +3,10 @@
     <UContainer>
       <div class="text-center">
         <h1 class="text-5xl font-bold text-gray-900 mb-6">
-          See Konty in Action
+          {{ $t('demo.seeInAction') }}
         </h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Request a personalized demo and discover how Konty can revolutionize your business operations
+          {{ $t('demo.revolutionize') }}
         </p>
       </div>
     </UContainer>

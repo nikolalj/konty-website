@@ -3,10 +3,10 @@
     <UContainer>
       <UFooterColumns :columns="columns">
         <template #right>
-          <UFormField name="email" label="Prijavite se na newsletter" size="lg">
-            <UInput type="email" class="w-full" placeholder="Vaša e-pošta">
+          <UFormField name="email" :label="$t('footer.newsletter')" size="lg">
+            <UInput type="email" class="w-full" :placeholder="$t('footer.emailPlaceholder')">
               <template #trailing>
-                <UButton type="submit" size="xs" color="neutral" label="Prijavi se" />
+                <UButton type="submit" size="xs" color="neutral" :label="$t('footer.subscribe')" />
               </template>
             </UInput>
           </UFormField>
@@ -19,31 +19,34 @@
 <script setup lang="ts">
 import type { FooterColumn } from '@nuxt/ui-pro'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const columns: FooterColumn[] = [
   {
-    label: 'Proizvodi',
+    label: t('footer.products'),
     children: [
-      { label: 'Konty za ugostiteljstvo', to: '/konty-hospitality' },
-      { label: 'Konty za maloprodaju', to: '/konty-retail' },
-      { label: 'Cene', to: '/pricing' },
-      { label: 'Zakažite demo', to: '/demo' }
+      { label: t('nav.forHospitality'), to: localePath('/konty-hospitality') },
+      { label: t('nav.forRetail'), to: localePath('/konty-retail') },
+      { label: t('nav.pricing'), to: localePath('/pricing') },
+      { label: t('common.bookDemo'), to: localePath('/demo') }
     ]
   },
   {
-    label: 'Kompanija',
+    label: t('footer.company'),
     children: [
-      { label: 'O nama', to: '/about' },
-      { label: 'Kontakt', to: '/contact' },
-      { label: 'Partneri', to: '/partners' },
-      { label: 'Karijere', to: '/careers' }
+      { label: t('footer.aboutUs'), to: localePath('/about') },
+      { label: t('footer.contact'), to: localePath('/about') },
+      { label: t('footer.partners'), to: localePath('/about') },
+      { label: t('footer.careers'), to: localePath('/about') }
     ]
   },
   {
-    label: 'Pravno',
+    label: t('footer.legal'),
     children: [
-      { label: 'Politika privatnosti', to: '/privacy' },
-      { label: 'Uslovi korišćenja', to: '/terms' },
-      { label: 'DPA (obrada podataka)', to: '/dpa' }
+      { label: t('footer.privacy'), to: localePath('/privacy') },
+      { label: t('footer.terms'), to: localePath('/terms') },
+      { label: t('footer.dpa'), to: localePath('/about') }
     ]
   }
 ]

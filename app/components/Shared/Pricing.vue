@@ -33,6 +33,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 const props = defineProps({
   product: {
     type: String as PropType<'kontyRetail' | 'kontyHospitality' | undefined>,
@@ -42,124 +44,124 @@ const props = defineProps({
 
 const productInternal = ref(props.product || 'kontyHospitality')
 
-const config = ref({
-  title: 'Pristupačno svima',
-  description: 'Odaberite paket koji odgovara vašim potrebama.',
+const config = computed(() => ({
+  title: t('pricing.title'),
+  description: t('pricing.description'),
   plans: {
     kontyHospitality: [
       {
-        title: 'Start',
-        description: 'Za male lokale kojima je potrebna jednostavna naplata.',
-        price: '25 €',
-        billingCycle: '/ mjesečno',
+        title: t('pricing.hospitality.start.title'),
+        description: t('pricing.hospitality.start.description'),
+        price: t('pricing.hospitality.start.price'),
+        billingCycle: t('pricing.hospitality.start.billingCycle'),
         features: [
-          'Jedna kasa',
-          'Rad po stolovima',
-          'Rad sa artiklima',
-          'Izdavanje računa',
-          'Izvještaji o prodaji artikala',
-          'Rad sa magacinom (prijem i otprema robe)',
-          'Kompletna analiza prometa i stanja magacina',
-          'Uvijek dostupan back office',
+          t('pricing.hospitality.start.features.feat0'),
+          t('pricing.hospitality.start.features.feat1'),
+          t('pricing.hospitality.start.features.feat2'),
+          t('pricing.hospitality.start.features.feat3'),
+          t('pricing.hospitality.start.features.feat4'),
+          t('pricing.hospitality.start.features.feat5'),
+          t('pricing.hospitality.start.features.feat6'),
+          t('pricing.hospitality.start.features.feat7'),
         ],
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.hospitality.start.button'),
         }
       },
       {
-        title: 'Standard',
-        description: 'Za ugostitelje kojima je potrebna veća kontrola i evidencija.',
-        price: '30 €',
+        title: t('pricing.hospitality.standard.title'),
+        description: t('pricing.hospitality.standard.description'),
+        price: t('pricing.hospitality.standard.price'),
+        billingCycle: t('pricing.hospitality.standard.billingCycle'),
+        features: [
+          t('pricing.hospitality.standard.features.feat0'),
+          t('pricing.hospitality.standard.features.feat1'),
+          t('pricing.hospitality.standard.features.feat2'),
+          t('pricing.hospitality.standard.features.feat3'),
+          t('pricing.hospitality.standard.features.feat4'),
+          t('pricing.hospitality.standard.features.feat5'),
+        ],
         highlight: true,
         scale: true,
-        billingCycle: '/ mjesečno',
-        badge: 'Popularan izbor',
-        features: [
-          'Sve iz paketa Konty Start plus',
-          'Rad sa više cjenovnika',
-          'Kreiranje normativa (uvezivanje repromaterijala sa artiklima)',
-          'Izvještaji o potrošnji repromaterijala',
-          'Ulazne fakture',
-          'Kartice komitenata (uplate, isplate, bankovni izvodi)',
-        ],
+        badge: t('pricing.hospitality.standard.badge'),
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.hospitality.standard.button'),
         }
       },
       {
-        title: 'Premium',
-        description: 'Za veće sisteme kojima trebaju napredne funkcionalnosti.',
-        price: '50 €',
-        billingCycle: '/ mjesečno',
+        title: t('pricing.hospitality.premium.title'),
+        description: t('pricing.hospitality.premium.description'),
+        price: t('pricing.hospitality.premium.price'),
+        billingCycle: t('pricing.hospitality.premium.billingCycle'),
         features: [
-          'Više kasa',
-          'Sve iz paketa Konty Standard plus',
-          'Rad u mreži',
-          'Mobilno naručivanje (udaljene porudžbe)',
-          'Rad s kuhinjskim monitorom',
-          'Materijalno knjigovodstvo (opciono)',
-          'Integracije sa drugim softverskim rješenjima (računovodstvo, hoteli, itd.)',
+          t('pricing.hospitality.premium.features.feat0'),
+          t('pricing.hospitality.premium.features.feat1'),
+          t('pricing.hospitality.premium.features.feat2'),
+          t('pricing.hospitality.premium.features.feat3'),
+          t('pricing.hospitality.premium.features.feat4'),
+          t('pricing.hospitality.premium.features.feat5'),
+          t('pricing.hospitality.premium.features.feat6'),
         ],
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.hospitality.premium.button'),
         }
       }
     ],
     kontyRetail: [
       {
-        title: 'Start',
-        description: 'Za male radnje kojima je potrebna jednostavna naplata.',
-        price: '12 €',
-        billingCycle: '/ mjesečno',
+        title: t('pricing.retail.start.title'),
+        description: t('pricing.retail.start.description'),
+        price: t('pricing.retail.start.price'),
+        billingCycle: t('pricing.retail.start.billingCycle'),
         features: [
-          'Jedna kasa',
-          'Brzi rad sa artiklima (barkodovi, prečice)',
-          'Izdavanje računa',
-          'Izvještaji o prodaji artikala',
-          'Rad sa magacinom (prijem i otprema robe)',
-          'Kompletna analiza prometa i stanja magacina',
-          'Uvijek dostupan back office',
+          t('pricing.retail.start.features.feat0'),
+          t('pricing.retail.start.features.feat1'),
+          t('pricing.retail.start.features.feat2'),
+          t('pricing.retail.start.features.feat3'),
+          t('pricing.retail.start.features.feat4'),
+          t('pricing.retail.start.features.feat5'),
+          t('pricing.retail.start.features.feat6'),
         ],
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.retail.start.button'),
         }
       },
       {
-        title: 'Standard',
-        description: 'Za radnje kojima je potrebna veća kontrola i evidencija.',
-        price: '15 €',
+        title: t('pricing.retail.standard.title'),
+        description: t('pricing.retail.standard.description'),
+        price: t('pricing.retail.standard.price'),
+        billingCycle: t('pricing.retail.standard.billingCycle'),
+        features: [
+          t('pricing.retail.standard.features.feat0'),
+          t('pricing.retail.standard.features.feat1'),
+          t('pricing.retail.standard.features.feat2'),
+          t('pricing.retail.standard.features.feat3'),
+          t('pricing.retail.standard.features.feat4'),
+        ],
         highlight: true,
         scale: true,
-        billingCycle: '/ mjesečno',
-        badge: 'Popularan izbor',
-        features: [
-          'Sve iz paketa Konty Start plus',
-          'Brzi tasteri',
-          'Težinski barkodovi (integracija sa vagom)',
-          'Ulazne fakture',
-          'Kartice komitenata (uplate, isplate, bankovni izvodi)',
-        ],
+        badge: t('pricing.retail.standard.badge'),
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.retail.standard.button'),
         }
       },
       {
-        title: 'Premium',
-        description: 'Za veće sisteme kojima trebaju napredne funkcionalnosti.',
-        price: '20 €',
-        billingCycle: '/ mjesečno',
+        title: t('pricing.retail.premium.title'),
+        description: t('pricing.retail.premium.description'),
+        price: t('pricing.retail.premium.price'),
+        billingCycle: t('pricing.retail.premium.billingCycle'),
         features: [
-          'Sve iz paketa Konty Standard plus',
-          'Više kasa',
-          'Materijalno knjigovodstvo (opciono)',
-          'Integracije sa drugim softverskim rješenjima (računovodstvo, itd.)',
+          t('pricing.retail.premium.features.feat0'),
+          t('pricing.retail.premium.features.feat1'),
+          t('pricing.retail.premium.features.feat2'),
+          t('pricing.retail.premium.features.feat3'),
         ],
         button: {
-          label: 'Prijavi se'
+          label: t('pricing.retail.premium.button'),
         }
       }
     ]
   }
-})
+}))
 
 </script>

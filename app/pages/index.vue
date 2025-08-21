@@ -1,15 +1,15 @@
 <template>
   <div>
-    <schema-organization />
-    <home-hero />
-    <shared-client-list />
-    <home-features />
-    <shared-testimonials />
-    <shared-statistics />
-    <shared-get-started />
-    <shared-pricing />
-    <shared-contact-form />
-    <home-blog-posts />
+    <SchemaOrganization />
+    <HomeHero />
+    <SharedClientList />
+    <HomeFeatures />
+    <SharedTestimonials />
+    <SharedStatistics />
+    <SharedGetStarted />
+    <SharedPricing />
+    <SharedContactForm />
+    <HomeBlogPosts />
   </div>
 </template>
 

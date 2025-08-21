@@ -2,21 +2,21 @@
 <template>
   <section
     class="py-24 sm:py-30 bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
-    :aria-label="config.title"
+    :aria-label="$t('hero.title')"
   >
     <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
       <UIAppear direction="right" :distance="64">
         <div>
           <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
-            {{ config.tagline }}
+            {{ $t('hero.tagline') }}
           </div>
 
           <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">
-            {{ config.title }}
+            {{ $t('hero.title') }}
           </h1>
 
           <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">
-            {{ config.description }}
+            {{ $t('hero.subtitle') }}
           </p>
 
           <div class="mt-10">
@@ -24,11 +24,11 @@
               <UButton
                 color="primary"
                 size="lg"
-                to="#"
+                :to="localePath('/demo')"
                 class="text-base"
                 @click="onPrimaryCta"
               >
-                {{ config.cta }}
+                {{ $t('hero.cta') }}
               </UButton>
             </div>
           </div>
@@ -64,6 +64,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
 const { $track } = useNuxtApp() as {
   $track?: {
     ctaClick?: (label: string, area?: string) => void
@@ -72,16 +74,9 @@ const { $track } = useNuxtApp() as {
 }
 
 function onPrimaryCta(): void {
-  $track?.ctaClick?.('Besplatan demo', 'Hero')
+  $track?.ctaClick?.(t('hero.cta'), 'Hero')
   $track?.conversion?.('Hero CTA')
 }
-
-const config = ref({
-  title: 'Konty - POS na koji možete da računate',
-  description: 'Kompletno rešenje za ugostiteljstvo i maloprodaju na jednom mjestu.',
-  tagline: 'Aria i Allegra su sada',
-  cta: 'Besplatan demo'
-})
 </script>
 
 <style scoped>

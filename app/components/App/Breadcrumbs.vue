@@ -22,14 +22,27 @@
 </template>
 
 <script setup lang="ts">
-interface BreadcrumbItem {
-  name: string
-  path: string
-}
+const route = useRoute()
 
-interface Props {
-  items: BreadcrumbItem[]
-}
+const items = computed(() => {
+  const pathSegments = route.path.split('/').filter(Boolean)
+  const crumbs = [{ name: 'Početna', path: '/' }]
 
-defineProps<Props>()
+  let currentPath = ''
+  const nameMap: Record<string, string> = {
+    products: 'Proizvodi',
+    'konty-retail': 'Retail',
+    'konty-hospitality': 'Ugostiteljstvo',
+    pricing: 'Cene',
+    demo: 'Demo',
+    about: 'O nama'
+  }
+
+  for (const segment of pathSegments) {
+    currentPath += `/${segment}`
+    const name = nameMap[segment] || (segment.charAt(0).toUpperCase() + segment.slice(1).replaceAll('-', ' '))
+    crumbs.push({ name, path: currentPath })
+  }
+  return crumbs
+})
 </script>

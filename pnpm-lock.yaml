@@ -45,6 +45,9 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
+      '@iconify-json/circle-flags':
+        specifier: ^1.2.8
+        version: 1.2.8
       '@lhci/cli':
         specifier: ^0.15.1
         version: 0.15.1
@@ -699,6 +702,9 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/circle-flags@1.2.8':
+    resolution: {integrity: sha512-Wt4K8+fJM3ZLYA59P8HEund4bQLvJzuL+v74qFtF0tgqS9hu0p3NoqO788soQdsLbINs26cQBCmWCKm6q2u9UQ==}
 
   '@iconify-json/lucide@1.2.58':
     resolution: {integrity: sha512-4ONe3ONaauEaf7wEQIvlWz2xHaMXUXuQeJVRBMu4PmsBrMEfdnc2vRZRyAudmcQo8yWmEsLu6WM7/5qWUdDJHQ==}
@@ -7289,6 +7295,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-json/circle-flags@1.2.8':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/lucide@1.2.58':
     dependencies:

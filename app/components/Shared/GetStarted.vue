@@ -1,8 +1,8 @@
 <template>
   <UPageSection
-    :title="config.title"
+    :title="$t('getStarted.title')"
     orientation="horizontal"
-    :features="config.features"
+    :features="features"
     :reverse="product !== 'kontyRetail'"
     :ui="{
       root: 'bg-[var(--bg-100)] dark:bg-[var(--bg-200)]',
@@ -10,7 +10,7 @@
   >
     <UIAppear>
       <UILazyImage
-        :src="config.image"
+        src="https://ariapos.me/img/aria_device2.29fb96a7.png"
         preset=""
         :sizes="'100vw'"
         loading="eager"
@@ -23,31 +23,35 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 
-const config = ref({
-  title: 'Želite da samostalno počnete sa radom?',
-  image: 'https://ariapos.me/img/aria_device2.29fb96a7.png',
-  features: [{
-    title: 'Elektronski sertifikat',
-    description: 'Nabavite elektronski serftifikat kod ovlašćenih kompanija (Pošta Crne Gore i Core IT)',
+const features = computed(() => [
+  {
+    title: t('getStarted.certificate.title'),
+    description: t('getStarted.certificate.description'),
     icon: 'i-lucide-shield-check',
-    to: '#'
-  },{
-    title: 'Samouslužni SEP portal',
-    description: 'Registrujete se na Samouslužni (SEP) portal uprave prihoda. Na ovom portalu registrujete svoj poslovni prostor kao i operatera koji će izdavati račune.',
+    to: localePath('#')
+  },
+  {
+    title: t('getStarted.sepPortal.title'),
+    description: t('getStarted.sepPortal.description'),
     icon: 'i-lucide-user-round-pen',
-    to: '#'
-  },{
-    title: 'Kasa i ostala oprema',
-    description: 'Možete koristiti bilo koji računar, tablet ili mobilni telefon. Uz ovaj uređaj možete koristiti termalni ili standardni printer i drugu opremu.',
+    to: localePath('#')
+  },
+  {
+    title: t('getStarted.equipment.title'),
+    description: t('getStarted.equipment.description'),
     icon: 'i-lucide-smartphone',
-    to: '#'
-  },{
-    title: 'Registrujte se na Konty program',
-    description: 'Kroz Konty program registrujete svoj nalog, unesete kod poslovnog prostora i kod operatera, unesete svoje artikle i plan stolova i možete početi sa radom.',
+    to: localePath('#')
+  },
+  {
+    title: t('getStarted.register.title'),
+    description: t('getStarted.register.description'),
     icon: 'i-lucide-user-round-check',
-    to: '#'
-  }]
-})
+    to: localePath('#')
+  }
+])
 </script>

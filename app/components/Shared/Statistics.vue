@@ -6,7 +6,7 @@
           <div class="mb-4">
             <h2 class="text-5xl font-bold text-gray-900 dark:text-white">
               <span class="tabular-nums tracking-tight">
-                {{ new Intl.NumberFormat().format(animatedStats[index]) }}
+                {{ new Intl.NumberFormat().format(animatedStats[index] || 0) }}
               </span>{{ stat.suffix }}
             </h2>
           </div>
@@ -25,10 +25,25 @@ import { getAppearObserver } from '~/utils/appearObserver'
 
 type Stat = { value: number; suffix: string; description: string }
 
+const { t, locale } = useI18n()
+
+// Get numeric value from translations
+const getStatValue = (key: string): number => {
+  const { messages } = useI18n()
+  const localeData = locale.value
+  const localeMessages = messages.value[localeData] || messages.value['me']
+  // Type assertion to access nested properties
+  type LocaleMessagesWithStats = Record<string, unknown> & {
+    statistics?: Record<string, { value?: number }>
+  }
+  const stats = (localeMessages as LocaleMessagesWithStats)?.statistics
+  return stats?.[key]?.value || 0
+}
+
 const statistics = ref<Stat[]>([
-  { value: 25_000, suffix: '+', description: 'Businesses trust Konty for their daily operations' },
-  { value: 99, suffix: '%', description: 'Customer satisfaction rate across all markets' },
-  { value: 150, suffix: 'k', description: 'Transactions processed every single day' }
+  { value: getStatValue('stat1'), suffix: t('statistics.stat1.suffix'), description: t('statistics.stat1.description') },
+  { value: getStatValue('stat2'), suffix: t('statistics.stat2.suffix'), description: t('statistics.stat2.description') },
+  { value: getStatValue('stat3'), suffix: t('statistics.stat3.suffix'), description: t('statistics.stat3.description') }
 ])
 
 const animatedStats = ref<number[]>(statistics.value.map(() => 0))

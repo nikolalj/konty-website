@@ -140,22 +140,53 @@ export default defineNuxtConfig({
     ]
   },
 
-  // Internationalization
+  // Internationalization - Country-based localization
   i18n: {
     baseUrl: 'https://konty.com',
-    defaultLocale: 'sr',
+    defaultLocale: 'rs',
+    langDir: '../app/locales',
+    detectBrowserLanguage: false,
+    skipSettingLocaleOnNavigate: false,
     locales: [
-      { code: 'sr', language: 'sr-RS', name: 'Srpski' },
-      { code: 'en', language: 'en-US', name: 'English' }
+      {
+        code: 'me',
+        iso: 'sr-ME',
+        name: 'Crna Gora',
+        file: 'me.json',
+        flag: 'i-circle-flags:me',
+        currency: 'EUR',
+        currencySymbol: '€'
+      },
+      {
+        code: 'rs',
+        iso: 'sr-RS',
+        name: 'Srbija',
+        file: 'rs.json',
+        flag: 'i-circle-flags:rs',
+        currency: 'RSD',
+        currencySymbol: 'RSD'
+      },
+      {
+        code: 'ba',
+        iso: 'bs-BA',
+        name: 'Bosna i Hercegovina',
+        file: 'ba.json',
+        flag: 'i-circle-flags:ba',
+        currency: 'BAM',
+        currencySymbol: 'KM'
+      },
+      {
+        code: 'us',
+        iso: 'en-US',
+        name: 'United States',
+        file: 'us.json',
+        flag: 'i-circle-flags:us',
+        currency: 'USD',
+        currencySymbol: '$'
+      }
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-      alwaysRedirect: false,
-      fallbackLocale: 'sr'
-    },
     strategy: 'prefix_except_default',
+    vueI18n: './i18n.config.ts'
   },
 
   // Nitro - Server optimization
@@ -197,7 +228,8 @@ export default defineNuxtConfig({
           'X-Content-Type-Options': 'nosniff',
           'Referrer-Policy': 'strict-origin-when-cross-origin',
           'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-          'X-XSS-Protection': '1; mode=block'
+          'X-XSS-Protection': '1; mode=block',
+          'Content-Security-Policy': "default-src 'self' 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'"
         }
       },
 

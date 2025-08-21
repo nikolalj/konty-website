@@ -1,4 +1,4 @@
-import type { LocaleObject } from "@nuxtjs/i18n"
+import type { LocaleConfig } from "~/types/locale"
 
 interface SeoMetaOptions {
   title: string
@@ -10,28 +10,64 @@ interface SeoMetaOptions {
 }
 
 /**
+ * Generate hreflang tags for all available locales
+ */
+function generateHreflangTags(currentPath: string, locales: LocaleConfig[], currentLocale: string, siteUrl: string) {
+  const hreflangTags = []
+  
+  // Add tag for each locale
+  for (const locale of locales) {
+    const localePath = locale.code === 'rs' 
+      ? currentPath // Default locale has no prefix
+      : `/${locale.code}${currentPath}`
+    
+    hreflangTags.push({
+      rel: 'alternate',
+      hreflang: locale.iso || locale.code,
+      href: `${siteUrl}${localePath}`
+    })
+  }
+  
+  // Add x-default tag pointing to the default locale (rs)
+  const defaultPath = currentPath
+  hreflangTags.push({
+    rel: 'alternate',
+    hreflang: 'x-default',
+    href: `${siteUrl}${defaultPath}`
+  })
+  
+  return hreflangTags
+}
+
+/**
  * Centralized SEO for all pages:
  * - SSR-safe canonical from runtimeConfig.public.siteUrl + route
- * - OG/Twitter images: either explicit or a default (see TODO for dynamic OG generator)
- * - i18n-aware: sets og:locale, and lets @nuxtjs/i18n inject alternates via useLocaleHead
+ * - OG/Twitter images: either explicit or a default 
+ * - i18n-aware: sets og:locale and hreflang tags
+ * - Proper canonical URLs per locale
  */
 export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   const route = useRoute()
   const { locale, locales } = useI18n()
   const config = useRuntimeConfig()
 
-  // Build canonical URL
-  const canonical = options.url || `${(config.public.siteUrl || 'https://konty.com')}${route.fullPath}`
+  // Get site URL from config
+  const siteUrl = config.public.siteUrl || 'https://konty.com'
+  
+  // Build proper canonical URL with locale handling
+  const pathWithoutLocale = route.path.replace(/^\/(me|ba|us)/, '') || '/'
+  const canonicalPath = locale.value === 'rs' 
+    ? pathWithoutLocale 
+    : `/${locale.value}${pathWithoutLocale}`
+  const canonical = options.url || `${siteUrl}${canonicalPath}`
 
-  // Default OG image (replace with your dynamic generator when ready)
-  // TODO: Implement dynamic OG image generator via /api/og using Satori + Resvg
-  const seoImage = options.image || 'https://konty.com/og-default.webp'
+  // Default OG image 
+  const seoImage = options.image || `${siteUrl}/og-default.webp`
 
-  // Map i18n locale to OpenGraph locale (basic mapping)
+  // Map i18n locale to OpenGraph locale
   const ogLocale = computed(() => {
-    // locales can be array of { code, iso }, prefer iso
-    const current = (locales.value as LocaleObject[]).find(l => l.code === locale.value)
-    return current?.language || 'sr-RS'
+    const current = (locales.value as LocaleConfig[]).find(l => l.code === locale.value)
+    return current?.iso || 'sr-RS'
   })
 
   useSeoMeta({
@@ -40,10 +76,7 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
     description: options.description,
 
     // Canonical
-    ogUrl: canonical,             // for OG
-    // @nuxtjs/seo will also handle canonical link automatically,
-    // but we add a hard fallback to be explicit:
-    // NOTE: unhead canonical link is added via useHead below
+    ogUrl: canonical,
 
     // OpenGraph
     ogTitle: options.title,
@@ -64,14 +97,22 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
     author: 'Konty'
   })
 
-  // Ensure canonical <link> exists even if a module is misconfigured.
+  // Generate hreflang tags for SEO
+  const hreflangTags = generateHreflangTags(
+    pathWithoutLocale,
+    locales.value as LocaleConfig[],
+    locale.value,
+    siteUrl
+  )
+
+  // Add canonical and hreflang links
   useHead({
     link: [
-      { rel: 'canonical', href: canonical }
-    ]
+      { rel: 'canonical', href: canonical },
+      ...hreflangTags
+    ],
+    htmlAttrs: {
+      lang: ogLocale.value
+    }
   })
-
-  // Let i18n add hreflang alternates + html lang/dir
-  const i18nHead = useLocaleHead({ dir: true, seo: true })
-  useHead(i18nHead)
 }

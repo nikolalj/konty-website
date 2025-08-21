@@ -2,8 +2,8 @@
   <section class="py-20">
     <UContainer>
       <SharedSectionHeading
-        :title="config.title"
-        :description="config.description"
+        :title="$t('contact.title')"
+        :description="$t('contact.description')"
       />
 
       <div class="flex justify-center">
@@ -11,13 +11,13 @@
           <form class="space-y-6" @submit.prevent="onSubmit">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                Ime i prezime
+                {{ $t('contact.form.name') }}
               </label>
               <UInput
                 id="name"
                 v-model="form.name"
                 class="w-full"
-                placeholder="Unesite vaše ime"
+                :placeholder="$t('contact.form.namePlaceholder')"
                 size="xl"
                 required
               />
@@ -25,14 +25,14 @@
 
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                Email adresa
+                {{ $t('contact.form.email') }}
               </label>
               <UInput
                 id="email"
                 v-model="form.email"
                 class="w-full"
                 type="email"
-                placeholder="vas@email.com"
+                :placeholder="$t('contact.form.emailPlaceholder')"
                 size="xl"
                 required
               />
@@ -40,13 +40,13 @@
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                Poruka
+                {{ $t('contact.form.message') }}
               </label>
               <UTextarea
                 id="message"
                 v-model="form.message"
                 class="w-full"
-                placeholder="Napišite vašu poruku..."
+                :placeholder="$t('contact.form.messagePlaceholder')"
                 :rows="5"
                 size="xl"
                 required
@@ -61,7 +61,7 @@
               block
               :loading="loading"
             >
-              Pošalji poruku
+              {{ $t('contact.form.submit') }}
             </UButton>
           </form>
         </div>
@@ -72,11 +72,6 @@
 
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
-
-const config = ref({
-  title: 'Kontaktirajte nas',
-  description: 'Pošaljite nam poruku i odgovorićemo vam u najkraćem roku.'
-})
 
 const form = reactive({
   name: '',

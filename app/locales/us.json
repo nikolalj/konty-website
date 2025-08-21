@@ -1,0 +1,334 @@
+{
+  "common": {
+    "startFreeTrial": "Start Free Trial",
+    "bookDemo": "Book a Demo",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getStarted": "Get Started",
+    "watchDemo": "Watch Demo",
+    "signUp": "Sign Up",
+    "tryForFree": "Try for Free",
+    "requestDemo": "Request Demo",
+    "explorePlans": "Explore Plans",
+    "hospitality": "Hospitality",
+    "retail": "Retail"
+  },
+  "nav": {
+    "products": "Products",
+    "hospitality": "Hospitality",
+    "retail": "Retail",
+    "pricing": "Pricing",
+    "about": "About",
+    "demo": "Demo",
+    "forHospitality": "Konty for Hospitality",
+    "forRetail": "Konty for Retail",
+    "hospitalityDesc": "Everything you need to run your restaurant quickly and easily.",
+    "retailDesc": "Modern POS solution for retail businesses.",
+    "barLounge": "Bar & Lounge",
+    "casualDining": "Casual Dining",
+    "cafeBakery": "Cafe & Bakery",
+    "fineDining": "Fine Dining",
+    "enterprise": "Enterprise",
+    "foodTruck": "Food Truck",
+    "pizzeria": "Pizzeria",
+    "hotelRestaurant": "Hotel Restaurant",
+    "generalStore": "General Store",
+    "liquorStore": "Liquor Store",
+    "supermarket": "Supermarket",
+    "butcherShop": "Butcher Shop"
+  },
+  "hero": {
+    "title": "Konty - POS You Can Count On",
+    "subtitle": "Complete solution for hospitality and retail in one place.",
+    "tagline": "Formerly Aria and Allegra",
+    "cta": "Free Demo"
+  },
+  "features": {
+    "hospitality": {
+      "title": "Simplify Your Restaurant Operations",
+      "description": "Konty is built for restaurants, cafes, bars, and catering. It combines a powerful POS with hospitality-specific features to deliver exceptional guest experiences and maximize profits.",
+      "tableManagement": {
+        "title": "Table Management",
+        "description": "Intuitive table maps, reservation system, and real-time status for optimal seating and reduced wait times."
+      },
+      "kitchenDisplay": {
+        "title": "Kitchen Display System (KDS)",
+        "description": "Digital orders with prep timers, dish status, and clear communication between front and back of house."
+      },
+      "staffManagement": {
+        "title": "Staff Management",
+        "description": "Shift and time tracking, tips, performance metrics, and role-based permissions for seamless team coordination."
+      },
+      "exploreFeatures": "Explore Hospitality Features",
+      "scheduleDemo": "Schedule Demo"
+    },
+    "retail": {
+      "title": "Accelerate Your Retail Success",
+      "description": "Konty Retail is designed for stores and boutiques. It brings advanced inventory management, customer insights, and sales analytics to optimize operations and increase revenue.",
+      "inventory": {
+        "title": "Inventory Management",
+        "description": "Real-time stock tracking, automatic reordering, vendor management, and multi-location sync."
+      },
+      "customerInsights": {
+        "title": "Customer Insights",
+        "description": "Detailed profiles and purchase history, loyalty programs, and targeted marketing tools."
+      },
+      "salesAnalytics": {
+        "title": "Sales Analytics",
+        "description": "Advanced reports: trends, product performance, margins, and actionable insights for growth."
+      },
+      "exploreFeatures": "Explore Retail Features",
+      "startFree": "Start Free"
+    }
+  },
+  "pricing": {
+    "title": "Affordable for Everyone",
+    "description": "Choose the plan that fits your needs.",
+    "monthly": "per month",
+    "yearly": "per year",
+    "mostPopular": "Most Popular",
+    "hospitality": {
+      "start": {
+        "title": "Starter",
+        "name": "Starter",
+        "description": "For small venues needing simple checkout.",
+        "price": "$29",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "features": {
+          "feat0": "Single register",
+          "feat1": "Table management",
+          "feat2": "Product catalog",
+          "feat3": "Receipt printing",
+          "feat4": "Sales reports",
+          "feat5": "Inventory management",
+          "feat6": "Complete sales and inventory analytics",
+          "feat7": "Cloud-based back office"
+        }
+      },
+      "standard": {
+        "title": "Standard",
+        "name": "Standard",
+        "description": "For restaurants needing more control and tracking.",
+        "price": "$35",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "badge": "Most Popular",
+        "features": {
+          "feat0": "Everything in Starter plus",
+          "feat1": "Multiple price lists",
+          "feat2": "Recipe management",
+          "feat3": "Ingredient usage reports",
+          "feat4": "Purchase invoices",
+          "feat5": "Vendor management"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "name": "Premium",
+        "description": "For larger operations needing advanced features.",
+        "price": "$59",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "features": {
+          "feat0": "Multiple registers",
+          "feat1": "Everything in Standard plus",
+          "feat2": "Network capabilities",
+          "feat3": "Mobile ordering",
+          "feat4": "Kitchen display system",
+          "feat5": "Advanced accounting (optional)",
+          "feat6": "Third-party integrations (accounting, hotels, etc.)"
+        }
+      }
+    },
+    "retail": {
+      "start": {
+        "title": "Starter",
+        "name": "Starter",
+        "description": "For small shops needing simple checkout.",
+        "price": "$15",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "features": {
+          "feat0": "Single register",
+          "feat1": "Quick product entry (barcodes, shortcuts)",
+          "feat2": "Receipt printing",
+          "feat3": "Sales reports",
+          "feat4": "Inventory management",
+          "feat5": "Complete sales and inventory analytics",
+          "feat6": "Cloud-based back office"
+        }
+      },
+      "standard": {
+        "title": "Standard",
+        "name": "Standard",
+        "description": "For stores needing more control and tracking.",
+        "price": "$19",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "badge": "Most Popular",
+        "features": {
+          "feat0": "Everything in Starter plus",
+          "feat1": "Quick keys",
+          "feat2": "Weight-based barcodes (scale integration)",
+          "feat3": "Purchase invoices",
+          "feat4": "Vendor management"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "name": "Premium",
+        "description": "For larger operations needing advanced features.",
+        "price": "$25",
+        "billingCycle": "/ month",
+        "button": "Sign Up",
+        "features": {
+          "feat0": "Everything in Standard plus",
+          "feat1": "Multiple registers",
+          "feat2": "Advanced accounting (optional)",
+          "feat3": "Third-party integrations (accounting, etc.)"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Trusted by Leading Restaurants and Retailers",
+    "description": "Join thousands of restaurants, cafes, and stores operating faster and more profitably with Konty"
+  },
+  "statistics": {
+    "businesses": "Active Businesses",
+    "transactions": "Monthly Transactions",
+    "uptime": "System Uptime",
+    "support": "24/7 Support"
+  },
+  "getStarted": {
+    "title": "Want to Get Started on Your Own?",
+    "certificate": {
+      "title": "Business Registration",
+      "description": "Register your business with local authorities and obtain necessary permits"
+    },
+    "sepPortal": {
+      "title": "Tax Registration",
+      "description": "Register with the IRS and state tax authorities. Set up your business location and authorized operators."
+    },
+    "equipment": {
+      "title": "POS Hardware",
+      "description": "Use any computer, tablet, or smartphone. Add thermal or standard printers and other peripherals as needed."
+    },
+    "register": {
+      "title": "Sign Up for Konty",
+      "description": "Create your Konty account, configure your business settings, add products and table layouts, and start processing sales."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Send us a message and we'll get back to you as soon as possible.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Message",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Unesite vaš email",
+      "messagePlaceholder": "Write your message...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "phone": "+1 (555) 123-4567",
+      "email": "hello{'@'}konty.com",
+      "address": "123 Main Street, New York, NY 10001"
+    }
+  },
+  "footer": {
+    "products": "Products",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "careers": "Careers",
+    "partners": "Partners",
+    "blog": "Blog",
+    "documentation": "Documentation",
+    "helpCenter": "Help Center",
+    "community": "Community",
+    "privacy": "Privacy",
+    "terms": "Terms of Service",
+    "dpa": "Data Processing Agreement",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "copyright": "© 2024 Konty. All rights reserved."
+  },
+  "demo": {
+    "title": "Request Your Free Demo",
+    "description": "Fill out the form below and we'll schedule a personalized demo for your business",
+    "seeInAction": "See Konty in Action",
+    "revolutionize": "Discover how Konty can revolutionize your business operations",
+    "requestDemo": "Request Your Free Demo",
+    "formPlaceholder": "Demo request form will be displayed here",
+    "form": {
+      "businessName": "Business Name",
+      "businessType": "Business Type",
+      "locations": "Number of Locations",
+      "currentPos": "Current POS System",
+      "selectBusinessType": "Select business type",
+      "restaurant": "Restaurant",
+      "cafe": "Cafe",
+      "retail": "Retail",
+      "other": "Other"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "description": "Konty is the trusted choice for restaurants and retailers across the region"
+  },
+  "blog": {
+    "post1": {
+      "title": "What is a POS System and How Does It Work? A Guide for Business Owners",
+      "description": "POS basics: payment processing, registers, printers, inventory, and reports — everything you need to know before your first transaction."
+    },
+    "post2": {
+      "title": "5 Signs It's Time to Replace Your POS",
+      "description": "Slow performance, billing errors, manual inventory, limited integrations, and poor reports — recognize problems early."
+    },
+    "post3": {
+      "title": "How to Connect POS with Inventory for Faster Stock Takes",
+      "description": "Recipes, receiving/shipping, and automatic bookkeeping — practical steps for accurate stock and less waste."
+    }
+  },
+  "hospitalityPage": {
+    "hero": {
+      "title": "Konty Hospitality POS — Faster Tables, Happier Guests",
+      "subtitle": "Seat, fire, and split bills in seconds. Floor plan, kitchen tickets, and analytics built for busy teams.",
+      "cta": "Request Demo",
+      "viewPricing": "View Pricing",
+      "features": "Kitchen display ready • Table & menu management • Delivery integrations"
+    }
+  },
+  "retailPage": {
+    "hero": {
+      "title": "Konty Retail POS — Faster Checkout, Better Decisions",
+      "subtitle": "Manage inventory, track customers, and analyze sales with modern POS solution.",
+      "cta": "Start Free",
+      "viewDemo": "View Demo",
+      "features": "Stock tracking • Customer profiles • Sales analytics"
+    }
+  },
+  "statistics": {
+    "stat1": {
+      "value": 25000,
+      "suffix": "+",
+      "description": "Businesses trust Konty for their daily operations"
+    },
+    "stat2": {
+      "value": 99,
+      "suffix": "%",
+      "description": "Customer satisfaction rate across all markets"
+    },
+    "stat3": {
+      "value": 150,
+      "suffix": "k",
+      "description": "Transactions processed every single day"
+    }
+  }
+}

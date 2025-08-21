@@ -3,7 +3,8 @@
 ## Project Context
 You are building a website for Konty, a modern Point of Sale (POS) application. This website is the primary sales channel for converting visitors into paying customers. Every decision you make should optimize for conversion rate and customer acquisition.
 
-For more information about Konty read konty.md file.
+Read konty.md file for information about Konty.
+Read tech.md for technical documentation for this project.
 
 ## Core Business Understanding
 - **Product**: Konty is a cloud-based POS system for restaurants, retail, and service businesses

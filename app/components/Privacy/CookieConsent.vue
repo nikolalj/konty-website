@@ -13,8 +13,8 @@
       v-if="isInitializing && showLoadingState"
       class="fixed bottom-4 right-4 z-[9999]"
     >
-      <div class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg flex items-center gap-2">
-        <UIcon name="i-heroicons-arrow-path" class="h-4 w-4 text-primary-500 animate-spin" />
+      <div class="backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg flex items-center gap-2">
+        <UIcon name="i-lucide-refresh-ccv" class="h-4 w-4 text-primary-500 animate-spin" />
         <span class="text-xs text-gray-600 dark:text-gray-400">Initializing preferences...</span>
       </div>
     </div>
@@ -35,12 +35,12 @@
       <UCard
         class="shadow-2xl border-0"
         :ui="{
-          root: 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl',
+          root: 'backdrop-blur-xl',
         }"
       >
         <div class="space-y-3">
           <div class="flex items-start gap-3">
-            <UIcon name="i-heroicons-shield-check" class="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
+            <UIcon name="i-lucide-shield-check" class="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
             <div class="flex-1">
               <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
                 Optimize Your Experience
@@ -128,8 +128,8 @@
             <UButton
               size="xs"
               color="primary"
-              @click="acceptAll"
               class="font-semibold"
+              @click="acceptAll"
             >
               Accept All
             </UButton>
@@ -157,9 +157,9 @@
           size="xs"
           color="primary"
           variant="soft"
-          icon="i-heroicons-cog-6-tooth"
-          @click="reopenSettings"
+          icon="i-lucide-settings"
           aria-label="Cookie Settings"
+          @click="reopenSettings"
         />
       </UTooltip>
     </div>

@@ -149,14 +149,16 @@
 
     <template #right>
       <UButton
-        to="/demo"
+        :to="localePath('/demo')"
         size="lg"
         variant="solid"
         color="primary"
-        aria-label="Besplatan demo"
+        :aria-label="$t('hero.cta')"
       >
-        Besplatan demo
+        {{ $t('hero.cta') }}
       </UButton>
+
+      <AppCountrySelector class="ml-2" />
 
       <UColorModeButton />
     </template>
@@ -166,6 +168,8 @@
 
 <script setup lang="ts">
 const { y } = useWindowScroll()
+const { t } = useI18n()
+const localePath = useLocalePath()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID  = 8
@@ -185,59 +189,59 @@ watch(y, () => {
 
 const items = computed(() => [
   {
-    label: 'Proizvodi',
+    label: t('nav.products'),
     class: 'font-bold',
     slot: 'products' as const,
     children: [
       {
-        label: 'Konty za ugostiteljstvo',
-        description: 'Sve što vam je potrebno za brzo i jednostavno vođenje restorana.',
-        to: '/konty-hospitality'
+        label: t('nav.forHospitality'),
+        description: t('nav.hospitalityDesc'),
+        to: localePath('/konty-hospitality')
       },
       {
-        label: 'Konty za trgovinu',
-        description: 'Moderno POS rešenje za trgovinu.',
-        to: '/konty-retail'
+        label: t('nav.forRetail'),
+        description: t('nav.retailDesc'),
+        to: localePath('/konty-retail')
       }
     ]
   },
   {
-    label: 'Ugostiteljstvo',
+    label: t('nav.hospitality'),
     class: 'font-bold',
     slot: 'hospitality' as const,
-    to: '/konty-hospitality',
+    to: localePath('/konty-hospitality'),
     children: [
-      { label: 'Bar & Lounge', to: '/about' },
-      { label: 'Casual Dining', to: '/about' },
-      { label: 'Kafić & Pekara', to: '/about' },
-      { label: 'Fine Dining', to: '/about' },
-      { label: 'Enterprise', to: '/about' },
-      { label: 'Food Truck', to: '/about' },
-      { label: 'Picerija', to: '/about' },
-      { label: 'Hotelski restoran', to: '/about' },
+      { label: t('nav.barLounge'), to: localePath('/about') },
+      { label: t('nav.casualDining'), to: localePath('/about') },
+      { label: t('nav.cafeBakery'), to: localePath('/about') },
+      { label: t('nav.fineDining'), to: localePath('/about') },
+      { label: t('nav.enterprise'), to: localePath('/about') },
+      { label: t('nav.foodTruck'), to: localePath('/about') },
+      { label: t('nav.pizzeria'), to: localePath('/about') },
+      { label: t('nav.hotelRestaurant'), to: localePath('/about') },
     ]
   },
   {
-    label: 'Trgovina',
+    label: t('nav.retail'),
     class: 'font-bold',
-    to: '/konty-retail',
+    to: localePath('/konty-retail'),
     slot: 'retail' as const,
     children: [
-      { label: 'Prodavnica mešovite robe', to: '/about' },
-      { label: 'Prodavnica pića', to: '/about' },
-      { label: 'Supermarket', to: '/about' },
-      { label: 'Mesara', to: '/about' },
+      { label: t('nav.generalStore'), to: localePath('/about') },
+      { label: t('nav.liquorStore'), to: localePath('/about') },
+      { label: t('nav.supermarket'), to: localePath('/about') },
+      { label: t('nav.butcherShop'), to: localePath('/about') },
     ]
   },
   {
-    label: 'Cene',
+    label: t('nav.pricing'),
     class: 'font-bold',
-    to: '/pricing'
+    to: localePath('/pricing')
   },
   {
-    label: 'O nama',
+    label: t('nav.about'),
     class: 'font-bold',
-    to: '/about'
+    to: localePath('/about')
   }
 ])
 </script>

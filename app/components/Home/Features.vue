@@ -3,12 +3,11 @@
     <UContainer>
       <SharedSectionHeading
         v-model="product"
-        :title="config[product].title"
-        :description="config[product].description"
+        :title="$t(`features.${productKey}.title`)"
+        :description="$t(`features.${productKey}.description`)"
         :product-switch="true"
         product-switch-position="top"
       />
-
 
       <div
         :key="product"
@@ -17,7 +16,7 @@
         <UIAppear direction="right" :distance="32" :animate-on="product">
           <div :class="product !== 'kontyRetail' ? 'lg:order-2' : 'lg:order-1'">
             <UILazyImage
-              :src="config[product].image"
+              :src="featureImages[product]"
               preset=""
               :sizes="'100vw'"
               loading="eager"
@@ -34,7 +33,7 @@
             <!-- Features -->
             <div class="space-y-8 mb-12">
               <div
-                v-for="(feature, index) in config[product].features"
+                v-for="(feature, index) in features[product]"
                 :key="`${product}-${index}`"
                 class="flex gap-4 transition-all duration-300 hover:translate-x-2"
               >
@@ -48,10 +47,10 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {{ feature.title }}
+                    {{ $t(`features.${productKey}.${feature.key}.title`) }}
                   </h3>
                   <p class="text-gray-600 dark:text-gray-300">
-                    {{ feature.description }}
+                    {{ $t(`features.${productKey}.${feature.key}.description`) }}
                   </p>
                 </div>
               </div>
@@ -60,16 +59,16 @@
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4">
               <UButton
-                v-for="(link, index) in config[product].links"
+                v-for="(link, index) in links[product]"
                 :key="`${product}-${index}`"
-                :to="link.to"
+                :to="link.to ? localePath(link.to) : undefined"
                 :color="link.color"
                 :variant="link.variant"
                 :trailing-icon="link.trailingIcon"
                 size="lg"
                 class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
               >
-                {{ link.label }}
+                {{ $t(link.labelKey) }}
               </UButton>
             </div>
           </div>
@@ -80,99 +79,92 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
-
+const localePath = useLocalePath()
 const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 
-const config = ref({
-  kontyHospitality: {
-    title: 'Pojednostavite rad vašeg ugostiteljskog objekta',
-    description:
-      'Konty je razvijen za restorane, kafiće, barove i ketering. Kombinuje moćan POS sa funkcijama prilagođenim ugostiteljstvu kako biste gostima pružili vrhunsko iskustvo i maksimizovali profit.',
-    image:
-      'https://media.istockphoto.com/id/1271319044/photo/small-business-people-and-service-concept-happy-man-or-waiter-in-apron-at-counter-with.jpg?s=1024x1024&w=is&k=20&c=zcF6uTfA_cAEG-X9xrBwb5LaPnK_set4tCuPgFOiX98=',
-    features: [
-      {
-        title: 'Upravljanje stolovima',
-        description:
-          'Intuitivna mapa stolova, sistem za rezervacije i statusi u realnom vremenu za optimalno sedenje i kraće vreme čekanja.',
-        icon: 'i-lucide-layout-grid',
-        to: '#'
-      },
-      {
-        title: 'Kuhinjski ekran (KDS)',
-        description:
-          'Digitalne porudžbine sa tajmerima pripreme, statusima jela i jasnom komunikacijom između sale i kuhinje.',
-        icon: 'i-lucide-chef-hat',
-        to: '#'
-      },
-      {
-        title: 'Upravljanje osobljem',
-        description:
-          'Evidencija smena i vremena, napojnice, performanse i dozvole po ulogama kako bi tim radio usklađeno i efikasno.',
-        icon: 'i-lucide-users',
-        to: '#'
-      }
-    ],
-    links: [
-      {
-        label: 'Istražite funkcije za ugostiteljstvo',
-        to: '#',
-        color: 'primary',
-        variant: 'solid',
-        trailingIcon: 'i-lucide-arrow-right'
-      },
-      {
-        label: 'Zakažite demo',
-        to: '#',
-        color: 'neutral',
-        variant: 'subtle',
-        trailingIcon: 'i-lucide-calendar'
-      }
-    ] as ButtonProps[]
-  },
+// Feature images (could be moved to static assets later)
+const featureImages = {
+  kontyHospitality: 'https://media.istockphoto.com/id/1271319044/photo/small-business-people-and-service-concept-happy-man-or-waiter-in-apron-at-counter-with.jpg?s=1024x1024&w=is&k=20&c=zcF6uTfA_cAEG-X9xrBwb5LaPnK_set4tCuPgFOiX98=',
+  kontyRetail: 'https://media.istockphoto.com/id/2170880602/photo/smiling-baker-assisting-customer-in-cozy-artisan-bakery.jpg?s=1024x1024&w=is&k=20&c=hWdPeyIaXXQP8EOoYSCdqXY23OUDuwl71fnVIjGeNoc='
+}
 
-  kontyRetail: {
-    title: 'Ubrzajte uspeh vaše maloprodaje',
-    description: 'Konty Retail je kreiran za prodavnice i butike. Donosi napredno upravljanje zalihama, uvid u kupce i analitiku prodaje kako biste optimizovali operacije i povećali prihode.',
-    image: 'https://media.istockphoto.com/id/2170880602/photo/smiling-baker-assisting-customer-in-cozy-artisan-bakery.jpg?s=1024x1024&w=is&k=20&c=hWdPeyIaXXQP8EOoYSCdqXY23OUDuwl71fnVIjGeNoc=',
-    features: [
-      {
-        title: 'Upravljanje zalihama',
-        description: 'Praćenje stanja u realnom vremenu, automatske nabavke, dobavljači i sinhronizacija više lokacija.',
-        icon: 'i-lucide-package',
-        to: '#'
-      },
-      {
-        title: 'Uvid u kupce',
-        description: 'Detaljni profili i istorija kupovine, lojalnost i alati za ciljani marketing.',
-        icon: 'i-lucide-user-check',
-        to: '#'
-      },
-      {
-        title: 'Analitika prodaje',
-        description: 'Napredni izveštaji: trendovi, performanse artikala, marže i praktični uvidi za rast.',
-        icon: 'i-lucide-trending-up',
-        to: '#'
-      }
-    ],
-    links: [
-      {
-        label: 'Istražite funkcije za maloprodaju',
-        to: '#',
-        color: 'primary',
-        variant: 'solid',
-        trailingIcon: 'i-lucide-arrow-right'
-      },
-      {
-        label: 'Započnite besplatno',
-        to: '#',
-        color: 'neutral',
-        variant: 'outline',
-        trailingIcon: 'i-lucide-play-circle'
-      }
-    ] as ButtonProps[]
-  }
-})
+const productKey = computed(() => product.value === 'kontyHospitality' ? 'hospitality' : 'retail')
+
+// Feature configuration with translation keys
+const features = {
+  kontyHospitality: [
+    {
+      key: 'tableManagement',
+      icon: 'i-lucide-layout-grid'
+    },
+    {
+      key: 'kitchenDisplay',
+      icon: 'i-lucide-chef-hat'
+    },
+    {
+      key: 'staffManagement',
+      icon: 'i-lucide-users'
+    }
+  ],
+  kontyRetail: [
+    {
+      key: 'inventory',
+      icon: 'i-lucide-package'
+    },
+    {
+      key: 'customerInsights',
+      icon: 'i-lucide-user-check'
+    },
+    {
+      key: 'salesAnalytics',
+      icon: 'i-lucide-trending-up'
+    }
+  ]
+}
+
+// Custom type for links with labelKey
+interface FeatureLink {
+  labelKey: string
+  to: string
+  color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
+  variant: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link'
+  trailingIcon: string
+}
+
+// Links configuration with translation keys
+const links: Record<string, FeatureLink[]> = {
+  kontyHospitality: [
+    {
+      labelKey: 'features.hospitality.exploreFeatures',
+      to: '/konty-hospitality',
+      color: 'primary',
+      variant: 'solid',
+      trailingIcon: 'i-lucide-arrow-right'
+    },
+    {
+      labelKey: 'features.hospitality.scheduleDemo',
+      to: '/demo',
+      color: 'neutral',
+      variant: 'subtle',
+      trailingIcon: 'i-lucide-calendar'
+    }
+  ],
+  kontyRetail: [
+    {
+      labelKey: 'features.retail.exploreFeatures',
+      to: '/konty-retail',
+      color: 'primary',
+      variant: 'solid',
+      trailingIcon: 'i-lucide-arrow-right'
+    },
+    {
+      labelKey: 'features.retail.startFree',
+      to: '/demo',
+      color: 'neutral',
+      variant: 'outline',
+      trailingIcon: 'i-lucide-play-circle'
+    }
+  ]
+}
 
 </script>
