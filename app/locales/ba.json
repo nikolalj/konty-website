@@ -274,7 +274,7 @@
       "email": "Email",
       "message": "Najveći problem sa POS? (Opciono)",
       "namePlaceholder": "Marko",
-      "emailPlaceholder": "marko@restoran.ba",
+      "emailPlaceholder": "marko{'@'}restoran.ba",
       "messagePlaceholder": "Sistem puca svake subote...",
       "submit": "Dobij svoj demo",
       "submitSubtext": "Odgovor za 60 sekundi • Bez spam-a"
@@ -307,7 +307,7 @@
     },
     "info": {
       "phone": "033-123-456",
-      "email": "podrska@konty.ba",
+      "email": "podrska{'@'}konty.ba",
       "address": "Dostupni u cijeloj BiH"
     }
   },

@@ -274,7 +274,7 @@
       "email": "Email",
       "message": "Najveći problem sa POS? (Opciono)",
       "namePlaceholder": "Marko",
-      "emailPlaceholder": "marko@restoran.rs",
+      "emailPlaceholder": "marko{'@'}restoran.rs",
       "messagePlaceholder": "Sistem puca svake subote...",
       "submit": "Dobij svoj demo",
       "submitSubtext": "Odgovor za 60 sekundi • Bez spam-a"
@@ -307,7 +307,7 @@
     },
     "info": {
       "phone": "011-123-4567",
-      "email": "podrska@konty.rs",
+      "email": "podrska{'@'}konty.rs",
       "address": "Dostupni u celoj Srbiji"
     }
   },

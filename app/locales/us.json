@@ -274,7 +274,7 @@
       "email": "Email",
       "message": "Biggest POS frustration? (Optional)",
       "namePlaceholder": "John",
-      "emailPlaceholder": "john@restaurant.com",
+      "emailPlaceholder": "john{'@'}restaurant.com",
       "messagePlaceholder": "System crashes every Saturday night...",
       "submit": "Get My Custom Demo",
       "submitSubtext": "Response in 60 seconds • No spam ever"
@@ -307,7 +307,7 @@
     },
     "info": {
       "phone": "1-800-KONTY",
-      "email": "help@konty.com",
+      "email": "help{'@'}konty.com",
       "address": "Available in all 50 states"
     }
   },
