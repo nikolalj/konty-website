@@ -51,9 +51,6 @@
 </template>
 
 <script setup>
-// Disable i18n for this page
-defineI18nRoute(false)
-
 // Disable layout - no header/footer
 definePageMeta({
   layout: false
