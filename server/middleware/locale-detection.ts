@@ -4,8 +4,7 @@ import {
   mapCountryToLocale, 
   parseLocalePreference,
   serializeLocalePreference,
-  getEffectiveLocale,
-  type LocalePreference
+  getEffectiveLocale
 } from '../utils/country-detection'
 
 const VALID_LOCALES = ['me', 'rs', 'ba', 'us'] as const
@@ -25,7 +24,7 @@ export default defineEventHandler(async (event: H3Event) => {
   // Extract locale from URL if present
   const urlParts = url.split('/').filter(Boolean)
   const firstPart = urlParts[0]
-  const hasLocaleInUrl = firstPart && VALID_LOCALES.includes(firstPart as any)
+  const hasLocaleInUrl = firstPart && VALID_LOCALES.includes(firstPart as typeof VALID_LOCALES[number])
 
   // Parse existing preference cookie
   const cookieValue = getCookie(event, 'konty-locale') || null
@@ -40,12 +39,8 @@ export default defineEventHandler(async (event: H3Event) => {
     const detectedLocale = mapCountryToLocale(detectedCountry)
     
     // Determine if this is an explicit choice or just following a link
-    // It's only "manual" if:
-    // 1. User already had a manual preference stored, OR
-    // 2. User is viewing a locale different from their detected location
-    const isExplicitChoice = 
-      preference?.preference_type === 'manual' || 
-      (preference?.explicit_locale === urlLocale && preference?.preference_type === 'manual')
+    // It's only "manual" if user already had a manual preference stored
+    const isExplicitChoice = preference?.preference_type === 'manual'
     
     // For first-time visitors or those following links:
     // If URL locale matches their detected locale -> likely our redirect, don't show banner

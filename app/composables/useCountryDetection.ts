@@ -1,4 +1,3 @@
-import type { Locale } from 'vue-i18n'
 import type {
   ValidLocale,
   LocaleConfig,
@@ -11,7 +10,6 @@ import type {
  */
 export const useCountryDetection = () => {
   const { locale, locales, setLocale } = useI18n()
-  const route = useRoute()
 
   // Loading and error states
   const isDetecting = ref(false)
@@ -102,7 +100,7 @@ export const useCountryDetection = () => {
 
     try {
       // Parse existing preference
-      let pref = parsePreference() || {
+      const pref = parsePreference() || {
         preference_type: 'default' as const,
         timestamp: new Date().toISOString()
       }

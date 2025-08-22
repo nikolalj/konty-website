@@ -21,18 +21,29 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   // This plugin just ensures proper initialization
   
   // Listen for locale changes to update HTML lang attribute
-  // We'll do this in the app instead since we can't use useI18n here
   nuxtApp.hook('app:mounted', () => {
-    // Get the i18n instance from the app
-    const i18n = nuxtApp.$i18n
-    if (i18n) {
-      // Set initial lang attribute
-      document.documentElement.lang = i18n.locale.value
-      
-      // Watch for changes
-      watch(i18n.locale, (newLocale) => {
-        document.documentElement.lang = newLocale
-      })
+    // Simple approach - just set the lang attribute once
+    // The i18n module should handle updates automatically
+    const htmlElement = document.documentElement
+    const currentLang = htmlElement.lang
+    
+    if (!currentLang) {
+      // If no lang set, try to get from i18n
+      try {
+        const i18nLocale = (nuxtApp.$i18n as { locale?: string | { value?: string } })?.locale
+        if (i18nLocale) {
+          const localeValue = typeof i18nLocale === 'string' 
+            ? i18nLocale 
+            : i18nLocale?.value
+          
+          if (localeValue) {
+            htmlElement.lang = localeValue
+          }
+        }
+      } catch (e) {
+        // Silent fail - i18n might not be available
+        console.debug('Could not set initial lang attribute', e)
+      }
     }
   })
 })

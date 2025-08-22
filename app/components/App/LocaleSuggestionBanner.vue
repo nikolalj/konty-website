@@ -54,7 +54,7 @@
 <script setup lang="ts">
 import type { LocaleConfig } from '~/types/locale'
 
-const { locale, locales, t } = useI18n()
+const { locales } = useI18n()
 const {
   preference,
   shouldShowSuggestion,
