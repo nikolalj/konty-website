@@ -2,10 +2,10 @@
 export default defineEventHandler(async (event) => {
   const { password } = await readBody(event)
 
-  // Get password from environment or use fallback
-  const STAGING_PASSWORD = process.env.STAGING_PASSWORD
+  const config = useRuntimeConfig()
+  console.log('---------------', config.stagingPassword)
 
-  if (STAGING_PASSWORD && password === STAGING_PASSWORD) {
+  if (config.stagingPassword && password === config.stagingPassword) {
     // Set simple auth cookie
     setCookie(event, 'staging-auth', 'authorized', {
       httpOnly: true,

@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
     process.env.NUXT_PUBLIC_SITE_URL?.includes('staging') ||
     process.env.NODE_ENV === 'staging' ||
     process.env.VERCEL_ENV === 'preview' // Vercel preview deployments
-console.log('SERVER - All env vars:', process.env)
+
   // Skip protection for production
   if (!isStaging) return
 

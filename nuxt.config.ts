@@ -259,6 +259,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Private keys (server-only)
     apiSecret: '',
+    stagingPassword: process.env.STAGING_PASSWORD,
 
     // Public keys (available on client)
     public: {

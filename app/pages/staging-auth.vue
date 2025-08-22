@@ -70,11 +70,6 @@ useHead({
 const password = ref('')
 const error = ref('')
 
-const config = useRuntimeConfig()
-setTimeout(() => {
-    console.log('CLIENT - Config:', config)
-},3000)
-
 const handleLogin = async () => {
   try {
     const response = await $fetch('/api/staging-auth', {
