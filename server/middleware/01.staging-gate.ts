@@ -1,0 +1,35 @@
+// Minimal staging protection - blocks bots, allows human access with password
+// This middleware stays permanently - only activates on staging environments
+export default defineEventHandler(async (event) => {
+  // Check if this is staging environment
+  // Production domains: konty.com, www.konty.com
+  // Staging domains: staging.konty.com, preview.konty.com, any URL with 'staging'
+  const host = event.headers.host || ''
+  const isStaging =
+    host.includes('staging') ||
+    host.includes('preview') ||
+    host.includes('localhost') ||
+    process.env.NUXT_PUBLIC_SITE_URL?.includes('staging') ||
+    process.env.NODE_ENV === 'staging' ||
+    process.env.VERCEL_ENV === 'preview' // Vercel preview deployments
+
+  // Skip protection for production
+  if (!isStaging) return
+
+  const url = event.path || ''
+
+  // Allow: login page, API, static assets
+  if (url === '/__staging-login' ||
+      url.startsWith('/_nuxt/') ||
+      url.startsWith('/api/') ||
+      url.includes('.')) {
+    return
+  }
+
+  // Check for auth cookie
+  const hasAuth = getCookie(event, 'staging-auth') === 'authorized'
+
+  if (!hasAuth) {
+    return sendRedirect(event, '/__staging-login', 302)
+  }
+})

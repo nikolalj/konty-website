@@ -38,9 +38,9 @@
     "butcherShop": "Butcher Shop"
   },
   "hero": {
-    "title": "Finally. A POS System That Won't Crash During Dinner Rush.",
-    "subtitle": "The reliable POS for restaurants and retail. While others add AI, we obsess over one thing: keeping you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
-    "tagline": "Trusted by 25,000 small businesses who can't afford downtime",
+    "title": "POS System That Won't Crash During Dinner Rush.",
+    "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
+    "tagline": "Trusted by 9,000 small businesses who can't afford downtime",
     "cta": "Start Free Trial - No Card Required",
     "secondaryCta": "Talk to a Real Human"
   },
@@ -54,7 +54,7 @@
       },
       "kitchenDisplay": {
         "title": "Kitchen Display System That Never Loses Orders",
-        "description": "Every order saved locally before cloud. Internet dies? Your kitchen display system keeps working. Power flickers? Orders still there. Never lose a $300 catering order again."
+        "description": "Internet dies? Your kitchen display system keeps working. Power flickers? Orders still there. Never lose a $300 catering order again."
       },
       "staffManagement": {
         "title": "New Server? Trained in 15 Minutes",
@@ -261,7 +261,7 @@
       "badge": "Your time: Take an order"
     },
     "bottomCta": {
-      "headline": "25,000 Restaurants Switched Without Drama",
+      "headline": "9,000 Restaurants Switched Without Drama",
       "button": "Start Your 48-Hour Switch",
       "subtext": "Free setup. Free training. Free support for 30 days."
     }
@@ -312,7 +312,7 @@
     }
   },
   "clients": {
-    "title": "25,000 Restaurants and Retail Stores Trust Our POS System",
+    "title": "9,000 Restaurants and Retail Stores Trust Our POS System",
     "description": "Restaurant POS, bar POS, liquor store POS, convenience store POS, salon POS - processing millions daily since 1998"
   },
   "footer": {
@@ -368,7 +368,7 @@
     },
     "post3": {
       "title": "Switching POS Systems: The 48-Hour Playbook",
-      "description": "How 25,000 restaurants switched without losing a single day of service."
+      "description": "How 9,000 restaurants switched without losing a single day of service."
     }
   },
   "hospitalityPage": {
