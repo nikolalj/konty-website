@@ -221,6 +221,8 @@ export default defineNuxtConfig({
       '/price': { redirect: '/pricing' },
       '/contact': { redirect: '/about' },
 
+      '/__staging-login': { index: false },
+
       // Security headers for all routes
       '/**': {
         headers: {
