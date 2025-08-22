@@ -51,6 +51,9 @@
 </template>
 
 <script setup>
+// Disable i18n - this page should not be localized
+defineI18nRoute(false)
+
 // Disable layout - no header/footer
 definePageMeta({
   layout: false

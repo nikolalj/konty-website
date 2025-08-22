@@ -30,6 +30,7 @@ export default defineEventHandler(async (event) => {
   const hasAuth = getCookie(event, 'staging-auth') === 'authorized'
 
   if (!hasAuth) {
+    // Keep the redirect on the same domain to prevent i18n interference
     return sendRedirect(event, '/__staging-login', 302)
   }
 })
