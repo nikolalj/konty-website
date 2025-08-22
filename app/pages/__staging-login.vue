@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+  <div class="min-h-screen flex items-center justify-center">
     <div class="w-full max-w-sm p-8">
       <!-- Logo -->
       <div class="text-center mb-8">
