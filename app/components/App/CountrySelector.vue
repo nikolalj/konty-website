@@ -63,8 +63,8 @@ const items = computed(() => {
     onSelect: async () => {
       if (locale.value !== loc.code && !isSwitching.value) {
         try {
-          // Change locale
-          await changeLocale(loc.code)
+          // Change locale - mark as explicit user choice (true)
+          await changeLocale(loc.code, true)
 
           // Use switchLocalePath for smooth client-side routing
           const newPath = switchLocalePath(loc.code)

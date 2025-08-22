@@ -60,3 +60,15 @@ export interface DetectCountryResponse {
   country: string
   method: 'country.is' | 'ipapi.co' | 'ipwho.is' | 'default'
 }
+
+/**
+ * Locale preference structure for improved cookie
+ */
+export interface LocalePreference {
+  explicit_locale?: ValidLocale    // User manually selected
+  detected_country?: string         // Where they actually are  
+  detected_locale?: ValidLocale     // What we detected
+  preference_type: 'manual' | 'detected' | 'default'
+  timestamp: string
+  dismissed_suggestion?: boolean    // User dismissed banner
+}
