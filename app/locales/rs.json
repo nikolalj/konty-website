@@ -102,7 +102,7 @@
         "name": "Osnovni",
         "description": "Fiskalne kase za paušalce i male restorane",
         "price": "5.900 Din",
-        "billingCycle": "/mesečno - sve uključeno",
+        "billingCycle": "/ mesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
           "feat0": "1 POS terminal uključen",
@@ -120,7 +120,7 @@
         "name": "Profesional",
         "description": "POS terminal za restorane spremne za rast",
         "price": "9.900 Din",
-        "billingCycle": "/mesečno - uštedi 40% vs konkurencija",
+        "billingCycle": "/ mesečno",
         "button": "Počni 30 dana besplatno",
         "badge": "73% restorana bira ovaj",
         "highlight": true,
@@ -140,7 +140,7 @@
         "name": "Enterprise",
         "description": "Za lance restorana",
         "price": "Po dogovoru",
-        "billingCycle": "Popust na količinu",
+        "billingCycle": "/ mesečno",
         "button": "Kontaktiraj prodaju",
         "features": {
           "feat0": "Neograničeno POS terminala",
@@ -160,7 +160,7 @@
         "name": "Osnovni",
         "description": "Savršen za male prodavnice",
         "price": "3.900 Din",
-        "billingCycle": "/mesečno - sve uključeno",
+        "billingCycle": "/ mesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
           "feat0": "1 POS terminal uključen",
@@ -178,7 +178,7 @@
         "name": "Profesional",
         "description": "Za rastuće trgovine",
         "price": "6.900 Din",
-        "billingCycle": "/mesečno - najbolja vrednost",
+        "billingCycle": "/ mesečno",
         "button": "Počni 30 dana besplatno",
         "badge": "Najpopularniji",
         "highlight": true,
@@ -198,7 +198,7 @@
         "name": "Enterprise",
         "description": "Za lance prodavnica",
         "price": "Po dogovoru",
-        "billingCycle": "Popust na količinu",
+        "billingCycle": "/ mesečno",
         "button": "Kontaktiraj prodaju",
         "features": {
           "feat0": "Neograničeno terminala",
@@ -213,7 +213,7 @@
     }
   },
   "testimonials": {
-    "title": "Vlasnici restorana koji sada bolje spavaju",
+    "title": "Vlasnici restorana koji sada mirno spavaju",
     "description": "Prave priče od kolega koji su prešli i preživeli najgore večeri"
   },
   "statistics": {

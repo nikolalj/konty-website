@@ -12,26 +12,9 @@ export default defineEventHandler(async (event) => {
 
   if (isStaging) {
     // Block all crawlers on staging
-    const stagingRobots = `# Staging Environment - Block All Crawlers
+    const stagingRobots = `# Staging Environment
 User-agent: *
-Disallow: /
-Crawl-delay: 86400
-
-# Specifically block major search engines
-User-agent: Googlebot
-Disallow: /
-
-User-agent: Bingbot
-Disallow: /
-
-User-agent: Slurp
-Disallow: /
-
-User-agent: DuckDuckBot
-Disallow: /
-
-# No sitemap for staging
-Sitemap:`
+Disallow: /`
 
     setHeader(event, 'Content-Type', 'text/plain')
     setHeader(event, 'Cache-Control', 'no-cache, no-store, must-revalidate')

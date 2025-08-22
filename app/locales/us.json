@@ -102,7 +102,7 @@
         "name": "Essential",
         "description": "Best POS for small restaurants and cafes",
         "price": "$59",
-        "billingCycle": "/month flat - no hidden fees",
+        "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
           "feat0": "1 POS terminal included",
@@ -120,7 +120,7 @@
         "name": "Professional",
         "description": "Restaurant POS system for growing businesses",
         "price": "$99",
-        "billingCycle": "/month - save $420 vs competitors",
+        "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "badge": "73% of restaurants choose this",
         "highlight": true,
@@ -140,7 +140,7 @@
         "name": "Enterprise",
         "description": "Enterprise POS for multi-location restaurants",
         "price": "Custom",
-        "billingCycle": "Volume discounts available",
+        "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
           "feat0": "Unlimited POS terminals",
@@ -160,7 +160,7 @@
         "name": "Essential",
         "description": "Perfect for small shops",
         "price": "$39",
-        "billingCycle": "/month flat - no hidden fees",
+        "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
           "feat0": "1 POS terminal included",
@@ -178,7 +178,7 @@
         "name": "Professional",
         "description": "For growing retail businesses",
         "price": "$69",
-        "billingCycle": "/month - best value",
+        "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "badge": "Most Popular",
         "highlight": true,
@@ -198,7 +198,7 @@
         "name": "Enterprise",
         "description": "Multi-location retail chains",
         "price": "Custom",
-        "billingCycle": "Volume discounts available",
+        "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
           "feat0": "Unlimited POS terminals",
