@@ -1,4 +1,5 @@
-import type { ValidLocale } from '~/types/locale'
+// Import types directly to avoid circular dependency
+type ValidLocale = 'me' | 'rs' | 'ba' | 'us'
 
 /**
  * Centralized locale configuration

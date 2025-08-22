@@ -1,6 +1,5 @@
 import type { H3Event } from 'h3'
-import type { ValidLocale } from '~/types/locale'
-import { DEFAULT_LOCALE, VALID_LOCALES } from '~/config/locale.config'
+import { DEFAULT_LOCALE, VALID_LOCALES } from '../../config/locale.config'
 import {
   detectCountryFromIP,
   mapCountryToLocale,

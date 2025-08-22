@@ -1,10 +1,31 @@
 import type { H3Event } from 'h3'
 import type { ValidLocale } from '~/types/locale'
-import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '~/config/locale.config'
+import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '../../config/locale.config'
+
+/**
+ * Helper to safely try country detection from an API
+ */
+async function tryDetectCountry(
+  url: string,
+  extractor: (data: unknown) => string | undefined
+): Promise<string | null> {
+  try {
+    const data = await $fetch(url, {
+      timeout: 1500,  // Reduced timeout for faster fallback
+      retry: 0       // Don't retry, move to next service
+    })
+    const result = extractor(data)
+    return result || null
+  } catch {
+    // Silently fail and return null
+    return null
+  }
+}
 
 /**
  * Detects country from IP using multiple fallback services
  * Caches result in event context for request lifecycle
+ * Always returns a valid result (never throws)
  */
 export async function detectCountryFromIP(event: H3Event): Promise<string | null> {
   // Check if we already detected for this request
@@ -17,34 +38,29 @@ export async function detectCountryFromIP(event: H3Event): Promise<string | null
   try {
     // Try Cloudflare headers first (fastest, most reliable)
     const cfCountry = getHeader(event, 'cf-ipcountry')
-    if (cfCountry && cfCountry !== 'XX') {
+    if (cfCountry && cfCountry !== 'XX' && cfCountry !== 'T1') {  // T1 = Tor network
       detectedCountry = cfCountry
     } else {
-      // Fallback to API services
-      try {
-        const response = await $fetch<{ country: string }>('https://api.country.is/', {
-          timeout: 2000
-        })
-        detectedCountry = response.country
-      } catch {
-        // Try ipapi.co as second fallback
-        try {
-          const response = await $fetch<{ country_code: string }>('https://ipapi.co/json/', {
-            timeout: 2000
-          })
-          detectedCountry = response.country_code
-        } catch {
-          // All detection methods failed
-          detectedCountry = null
-        }
+      // Try api.country.is
+      detectedCountry = await tryDetectCountry(
+        'https://api.country.is/',
+        (data) => (data as { country?: string })?.country
+      )
+
+      // If failed, try ipapi.co
+      if (!detectedCountry) {
+        detectedCountry = await tryDetectCountry(
+          'https://ipapi.co/json/',
+          (data) => (data as { country_code?: string })?.country_code
+        )
       }
     }
   } catch (error) {
-    console.warn('Country detection failed:', error)
+    console.warn('[Locale Detection] Country detection failed:', error)
     detectedCountry = null
   }
 
-  // Cache for this request
+  // Cache for this request (even if null)
   event.context._detectedCountry = detectedCountry
   return detectedCountry
 }

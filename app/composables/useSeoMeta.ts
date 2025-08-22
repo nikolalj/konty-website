@@ -1,4 +1,5 @@
 import type { LocaleConfig } from "~/types/locale"
+import { DEFAULT_LOCALE } from "../../config/locale.config"
 
 interface SeoMetaOptions {
   title: string
@@ -14,35 +15,35 @@ interface SeoMetaOptions {
  */
 function generateHreflangTags(currentPath: string, locales: LocaleConfig[], currentLocale: string, siteUrl: string) {
   const hreflangTags = []
-  
+
   // Add tag for each locale
   for (const locale of locales) {
-    const localePath = locale.code === 'rs' 
+    const localePath = locale.code === DEFAULT_LOCALE
       ? currentPath // Default locale has no prefix
       : `/${locale.code}${currentPath}`
-    
+
     hreflangTags.push({
       rel: 'alternate',
       hreflang: locale.iso || locale.code,
       href: `${siteUrl}${localePath}`
     })
   }
-  
-  // Add x-default tag pointing to the default locale (rs)
+
+  // Add x-default tag pointing to the default locale
   const defaultPath = currentPath
   hreflangTags.push({
     rel: 'alternate',
     hreflang: 'x-default',
     href: `${siteUrl}${defaultPath}`
   })
-  
+
   return hreflangTags
 }
 
 /**
  * Centralized SEO for all pages:
  * - SSR-safe canonical from runtimeConfig.public.siteUrl + route
- * - OG/Twitter images: either explicit or a default 
+ * - OG/Twitter images: either explicit or a default
  * - i18n-aware: sets og:locale and hreflang tags
  * - Proper canonical URLs per locale
  */
@@ -53,15 +54,15 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
 
   // Get site URL from config
   const siteUrl = config.public.siteUrl || 'https://konty.com'
-  
+
   // Build proper canonical URL with locale handling
   const pathWithoutLocale = route.path.replace(/^\/(me|ba|us)/, '') || '/'
-  const canonicalPath = locale.value === 'rs' 
-    ? pathWithoutLocale 
+  const canonicalPath = locale.value === DEFAULT_LOCALE
+    ? pathWithoutLocale
     : `/${locale.value}${pathWithoutLocale}`
   const canonical = options.url || `${siteUrl}${canonicalPath}`
 
-  // Default OG image 
+  // Default OG image
   const seoImage = options.image || `${siteUrl}/og-default.webp`
 
   // Map i18n locale to OpenGraph locale
