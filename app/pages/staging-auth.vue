@@ -70,6 +70,10 @@ useHead({
 const password = ref('')
 const error = ref('')
 
+setTimeout(() => {
+  console.log(import.meta.env)
+},3000)
+
 const handleLogin = async () => {
   try {
     const response = await $fetch('/api/staging-auth', {
