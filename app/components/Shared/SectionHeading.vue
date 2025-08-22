@@ -13,7 +13,7 @@
     <UIAppear :animate-on="props.title">
       <h2
         v-if="props.title"
-        class="mt-4 text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted mb-4"
+        class="mt-4 mb-4 text-3xl sm:text-4xl lg:text-5xl text-center text-pretty tracking-tight font-bold text-highlighted"
       >
         {{ props.title }}
       </h2>

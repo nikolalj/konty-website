@@ -2,7 +2,7 @@
 export default defineEventHandler(async (event) => {
   if (event.path !== '/robots.txt') return
 
-  const host = event.headers.host || ''
+  const host = getHeader(event, 'host') || ''
   const isStaging = 
     host.includes('staging') ||
     host.includes('preview') ||

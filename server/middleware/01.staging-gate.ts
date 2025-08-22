@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   // Check if this is staging environment
   // Production domains: konty.com, www.konty.com
   // Staging domains: staging.konty.com, preview.konty.com, any URL with 'staging'
-  const host = event.headers.host || ''
+  const host = getHeader(event, 'host') || ''
   const isStaging =
     host.includes('staging') ||
     host.includes('preview') ||
