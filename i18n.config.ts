@@ -1,7 +1,9 @@
+import { DEFAULT_LOCALE } from './config/locale.config'
+
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: 'me',
-  fallbackLocale: 'me',
+  locale: DEFAULT_LOCALE,
+  fallbackLocale: DEFAULT_LOCALE,
   messages: {},
   datetimeFormats: {
     me: {

@@ -1,25 +1,6 @@
 import type { H3Event } from 'h3'
 import type { ValidLocale } from '~/types/locale'
-
-const COUNTRY_TO_LOCALE_MAP: Record<string, ValidLocale> = {
-  'ME': 'me',
-  'RS': 'rs',
-  'BA': 'ba',
-  'US': 'us',
-  // Fallback for neighboring countries
-  'HR': 'ba',
-  'SI': 'rs',
-  'MK': 'rs',
-  'AL': 'me',
-  // English-speaking countries
-  'GB': 'us',
-  'CA': 'us',
-  'AU': 'us',
-  'NZ': 'us',
-  'IE': 'us',
-}
-
-const DEFAULT_LOCALE: ValidLocale = 'rs'
+import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '~/config/locale.config'
 
 /**
  * Detects country from IP using multiple fallback services
@@ -41,15 +22,15 @@ export async function detectCountryFromIP(event: H3Event): Promise<string | null
     } else {
       // Fallback to API services
       try {
-        const response = await $fetch<{ country: string }>('https://api.country.is/', { 
-          timeout: 2000 
+        const response = await $fetch<{ country: string }>('https://api.country.is/', {
+          timeout: 2000
         })
         detectedCountry = response.country
       } catch {
         // Try ipapi.co as second fallback
         try {
-          const response = await $fetch<{ country_code: string }>('https://ipapi.co/json/', { 
-            timeout: 2000 
+          const response = await $fetch<{ country_code: string }>('https://ipapi.co/json/', {
+            timeout: 2000
           })
           detectedCountry = response.country_code
         } catch {
@@ -73,7 +54,7 @@ export async function detectCountryFromIP(event: H3Event): Promise<string | null
  */
 export function mapCountryToLocale(countryCode: string | null): ValidLocale {
   if (!countryCode) return DEFAULT_LOCALE
-  
+
   const upperCode = countryCode.toUpperCase()
   return COUNTRY_TO_LOCALE_MAP[upperCode] || DEFAULT_LOCALE
 }
@@ -83,7 +64,7 @@ export function mapCountryToLocale(countryCode: string | null): ValidLocale {
  */
 export interface LocalePreference {
   explicit_locale?: ValidLocale    // User manually selected
-  detected_country?: string         // Where they actually are  
+  detected_country?: string         // Where they actually are
   detected_locale?: ValidLocale     // What we detected
   preference_type: 'manual' | 'detected' | 'default'
   timestamp: string
@@ -95,7 +76,7 @@ export interface LocalePreference {
  */
 export function parseLocalePreference(cookieValue: string | null): LocalePreference | null {
   if (!cookieValue) return null
-  
+
   try {
     // Handle both old simple format and new complex format
     if (cookieValue.includes('{')) {
@@ -112,7 +93,7 @@ export function parseLocalePreference(cookieValue: string | null): LocalePrefere
   } catch (error) {
     console.warn('Failed to parse locale preference:', error)
   }
-  
+
   return null
 }
 
@@ -141,12 +122,12 @@ export function getEffectiveLocale(pref: LocalePreference | null): ValidLocale {
  */
 export function isUserTraveling(pref: LocalePreference | null, currentCountry: string | null): boolean {
   if (!pref?.detected_country || !currentCountry) return false
-  
+
   // Different country than last detection
   if (pref.detected_country !== currentCountry) {
     // But only if they haven't explicitly chosen a locale
     return pref.preference_type !== 'manual'
   }
-  
+
   return false
 }

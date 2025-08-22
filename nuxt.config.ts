@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
+
 export default defineNuxtConfig({
   // Development
   devtools: { enabled: true },
@@ -143,7 +145,7 @@ export default defineNuxtConfig({
   // Internationalization - Country-based localization
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
-    defaultLocale: 'rs',
+    defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: false,
@@ -189,7 +191,7 @@ export default defineNuxtConfig({
         currencySymbol: '$'
       }
     ],
-    strategy: 'prefix_except_default',
+    strategy: LOCALE_CONFIG.STRATEGY,
     vueI18n: './i18n.config.ts'
   },
 
