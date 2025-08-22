@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   const url = event.path || ''
 
   // Allow: login page, API, static assets
-  if (url === '/__staging-login' ||
+  if (url === '/staging-auth' ||
       url.startsWith('/_nuxt/') ||
       url.startsWith('/api/') ||
       url.includes('.')) {
@@ -30,6 +30,6 @@ export default defineEventHandler(async (event) => {
   const hasAuth = getCookie(event, 'staging-auth') === 'authorized'
 
   if (!hasAuth) {
-    return sendRedirect(event, 'https://staging.konty.com/__staging-login', 302)
+    return sendRedirect(event, '/staging-auth', 302)
   }
 })

@@ -149,7 +149,7 @@ export default defineNuxtConfig({
     skipSettingLocaleOnNavigate: false,
     customRoutes: 'config',
     pages: {
-      '__staging-login': false  // Exclude staging login from i18n
+      'staging-auth': false  // Exclude staging login from i18n
     },
     locales: [
       {

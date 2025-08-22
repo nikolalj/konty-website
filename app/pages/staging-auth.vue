@@ -72,7 +72,7 @@ const error = ref('')
 
 const handleLogin = async () => {
   try {
-    const response = await $fetch('/api/__staging-auth', {
+    const response = await $fetch('/api/staging-auth', {
       method: 'POST',
       body: {
         password: password.value
