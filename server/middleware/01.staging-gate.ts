@@ -30,7 +30,17 @@ export default defineEventHandler(async (event) => {
   const hasAuth = getCookie(event, 'staging-auth') === 'authorized'
 
   if (!hasAuth) {
-    // Keep the redirect on the same domain to prevent i18n interference
-    return sendRedirect(event, '/__staging-login', 302)
+    // Use HTML meta refresh to bypass i18n module completely
+    setHeader(event, 'Content-Type', 'text/html')
+    return `<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=/__staging-login">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting to login...</p>
+</body>
+</html>`
   }
 })
