@@ -1,12 +1,9 @@
-// Minimal auth endpoint for staging protection
 export default defineEventHandler(async (event) => {
   const { password } = await readBody(event)
 
   const config = useRuntimeConfig()
-  console.log('---------------', config.stagingPassword)
 
   if (config.stagingPassword && password === config.stagingPassword) {
-    // Set simple auth cookie
     setCookie(event, 'staging-auth', 'authorized', {
       httpOnly: true,
       secure: !import.meta.dev,

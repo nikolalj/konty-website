@@ -1,9 +1,9 @@
 // Minimal staging protection - blocks bots, allows human access with password
 // This middleware stays permanently - only activates on staging environments
 export default defineEventHandler(async (event) => {
-  // Check if this is staging environment
-  // Production domains: konty.com, www.konty.com
-  // Staging domains: staging.konty.com, preview.konty.com, any URL with 'staging'
+
+  console.log('--------==---------------', process.env.NUXT_PUBLIC_SITE_URL)
+
   const host = getHeader(event, 'host') || ''
   const isStaging =
     host.includes('staging') ||
