@@ -70,8 +70,9 @@ useHead({
 const password = ref('')
 const error = ref('')
 
+const config = useRuntimeConfig()
 setTimeout(() => {
-  console.log(import.meta.env)
+    console.log('CLIENT - Config:', config)
 },3000)
 
 const handleLogin = async () => {
