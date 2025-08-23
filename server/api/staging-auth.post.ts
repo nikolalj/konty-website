@@ -1,4 +1,11 @@
 export default defineEventHandler(async (event) => {
+console.log('-----------------------')
+console.log(process.env.HOSTNAME)
+console.log(process.env.NODE_ENV)
+console.log(process.env.STAGING_PASSWORD)
+console.log(__dirname)
+
+
   const { password } = await readBody(event)
 
   const config = useRuntimeConfig()

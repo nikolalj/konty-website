@@ -23,6 +23,14 @@ export default defineEventHandler(async (event: H3Event) => {
   const urlParts = url.split('/').filter(Boolean)
   const firstPart = urlParts[0]
   const hasLocaleInUrl = firstPart && VALID_LOCALES.includes(firstPart as typeof VALID_LOCALES[number])
+  
+  // Check for INVALID locale prefix (e.g., /xyz/pricing)
+  if (firstPart && firstPart.length === 2 && !hasLocaleInUrl && !url.startsWith('/api/') && !url.includes('.')) {
+    // Invalid 2-letter prefix that's not a valid locale
+    // Redirect to the same path without the invalid prefix
+    const pathWithoutInvalidLocale = '/' + urlParts.slice(1).join('/')
+    return sendRedirect(event, pathWithoutInvalidLocale || '/', 301)
+  }
 
   // Parse existing preference cookie
   const cookieValue = getCookie(event, 'konty-locale') || null
