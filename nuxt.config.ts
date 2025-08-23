@@ -206,7 +206,7 @@ export default defineNuxtConfig({
 
     // Prerendering for SEO
     prerender: {
-      crawlLinks: true,
+      crawlLinks: process.env.APP_ENV === 'production',
       routes: ['/', '/products', '/pricing', '/konty-retail', '/konty-hospitality'],
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
