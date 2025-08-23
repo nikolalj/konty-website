@@ -3,10 +3,12 @@ export default defineEventHandler(async (event) => {
   if (event.path !== '/robots.txt') return
 
   const host = getHeader(event, 'host') || ''
+  const config = useRuntimeConfig()
+
   const isStaging =
     host.includes('staging') ||
     host.includes('localhost') ||
-    process.env.APP_ENV === 'staging'
+    config.env === 'staging'
 
   if (isStaging) {
     // Block all crawlers on staging

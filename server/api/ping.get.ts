@@ -1,9 +1,11 @@
 export default defineEventHandler(() => {
+  const config = useRuntimeConfig()
+
   // Simple ping endpoint for load balancers
   // Returns just "OK" with minimal overhead
   return {
-    'var2': process.env.APP_ENV,
-    'url': process.env.NUXT_PUBLIC_SITE_URL,
-    'var6': process.env.PORT,
+    'stagingPassword': config.stagingPassword,
+    'env': config.appEnv,
+    'public': config.public,
   }
 })
