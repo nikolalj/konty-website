@@ -19,10 +19,12 @@ const config = {
   env: isStaging ? {
     NODE_ENV: 'staging',
     NUXT_PUBLIC_SITE_URL: 'https://staging.konty.com',
-    STAGING_PASSWORD: process.env.STAGING_PASSWORD
+    STAGING_PASSWORD: process.env.STAGING_PASSWORD,
+    PORT: 3002
   } : {
     NODE_ENV: 'production',
     NUXT_PUBLIC_SITE_URL: 'https://konty.com',
+    PORT: 3002
   }
 }
 

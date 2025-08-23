@@ -10,6 +10,7 @@ export default defineEventHandler(async (event) => {
   // Allow ONLY: login page, API, static assets
   // Everything else requires auth
   if (url === '/staging-auth' ||
+      url === '/ping' ||
       url.startsWith('/_nuxt/') ||
       url.startsWith('/api/') ||
       url.includes('.')) {
