@@ -6,5 +6,7 @@ export default defineEventHandler(() => {
     'var2': process.env.NODE_ENV,
     'var3': process.env.STAGING_PASSWORD,
     'var4': process.env.NUXT_PUBLIC_SITE_URL,
+    'var5': process.env.TEST,
+    'var6': process.env.PORT,
   }
 })

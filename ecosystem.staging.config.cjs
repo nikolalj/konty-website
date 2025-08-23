@@ -10,7 +10,8 @@ const config = {
   env: {
     NODE_ENV: 'staging',
     NUXT_PUBLIC_SITE_URL: 'https://staging.konty.com',
-    PORT: 3002
+    PORT: 3002,
+    TEST: 'MISKO'
   }
 }
 
