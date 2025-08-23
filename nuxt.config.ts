@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   // PostCSS - Production CSS optimization
   postcss: {
     plugins: {
-      ...(process.env.NODE_ENV === 'production' && {
+      ...(process.env.APP_ENV === 'production' && {
         cssnano: {
           preset: ['default', {
             discardComments: { removeAll: true },

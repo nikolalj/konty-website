@@ -3,10 +3,10 @@ export default defineEventHandler(() => {
   // Returns just "OK" with minimal overhead
   return {
     'var1': process.env.HOSTNAME,
-    'var2': process.env.NODE_ENV,
+    'var2': process.env.APP_ENV,
     'var3': process.env.STAGING_PASSWORD,
     'var4': process.env.NUXT_PUBLIC_SITE_URL,
-    'var5': process.env.TEST,
+    'test': process.env.TEST,
     'var6': process.env.PORT,
   }
 })
