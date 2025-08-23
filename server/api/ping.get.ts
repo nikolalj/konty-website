@@ -5,7 +5,7 @@ export default defineEventHandler(() => {
   // Returns just "OK" with minimal overhead
   return {
     'stagingPassword': config.stagingPassword,
-    'env': config.appEnv,
+    'env': config.env,
     'public': config.public,
   }
 })
