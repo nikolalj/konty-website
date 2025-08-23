@@ -8,7 +8,6 @@ const config = {
   watch: false,
   max_memory_restart: '1G',
   env: {
-    APP_ENV: 'staging',
     PORT: 3002
   }
 }
