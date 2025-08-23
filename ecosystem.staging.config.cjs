@@ -11,7 +11,8 @@ const config = {
     APP_ENV: 'staging',
     NUXT_PUBLIC_SITE_URL: 'https://staging.konty.com',
     PORT: 3002,
-    TEST: process.env.APP_ENV
+    TEST1: process.env.APP_ENV,
+    TEST2: 'misko2',
   }
 }
 
