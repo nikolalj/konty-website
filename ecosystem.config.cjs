@@ -9,7 +9,6 @@ const config = {
   max_memory_restart: '1G',
   env: {
     APP_ENV: 'production',
-    NUXT_PUBLIC_SITE_URL: 'https://konty.com',
     PORT: 3002
   }
 }

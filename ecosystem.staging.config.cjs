@@ -9,10 +9,7 @@ const config = {
   max_memory_restart: '1G',
   env: {
     APP_ENV: 'staging',
-    NUXT_PUBLIC_SITE_URL: 'https://staging.konty.com',
-    PORT: 3002,
-    TEST1: process.env.APP_ENV,
-    TEST2: 'misko2',
+    PORT: 3002
   }
 }
 
