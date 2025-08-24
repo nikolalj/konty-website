@@ -10,9 +10,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useCustomSeoMeta({
-  title: 'About Us - Konty POS Solutions',
-  description: 'Learn about Konty\'s mission to revolutionize point-of-sale systems for restaurants and retail businesses worldwide.',
+  title: t('seo.about.title'),
+  description: t('seo.about.description'),
   type: 'website'
 })
 </script>

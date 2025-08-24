@@ -1,195 +1,107 @@
-import type {
-  ValidLocale,
-  LocaleConfig,
-  LocalePreference
-} from '~/types/locale'
+import type { ValidLocale, LocaleConfig } from '~/types/locale'
 
 /**
- * Composable for handling locale preferences and country detection
- * Works with the new cookie structure that tracks explicit vs detected choices
+ * Simple country detection composable
+ * Clean interface for locale management
  */
-export const useCountryDetection = () => {
-  const { locale, locales, setLocale } = useI18n()
-
-  // Loading and error states
-  const isDetecting = ref(false)
-  const isSwitching = ref(false)
-  const detectionError = ref<string | null>(null)
-
-  // Cookie with new structure
-  const localeCookie = useCookie<string>('konty-locale', {
-    httpOnly: false,
-    secure: import.meta.client && window.location.protocol === 'https:',
-    sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-    encode: value => encodeURIComponent(value || ''),
-    decode: value => value ? decodeURIComponent(value) : ''
+export function useCountryDetection() {
+  const { locale, locales } = useI18n()
+  const nuxtApp = useNuxtApp()
+  
+  // Get current locale config
+  const currentLocale = computed(() => {
+    return (locales.value as LocaleConfig[]).find(l => l.code === locale.value)
   })
-
-  /**
-   * Parse the locale preference from cookie
-   */
-  const parsePreference = (): LocalePreference | null => {
-    const cookieValue = localeCookie.value
-    if (!cookieValue) return null
-
-    try {
-      // Handle new JSON format
-      if (cookieValue.includes('{')) {
-        return JSON.parse(cookieValue)
-      }
-      // Migrate old simple format
-      if (['me', 'rs', 'ba', 'us'].includes(cookieValue)) {
-        return {
-          explicit_locale: cookieValue as ValidLocale,
-          preference_type: 'manual',
-          timestamp: new Date().toISOString()
-        }
-      }
-    } catch (error) {
-      console.warn('Failed to parse locale preference:', error)
-    }
-    return null
-  }
-
-  /**
-   * Get current preference
-   */
-  const preference = computed(() => parsePreference())
-
-  /**
-   * Get effective locale (what should be displayed)
-   */
-  const effectiveLocale = computed((): ValidLocale => {
-    const pref = preference.value
-    if (pref?.explicit_locale) return pref.explicit_locale
-    if (pref?.detected_locale) return pref.detected_locale
-    return locale.value as ValidLocale
+  
+  // Get suggested locale from server payload
+  const suggestedLocale = computed(() => {
+    return nuxtApp.payload.suggestedLocale as ValidLocale | undefined
   })
-
-  /**
-   * Check if we should show the suggestion banner
-   */
+  
+  // Get suggested locale config
+  const suggestedLocaleConfig = computed(() => {
+    if (!suggestedLocale.value) return null
+    return (locales.value as LocaleConfig[]).find(l => l.code === suggestedLocale.value)
+  })
+  
+  // Should we show suggestion banner?
   const shouldShowSuggestion = computed(() => {
-    const pref = preference.value
-    if (!pref) return false
-    
-    // Don't show if user has explicitly chosen (manual selection)
-    if (pref.preference_type === 'manual' && pref.explicit_locale) return false
-    
-    // Don't show if already dismissed
-    if (pref.dismissed_suggestion) return false
-    
-    // Show if detected locale differs from current
-    const currentLocale = locale.value
-    const detectedLocale = pref.detected_locale
-    
-    // For detected preferences, show banner if there's a mismatch
-    return detectedLocale && detectedLocale !== currentLocale
+    return !!suggestedLocale.value && suggestedLocale.value !== locale.value
   })
-
+  
+  // Switching state
+  const isSwitching = ref(false)
+  
   /**
-   * Manually change locale (from dropdown or banner)
+   * Get locale cookie
    */
-  const changeLocale = async (
-    newLocale: string, 
-    isExplicit: boolean = true
-  ): Promise<void> => {
-    isSwitching.value = true
-    detectionError.value = null
-
+  function getLocaleCookie() {
+    const cookie = useCookie('konty-locale')
+    if (!cookie.value) return null
+    
     try {
-      // Parse existing preference
-      const pref = parsePreference() || {
-        preference_type: 'default' as const,
-        timestamp: new Date().toISOString()
-      }
-
-      // Update preference based on action type
-      if (isExplicit) {
-        pref.explicit_locale = newLocale as ValidLocale
-        pref.preference_type = 'manual'
-        // Clear dismissal since user is actively choosing
-        delete pref.dismissed_suggestion
-      } else {
-        pref.detected_locale = newLocale as ValidLocale
-        if (pref.preference_type === 'default') {
-          pref.preference_type = 'detected'
-        }
-      }
-
-      // Save updated preference
-      localeCookie.value = JSON.stringify(pref)
-
+      return JSON.parse(cookie.value as string)
+    } catch {
+      return null
+    }
+  }
+  
+  /**
+   * Change locale and save preference
+   */
+  async function changeLocale(newLocale: ValidLocale, isExplicit: boolean = true) {
+    if (isSwitching.value || locale.value === newLocale) return
+    
+    isSwitching.value = true
+    
+    try {
+      // Update cookie
+      const cookie = useCookie('konty-locale')
+      cookie.value = JSON.stringify({
+        locale: newLocale,
+        explicit: isExplicit
+      })
+      
       // Update i18n locale
-      if (locale.value !== newLocale) {
-        await setLocale(newLocale as ValidLocale)
-      }
-    } catch (error) {
-      console.error('Failed to change locale:', error)
-      detectionError.value = 'Failed to change language'
-      throw error
+      locale.value = newLocale
+      
+      await nextTick()
     } finally {
       isSwitching.value = false
     }
   }
-
+  
   /**
-   * Dismiss the suggestion banner
+   * Accept suggested locale
    */
-  const dismissSuggestion = () => {
-    const pref = parsePreference()
-    if (pref) {
-      pref.dismissed_suggestion = true
-      localeCookie.value = JSON.stringify(pref)
+  async function acceptSuggestion() {
+    if (suggestedLocale.value) {
+      await changeLocale(suggestedLocale.value, true)
     }
   }
-
+  
   /**
-   * Get current locale config
+   * Dismiss suggestion (mark current as explicit choice)
    */
-  const currentLocale = computed((): LocaleConfig | undefined => {
-    const currentLocaleCode = locale.value
-    return (locales.value as LocaleConfig[]).find(l => l.code === currentLocaleCode)
-  })
-
-  /**
-   * Check if user is traveling (location changed)
-   */
-  const isTraveling = computed(() => {
-    const pref = preference.value
-    if (!pref) return false
-    
-    // Check if headers indicate different country
-    if (import.meta.client) {
-      // Would need to get this from server headers
-      return false
-    }
-    
-    return false
-  })
-
-  /**
-   * Clear saved locale preference
-   */
-  const clearLocalePreference = (): void => {
-    localeCookie.value = ''
+  function dismissSuggestion() {
+    const cookie = useCookie('konty-locale')
+    cookie.value = JSON.stringify({
+      locale: locale.value,
+      explicit: true
+    })
   }
-
+  
   return {
-    // Functions
-    changeLocale,
-    dismissSuggestion,
-    clearLocalePreference,
-
-    // State
-    preference: readonly(preference),
-    effectiveLocale: readonly(effectiveLocale),
-    shouldShowSuggestion: readonly(shouldShowSuggestion),
+    // Current state
     currentLocale: readonly(currentLocale),
-    isTraveling: readonly(isTraveling),
-    isDetecting: readonly(isDetecting),
+    suggestedLocale: readonly(suggestedLocale),
+    suggestedLocaleConfig: readonly(suggestedLocaleConfig),
+    shouldShowSuggestion: readonly(shouldShowSuggestion),
     isSwitching: readonly(isSwitching),
-    detectionError: readonly(detectionError),
+    
+    // Actions
+    changeLocale,
+    acceptSuggestion,
+    dismissSuggestion
   }
 }

@@ -11,7 +11,12 @@
     "requestDemo": "Pokaži mi koliko štedim",
     "explorePlans": "Izračunaj svoju uštedu",
     "hospitality": "Ugostiteljstvo",
-    "retail": "Trgovina"
+    "retail": "Trgovina",
+    "languageSuggestion": "Predlog jezika",
+    "dismiss": "Zatvori",
+    "stayHere": "Ostani ovde",
+    "switch": "Promeni",
+    "recommended": "Preporučeno"
   },
   "nav": {
     "products": "Proizvodi",
@@ -388,5 +393,48 @@
       "viewDemo": "2-minutni demo",
       "features": "Nula padova • Auto-dopuna • Podrška za 30 sek"
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Konty - Profesionalni POS sistem za restorane i prodavnice",
+      "description": "Pouzdane fiskalne kase sa e-fakturama. 25.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati."
+    },
+    "products": {
+      "title": "Konty proizvodi - POS rešenja za sve tipove biznisa",
+      "description": "Izaberite savršeno POS rešenje za vaš biznis. Specijalizovani sistemi za restorane, kafiće, prodavnice i lance."
+    },
+    "pricing": {
+      "title": "Cene - Konty POS sistema",
+      "description": "Transparentne cene bez skrivenih troškova. Mesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana."
+    },
+    "kontyHospitality": {
+      "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
+      "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mestu."
+    },
+    "kontyRetail": {
+      "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
+      "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance."
+    },
+    "demo": {
+      "title": "Zakazivanje demo prezentacije - Konty POS",
+      "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza."
+    },
+    "about": {
+      "title": "O nama - Konty tim",
+      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom."
+    },
+    "terms": {
+      "title": "Uslovi korišćenja - Konty",
+      "description": "Uslovi korišćenja Konty POS sistema i povezanih usluga."
+    },
+    "privacy": {
+      "title": "Politika privatnosti - Konty",
+      "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca."
+    }
+  },
+  "banner": {
+    "message": "Izaberite državu da biste videli sadržaj prilagođen vašoj lokaciji",
+    "switchTo": "Vidi {country} verziju",
+    "stayHere": "Ostani ovde"
   }
 }

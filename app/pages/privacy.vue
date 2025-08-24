@@ -174,10 +174,12 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useCustomSeoMeta({
-  title: 'Politika Privatnosti - Konty',
-  description: 'Saznajte kako Konty prikuplja, koristi i štiti vaše lične podatke u skladu sa GDPR propisima.',
+  title: t('seo.privacy.title'),
+  description: t('seo.privacy.description'),
   type: 'website',
-  robots: 'noindex, follow'
+  noindex: true  // Using the new noindex flag
 })
 </script>

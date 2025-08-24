@@ -14,9 +14,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useCustomSeoMeta({
-  title: 'Konty - Profesionalni POS Sistem za Restorane i Prodavnice',
-  description: 'Unapredite poslovanje sa Konty kompletnim POS rešenjem. Savršeno za restorane, kafice i maloprodajne objekte.',
+  title: t('seo.home.title'),
+  description: t('seo.home.description'),
   type: 'website'
 })
 </script>

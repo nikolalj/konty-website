@@ -7,7 +7,8 @@ type ValidLocale = 'me' | 'rs' | 'ba' | 'us'
  */
 export const LOCALE_CONFIG = {
   // Default locale for the site (used when no locale is detected or specified)
-  DEFAULT_LOCALE: 'us' as ValidLocale,
+  // RS (Serbia) is the primary market for Konty POS
+  DEFAULT_LOCALE: 'rs' as ValidLocale,
   
   // Available locales
   VALID_LOCALES: ['me', 'rs', 'ba', 'us'] as ValidLocale[],

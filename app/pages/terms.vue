@@ -128,10 +128,12 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useCustomSeoMeta({
-  title: 'Terms of Service - Konty',
-  description: 'Read Konty\'s terms of service and user agreement for our POS software and services.',
+  title: t('seo.terms.title'),
+  description: t('seo.terms.description'),
   type: 'website',
-  robots: 'noindex, follow'
+  noindex: true  // Using the new noindex flag
 })
 </script>

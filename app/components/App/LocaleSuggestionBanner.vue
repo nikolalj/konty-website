@@ -1,158 +1,173 @@
 <template>
   <Transition
     enter-active-class="transition-all duration-300 ease-out"
-    enter-from-class="translate-y-[-100%] opacity-0"
-    enter-to-class="translate-y-0 opacity-100"
+    enter-from-class="translate-y-full sm:translate-y-0 sm:translate-x-full opacity-0"
+    enter-to-class="translate-y-0 translate-x-0 opacity-100"
     leave-active-class="transition-all duration-200 ease-in"
-    leave-from-class="translate-y-0 opacity-100"
-    leave-to-class="translate-y-[-100%] opacity-0"
+    leave-from-class="translate-y-0 translate-x-0 opacity-100"
+    leave-to-class="translate-y-full sm:translate-y-0 sm:translate-x-full opacity-0"
   >
     <div
       v-if="shouldShow"
-      class="fixed top-0 left-0 right-0 z-100 bg-primary/95 backdrop-blur-sm text-white shadow-lg"
+      class="fixed bottom-4 sm:bottom-auto sm:top-20 right-0 sm:right-4 left-0 sm:left-auto z-50 mx-4 sm:mx-0 sm:w-96"
     >
-      <UContainer>
-        <div class="flex items-center justify-between py-3 gap-4">
-          <!-- Message -->
-          <div class="flex items-center gap-3 flex-1">
-            <UIcon name="i-lucide:globe" class="size-5 flex-shrink-0" />
-            <p class="text-sm sm:text-base">
-              {{ message }}
-            </p>
-          </div>
-
-          <!-- Actions -->
-          <div class="flex items-center gap-2">
-            <!-- Accept suggestion -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <!-- Header with gradient -->
+        <div class="bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-white">
+              <UIcon name="i-lucide:globe-2" class="size-4" />
+              <span class="text-sm font-medium">{{ $t('common.languageSuggestion', 'Language Suggestion') }}</span>
+            </div>
             <UButton
-              size="sm"
-              color="neutral"
-              variant="solid"
-              :label="acceptLabel"
-              :disabled="isSwitching"
-              @click="handleAccept"
-            />
-
-            <!-- Dismiss -->
-            <UButton
-              size="sm"
+              size="xs"
               color="neutral"
               variant="ghost"
               square
-              aria-label="Dismiss"
+              :aria-label="$t('common.dismiss', 'Dismiss')"
               @click="handleDismiss"
             >
-              <UIcon name="i-lucide:x" class="size-4" />
+              <UIcon name="i-lucide:x" class="size-3.5" />
             </UButton>
           </div>
         </div>
-      </UContainer>
+
+        <!-- Content -->
+        <div class="p-4">
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
+            {{ message }}
+          </p>
+
+          <!-- Action buttons -->
+          <div class="flex gap-2">
+            <UButton
+              size="sm"
+              color="primary"
+              variant="solid"
+              class="flex-1"
+              :disabled="isSwitching"
+              @click="handleAccept"
+            >
+              <UIcon v-if="suggestedLocaleConfig?.flag" :name="suggestedLocaleConfig.flag" class="size-4 mr-1.5" />
+              {{ acceptLabel }}
+            </UButton>
+
+            <UButton
+              size="sm"
+              color="neutral"
+              variant="outline"
+              class="flex-1"
+              @click="handleDismiss"
+            >
+              {{ $t('common.stayHere', 'Stay here') }}
+            </UButton>
+          </div>
+        </div>
+      </div>
     </div>
   </Transition>
 </template>
 
 <script setup lang="ts">
-import type { LocaleConfig } from '~/types/locale'
-
-const { locales } = useI18n()
+const { t } = useI18n()
 const {
-  preference,
   shouldShowSuggestion,
-  changeLocale,
+  suggestedLocale,
+  suggestedLocaleConfig,
+  acceptSuggestion,
   dismissSuggestion,
   isSwitching
 } = useCountryDetection()
 const switchLocalePath = useSwitchLocalePath()
+const route = useRoute()
 
-// Internal state for visibility
+// Internal state for visibility animation
 const isVisible = ref(false)
-const hasBeenDismissed = ref(false)
+const hasBeenDismissedThisSession = ref(false)
 
 // Check if we should show the banner
 const shouldShow = computed(() => {
-  // Don't show if already dismissed in this session
-  if (hasBeenDismissed.value) return false
+  // Don't show if dismissed this session
+  if (hasBeenDismissedThisSession.value) return false
 
-  // Use the composable's logic
+  // Don't show on error pages or auth pages
+  if (route.path.includes('error') || route.path.includes('auth')) return false
+
+  // Use the composable's logic and visibility state
   return shouldShowSuggestion.value && isVisible.value
 })
 
-// Get suggested locale info
-const suggestedLocale = computed((): LocaleConfig | undefined => {
-  const pref = preference.value
-  if (!pref?.detected_locale) return undefined
-
-  return (locales.value as LocaleConfig[]).find(
-    l => l.code === pref.detected_locale
-  )
-})
-
-// Build message based on detected locale
+// Single consistent message for all pages
 const message = computed(() => {
-  const suggested = suggestedLocale.value
-  if (!suggested) return ''
-
-  // Use simple, clear messaging
-  const countryName = suggested.name
-
-  // Check if we're showing prices (on pricing page)
-  const route = useRoute()
-  const isPricingRelated = route.path.includes('pricing') ||
-                          route.path.includes('konty-')
-
-  if (isPricingRelated) {
-    return `Looks like you're in ${countryName}. See prices in local currency?`
-  }
-
-  return `It looks like you're in ${countryName}. Would you like to switch?`
+  return t('banner.message')
 })
 
 // Accept button label
 const acceptLabel = computed(() => {
-  const suggested = suggestedLocale.value
-  if (!suggested) return 'Switch'
+  const suggested = suggestedLocaleConfig.value
+  if (!suggested) return t('common.switch', 'Switch')
 
-  // Use flag emoji if available
-  return `Switch to ${suggested.name}`
+  return t('banner.switchTo', { country: suggested.name })
 })
 
 // Handle accepting the suggestion
 const handleAccept = async () => {
-  const pref = preference.value
-  if (!pref?.detected_locale) return
+  const targetLocale = suggestedLocale.value
+  if (!targetLocale) return
 
   try {
-    // Switch to detected locale - mark as explicit choice
-    await changeLocale(pref.detected_locale, true)
+    // Use the composable's accept method
+    await acceptSuggestion()
 
-    // Navigate to localized path
-    const newPath = switchLocalePath(pref.detected_locale)
-    if (newPath) {
+    // Navigate to the localized version of current page
+    const newPath = switchLocalePath(targetLocale)
+    if (newPath && newPath !== route.fullPath) {
       await navigateTo(newPath)
     }
 
     // Hide banner
     isVisible.value = false
   } catch (error) {
-    console.error('Failed to switch to suggested locale:', error)
+    console.error('[LocaleBanner] Failed to switch locale:', error)
   }
 }
 
 // Handle dismissing the banner
 const handleDismiss = () => {
-  // Mark as dismissed in preference
+  // Use composable's dismiss (marks current locale as explicit choice)
   dismissSuggestion()
 
   // Hide for this session
-  hasBeenDismissed.value = true
+  hasBeenDismissedThisSession.value = true
   isVisible.value = false
 }
 
-// Show banner after a short delay to avoid layout shift
+// Show banner after a delay to avoid layout shift and let page load
 onMounted(() => {
-  // Only show after hydration and a small delay
+  // Only show after hydration and initial page load
   setTimeout(() => {
     isVisible.value = true
+  }, 2000) // 2 second delay for smooth experience
+})
+
+// Hide when navigating (will recheck on new page)
+watch(() => route.path, () => {
+  isVisible.value = false
+  // Reset after navigation completes
+  setTimeout(() => {
+    if (!hasBeenDismissedThisSession.value) {
+      isVisible.value = true
+    }
   }, 1500)
 })
 </script>
+
+<style scoped>
+/* Ensure banner appears above other content but below modals */
+@media (max-width: 639px) {
+  /* Mobile: slide up from bottom */
+  .fixed {
+    max-width: calc(100vw - 2rem);
+  }
+}
+</style>

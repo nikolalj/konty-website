@@ -1,5 +1,5 @@
 import type { LocaleConfig } from "~/types/locale"
-import { DEFAULT_LOCALE } from "../../config/locale.config"
+import { DEFAULT_LOCALE, VALID_LOCALES } from "../../config/locale.config"
 
 interface SeoMetaOptions {
   title: string
@@ -8,29 +8,60 @@ interface SeoMetaOptions {
   type?: 'website' | 'article' | 'book' | 'profile'
   url?: string              // Optional canonical override
   robots?: string           // Optional robots override per page
+  noindex?: boolean         // Convenience flag to noindex a page
+}
+
+/**
+ * Get all locale variants of the current URL
+ * Useful for generating alternate links in structured data
+ */
+export function getAllLocaleUrls(path: string, siteUrl?: string): Record<string, string> {
+  const baseUrl = siteUrl || 'https://konty.com'
+  const urls: Record<string, string> = {}
+  
+  // Remove any existing locale prefix
+  const cleanPath = path.replace(/^\/(me|ba|us)/, '') || '/'
+  
+  VALID_LOCALES.forEach(locale => {
+    const localePath = locale === DEFAULT_LOCALE 
+      ? cleanPath 
+      : `/${locale}${cleanPath}`
+    urls[locale] = `${baseUrl}${localePath}`
+  })
+  
+  return urls
 }
 
 /**
  * Generate hreflang tags for all available locales
+ * Following Google's best practices for international SEO
  */
-function generateHreflangTags(currentPath: string, locales: LocaleConfig[], currentLocale: string, siteUrl: string) {
+function generateHreflangTags(
+  currentPath: string, 
+  locales: LocaleConfig[], 
+  currentLocale: string, 
+  siteUrl: string
+) {
   const hreflangTags = []
 
   // Add tag for each locale
   for (const locale of locales) {
+    // Build the URL for this locale variant
     const localePath = locale.code === DEFAULT_LOCALE
-      ? currentPath // Default locale has no prefix
+      ? currentPath // Default locale has no prefix (clean URLs)
       : `/${locale.code}${currentPath}`
 
+    // Use proper language-region format (e.g., sr-RS for Serbian in Serbia)
     hreflangTags.push({
       rel: 'alternate',
-      hreflang: locale.iso || locale.code,
+      hreflang: locale.iso, // Always use ISO format like sr-RS, en-US
       href: `${siteUrl}${localePath}`
     })
   }
 
-  // Add x-default tag pointing to the default locale
-  const defaultPath = currentPath
+  // Add x-default tag pointing to the default locale (RS - primary market)
+  // This tells Google which version to show when locale can't be determined
+  const defaultPath = currentPath // Since DEFAULT_LOCALE is 'rs' with no prefix
   hreflangTags.push({
     rel: 'alternate',
     hreflang: 'x-default',
@@ -93,8 +124,8 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
     twitterDescription: options.description,
     twitterImage: seoImage,
 
-    // Robots (page-specific override supported)
-    robots: options.robots || 'index, follow',
+    // Robots (page-specific override or noindex flag)
+    robots: options.noindex ? 'noindex, nofollow' : (options.robots || 'index, follow'),
     author: 'Konty'
   })
 

@@ -11,7 +11,12 @@
     "requestDemo": "Show Me My ROI",
     "explorePlans": "Calculate Your Savings",
     "hospitality": "Hospitality",
-    "retail": "Retail"
+    "retail": "Retail",
+    "languageSuggestion": "Language Suggestion",
+    "dismiss": "Dismiss",
+    "stayHere": "Stay here",
+    "switch": "Switch",
+    "recommended": "Recommended"
   },
   "nav": {
     "products": "Products",
@@ -388,5 +393,48 @@
       "viewDemo": "Watch 2-Min Demo",
       "features": "Zero downtime • Auto-reorder • 30-second support"
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Konty - Professional POS System for Restaurants & Retail",
+      "description": "Reliable cloud POS system trusted by 25,000+ businesses. 30-second support response. Switch in 48 hours. Keep your hardware."
+    },
+    "products": {
+      "title": "Products - Konty POS Solutions",
+      "description": "Choose the perfect POS solution for your business. Specialized systems for restaurants, cafes, retail stores, and chains."
+    },
+    "pricing": {
+      "title": "Pricing - Konty POS System",
+      "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start free for 30 days."
+    },
+    "kontyHospitality": {
+      "title": "Restaurant POS System - Konty Hospitality",
+      "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place."
+    },
+    "kontyRetail": {
+      "title": "Retail POS System - Konty Retail",
+      "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains."
+    },
+    "demo": {
+      "title": "Book a Demo - Konty POS",
+      "description": "See Konty in action. Free 15-minute demo tailored to your business. No obligations."
+    },
+    "about": {
+      "title": "About Us - Konty Team",
+      "description": "26+ years of POS system development experience. Supporting local businesses with reliable technology."
+    },
+    "terms": {
+      "title": "Terms of Service - Konty",
+      "description": "Terms of service for Konty POS system and related services."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Konty",
+      "description": "How Konty protects your data and your customers' privacy."
+    }
+  },
+  "banner": {
+    "message": "Choose a country to see content specific to your location",
+    "switchTo": "View {country} version",
+    "stayHere": "Stay here"
   }
 }

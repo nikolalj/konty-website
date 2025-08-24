@@ -62,13 +62,10 @@ export interface DetectCountryResponse {
 }
 
 /**
- * Locale preference structure for improved cookie
+ * Simplified locale preference structure
  */
 export interface LocalePreference {
-  explicit_locale?: ValidLocale    // User manually selected
-  detected_country?: string         // Where they actually are  
-  detected_locale?: ValidLocale     // What we detected
-  preference_type: 'manual' | 'detected' | 'default'
-  timestamp: string
-  dismissed_suggestion?: boolean    // User dismissed banner
+  locale: ValidLocale           // The locale to use
+  isExplicit: boolean          // true = user chose, false = detected
+  timestamp: string             // When this was set
 }
