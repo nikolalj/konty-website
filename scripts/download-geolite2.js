@@ -76,28 +76,48 @@ async function main() {
     await downloadFile(DOWNLOAD_URL, TEMP_FILE)
     console.log('✅ Download complete')
 
-    // Extract using tar command (more reliable)
-    console.log('📦 Extracting database...')
-    const { stdout, stderr } = await execAsync(
-      `tar -xzf ${TEMP_FILE} -C ${DB_DIR} --strip-components=1 '*.mmdb'`,
-      { cwd: process.cwd() }
+    // First, let's see what's in the archive
+    console.log('🔍 Examining archive contents...')
+    const { stdout: contents } = await execAsync(
+      `tar -tzf ${TEMP_FILE} | grep -E '\\.mmdb$' | head -1`
     )
 
-    if (stderr && !stderr.includes('Removing leading')) {
-      console.error('Warning:', stderr)
+    if (contents.trim()) {
+      console.log(`📦 Found database: ${contents.trim()}`)
+
+      // Extract the specific file
+      console.log('📦 Extracting database...')
+      const { stdout, stderr } = await execAsync(
+        `tar -xzf ${TEMP_FILE} -C ${DB_DIR} --wildcards '*.mmdb'`
+      )
+
+      if (stderr && !stderr.includes('Removing leading')) {
+        console.error('Warning:', stderr)
+      }
+    } else {
+      // If no .mmdb found with grep, extract everything and find it
+      console.log('📦 Extracting all files...')
+      await execAsync(`tar -xzf ${TEMP_FILE} -C ${DB_DIR}`)
     }
 
     // Find and rename the .mmdb file
-    const { stdout: files } = await execAsync(`find ${DB_DIR} -name "*.mmdb"`)
+    const { stdout: files } = await execAsync(`find ${DB_DIR} -name "*.mmdb" -type f`)
     const mmdbFile = files.trim().split('\n')[0]
 
+    if (!mmdbFile) {
+      throw new Error('No .mmdb file found in archive')
+    }
+
     if (mmdbFile && mmdbFile !== DB_PATH) {
-      const { stdout: mvResult } = await execAsync(`mv "${mmdbFile}" "${DB_PATH}"`)
+      await execAsync(`mv "${mmdbFile}" "${DB_PATH}"`)
       console.log('✅ Database renamed to GeoLite2-Country.mmdb')
     }
 
-    // Clean up temp file
+    // Clean up temp file and any extracted directories
     unlinkSync(TEMP_FILE)
+
+    // Clean up extracted directory structure if it exists
+    await execAsync(`find ${DB_DIR} -type d -name "GeoLite2-Country*" -exec rm -rf {} + 2>/dev/null || true`)
 
     console.log('✅ GeoLite2 database installed successfully!')
     console.log(`📁 Location: ${DB_PATH}`)
