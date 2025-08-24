@@ -32,9 +32,8 @@ pnpm run update-geolite2
 ## Development without Database
 
 If you don't have the database yet, the app will fallback to:
-1. CloudFlare headers (if deployed)
-2. API-based detection
-3. Default locale (RS)
+1. API-based detection (country.is)
+2. Default locale (RS)
 
 ## License
 

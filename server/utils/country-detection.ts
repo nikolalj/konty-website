@@ -1,27 +1,82 @@
 import type { H3Event } from 'h3'
 import type { ValidLocale } from '~/types/locale'
+import type { ReaderModel } from '@maxmind/geoip2-node'
+import { Reader } from '@maxmind/geoip2-node'
+import { existsSync } from 'fs'
+import { join } from 'path'
 import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '../../config/locale.config'
 
 /**
- * Simple country detection utility
- * Clean, straightforward, no overengineering
+ * Country detection with MaxMind and API fallback
+ * Simple, clean, all in one file
  */
+
+// MaxMind database reader (singleton)
+let maxmindReader: ReaderModel | null = null
+
+/**
+ * Get client IP from request headers
+ */
+function getClientIP(event: H3Event): string | null {
+  const headers = ['x-real-ip', 'x-forwarded-for', 'x-client-ip']
+  
+  for (const header of headers) {
+    const value = getHeader(event, header)
+    if (value) {
+      const ip = value.split(',')[0]?.trim()
+      // Skip local IPs
+      if (ip && !ip.startsWith('127.') && !ip.startsWith('192.168.') && ip !== '::1') {
+        return ip
+      }
+    }
+  }
+  return null
+}
+
+/**
+ * Initialize MaxMind database reader
+ */
+async function initMaxMind(): Promise<ReaderModel | null> {
+  if (maxmindReader) return maxmindReader
+  
+  const dbPath = join(process.cwd(), 'server', 'data', 'GeoLite2-Country.mmdb')
+  if (!existsSync(dbPath)) {
+    console.warn('[MaxMind] Database not found. Run: pnpm download-geolite2')
+    return null
+  }
+  
+  try {
+    maxmindReader = await Reader.open(dbPath)
+    console.log('[MaxMind] Database loaded')
+    return maxmindReader
+  } catch (error) {
+    console.error('[MaxMind] Failed to load database:', error)
+    return null
+  }
+}
 
 /**
  * Get country from IP address
  * Returns 2-letter country code or null
  */
 export async function getCountryFromIP(event: H3Event): Promise<string | null> {
-  // 1. Try MaxMind database (fast, reliable)
-  try {
-    const { detectCountryWithMaxMind } = await import('./maxmind-detection')
-    const country = await detectCountryWithMaxMind(event)
-    if (country) return country
-  } catch {
-    // MaxMind not available, continue to fallback
+  // 1. Try MaxMind database (fast, local)
+  const reader = await initMaxMind()
+  if (reader) {
+    const ip = getClientIP(event)
+    if (ip) {
+      try {
+        const result = reader.country(ip)
+        if (result.country?.isoCode) {
+          return result.country.isoCode
+        }
+      } catch {
+        // IP not found in database
+      }
+    }
   }
 
-  // 2. Fallback to API (slower, but works without database)
+  // 2. Fallback to API (slower)
   try {
     const response = await $fetch<{ country?: string }>('https://api.country.is/', {
       timeout: 1500,
@@ -29,7 +84,7 @@ export async function getCountryFromIP(event: H3Event): Promise<string | null> {
     })
     if (response?.country) return response.country
   } catch {
-    // API failed, that's ok
+    // API failed
   }
 
   return null

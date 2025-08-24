@@ -87,7 +87,7 @@ async function main() {
 
       // Extract the specific file
       console.log('📦 Extracting database...')
-      const { stdout, stderr } = await execAsync(
+      const { stderr } = await execAsync(
         `tar -xzf ${TEMP_FILE} -C ${DB_DIR} --wildcards '*.mmdb'`
       )
 

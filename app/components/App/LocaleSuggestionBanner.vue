@@ -142,24 +142,29 @@ const handleDismiss = () => {
   isVisible.value = false
 }
 
-// Show banner after a delay to avoid layout shift and let page load
+// Simple timer for delayed visibility
+let timer: NodeJS.Timeout | undefined
+
 onMounted(() => {
-  // Only show after hydration and initial page load
-  setTimeout(() => {
+  timer = setTimeout(() => {
     isVisible.value = true
-  }, 2000) // 2 second delay for smooth experience
+  }, 2000)
 })
 
-// Hide when navigating (will recheck on new page)
+// Reset on navigation
 watch(() => route.path, () => {
+  clearTimeout(timer)
   isVisible.value = false
-  // Reset after navigation completes
-  setTimeout(() => {
-    if (!hasBeenDismissedThisSession.value) {
+  
+  if (!hasBeenDismissedThisSession.value) {
+    timer = setTimeout(() => {
       isVisible.value = true
-    }
-  }, 1500)
+    }, 1500)
+  }
 })
+
+// Cleanup
+onUnmounted(() => clearTimeout(timer))
 </script>
 
 <style scoped>

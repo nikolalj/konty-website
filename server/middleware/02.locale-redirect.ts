@@ -15,6 +15,9 @@ export default defineEventHandler(async (event: H3Event) => {
   // Detect user's locale (from cookie or IP)
   const { locale } = await detectUserLocale(event)
   
+  // Store detected locale in event context for SSR
+  event.context.detectedLocale = locale
+  
   // Redirect to localized home if not default locale
   if (locale !== DEFAULT_LOCALE) {
     return sendRedirect(event, `/${locale}`, 302)

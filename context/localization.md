@@ -71,7 +71,7 @@ Simple cookie structure stores user preference:
 
 - **Cookie name**: `konty-locale`
 - **Duration**: 1 year
-- **Size**: ~50 bytes
+- **Size**: ~30 bytes
 
 ### 3. URL Structure
 
@@ -131,10 +131,11 @@ When users browse to a different country's version, we suggest their detected lo
 - If they stay: Marks Serbian as their choice
 
 **Smart behavior:**
-- Only shows for external visits (not when browsing internally)
+- Shows when locale mismatch is detected
 - Respects explicit choices (won't nag if user chose)
 - Appears after 2-second delay (prevents layout shift)
 - Mobile-friendly (slides from bottom on phones)
+- Hidden on error and auth pages
 
 ### 3. Country Selector
 
@@ -236,17 +237,21 @@ Each locale has proper SEO setup:
 
 ```
 konty-website/
+├── config/
+│   └── locale.config.ts              # Central locale configuration
 ├── server/
 │   ├── data/
 │   │   └── GeoLite2-Country.mmdb    # 9.2MB country database
 │   ├── middleware/
-│   │   └── 01.locale-redirect.ts    # Root path redirect
+│   │   ├── 01.dynamic-robots.ts     # Dynamic robots.txt
+│   │   └── 02.locale-redirect.ts    # Root path redirect
 │   └── utils/
-│       ├── country-detection.ts     # Main detection logic
-│       └── maxmind-detection.ts     # Database lookups
+│       └── country-detection.ts     # Detection logic with MaxMind
 ├── app/
 │   ├── composables/
 │   │   └── useCountryDetection.ts   # Vue composable
+│   ├── plugins/
+│   │   └── locale-payload.server.ts # Server-side locale injection
 │   ├── components/
 │   │   ├── App/
 │   │   │   ├── CountrySelector.vue  # Flag dropdown
@@ -371,6 +376,27 @@ curl https://konty.com/us/pricing
 
 **Q: Is this GDPR compliant?**
 **A:** Yes - we only detect country (not track users), cookie is functional (not marketing).
+
+## Implementation Details
+
+### Server-Client Communication
+The detected locale is passed from server to client using Nuxt's payload system:
+1. Server middleware detects locale and sets `event.context.detectedLocale`
+2. Server plugin (`locale-payload.server.ts`) injects it into `nuxtApp.payload`
+3. Client composable reads from `nuxtApp.payload.detectedLocale`
+
+### Timer Management
+The suggestion banner uses a simple timer pattern:
+- 2-second delay on initial mount to prevent layout shift
+- 1.5-second delay on navigation
+- Automatic cleanup on unmount
+
+### SEO Implementation
+Each page includes:
+- Canonical URL for its locale version
+- Hreflang tags for all locale variants
+- Proper og:locale meta tag
+- HTML lang attribute
 
 ## Summary
 

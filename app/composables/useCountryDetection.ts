@@ -13,9 +13,16 @@ export function useCountryDetection() {
     return (locales.value as LocaleConfig[]).find(l => l.code === locale.value)
   })
   
-  // Get suggested locale from server payload
+  // Get suggested locale from server detection via payload
   const suggestedLocale = computed(() => {
-    return nuxtApp.payload.suggestedLocale as ValidLocale | undefined
+    // Check payload for detected locale
+    const detected = nuxtApp.payload.detectedLocale as ValidLocale | undefined
+    
+    // Only suggest if different from current locale
+    if (detected && detected !== locale.value) {
+      return detected
+    }
+    return undefined
   })
   
   // Get suggested locale config
@@ -31,20 +38,6 @@ export function useCountryDetection() {
   
   // Switching state
   const isSwitching = ref(false)
-  
-  /**
-   * Get locale cookie
-   */
-  function getLocaleCookie() {
-    const cookie = useCookie('konty-locale')
-    if (!cookie.value) return null
-    
-    try {
-      return JSON.parse(cookie.value as string)
-    } catch {
-      return null
-    }
-  }
   
   /**
    * Change locale and save preference
