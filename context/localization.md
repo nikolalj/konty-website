@@ -23,7 +23,7 @@ Visitor arrives → Detect country → Show right version → Remember choice
 1. Same user visits `konty.com` next week
 2. System reads cookie: "This user prefers ME version"
 3. Immediately redirects to `konty.com/me`
-4. No detection needed - instant (0ms)
+4. No detection needed - uses saved preference (0ms)
 
 **Scenario 3: User manually switches country**
 1. Montenegrin user clicks country selector (flag icon)
@@ -397,67 +397,3 @@ Each page includes:
 - Hreflang tags for all locale variants
 - Proper og:locale meta tag
 - HTML lang attribute
-
-## Recent Changes & Optimizations (2025-08-25)
-
-### 1. Extended Redirect Coverage
-**Problem**: Locale redirects only worked for root path (`/`), causing visitors to see wrong prices when landing on `/pricing` or product pages.
-**Solution**: Extended redirect logic to cover money-critical pages:
-- `/` - Homepage
-- `/pricing` - Different prices per country
-- `/demo` - Contact info, business hours
-- `/konty-retail` - Product features, local examples
-- `/konty-hospitality` - Product features, local examples
-
-### 2. Performance Optimizations
-**Detection Skipping**: Now skips country detection when:
-- User has explicit locale choice (manually selected)
-- User on localized URL with explicit choice
-- ~40-60% reduction in detection calls for returning users
-
-**IP-Based Caching**: Added 5-minute cache for country detection:
-- Cache size: Max 1000 entries (FIFO eviction)
-- TTL: 5 minutes
-- Lazy cleanup on access
-- Saves 5-15ms per cached request
-
-### 3. Translation Consistency Fixes
-**Fixed Missing Keys**:
-- Added missing banner and common keys to Montenegro and Bosnia locales
-- Fixed `salesAnalytics` → `quickCheckout` mismatch in Features component
-- All locales now have consistent key structure
-
-**Cleaned Up**:
-- Identified ~30+ unused translation keys (kept for future use)
-- Verified all used keys exist in all locale files
-
-### 4. Smart Redirect Logic
-**Current Behavior**:
-```javascript
-// Skip detection if user made explicit choice
-if (cookie?.explicit) return
-
-// Only redirect if:
-// - No cookie (first visit)
-// - OR location changed from saved preference
-const shouldRedirect = !cookie || cookie.locale !== detectedLocale
-```
-
-### 5. Banner Context Messages
-Banner now shows different messages based on context:
-- **After redirect**: "We've directed you to the {country} version based on your location"
-- **Suggestion**: "It looks like you're in {country}. Would you like to switch?"
-
-## Summary
-
-The localization system provides:
-1. **Automatic** country detection (5-15ms, with caching)
-2. **Smart** redirects for all money-critical pages
-3. **Persistent** preferences via cookies
-4. **Manual** control through country selector
-5. **SEO-friendly** implementation with proper tags
-6. **Fast** performance using local database + caching
-7. **Reliable** fallbacks when detection fails
-8. **Optimized** to skip unnecessary detection (~40-60% reduction)
-
-Result: Users always see content relevant to their country, with local prices and language, while maintaining full control over their preference.

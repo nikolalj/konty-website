@@ -73,43 +73,56 @@ export default defineEventHandler(async (event: H3Event) => {
   try {
     // Get current state
     const cookie = getLocaleCookie(event)
-    if(cookie?.explicit) return
-
-    const { locale: detectedLocale } = await detectUserLocale(event)
-
-    // Store for SSR context (banner component uses this)
-    event.context.detectedLocale = detectedLocale
-
-    // Redirect if:
-    // - No cookie (first visit)
-    // - OR cookie not explicit AND location changed
-    const shouldRedirect = !cookie || cookie.locale !== detectedLocale
-
-    if (!shouldRedirect) return
+    
+    // Determine which locale to use
+    let targetLocale: ValidLocale
+    
+    if (cookie?.explicit) {
+      // User explicitly chose a locale - use their choice
+      targetLocale = cookie.locale
+    } else {
+      // Auto-detect locale
+      const { locale: detectedLocale } = await detectUserLocale(event)
+      
+      // Store for SSR context (banner component uses this)
+      event.context.detectedLocale = detectedLocale
+      
+      // Use cookie locale if exists (and not explicit), otherwise use detected
+      targetLocale = cookie?.locale || detectedLocale
+    }
 
     // Don't redirect default locale to itself
-    if (path === '/' && detectedLocale === DEFAULT_LOCALE) return
+    if (path === '/' && targetLocale === DEFAULT_LOCALE) return
+    
+    // For non-default locales, always redirect to localized path
+    // This ensures users always see the correct URL for their locale
+    if (targetLocale === DEFAULT_LOCALE) {
+      return // Default locale stays at root
+    }
 
     // 4. BUILD TARGET URL - Preserve query params
 
     const queryString = new URLSearchParams(query as Record<string, string>).toString()
-    const targetPath = detectedLocale === DEFAULT_LOCALE
+    const targetPath = targetLocale === DEFAULT_LOCALE
       ? path
-      : `/${detectedLocale}${path === '/' ? '' : path}`
+      : `/${targetLocale}${path === '/' ? '' : path}`
     const targetUrl = queryString ? `${targetPath}?${queryString}` : targetPath
 
     // 5. SET COOKIE & REDIRECT
-
-    setCookie(event, 'konty-locale', JSON.stringify({
-      locale: detectedLocale,
-      explicit: false,      // Auto-detected, not user choice
-      wasRedirected: true   // Trigger banner notification
-    }), {
-      httpOnly: false,
-      secure: !import.meta.dev,
-      sameSite: 'lax',
-      maxAge: 60 * 60 * 24 * 365  // 1 year
-    })
+    
+    // Only update cookie if it's a new detection or locale changed
+    if (!cookie || cookie.locale !== targetLocale) {
+      setCookie(event, 'konty-locale', JSON.stringify({
+        locale: targetLocale,
+        explicit: false,      // Auto-detected, not user choice
+        wasRedirected: true   // Trigger banner notification
+      }), {
+        httpOnly: false,
+        secure: !import.meta.dev,
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24 * 365  // 1 year
+      })
+    }
 
     return sendRedirect(event, targetUrl, 302)
 
