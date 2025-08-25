@@ -43,8 +43,23 @@ export function useCountryDetection() {
     }
   })
   
+  // Check if user has made an explicit locale choice
+  const hasExplicitChoice = computed(() => {
+    const cookie = useCookie('konty-locale')
+    if (!cookie.value) return false
+    try {
+      const parsed = JSON.parse(cookie.value as string)
+      return parsed.explicit === true
+    } catch {
+      return false
+    }
+  })
+  
   // Should we show suggestion banner?
   const shouldShowSuggestion = computed(() => {
+    // Never show if user made explicit choice
+    if (hasExplicitChoice.value) return false
+    
     // Show if was just redirected OR locale mismatch detected
     return wasRedirected.value || 
       (!!suggestedLocale.value && suggestedLocale.value !== locale.value)
@@ -66,7 +81,8 @@ export function useCountryDetection() {
       const cookie = useCookie('konty-locale')
       cookie.value = JSON.stringify({
         locale: newLocale,
-        explicit: isExplicit
+        explicit: isExplicit,
+        wasRedirected: false  // Clear any redirect flag when manually changing
       })
       
       // Update i18n locale

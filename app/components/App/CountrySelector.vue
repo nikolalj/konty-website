@@ -86,12 +86,18 @@ const items = computed(() => {
     onSelect: async () => {
       if (locale.value !== loc.code && !isSwitching.value) {
         try {
-          // Change locale - mark as explicit user choice
-          await changeLocale(loc.code, true)
+          // Update cookie to mark as explicit user choice
+          const cookie = useCookie('konty-locale')
+          cookie.value = JSON.stringify({
+            locale: loc.code,
+            explicit: true,
+            wasRedirected: false
+          })
 
-          // Navigate to localized path
+          // Navigate to localized path - the navigation will handle locale switching
           const newPath = switchLocalePath(loc.code)
-          if (newPath && newPath !== route.fullPath) {
+          if (newPath) {
+            // Navigate internally - i18n module will handle locale switch and load translations
             await navigateTo(newPath)
           }
         } catch (error) {
