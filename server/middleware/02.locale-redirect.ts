@@ -8,13 +8,13 @@ import { detectUserLocale } from '../utils/country-detection'
  */
 export default defineEventHandler(async (event: H3Event) => {
   const url = event.path || ''
-  console.log('locale redirect init ---------- ' + url)
+
   // Only handle root path
   if (url !== '/' && url !== '') return
 
   // Detect user's locale (from cookie or IP)
   const { locale } = await detectUserLocale(event)
-  console.log('detected locale ---------- ' + locale)
+
   // Store detected locale in event context for SSR
   event.context.detectedLocale = locale
 

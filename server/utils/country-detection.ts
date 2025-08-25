@@ -63,8 +63,7 @@ export async function getCountryFromIP(event: H3Event): Promise<string | null> {
   // 1. Try MaxMind database (fast, local)
   const reader = await initMaxMind()
   if (reader) {
-    const ip = getClientIP(event) || '109.228.116.164'
-    console.log('getCountryFromIP -------------------- ' + ip)
+    const ip = getClientIP(event)
     if (ip) {
       try {
         const result = reader.country(ip)
@@ -158,9 +157,6 @@ export async function detectUserLocale(event: H3Event): Promise<{
 
   // 2. New user - detect country
   const country = await getCountryFromIP(event)
-
-  console.log('detected country ---------- ' + country)
-
   const locale = countryToLocale(country)
 
   // 3. Save preference (not explicit yet)
