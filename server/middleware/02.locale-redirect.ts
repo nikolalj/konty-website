@@ -50,9 +50,15 @@ export default defineEventHandler(async (event: H3Event) => {
   const pathSegments = path.split('/').filter(Boolean)
   const firstSegment = pathSegments[0]
   if (firstSegment && VALID_LOCALES.includes(firstSegment as ValidLocale)) {
-    // Already localized - skip detection if user has explicit choice
+    // Already localized - check if we should detect for banner
     const cookie = getLocaleCookie(event)
-    if (cookie?.explicit) return // User made a choice, respect it
+    
+    // If user made explicit choice, don't suggest anything
+    if (cookie?.explicit) {
+      // Clear any detected locale to prevent banner
+      event.context.detectedLocale = undefined
+      return
+    }
     
     // Only detect for banner if no explicit choice (might have traveled)
     try {
@@ -80,6 +86,8 @@ export default defineEventHandler(async (event: H3Event) => {
     if (cookie?.explicit) {
       // User explicitly chose a locale - use their choice
       targetLocale = cookie.locale
+      // Don't set detected locale to prevent banner
+      event.context.detectedLocale = undefined
     } else {
       // Auto-detect locale
       const { locale: detectedLocale } = await detectUserLocale(event)
@@ -111,11 +119,12 @@ export default defineEventHandler(async (event: H3Event) => {
     // 5. SET COOKIE & REDIRECT
     
     // Only update cookie if it's a new detection or locale changed
+    // Preserve explicit flag if user has made a choice
     if (!cookie || cookie.locale !== targetLocale) {
       setCookie(event, 'konty-locale', JSON.stringify({
         locale: targetLocale,
-        explicit: false,      // Auto-detected, not user choice
-        wasRedirected: true   // Trigger banner notification
+        explicit: cookie?.explicit || false,  // Preserve explicit flag if it exists
+        wasRedirected: !cookie?.explicit      // Only show banner if not explicit choice
       }), {
         httpOnly: false,
         secure: !import.meta.dev,
