@@ -19,7 +19,7 @@ let maxmindReader: ReaderModel | null = null
  */
 function getClientIP(event: H3Event): string | null {
   const headers = ['x-real-ip', 'x-forwarded-for', 'x-client-ip']
-  
+
   for (const header of headers) {
     const value = getHeader(event, header)
     if (value) {
@@ -38,13 +38,13 @@ function getClientIP(event: H3Event): string | null {
  */
 async function initMaxMind(): Promise<ReaderModel | null> {
   if (maxmindReader) return maxmindReader
-  
+
   const dbPath = join(process.cwd(), 'server', 'data', 'GeoLite2-Country.mmdb')
   if (!existsSync(dbPath)) {
     console.warn('[MaxMind] Database not found. Run: pnpm download-geolite2')
     return null
   }
-  
+
   try {
     maxmindReader = await Reader.open(dbPath)
     console.log('[MaxMind] Database loaded')
@@ -63,7 +63,8 @@ export async function getCountryFromIP(event: H3Event): Promise<string | null> {
   // 1. Try MaxMind database (fast, local)
   const reader = await initMaxMind()
   if (reader) {
-    const ip = getClientIP(event)
+    const ip = getClientIP(event) || '109.228.116.164'
+    console.log('getCountryFromIP -------------------- ' + ip)
     if (ip) {
       try {
         const result = reader.country(ip)
@@ -114,7 +115,7 @@ export interface LocaleCookie {
 export function getLocaleCookie(event: H3Event): LocaleCookie | null {
   const cookieValue = getCookie(event, 'konty-locale')
   if (!cookieValue) return null
-  
+
   try {
     return JSON.parse(cookieValue)
   } catch {
@@ -128,7 +129,7 @@ export function getLocaleCookie(event: H3Event): LocaleCookie | null {
  */
 export function setLocaleCookie(event: H3Event, locale: ValidLocale, explicit: boolean = false) {
   const cookie: LocaleCookie = { locale, explicit }
-  
+
   setCookie(event, 'konty-locale', JSON.stringify(cookie), {
     httpOnly: false,    // Allow client-side access
     secure: !import.meta.dev,
@@ -157,11 +158,14 @@ export async function detectUserLocale(event: H3Event): Promise<{
 
   // 2. New user - detect country
   const country = await getCountryFromIP(event)
+
+  console.log('detected country ---------- ' + country)
+
   const locale = countryToLocale(country)
-  
+
   // 3. Save preference (not explicit yet)
   setLocaleCookie(event, locale, false)
-  
+
   return {
     locale,
     isNewUser: true,

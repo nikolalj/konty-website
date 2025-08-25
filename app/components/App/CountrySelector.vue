@@ -17,9 +17,11 @@
         class="relative"
       >
         <!-- Show suggestion indicator if there's a mismatch -->
-        <div v-if="suggestedLocale && suggestedLocale !== locale" 
-             class="absolute -top-1 -right-1 size-2 bg-primary-500 rounded-full animate-pulse" />
-        
+        <div
+          v-if="suggestedLocale && suggestedLocale !== locale"
+          class="absolute -top-1 -right-1 size-2 bg-primary-500 rounded-full animate-pulse"
+        />
+
         <UIcon
           v-if="!isSwitching"
           :name="currentLocale?.flag || 'i-lucide:globe'"
@@ -36,25 +38,20 @@
         <div class="flex items-center justify-between w-full">
           <div class="flex items-center gap-3">
             <UIcon :name="item.flag" class="size-5" />
-            <div class="flex flex-col">
-              <span class="text-sm">{{ item.label }}</span>
-              <span v-if="item.currency" class="text-xs text-gray-500 dark:text-gray-400">
-                {{ item.currency }}
-              </span>
-            </div>
+            <span class="text-sm">{{ item.label }}</span>
           </div>
-          
+
           <div class="flex items-center gap-2">
             <!-- Recommended badge -->
-            <UBadge 
-              v-if="item.isRecommended" 
-              size="xs" 
-              color="primary" 
+            <UBadge
+              v-if="item.isRecommended"
+              size="xs"
+              color="primary"
               variant="soft"
             >
               {{ $t('common.recommended', 'Recommended') }}
             </UBadge>
-            
+
             <!-- Current locale check -->
             <UIcon
               v-if="item.code === currentLocale?.code"
@@ -72,19 +69,14 @@
 import type { LocaleConfig } from '~/types/locale'
 
 const { locale, locales } = useI18n()
-const { 
-  changeLocale, 
-  currentLocale, 
-  isSwitching,
-  suggestedLocale 
-} = useCountryDetection()
+const { changeLocale, currentLocale, isSwitching, suggestedLocale } = useCountryDetection()
 const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
 
 // Build enhanced dropdown items
 const items = computed(() => {
   const suggested = suggestedLocale.value
-  
+
   const localeItems = (locales.value as LocaleConfig[]).map(loc => ({
     label: loc.name,
     code: loc.code,
