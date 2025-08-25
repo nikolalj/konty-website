@@ -46,27 +46,28 @@ export default defineEventHandler(async (event: H3Event) => {
   // Skip static files (.css, .js, .jpg, etc)
   if (path.includes('.') && !path.endsWith('/')) return
 
-  // Skip if already on a localized path (/me/*, /ba/*, /us/*)
+  // If on a localized path do not redirect (/me/*, /ba/*, /us/*)
+  // just inform user in case his detected locale is different than this one
   const pathSegments = path.split('/').filter(Boolean)
   const firstSegment = pathSegments[0]
+
   if (firstSegment && VALID_LOCALES.includes(firstSegment as ValidLocale)) {
-    // Already localized - check if we should detect for banner
     const cookie = getLocaleCookie(event)
-    
-    // If user made explicit choice, don't suggest anything
+
+    // If user made explicit choice we don't care about detected locale
     if (cookie?.explicit) {
-      // Clear any detected locale to prevent banner
       event.context.detectedLocale = undefined
       return
     }
-    
-    // Only detect for banner if no explicit choice (might have traveled)
+
+    // If no explicit choice detect locale and if different inform the user
     try {
       const { locale: detectedLocale } = await detectUserLocale(event)
       event.context.detectedLocale = detectedLocale
     } catch {
       // Silently ignore detection errors on localized paths
     }
+
     return
   }
 
@@ -79,45 +80,27 @@ export default defineEventHandler(async (event: H3Event) => {
   try {
     // Get current state
     const cookie = getLocaleCookie(event)
-    
+
     // Determine which locale to use
     let targetLocale: ValidLocale
-    
+
     if (cookie?.explicit) {
-      // User explicitly chose a locale - use their choice
+      // If user made explicit choice respect it, don't care about detected locale
       targetLocale = cookie.locale
-      // Don't set detected locale to prevent banner
       event.context.detectedLocale = undefined
     } else {
       // Auto-detect locale
       const { locale: detectedLocale } = await detectUserLocale(event)
-      
-      // Store for SSR context (banner component uses this)
+
+      // Store for SSR context
       event.context.detectedLocale = detectedLocale
-      
+
       // Use cookie locale if exists (and not explicit), otherwise use detected
       targetLocale = cookie?.locale || detectedLocale
     }
 
-    // Don't redirect default locale to itself
-    if (path === '/' && targetLocale === DEFAULT_LOCALE) return
-    
-    // For non-default locales, always redirect to localized path
-    // This ensures users always see the correct URL for their locale
-    if (targetLocale === DEFAULT_LOCALE) {
-      return // Default locale stays at root
-    }
+    // 4. SET COOKIE & REDIRECT
 
-    // 4. BUILD TARGET URL - Preserve query params
-
-    const queryString = new URLSearchParams(query as Record<string, string>).toString()
-    const targetPath = targetLocale === DEFAULT_LOCALE
-      ? path
-      : `/${targetLocale}${path === '/' ? '' : path}`
-    const targetUrl = queryString ? `${targetPath}?${queryString}` : targetPath
-
-    // 5. SET COOKIE & REDIRECT
-    
     // Only update cookie if it's a new detection or locale changed
     // Preserve explicit flag if user has made a choice
     if (!cookie || cookie.locale !== targetLocale) {
@@ -133,11 +116,21 @@ export default defineEventHandler(async (event: H3Event) => {
       })
     }
 
+    if (targetLocale === DEFAULT_LOCALE) return
+
+    // 5. BUILD TARGET URL - Preserve query params
+
+    const queryString = new URLSearchParams(query as Record<string, string>).toString()
+    const targetPath = targetLocale === DEFAULT_LOCALE
+      ? path
+      : `/${targetLocale}${path === '/' ? '' : path}`
+    const targetUrl = queryString ? `${targetPath}?${queryString}` : targetPath
+
     return sendRedirect(event, targetUrl, 302)
 
   } catch (error) {
     // Error handling: If anything fails, don't break the site
     console.error('[Locale Redirect]', error)
-    return  // Serve the requested page without redirect
+    return
   }
 })
