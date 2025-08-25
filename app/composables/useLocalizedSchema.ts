@@ -27,7 +27,14 @@ function getLocalizedContact() {
   
   const phone = t('contact.info.phone')
   const email = t('contact.info.email').replace("{'@'}", "@")
-  const address = t('contact.info.structuredAddress')
+  // Get individual address fields
+  const address = {
+    streetAddress: t('contact.info.structuredAddress.streetAddress'),
+    addressLocality: t('contact.info.structuredAddress.addressLocality'),
+    addressRegion: t('contact.info.structuredAddress.addressRegion'),
+    postalCode: t('contact.info.structuredAddress.postalCode'),
+    addressCountry: t('contact.info.structuredAddress.addressCountry')
+  }
   const siteUrl = config.public.siteUrl || 'https://konty.com'
   const currency = localeData.value?.currency || 'EUR'
   const geo = GEO_COORDINATES[locale.value] || GEO_COORDINATES.me
@@ -37,7 +44,7 @@ function getLocalizedContact() {
   return {
     phone,
     email,
-    address: typeof address === 'object' ? address : {},
+    address,
     siteUrl,
     currency,
     geo,
