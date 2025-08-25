@@ -313,7 +313,14 @@
     "info": {
       "phone": "033-123-456",
       "email": "podrska{'@'}konty.com",
-      "address": "Dostupni u cijeloj BiH"
+      "address": "Dostupni u cijeloj BiH",
+      "structuredAddress": {
+        "streetAddress": "Maršala Tita 45",
+        "addressLocality": "Sarajevo",
+        "addressRegion": "Sarajevo",
+        "postalCode": "71000",
+        "addressCountry": "BA"
+      }
     }
   },
   "clients": {
@@ -431,6 +438,28 @@
       "title": "Politika privatnosti - Konty",
       "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca."
     }
+  },
+  "schema": {
+    "organization": {
+      "name": "Konty",
+      "contactType": "korisnička podrška"
+    },
+    "services": {
+      "implementation": {
+        "name": "POS Sistema Implementacija",
+        "description": "Profesionalna instalacija i konfiguracija POS sistema prilagođena potrebama vašeg poslovanja."
+      },
+      "support": {
+        "name": "Tehnička Podrška",
+        "description": "24/7 tehnička podrška za sve Konty POS korisnike. Brzo rješavanje problema i ažuriranja sistema."
+      },
+      "training": {
+        "name": "Obuka Osoblja",
+        "description": "Kompletna obuka vašeg osoblja za rad sa Konty POS sistemom. Uključuje praktičnu obuku i dokumentaciju."
+      }
+    },
+    "openingHours": "Po-Pe 09:00-17:00",
+    "areaServed": "Bosna i Hercegovina"
   },
   "banner": {
     "message": "Izaberite državu da biste vidjeli sadržaj prilagođen vašoj lokaciji",

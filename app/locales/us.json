@@ -313,7 +313,14 @@
     "info": {
       "phone": "1-800-KONTY",
       "email": "help{'@'}konty.com",
-      "address": "Available in all 50 states"
+      "address": "Available in all 50 states",
+      "structuredAddress": {
+        "streetAddress": "Available Online",
+        "addressLocality": "Remote",
+        "addressRegion": "USA",
+        "postalCode": "00000",
+        "addressCountry": "US"
+      }
     }
   },
   "clients": {
@@ -431,6 +438,28 @@
       "title": "Privacy Policy - Konty",
       "description": "How Konty protects your data and your customers' privacy."
     }
+  },
+  "schema": {
+    "organization": {
+      "name": "Konty",
+      "contactType": "customer service"
+    },
+    "services": {
+      "implementation": {
+        "name": "POS System Implementation",
+        "description": "Professional installation and configuration of POS systems tailored to your business needs."
+      },
+      "support": {
+        "name": "Technical Support",
+        "description": "24/7 technical support for all Konty POS users. Fast problem resolution and system updates."
+      },
+      "training": {
+        "name": "Staff Training",
+        "description": "Complete staff training for working with Konty POS system. Includes hands-on training and documentation."
+      }
+    },
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "areaServed": "United States"
   },
   "banner": {
     "message": "Choose a country to see content specific to your location",

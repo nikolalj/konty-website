@@ -313,7 +313,14 @@
     "info": {
       "phone": "011-123-4567",
       "email": "podrska{'@'}konty.com",
-      "address": "Dostupni u celoj Srbiji"
+      "address": "Dostupni u celoj Srbiji",
+      "structuredAddress": {
+        "streetAddress": "Bulevar kralja Aleksandra 123",
+        "addressLocality": "Beograd",
+        "addressRegion": "Beograd",
+        "postalCode": "11000",
+        "addressCountry": "RS"
+      }
     }
   },
   "clients": {
@@ -431,6 +438,28 @@
       "title": "Politika privatnosti - Konty",
       "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca."
     }
+  },
+  "schema": {
+    "organization": {
+      "name": "Konty",
+      "contactType": "korisnička podrška"
+    },
+    "services": {
+      "implementation": {
+        "name": "POS Sistema Implementacija",
+        "description": "Profesionalna instalacija i konfiguracija POS sistema prilagođena potrebama vašeg poslovanja."
+      },
+      "support": {
+        "name": "Tehnička Podrška",
+        "description": "24/7 tehnička podrška za sve Konty POS korisnike. Brzo rešavanje problema i ažuriranja sistema."
+      },
+      "training": {
+        "name": "Obuka Osoblja",
+        "description": "Kompletna obuka vašeg osoblja za rad sa Konty POS sistemom. Uključuje praktičnu obuku i dokumentaciju."
+      }
+    },
+    "openingHours": "Po-Pe 09:00-17:00",
+    "areaServed": "Srbija"
   },
   "banner": {
     "message": "Izaberite državu da biste videli sadržaj prilagođen vašoj lokaciji",

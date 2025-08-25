@@ -20,13 +20,15 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+const config = useRuntimeConfig()
 
 const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
+  const siteUrl = config.public.siteUrl || 'https://konty.com'
   return props.items.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
-    item: `https://konty.com${item.path}`
+    item: `${siteUrl}${item.path}`
   }))
 })
 

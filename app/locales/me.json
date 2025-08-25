@@ -313,7 +313,14 @@
     "info": {
       "phone": "020-123-456",
       "email": "podrska{'@'}konty.com",
-      "address": "Dostupni u cijeloj Crnoj Gori"
+      "address": "Dostupni u cijeloj Crnoj Gori",
+      "structuredAddress": {
+        "streetAddress": "Moskovska 153",
+        "addressLocality": "Podgorica",
+        "addressRegion": "Podgorica",
+        "postalCode": "81000",
+        "addressCountry": "ME"
+      }
     }
   },
   "clients": {
@@ -431,6 +438,28 @@
       "title": "Politika privatnosti - Konty",
       "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca."
     }
+  },
+  "schema": {
+    "organization": {
+      "name": "Konty",
+      "contactType": "korisnička podrška"
+    },
+    "services": {
+      "implementation": {
+        "name": "POS Sistema Implementacija",
+        "description": "Profesionalna instalacija i konfiguracija POS sistema prilagođena potrebama vašeg poslovanja."
+      },
+      "support": {
+        "name": "Tehnička Podrška",
+        "description": "24/7 tehnička podrška za sve Konty POS korisnike. Brzo rješavanje problema i ažuriranja sistema."
+      },
+      "training": {
+        "name": "Obuka Osoblja",
+        "description": "Kompletna obuka vašeg osoblja za rad sa Konty POS sistemom. Uključuje praktičnu obuku i dokumentaciju."
+      }
+    },
+    "openingHours": "Po-Pe 09:00-17:00",
+    "areaServed": "Crna Gora"
   },
   "banner": {
     "message": "Izaberite državu da biste vidjeli sadržaj prilagođen vašoj lokaciji",
