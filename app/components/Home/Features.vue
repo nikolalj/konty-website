@@ -116,8 +116,8 @@ const features = {
       icon: 'i-lucide-user-check'
     },
     {
-      key: 'salesAnalytics',
-      icon: 'i-lucide-trending-up'
+      key: 'quickCheckout',
+      icon: 'i-lucide-zap'
     }
   ]
 }

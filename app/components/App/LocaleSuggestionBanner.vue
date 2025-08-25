@@ -69,17 +69,30 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const {
   shouldShowSuggestion,
   suggestedLocale,
   suggestedLocaleConfig,
   acceptSuggestion,
   dismissSuggestion,
-  isSwitching
+  isSwitching,
+  currentLocale
 } = useCountryDetection()
 const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
+
+// Check if this is a redirect notification
+const wasRedirected = computed(() => {
+  const cookie = useCookie('konty-locale')
+  if (!cookie.value) return false
+  try {
+    const parsed = JSON.parse(cookie.value as string)
+    return parsed.wasRedirected === true
+  } catch {
+    return false
+  }
+})
 
 // Internal state for visibility animation
 const isVisible = ref(false)
@@ -97,9 +110,18 @@ const shouldShow = computed(() => {
   return shouldShowSuggestion.value && isVisible.value
 })
 
-// Single consistent message for all pages
+// Context-aware message
 const message = computed(() => {
-  return t('banner.message')
+  if (wasRedirected.value) {
+    // After redirect: "We've directed you to the [Country] version based on your location"
+    return t('banner.redirected', { 
+      country: currentLocale.value?.name || locale.value.toUpperCase() 
+    })
+  }
+  // Suggestion: "It looks like you're in [Country]. Would you like to switch?"
+  return t('banner.suggestion', { 
+    country: suggestedLocaleConfig.value?.name || 'this region' 
+  })
 })
 
 // Accept button label
@@ -148,6 +170,20 @@ let timer: NodeJS.Timeout | undefined
 onMounted(() => {
   timer = setTimeout(() => {
     isVisible.value = true
+    
+    // Clear the wasRedirected flag after showing banner
+    if (wasRedirected.value) {
+      const cookie = useCookie('konty-locale')
+      if (cookie.value) {
+        try {
+          const parsed = JSON.parse(cookie.value as string)
+          delete parsed.wasRedirected
+          cookie.value = JSON.stringify(parsed)
+        } catch {
+          // Silently ignore cookie parsing errors
+        }
+      }
+    }
   }, 2000)
 })
 

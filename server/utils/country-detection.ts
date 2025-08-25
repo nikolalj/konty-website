@@ -14,6 +14,48 @@ import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '../../config/locale.confi
 // MaxMind database reader (singleton)
 let maxmindReader: ReaderModel | null = null
 
+// Simple IP-based cache with lazy cleanup
+interface CacheEntry {
+  country: string | null
+  timestamp: number
+}
+const detectionCache = new Map<string, CacheEntry>()
+const CACHE_TTL = 60 * 60 * 1000 // 60 minutes
+const MAX_CACHE_SIZE = 1000 // Prevent unbounded growth
+
+/**
+ * Get cached country for IP with lazy expiry check
+ */
+function getCachedCountry(ip: string): string | null | undefined {
+  const entry = detectionCache.get(ip)
+  if (!entry) return undefined
+
+  // Lazy cleanup - delete expired on access
+  if (Date.now() - entry.timestamp > CACHE_TTL) {
+    detectionCache.delete(ip)
+    return undefined
+  }
+
+  return entry.country
+}
+
+/**
+ * Cache country detection result with size limit
+ */
+function setCachedCountry(ip: string, country: string | null) {
+  // Prevent unbounded growth - FIFO eviction
+  if (detectionCache.size >= MAX_CACHE_SIZE) {
+    // Delete oldest entry (first in Map)
+    const firstKey = detectionCache.keys().next().value
+    if (firstKey) detectionCache.delete(firstKey)
+  }
+
+  detectionCache.set(ip, {
+    country,
+    timestamp: Date.now()
+  })
+}
+
 /**
  * Get client IP from request headers
  */
@@ -60,19 +102,29 @@ async function initMaxMind(): Promise<ReaderModel | null> {
  * Returns 2-letter country code or null
  */
 export async function getCountryFromIP(event: H3Event): Promise<string | null> {
+  const ip = getClientIP(event)
+  if (!ip) return null
+
+  // Check cache first
+  const cached = getCachedCountry(ip)
+  if (cached !== undefined) {
+    return cached // Can be null (meaning we cached a failed detection)
+  }
+
+  let country: string | null = null
+
   // 1. Try MaxMind database (fast, local)
   const reader = await initMaxMind()
   if (reader) {
-    const ip = getClientIP(event)
-    if (ip) {
-      try {
-        const result = reader.country(ip)
-        if (result.country?.isoCode) {
-          return result.country.isoCode
-        }
-      } catch {
-        // IP not found in database
+    try {
+      const result = reader.country(ip)
+      if (result.country?.isoCode) {
+        country = result.country.isoCode
+        setCachedCountry(ip, country)
+        return country
       }
+    } catch {
+      // IP not found in database
     }
   }
 
@@ -82,12 +134,16 @@ export async function getCountryFromIP(event: H3Event): Promise<string | null> {
       timeout: 1500,
       retry: 0
     })
-    if (response?.country) return response.country
+    if (response?.country) {
+      country = response.country
+    }
   } catch {
     // API failed
   }
 
-  return null
+  // Cache the result (even if null to avoid repeated lookups)
+  setCachedCountry(ip, country)
+  return country
 }
 
 /**
@@ -100,12 +156,12 @@ export function countryToLocale(country: string | null): ValidLocale {
 }
 
 /**
- * Cookie structure - keep it simple
- * Just locale and whether user explicitly chose it
+ * Cookie structure - tracks locale preference and how it was set
  */
 export interface LocaleCookie {
   locale: ValidLocale
-  explicit: boolean  // true = user chose, false = detected
+  explicit: boolean        // true = user chose, false = detected
+  wasRedirected?: boolean  // true = just redirected (for banner notification)
 }
 
 /**
@@ -138,33 +194,35 @@ export function setLocaleCookie(event: H3Event, locale: ValidLocale, explicit: b
 }
 
 /**
- * Main detection logic - used by middleware
- * Simple flow: Cookie → Detection → Default
+ * Detect user's current locale based on IP
+ * Always returns a locale (DEFAULT_LOCALE if detection fails)
  */
 export async function detectUserLocale(event: H3Event): Promise<{
   locale: ValidLocale
   isNewUser: boolean
   detectedCountry?: string
 }> {
-  // 1. Check cookie first (returning user)
-  const cookie = getLocaleCookie(event)
-  if (cookie) {
+  try {
+    // Always detect current location (don't rely on cookie)
+    const country = await getCountryFromIP(event)
+    const locale = countryToLocale(country)
+
+    // Check if user is new (no cookie)
+    const cookie = getLocaleCookie(event)
+    const isNewUser = !cookie
+
     return {
-      locale: cookie.locale,
-      isNewUser: false
+      locale,
+      isNewUser,
+      detectedCountry: country || undefined
     }
-  }
-
-  // 2. New user - detect country
-  const country = await getCountryFromIP(event)
-  const locale = countryToLocale(country)
-
-  // 3. Save preference (not explicit yet)
-  setLocaleCookie(event, locale, false)
-
-  return {
-    locale,
-    isNewUser: true,
-    detectedCountry: country || undefined
+  } catch (error) {
+    // If anything fails, return default locale
+    console.error('[Locale Detection]', error)
+    return {
+      locale: DEFAULT_LOCALE,
+      isNewUser: true,
+      detectedCountry: undefined
+    }
   }
 }

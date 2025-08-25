@@ -201,10 +201,11 @@ export default defineNuxtConfig({
       inline: ['unhead']
     },
 
-    // Prerendering for SEO
+    // Prerendering disabled - using SSR for dynamic locale detection
+    // All pages need server-side rendering for locale redirects to work
     prerender: {
-      crawlLinks: process.env.APP_ENV === 'production',
-      routes: ['/', '/products', '/pricing', '/konty-retail', '/konty-hospitality'],
+      crawlLinks: false,
+      routes: [], // No prerendering - all pages use SSR
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
 

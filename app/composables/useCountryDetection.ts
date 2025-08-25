@@ -31,9 +31,23 @@ export function useCountryDetection() {
     return (locales.value as LocaleConfig[]).find(l => l.code === suggestedLocale.value)
   })
   
+  // Check if user was just redirected
+  const wasRedirected = computed(() => {
+    const cookie = useCookie('konty-locale')
+    if (!cookie.value) return false
+    try {
+      const parsed = JSON.parse(cookie.value as string)
+      return parsed.wasRedirected === true
+    } catch {
+      return false
+    }
+  })
+  
   // Should we show suggestion banner?
   const shouldShowSuggestion = computed(() => {
-    return !!suggestedLocale.value && suggestedLocale.value !== locale.value
+    // Show if was just redirected OR locale mismatch detected
+    return wasRedirected.value || 
+      (!!suggestedLocale.value && suggestedLocale.value !== locale.value)
   })
   
   // Switching state
@@ -80,7 +94,8 @@ export function useCountryDetection() {
     const cookie = useCookie('konty-locale')
     cookie.value = JSON.stringify({
       locale: locale.value,
-      explicit: true
+      explicit: true,
+      wasRedirected: false  // Clear flag
     })
   }
   

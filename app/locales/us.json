@@ -434,6 +434,8 @@
   },
   "banner": {
     "message": "Choose a country to see content specific to your location",
+    "redirected": "We've directed you to the {country} version based on your location",
+    "suggestion": "It looks like you're in {country}. Would you like to switch?",
     "switchTo": "View {country} version",
     "stayHere": "Stay here"
   }
