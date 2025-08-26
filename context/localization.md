@@ -7,14 +7,14 @@ The Konty website automatically detects where visitors are from and shows them c
 ## Core Principles
 
 1. **Silent redirects** - No "we redirected you" notifications (following Amazon/Apple pattern)
-2. **Respect user choice** - Manual selections are permanent
-3. **Selective localization** - Only conversion-critical pages get localized URLs
-4. **Smart suggestions** - Only suggest different locale when genuinely helpful
+2. **Respect user choice** - Manual selections are permanent (explicit flag)
+3. **Always fresh detection** - Non-explicit users get current location pricing (Option B)
+4. **Selective localization** - Only conversion-critical pages get localized URLs
 
 ## How It Works - Simple Flow
 
 ```
-Visitor arrives → Detect country → Redirect if needed (silent) → Show suggestion only if mismatch
+Visitor arrives → Check if explicit choice → If not, detect country → Redirect to detected locale → Set cookie
 ```
 
 ### Real Examples:
@@ -28,9 +28,10 @@ Visitor arrives → Detect country → Redirect if needed (silent) → Show sugg
 
 **Scenario 2: Returning visitor**
 1. Same user visits `konty.com` next week
-2. System reads cookie: "This user was in ME" 
-3. Immediately redirects to `konty.com/me`
-4. No detection needed - uses saved preference (0ms)
+2. System reads cookie: "This user was in ME, not explicit"
+3. Detects current location again (fresh detection)
+4. If still in ME → redirects to `konty.com/me`
+5. If now in RS → stays on `konty.com` (always fresh for non-explicit)
 
 **Scenario 3: User manually switches country**
 1. Montenegrin user clicks country selector (flag icon)
@@ -117,7 +118,7 @@ Universal content stays at root:
 
 ### 1. Automatic Detection & Silent Redirect
 
-**How it works:**
+**How it works (Option B):**
 ```
                     ┌─────────────┐
                     │ User visits │
@@ -132,20 +133,28 @@ Universal content stays at root:
                 │                     │
              No │                     │ Yes
                 │                     │
-         ┌──────▼──────┐      ┌──────▼──────┐
-         │   Detect    │      │  Use saved  │
-         │   country   │      │ preference  │
-         └──────┬──────┘      └──────┬──────┘
+                │              ┌──────▼──────┐
+                │              │  Explicit?  │
+                │              └──────┬──────┘
                 │                     │
-         ┌──────▼──────┐      ┌──────▼──────┐
-         │  Save in    │      │  Redirect   │
-         │   cookie    │      │  to locale  │
-         └──────┬──────┘      └─────────────┘
-                │
-         ┌──────▼──────┐
-         │   Silent    │
-         │  redirect   │
-         └─────────────┘
+                │          ┌──────────┴──────────┐
+                │          │                     │
+                │       Yes│                  No │
+                │          │                     │
+         ┌──────▼──────┐   │              ┌──────▼──────┐
+         │   Detect    │   │              │   Detect    │
+         │   country   │   │              │   country   │
+         └──────┬──────┘   │              │   (fresh)   │
+                │          │              └──────┬──────┘
+         ┌──────▼──────┐   │              ┌──────▼──────┐
+         │  Save in    │   │              │  Update     │
+         │   cookie    │   │              │   cookie    │
+         └──────┬──────┘   │              └──────┬──────┘
+                │          │                     │
+         ┌──────▼──────┐   ▼              ┌──────▼──────┐
+         │  Redirect   │ Use saved        │  Redirect   │
+         │  to locale  │  locale          │  to locale  │
+         └─────────────┘                  └─────────────┘
 ```
 
 ### 2. Locale Suggestion Banner
@@ -240,15 +249,26 @@ Each locale has proper SEO setup:
 7. Next day: Banner may appear again (not permanent)
 ```
 
-### Journey 4: Permanent Locale Switch
+### Journey 4: Travel Detection (Option B)
 
 ```
-1. Serbian user temporarily in Montenegro
-2. Gets redirected to konty.com/me automatically
-3. Clicks country selector → chooses Serbia
-4. Redirects to konty.com
-5. Cookie updates: {locale: "rs", explicit: true}
-6. Won't see suggestions anymore - explicit choice
+1. Serbian user (non-explicit cookie) travels to Montenegro
+2. Visits konty.com - system detects Montenegro
+3. Gets redirected to konty.com/me (fresh detection)
+4. Sees Montenegro prices in EUR (accurate for current location)
+5. Cookie updates: {locale: "me", explicit: false}
+6. When returns to Serbia, will see Serbian prices again
+```
+
+### Journey 5: Permanent Locale Switch
+
+```
+1. User in Montenegro clicks country selector
+2. Manually chooses "Serbia" from dropdown
+3. Redirects to konty.com
+4. Cookie updates: {locale: "rs", explicit: true}
+5. Will ALWAYS see Serbian version regardless of location
+6. Won't see suggestions anymore - explicit choice respected
 ```
 
 ## Performance Metrics
@@ -411,26 +431,22 @@ curl https://konty.com/us/pricing
 - **"Switch" button**: Permanent choice to suggested locale
 - Button hierarchy: Switch (primary) > Stay (ghost) > X (icon only)
 
-### Cookie vs Explicit Choice
-- **Non-explicit cookie**: User was auto-redirected, can still get suggestions
-- **Explicit cookie**: User manually chose, never show suggestions
+### Cookie vs Explicit Choice (Option B Implementation)
+- **Non-explicit cookie**: Always gets fresh detection on each visit
+- **Explicit cookie**: User manually chose, respects their choice regardless of location
 - Manual country selector always sets explicit = true
-
-### Current Issues (To Be Fixed)
-1. Travel detection broken - uses old cookie instead of new detection
-2. Dead code in redirect logic (unreachable DEFAULT_LOCALE check)
-3. Contact info hardcoded in header (should use translations)
+- Travel scenario: Non-explicit users see prices for current location
 
 ## Summary
 
-The localization system provides:
+The localization system (Option B) provides:
 1. **Automatic** country detection (5-15ms with MaxMind)
 2. **Silent** redirects without notifications
-3. **Smart** suggestions only on locale mismatch
-4. **Persistent** preferences via cookies
+3. **Fresh detection** for non-explicit users (always current prices)
+4. **Explicit choices** respected permanently
 5. **Manual** control through country selector
 6. **SEO-friendly** implementation with proper tags
 7. **Fast** performance using local database
-8. **Respectful** UX following industry best practices
+8. **B2B-optimized** - accurate pricing for current location
 
-Result: Users always see content relevant to their country, with local prices and language, while maintaining full control over their preference.
+Result: Users always see prices and content for their current location (unless they explicitly choose otherwise), ensuring accurate pricing for B2B customers who may travel or operate in multiple countries.
