@@ -462,7 +462,7 @@
   },
   "banner": {
     "message": "Izaberite državu da biste vidjeli sadržaj prilagođen vašoj lokaciji",
-    "redirected": "Prikazali smo vam {country} verziju na osnovu vaše lokacije",
+    "redirected": "Prikazali smo vam verziju sajta na osnovu vaše lokacije ({country})",
     "suggestion": "Izgleda da ste u {country}. Želite li da pređete na lokalnu verziju?",
     "switchTo": "Vidi lokalnu verziju",
     "stayHere": "Ostani ovdje"

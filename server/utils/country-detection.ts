@@ -6,6 +6,11 @@ import { existsSync } from 'fs'
 import { join } from 'path'
 import { DEFAULT_LOCALE, COUNTRY_TO_LOCALE_MAP } from '../../config/locale.config'
 
+export interface LocaleCookie {
+  locale: ValidLocale
+  explicit: boolean
+}
+
 /**
  * Country detection with MaxMind and API fallback
  * Simple, clean, all in one file
@@ -88,9 +93,7 @@ async function initMaxMind(): Promise<ReaderModel | null> {
   }
 
   try {
-    maxmindReader = await Reader.open(dbPath)
-    console.log('[MaxMind] Database loaded')
-    return maxmindReader
+    return await Reader.open(dbPath)
   } catch (error) {
     console.error('[MaxMind] Failed to load database:', error)
     return null
@@ -156,14 +159,6 @@ export function countryToLocale(country: string | null): ValidLocale {
 }
 
 /**
- * Cookie structure - tracks locale preference and how it was set
- */
-export interface LocaleCookie {
-  locale: ValidLocale
-  explicit: boolean
-}
-
-/**
  * Get locale preference from cookie
  */
 export function getLocaleCookie(event: H3Event): LocaleCookie | null {
@@ -218,6 +213,7 @@ export async function detectUserLocale(event: H3Event): Promise<{
   } catch (error) {
     // If anything fails, return default locale
     console.error('[Locale Detection]', error)
+
     return {
       locale: DEFAULT_LOCALE,
       isNewUser: true,
