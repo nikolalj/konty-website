@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Show dropdown -->
     <UDropdownMenu
       :items="items"
       :modal="false"
@@ -12,25 +11,17 @@
         color="neutral"
         variant="ghost"
         square
-        :disabled="isSwitching"
         :aria-label="`Current country: ${currentLocale?.name}`"
         class="relative"
       >
-        <!-- Show suggestion indicator if there's a mismatch -->
         <div
           v-if="suggestedLocale && suggestedLocale !== locale"
-          class="absolute -top-1 -right-1 size-2 bg-primary-500 rounded-full animate-pulse"
+          class="absolute size-2 bg-primary-500 rounded-full animate-pulse"
         />
 
         <UIcon
-          v-if="!isSwitching"
           :name="currentLocale?.flag || 'i-lucide:globe'"
           class="size-5"
-        />
-        <UIcon
-          v-else
-          name="i-lucide:loader-2"
-          class="size-5 animate-spin"
         />
       </UButton>
 
@@ -42,7 +33,6 @@
           </div>
 
           <div class="flex items-center gap-2">
-            <!-- Recommended badge -->
             <UBadge
               v-if="item.isRecommended"
               size="xs"
@@ -52,7 +42,6 @@
               {{ $t('common.recommended', 'Recommended') }}
             </UBadge>
 
-            <!-- Current locale check -->
             <UIcon
               v-if="item.code === currentLocale?.code"
               name="i-lucide:check"
@@ -66,49 +55,49 @@
 </template>
 
 <script setup lang="ts">
-import type { LocaleConfig } from '~/types/locale'
+import type { LocaleConfig, ValidLocale } from '~/types/locale'
 
-const { locale, locales } = useI18n()
-const { changeLocale, currentLocale, isSwitching, suggestedLocale } = useCountryDetection()
+const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
-const route = useRoute()
+const { locale, locales } = useI18n()
+
+const currentLocale: Ref<LocaleConfig | undefined> = ref()
+const suggestedLocale: Ref<ValidLocale | undefined> = ref()
+
+onMounted(() => {
+  currentLocale.value = (locales.value as LocaleConfig[]).find(l => l.code === locale.value)
+  suggestedLocale.value = nuxtApp.payload.detectedLocale !== locale.value ? nuxtApp.payload.detectedLocale as ValidLocale | undefined : undefined
+})
 
 // Build enhanced dropdown items
 const items = computed(() => {
-  const suggested = suggestedLocale.value
-
   const localeItems = (locales.value as LocaleConfig[]).map(loc => ({
     label: loc.name,
     code: loc.code,
     flag: loc.flag,
-    currency: `${loc.currencySymbol} ${loc.currency}`,
-    isRecommended: suggested === loc.code,
+    isRecommended: suggestedLocale.value === loc.code,
     onSelect: async () => {
-      if (locale.value !== loc.code && !isSwitching.value) {
-        try {
-          // Update cookie to mark as explicit user choice
-          const cookie = useCookie('konty-locale')
-          cookie.value = JSON.stringify({
-            locale: loc.code,
-            explicit: true,
-            wasRedirected: false
-          })
+      if (locale.value === loc.code) return
 
-          // Navigate to localized path - the navigation will handle locale switching
-          const newPath = switchLocalePath(loc.code)
-          if (newPath) {
-            // Navigate internally - i18n module will handle locale switch and load translations
-            await navigateTo(newPath)
-          }
-        } catch (error) {
-          console.error('[CountrySelector] Failed to switch locale:', error)
+      try {
+        const cookie = useCookie('konty-locale')
+        cookie.value = JSON.stringify({
+          locale: loc.code,
+          explicit: true
+        })
+
+        const newPath = switchLocalePath(loc.code)
+        if (newPath) {
+          await navigateTo(newPath)
         }
+      } catch (error) {
+        console.error('[CountrySelector] Failed to switch locale:', error)
       }
     }
   }))
 
   // Sort to put recommended first if exists
-  if (suggested) {
+  if (suggestedLocale.value) {
     localeItems.sort((a, b) => {
       if (a.isRecommended) return -1
       if (b.isRecommended) return 1

@@ -9,59 +9,36 @@
   >
     <div
       v-if="shouldShow"
-      class="fixed bottom-4 sm:bottom-auto sm:top-20 right-0 sm:right-4 left-0 sm:left-auto z-50 mx-4 sm:mx-0 sm:w-96"
+      class="fixed bottom-4 sm:bottom-auto sm:top-20 right-0 sm:right-4 left-0 sm:left-auto z-50 mx-4 sm:mx-0"
     >
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-        <!-- Header with gradient -->
-        <div class="bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-2">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2 text-white">
-              <UIcon name="i-lucide:globe-2" class="size-4" />
-              <span class="text-sm font-medium">{{ $t('common.languageSuggestion', 'Language Suggestion') }}</span>
-            </div>
-            <UButton
-              size="xs"
-              color="neutral"
-              variant="ghost"
-              square
-              :aria-label="$t('common.dismiss', 'Dismiss')"
-              @click="handleDismiss"
-            >
-              <UIcon name="i-lucide:x" class="size-3.5" />
-            </UButton>
-          </div>
-        </div>
+      <div class="rounded bg-[var(--ui-bg)]">
+        <div class="flex items-center gap-3 h-full p-4">
+          <UButton
+            size="xs"
+            color="neutral"
+            variant="ghost"
+            square
+            :aria-label="$t('common.dismiss', 'Dismiss')"
+            @click="dismissBanner()"
+          >
+            <UIcon name="i-lucide:x" class="size-3.5" />
+          </UButton>
 
-        <!-- Content -->
-        <div class="p-4">
-          <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
-            {{ message }}
-          </p>
+          <p>{{ t('banner.suggestion', { country }) }}</p>
 
-          <!-- Action buttons -->
-          <div class="flex gap-2">
-            <UButton
-              size="sm"
-              color="primary"
-              variant="solid"
-              class="flex-1"
-              :disabled="isSwitching"
-              @click="handleAccept"
-            >
-              <UIcon v-if="suggestedLocaleConfig?.flag" :name="suggestedLocaleConfig.flag" class="size-4 mr-1.5" />
-              {{ acceptLabel }}
-            </UButton>
+          <UButton
+            variant="ghost"
+            @click="stayOnThisLocale()"
+          >
+            {{ $t('common.stayHere') }}
+          </UButton>
 
-            <UButton
-              size="sm"
-              color="neutral"
-              variant="outline"
-              class="flex-1"
-              @click="handleDismiss"
-            >
-              {{ $t('common.stayHere', 'Stay here') }}
-            </UButton>
-          </div>
+          <UButton
+            color="primary"
+            @click="acceptSuggestedLocale()"
+          >
+            {{ $t('banner.switchTo') }}
+          </UButton>
         </div>
       </div>
     </div>
@@ -69,138 +46,94 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n()
-const {
-  shouldShowSuggestion,
-  suggestedLocale,
-  suggestedLocaleConfig,
-  acceptSuggestion,
-  dismissSuggestion,
-  isSwitching,
-  currentLocale
-} = useCountryDetection()
+import type { LocaleConfig, ValidLocale } from '~/types/locale'
+
+const nuxtApp = useNuxtApp()
+
+const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
+const cookie = useCookie<LocaleCookie>('konty-locale')
 
-// Check if this is a redirect notification
-const wasRedirected = computed(() => {
-  const cookie = useCookie('konty-locale')
-  if (!cookie.value) return false
-  try {
-    const parsed = JSON.parse(cookie.value as string)
-    return parsed.wasRedirected === true
-  } catch {
-    return false
-  }
-})
+const shouldShow = ref(false)
 
-// Internal state for visibility animation
-const isVisible = ref(false)
-const hasBeenDismissedThisSession = ref(false)
-
-// Check if we should show the banner
-const shouldShow = computed(() => {
-  // Don't show if dismissed this session
-  if (hasBeenDismissedThisSession.value) return false
-
-  // Don't show on error pages or auth pages
-  if (route.path.includes('error') || route.path.includes('auth')) return false
-
-  // Use the composable's logic and visibility state
-  return shouldShowSuggestion.value && isVisible.value
-})
-
-// Context-aware message
-const message = computed(() => {
-  if (wasRedirected.value) {
-    // After redirect: "We've directed you to the [Country] version based on your location"
-    return t('banner.redirected', { 
-      country: currentLocale.value?.name || locale.value.toUpperCase() 
-    })
-  }
-  // Suggestion: "It looks like you're in [Country]. Would you like to switch?"
-  return t('banner.suggestion', { 
-    country: suggestedLocaleConfig.value?.name || 'this region' 
-  })
-})
-
-// Accept button label
-const acceptLabel = computed(() => {
-  const suggested = suggestedLocaleConfig.value
-  if (!suggested) return t('common.switch', 'Switch')
-
-  return t('banner.switchTo', { country: suggested.name })
-})
-
-// Handle accepting the suggestion
-const handleAccept = async () => {
-  const targetLocale = suggestedLocale.value
-  if (!targetLocale) return
-
-  try {
-    // Use the composable's accept method
-    await acceptSuggestion()
-
-    // Navigate to the localized version of current page
-    const newPath = switchLocalePath(targetLocale)
-    if (newPath && newPath !== route.fullPath) {
-      await navigateTo(newPath)
-    }
-
-    // Hide banner
-    isVisible.value = false
-  } catch (error) {
-    console.error('[LocaleBanner] Failed to switch locale:', error)
-  }
-}
-
-// Handle dismissing the banner
-const handleDismiss = () => {
-  // Use composable's dismiss (marks current locale as explicit choice)
-  dismissSuggestion()
-
-  // Hide for this session
-  hasBeenDismissedThisSession.value = true
-  isVisible.value = false
-}
-
-// Simple timer for delayed visibility
-let timer: NodeJS.Timeout | undefined
+const suggestedLocale: Ref<ValidLocale | undefined> = ref(undefined)
 
 onMounted(() => {
-  timer = setTimeout(() => {
-    isVisible.value = true
-    
-    // Clear the wasRedirected flag after showing banner
-    if (wasRedirected.value) {
-      const cookie = useCookie('konty-locale')
-      if (cookie.value) {
-        try {
-          const parsed = JSON.parse(cookie.value as string)
-          delete parsed.wasRedirected
-          cookie.value = JSON.stringify(parsed)
-        } catch {
-          // Silently ignore cookie parsing errors
-        }
+  if (!cookie.value) return false
+
+  suggestedLocale.value = nuxtApp.payload.detectedLocale !== locale.value ? nuxtApp.payload.detectedLocale as ValidLocale | undefined : undefined
+
+  // Check if banner was recently dismissed
+  const dismissedData = sessionStorage.getItem('locale-banner-dismissed')
+  let shouldRespectDismissal = false
+
+  if (dismissedData) {
+    try {
+      const { timestamp, locale: dismissedLocale, suggestedLocale: dismissedSuggestion } = JSON.parse(dismissedData)
+      const hoursSinceDismissal = (Date.now() - timestamp) / (1000 * 60 * 60)
+
+      // Respect dismissal if Less than 4 hours ago unless user already saw this exact suggestion
+      if (hoursSinceDismissal < 4 && dismissedLocale === locale.value && dismissedSuggestion === suggestedLocale.value) {
+        shouldRespectDismissal = true
       }
+    } catch {
+      // Invalid data, ignore it
+      sessionStorage.removeItem('locale-banner-dismissed')
     }
-  }, 2000)
-})
-
-// Reset on navigation
-watch(() => route.path, () => {
-  clearTimeout(timer)
-  isVisible.value = false
-  
-  if (!hasBeenDismissedThisSession.value) {
-    timer = setTimeout(() => {
-      isVisible.value = true
-    }, 1500)
   }
+
+  // Show banner only if:
+  // 1. There's a locale mismatch
+  // 2. User hasn't made explicit choice
+  // 3. Banner wasn't recently dismissed for this same suggestion
+  shouldShow.value = !!suggestedLocale.value && !cookie.value.explicit && !shouldRespectDismissal
 })
 
-// Cleanup
-onUnmounted(() => clearTimeout(timer))
+const country = computed(() => (locales.value as LocaleConfig[]).find(l => l.code === suggestedLocale.value)?.name)
+
+async function acceptSuggestedLocale() {
+  if (!suggestedLocale.value) return
+
+  const newPath = switchLocalePath(suggestedLocale.value)
+  if (!newPath || newPath === route.fullPath) return
+
+  saveLocaleToCookie(suggestedLocale.value)
+
+  locale.value = suggestedLocale.value
+
+  await navigateTo(newPath)
+
+  shouldShow.value = false
+}
+
+async function stayOnThisLocale() {
+  saveLocaleToCookie(locale.value)
+  shouldShow.value = false
+}
+
+// Handle dismissing the banner (mark current as explicit choice)
+function saveLocaleToCookie(locale: ValidLocale) {
+  cookie.value = {
+    locale,
+    explicit: true
+  }
+}
+
+function dismissBanner() {
+  // Store dismissal time in sessionStorage with 4-hour expiry
+  const dismissalData = {
+    timestamp: Date.now(),
+    locale: locale.value,
+    suggestedLocale: suggestedLocale.value
+  }
+
+  // Use sessionStorage for tab persistence + time check
+  sessionStorage.setItem('locale-banner-dismissed', JSON.stringify(dismissalData))
+
+  // Hide banner immediately
+  shouldShow.value = false
+}
 </script>
 
 <style scoped>

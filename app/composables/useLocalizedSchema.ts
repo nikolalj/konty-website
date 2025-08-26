@@ -21,8 +21,7 @@ const GEO_COORDINATES = {
  * Get localized contact information
  */
 function getLocalizedContact() {
-  const { t, locale } = useI18n()
-  const { localeData } = useLocaleData()
+  const { t, locale, locales } = useI18n()
   const config = useRuntimeConfig()
   
   const phone = t('contact.info.phone')
@@ -36,7 +35,11 @@ function getLocalizedContact() {
     addressCountry: t('contact.info.structuredAddress.addressCountry')
   }
   const siteUrl = config.public.siteUrl || 'https://konty.com'
-  const currency = localeData.value?.currency || 'EUR'
+  
+  // Get currency from locale configuration
+  const currentLocale = (locales.value as any[]).find(l => l.code === locale.value)
+  const currency = currentLocale?.currency || 'EUR'
+  
   const geo = GEO_COORDINATES[locale.value] || GEO_COORDINATES.me
   const areaServed = t('schema.areaServed')
   const openingHours = t('schema.openingHours')

@@ -106,8 +106,7 @@ export default defineEventHandler(async (event: H3Event) => {
     if (!cookie || cookie.locale !== targetLocale) {
       setCookie(event, 'konty-locale', JSON.stringify({
         locale: targetLocale,
-        explicit: cookie?.explicit || false,  // Preserve explicit flag if it exists
-        wasRedirected: !cookie?.explicit      // Only show banner if not explicit choice
+        explicit: cookie?.explicit || false
       }), {
         httpOnly: false,
         secure: !import.meta.dev,

@@ -160,8 +160,7 @@ export function countryToLocale(country: string | null): ValidLocale {
  */
 export interface LocaleCookie {
   locale: ValidLocale
-  explicit: boolean        // true = user chose, false = detected
-  wasRedirected?: boolean  // true = just redirected (for banner notification)
+  explicit: boolean
 }
 
 /**

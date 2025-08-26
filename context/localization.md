@@ -4,24 +4,31 @@
 
 The Konty website automatically detects where visitors are from and shows them content in their country's version - with local prices, currency, and language. This happens seamlessly without requiring users to manually select their country.
 
+## Core Principles
+
+1. **Silent redirects** - No "we redirected you" notifications (following Amazon/Apple pattern)
+2. **Respect user choice** - Manual selections are permanent
+3. **Selective localization** - Only conversion-critical pages get localized URLs
+4. **Smart suggestions** - Only suggest different locale when genuinely helpful
+
 ## How It Works - Simple Flow
 
 ```
-Visitor arrives → Detect country → Show right version → Remember choice
+Visitor arrives → Detect country → Redirect if needed (silent) → Show suggestion only if mismatch
 ```
 
 ### Real Examples:
 
 **Scenario 1: First-time visitor from Montenegro**
 1. User types `konty.com` in browser
-2. System detects they're in Montenegro (ME)
-3. Automatically redirects to `konty.com/me`
+2. System detects they're in Montenegro (ME) via IP
+3. Silently redirects to `konty.com/me`
 4. Shows prices in EUR, content in Montenegrin dialect
-5. Saves preference in cookie for next visit
+5. Saves preference in cookie (not explicit)
 
 **Scenario 2: Returning visitor**
 1. Same user visits `konty.com` next week
-2. System reads cookie: "This user prefers ME version"
+2. System reads cookie: "This user was in ME" 
 3. Immediately redirects to `konty.com/me`
 4. No detection needed - uses saved preference (0ms)
 
@@ -29,7 +36,14 @@ Visitor arrives → Detect country → Show right version → Remember choice
 1. Montenegrin user clicks country selector (flag icon)
 2. Chooses "Serbia" from dropdown
 3. Site switches to Serbian version at `konty.com`
-4. Saves this as explicit choice - won't suggest Montenegro anymore
+4. Saves as **explicit choice** - system will never suggest changes
+
+**Scenario 4: Locale mismatch**
+1. Serbian user visits `konty.com/me/pricing` (Montenegro version)
+2. System detects they're in Serbia
+3. Shows suggestion banner: "You seem to be in Serbia"
+4. User can switch or stay (both are permanent choices)
+5. X button = dismiss for session only (4 hours)
 
 ## Supported Countries
 
@@ -54,7 +68,7 @@ User IP: 89.188.45.123 → Database lookup → Country: ME (Montenegro)
 - **Fast**: 5-15ms local database lookup (no internet required)
 - **Reliable**: 99.9% uptime (database is local)
 - **Accurate**: 99.8% accuracy for country-level detection
-- **Free**: GeoLite2 has generous free tier
+- **Cached**: 60-minute cache with 1000 entry limit
 
 **Fallback**: If database unavailable, uses api.country.is (slower, 100-500ms)
 
@@ -72,6 +86,7 @@ Simple cookie structure stores user preference:
 - **Cookie name**: `konty-locale`
 - **Duration**: 1 year
 - **Size**: ~30 bytes
+- **No `wasRedirected`**: Following industry best practice (no redirect notifications)
 
 ### 3. URL Structure
 
@@ -84,9 +99,23 @@ Using `prefix_except_default` strategy:
 
 Serbia doesn't need prefix because it's the primary market.
 
+### 4. Selective Page Localization
+
+Only these pages get locale-specific URLs:
+- `/` - Homepage (different CTAs, testimonials)
+- `/pricing` - Local prices and currency
+- `/demo` - Contact info and business hours
+- `/konty-retail` - Product features with local examples
+- `/konty-hospitality` - Product features with local examples
+
+Universal content stays at root:
+- `/blog/*` - Blog posts (no redirect)
+- `/about` - Company info (no redirect)
+- `/terms`, `/privacy` - Legal pages (no redirect)
+
 ## Features
 
-### 1. Automatic Detection & Redirect
+### 1. Automatic Detection & Silent Redirect
 
 **How it works:**
 ```
@@ -104,36 +133,35 @@ Serbia doesn't need prefix because it's the primary market.
              No │                     │ Yes
                 │                     │
          ┌──────▼──────┐      ┌──────▼──────┐
-         │   Detect    │      │  Read saved │
+         │   Detect    │      │  Use saved  │
          │   country   │      │ preference  │
          └──────┬──────┘      └──────┬──────┘
                 │                     │
          ┌──────▼──────┐      ┌──────▼──────┐
-         │  Save in    │      │   Redirect  │
-         │   cookie    │      │     to      │
-         └──────┬──────┘      │   locale    │
-                │             └─────────────┘
+         │  Save in    │      │  Redirect   │
+         │   cookie    │      │  to locale  │
+         └──────┬──────┘      └─────────────┘
+                │
          ┌──────▼──────┐
-         │  Redirect   │
-         │ to detected │
-         │   locale    │
+         │   Silent    │
+         │  redirect   │
          └─────────────┘
 ```
 
 ### 2. Locale Suggestion Banner
 
-When users browse to a different country's version, we suggest their detected locale:
+When users browse a different country's version, we suggest their detected locale:
 
 **Example**: Montenegro user visits `konty.com/pricing` (Serbian version)
-- Banner appears: "Choose a country to see content specific to your location"
-- Options: "View Montenegro version" or "Stay here"
-- If they switch: Redirects to `konty.com/me/pricing`
-- If they stay: Marks Serbian as their choice
+- Banner appears after 2 seconds: "You seem to be in Montenegro"
+- Options: "Switch to Montenegro" (primary button) or "Stay here" (ghost button)
+- X button: Dismisses for current session (4 hours)
+- If they switch or stay: Marks as explicit choice (permanent)
 
 **Smart behavior:**
-- Shows when locale mismatch is detected
-- Respects explicit choices (won't nag if user chose)
-- Appears after 2-second delay (prevents layout shift)
+- Only shows when locale mismatch detected
+- Never shows if user made explicit choice
+- Session-based dismissal (survives page refresh, expires after 4 hours)
 - Mobile-friendly (slides from bottom on phones)
 - Hidden on error and auth pages
 
@@ -153,7 +181,8 @@ Features:
 - Shows currency for each country
 - Marks current selection with checkmark
 - Shows "Recommended" badge for detected country
-- Pulsing dot indicator when different locale suggested
+- Pulsing dot indicator when different locale detected
+- All manual selections are permanent (explicit = true)
 
 ### 4. SEO Implementation
 
@@ -183,44 +212,43 @@ Each locale has proper SEO setup:
 2. Clicks konty.com link
 3. [5ms] MaxMind detects: Montenegro
 4. [0ms] Creates cookie: {locale: "me", explicit: false}
-5. [0ms] Redirects to konty.com/me
+5. [0ms] Silent redirect to konty.com/me
 6. Sees Montenegrin content with EUR prices
+7. No notification about redirect (best practice)
 ```
 
-### Journey 2: Intentional Cross-Locale Browsing
+### Journey 2: Cross-Locale Browsing with Suggestion
 
 ```
-1. Montenegrin restaurant owner wants to compare prices
-2. Already on konty.com/me/pricing
-3. Manually types konty.com/pricing to see Serbian prices
-4. Sees Serbian prices in RSD
-5. Banner suggests: "Choose a country to see content specific to your location"
-6. Ignores banner - comparing prices
-7. Cookie remains: {locale: "me", explicit: false}
-8. Next visit still goes to /me (respects original preference)
+1. Montenegrin user wants to compare prices
+2. Manually types konty.com/pricing (Serbian version)
+3. Sees Serbian prices in RSD
+4. After 2 seconds, banner suggests: "You seem to be in Montenegro"
+5. Can switch to ME version or stay on RS
+6. Either choice is permanent (explicit: true)
 ```
 
-### Journey 3: Permanent Locale Switch
+### Journey 3: Temporary Banner Dismissal
+
+```
+1. US investor in Serbia visits konty.com
+2. Gets redirected to Serbian version
+3. Manually visits konty.com/us for English
+4. Banner suggests Serbian version
+5. Clicks X to dismiss
+6. Banner hidden for 4 hours (session storage)
+7. Next day: Banner may appear again (not permanent)
+```
+
+### Journey 4: Permanent Locale Switch
 
 ```
 1. Serbian user temporarily in Montenegro
-2. Gets redirected to konty.com/me
+2. Gets redirected to konty.com/me automatically
 3. Clicks country selector → chooses Serbia
 4. Redirects to konty.com
 5. Cookie updates: {locale: "rs", explicit: true}
 6. Won't see suggestions anymore - explicit choice
-```
-
-### Journey 4: Shared Link
-
-```
-1. US-based investor receives link: konty.com/me/pricing
-2. Opens link - sees Montenegrin version
-3. System detects: USA
-4. Shows banner: "Choose a country to see content specific to your location"
-5. Clicks "View United States version"
-6. Redirects to konty.com/us/pricing
-7. Sees prices in USD, content in English
 ```
 
 ## Performance Metrics
@@ -232,6 +260,8 @@ Each locale has proper SEO setup:
 | API fallback | 100-500ms | api.country.is |
 | Locale switch | ~200ms | Client navigation |
 | Banner appearance | 2000ms | Delayed to prevent shift |
+| Cache TTL | 60 minutes | In-memory Map |
+| Max cache size | 1000 entries | FIFO eviction |
 
 ## File Structure
 
@@ -243,26 +273,23 @@ konty-website/
 │   ├── data/
 │   │   └── GeoLite2-Country.mmdb    # 9.2MB country database
 │   ├── middleware/
-│   │   ├── 01.dynamic-robots.ts     # Dynamic robots.txt
-│   │   └── 02.locale-redirect.ts    # Root path redirect
+│   │   └── 02.locale-redirect.ts    # Locale detection and redirect
 │   └── utils/
 │       └── country-detection.ts     # Detection logic with MaxMind
 ├── app/
-│   ├── composables/
-│   │   └── useCountryDetection.ts   # Vue composable
-│   ├── plugins/
-│   │   └── locale-payload.server.ts # Server-side locale injection
 │   ├── components/
 │   │   ├── App/
 │   │   │   ├── CountrySelector.vue  # Flag dropdown
-│   │   │   └── LocaleSuggestionBanner.vue
+│   │   │   └── LocaleSuggestionBanner.vue # Mismatch suggestion
+│   ├── plugins/
+│   │   └── locale-payload.server.ts # Server-side locale injection
 │   └── locales/
-│       ├── rs.json    # Serbian translations
-│       ├── me.json    # Montenegrin translations
-│       ├── ba.json    # Bosnian translations
-│       └── us.json    # English translations
-└── scripts/
-    └── download-geolite2.js         # Database updater
+│       ├── rs.json    # Serbian translations (311 keys)
+│       ├── me.json    # Montenegrin translations (311 keys)
+│       ├── ba.json    # Bosnian translations (311 keys)
+│       └── us.json    # English translations (311 keys)
+├── i18n.config.ts                    # i18n configuration
+└── nuxt.config.ts                    # Nuxt with i18n module config
 ```
 
 ## Deployment Setup
@@ -278,22 +305,16 @@ MAXMIND_LICENSE_KEY=your_key npm run download-geolite2
 
 # 3. Verify database exists
 ls -lh server/data/GeoLite2-Country.mmdb
-# Should show: 9.2MB file
+# Should show: ~9.2MB file
 ```
 
-### 2. Automated Updates (Cron)
+### 2. Automated Updates (Recommended)
 
-Add to crontab for weekly updates:
+Add to your deployment pipeline or cron:
 
 ```bash
-# Edit crontab
-crontab -e
-
-# Add these lines:
-MAXMIND_LICENSE_KEY=your_actual_key_here
-
-# Update every Monday at 3am
-0 3 * * 1 cd /path/to/konty-website && npm run update-geolite2 >> /var/log/geolite2.log 2>&1
+# Update database weekly
+0 3 * * 1 cd /path/to/konty-website && npm run update-geolite2
 ```
 
 ### 3. Testing
@@ -314,86 +335,102 @@ curl https://konty.com/us/pricing
 
 ### Problem: Detection not working
 
-**Symptoms**: Everyone gets default locale
+**Symptoms**: Everyone gets default locale (Serbia)
 **Check**:
 1. Database file exists: `ls server/data/*.mmdb`
 2. Database loaded: Look for `[MaxMind] Database loaded` in logs
-3. IP detection: Check server logs for IP address
+3. IP detection working: Check server logs for IP address
 
 **Fix**: Re-download database with valid license key
 
 ### Problem: Wrong country detected
 
-**Symptoms**: VPN users, corporate networks
+**Symptoms**: VPN users, corporate networks get wrong locale
 **Cause**: IP geolocation sees VPN/proxy location, not real location
-**Solution**: Users can manually switch via country selector
-
-### Problem: Cookie not persisting
-
-**Symptoms**: Re-detection on every visit
-**Check**: Browser developer tools → Application → Cookies
-**Fix**: Ensure cookie domain matches, check SameSite settings
+**Solution**: Users can manually switch via country selector (permanent)
 
 ### Problem: Banner showing too often
 
-**Symptoms**: Banner appears for internal navigation
-**Check**: Referrer header detection
-**Fix**: Ensure internal links use proper navigation (not full page reloads)
+**Symptoms**: Banner appears repeatedly despite dismissal
+**Check**: SessionStorage in browser DevTools
+**Fix**: Ensure sessionStorage is working (not in private/incognito mode)
+
+### Problem: Travel detection not working
+
+**Symptoms**: User travels to different country, still sees old locale
+**Current Issue**: Middleware uses old cookie locale instead of new detection
+**Workaround**: User must manually switch via country selector
 
 ## Best Practices
 
 ### Do's ✅
 - Always provide manual country selector
-- Respect explicit user choices
-- Use proper hreflang tags for SEO
-- Keep translations consistent
+- Respect explicit user choices permanently
+- Use silent redirects (no notifications)
+- Keep translations consistent across locales
 - Test with VPN for different countries
-- Monitor detection accuracy
+- Monitor detection accuracy with analytics
+- Update GeoLite2 database regularly
 
 ### Don'ts ❌
+- Don't notify users about redirects
 - Don't force redirects without user control
 - Don't show banner immediately (causes layout shift)
 - Don't detect on every request (use cookies)
-- Don't forget to update GeoLite2 database
+- Don't ignore explicit user choices
 - Don't make assumptions about language from country
 
 ## FAQ
+
+**Q: Why no "we redirected you" notification?**
+**A:** Industry best practice. Amazon, Apple, Booking.com all redirect silently. Users expect localized content.
 
 **Q: Why not use browser language (Accept-Language)?**
 **A:** Language doesn't equal country. Someone might prefer English but need Serbian prices.
 
 **Q: What about VPN users?**
-**A:** They see the country of their VPN server. Can manually switch via selector.
+**A:** They see the country of their VPN server. Can manually switch via selector (permanent).
 
-**Q: Can I add more countries?**
-**A:** Yes! Add to `config/locale.config.ts`, create translation file, add flag icon.
+**Q: Why only some pages get localized URLs?**
+**A:** Reduces complexity. Blog posts and company info are universal. Only prices and CTAs need localization.
 
 **Q: How accurate is detection?**
-**A:** ~99.8% for country level, less for city level (which we don't use).
+**A:** ~99.8% for country level with MaxMind. Falls back to API if database unavailable.
 
 **Q: Does this work with CDN caching?**
-**A:** Yes, but exclude root path (/) from cache so redirects work.
+**A:** Yes, but exclude locale-redirect paths from cache so detection works.
 
 **Q: Is this GDPR compliant?**
 **A:** Yes - we only detect country (not track users), cookie is functional (not marketing).
 
-## Implementation Details
+## Implementation Notes
 
-### Server-Client Communication
-The detected locale is passed from server to client using Nuxt's payload system:
-1. Server middleware detects locale and sets `event.context.detectedLocale`
-2. Server plugin (`locale-payload.server.ts`) injects it into `nuxtApp.payload`
-3. Client composable reads from `nuxtApp.payload.detectedLocale`
+### Banner Dismissal Logic
+- **X button**: Temporary dismissal (4 hours via sessionStorage)
+- **"Stay here" button**: Permanent choice (explicit = true)
+- **"Switch" button**: Permanent choice to suggested locale
+- Button hierarchy: Switch (primary) > Stay (ghost) > X (icon only)
 
-### Timer Management
-The suggestion banner uses a simple timer pattern:
-- 2-second delay on initial mount to prevent layout shift
-- 1.5-second delay on navigation
-- Automatic cleanup on unmount
+### Cookie vs Explicit Choice
+- **Non-explicit cookie**: User was auto-redirected, can still get suggestions
+- **Explicit cookie**: User manually chose, never show suggestions
+- Manual country selector always sets explicit = true
 
-### SEO Implementation
-Each page includes:
-- Canonical URL for its locale version
-- Hreflang tags for all locale variants
-- Proper og:locale meta tag
-- HTML lang attribute
+### Current Issues (To Be Fixed)
+1. Travel detection broken - uses old cookie instead of new detection
+2. Dead code in redirect logic (unreachable DEFAULT_LOCALE check)
+3. Contact info hardcoded in header (should use translations)
+
+## Summary
+
+The localization system provides:
+1. **Automatic** country detection (5-15ms with MaxMind)
+2. **Silent** redirects without notifications
+3. **Smart** suggestions only on locale mismatch
+4. **Persistent** preferences via cookies
+5. **Manual** control through country selector
+6. **SEO-friendly** implementation with proper tags
+7. **Fast** performance using local database
+8. **Respectful** UX following industry best practices
+
+Result: Users always see content relevant to their country, with local prices and language, while maintaining full control over their preference.

@@ -12,7 +12,6 @@
     "explorePlans": "Izračunaj svoju uštedu",
     "hospitality": "Ugostiteljstvo",
     "retail": "Trgovina",
-    "languageSuggestion": "Predlog jezika",
     "dismiss": "Zatvori",
     "stayHere": "Ostani ovdje",
     "switch": "Promijeni",
@@ -465,7 +464,7 @@
     "message": "Izaberite državu da biste vidjeli sadržaj prilagođen vašoj lokaciji",
     "redirected": "Prikazali smo vam {country} verziju na osnovu vaše lokacije",
     "suggestion": "Izgleda da ste u {country}. Želite li da pređete na lokalnu verziju?",
-    "switchTo": "Vidi {country} verziju",
+    "switchTo": "Vidi lokalnu verziju",
     "stayHere": "Ostani ovdje"
   }
 }
