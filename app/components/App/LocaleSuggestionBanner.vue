@@ -87,7 +87,9 @@ onMounted(() => {
   // 1. There's a locale mismatch
   // 2. User hasn't made explicit choice
   // 3. Banner wasn't recently dismissed for this same suggestion
-  shouldShow.value = !!suggestedLocale.value && !cookie.value.explicit && !shouldRespectDismissal
+  setTimeout(() => {
+    shouldShow.value = !!suggestedLocale.value && !cookie.value.explicit && !shouldRespectDismissal
+  }, 3000)
 })
 
 const country = computed(() => (locales.value as LocaleConfig[]).find(l => l.code === suggestedLocale.value)?.name)
