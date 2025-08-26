@@ -1,18 +1,18 @@
 <template>
   <Transition
-    enter-active-class="transition-all duration-300 ease-out"
-    enter-from-class="translate-y-full sm:translate-y-0 sm:translate-x-full opacity-0"
-    enter-to-class="translate-y-0 translate-x-0 opacity-100"
+    enter-active-class="transition-all duration-200 ease-out"
+    enter-from-class="-translate-y-full opacity-0"
+    enter-to-class="translate-y-0 opacity-100"
     leave-active-class="transition-all duration-200 ease-in"
-    leave-from-class="translate-y-0 translate-x-0 opacity-100"
-    leave-to-class="translate-y-full sm:translate-y-0 sm:translate-x-full opacity-0"
+    leave-from-class="translate-y-0 opacity-100"
+    leave-to-class="-translate-y-full opacity-0"
   >
     <div
       v-if="shouldShow"
-      class="fixed bottom-4 sm:bottom-auto sm:top-20 right-0 sm:right-4 left-0 sm:left-auto z-50 mx-4 sm:mx-0"
+      class="w-full z-100"
     >
       <div class="rounded bg-[var(--ui-bg)]">
-        <div class="flex items-center gap-3 h-full p-4">
+        <div class="flex items-center gap-3 h-full p-1 justify-center">
           <UButton
             size="xs"
             color="neutral"
@@ -24,17 +24,19 @@
             <UIcon name="i-lucide:x" class="size-3.5" />
           </UButton>
 
-          <p>{{ t('banner.suggestion', { country }) }}</p>
+          <p class="text-sm">{{ t('banner.suggestion', { country }) }}</p>
 
           <UButton
             variant="ghost"
+            size="sm"
             @click="stayOnThisLocale()"
           >
             {{ $t('common.stayHere') }}
           </UButton>
 
           <UButton
-            color="primary"
+            variant="subtle"
+            size="sm"
             @click="acceptSuggestedLocale()"
           >
             {{ $t('banner.switchTo') }}
@@ -87,9 +89,12 @@ onMounted(() => {
   // 1. There's a locale mismatch
   // 2. User hasn't made explicit choice
   // 3. Banner wasn't recently dismissed for this same suggestion
-  setTimeout(() => {
-    shouldShow.value = !!suggestedLocale.value && !cookie.value.explicit && !shouldRespectDismissal
-  }, 3000)
+  shouldShow.value = !!suggestedLocale.value && !cookie.value.explicit && !shouldRespectDismissal
+
+  // Auto-dismiss on scroll
+  if (shouldShow.value) {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+  }
 })
 
 const country = computed(() => (locales.value as LocaleConfig[]).find(l => l.code === suggestedLocale.value)?.name)
@@ -136,6 +141,17 @@ function dismissBanner() {
   // Hide banner immediately
   shouldShow.value = false
 }
+
+const handleScroll = () => {
+  if (window.scrollY > 100) {
+    shouldShow.value = false
+    window.removeEventListener('scroll', handleScroll)
+  }
+}
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped>

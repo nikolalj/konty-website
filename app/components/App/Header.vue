@@ -3,17 +3,19 @@
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
     :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[var(--ui-bg)]/90'"
     :ui="{
-      container: 'min-h-12'
+      container: 'min-h-16'
     }"
     mode="slideover"
   >
     <template #top>
       <div
         class="overflow-hidden transition-[height,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-[height,opacity]"
-        :class="isTopBarCollapsed ? 'h-0 opacity-0' : 'h-7 opacity-100'"
+        :class="isTopBarCollapsed ? 'h-0 opacity-0' : 'h-10 opacity-100'"
         :aria-hidden="isTopBarCollapsed ? 'true' : 'false'"
         :inert="isTopBarCollapsed"
       >
+        <AppLocaleSuggestionBanner />
+
         <UContainer
           class="h-full flex items-center text-sm transition-colors duration-500"
         >

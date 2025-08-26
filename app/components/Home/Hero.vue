@@ -1,7 +1,7 @@
 <!-- components/HeroKonty.vue -->
 <template>
   <section
-    class="py-24 sm:py-30 bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
+    class="py-28 sm:py-34 bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
     :aria-label="$t('hero.title')"
   >
     <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">

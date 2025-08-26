@@ -2,11 +2,6 @@
   <UPage>
     <NuxtLoadingIndicator />
 
-    <!-- Locale suggestion banner (above header for better visibility) -->
-    <ClientOnly>
-      <AppLocaleSuggestionBanner />
-    </ClientOnly>
-
     <AppHeader />
     <!-- <AppAlertBar /> -->
 
@@ -18,9 +13,7 @@
 
     <AppFooter />
 
-    <ClientOnly>
-      <PrivacyCookieConsent />
-    </ClientOnly>
+    <PrivacyCookieConsent />
   </UPage>
 </template>
 
