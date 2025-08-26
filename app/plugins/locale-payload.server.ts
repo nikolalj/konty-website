@@ -7,8 +7,4 @@ export default defineNuxtPlugin((nuxtApp) => {
   if (event?.context?.detectedLocale) {
     nuxtApp.payload.detectedLocale = event.context.detectedLocale
   }
-
-  if (event?.context?.previousLocale) {
-    nuxtApp.payload.previousLocale = event.context.previousLocale
-  }
 })

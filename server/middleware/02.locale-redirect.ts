@@ -100,9 +100,9 @@ export default defineEventHandler(async (event: H3Event) => {
       // Use cookie locale if exists (and not explicit), otherwise use detected
       targetLocale = detectedLocale
 
-      // If different from saved, save in case we might show a suggestion to switch back                                                                           │ │
-      if (cookie?.locale && cookie.locale !== detectedLocale) {                                                                                       │ │
-        event.context.previousLocale = cookie.locale                                                                                                  │ │
+      // If different from saved, save in case we might show a suggestion to switch back
+      if (cookie?.locale && cookie.locale !== detectedLocale) {
+        event.context.previousLocale = cookie.locale
       }
     }
 
@@ -122,6 +122,7 @@ export default defineEventHandler(async (event: H3Event) => {
       })
     }
 
+    // Only redirect if not default locale
     if (targetLocale === DEFAULT_LOCALE) return
 
     // 5. BUILD TARGET URL - Preserve query params
