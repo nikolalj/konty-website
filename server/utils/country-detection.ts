@@ -11,19 +11,12 @@ export interface LocaleCookie {
   explicit: boolean
 }
 
-/**
- * Country detection with MaxMind and API fallback
- * Simple, clean, all in one file
- */
-
-// MaxMind database reader (singleton)
-let maxmindReader: ReaderModel | null = null
-
-// Simple IP-based cache with lazy cleanup
 interface CacheEntry {
   country: string | null
   timestamp: number
 }
+
+let maxmindReader: ReaderModel | null = null
 const detectionCache = new Map<string, CacheEntry>()
 const CACHE_TTL = 60 * 60 * 1000 // 60 minutes
 const MAX_CACHE_SIZE = 1000 // Prevent unbounded growth
@@ -93,7 +86,8 @@ async function initMaxMind(): Promise<ReaderModel | null> {
   }
 
   try {
-    return await Reader.open(dbPath)
+    maxmindReader = await Reader.open(dbPath)
+    return maxmindReader
   } catch (error) {
     console.error('[MaxMind] Failed to load database:', error)
     return null
@@ -213,7 +207,6 @@ export async function detectUserLocale(event: H3Event): Promise<{
   } catch (error) {
     // If anything fails, return default locale
     console.error('[Locale Detection]', error)
-
     return {
       locale: DEFAULT_LOCALE,
       isNewUser: true,

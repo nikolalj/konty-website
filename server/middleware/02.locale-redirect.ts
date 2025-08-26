@@ -27,7 +27,6 @@ const EXCLUDE_PATTERNS = [
 /**
  * Smart locale redirect middleware
  * Redirects visitors to their locale version for conversion-critical pages
- * Adapts when location changes (travel, VPN) unless manually overridden
  */
 export default defineEventHandler(async (event: H3Event) => {
   const path = event.path || ''
@@ -62,7 +61,9 @@ export default defineEventHandler(async (event: H3Event) => {
 
     // If no explicit choice detect locale and if different inform the user
     try {
-      const { locale: detectedLocale } = await detectUserLocale(event)
+      let { locale: detectedLocale } = await detectUserLocale(event)
+      detectedLocale = VALID_LOCALES.includes(detectedLocale) ? detectedLocale : DEFAULT_LOCALE
+
       event.context.detectedLocale = detectedLocale
     } catch {
       // Silently ignore detection errors on localized paths
@@ -90,7 +91,8 @@ export default defineEventHandler(async (event: H3Event) => {
       event.context.detectedLocale = undefined
     } else {
       // Auto-detect locale
-      const { locale: detectedLocale } = await detectUserLocale(event)
+      let { locale: detectedLocale } = await detectUserLocale(event)
+      detectedLocale = VALID_LOCALES.includes(detectedLocale) ? detectedLocale : DEFAULT_LOCALE
 
       // Store for SSR context
       event.context.detectedLocale = detectedLocale
@@ -120,9 +122,7 @@ export default defineEventHandler(async (event: H3Event) => {
     // 5. BUILD TARGET URL - Preserve query params
 
     const queryString = new URLSearchParams(query as Record<string, string>).toString()
-    const targetPath = targetLocale === DEFAULT_LOCALE
-      ? path
-      : `/${targetLocale}${path === '/' ? '' : path}`
+    const targetPath = `/${targetLocale}${path === '/' ? '' : path}`
     const targetUrl = queryString ? `${targetPath}?${queryString}` : targetPath
 
     return sendRedirect(event, targetUrl, 302)
