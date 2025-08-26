@@ -214,7 +214,7 @@ function generateServiceSchema(serviceType: string = 'pos-system') {
         "url": `${siteUrl}/pricing`,
         "priceCurrency": currency,
         "availability": "https://schema.org/InStock",
-        "validFrom": "2024-01-01"
+        "validFrom": new Date().toISOString().split('T')[0]
       }
     },
     'implementation': {

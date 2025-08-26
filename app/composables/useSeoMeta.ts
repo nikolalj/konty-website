@@ -126,7 +126,7 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
 
     // Robots (page-specific override or noindex flag)
     robots: options.noindex ? 'noindex, nofollow' : (options.robots || 'index, follow'),
-    author: 'Konty'
+    author: 'Konty Team'
   })
 
   // Generate hreflang tags for SEO

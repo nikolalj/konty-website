@@ -5,8 +5,6 @@
     <AppHeader />
     <!-- <AppAlertBar /> -->
 
-    <!-- <AppBreadcrumbs /> -->
-
     <UPageBody class="mt-0">
       <slot />
     </UPageBody>

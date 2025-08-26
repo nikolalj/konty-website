@@ -1,6 +1,9 @@
 <template>
   <div>
     <SchemaOrganization />
+    <SchemaSoftwareApplication />
+    <SchemaFAQ category="general" />
+    <SchemaReviews />
     <HomeHero />
     <SharedClientList />
     <HomeFeatures />

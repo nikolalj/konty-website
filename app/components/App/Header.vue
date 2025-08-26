@@ -17,14 +17,22 @@
         <AppLocaleSuggestionBanner />
 
         <UContainer
-          class="h-full flex items-center text-sm transition-colors duration-500"
+          class="h-full flex items-center justify-between text-sm transition-colors duration-500"
         >
+          <!-- Breadcrumbs on left (only on inner pages) -->
+          <div>
+            <AppBreadcrumbs v-if="!isHomepage" />
+          </div>
+
+          <!-- Contact info on right (or centered on homepage) -->
           <div class="flex items-center gap-4">
-            <div class="flex items-center gap-1">
-              <Icon name="i-lucide-mail" /> contact@konty.com
+            <div class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400">
+              <Icon name="i-lucide-mail" class="w-4 h-4" />
+              <span class="hidden md:inline">contact@konty.com</span>
             </div>
-            <div class="flex items-center gap-1">
-              <Icon name="i-lucide-phone" /> +38267607670
+            <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+              <Icon name="i-lucide-phone" class="w-4 h-4" />
+              <span>+38267607670</span>
             </div>
           </div>
         </UContainer>
@@ -172,12 +180,19 @@
 const { y } = useWindowScroll()
 const { t } = useI18n()
 const localePath = useLocalePath()
+const route = useRoute()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID  = 8
 
 const isHeaderSolid = ref(false)
 const isTopBarCollapsed = ref(false)
+
+// Check if we're on homepage
+const isHomepage = computed(() => {
+  const path = route.path
+  return path === '/' || path === '/me' || path === '/ba' || path === '/us' || path === '/rs'
+})
 
 watch(y, () => {
   const cur = y.value

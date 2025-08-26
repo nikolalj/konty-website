@@ -1,6 +1,7 @@
 <template>
   <div>
     <about-headline />
+    <SchemaLocalBusiness />
     <shared-client-list product="kontyRetail" />
     <about-contact-info />
     <div id="contact">

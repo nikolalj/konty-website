@@ -1,5 +1,7 @@
 <template>
   <div>
+    <SchemaSoftwareApplication product="kontyHospitality" />
+    <SchemaReviews product="kontyHospitality" />
     <konty-hospitality-hero />
     <shared-client-list product="kontyHospitality" />
     <shared-benefits product="kontyHospitality" />
