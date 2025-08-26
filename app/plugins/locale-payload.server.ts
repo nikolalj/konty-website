@@ -4,9 +4,11 @@
 export default defineNuxtPlugin((nuxtApp) => {
   const event = useRequestEvent()
 
-  // Get detected locale from middleware context
-  // Use Nuxt's payload system
   if (event?.context?.detectedLocale) {
     nuxtApp.payload.detectedLocale = event.context.detectedLocale
+  }
+
+  if (event?.context?.previousLocale) {
+    nuxtApp.payload.previousLocale = event.context.previousLocale
   }
 })

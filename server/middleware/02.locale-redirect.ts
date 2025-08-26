@@ -98,7 +98,12 @@ export default defineEventHandler(async (event: H3Event) => {
       event.context.detectedLocale = detectedLocale
 
       // Use cookie locale if exists (and not explicit), otherwise use detected
-      targetLocale = cookie?.locale || detectedLocale
+      targetLocale = detectedLocale
+
+      // If different from saved, we might show a suggestion to switch back                                                                           │ │
+      if (cookie?.locale && cookie.locale !== detectedLocale) {                                                                                       │ │
+        event.context.previousLocale = cookie.locale                                                                                                  │ │
+      }
     }
 
     // 4. SET COOKIE & REDIRECT
