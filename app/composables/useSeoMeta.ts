@@ -58,8 +58,12 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
     : `/${locale.value}${pathWithoutLocale}`
   const canonical = options.url || `${siteUrl}${canonicalPath}`
 
-  // Default OG image
-  const seoImage = options.image || `${siteUrl}/og-default.webp`
+  // Get OG image configuration for current route
+  const { getOgImageConfig } = await import('~/config/og-images')
+  const ogImageConfig = getOgImageConfig(route.path)
+  
+  // Build absolute URL for OG image (required by social platforms)
+  const seoImage = options.image || `${siteUrl}${ogImageConfig.path}`
 
   // Map i18n locale to OpenGraph locale
   const ogLocale = computed(() => {
