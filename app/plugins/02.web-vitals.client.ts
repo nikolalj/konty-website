@@ -1,51 +1,58 @@
-/**
- * Web Vitals tracking for Core Web Vitals metrics
- * Sends performance data to GA4 for conversion correlation
- */
-
 export default defineNuxtPlugin(() => {
   const { track } = useTracking()
-  
-  // Only load Web Vitals after page is ready
-  if (typeof window !== 'undefined') {
-    const loadWebVitals = async () => {
-      try {
-        const { onCLS, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals')
-        
-        // Report metric to GA4
-        const reportMetric = (metric: { name: string; value: number; rating?: string; delta: number }) => {
-          track('web_vitals', {
+  const { consent } = useConsent()
+
+  let isInitialized = false
+
+  const initializeWebVitals = async () => {
+    if (isInitialized || !consent.value.performance) return
+
+    try {
+      const { onCLS, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals')
+
+      const reportMetric = (metric: { name: string; value: number; rating?: string; delta: number }) => {
+        if (!consent.value.performance) return
+
+        track('web_vitals', {
+          metric_name: metric.name,
+          metric_value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          metric_rating: metric.rating || 'unknown',
+          metric_delta: Math.round(metric.delta)
+        })
+
+        if (metric.rating === 'poor') {
+          track('poor_web_vital', {
             metric_name: metric.name,
-            metric_value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            metric_rating: metric.rating || 'unknown',
-            metric_delta: Math.round(metric.delta)
+            metric_value: Math.round(metric.value)
           })
-          
-          // Also send as custom event for poor metrics (impacts conversion)
-          if (metric.rating === 'poor') {
-            track('poor_web_vital', {
-              metric_name: metric.name,
-              metric_value: Math.round(metric.value)
-            })
-          }
         }
-        
-        // Track all Core Web Vitals
-        onCLS(reportMetric)
-        onFCP(reportMetric)
-        onLCP(reportMetric)
-        onTTFB(reportMetric)
-        onINP(reportMetric)
-      } catch (error) {
-        console.warn('[Web Vitals] Failed to load:', error)
       }
+
+      onCLS(reportMetric)
+      onFCP(reportMetric)
+      onLCP(reportMetric)
+      onTTFB(reportMetric)
+      onINP(reportMetric)
+
+      isInitialized = true
+
+      if (import.meta.dev) {
+        console.log('[Web Vitals] Initialized')
+      }
+    } catch (error) {
+      console.warn('[Web Vitals] Failed to initialize:', error)
     }
-    
-    // Load when page is ready
+  }
+
+  // Initialize on page load if consent already given
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (document.readyState === 'complete') {
-      loadWebVitals()
+      initializeWebVitals()
     } else {
-      window.addEventListener('load', loadWebVitals, { once: true })
+      window.addEventListener('load', initializeWebVitals, { once: true })
     }
+
+    // Listen for consent changes
+    window.addEventListener('consent:updated', initializeWebVitals)
   }
 })

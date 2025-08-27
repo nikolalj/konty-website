@@ -1,66 +1,150 @@
 /**
- * Page and engagement tracking plugin
- * Handles automatic page views, scroll depth, and errors
+ * Central tracking orchestrator plugin
+ * Manages consent mode initialization, page tracking, and engagement metrics
  */
 
-export default defineNuxtPlugin(() => {
-  const { track, trackPage, updateConsentMode } = useTracking()
+export default defineNuxtPlugin((nuxtApp) => {
+  // Import only what we need
+  const { initializeConsent } = useConsent()
+  const { track, trackPage, onUpdateConsent } = useTracking()
+  const { gtag } = useGtag()
   const router = useRouter()
-  
-  // Initialize consent mode on first load
-  updateConsentMode()
-  
-  // Track initial page view (critical fix!)
-  onMounted(() => {
+
+  // ============================================
+  // STEP 1: CONSENT MODE INITIALIZATION
+  // ============================================
+
+  // Set DEFAULT consent mode before ANY tracking
+  // This is required by Google's Consent Mode v2
+  if (gtag) {
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500 // Wait 500ms for consent to load
+    })
+
+    if (import.meta.dev) {
+      console.log('[Tracking] Default consent mode set to denied')
+    }
+  }
+
+  // Load saved consent from cookie
+  const hasExistingConsent = initializeConsent()
+
+  // If user has previously given consent, apply it immediately
+  if (hasExistingConsent) {
+    onUpdateConsent()
+    if (import.meta.dev) {
+      console.log('[Tracking] Applied saved consent preferences')
+    }
+  }
+
+  // Listen for future consent changes
+  if (typeof window !== 'undefined') {
+    window.addEventListener('consent:updated', () => {
+      onUpdateConsent()
+      if (import.meta.dev) {
+        console.log('[Tracking] Consent preferences updated')
+      }
+    })
+  }
+
+  // ============================================
+  // STEP 2: PAGE VIEW TRACKING
+  // ============================================
+
+  // Track initial page view when app is ready
+  nuxtApp.hook('app:mounted', () => {
     trackPage()
-  })
-  
-  // Track subsequent page views
-  router.afterEach((to, from) => {
-    if (from.name) {
-      nextTick(() => trackPage())
+    if (import.meta.dev) {
+      console.log('[Tracking] Initial page view tracked')
     }
   })
-  
-  // Simple scroll tracking
-  const depths = [25, 50, 75, 90]
-  const reached = new Set<number>()
-  let scrollTimer: ReturnType<typeof setTimeout>
-  
-  const checkScroll = () => {
-    clearTimeout(scrollTimer)
-    scrollTimer = setTimeout(() => {
-      const percent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-      
-      depths.forEach(depth => {
-        if (percent >= depth && !reached.has(depth)) {
-          reached.add(depth)
-          track('scroll', { percent: depth })
-        }
+
+  // Track subsequent navigation (SPA route changes)
+  router.afterEach((to, from) => {
+    // Only track if navigating from another page (not initial load)
+    if (from.name) {
+      // Use nextTick to ensure DOM is updated with new page content
+      nextTick(() => {
+        trackPage()
       })
-    }, 150)
-  }
-  
-  // Reset on navigation
-  router.afterEach(() => reached.clear())
-  
-  // Error tracking
-  const trackError = (event: ErrorEvent) => {
-    track('exception', {
-      description: `${event.message} at ${event.filename}:${event.lineno}`,
-      fatal: false
-    })
-  }
-  
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', checkScroll, { passive: true })
-    window.addEventListener('error', trackError)
-    
-    // Cleanup on unmount (fix memory leak!)
-    onUnmounted(() => {
+    }
+  })
+
+  // ============================================
+  // STEP 3: SCROLL DEPTH TRACKING
+  // ============================================
+
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    const scrollDepths = [25, 50, 75, 90]
+    const reachedDepths = new Set<number>()
+    let scrollTimer: NodeJS.Timeout | undefined
+
+    const trackScrollDepth = () => {
+      // Debounce scroll events for performance
       clearTimeout(scrollTimer)
-      window.removeEventListener('scroll', checkScroll)
-      window.removeEventListener('error', trackError)
+
+      scrollTimer = setTimeout(() => {
+        // Calculate scroll percentage
+        const windowHeight = window.innerHeight
+        const documentHeight = document.documentElement.scrollHeight
+        const scrollTop = window.scrollY
+
+        // Avoid division by zero
+        const scrollableHeight = documentHeight - windowHeight
+        if (scrollableHeight <= 0) return
+
+        const scrollPercent = Math.round((scrollTop / scrollableHeight) * 100)
+
+        // Track each depth milestone once per page
+        scrollDepths.forEach(depth => {
+          if (scrollPercent >= depth && !reachedDepths.has(depth)) {
+            reachedDepths.add(depth)
+            track('scroll', {
+              percent: depth,
+              page_path: router.currentRoute.value.path
+            })
+          }
+        })
+      }, 150) // Debounce delay
+    }
+
+    // Reset scroll tracking on navigation
+    router.afterEach(() => {
+      reachedDepths.clear()
+      if (import.meta.dev) {
+        console.log('[Tracking] Scroll depth tracking reset for new page')
+      }
     })
+
+    // Start listening to scroll events
+    window.addEventListener('scroll', trackScrollDepth, { passive: true })
+  }
+
+  // ============================================
+  // STEP 4: ERROR TRACKING
+  // ============================================
+
+  if (typeof window !== 'undefined') {
+    const trackError = (event: ErrorEvent) => {
+      // Skip in development to avoid noise
+      if (import.meta.dev) {
+        console.error('[Tracking] Error captured but not tracked (dev mode):', event)
+        return
+      }
+
+      // Track JavaScript errors that could impact conversion
+      track('exception', {
+        description: event.message,
+        fatal: false,
+        error_source: `${event.filename}:${event.lineno}:${event.colno}`,
+        page_path: router.currentRoute.value.path
+      })
+    }
+
+    window.addEventListener('error', trackError)
   }
 })

@@ -275,11 +275,9 @@ export default defineNuxtConfig({
   // Google Analytics 4
   gtag: {
     id: process.env.NUXT_PUBLIC_GA_MEASUREMENT_ID || '',
-    loadingStrategy: 'defer',  // Don't block render
-    initialConsent: false,  // Start with consent denied (GDPR compliant)
     config: {
-      send_page_view: false,  // We'll send enhanced ones
-      debug_mode: process.env.NODE_ENV === 'development'  // Dev testing
+      send_page_view: false,
+      debug_mode: process.env.APP_ENV === 'development'
     }
   },
 

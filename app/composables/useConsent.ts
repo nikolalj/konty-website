@@ -1,125 +1,68 @@
-/**
- * Centralized consent management for GDPR compliance
- * Single source of truth for all tracking and third-party services
- */
-
 interface ConsentState {
   analytics: boolean
   marketing: boolean
-  functional: boolean
   performance: boolean
 }
 
-interface ConsentCookie {
-  preferences: ConsentState
-  timestamp: string
-  version: string
-}
-
 export const useConsent = () => {
-  // Cookie name and version for migrations
   const COOKIE_NAME = 'konty-consent'
-  const CONSENT_VERSION = '1.0'
-  
-  // Reactive state shared across app
-  const consentState = useState<ConsentState>('consent.state', () => ({
+  const COOKIE_OPTIONS = {
+    httpOnly: false,
+    sameSite: 'lax' as const,
+    maxAge: 31536000 // 1 year
+  }
+
+  // Reactive consent state shared across the app
+  const consent = useState<ConsentState>('consent.state', () => ({
     analytics: false,
-    marketing: false, 
-    functional: true, // Always true - required for site
+    marketing: false,
     performance: false
   }))
-  
-  // Track if consent has been given (to show/hide banner)
+
+  // Whether user has made any consent choice
   const consentGiven = useState<boolean>('consent.given', () => false)
-  
-  // Initialize from cookie
-  const initializeConsent = () => {
-    const cookie = useCookie<ConsentCookie>(COOKIE_NAME)
-    
-    if (cookie.value?.preferences) {
-      consentState.value = {
-        ...consentState.value,
-        ...cookie.value.preferences
-      }
+
+  /**
+   * Initialize consent from cookie on app load
+   * Returns true if consent was previously given
+   */
+  const initializeConsent = (): boolean => {
+    const cookie = useCookie<ConsentState>(COOKIE_NAME)
+
+    if (cookie.value) {
+      consent.value = cookie.value
       consentGiven.value = true
       return true
     }
+
     return false
   }
-  
-  // Save consent to cookie
-  const saveConsent = (preferences: Partial<ConsentState>) => {
-    // Update state
-    consentState.value = {
-      ...consentState.value,
-      ...preferences
-    }
-    
-    // Save to cookie
-    const cookie = useCookie<ConsentCookie>(COOKIE_NAME, {
-      httpOnly: false, // Needs to be readable by client
-      secure: true,
-      sameSite: 'lax',
-      maxAge: 365 * 24 * 60 * 60 // 1 year
-    })
-    
-    cookie.value = {
-      preferences: consentState.value,
-      timestamp: new Date().toISOString(),
-      version: CONSENT_VERSION
-    }
-    
+
+  /**
+   * Update consent preferences and persist to cookie
+   */
+  const updateConsent = (preferences: ConsentState) => {
+    consent.value = preferences
+
+    // Persist to cookie
+    const cookie = useCookie<ConsentState>(COOKIE_NAME, COOKIE_OPTIONS)
+    cookie.value = consent.value
+
+    // Mark that user has made a choice
     consentGiven.value = true
-    
-    // Emit event for services to react
+
+    // Notify other parts of the app (tracking scripts, etc.)
     if (import.meta.client) {
-      window.dispatchEvent(new CustomEvent('consent:updated', {
-        detail: consentState.value
-      }))
+      window.dispatchEvent(
+        new CustomEvent('consent:updated', { detail: consent.value })
+      )
     }
   }
-  
-  // Convenience methods
-  const acceptAll = () => {
-    saveConsent({
-      analytics: true,
-      marketing: true,
-      performance: true
-    })
-  }
-  
-  const acceptSelected = (preferences: Partial<ConsentState>) => {
-    saveConsent(preferences)
-  }
-  
-  const denyAll = () => {
-    saveConsent({
-      analytics: false,
-      marketing: false,
-      performance: false
-    })
-  }
-  
-  // Check specific consent
-  const hasConsent = (type: keyof ConsentState) => {
-    return computed(() => consentState.value[type])
-  }
-  
+
   return {
-    // State
-    consent: readonly(consentState),
     consentGiven: readonly(consentGiven),
-    
-    // Actions
+    consent: readonly(consent),
     initializeConsent,
-    acceptAll,
-    acceptSelected,
-    denyAll,
-    
-    // Helpers
-    hasConsent,
-    hasAnalytics: computed(() => consentState.value.analytics),
-    hasMarketing: computed(() => consentState.value.marketing),
-    hasPerformance: computed(() => consentState.value.performance)
+    updateConsent
   }
 }

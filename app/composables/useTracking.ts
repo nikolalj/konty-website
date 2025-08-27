@@ -2,37 +2,23 @@
  * Lean tracking composable using GA4 standard events
  * Standard events enable Google Ads integration, ML insights, and automatic reporting
  */
-
 export const useTracking = () => {
   const { gtag } = useGtag()
   const { locale, t } = useI18n()
+  const { consent } = useConsent()
   const route = useRoute()
-  const config = useRuntimeConfig()
-  const { hasAnalytics, hasMarketing } = useConsent()
-
-  // No-op if gtag not available
-  if (!gtag) {
-    return {
-      track: () => {},
-      trackPage: () => {},
-      updateConsentMode: () => {}
-    }
-  }
 
   // Update Google Consent Mode based on consent state
-  const updateConsentMode = () => {
+  const onUpdateConsent = () => {
+    if (!gtag) return
+
     gtag('consent', 'update', {
-      'analytics_storage': hasAnalytics.value ? 'granted' : 'denied',
-      'ad_storage': hasMarketing.value ? 'granted' : 'denied',
-      'ad_user_data': hasMarketing.value ? 'granted' : 'denied',
-      'ad_personalization': hasMarketing.value ? 'granted' : 'denied'
+      'analytics_storage': consent.value.analytics ? 'granted' : 'denied',
+      'ad_storage': consent.value.marketing ? 'granted' : 'denied',
+      'ad_user_data': consent.value.marketing ? 'granted' : 'denied',
+      'ad_personalization': consent.value.marketing ? 'granted' : 'denied'
     })
   }
-
-  // Watch for consent changes and update automatically
-  watch([hasAnalytics, hasMarketing], () => {
-    updateConsentMode()
-  })
 
   /**
    * Generic tracking with GA4 standard or custom events
@@ -40,19 +26,20 @@ export const useTracking = () => {
    * @param parameters - Event parameters including value, currency, etc.
    */
   const track = (eventName: string, parameters?: Record<string, unknown>) => {
-    // Check consent before tracking (except for necessary cookies)
-    const necessaryEvents = ['page_view'] // These can be tracked without consent
-    if (!necessaryEvents.includes(eventName) && !hasAnalytics.value) {
+    if (!gtag) return
+
+    // Check consent before tracking - NO events are exempt from consent
+    if (!consent.value.analytics) {
       if (import.meta.dev) {
         console.log(`[GA4] Event blocked (no consent): ${eventName}`)
       }
       return
     }
-    
-    // Always add context
+
+    // Always add context (check window exists for SSR safety)
     const enrichedParams = {
       page_path: route.path,
-      page_location: window.location.href,
+      page_location: typeof window !== 'undefined' ? window.location.href : '',
       locale: locale.value,
       ...parameters
     }
@@ -65,7 +52,7 @@ export const useTracking = () => {
     }
 
     // Debug logging in development
-    if (config.public.gaMeasurementId && import.meta.dev) {
+    if (import.meta.dev) {
       console.log(`[GA4] ${eventName}:`, enrichedParams)
     }
 
@@ -82,19 +69,22 @@ export const useTracking = () => {
    * Uses GA4 standard 'page_view' event with custom parameters
    */
   const trackPage = () => {
-    // Detect user intent from URL
     const getPageCategory = () => {
-      const path = route.path
-      if (path.includes('pricing')) return 'pricing'
-      if (path.includes('demo')) return 'demo'
-      if (path.includes('retail')) return 'product_retail'
-      if (path.includes('hospitality')) return 'product_hospitality'
-      if (path === '/') return 'home'
-      return 'other'
+      // Use route.name which is locale-agnostic in Nuxt i18n
+      const routeName = route.name?.toString() || ''
+
+      // Route names in Nuxt i18n are like 'pricing___me', 'pricing___rs', or just 'pricing'
+      const baseName = routeName.split('___')[0]
+
+      // Special case: index -> home
+      if (baseName === 'index') return 'home'
+
+      // Return the base name for everything else
+      return baseName || 'other'
     }
 
     track('page_view', {
-      page_title: document.title,
+      page_title: typeof document !== 'undefined' ? document.title : '',
       page_category: getPageCategory(),
       user_type: useCookie('user_type').value || 'visitor'
     })
@@ -103,6 +93,6 @@ export const useTracking = () => {
   return {
     track,
     trackPage,
-    updateConsentMode
+    onUpdateConsent
   }
 }
