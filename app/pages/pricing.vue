@@ -2,7 +2,7 @@
   <div class="py-12 sm:py-16">
     <SchemaProductWithOffers />
     <SchemaFAQ category="pricing" />
-    <shared-pricing />
+    <shared-pricing />asd
     <shared-get-started />
     <shared-contact-form />
   </div>
