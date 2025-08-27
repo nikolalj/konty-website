@@ -1,5 +1,11 @@
-import { defineSitemapEventHandler, asSitemapUrl } from '#imports'
-import type { SitemapUrlInput } from '@nuxtjs/sitemap'
+import type { NitroAppPlugin } from 'nitropack'
+
+interface SitemapUrl {
+  loc: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
+}
 
 /**
  * SITEMAP LASTMOD TRACKING
@@ -98,11 +104,11 @@ const staticPages: Array<{
   }
 ]
 
-export default defineSitemapEventHandler(async (): Promise<SitemapUrlInput[]> => {
+export default defineEventHandler(async (): Promise<SitemapUrl[]> => {
   try {
     // Convert static pages to sitemap URLs
-    const urls: SitemapUrlInput[] = staticPages.map(page => {
-      const url: SitemapUrlInput = {
+    const urls: SitemapUrl[] = staticPages.map(page => {
+      const url: SitemapUrl = {
         loc: page.loc,
         priority: page.priority,
         changefreq: page.changefreq
@@ -113,18 +119,18 @@ export default defineSitemapEventHandler(async (): Promise<SitemapUrlInput[]> =>
         url.lastmod = page.lastmod
       }
       
-      return asSitemapUrl(url)
+      return url
     })
     
     // TODO: When blog/dynamic content is added, fetch and append here:
     // const blogPosts = await fetchBlogPosts()
     // blogPosts.forEach(post => {
-    //   urls.push(asSitemapUrl({
+    //   urls.push({
     //     loc: `/blog/${post.slug}`,
     //     lastmod: post.updatedAt,
     //     changefreq: 'weekly',
     //     priority: 0.7
-    //   }))
+    //   })
     // })
     
     return urls

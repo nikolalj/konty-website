@@ -6,7 +6,7 @@
         :title="config.title"
         :description="config.description"
         :product-switch="!props.product"
-        heading-level="h1"
+        :heading-level="props.headingLevel"
       />
 
       <UIAppear direction="none" :animate-on="productInternal">
@@ -41,6 +41,10 @@ const props = defineProps({
     type: String as PropType<'kontyRetail' | 'kontyHospitality' | undefined>,
     default: undefined
   },
+  headingLevel: {
+    type: String as PropType<'h1' | 'h2' | 'h3'>,
+    default: 'h2'
+  }
 })
 
 const productInternal = ref(props.product || 'kontyHospitality')

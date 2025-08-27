@@ -15,7 +15,6 @@ export default defineNuxtConfig({
   // Vite Build Optimization
   vite: {
     build: {
-      // Critical for performance
       minify: 'terser',
       cssMinify: true,
       rollupOptions: {
@@ -25,8 +24,7 @@ export default defineNuxtConfig({
           }
         }
       },
-      chunkSizeWarningLimit: 1000,
-      assetsInlineLimit: 4096
+      chunkSizeWarningLimit: 1000
     },
     css: {
       devSourcemap: false
@@ -286,12 +284,7 @@ export default defineNuxtConfig({
 
   // Experimental features for Nuxt 4
   experimental: {
-    payloadExtraction: true,      // Extract payload for faster hydration
-    crossOriginPrefetch: true,    // Prefetch cross-origin resources
-    viewTransition: true,         // Native view transitions
-    componentIslands: true,       // Selective hydration
-    asyncContext: true,           // Async component context
-    headNext: true,              // Optimized head management
+    viewTransition: true,        // Enable native view transitions API
 
     // Link prefetching strategy
     defaults: {

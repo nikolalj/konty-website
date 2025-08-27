@@ -18,17 +18,17 @@ interface SeoMetaOptions {
 export function getAllLocaleUrls(path: string, siteUrl?: string): Record<string, string> {
   const baseUrl = siteUrl || 'https://konty.com'
   const urls: Record<string, string> = {}
-  
+
   // Remove any existing locale prefix
   const cleanPath = path.replace(/^\/(me|ba|us)/, '') || '/'
-  
+
   VALID_LOCALES.forEach(locale => {
-    const localePath = locale === DEFAULT_LOCALE 
-      ? cleanPath 
+    const localePath = locale === DEFAULT_LOCALE
+      ? cleanPath
       : `/${locale}${cleanPath}`
     urls[locale] = `${baseUrl}${localePath}`
   })
-  
+
   return urls
 }
 
@@ -59,9 +59,12 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   const canonical = options.url || `${siteUrl}${canonicalPath}`
 
   // Get OG image configuration for current route
-  const { getOgImageConfig } = await import('~/config/og-images')
+  const getOgImageConfig = (_path: string) => {
+    // Default OG image configuration
+    return { path: '/og-images/default.png' }
+  }
   const ogImageConfig = getOgImageConfig(route.path)
-  
+
   // Build absolute URL for OG image (required by social platforms)
   const seoImage = options.image || `${siteUrl}${ogImageConfig.path}`
 

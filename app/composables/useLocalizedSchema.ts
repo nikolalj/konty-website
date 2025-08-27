@@ -23,7 +23,7 @@ const GEO_COORDINATES = {
 function getLocalizedContact() {
   const { t, locale, locales } = useI18n()
   const config = useRuntimeConfig()
-  
+
   const phone = t('contact.info.phone')
   const email = t('contact.info.email').replace("{'@'}", "@")
   // Get individual address fields
@@ -35,15 +35,15 @@ function getLocalizedContact() {
     addressCountry: t('contact.info.structuredAddress.addressCountry')
   }
   const siteUrl = config.public.siteUrl || 'https://konty.com'
-  
+
   // Get currency from locale configuration
   const currentLocale = (locales.value as Array<{code: string, currency?: string}>).find(l => l.code === locale.value)
   const currency = currentLocale?.currency || 'EUR'
-  
+
   const geo = GEO_COORDINATES[locale.value] || GEO_COORDINATES.me
   const areaServed = t('schema.areaServed')
   const openingHours = t('schema.openingHours')
-  
+
   return {
     phone,
     email,
@@ -64,7 +64,7 @@ function getLocalizedContact() {
 function generateOrganizationSchema() {
   const { t } = useI18n()
   const { phone, email, address, siteUrl, areaServed, availableLanguage } = getLocalizedContact()
-  
+
   return {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -97,7 +97,7 @@ function generateOrganizationSchema() {
 function generateLocalBusinessSchema() {
   const { t } = useI18n()
   const { phone, email, address, siteUrl, geo, areaServed, openingHours } = getLocalizedContact()
-  
+
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -116,9 +116,7 @@ function generateLocalBusinessSchema() {
       "@type": "GeoCoordinates",
       ...geo
     },
-    "openingHours": [
-      openingHours
-    ],
+    "openingHours": [openingHours],
     "sameAs": [
       "https://www.facebook.com/konty/",
       "https://www.linkedin.com/company/konty/"
@@ -158,7 +156,7 @@ function generateLocalBusinessSchema() {
 function generateServiceSchema(serviceType: string = 'pos-system') {
   const { t } = useI18n()
   const { phone, email, address, siteUrl, currency, areaServed } = getLocalizedContact()
-  
+
   const serviceSchemas = {
     'pos-system': {
       "@context": "https://schema.org",
@@ -260,7 +258,7 @@ function generateServiceSchema(serviceType: string = 'pos-system') {
       "category": "Educational Services"
     }
   }
-  
+
   return serviceSchemas[serviceType as keyof typeof serviceSchemas] || serviceSchemas['pos-system']
 }
 
@@ -270,7 +268,7 @@ function generateServiceSchema(serviceType: string = 'pos-system') {
  */
 export const useLocalizedSchema = (options: SchemaOrgOptions) => {
   let schema: Record<string, unknown> | null = null
-  
+
   switch (options.type) {
     case 'Organization':
       schema = generateOrganizationSchema()
@@ -285,12 +283,12 @@ export const useLocalizedSchema = (options: SchemaOrgOptions) => {
       console.warn(`Schema type ${options.type} not yet implemented`)
       return
   }
-  
+
   // Merge with custom data if provided
   if (options.customData) {
     schema = { ...schema, ...options.customData }
   }
-  
+
   // Add the schema to the page head
   useHead({
     script: [
