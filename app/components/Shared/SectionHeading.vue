@@ -11,12 +11,13 @@
     </UIAppear>
 
     <UIAppear :animate-on="props.title">
-      <h2
+      <component
+        :is="props.headingLevel || 'h2'"
         v-if="props.title"
         class="mt-4 mb-4 text-3xl sm:text-4xl lg:text-5xl text-center text-pretty tracking-tight font-bold text-highlighted"
       >
         {{ props.title }}
-      </h2>
+      </component>
     </UIAppear>
 
     <UIAppear :animate-on="props.description">
@@ -62,6 +63,10 @@ const props = defineProps({
     type: String as PropType<'top' | 'bottom'>,
     default: 'bottom'
   },
+  headingLevel: {
+    type: String as PropType<'h1' | 'h2' | 'h3'>,
+    default: 'h2'
+  }
 })
 
 const productInternal = ref('kontyHospitality')

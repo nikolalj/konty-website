@@ -133,7 +133,6 @@ const { t } = useI18n()
 useCustomSeoMeta({
   title: t('seo.terms.title'),
   description: t('seo.terms.description'),
-  type: 'website',
-  noindex: true  // Using the new noindex flag
+  type: 'website'
 })
 </script>

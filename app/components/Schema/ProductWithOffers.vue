@@ -14,41 +14,8 @@ const props = defineProps<Props>()
 const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 
-// Get pricing based on locale
-function getPricing() {
-  const currency = getCurrentCurrency()
-  const currencySymbol = getCurrencySymbol()
-  
-  // Simplified pricing structure - you should update with actual prices
-  switch(locale.value) {
-    case 'me':
-      return {
-        start: { price: 29, currency: 'EUR', symbol: '€' },
-        standard: { price: 49, currency: 'EUR', symbol: '€' },
-        premium: { price: 99, currency: 'EUR', symbol: '€' }
-      }
-    case 'ba':
-      return {
-        start: { price: 59, currency: 'BAM', symbol: 'KM' },
-        standard: { price: 99, currency: 'BAM', symbol: 'KM' },
-        premium: { price: 199, currency: 'BAM', symbol: 'KM' }
-      }
-    case 'us':
-      return {
-        start: { price: 39, currency: 'USD', symbol: '$' },
-        standard: { price: 69, currency: 'USD', symbol: '$' },
-        premium: { price: 129, currency: 'USD', symbol: '$' }
-      }
-    default: // rs
-      return {
-        start: { price: 2990, currency: 'RSD', symbol: 'RSD' },
-        standard: { price: 4990, currency: 'RSD', symbol: 'RSD' },
-        premium: { price: 9990, currency: 'RSD', symbol: 'RSD' }
-      }
-  }
-}
-
-function getCurrentCurrency() {
+// Get currency code based on locale
+function getCurrencyCode(): string {
   switch(locale.value) {
     case 'me': return 'EUR'
     case 'ba': return 'BAM'
@@ -57,18 +24,31 @@ function getCurrentCurrency() {
   }
 }
 
-function getCurrencySymbol() {
-  switch(locale.value) {
-    case 'me': return '€'
-    case 'ba': return 'KM'
-    case 'us': return '$'
-    default: return 'RSD'
+// Parse numeric price from translation string
+function parsePrice(priceString: string): number {
+  // Handle "Custom" or "Po dogovoru" cases
+  if (!priceString || priceString.toLowerCase().includes('custom') || priceString.toLowerCase().includes('dogovor')) {
+    return 0
   }
+  
+  // Extract numeric value from strings like "$59", "5.900 Din", "99€", "199 KM"
+  const numericString = priceString.replace(/[^\d.,]/g, '')
+  // Handle European number format (dots as thousands separator)
+  const normalizedString = numericString.replace(/\./g, '').replace(',', '.')
+  return parseFloat(normalizedString) || 0
+}
+
+// Map component product prop to translation key
+function getProductKey(): string {
+  if (props.product === 'kontyRetail') return 'retail'
+  if (props.product === 'kontyHospitality') return 'hospitality'
+  return 'hospitality' // default
 }
 
 const schema = computed(() => {
   const siteUrl = config.public.siteUrl || 'https://konty.com'
-  const pricing = getPricing()
+  const productKey = getProductKey()
+  const currencyCode = getCurrencyCode()
   
   const productName = props.product === 'kontyRetail' 
     ? 'Konty Retail POS'
@@ -81,6 +61,40 @@ const schema = computed(() => {
     : props.product === 'kontyHospitality'
     ? t('seo.kontyHospitality.description')
     : t('seo.products.description')
+
+  // Build offers from translations
+  const offers = []
+  const tiers = ['start', 'standard', 'premium']
+  
+  for (const tier of tiers) {
+    const priceString = t(`pricing.${productKey}.${tier}.price`) as string
+    const price = parsePrice(priceString)
+    
+    // Skip if price is 0 (custom pricing)
+    if (price === 0 && tier === 'premium') {
+      continue
+    }
+    
+    offers.push({
+      "@type": "Offer",
+      "name": t(`pricing.${productKey}.${tier}.title`),
+      "description": t(`pricing.${productKey}.${tier}.description`),
+      "price": price,
+      "priceCurrency": currencyCode,
+      "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "url": `${siteUrl}/pricing`,
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": price,
+        "priceCurrency": currencyCode,
+        "billingDuration": "P1M",
+        "billingIncrement": 1,
+        "unitText": "MONTH"
+      }
+    })
+  }
 
   return {
     "@context": "https://schema.org",
@@ -98,65 +112,7 @@ const schema = computed(() => {
       "ratingValue": "4.8",
       "reviewCount": "327"
     },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": t('pricing.tiers.start.title'),
-        "description": t('pricing.tiers.start.description'),
-        "price": pricing.start.price,
-        "priceCurrency": pricing.start.currency,
-        "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "url": `${siteUrl}/pricing`,
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": pricing.start.price,
-          "priceCurrency": pricing.start.currency,
-          "billingDuration": "P1M",
-          "billingIncrement": 1,
-          "unitText": "MONTH"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": t('pricing.tiers.standard.title'),
-        "description": t('pricing.tiers.standard.description'),
-        "price": pricing.standard.price,
-        "priceCurrency": pricing.standard.currency,
-        "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "url": `${siteUrl}/pricing`,
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": pricing.standard.price,
-          "priceCurrency": pricing.standard.currency,
-          "billingDuration": "P1M",
-          "billingIncrement": 1,
-          "unitText": "MONTH"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": t('pricing.tiers.premium.title'),
-        "description": t('pricing.tiers.premium.description'),
-        "price": pricing.premium.price,
-        "priceCurrency": pricing.premium.currency,
-        "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "url": `${siteUrl}/pricing`,
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": pricing.premium.price,
-          "priceCurrency": pricing.premium.currency,
-          "billingDuration": "P1M",
-          "billingIncrement": 1,
-          "unitText": "MONTH"
-        }
-      }
-    ]
+    "offers": offers
   }
 })
 

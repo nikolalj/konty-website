@@ -46,14 +46,14 @@ const schema = computed(() => {
     "dateModified": new Date().toISOString().split('T')[0],
     "screenshot": `${siteUrl}/images/konty-dashboard.png`,
     "featureList": [
-      t('features.cloudBased'),
-      t('features.inventory'),
-      t('features.analytics'),
-      t('features.multiLocation'),
-      t('features.offlineMode'),
-      t('features.fiscalization')
+      t('schema.features.cloudBased'),
+      t('schema.features.inventory'),
+      t('schema.features.analytics'),
+      t('schema.features.multiLocation'),
+      t('schema.features.offlineMode'),
+      t('schema.features.fiscalization')
     ],
-    "softwareRequirements": t('requirements.minimal'),
+    "softwareRequirements": t('schema.requirements.minimal'),
     "permissions": "camera, storage, internet",
     "availableOnDevice": "Desktop, Mobile, Tablet"
   }
@@ -69,9 +69,9 @@ const schema = computed(() => {
       "applicationSubCategory": "RetailPOS",
       "featureList": [
         ...baseSchema.featureList,
-        t('features.retail.barcode'),
-        t('features.retail.loyaltyProgram'),
-        t('features.retail.suppliers')
+        t('schema.features.retail.barcode'),
+        t('schema.features.retail.loyaltyProgram'),
+        t('schema.features.retail.suppliers')
       ]
     }
   } else if (props.product === 'kontyHospitality') {
@@ -84,10 +84,10 @@ const schema = computed(() => {
       "applicationSubCategory": "RestaurantPOS",
       "featureList": [
         ...baseSchema.featureList,
-        t('features.hospitality.tableManagement'),
-        t('features.hospitality.kitchenDisplay'),
-        t('features.hospitality.modifiers'),
-        t('features.hospitality.splitBills')
+        t('schema.features.hospitality.tableManagement'),
+        t('schema.features.hospitality.kitchenDisplay'),
+        t('schema.features.hospitality.modifiers'),
+        t('schema.features.hospitality.splitBills')
       ]
     }
   }

@@ -6,6 +6,7 @@
         :title="config.title"
         :description="config.description"
         :product-switch="!props.product"
+        heading-level="h1"
       />
 
       <UIAppear direction="none" :animate-on="productInternal">

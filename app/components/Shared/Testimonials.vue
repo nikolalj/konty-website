@@ -30,102 +30,34 @@
 </template>
 
 <script setup lang="ts">
-const testimonials = [
-  {
-    user: {
-      name: 'Miloš Petrović',
-      description: 'Vlasnik restorana "Dolina Ukusa"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/men/32.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Pre Konty sistema imali smo problem sa praćenjem stolova i porudžbina. Sada konobari rade brže, kuhinja je uvek sinhronizovana, a gosti primete koliko je usluga efikasnija.'
-  },
-  {
-    user: {
-      name: 'Jelena Marković',
-      description: 'Vlasnica butika "Moda J"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/women/44.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno imam jasnu sliku o proizvodima koji se najbolje prodaju, a izveštaji mi pomažu da donosim brže odluke.'
-  },
-  {
-    user: {
-      name: 'Nikola Jovanović',
-      description: 'Menadžer kafića "Urban Bar"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/men/60.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Uštedeli smo sate administracije zahvaljujući Konty sistemu. Sve je pregledno – od smena konobara do izveštaja o prometu na kraju dana.'
-  },
-  {
-    user: {
-      name: 'Ana Lazić',
-      description: 'Vlasnica pekare "Miris Hleba"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/women/68.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Prelazak na Konty je bio pravo olakšanje. Nema više gubljenja računa ni nesporazuma sa mušterijama – blagajna radi savršeno i brza je kao što smo želeli.'
-  },
-  {
-    user: {
-      name: 'Dragan Ilić',
-      description: 'Lanac kioska "Mini Market"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/men/71.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Konty POS mi omogućava da kontrolišem više lokacija sa jednog mesta. Prodaja, lager i izveštaji su uvek ažurni – štedi mi sate i sate posla svake nedelje.'
-  },
-  {
-    user: {
-      name: 'Ivana Ristić',
-      description: 'Frilenser i konsultant za ugostiteljstvo',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/women/25.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Preporučujem Konty svojim klijentima jer je jednostavan, pouzdan i lako se obučava osoblje. U poređenju sa starim sistemima, razlika je nebo i zemlja.'
-  },
-  {
-    user: {
-      name: 'Marko Kovačević',
-      description: 'Vlasnik poslastičarnice "Slatki Kutak"',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/men/84.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Sviđa mi se koliko je interfejs jasan i moderan. Moji zaposleni su za manje od jednog dana u potpunosti savladali sistem.'
-  },
-  {
-    user: {
-      name: 'Sara Nikolić',
-      description: 'Preduzetnica i članica Udruženja malih biznisa',
-      avatar: {
-        src: 'https://randomuser.me/api/portraits/women/95.jpg',
-        loading: 'lazy'
-      }
-    },
-    quote:
-      'Konty POS koristim već godinu dana i mogu reći da mi je pomogao da povećam profitabilnost i smanjim troškove. Za svaki mali biznis – ovo je pravi izbor.'
-  }
+const { t } = useI18n()
+
+// Avatar images for testimonials
+const avatarImages = [
+  'https://randomuser.me/api/portraits/men/32.jpg',
+  'https://randomuser.me/api/portraits/women/44.jpg',
+  'https://randomuser.me/api/portraits/men/60.jpg',
+  'https://randomuser.me/api/portraits/women/68.jpg',
+  'https://randomuser.me/api/portraits/men/71.jpg',
+  'https://randomuser.me/api/portraits/women/25.jpg',
+  'https://randomuser.me/api/portraits/men/84.jpg',
+  'https://randomuser.me/api/portraits/women/95.jpg'
 ]
+
+const testimonials = computed(() => {
+  const testimonialKeys = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8']
+  return testimonialKeys.map((key, index) => {
+    return {
+      user: {
+        name: t(`testimonials.${key}.name`),
+        description: t(`testimonials.${key}.role`),
+        avatar: {
+          src: avatarImages[index],
+          loading: 'lazy'
+        }
+      },
+      quote: t(`testimonials.${key}.quote`)
+    }
+  })
+})
 </script>

@@ -37,7 +37,7 @@ function getLocalizedContact() {
   const siteUrl = config.public.siteUrl || 'https://konty.com'
   
   // Get currency from locale configuration
-  const currentLocale = (locales.value as any[]).find(l => l.code === locale.value)
+  const currentLocale = (locales.value as Array<{code: string, currency?: string}>).find(l => l.code === locale.value)
   const currency = currentLocale?.currency || 'EUR'
   
   const geo = GEO_COORDINATES[locale.value] || GEO_COORDINATES.me

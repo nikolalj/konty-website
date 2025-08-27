@@ -24,7 +24,7 @@
           class="w-full bg-elevated hover:bg-muted cursor-pointer"
         >
           <div class="flex justify-center">
-            <img src="https://martex-nuxtjs.vercel.app/assets/images/png_icons/tool-9.png" alt="Tailwind CSS" class="w-20 h20" >
+            <img src="https://martex-nuxtjs.vercel.app/assets/images/png_icons/tool-9.png" :alt="client.name" class="w-20 h20" >
           </div>
         </UPageCard>
       </div>

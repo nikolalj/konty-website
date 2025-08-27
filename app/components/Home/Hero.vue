@@ -40,7 +40,7 @@
         <NuxtImg
           src="https://martex-nuxtjs.vercel.app/_nuxt/hero-25-img.92cadc81.png"
           preset="hero"
-          alt="App screenshot"
+          alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
           width="1052"
           height="592"
           loading="eager"

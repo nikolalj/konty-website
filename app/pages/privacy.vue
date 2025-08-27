@@ -179,7 +179,6 @@ const { t } = useI18n()
 useCustomSeoMeta({
   title: t('seo.privacy.title'),
   description: t('seo.privacy.description'),
-  type: 'website',
-  noindex: true  // Using the new noindex flag
+  type: 'website'
 })
 </script>

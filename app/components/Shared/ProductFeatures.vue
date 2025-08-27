@@ -1,6 +1,6 @@
 <template>
   <UContainer class="py-12 sm:py-16">
-    <h1 class="text-4xl font-bold text-gray-800">ProductFeatures</h1>
+    <h2 class="text-4xl font-bold text-gray-800">ProductFeatures</h2>
   </UContainer>
 </template>
 

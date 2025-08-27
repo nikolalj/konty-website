@@ -18,7 +18,6 @@ interface Props {
 const props = defineProps<Props>()
 
 const { t } = useI18n()
-const config = useRuntimeConfig()
 
 // Define FAQs based on category
 const faqs = computed<FAQItem[]>(() => {
@@ -105,8 +104,6 @@ const faqs = computed<FAQItem[]>(() => {
 })
 
 const schema = computed(() => {
-  const siteUrl = config.public.siteUrl || 'https://konty.com'
-  
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
