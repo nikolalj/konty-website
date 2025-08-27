@@ -61,11 +61,10 @@ const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
 const { locale, locales } = useI18n()
 
-const currentLocale: Ref<LocaleConfig | undefined> = ref()
+const currentLocale = computed(() => (locales.value as LocaleConfig[]).find(l => l.code === locale.value))
 const suggestedLocale: Ref<ValidLocale | undefined> = ref()
 
 onMounted(() => {
-  currentLocale.value = (locales.value as LocaleConfig[]).find(l => l.code === locale.value)
   suggestedLocale.value = nuxtApp.payload.detectedLocale !== locale.value ? nuxtApp.payload.detectedLocale as ValidLocale | undefined : undefined
 })
 
