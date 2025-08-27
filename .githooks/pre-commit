@@ -20,26 +20,24 @@ done
 # Display reminder if Vue files were modified
 if [ "$VUE_MODIFIED" = true ]; then
     echo ""
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo "${YELLOW}📅 SITEMAP REMINDER${NC}"
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
-    echo "You modified Vue files. If you changed content on any of these pages:"
+    echo "You modified Vue files. If you changed content (made visible changes) on any of these pages:"
     echo ""
-    echo "  ${GREEN}/${NC} (homepage), ${GREEN}/pricing${NC}, ${GREEN}/products${NC},"
-    echo "  ${GREEN}/konty-retail${NC}, ${GREEN}/konty-hospitality${NC},"
-    echo "  ${GREEN}/privacy${NC}, ${GREEN}/terms${NC}"
+    echo "${GREEN}/${NC} (homepage), ${GREEN}/pricing${NC}, ${GREEN}/products${NC}, ${GREEN}/konty-retail${NC}, ${GREEN}/konty-hospitality${NC}, ${GREEN}/privacy${NC}, ${GREEN}/terms${NC}"
     echo ""
     echo "👉 Update their lastmod date in: ${GREEN}/server/api/__sitemap__/urls.ts${NC}"
     echo ""
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
-    
+
     # Use exec to ensure the read command works properly
     exec < /dev/tty
     read -p "Continue with commit? (y/n): " -n 1 -r REPLY
     echo ""
-    
+
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         echo ""
         echo "${YELLOW}Commit cancelled. Update sitemap if needed, then commit again.${NC}"
