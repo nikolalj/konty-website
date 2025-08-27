@@ -59,9 +59,25 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   const canonical = options.url || `${siteUrl}${canonicalPath}`
 
   // Get OG image configuration for current route
-  const getOgImageConfig = (_path: string) => {
-    // Default OG image configuration
-    return { path: '/og-images/default.png' }
+  const getOgImageConfig = (path: string) => {
+    // Remove locale from path
+    const cleanPath = path.replace(/^\/(me|ba|us|rs)/, '') || '/'
+    
+    // Map paths to OG images
+    const ogImages: Record<string, string> = {
+      '/': '/og-images/home.png',
+      '/pricing': '/og-images/pricing.png',
+      '/products': '/og-images/products.png',
+      '/konty-retail': '/og-images/retail.png',
+      '/konty-hospitality': '/og-images/hospitality.png',
+      '/demo': '/og-images/demo.png',
+      '/about': '/og-images/about.png'
+    }
+    
+    // Use specific image if exists, otherwise use default
+    return { 
+      path: ogImages[cleanPath] || '/og-images/default.svg' 
+    }
   }
   const ogImageConfig = getOgImageConfig(route.path)
 

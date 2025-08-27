@@ -1,5 +1,3 @@
-import type { NitroAppPlugin } from 'nitropack'
-
 interface SitemapUrl {
   loc: string
   lastmod?: string
@@ -9,25 +7,25 @@ interface SitemapUrl {
 
 /**
  * SITEMAP LASTMOD TRACKING
- * 
+ *
  * ⚠️ IMPORTANT: Update lastmod dates when making significant changes!
- * 
+ *
  * When to update lastmod:
  * - Content changes (text, images, features)
  * - Pricing updates (CRITICAL - always update)
  * - Legal document changes (privacy, terms)
  * - Major UI/UX changes
- * 
+ *
  * When NOT to update:
  * - Minor styling tweaks
  * - Code refactoring with no user-visible changes
  * - Typo fixes (unless in critical content)
- * 
+ *
  * CHECKLIST before committing:
  * 1. Did you modify page content? → Update lastmod
  * 2. Is it a pricing change? → Update /pricing lastmod immediately
  * 3. Legal update? → Update /privacy or /terms lastmod
- * 
+ *
  * Format: YYYY-MM-DD (ISO 8601)
  */
 
@@ -113,15 +111,15 @@ export default defineEventHandler(async (): Promise<SitemapUrl[]> => {
         priority: page.priority,
         changefreq: page.changefreq
       }
-      
+
       // Only include lastmod if we have an accurate date
       if (page.lastmod) {
         url.lastmod = page.lastmod
       }
-      
+
       return url
     })
-    
+
     // TODO: When blog/dynamic content is added, fetch and append here:
     // const blogPosts = await fetchBlogPosts()
     // blogPosts.forEach(post => {
@@ -132,9 +130,9 @@ export default defineEventHandler(async (): Promise<SitemapUrl[]> => {
     //     priority: 0.7
     //   })
     // })
-    
+
     return urls
-    
+
   } catch (error) {
     // Log error but don't break sitemap generation
     console.error('[Sitemap] Error generating dynamic URLs:', error)

@@ -205,7 +205,8 @@ const props = withDefaults(defineProps<Props>(), {
   showLoadingState: false
 })
 
-// Runtime config
+const { track } = useAnalytics()
+const { gtag } = useGtag()
 const config = useRuntimeConfig()
 
 // State
@@ -298,13 +299,9 @@ const serviceManager = {
   initializeGoogle(prefs: CookiePreferences) {
     if (!import.meta.client) return
 
-    // Ensure gtag is available
-    if (!window.gtag) return
-
-    window.dataLayer = window.dataLayer || []
-
     // Update consent state
-    window.gtag('consent', 'update', {
+    if (!gtag) return
+    gtag('consent', 'update', {
       'ad_storage': prefs.marketing ? 'granted' : 'denied',
       'ad_user_data': prefs.marketing ? 'granted' : 'denied',
       'ad_personalization': prefs.marketing ? 'granted' : 'denied',
@@ -314,22 +311,16 @@ const serviceManager = {
       'security_storage': 'granted'
     })
 
-    // Initialize Google Analytics if consented
-    const gaId = config.public.googleAnalyticsId as string
-    if (prefs.analytics && gaId) {
-      window.gtag('config', gaId, {
-        'send_page_view': true,
-        'cookie_flags': 'SameSite=Lax;Secure'
-      })
-    }
+    // DO NOT initialize GA here - nuxt-gtag handles this automatically
+    // This prevents double tracking
 
     // Initialize Google Ads if consented
     const adsId = config.public.googleAdsId as string
     if (prefs.marketing && adsId) {
-      window.gtag('config', adsId)
+      gtag('config', adsId)
 
-      // Fire remarketing event
-      window.gtag('event', 'page_view', {
+      // Fire remarketing event using analytics
+      track('page_view', {
         'send_to': adsId,
         'value': 0,
         'items': []
@@ -448,16 +439,14 @@ const saveConsent = async (prefs: CookiePreferences, action: string) => {
     serviceManager.initializeAll(prefs)
 
     // Track consent event
-    if (window.gtag) {
-      window.gtag('event', 'cookie_consent', {
-        'event_category': 'engagement',
-        'event_label': action,
-        'consent_id': consentData.consentId,
-        'analytics': prefs.analytics,
-        'marketing': prefs.marketing,
-        'performance': prefs.performance
-      })
-    }
+    track('cookie_consent', {
+      'event_category': 'engagement',
+      'event_label': action,
+      'consent_id': consentData.consentId,
+      'analytics': prefs.analytics,
+      'marketing': prefs.marketing,
+      'performance': prefs.performance
+    })
 
     // Log to server for audit trail (optional)
     const apiBase = config.public.apiBase as string
@@ -622,19 +611,14 @@ const withdrawConsent = () => {
 const initializeDefaultConsent = () => {
   if (!import.meta.client) return
 
-  window.dataLayer = window.dataLayer || []
-  if (!window.gtag) {
-    window.gtag = function(...args: Parameters<typeof window.gtag>) {
-      window.dataLayer.push(args)
-    } as typeof window.gtag
-  }
-
   // Set default consent state based on geo location
   // Default to 'denied' for EU/unknown, 'granted' for US
   const isUSRegion = userGeoLocation.value === 'us'
   const defaultConsent: 'granted' | 'denied' = isUSRegion ? 'granted' : 'denied'
 
-  window.gtag('consent', 'default', {
+  if (!gtag) return
+  
+  gtag('consent', 'default', {
     'ad_storage': defaultConsent,
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
@@ -646,7 +630,7 @@ const initializeDefaultConsent = () => {
   })
 
   // Enable cookieless tracking
-  window.gtag('set', {
+  gtag('set', {
     'url_passthrough': true,
     'ads_data_redaction': true
   })

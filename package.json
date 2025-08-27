@@ -30,6 +30,7 @@
     "@nuxtjs/sitemap": "^7.4.3",
     "@vueuse/nuxt": "^13.6.0",
     "nuxt": "^4.0.1",
+    "nuxt-gtag": "^3.0.3",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
@@ -39,7 +40,6 @@
     "@nuxt/fonts": "^0.11.4",
     "cssnano": "^7.1.0",
     "eslint": "^9.32.0",
-    "nuxt-gtag": "^3.0.3",
     "typescript": "^5.8.3",
     "vue-tsc": "^3.0.6"
   }

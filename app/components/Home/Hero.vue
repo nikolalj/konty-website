@@ -2,21 +2,21 @@
 <template>
   <section
     class="py-28 sm:py-34 bg-fixed relative isolate bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5.f5bed091.jpg')] dark:bg-[url('https://martex-nuxtjs.vercel.app/_nuxt/hero-5-dark.2157cbf7.jpg')] bg-cover bg-no-repeat bg-center"
-    :aria-label="$t('hero.title')"
+    :aria-label="t('hero.title')"
   >
     <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
       <UIAppear direction="right" :distance="64">
         <div>
           <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
-            {{ $t('hero.tagline') }}
+            {{ t('hero.tagline') }}
           </div>
 
           <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">
-            {{ $t('hero.title') }}
+            {{ t('hero.title') }}
           </h1>
 
           <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">
-            {{ $t('hero.subtitle') }}
+            {{ t('hero.subtitle') }}
           </p>
 
           <div class="mt-10">
@@ -28,7 +28,7 @@
                 class="text-base"
                 @click="onPrimaryCta"
               >
-                {{ $t('hero.cta') }}
+                {{ t('hero.cta') }}
               </UButton>
             </div>
           </div>
@@ -66,16 +66,10 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { $track } = useNuxtApp() as {
-  $track?: {
-    ctaClick?: (label: string, area?: string) => void
-    conversion?: (name: string) => void
-  }
-}
+const { demo } = useAnalytics()
 
 function onPrimaryCta(): void {
-  $track?.ctaClick?.(t('hero.cta'), 'Hero')
-  $track?.conversion?.('Hero CTA')
+  demo('start', 'homepage_hero')
 }
 </script>
 

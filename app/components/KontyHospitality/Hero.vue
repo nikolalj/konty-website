@@ -69,12 +69,11 @@
 </template>
 
 <script setup lang="ts">
-const { $track } = useNuxtApp()
+const { demo, pricing } = useAnalytics()
 const onPrimaryCta = () => {
-  $track?.ctaClick('Request Demo', 'Hospitality Hero')
-  $track?.conversion?.('Hospitality Hero CTA')
+  demo('start', 'hospitality_hero')
 }
 const onSecondaryCta = () => {
-  $track?.ctaClick('View Pricing', 'Hospitality Hero')
+  pricing('view', 'hospitality')
 }
 </script>
