@@ -66,10 +66,15 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { demo } = useAnalytics()
+const { track } = useTracking()
 
 function onPrimaryCta(): void {
-  demo('start', 'homepage_hero')
+  // GA4 standard event for lead generation
+  track('generate_lead', {
+    lead_type: 'demo_interest',
+    lead_source: 'homepage_hero',
+    value: 50
+  })
 }
 </script>
 

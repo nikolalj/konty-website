@@ -69,11 +69,21 @@
 </template>
 
 <script setup lang="ts">
-const { demo, pricing } = useAnalytics()
+const { track } = useTracking()
+
 const onPrimaryCta = () => {
-  demo('start', 'hospitality_hero')
+  track('generate_lead', {
+    lead_type: 'demo_interest',
+    lead_source: 'hospitality_hero',
+    product: 'konty_hospitality',
+    value: 50
+  })
 }
+
 const onSecondaryCta = () => {
-  pricing('view', 'hospitality')
+  track('view_item_list', {
+    item_list_name: 'pricing',
+    product: 'konty_hospitality'
+  })
 }
 </script>

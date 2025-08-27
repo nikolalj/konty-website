@@ -73,6 +73,8 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 
+const { track } = useTracking()
+
 const form = reactive({
   name: '',
   email: '',
@@ -83,6 +85,15 @@ const loading = ref(false)
 
 const onSubmit = async () => {
   loading.value = true
+  
+  // Track form submission (GA4 standard event)
+  track('generate_lead', {
+    lead_type: 'contact_form',
+    lead_source: 'contact_section',
+    value: 25
+  })
+  
+  // TODO: Implement actual form submission
   await new Promise(resolve => setTimeout(resolve, 1000))
   loading.value = false
 }

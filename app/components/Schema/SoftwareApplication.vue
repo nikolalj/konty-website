@@ -11,7 +11,7 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const config = useRuntimeConfig()
 
 const schema = computed(() => {
@@ -27,7 +27,7 @@ const schema = computed(() => {
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": getCurrentCurrency(),
+      "priceCurrency": t('common.currency'),
       "description": t('pricing.freeTrial')
     },
     "aggregateRating": {
@@ -101,15 +101,6 @@ const schema = computed(() => {
     "applicationSubCategory": "PointOfSale"
   }
 })
-
-function getCurrentCurrency() {
-  switch(locale.value) {
-    case 'me': return 'EUR'
-    case 'ba': return 'BAM'
-    case 'us': return 'USD'
-    default: return 'RSD'
-  }
-}
 
 // Add schema to head
 useHead({

@@ -205,8 +205,8 @@ const props = withDefaults(defineProps<Props>(), {
   showLoadingState: false
 })
 
-const { track } = useAnalytics()
-const { gtag } = useGtag()
+const { track } = useTracking()
+const { consent, consentGiven, acceptAll: acceptAllConsent, acceptSelected, initializeConsent } = useConsent()
 const config = useRuntimeConfig()
 
 // State
@@ -217,11 +217,12 @@ const isProcessing = ref(false)
 const isInitializing = ref(true)
 const userGeoLocation = ref<string>('unknown')
 
+// Use consent state from composable
 const preferences = reactive<CookiePreferences>({
   necessary: true,
-  analytics: false,
-  marketing: false,
-  performance: false
+  analytics: consent.value.analytics,
+  marketing: consent.value.marketing,
+  performance: consent.value.performance
 })
 
 // Generate unique consent ID

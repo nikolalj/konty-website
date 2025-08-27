@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics Test</title>
+</head>
+<body>
+    <h1>Analytics Test Guide</h1>
+    
+    <h2>✅ What We've Implemented</h2>
+    <ul>
+        <li>GA4 configuration with debug mode in development</li>
+        <li>Lean tracking composable with GA4 standard events</li>
+        <li>Automatic page view tracking with context</li>
+        <li>Scroll depth tracking (25%, 50%, 75%, 90%)</li>
+        <li>Web Vitals tracking (CLS, FCP, LCP, TTFB, INP)</li>
+        <li>Error tracking for JavaScript exceptions</li>
+    </ul>
+    
+    <h2>📊 GA4 Standard Events We're Using</h2>
+    <ul>
+        <li><code>generate_lead</code> - Demo requests, contact forms (value: 25-50)</li>
+        <li><code>view_item_list</code> - Viewing pricing page</li>
+        <li><code>page_view</code> - Enhanced with locale, product interest</li>
+        <li><code>scroll</code> - Scroll depth milestones</li>
+        <li><code>exception</code> - JavaScript errors</li>
+        <li><code>web_vitals</code> - Performance metrics</li>
+    </ul>
+    
+    <h2>🧪 How to Test</h2>
+    <ol>
+        <li>Open browser DevTools Console</li>
+        <li>Navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
+        <li>Look for <code>[GA4]</code> prefixed console logs</li>
+        <li>Click "Započnite Besplatnu Probu" button - should log <code>generate_lead</code></li>
+        <li>Scroll down the page - should log <code>scroll</code> events at 25%, 50%, 75%, 90%</li>
+        <li>Navigate between pages - should log <code>page_view</code> events</li>
+    </ol>
+    
+    <h2>🚀 Next Steps</h2>
+    <ol>
+        <li>Get real GA4 Measurement ID from Google Analytics</li>
+        <li>Replace <code>G-XXXXXXXXXX</code> in .env file</li>
+        <li>Open GA4 DebugView to see real-time events</li>
+        <li>Deploy and verify in production</li>
+    </ol>
+    
+    <h2>⚠️ Important Notes</h2>
+    <ul>
+        <li>Forms don't actually submit yet (TODO in ContactForm.vue)</li>
+        <li>Currency is automatically set based on locale (RS=RSD, ME=EUR, BA=BAM, US=USD)</li>
+        <li>All events include page context (path, locale, product interest)</li>
+        <li>Debug logs only appear in development mode</li>
+    </ul>
+</body>
+</html>

@@ -267,18 +267,19 @@ export default defineNuxtConfig({
 
     // Public keys (available on client)
     public: {
-      googleAnalyticsId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
-      gtagId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
+      gaMeasurementId: process.env.NUXT_PUBLIC_GA_MEASUREMENT_ID || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
     },
   },
 
-  // Google Analytics
+  // Google Analytics 4
   gtag: {
-    id: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
+    id: process.env.NUXT_PUBLIC_GA_MEASUREMENT_ID || '',
+    loadingStrategy: 'defer',  // Don't block render
+    initialConsent: false,  // Start with consent denied (GDPR compliant)
     config: {
-      page_title: 'Konty POS',
-      send_page_view: true
+      send_page_view: false,  // We'll send enhanced ones
+      debug_mode: process.env.NODE_ENV === 'development'  // Dev testing
     }
   },
 

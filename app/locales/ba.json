@@ -22,6 +22,8 @@
     "title": "25.000 restorana vjeruje Konty-ju svoje najgore večeri"
   },
   "common": {
+    "currency": "BAM",
+    "currencySymbol": "KM",
     "bookDemo": "Lični demo (15 min)",
     "dismiss": "Odbaci",
     "hospitality": "Ugostiteljstvo",

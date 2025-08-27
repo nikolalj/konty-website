@@ -81,7 +81,11 @@ useCustomSeoMeta({
 
 // Track error in analytics
 onMounted(() => {
-  const { error: trackError } = useAnalytics()
-  trackError(error.value?.statusCode || 404)
+  const { track } = useTracking()
+  track('exception', {
+    description: `${error.value?.statusCode || 404} error`,
+    fatal: false,
+    error_code: error.value?.statusCode || 404
+  })
 })
 </script>

@@ -22,6 +22,8 @@
     "title": "9,000 Restaurants and Retail Stores Trust Our POS System"
   },
   "common": {
+    "currency": "USD",
+    "currencySymbol": "$",
     "bookDemo": "Get Personal Demo (15 min)",
     "dismiss": "Dismiss",
     "hospitality": "Hospitality",
