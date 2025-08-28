@@ -9,7 +9,7 @@
     }"
   >
     <UIAppear>
-      <UILazyImage
+      <!-- <UILazyImage
         src="https://ariapos.me/img/aria_device2.29fb96a7.png"
         preset=""
         :sizes="'100vw'"
@@ -17,7 +17,7 @@
         fetchpriority="high"
         alt=""
         role="presentation"
-      />
+      /> -->
     </UIAppear>
   </UPageSection>
 </template>
