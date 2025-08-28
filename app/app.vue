@@ -9,7 +9,7 @@
 <script setup lang="ts">
 const i18nHead = useLocaleHead({
   dir: true,
-  seo: true
+  seo: false
 })
 useHead(i18nHead)
 </script>

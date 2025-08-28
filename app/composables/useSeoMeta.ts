@@ -34,7 +34,6 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   // Build canonical URL with proper locale handling
   const cleanPath = removeLocalePrefix(route.path)
   const canonicalPath = addLocalePrefix(locale.value, cleanPath)
-  // Remove trailing slash except for root path
   const normalizedPath = canonicalPath === '/' ? canonicalPath : canonicalPath.replace(/\/$/, '')
   const canonical = options.url || `${siteUrl}${normalizedPath}`
 
@@ -85,7 +84,6 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   })
 
   // Set canonical and language
-  // Note: hreflang tags are handled by @nuxtjs/i18n module
   useHead({
     link: [
       { rel: 'canonical', href: canonical }
