@@ -4,7 +4,7 @@
       :items="items"
       :modal="false"
       :ui="{
-        content: 'min-w-64'
+        content: 'min-w-64',
       }"
     >
       <UButton
@@ -74,6 +74,8 @@ const items = computed(() => {
     label: loc.name,
     code: loc.code,
     flag: loc.flag,
+    type: 'link',
+    to: switchLocalePath(loc.code),
     isRecommended: suggestedLocale.value === loc.code,
     onSelect: async () => {
       if (locale.value === loc.code) return

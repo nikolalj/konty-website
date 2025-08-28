@@ -119,7 +119,7 @@ export default defineNuxtConfig({
 
   seo: {
     redirectToCanonicalSiteUrl: true,
-    fallbackTitle: false // Use exact titles
+    fallbackTitle: false,
   },
 
   // Sitemap with better configuration
@@ -150,6 +150,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: false,
     customRoutes: 'config',
+    trailingSlash: false,
     locales: [
       {
         code: 'me',
