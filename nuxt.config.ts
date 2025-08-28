@@ -159,8 +159,7 @@ export default defineNuxtConfig({
         file: 'me.json',
         flag: 'i-circle-flags:me',
         currency: 'EUR',
-        currencySymbol: '€',
-        isCatchallLocale: true
+        currencySymbol: '€'
       },
       {
         code: 'rs',
@@ -169,8 +168,7 @@ export default defineNuxtConfig({
         file: 'rs.json',
         flag: 'i-circle-flags:rs',
         currency: 'RSD',
-        currencySymbol: 'RSD',
-        isCatchallLocale: true
+        currencySymbol: 'RSD'
       },
       {
         code: 'ba',
@@ -179,8 +177,7 @@ export default defineNuxtConfig({
         file: 'ba.json',
         flag: 'i-circle-flags:ba',
         currency: 'BAM',
-        currencySymbol: 'KM',
-        isCatchallLocale: true
+        currencySymbol: 'KM'
       },
       {
         code: 'us',
@@ -189,8 +186,7 @@ export default defineNuxtConfig({
         file: 'us.json',
         flag: 'i-circle-flags:us',
         currency: 'USD',
-        currencySymbol: '$',
-        isCatchallLocale: true
+        currencySymbol: '$'
       }
     ],
     strategy: LOCALE_CONFIG.STRATEGY,
