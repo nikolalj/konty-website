@@ -62,6 +62,16 @@
     "revolutionize": "Watch how we keep you running when others crash",
     "seeInAction": "See Konty Handle Your Worst Night"
   },
+  "error": {
+    "400": "Page not found",
+    "403": "Access forbidden",
+    "500": "Server error - we're working on it",
+    "bookDemo": "Book a demo",
+    "generic": "Something went wrong",
+    "goHome": "Go to homepage",
+    "helpText": "If you need help, contact us at",
+    "viewPricing": "View Pricing"
+  },
   "faq": {
     "features": {
       "a1": "Konty includes sales management, inventory tracking, reporting, compliance, loyalty programs, employee management, and much more.",

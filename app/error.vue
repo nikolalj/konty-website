@@ -19,7 +19,7 @@
           variant="solid"
           block
         >
-          {{ t('error.goHome', 'Go to Homepage') }}
+          {{ t('error.goHome') }}
         </UButton>
 
         <UButton
@@ -28,7 +28,7 @@
           variant="outline"
           block
         >
-          {{ t('error.viewPricing', 'View Pricing') }}
+          {{ t('error.viewPricing') }}
         </UButton>
 
         <UButton
@@ -37,13 +37,13 @@
           variant="ghost"
           block
         >
-          {{ t('error.bookDemo', 'Book a Demo') }}
+          {{ t('error.bookDemo') }}
         </UButton>
       </div>
 
       <!-- Help text -->
       <p class="mt-8 text-sm text-gray-500 dark:text-gray-400">
-        {{ t('error.helpText', 'If you need help, contact us at') }}
+        {{ t('error.helpText') }}
         <a href="mailto:support@konty.com" class="text-primary-500 hover:underline">
           support@konty.com
         </a>
@@ -60,15 +60,15 @@ const localePath = useLocalePath()
 // Determine error message
 const errorMessage = computed(() => {
   if (error.value?.statusCode === 404) {
-    return t('error.404', "Page not found")
+    return t('error.404')
   }
   if (error.value?.statusCode === 500) {
-    return t('error.500', "Server error - we're working on it")
+    return t('error.500')
   }
   if (error.value?.statusCode === 403) {
-    return t('error.403', "Access forbidden")
+    return t('error.403')
   }
-  return t('error.generic', "Something went wrong")
+  return t('error.generic')
 })
 
 // SEO Meta - prevent indexing of error pages

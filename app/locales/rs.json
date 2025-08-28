@@ -13,13 +13,13 @@
       "title": "5 znakova da ti POS ubija profit"
     },
     "post3": {
-      "description": "Kako je 25.000 restorana prešlo bez ijednog dana zastoja.",
+      "description": "Kako je 9.000 restorana prešlo bez ijednog dana zastoja.",
       "title": "Prelazak na novi POS: Vodič za 48 sati"
     }
   },
   "clients": {
     "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998",
-    "title": "25.000 restorana i prodavnica nam veruje svoje najgore večeri"
+    "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri"
   },
   "common": {
     "currency": "RSD",
@@ -61,6 +61,16 @@
     "requestDemo": "Dobij svoj demo",
     "revolutionize": "Gledaj kako radiš bez prekida kad drugi pucaju",
     "seeInAction": "Vidi kako Konty radi u najgoroj večeri"
+  },
+    "error": {
+    "400": "Strana nije pronađena",
+    "403": "Pristup nije dozvoljen",
+    "500": "Došlo je do greške na serveru – radimo na rešavanju problema.",
+    "bookDemo": "Zakaži demo",
+    "generic": "Došlo je do greške",
+    "goHome": "Idi na početnu stranu",
+    "helpText": "Ako vam je potrebna pomoć, kontaktirajte nas na",
+    "viewPricing": "Vidi cene"
   },
   "faq": {
     "features": {
@@ -175,7 +185,7 @@
   "hero": {
     "cta": "Počni besplatno",
     "subtitle": "Pouzdane fiskalne kase sa e-fakturama. Dok drugi dodaju AI, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-    "tagline": "25.000 restorana i prodavnica nam veruje svoje najgore večeri",
+    "tagline": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
     "title": "Konačno. Fiskalna kasa koja neće pući u subotu uveče."
   },
   "hospitalityPage": {
@@ -381,7 +391,7 @@
       "title": "Zakazivanje demo prezentacije - Konty POS"
     },
     "home": {
-      "description": "Pouzdane fiskalne kase sa e-fakturama. 25.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
+      "description": "Pouzdane fiskalne kase sa e-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
       "title": "Konty - Profesionalni POS sistem za restorane i prodavnice"
     },
     "kontyHospitality": {
