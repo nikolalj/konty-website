@@ -4,7 +4,6 @@
  */
 export const useTracking = () => {
   const { gtag } = useGtag()
-  const { locale, t } = useI18n()
   const { consent } = useConsent()
   const route = useRoute()
 
@@ -26,42 +25,45 @@ export const useTracking = () => {
    * @param parameters - Event parameters including value, currency, etc.
    */
   const track = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (!gtag) return
+    return
+    // if (!gtag) return
 
-    // Check consent before tracking - NO events are exempt from consent
-    if (!consent.value.analytics) {
-      if (import.meta.dev) {
-        console.log(`[GA4] Event blocked (no consent): ${eventName}`)
-      }
-      return
-    }
+    // const { locale, t } = useI18n()
 
-    // Always add context (check window exists for SSR safety)
-    const enrichedParams = {
-      page_path: route.path,
-      page_location: typeof window !== 'undefined' ? window.location.href : '',
-      locale: locale.value,
-      ...parameters
-    }
+    // // Check consent before tracking - NO events are exempt from consent
+    // if (!consent.value.analytics) {
+    //   if (import.meta.dev) {
+    //     console.log(`[GA4] Event blocked (no consent): ${eventName}`)
+    //   }
+    //   return
+    // }
 
-    // Add currency for conversion events if not provided
-    if (['generate_lead', 'sign_up', 'purchase', 'begin_checkout'].includes(eventName)) {
-      if (!parameters?.currency) {
-        Object.assign(enrichedParams, { currency: t('common.currency') })
-      }
-    }
+    // // Always add context (check window exists for SSR safety)
+    // const enrichedParams = {
+    //   page_path: route.path,
+    //   page_location: typeof window !== 'undefined' ? window.location.href : '',
+    //   locale: locale.value,
+    //   ...parameters
+    // }
 
-    // Debug logging in development
-    if (import.meta.dev) {
-      console.log(`[GA4] ${eventName}:`, enrichedParams)
-    }
+    // // Add currency for conversion events if not provided
+    // if (['generate_lead', 'sign_up', 'purchase', 'begin_checkout'].includes(eventName)) {
+    //   if (!parameters?.currency) {
+    //     Object.assign(enrichedParams, { currency: t('common.currency') })
+    //   }
+    // }
 
-    // Safe gtag call with error boundary
-    try {
-      gtag('event', eventName, enrichedParams)
-    } catch (error) {
-      console.warn('[GA4] Failed to send event:', error)
-    }
+    // // Debug logging in development
+    // if (import.meta.dev) {
+    //   console.log(`[GA4] ${eventName}:`, enrichedParams)
+    // }
+
+    // // Safe gtag call with error boundary
+    // try {
+    //   gtag('event', eventName, enrichedParams)
+    // } catch (error) {
+    //   console.warn('[GA4] Failed to send event:', error)
+    // }
   }
 
   /**
