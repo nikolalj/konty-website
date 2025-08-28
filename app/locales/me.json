@@ -103,6 +103,8 @@
     }
   },
   "features": {
+    "exploreFeatures": "Istraži funkcije",
+    "scheduleDemo": "Zakaži demo",
     "hospitality": {
       "description": "Kad subota uveče postane haos, ovo su jedine funkcije koje su bitne.",
       "kitchenDisplay": {

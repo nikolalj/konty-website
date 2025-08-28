@@ -103,6 +103,8 @@
     }
   },
   "features": {
+    "exploreFeatures": "Explore Features",
+    "scheduleDemo": "Schedule Demo",
     "hospitality": {
       "description": "When Saturday night becomes chaos, these are the POS system features that matter.",
       "kitchenDisplay": {

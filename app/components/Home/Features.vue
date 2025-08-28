@@ -135,14 +135,14 @@ interface FeatureLink {
 const links: Record<string, FeatureLink[]> = {
   kontyHospitality: [
     {
-      labelKey: 'features.hospitality.exploreFeatures',
+      labelKey: 'features.exploreFeatures',
       to: '/konty-hospitality',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'
     },
     {
-      labelKey: 'features.hospitality.scheduleDemo',
+      labelKey: 'features.scheduleDemo',
       to: '/demo',
       color: 'neutral',
       variant: 'subtle',
@@ -151,14 +151,14 @@ const links: Record<string, FeatureLink[]> = {
   ],
   kontyRetail: [
     {
-      labelKey: 'features.retail.exploreFeatures',
+      labelKey: 'features.exploreFeatures',
       to: '/konty-retail',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'
     },
     {
-      labelKey: 'features.retail.startFree',
+      labelKey: 'features.scheduleDemo',
       to: '/demo',
       color: 'neutral',
       variant: 'outline',
