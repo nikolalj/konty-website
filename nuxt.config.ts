@@ -51,15 +51,15 @@ export default defineNuxtConfig({
 
   // Modules - Order matters for optimization
   modules: [
-    '@nuxt/fonts',
-    '@nuxt/image',
     '@nuxt/ui-pro',
-    '@nuxtjs/seo',
-    '@nuxtjs/i18n',
+    '@nuxt/image',
+    '@nuxt/icon',
     '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/fonts',
+    '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxt/eslint',
-    '@nuxt/icon'
   ],
 
   fonts: {
@@ -280,6 +280,10 @@ export default defineNuxtConfig({
       send_page_view: false,
       debug_mode: process.env.APP_ENV === 'development'
     }
+  },
+
+  features: {
+    inlineStyles: true
   },
 
   // Experimental features for Nuxt 4
