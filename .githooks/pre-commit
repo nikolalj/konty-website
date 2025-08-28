@@ -8,29 +8,29 @@ NC=$'\033[0m' # No Color
 # Get list of modified files
 MODIFIED_FILES=$(git diff --cached --name-only)
 
-# Check if any Vue files were modified
-VUE_MODIFIED=false
+# Check if any Vue files or translation files were modified
+RELEVANT_MODIFIED=false
 for file in $MODIFIED_FILES; do
-    if [[ $file == *.vue ]]; then
-        VUE_MODIFIED=true
+    if [[ $file == *.vue ]] || [[ $file == app/locales/*.json ]]; then
+        RELEVANT_MODIFIED=true
         break
     fi
 done
 
-# Display reminder if Vue files were modified
-if [ "$VUE_MODIFIED" = true ]; then
+# Display reminder if Vue or translation files were modified
+if [ "$RELEVANT_MODIFIED" = true ]; then
     echo ""
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo "${YELLOW}📅 SITEMAP REMINDER${NC}"
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
-    echo "You modified Vue files. If you changed content (made visible changes) on any of these pages:"
+    echo "You modified Vue or i18n files. If you changed content (made visible changes) on any of these pages:"
     echo ""
     echo "${GREEN}/${NC} (homepage), ${GREEN}/pricing${NC}, ${GREEN}/products${NC}, ${GREEN}/konty-retail${NC}, ${GREEN}/konty-hospitality${NC}, ${GREEN}/privacy${NC}, ${GREEN}/terms${NC}"
     echo ""
     echo "👉 Update their lastmod date in: ${GREEN}/server/api/__sitemap__/urls.ts${NC}"
     echo ""
-    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
 
     # Use exec to ensure the read command works properly
