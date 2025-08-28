@@ -34,7 +34,9 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
   // Build canonical URL with proper locale handling
   const cleanPath = removeLocalePrefix(route.path)
   const canonicalPath = addLocalePrefix(locale.value, cleanPath)
-  const canonical = options.url || `${siteUrl}${canonicalPath}`
+  // Remove trailing slash except for root path
+  const normalizedPath = canonicalPath === '/' ? canonicalPath : canonicalPath.replace(/\/$/, '')
+  const canonical = options.url || `${siteUrl}${normalizedPath}`
 
   // Get OG image - either explicit, route-based, or fallback
   const getOgImage = (): string => {
