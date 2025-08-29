@@ -10,7 +10,7 @@
   >
     <UIAppear>
       <NuxtImg
-        src="/images/getstarted/getstarted.png"
+        src="/images/getstarted/getstarted.avif"
         format="avif"
         loading="lazy"
         alt="Get started image"

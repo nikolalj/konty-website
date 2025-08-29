@@ -86,8 +86,8 @@ const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 
 // Feature images (could be moved to static assets later)
 const featureImages = {
-  kontyHospitality: '/images/features/hospitality.png',
-  kontyRetail: '/images/features/retail.png'
+  kontyHospitality: '/images/features/hospitality.avif',
+  kontyRetail: '/images/features/retail.avif'
 }
 
 const productKey = computed(() => product.value === 'kontyHospitality' ? 'hospitality' : 'retail')

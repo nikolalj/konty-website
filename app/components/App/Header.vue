@@ -64,7 +64,7 @@
         <div class="grid grid-cols-2 gap-4 p-4">
           <div>
             <NuxtImg
-              src="/images/navigation/products.jpeg"
+              src="/images/navigation/products.avif"
               format="avif"
               loading="lazy"
               alt="Navigate to products image"
@@ -96,7 +96,7 @@
         <div class="grid grid-cols-3 gap-4 p-4">
           <div>
             <NuxtImg
-              src="/images/navigation/products.jpeg"
+              src="/images/navigation/products.avif"
               format="avif"
               loading="lazy"
               alt="Navigate to hospitality image"
@@ -135,7 +135,7 @@
         <div class="grid grid-cols-2 gap-4 p-4">
           <div>
             <NuxtImg
-              src="/images/navigation/products.jpeg"
+              src="/images/navigation/products.avif"
               format="avif"
               loading="lazy"
               alt="Navigate to retail image"

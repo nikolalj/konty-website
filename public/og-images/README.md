@@ -4,14 +4,14 @@
 
 Create the following images for optimal social sharing:
 
-- `default.png` - Fallback for all pages
-- `home.png` - Homepage specific
-- `pricing.png` - Pricing page
-- `products.png` - Products overview
-- `retail.png` - Konty Retail
-- `hospitality.png` - Konty Hospitality  
-- `demo.png` - Demo request page
-- `about.png` - About page
+- `default.avif` - Fallback for all pages
+- `home.avif` - Homepage specific
+- `pricing.avif` - Pricing page
+- `products.avif` - Products overview
+- `retail.avif` - Konty Retail
+- `hospitality.avif` - Konty Hospitality
+- `demo.avif` - Demo request page
+- `about.avif` - About page
 
 ## Design Guidelines
 
