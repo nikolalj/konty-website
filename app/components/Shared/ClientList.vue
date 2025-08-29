@@ -24,7 +24,17 @@
           class="w-full bg-elevated hover:bg-muted cursor-pointer"
         >
           <div class="flex justify-center">
-            <img src="https://martex-nuxtjs.vercel.app/assets/images/png_icons/tool-9.png" :alt="client.name" class="w-20 h20" >
+            <NuxtImg
+              :src="client.logo"
+              format="avif"
+              loading="lazy"
+              :alt="client.name"
+              role="presentation"
+              width="80"
+              height="80"
+              quality="70"
+              fit="cover"
+            />
           </div>
         </UPageCard>
       </div>
@@ -50,6 +60,7 @@ const config = ref({
 const clients = ref([
   {
     name: 'Microsoft',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-microsoft',
     colorClass: 'text-[#00A1F1]',
     product: 'kontyRetail',
@@ -57,6 +68,7 @@ const clients = ref([
   },
   {
     name: 'Google',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-google',
     colorClass: 'text-[#4285F4]',
     product: 'kontyRetail',
@@ -64,6 +76,7 @@ const clients = ref([
   },
   {
     name: 'Apple',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-apple',
     colorClass: 'text-default',
     product: 'kontyHospitality',
@@ -71,6 +84,7 @@ const clients = ref([
   },
   {
     name: 'Amazon',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-amazon',
     colorClass: 'text-[#FF9900]',
     product: 'kontyHospitality',
@@ -78,6 +92,7 @@ const clients = ref([
   },
   {
     name: 'Meta',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-meta',
     colorClass: 'text-[#1877F2]',
     product: 'kontyHospitality',
@@ -85,6 +100,7 @@ const clients = ref([
   },
   {
     name: 'Netflix',
+    logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-netflix',
     colorClass: 'text-[#E50914]',
     product: 'kontyHospitality',

@@ -38,13 +38,15 @@
       <!-- Right column: product image -->
       <UIAppear direction="left" :distance="64">
         <NuxtImg
-          src="https://martex-nuxtjs.vercel.app/_nuxt/hero-25-img.92cadc81.png"
-          preset="hero"
+          src="/images/hero/hero.png"
+          format="avif"
           alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
-          width="1052"
-          height="592"
+          width="500"
+          height="600"
           loading="eager"
           decoding="async"
+          quality="90"
+          fit="cover"
           fetchpriority="high"
           role="presentation"
         />

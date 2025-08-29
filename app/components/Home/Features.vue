@@ -15,14 +15,16 @@
       >
         <UIAppear direction="right" :distance="32" :animate-on="product">
           <div :class="product !== 'kontyRetail' ? 'lg:order-2' : 'lg:order-1'">
-            <UILazyImage
+            <NuxtImg
               :src="featureImages[product]"
-              preset=""
-              :sizes="'100vw'"
-              loading="eager"
-              fetchpriority="high"
-              alt=""
+              format="avif"
+              loading="lazy"
+              :alt="product === 'kontyHospitality' ? 'Hospitality features' : 'Retail features'"
               role="presentation"
+              width="500"
+              height="500"
+              quality="80"
+              fit="inside"
               class="w-full h-auto rounded-2xl transition-transform duration-300 hover:scale-105"
             />
           </div>
@@ -84,8 +86,8 @@ const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 
 // Feature images (could be moved to static assets later)
 const featureImages = {
-  kontyHospitality: 'https://media.istockphoto.com/id/1271319044/photo/small-business-people-and-service-concept-happy-man-or-waiter-in-apron-at-counter-with.jpg?s=1024x1024&w=is&k=20&c=zcF6uTfA_cAEG-X9xrBwb5LaPnK_set4tCuPgFOiX98=',
-  kontyRetail: 'https://media.istockphoto.com/id/2170880602/photo/smiling-baker-assisting-customer-in-cozy-artisan-bakery.jpg?s=1024x1024&w=is&k=20&c=hWdPeyIaXXQP8EOoYSCdqXY23OUDuwl71fnVIjGeNoc='
+  kontyHospitality: '/images/features/hospitality.png',
+  kontyRetail: '/images/features/retail.png'
 }
 
 const productKey = computed(() => product.value === 'kontyHospitality' ? 'hospitality' : 'retail')

@@ -9,15 +9,18 @@
     }"
   >
     <UIAppear>
-      <!-- <UILazyImage
-        src="https://ariapos.me/img/aria_device2.29fb96a7.png"
-        preset=""
-        :sizes="'100vw'"
-        loading="eager"
-        fetchpriority="high"
-        alt=""
+      <NuxtImg
+        src="/images/getstarted/getstarted.png"
+        format="avif"
+        loading="lazy"
+        alt="Get started image"
         role="presentation"
-      /> -->
+        width="500"
+        height="500"
+        quality="80"
+        fit="inside"
+        class="transition-transform duration-300 hover:scale-105"
+      />
     </UIAppear>
   </UPageSection>
 </template>

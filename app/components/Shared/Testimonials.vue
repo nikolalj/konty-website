@@ -32,18 +32,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Avatar images for testimonials
-const avatarImages = [
-  'https://randomuser.me/api/portraits/men/32.jpg',
-  'https://randomuser.me/api/portraits/women/44.jpg',
-  'https://randomuser.me/api/portraits/men/60.jpg',
-  'https://randomuser.me/api/portraits/women/68.jpg',
-  'https://randomuser.me/api/portraits/men/71.jpg',
-  'https://randomuser.me/api/portraits/women/25.jpg',
-  'https://randomuser.me/api/portraits/men/84.jpg',
-  'https://randomuser.me/api/portraits/women/95.jpg'
-]
-
 const testimonials = computed(() => {
   const testimonialKeys = ['t1', 't2', 't3', 't4', 't5', 't6', 't7', 't8']
   return testimonialKeys.map((key, index) => {
@@ -52,7 +40,7 @@ const testimonials = computed(() => {
         name: t(`testimonials.${key}.name`),
         description: t(`testimonials.${key}.role`),
         avatar: {
-          src: avatarImages[index],
+          src: `/images/testimonials/${index + 1}.jpg`,
           loading: 'lazy'
         }
       },
