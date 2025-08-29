@@ -64,8 +64,8 @@
         <ul class="grid gap-2 p-4 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
           <li class="row-span-2">
             <UILazyImage
-              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
-              preset="hero"
+              src="/images/navigation/products.jpeg"
+              preset="navigation"
               :sizes="'100vw'"
               loading="eager"
               fetchpriority="high"
@@ -92,8 +92,8 @@
         <div class="grid grid-cols-3 gap-4 p-4">
           <div class="col-span-1">
             <UILazyImage
-              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
-              preset="hero"
+              src="/images/navigation/products.jpeg"
+              preset="navigation"
               :sizes="'100vw'"
               loading="eager"
               fetchpriority="high"
@@ -129,8 +129,8 @@
         <div class="grid grid-cols-2 gap-4 p-4">
           <div class="col-span-1">
             <UILazyImage
-              src="https://images.unsplash.com/photo-1516554646385-7642248096d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FpdGVyJTIwc2VydmluZ3xlbnwwfHwwfHx8MA%3D%3D"
-              preset="hero"
+              src="/images/navigation/products.jpeg"
+              preset="navigation"
               :sizes="'100vw'"
               loading="eager"
               fetchpriority="high"

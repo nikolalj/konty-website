@@ -89,11 +89,12 @@ export default defineNuxtConfig({
     screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536 },
     presets: {
       hero: { modifiers: { format: 'avif', quality: 90, width: 1200, height: 600, fit: 'cover' }},
-      og: { modifiers: { format: 'jpg', quality: 85, width: 1200, height: 630, fit: 'cover' }}, // OpenGraph spec
-      twitter: { modifiers: { format: 'jpg', quality: 85, width: 1200, height: 600, fit: 'cover' }}, // Twitter spec
+      og: { modifiers: { format: 'jpg', quality: 85, width: 1200, height: 630, fit: 'cover' }},
+      twitter: { modifiers: { format: 'jpg', quality: 85, width: 1200, height: 600, fit: 'cover' }},
       card: { modifiers: { format: 'avif', quality: 85, width: 600, height: 400, fit: 'cover' }},
       thumbnail: { modifiers: { format: 'avif', quality: 75, width: 300, height: 200, fit: 'cover' }},
-      avatar: { modifiers: { format: 'avif', quality: 90, width: 100, height: 100, fit: 'cover' }}
+      avatar: { modifiers: { format: 'avif', quality: 90, width: 100, height: 100, fit: 'cover' }},
+      navigation: { modifiers: { format: 'avif', quality: 90, width: 100, height: 100, fit: 'cover' }},
     },
     densities: [1, 2],
     domains: ['konty.com'],
