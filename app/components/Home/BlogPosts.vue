@@ -8,23 +8,24 @@
             :key="index"
             :title="post.title"
             :description="post.description"
-            :image="post.image"
             :date="post.date"
             :to="post.to"
             variant="subtle"
             target="_blank"
           >
-            <NuxtImg
-              :src="post.image"
-              format="avif"
-              loading="lazy"
-              :alt="post.title"
-              role="presentation"
-              width="350"
-              height="350"
-              quality="80"
-              fit="cover"
-            />
+            <template #image>
+              <NuxtImg
+                :src="post.image"
+                format="avif"
+                loading="lazy"
+                :alt="post.title"
+                role="presentation"
+                width="350"
+                height="350"
+                quality="80"
+                fit="cover"
+              />
+            </template>
           </UBlogPost>
         </UBlogPosts>
       </UContainer>
