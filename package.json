@@ -31,6 +31,7 @@
     "@vueuse/nuxt": "^13.6.0",
     "nuxt": "^4.0.1",
     "nuxt-gtag": "^3.0.3",
+    "sharp": "^0.34.3",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
