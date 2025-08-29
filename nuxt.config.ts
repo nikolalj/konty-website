@@ -22,10 +22,7 @@ export default defineNuxtConfig({
           manualChunks: {
             'vue-vendor': ['vue', 'vue-router']
           },
-        },
-        external: [
-          "sharp"
-        ]
+        }
       },
       chunkSizeWarningLimit: 1000
     },
@@ -203,11 +200,8 @@ export default defineNuxtConfig({
     timing: false, // Disable timing in production for security
 
     externals: {
-      inline: ['unhead', 'sharp']
+      inline: ['unhead']
     },
-
-    // Ensure sharp modules are included
-    moduleSideEffects: ['sharp'],
 
     // Prerendering disabled - using SSR for dynamic locale detection
     // All pages need server-side rendering for locale redirects to work
