@@ -264,14 +264,13 @@ export default defineNuxtConfig({
 
     // Public keys (available on client)
     public: {
-      gaMeasurementId: process.env.NUXT_PUBLIC_GA_MEASUREMENT_ID || '',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
     },
   },
 
   // Google Analytics 4
   gtag: {
-    id: process.env.NUXT_PUBLIC_GA_MEASUREMENT_ID || '',
+    id: process.env.GOOGLE_ANALYTICS_ID || '',
     config: {
       send_page_view: false,
       debug_mode: process.env.APP_ENV === 'development'
