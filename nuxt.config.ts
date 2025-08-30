@@ -60,6 +60,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxt/eslint',
+    '@nuxthub/core'
   ],
 
   fonts: {
