@@ -242,6 +242,7 @@ export default defineNuxtConfig({
       '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
       // ISR for dynamic content
       '/': { isr: 3600 },
@@ -252,7 +253,7 @@ export default defineNuxtConfig({
       '/api/**': {
         cors: true,
         headers: { 'cache-control': 'no-store' }
-      }
+      },
     }
   },
 

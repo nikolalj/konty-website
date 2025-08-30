@@ -45,7 +45,6 @@
           height="600"
           loading="eager"
           decoding="async"
-          preload
           quality="90"
           fit="cover"
           fetchpriority="high"
