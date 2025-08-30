@@ -12,6 +12,9 @@
             :to="post.to"
             variant="subtle"
             target="_blank"
+            :ui="{
+              header: 'transform transition-transform duration-200 group-hover/blog-post:scale-110',
+            }"
           >
             <template #header>
               <NuxtImg
@@ -24,6 +27,7 @@
                 height="350"
                 quality="80"
                 fit="cover"
+                class="w-full"
               />
             </template>
           </UBlogPost>
