@@ -13,7 +13,7 @@
             variant="subtle"
             target="_blank"
           >
-            <template #image>
+            <template #header>
               <NuxtImg
                 :src="post.image"
                 format="avif"
