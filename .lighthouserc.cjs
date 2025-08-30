@@ -2,16 +2,18 @@ module.exports = {
   ci: {
     // Collection settings
     collect: {
-      // Use .output/public for Nuxt static generation
-      staticDistDir: './.output/public',
+      // Run Nuxt SSR server for testing
+      startServerCommand: 'node .output/server/index.mjs',
+      startServerReadyPattern: 'Listening on',
+      startServerReadyTimeout: 30000,  // 30 seconds to start
       
       // Test critical conversion pages
       url: [
-        'http://localhost/',                    // Homepage
-        'http://localhost/pricing',             // Pricing (critical for conversion)
-        'http://localhost/konty-retail',        // Product page
-        'http://localhost/konty-hospitality',   // Product page
-        'http://localhost/demo'                 // Demo request page
+        'http://localhost:3000/',                    // Homepage
+        'http://localhost:3000/pricing',             // Pricing (critical for conversion)
+        'http://localhost:3000/konty-retail',        // Product page
+        'http://localhost:3000/konty-hospitality',   // Product page
+        'http://localhost:3000/demo'                 // Demo request page
       ],
       
       // Number of times to run Lighthouse per URL for more accurate results
