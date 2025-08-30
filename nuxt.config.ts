@@ -91,7 +91,6 @@ export default defineNuxtConfig({
       og: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 630, fit: 'cover' }},
       twitter: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 600, fit: 'cover' }},
     },
-    densities: [1],
     domains: ['konty.com'],
     ipx: { maxAge: 31536000 }
   },
