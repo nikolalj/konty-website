@@ -11,6 +11,7 @@ jobs:
   quality:
     name: Code Quality & Tests
     runs-on: ubuntu-latest
+    environment: staging
 
     steps:
       - name: Checkout code
@@ -39,6 +40,10 @@ jobs:
       - name: Build application
         run: pnpm build
         env:
+          APP_ENV: ${{ vars.APP_ENV }}
+          NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
+          NUXT_PUBLIC_SITE_URL: ${{ secrets.NUXT_PUBLIC_SITE_URL }}
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
       - name: Upload build artifacts
