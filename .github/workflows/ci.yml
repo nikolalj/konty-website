@@ -76,7 +76,7 @@ jobs:
       - name: Build for Lighthouse
         run: pnpm build
         env:
-          GOOGLE_ANALYTICS_ID: "G-XXXXXXXXXX" # Placeholder for testing
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
       - name: Static HTML export
         run: pnpm generate
