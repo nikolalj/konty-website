@@ -60,6 +60,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxt/eslint',
+    '@nuxthub/core'
   ],
 
   fonts: {
@@ -256,6 +257,7 @@ export default defineNuxtConfig({
     }
   },
 
+  // Runtime configuration
   runtimeConfig: {
     // Private keys (server-only)
     apiSecret: '',
