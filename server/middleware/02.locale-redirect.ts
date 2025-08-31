@@ -1,7 +1,35 @@
 import type { H3Event } from 'h3'
-import type { ValidLocale } from '~/types/locale'
-import { DEFAULT_LOCALE, VALID_LOCALES } from '../../config/locale.config'
-import { detectUserLocale, getLocaleCookie } from '../utils/country-detection'
+import type { LocaleCookie, ValidLocale } from '~/types/locale'
+import { DEFAULT_LOCALE, VALID_LOCALES, COUNTRY_TO_LOCALE_MAP } from '../../config/locale.config'
+
+/**
+ * Get locale preference from cookie
+ */
+function getLocaleCookie(event: H3Event): LocaleCookie | null {
+  const cookieValue = getCookie(event, 'konty-locale')
+  if (!cookieValue) return null
+
+  try {
+    return JSON.parse(cookieValue)
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Get country from Cloudflare edge headers
+ */
+function getCountryFromHeaders(event: H3Event): string | null {
+  return getHeader(event, 'x-cf-country') || null
+}
+
+/**
+ * Convert country code to locale
+ */
+function countryToLocale(country: string | null): ValidLocale {
+  if (!country) return DEFAULT_LOCALE
+  return COUNTRY_TO_LOCALE_MAP[country.toUpperCase()] || DEFAULT_LOCALE
+}
 
 // Pages that need locale-specific content (prices, language)
 const PAGES_TO_REDIRECT = [
@@ -60,14 +88,9 @@ export default defineEventHandler(async (event: H3Event) => {
     }
 
     // If no explicit choice detect locale and if different inform the user
-    try {
-      let { locale: detectedLocale } = await detectUserLocale(event)
-      detectedLocale = VALID_LOCALES.includes(detectedLocale) ? detectedLocale : DEFAULT_LOCALE
-
-      event.context.detectedLocale = detectedLocale
-    } catch {
-      // Silently ignore detection errors on localized paths
-    }
+    const country = getCountryFromHeaders(event)
+    const detectedLocale = countryToLocale(country)
+    event.context.detectedLocale = detectedLocale
 
     return
   }
@@ -90,14 +113,14 @@ export default defineEventHandler(async (event: H3Event) => {
       targetLocale = cookie.locale
       event.context.detectedLocale = undefined
     } else {
-      // Auto-detect locale
-      let { locale: detectedLocale } = await detectUserLocale(event)
-      detectedLocale = VALID_LOCALES.includes(detectedLocale) ? detectedLocale : DEFAULT_LOCALE
+      // Auto-detect locale from Cloudflare headers
+      const country = getCountryFromHeaders(event)
+      const detectedLocale = countryToLocale(country)
 
       // Store for SSR context
       event.context.detectedLocale = detectedLocale
 
-      // Use cookie locale if exists (and not explicit), otherwise use detected
+      // Use detected locale (fresh detection on each visit for non-explicit users)
       targetLocale = detectedLocale
 
       // If different from saved, save in case we might show a suggestion to switch back

@@ -14,14 +14,11 @@
     "typecheck": "nuxt typecheck",
     "test": "echo 'No tests specified' && exit 0",
     "lighthouse": "lhci autorun",
-    "analyze": "nuxt analyze",
-    "download-geolite2": "node scripts/download-geolite2.js",
-    "update-geolite2": "node scripts/download-geolite2.js"
+    "analyze": "nuxt analyze"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.58",
     "@iconify-json/simple-icons": "^1.2.44",
-    "@maxmind/geoip2-node": "^6.1.0",
     "@nuxt/icon": "2.0.0",
     "@nuxt/image": "1.11.0",
     "@nuxt/ui": "^3.3.2",

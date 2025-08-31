@@ -19,53 +19,9 @@ export interface LocaleConfig extends LocaleObject {
 }
 
 /**
- * IP geolocation API response types
+ * Locale cookie structure
  */
-export interface GeoLocation {
-  country: string
-  country_code: string
-  city?: string
-  ip?: string
-}
-
-export interface IpWhoResponse {
-  country_code: string
-  country: string
-  city?: string
-}
-
-export interface FreeIpApiResponse {
-  countryCode: string
-  countryName: string
-  cityName?: string
-}
-
-/**
- * Country detection cache structure
- */
-export interface DetectionCache {
-  country: string
-  timestamp: number
-}
-
-/**
- * Country to locale mapping type
- */
-export type CountryLocaleMap = Record<string, ValidLocale>
-
-/**
- * API response type for country detection
- */
-export interface DetectCountryResponse {
-  country: string
-  method: 'country.is' | 'ipapi.co' | 'ipwho.is' | 'default'
-}
-
-/**
- * Simplified locale preference structure
- */
-export interface LocalePreference {
-  locale: ValidLocale           // The locale to use
-  isExplicit: boolean          // true = user chose, false = detected
-  timestamp: string             // When this was set
+export interface LocaleCookie {
+  locale: ValidLocale
+  explicit: boolean
 }

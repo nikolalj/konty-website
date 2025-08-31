@@ -22,7 +22,3 @@ logs
 .env
 .env.*
 !.env.example
-
-# MaxMind GeoLite2 database
-server/data/*.mmdb
-server/data/GeoLite2-*

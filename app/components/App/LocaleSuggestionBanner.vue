@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import type { LocaleConfig, ValidLocale } from '~/types/locale'
+import type { LocaleConfig, ValidLocale, LocaleCookie } from '~/types/locale'
 
 const nuxtApp = useNuxtApp()
 
