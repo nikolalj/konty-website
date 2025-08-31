@@ -102,7 +102,6 @@ export default defineNuxtConfig({
 
   // SEO Configuration
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
     description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
     defaultLocale: 'sr',
@@ -140,7 +139,6 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
@@ -257,7 +255,6 @@ export default defineNuxtConfig({
     }
   },
 
-  // Runtime configuration
   runtimeConfig: {
     // Private keys (server-only)
     apiSecret: '',
@@ -265,7 +262,6 @@ export default defineNuxtConfig({
 
     // Public keys (available on client)
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
     },
   },
 

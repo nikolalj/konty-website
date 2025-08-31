@@ -22,7 +22,7 @@ const GEO_COORDINATES = {
  */
 function getLocalizedContact() {
   const { t, locale, locales } = useI18n()
-  const config = useRuntimeConfig()
+  
 
   const phone = t('contact.info.phone')
   const email = t('contact.info.email').replace("{'@'}", "@")
@@ -34,7 +34,7 @@ function getLocalizedContact() {
     postalCode: t('contact.info.structuredAddress.postalCode'),
     addressCountry: t('contact.info.structuredAddress.addressCountry')
   }
-  const siteUrl = config.public.siteUrl || 'https://konty.com'
+  const siteUrl = useRequestURL().origin
 
   // Get currency from locale configuration
   const currentLocale = (locales.value as Array<{code: string, currency?: string}>).find(l => l.code === locale.value)

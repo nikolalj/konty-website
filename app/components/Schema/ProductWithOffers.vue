@@ -12,7 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const { t, locale } = useI18n()
-const config = useRuntimeConfig()
+
 
 // Get currency code based on locale
 function getCurrencyCode(): string {
@@ -46,7 +46,7 @@ function getProductKey(): string {
 }
 
 const schema = computed(() => {
-  const siteUrl = config.public.siteUrl || 'https://konty.com'
+  const siteUrl = useRequestURL().origin
   const productKey = getProductKey()
   const currencyCode = getCurrencyCode()
   
