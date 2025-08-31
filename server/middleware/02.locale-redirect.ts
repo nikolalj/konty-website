@@ -17,10 +17,11 @@ function getLocaleCookie(event: H3Event): LocaleCookie | null {
 }
 
 /**
- * Get country from Cloudflare edge headers
+ * Get country from Cloudflare headers
  */
 function getCountryFromHeaders(event: H3Event): string | null {
-  return getHeader(event, 'x-cf-country') || null
+  const cfCountry = getHeader(event, 'cf-ipcountry')
+  return cfCountry || null
 }
 
 /**
