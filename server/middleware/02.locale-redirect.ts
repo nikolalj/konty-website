@@ -20,8 +20,7 @@ function getLocaleCookie(event: H3Event): LocaleCookie | null {
  * Get country from Cloudflare headers
  */
 function getCountryFromHeaders(event: H3Event): string | null {
-  const cfCountry = getHeader(event, 'cf-ipcountry')
-  return cfCountry || null
+  return getHeader(event, 'cf-ipcountry') || null
 }
 
 /**
@@ -60,7 +59,7 @@ const EXCLUDE_PATTERNS = [
 export default defineEventHandler(async (event: H3Event) => {
   const path = event.path || ''
   const query = getQuery(event)
-  
+
   // Debug logging
   const isDev = process.env.NODE_ENV === 'development' || process.env.CF_PAGES
   const log = (message: string, data?: unknown) => {

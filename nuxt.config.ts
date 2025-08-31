@@ -1,50 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
 
-// Dynamic baseUrl detection for i18n
-const getBaseUrl = () => {
-  // Debug all available env vars
-  console.log('[Config] Environment detection:', {
-    CF_PAGES: process.env.CF_PAGES,
-    CF_PAGES_URL: process.env.CF_PAGES_URL,
-    CF_PAGES_BRANCH: process.env.CF_PAGES_BRANCH,
-    URL: process.env.URL,
-    NODE_ENV: process.env.NODE_ENV,
-    NUXT_PUBLIC_SITE_URL: process.env.NUXT_PUBLIC_SITE_URL,
-  })
-
-  // Try multiple Cloudflare environment variables
-  const cfUrl = process.env.CF_PAGES_URL || process.env.URL
-  if (cfUrl) {
-    console.log('[Config] Using Cloudflare URL:', cfUrl)
-    return cfUrl
-  }
-
-  // Explicit environment variable (can be set in NuxtHub dashboard)
-  if (process.env.NUXT_PUBLIC_SITE_URL) {
-    console.log('[Config] Using NUXT_PUBLIC_SITE_URL:', process.env.NUXT_PUBLIC_SITE_URL)
-    return process.env.NUXT_PUBLIC_SITE_URL
-  }
-
-  // If we detect Cloudflare Pages but no URL, we can't construct it properly
-  // So we use a relative base URL (empty string) which will work for SEO tags
-  if (process.env.CF_PAGES === '1') {
-    console.log('[Config] Cloudflare Pages detected but no URL available, using relative paths')
-    // Return empty string to use relative URLs
-    return ''
-  }
-
-  // Production fallback
-  if (process.env.NODE_ENV === 'production') {
-    console.log('[Config] Using production URL: https://konty.com')
-    return 'https://konty.com'
-  }
-
-  // Local development
-  console.log('[Config] Using development URL: http://localhost:3000')
-  return 'http://localhost:3000'
-}
-
 export default defineNuxtConfig({
   // Development
   devtools: { enabled: true },
@@ -183,7 +139,7 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    // baseUrl: getBaseUrl(),
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
@@ -304,25 +260,6 @@ export default defineNuxtConfig({
     // Private keys (server-only)
     apiSecret: '',
     env: process.env.APP_ENV,
-
-    // Public keys (available on client)
-    public: {
-      // Debug values for testing
-      debug: {
-        baseUrl: getBaseUrl(),
-        cfPagesUrl: process.env.CF_PAGES_URL || '',
-        cfPages: process.env.CF_PAGES || '',
-        cfPagesBranch: process.env.CF_PAGES_BRANCH || '',
-        nodeEnv: process.env.NODE_ENV || '',
-        nuxtPublicSiteUrl: process.env.NUXT_PUBLIC_SITE_URL || '',
-        hostname: process.env.HOSTNAME || '',
-        isCloudflarePages: !!process.env.CF_PAGES,
-        // These will be populated from headers in a plugin
-        cfCountry: '',
-        cfCity: '',
-        cfHeaders: {} as Record<string, string>
-      }
-    },
   },
 
   // Google Analytics 4
