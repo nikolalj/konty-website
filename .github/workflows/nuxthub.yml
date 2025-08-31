@@ -33,7 +33,3 @@ jobs:
         uses: nuxt-hub/action@v2
         with:
           project-key: ${{ vars.NUXT_HUB_PROJECT_KEY }}
-        env:
-          APP_ENV: ${{ vars.APP_ENV }}
-          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
-          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
