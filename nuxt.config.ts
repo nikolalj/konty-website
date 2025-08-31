@@ -3,19 +3,38 @@ import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
 
 // Dynamic baseUrl detection for i18n
 const getBaseUrl = () => {
-  // Cloudflare Pages deployment
-  if (process.env.CF_PAGES_URL) {
-    console.log('[Config] Using CF_PAGES_URL:', process.env.CF_PAGES_URL)
-    return process.env.CF_PAGES_URL
+  // Debug all available env vars
+  console.log('[Config] Environment detection:', {
+    CF_PAGES: process.env.CF_PAGES,
+    CF_PAGES_URL: process.env.CF_PAGES_URL,
+    CF_PAGES_BRANCH: process.env.CF_PAGES_BRANCH,
+    URL: process.env.URL,
+    NODE_ENV: process.env.NODE_ENV,
+    NUXT_PUBLIC_SITE_URL: process.env.NUXT_PUBLIC_SITE_URL,
+  })
+
+  // Try multiple Cloudflare environment variables
+  const cfUrl = process.env.CF_PAGES_URL || process.env.URL
+  if (cfUrl) {
+    console.log('[Config] Using Cloudflare URL:', cfUrl)
+    return cfUrl
   }
 
-  // Fallback to environment variable
+  // Explicit environment variable (can be set in NuxtHub dashboard)
   if (process.env.NUXT_PUBLIC_SITE_URL) {
     console.log('[Config] Using NUXT_PUBLIC_SITE_URL:', process.env.NUXT_PUBLIC_SITE_URL)
     return process.env.NUXT_PUBLIC_SITE_URL
   }
 
-  // Production default
+  // If we detect Cloudflare Pages but no URL, we can't construct it properly
+  // So we use a relative base URL (empty string) which will work for SEO tags
+  if (process.env.CF_PAGES === '1') {
+    console.log('[Config] Cloudflare Pages detected but no URL available, using relative paths')
+    // Return empty string to use relative URLs
+    return ''
+  }
+
+  // Production fallback
   if (process.env.NODE_ENV === 'production') {
     console.log('[Config] Using production URL: https://konty.com')
     return 'https://konty.com'
@@ -164,6 +183,7 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
+    // baseUrl: getBaseUrl(),
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
