@@ -255,7 +255,6 @@ export default defineNuxtConfig({
     }
   },
 
-  // Runtime configuration
   runtimeConfig: {
     // Private keys (server-only)
     apiSecret: '',
