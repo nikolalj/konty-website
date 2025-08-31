@@ -8,6 +8,7 @@ export default defineEventHandler(async (event) => {
   const isStaging =
     host.includes('staging') ||
     host.includes('localhost') ||
+    host.includes('pages.dev') ||
     config.env === 'staging'
 
   if (isStaging) {
