@@ -8,19 +8,19 @@ const getBaseUrl = () => {
     console.log('[Config] Using CF_PAGES_URL:', process.env.CF_PAGES_URL)
     return process.env.CF_PAGES_URL
   }
-  
+
   // Fallback to environment variable
   if (process.env.NUXT_PUBLIC_SITE_URL) {
     console.log('[Config] Using NUXT_PUBLIC_SITE_URL:', process.env.NUXT_PUBLIC_SITE_URL)
     return process.env.NUXT_PUBLIC_SITE_URL
   }
-  
+
   // Production default
   if (process.env.NODE_ENV === 'production') {
     console.log('[Config] Using production URL: https://konty.com')
     return 'https://konty.com'
   }
-  
+
   // Local development
   console.log('[Config] Using development URL: http://localhost:3000')
   return 'http://localhost:3000'
@@ -164,7 +164,6 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: getBaseUrl(),
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
