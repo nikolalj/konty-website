@@ -257,7 +257,6 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    // Private keys (server-only)
     apiSecret: '',
     env: process.env.APP_ENV,
   },
