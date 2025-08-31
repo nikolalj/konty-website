@@ -59,6 +59,14 @@ const EXCLUDE_PATTERNS = [
 export default defineEventHandler(async (event: H3Event) => {
   const path = event.path || ''
   const query = getQuery(event)
+  
+  // Debug logging
+  const isDev = process.env.NODE_ENV === 'development' || process.env.CF_PAGES
+  const log = (message: string, data?: unknown) => {
+    if (isDev) {
+      console.log(`[Locale Redirect] ${message}`, data ? JSON.stringify(data) : '')
+    }
+  }
 
   // 1. EXCLUSIONS - Quick exits for non-applicable requests
 
@@ -116,6 +124,7 @@ export default defineEventHandler(async (event: H3Event) => {
       // Auto-detect locale from Cloudflare headers
       const country = getCountryFromHeaders(event)
       const detectedLocale = countryToLocale(country)
+      log('Auto-detecting locale', { country, detectedLocale, cookieLocale: cookie?.locale })
 
       // Store for SSR context
       event.context.detectedLocale = detectedLocale
@@ -146,7 +155,10 @@ export default defineEventHandler(async (event: H3Event) => {
     }
 
     // Only redirect if not default locale
-    if (targetLocale === DEFAULT_LOCALE) return
+    if (targetLocale === DEFAULT_LOCALE) {
+      log('No redirect needed - already on default locale', { targetLocale })
+      return
+    }
 
     // 5. BUILD TARGET URL - Preserve query params
 
@@ -154,6 +166,7 @@ export default defineEventHandler(async (event: H3Event) => {
     const targetPath = `/${targetLocale}${path === '/' ? '' : path}`
     const targetUrl = queryString ? `${targetPath}?${queryString}` : targetPath
 
+    log('Redirecting to locale', { from: path, to: targetUrl, locale: targetLocale })
     return sendRedirect(event, targetUrl, 302)
 
   } catch (error) {

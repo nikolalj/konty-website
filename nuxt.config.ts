@@ -1,6 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
 
+// Dynamic baseUrl detection for i18n
+const getBaseUrl = () => {
+  // Cloudflare Pages deployment
+  if (process.env.CF_PAGES_URL) {
+    console.log('[Config] Using CF_PAGES_URL:', process.env.CF_PAGES_URL)
+    return process.env.CF_PAGES_URL
+  }
+  
+  // Fallback to environment variable
+  if (process.env.NUXT_PUBLIC_SITE_URL) {
+    console.log('[Config] Using NUXT_PUBLIC_SITE_URL:', process.env.NUXT_PUBLIC_SITE_URL)
+    return process.env.NUXT_PUBLIC_SITE_URL
+  }
+  
+  // Production default
+  if (process.env.NODE_ENV === 'production') {
+    console.log('[Config] Using production URL: https://konty.com')
+    return 'https://konty.com'
+  }
+  
+  // Local development
+  console.log('[Config] Using development URL: http://localhost:3000')
+  return 'http://localhost:3000'
+}
+
 export default defineNuxtConfig({
   // Development
   devtools: { enabled: true },
@@ -139,6 +164,7 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
+    baseUrl: getBaseUrl(),
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
@@ -262,6 +288,21 @@ export default defineNuxtConfig({
 
     // Public keys (available on client)
     public: {
+      // Debug values for testing
+      debug: {
+        baseUrl: getBaseUrl(),
+        cfPagesUrl: process.env.CF_PAGES_URL || '',
+        cfPages: process.env.CF_PAGES || '',
+        cfPagesBranch: process.env.CF_PAGES_BRANCH || '',
+        nodeEnv: process.env.NODE_ENV || '',
+        nuxtPublicSiteUrl: process.env.NUXT_PUBLIC_SITE_URL || '',
+        hostname: process.env.HOSTNAME || '',
+        isCloudflarePages: !!process.env.CF_PAGES,
+        // These will be populated from headers in a plugin
+        cfCountry: '',
+        cfCity: '',
+        cfHeaders: {} as Record<string, string>
+      }
     },
   },
 
