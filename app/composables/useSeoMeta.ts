@@ -28,8 +28,7 @@ export const useCustomSeoMeta = (options: SeoMetaOptions) => {
 
   const route = useRoute()
   const { locale, locales } = useI18n()
-  const config = useRuntimeConfig()
-  const siteUrl = config.public.siteUrl || 'https://konty.com'
+  const siteUrl = useRequestURL().origin
 
   // Build canonical URL with proper locale handling
   const cleanPath = removeLocalePrefix(route.path)

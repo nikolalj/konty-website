@@ -12,10 +12,10 @@ interface Props {
 const props = defineProps<Props>()
 
 const { t } = useI18n()
-const config = useRuntimeConfig()
+
 
 const schema = computed(() => {
-  const siteUrl = config.public.siteUrl || 'https://konty.com'
+  const siteUrl = useRequestURL().origin
 
   // Base schema for both products
   const baseSchema = {
