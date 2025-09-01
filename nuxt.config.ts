@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { useRequestURL } from 'nuxt/app'
 import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
 
 export default defineNuxtConfig({
@@ -103,6 +102,7 @@ export default defineNuxtConfig({
 
   // SEO Configuration
   site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
     description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
     defaultLocale: 'sr',
@@ -140,13 +140,15 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: useRequestURL().origin,
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
-    skipSettingLocaleOnNavigate: false,
+    skipSettingLocaleOnNavigate: true,
     customRoutes: 'config',
     trailingSlash: false,
+    rootRedirect: undefined,
+    strategy: LOCALE_CONFIG.STRATEGY,
     locales: [
       {
         code: 'me',
