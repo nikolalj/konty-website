@@ -11,7 +11,7 @@ The Konty website automatically detects visitors' location and shows them countr
 The localization system is designed to work with any hosting provider that supports edge functions:
 
 - **Cloudflare Pages**: Uses `functions/_middleware.ts`
-- **Vercel**: Would use `middleware.ts` 
+- **Vercel**: Would use `middleware.ts`
 - **Netlify**: Would use Edge Functions
 - **Any Provider**: Implements edge logic that sets `x-detected-locale` header
 
@@ -179,7 +179,7 @@ Shows when detected locale doesn't match current:
 
 **Display Logic:**
 ```javascript
-shouldShow = 
+shouldShow =
   suggestedLocale exists &&
   !cookie.explicit &&
   !recently dismissed
@@ -329,11 +329,11 @@ START
                 │                     │
                 └──────┬──────────────┘
                        │
-                ┌──────▼──────┐
+                ┌──────▼───────┐
                 │Target locale │
                 │= DEFAULT?    │
                 │(Serbia)      │
-                └──────┬──────┘
+                └──────┬───────┘
                        │
         ┌──────────────┼──────────────┐
         │                             │
@@ -342,8 +342,8 @@ START
  ┌──────▼──────┐              ┌──────▼──────┐
  │NO REDIRECT  │              │REDIRECT to  │
  │Stay on      │              │/locale/path │
- │konty.com    │              └──────┬──────┘
- └──────┬──────┘                     │
+ │konty.com    │              └───────┬─────┘
+ └──────┬──────┘                      │
         │                             │
         ├─────────────┬───────────────┘
         │             │
@@ -436,7 +436,7 @@ Located in `app/locales/`:
 
 ### Banner Not Showing
 
-**Check**: 
+**Check**:
 1. Cookie for `explicit: true`
 2. SessionStorage for dismissal
 3. Detected locale vs current
@@ -501,7 +501,7 @@ i18n: {
 The localization system provides:
 
 1. **Automatic** detection at edge (0ms overhead)
-2. **Silent** redirects without notifications  
+2. **Silent** redirects without notifications
 3. **Manual** control via country selector
 4. **Smart banner** with session-based dismissal
 5. **Visual indicators** (pulsing dot for mismatch)

@@ -10,7 +10,6 @@ import type { ValidLocale } from '~/types/locale'
  * All locale detection and redirect logic is handled by the provider's middleware (functions/_middleware.ts).
  */
 export default defineEventHandler(async (event: H3Event) => {
-  // Read detected locale from Cloudflare Function headers
   const detectedLocale = getHeader(event, 'x-detected-locale')
 
   if (detectedLocale) {

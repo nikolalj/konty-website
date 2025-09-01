@@ -115,7 +115,12 @@ function createCookieHeader(locale: ValidLocale, explicit: boolean, hostname: st
   return `konty-locale=${encodeURIComponent(cookieValue)}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax${isProduction ? '; Secure' : ''}`
 }
 
-export const onRequest: PagesFunction = async ({ request, env, next }) => {
+export async function onRequest(context: {
+  request: Request
+  env: any
+  next: () => Promise<Response>
+}) {
+  const { request, env, next } = context
   const url = new URL(request.url)
   const path = url.pathname
   const method = request.method
@@ -130,17 +135,17 @@ export const onRequest: PagesFunction = async ({ request, env, next }) => {
   // === QUICK EXITS (no processing needed) ===
   
   if (method !== 'GET' && method !== 'HEAD') {
-    return next()
+    return await next()
   }
 
   for (const pattern of EXCLUDE_PATTERNS) {
     if (path.includes(pattern)) {
-      return next()
+      return await next()
     }
   }
 
   if (path.includes('.') && !path.endsWith('/')) {
-    return next()
+    return await next()
   }
 
   // === ALREADY ON LOCALE URL ===
@@ -247,6 +252,6 @@ export const onRequest: PagesFunction = async ({ request, env, next }) => {
 
   } catch (error) {
     console.error('[Locale Redirect CF]', error)
-    return next()  // On error, pass through without redirect
+    return await next()  // On error, pass through without redirect
   }
 }
