@@ -187,7 +187,6 @@ export default defineNuxtConfig({
         currencySymbol: '$'
       }
     ],
-    strategy: LOCALE_CONFIG.STRATEGY,
     vueI18n: './i18n.config.ts'
   },
 
