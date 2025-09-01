@@ -102,6 +102,7 @@ export default defineNuxtConfig({
 
   // SEO Configuration
   site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
     description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
     defaultLocale: 'sr',
@@ -139,19 +140,15 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: () => {
-      if (import.meta.client) {
-        return window.location.origin
-      }
-
-      return process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
-    },
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
-    skipSettingLocaleOnNavigate: false,
+    skipSettingLocaleOnNavigate: true,
     customRoutes: 'config',
     trailingSlash: false,
+    rootRedirect: undefined,
+    strategy: LOCALE_CONFIG.STRATEGY,
     locales: [
       {
         code: 'me',
@@ -190,7 +187,6 @@ export default defineNuxtConfig({
         currencySymbol: '$'
       }
     ],
-    strategy: LOCALE_CONFIG.STRATEGY,
     vueI18n: './i18n.config.ts'
   },
 
@@ -265,12 +261,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiSecret: '',
     env: process.env.APP_ENV,
-        // Public keys (available on client)
-    public: {
-      debug: {
-        baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
-      }
-    },
   },
 
   // Google Analytics 4
