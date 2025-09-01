@@ -138,7 +138,6 @@ export default defineNuxtConfig({
     ]
   },
 
-  // Internationalization - Country-based localization
   i18n: {
     baseUrl: (process.env.APP_ENV !== 'production' ? `${process.env.APP_ENV}.` : '') + process.env.NUXT_PUBLIC_SITE_URL,
     defaultLocale: DEFAULT_LOCALE,
