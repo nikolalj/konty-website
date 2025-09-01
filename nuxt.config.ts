@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { useRequestURL } from 'nuxt/app'
 import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
 
 export default defineNuxtConfig({
@@ -139,13 +140,7 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: () => {
-      if (import.meta.client) {
-        return window.location.origin
-      }
-
-      return process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
-    },
+    baseUrl: useRequestURL().origin,
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
