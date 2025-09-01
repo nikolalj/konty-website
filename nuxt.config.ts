@@ -139,7 +139,13 @@ export default defineNuxtConfig({
 
   // Internationalization - Country-based localization
   i18n: {
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
+    baseUrl: () => {
+      if (import.meta.client) {
+        return window.location.origin
+      }
+
+      return process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
+    },
     defaultLocale: DEFAULT_LOCALE,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
@@ -259,6 +265,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiSecret: '',
     env: process.env.APP_ENV,
+        // Public keys (available on client)
+    public: {
+      debug: {
+        baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
+      }
+    },
   },
 
   // Google Analytics 4
