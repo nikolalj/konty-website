@@ -265,12 +265,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiSecret: '',
     env: process.env.APP_ENV,
-        // Public keys (available on client)
-    public: {
-      debug: {
-        baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
-      }
-    },
   },
 
   // Google Analytics 4
