@@ -78,20 +78,12 @@ export default defineEventHandler(async (event: H3Event) => {
   const pathSegments = path.split('/').filter(Boolean)
   const firstSegment = pathSegments[0]
 
+  const cookie = getLocaleCookie(event)
+  const country = getCountryFromHeaders(event)
+  const detectedLocale = countryToLocale(country)
+  event.context.detectedLocale = detectedLocale
+
   if (firstSegment && VALID_LOCALES.includes(firstSegment as ValidLocale)) {
-    const cookie = getLocaleCookie(event)
-
-    // If user made explicit choice we don't care about detected locale
-    if (cookie?.explicit) {
-      event.context.detectedLocale = undefined
-      return
-    }
-
-    // If no explicit choice detect locale and if different inform the user
-    const country = getCountryFromHeaders(event)
-    const detectedLocale = countryToLocale(country)
-    event.context.detectedLocale = detectedLocale
-
     return
   }
 
@@ -102,28 +94,15 @@ export default defineEventHandler(async (event: H3Event) => {
   // 3. REDIRECT LOGIC - Determine if redirect needed
 
   try {
-    // Get current state
-    const cookie = getLocaleCookie(event)
-
     // Determine which locale to use
     let targetLocale: ValidLocale
 
+    // If user made explicit choice respect it, otherwise use detectedLocale
     if (cookie?.explicit) {
-      // If user made explicit choice respect it, don't care about detected locale
       targetLocale = cookie.locale
-      event.context.detectedLocale = undefined
     } else {
-      // Auto-detect locale from Cloudflare headers
-      const country = getCountryFromHeaders(event)
-      const detectedLocale = countryToLocale(country)
-
-      // Store for SSR context
-      event.context.detectedLocale = detectedLocale
-
-      // Use detected locale (fresh detection on each visit for non-explicit users)
       targetLocale = detectedLocale
 
-      // If different from saved, save in case we might show a suggestion to switch back
       if (cookie?.locale && cookie.locale !== detectedLocale) {
         event.context.previousLocale = cookie.locale
       }
@@ -146,9 +125,7 @@ export default defineEventHandler(async (event: H3Event) => {
     }
 
     // Only redirect if not default locale
-    if (targetLocale === DEFAULT_LOCALE) {
-      return
-    }
+    if (targetLocale === DEFAULT_LOCALE) return
 
     // 5. BUILD TARGET URL - Preserve query params
 
