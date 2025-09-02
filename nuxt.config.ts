@@ -100,7 +100,6 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-<<<<<<< HEAD
   // Site configuration - Single source of truth for all SEO/Schema data
   site: {
     // Core site info
@@ -130,14 +129,6 @@ export default defineNuxtConfig({
         maxValue: 100
       }
     }
-=======
-  // Site configuration
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Konty',
-    trailingSlash: false,
-    indexable: process.env.APP_ENV === 'production'
->>>>>>> master
   },
 
   // Core SEO module settings
