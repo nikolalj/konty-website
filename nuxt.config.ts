@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   // PostCSS - Production CSS optimization
   postcss: {
     plugins: {
-      ...(process.env.APP_ENV === 'production' && {
+      ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com') && {
         cssnano: {
           preset: ['default', {
             discardComments: { removeAll: true },
@@ -100,12 +100,44 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
+<<<<<<< HEAD
+  // Site configuration - Single source of truth for all SEO/Schema data
+  site: {
+    // Core site info
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
+    name: 'Konty POS',
+    description: 'Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9,000+ businesses trust us.',
+
+    // SEO settings
+    trailingSlash: false,
+    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
+
+    // Organization identity for Schema.org (automatically used on all pages)
+    identity: {
+      type: 'Organization',
+      name: 'Konty d.o.o.',
+      logo: '/images/branding/logo-light.svg',
+      // Social profiles for Knowledge Graph
+      sameAs: [
+        'https://www.facebook.com/konty',
+        'https://www.linkedin.com/company/konty'
+      ],
+      // Trust signals
+      foundingDate: '1998',
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        minValue: 50,
+        maxValue: 100
+      }
+    }
+=======
   // Site configuration
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: 'Konty',
     trailingSlash: false,
     indexable: process.env.APP_ENV === 'production'
+>>>>>>> master
   },
 
   // Core SEO module settings
@@ -117,37 +149,69 @@ export default defineNuxtConfig({
 
   // Schema.org configuration
   schemaOrg: {
-    defaults: true
+    defaults: true,
+    identity: 'Organization', // Links to site.identity
+    // Enable reactive schemas for development
+    reactive: process.env.NODE_ENV === 'development'
   },
 
   // Robots.txt configuration
   robots: {
     enabled: true,
-    // TODO enable before release
-    // disallow: process.env.APP_ENV !== 'production' ? ['/'] : [],
-    disallow: ['/'],
-    sitemap: '/sitemap.xml'
+    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+      ? {
+          // Production: Allow crawling with smart restrictions
+          allow: ['/'],
+          disallow: [
+            '/api/',      // Sitemap generation endpoints
+            '/*?utm_*',   // Marketing campaign tracking
+            '/*?ref=*',   // Referral tracking
+          ],
+          sitemap: '/sitemap_index.xml'
+        }
+      : {
+          // Non-production: Block everything
+          disallow: ['/']
+        }
+    )
   },
 
-  // Enhanced sitemap with i18n support
-  // sitemap: {
-  //   enabled: true,
-  //   cacheMaxAgeSeconds: 3600,
-  //   exclude: [
-  //     '/admin/**',
-  //     '/api/**',
-  //     '/test/**',
-  //     '/__nuxt_error',
-  //     '/404'
-  //   ],
-  //   defaults: {
-  //     changefreq: 'weekly',
-  //     priority: 0.8
-  //   },
-  //   sources: [
-  //     '/api/__sitemap__/urls'
-  //   ]
-  // },
+  // Sitemap with automatic i18n multi-sitemap generation
+  sitemap: {
+    cacheMaxAgeSeconds: 3600,
+    experimentalCompression: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.7
+    },
+    sources: [
+      '/api/__sitemap__/urls',
+      '/api/__sitemap__/blog'
+    ]
+  },
+
+  // OG Image generation with Satori
+  ogImage: {
+    // Use Plus Jakarta Sans - supports Serbian/Bosnian
+    fonts: [
+      'Plus+Jakarta+Sans:400',
+      'Plus+Jakarta+Sans:600',
+      'Plus+Jakarta+Sans:700'
+    ],
+
+    // Default settings for all OG images
+    defaults: {
+      width: 1200,
+      height: 630,
+      renderer: 'satori', // Fast, universal compatibility
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7 // 7 days cache
+    },
+
+    // Component defaults
+    componentOptions: {
+      global: true // Make OG image components globally available
+    }
+  },
 
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
@@ -216,6 +280,13 @@ export default defineNuxtConfig({
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
 
+    // prerender: {
+    //   // Pre-render the homepage
+    //   routes: ['/'],
+    //   // Then crawl all the links on the page
+    //   crawlLinks: true
+    // },
+
     // Compression
     compressPublicAssets: {
       gzip: true,
@@ -269,6 +340,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
+
+    public: {
+      url: process.env.NUXT_PUBLIC_SITE_URL
+    }
   },
 
   // Google Analytics 4

@@ -31,13 +31,17 @@ function countryToLocale(country: string | null): ValidLocale {
   return COUNTRY_TO_LOCALE_MAP[country.toUpperCase()] || DEFAULT_LOCALE
 }
 
-// Pages that need locale-specific content (prices, language)
+// All pages are localized and should redirect to locale-specific URLs
 const PAGES_TO_REDIRECT = [
-  '/',                  // Homepage - testimonials, CTAs
-  '/pricing',           // Different prices per country
-  '/demo',              // Contact info, business hours
-  '/konty-retail',      // Product features, local examples
-  '/konty-hospitality'  // Product features, local examples
+  '/',                  // Homepage
+  '/pricing',           // Pricing with local currency
+  '/demo',              // Demo request
+  '/konty-retail',      // Retail product page
+  '/konty-hospitality', // Hospitality product page
+  '/products',          // Products overview
+  '/about',             // About page
+  '/terms',             // Terms of service
+  '/privacy'            // Privacy policy
 ]
 
 // Patterns to NEVER redirect (order matters for performance)
