@@ -100,12 +100,35 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-  // Site configuration
+  // Site configuration - Single source of truth for all SEO/Schema data
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Konty',
+    // Core site info
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
+    name: 'Konty POS',
+    description: 'Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9,000+ businesses trust us.',
+    
+    // SEO settings
     trailingSlash: false,
-    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
+    
+    // Organization identity for Schema.org (automatically used on all pages)
+    identity: {
+      type: 'Organization',
+      name: 'Konty d.o.o.',
+      logo: '/images/branding/logo-light.svg',
+      // Social profiles for Knowledge Graph
+      sameAs: [
+        'https://www.facebook.com/konty',
+        'https://www.linkedin.com/company/konty'
+      ],
+      // Trust signals
+      foundingDate: '1998',
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        minValue: 50,
+        maxValue: 100
+      }
+    }
   },
 
   // Core SEO module settings
@@ -117,7 +140,10 @@ export default defineNuxtConfig({
 
   // Schema.org configuration
   schemaOrg: {
-    defaults: true
+    defaults: true,
+    identity: 'Organization', // Links to site.identity
+    // Enable reactive schemas for development
+    reactive: process.env.NODE_ENV === 'development'
   },
 
   // Robots.txt configuration

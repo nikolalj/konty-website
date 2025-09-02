@@ -22,11 +22,11 @@ usePageSeo({
 // OG Image generation for Hospitality product
 defineOgImageComponent('Product', {
   product: 'Konty Hospitality',
-  title: t('kontyHospitality.hero.title'),
+  title: t('hospitalityPage.hero.title'),
   features: [
-    t('kontyHospitality.features.tableManagement.title'),
-    t('kontyHospitality.features.ordering.title'),
-    t('kontyHospitality.features.kitchen.title')
+    t('features.hospitality.tableManagement.title'),
+    t('features.hospitality.kitchenDisplay.title'),
+    t('features.hospitality.staffManagement.title')
   ],
   cta: t('hero.cta.primary'),
   icon: '🍽️'

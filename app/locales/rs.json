@@ -19,12 +19,10 @@
   },
   "clients": {
     "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998",
-    "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
-    "trust": "Preko 9.000 klijenata"
+    "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri"
   },
   "common": {
     "currency": "RSD",
-    "currencySymbol": "RSD",
     "bookDemo": "Lični demo (15 min)",
     "dismiss": "Odbaci",
     "hospitality": "Ugostiteljstvo",
@@ -43,18 +41,7 @@
       "namePlaceholder": "Marko",
       "submit": "Dobij svoj demo"
     },
-    "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
-    "info": {
-      "email": "podrska{'@'}konty.com",
-      "phone": "011-123-4567",
-      "structuredAddress": {
-        "addressCountry": "RS",
-        "addressLocality": "Beograd",
-        "addressRegion": "Beograd",
-        "postalCode": "11000",
-        "streetAddress": "Bulevar kralja Aleksandra 123"
-      }
-    }
+    "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta"
   },
   "demo": {
     "description": "Pokaži nam trenutni setup. Pokazaćemo tačno koliko štediš.",
@@ -63,7 +50,7 @@
     "revolutionize": "Gledaj kako radiš bez prekida kad drugi pucaju",
     "seeInAction": "Vidi kako Konty radi u najgoroj večeri"
   },
-    "error": {
+  "error": {
     "400": "Strana nije pronađena",
     "403": "Pristup nije dozvoljen",
     "500": "Došlo je do greške na serveru – radimo na rešavanju problema.",
@@ -74,14 +61,6 @@
     "viewPricing": "Vidi cene"
   },
   "faq": {
-    "features": {
-      "a1": "Konty uključuje upravljanje prodajom, zalihama, izveštaje, fiskalizaciju, program lojalnosti, upravljanje zaposlenima i još mnogo toga.",
-      "a2": "Da, Konty radi sa svim standardnim POS hardverom - štampačima, skenerima, kasama. Nije vezana za specifičnu opremu.",
-      "a3": "Da, možete upravljati sa više prodajnih mesta iz jednog naloga. Svi podaci se sinhronizuju u realnom vremenu.",
-      "q1": "Koje funkcionalnosti uključuje Konty?",
-      "q2": "Da li mogu povezati postojeću opremu?",
-      "q3": "Da li podržava više lokacija?"
-    },
     "general": {
       "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izveštaja i fiskalizaciju, sve u jednom rešenju.",
       "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povezujete na internet.",
@@ -97,20 +76,8 @@
     "pricing": {
       "a1": "Imamo tri paketa: Start (2.990 RSD), Standard (4.990 RSD) i Premium (9.990 RSD) mesečno. Svaki paket uključuje različite funkcionalnosti.",
       "a2": "Ne, nema skrivenih troškova. Cena paketa uključuje sve - ažuriranja, podršku i hosting. Plaćate samo mesečnu pretplatu.",
-      "a3": "Da, možete nadograditi ili smanjiti paket u bilo kom trenutku. Promena stupa na snagu odmah.",
-      "a4": "Prihvatamo platne kartice, PayPal i bankovni prenos. Za godišnje plaćanje nudimo 20% popusta.",
       "q1": "Koliko košta Konty?",
-      "q2": "Da li postoje skriveni troškovi?",
-      "q3": "Mogu li promeniti paket kasnije?",
-      "q4": "Koje načine plaćanja prihvatate?"
-    },
-    "support": {
-      "a1": "Nudimo 24/7 podršku putem chata, emaila i telefona. Takođe imamo bazu znanja sa detaljnim uputstvima.",
-      "a2": "Da, nudimo besplatnu online obuku i video tutorijale. Za Premium korisnike nudimo i personalizovanu obuku.",
-      "a3": "Naš tim podrške je dostupan 24/7. Prosečno vreme odgovora je ispod 5 minuta za chat i 1 sat za email.",
-      "q1": "Kakvu podršku nudite?",
-      "q2": "Da li nudite obuku?",
-      "q3": "Šta ako naiđem na problem?"
+      "q2": "Da li postoje skriveni troškovi?"
     }
   },
   "features": {
@@ -185,8 +152,7 @@
   },
   "hero": {
     "cta": {
-      "primary": "Zakaži demo",
-      "secondary": "Kontaktiraj nas"
+      "primary": "Zakaži demo"
     },
     "subtitle": "Pouzdane fiskalne kase sa e-fakturama. Dok drugi dodaju AI, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
     "tagline": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
@@ -255,7 +221,6 @@
         "title": "Profesional",
         "description": "POS terminal za restorane spremne za rast",
         "price": "9.900 Din",
-        "priceValue": "9900",
         "billingCycle": "/ mesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
@@ -348,47 +313,8 @@
     }
   },
   "schema": {
-    "areaServed": "Srbija",
-    "features": {
-      "analytics": "Napredna analitika i izveštaji",
-      "cloudBased": "Cloud sistem - pristupite sa bilo kog uređaja",
-      "fiscalization": "Potpuna fiskalizacija po zakonu",
-      "hospitality": {
-        "kitchenDisplay": "Kuhinjski displej",
-        "modifiers": "Modifikatori jela",
-        "splitBills": "Podela računa",
-        "tableManagement": "Upravljanje stolovima"
-      },
-      "inventory": "Upravljanje zalihama u realnom vremenu",
-      "multiLocation": "Podrška za više lokacija",
-      "offlineMode": "Offline režim rada",
-      "retail": {
-        "barcode": "Skeniranje bar kodova",
-        "loyaltyProgram": "Program lojalnosti",
-        "suppliers": "Upravljanje dobavljačima"
-      }
-    },
-    "openingHours": "Pon - Pet 09:00-17:00",
-    "organization": {
-      "contactType": "korisnička podrška",
-      "name": "Konty"
-    },
     "requirements": {
       "minimal": "Windows 10+, macOS 10.14+, Android 8+, iOS 12+"
-    },
-    "services": {
-      "implementation": {
-        "description": "Profesionalna instalacija i konfiguracija POS sistema prilagođena potrebama vašeg poslovanja.",
-        "name": "POS Sistema Implementacija"
-      },
-      "support": {
-        "description": "24/7 tehnička podrška za sve Konty POS korisnike. Brzo rešavanje problema i ažuriranja sistema.",
-        "name": "Tehnička Podrška"
-      },
-      "training": {
-        "description": "Kompletna obuka vašeg osoblja za rad sa Konty POS sistemom. Uključuje praktičnu obuku i dokumentaciju.",
-        "name": "Obuka Osoblja"
-      }
     }
   },
   "seo": {
@@ -486,5 +412,8 @@
       "role": "Preduzetnica i članica Udruženja malih biznisa"
     },
     "title": "Vlasnici restorana koji sada mirno spavaju"
+  },
+  "products": {
+    "name": "Konty POS"
   }
 }

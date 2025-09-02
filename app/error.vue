@@ -60,7 +60,7 @@ const localePath = useLocalePath()
 // Determine error message
 const errorMessage = computed(() => {
   if (error.value?.statusCode === 404) {
-    return t('error.404')
+    return t('error.400')
   }
   if (error.value?.statusCode === 500) {
     return t('error.500')

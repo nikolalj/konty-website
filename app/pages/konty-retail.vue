@@ -22,11 +22,11 @@ usePageSeo({
 // OG Image generation for Retail product
 defineOgImageComponent('Product', {
   product: 'Konty Retail',
-  title: t('kontyRetail.hero.title'),
+  title: t('retailPage.hero.title'),
   features: [
-    t('kontyRetail.features.inventory.title'),
-    t('kontyRetail.features.analytics.title'),
-    t('kontyRetail.features.loyalty.title')
+    t('features.retail.inventory.title'),
+    t('features.retail.customerInsights.title'),
+    t('features.retail.quickCheckout.title')
   ],
   cta: t('hero.cta.primary'),
   icon: '🛍️'

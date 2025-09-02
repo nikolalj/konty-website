@@ -21,8 +21,8 @@ usePageSeo({
 
 // OG Image generation for About page
 defineOgImageComponent('Main', {
-  title: t('about.heading'),
-  description: t('about.subheading'),
-  cta: t('contact.cta.primary')
+  title: t('seo.about.title'),
+  description: t('seo.about.description'),
+  cta: t('contact.form.submit')
 })
 </script>
