@@ -43,7 +43,7 @@
             </div>
 
             <div style="margin-bottom: 8px;">
-              <span style="font-size: 36px; font-weight: 700; color: #1F6FE2;">50 {{ currency }}</span>
+              <span style="font-size: 36px; font-weight: 700; color: #1F6FE2;">{{ plan.price }} {{ currency }}</span>
             </div>
 
             <div v-if="period" style="font-size: 14px; color: #6b7280;">
