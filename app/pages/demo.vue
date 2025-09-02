@@ -9,10 +9,17 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use the new simplified SEO composable
+// SEO meta tags
 usePageSeo({
   title: t('seo.demo.title'),
-  description: t('seo.demo.description'),
-  type: 'website'
+  description: t('seo.demo.description')
+})
+
+// OG Image generation for Demo page
+defineOgImageComponent('Main', {
+  title: t('demo.heading'),
+  description: t('demo.subheading'),
+  badge: t('demo.form.badge'),
+  cta: t('demo.form.submit')
 })
 </script>

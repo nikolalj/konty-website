@@ -179,7 +179,6 @@ const { t } = useI18n()
 // Use the new simplified SEO composable
 usePageSeo({
   title: t('seo.privacy.title'),
-  description: t('seo.privacy.description'),
-  type: 'website'
+  description: t('seo.privacy.description')
 })
 </script>

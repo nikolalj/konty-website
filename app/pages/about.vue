@@ -13,10 +13,16 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use the new simplified SEO composable
+// SEO meta tags
 usePageSeo({
   title: t('seo.about.title'),
-  description: t('seo.about.description'),
-  type: 'website'
+  description: t('seo.about.description')
+})
+
+// OG Image generation for About page
+defineOgImageComponent('Main', {
+  title: t('about.heading'),
+  description: t('about.subheading'),
+  cta: t('contact.cta.primary')
 })
 </script>

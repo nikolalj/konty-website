@@ -16,8 +16,20 @@ const { t } = useI18n()
 // SEO meta tags
 usePageSeo({
   title: t('seo.kontyRetail.title'),
-  description: t('seo.kontyRetail.description'),
-  type: 'website'
+  description: t('seo.kontyRetail.description')
+})
+
+// OG Image generation for Retail product
+defineOgImageComponent('Product', {
+  product: 'Konty Retail',
+  title: t('kontyRetail.hero.title'),
+  features: [
+    t('kontyRetail.features.inventory.title'),
+    t('kontyRetail.features.analytics.title'),
+    t('kontyRetail.features.loyalty.title')
+  ],
+  cta: t('hero.cta.primary'),
+  icon: '🛍️'
 })
 
 // Product schema for retail POS

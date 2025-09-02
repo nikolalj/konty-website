@@ -16,8 +16,20 @@ const { t } = useI18n()
 // SEO meta tags
 usePageSeo({
   title: t('seo.kontyHospitality.title'),
-  description: t('seo.kontyHospitality.description'),
-  type: 'website'
+  description: t('seo.kontyHospitality.description')
+})
+
+// OG Image generation for Hospitality product
+defineOgImageComponent('Product', {
+  product: 'Konty Hospitality',
+  title: t('kontyHospitality.hero.title'),
+  features: [
+    t('kontyHospitality.features.tableManagement.title'),
+    t('kontyHospitality.features.ordering.title'),
+    t('kontyHospitality.features.kitchen.title')
+  ],
+  cta: t('hero.cta.primary'),
+  icon: '🍽️'
 })
 
 // Product schema for hospitality POS

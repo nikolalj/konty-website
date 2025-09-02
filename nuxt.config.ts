@@ -155,6 +155,29 @@ export default defineNuxtConfig({
     ]
   },
 
+  // OG Image generation with Satori
+  ogImage: {
+    // Use Plus Jakarta Sans - supports Serbian/Bosnian
+    fonts: [
+      'Plus+Jakarta+Sans:400',
+      'Plus+Jakarta+Sans:600',
+      'Plus+Jakarta+Sans:700'
+    ],
+
+    // Default settings for all OG images
+    defaults: {
+      width: 1200,
+      height: 630,
+      renderer: 'satori', // Fast, universal compatibility
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7 // 7 days cache
+    },
+
+    // Component defaults
+    componentOptions: {
+      global: true // Make OG image components globally available
+    }
+  },
+
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
     defaultLocale: DEFAULT_LOCALE,
@@ -282,6 +305,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
+
+    public: {
+      url: process.env.NUXT_PUBLIC_SITE_URL
+    }
   },
 
   // Google Analytics 4

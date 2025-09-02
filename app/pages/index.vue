@@ -18,8 +18,15 @@ const { t } = useI18n()
 // SEO meta tags
 usePageSeo({
   title: t('seo.home.title'),
-  description: t('seo.home.description'),
-  type: 'website'
+  description: t('seo.home.description')
+})
+
+// OG Image generation
+defineOgImageComponent('Main', {
+  title: t('hero.title'),
+  description: t('hero.subtitle'),
+  badge: t('pricing.freeTrial'),
+  cta: t('hero.cta.primary')
 })
 
 // Schema.org structured data using module composables

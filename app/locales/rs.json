@@ -19,7 +19,8 @@
   },
   "clients": {
     "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998",
-    "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri"
+    "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
+    "trust": "Preko 9.000 klijenata"
   },
   "common": {
     "currency": "RSD",
@@ -183,10 +184,13 @@
     "title": "Fiskalne kase postavljene za 48 sati. Mi sve sredimo."
   },
   "hero": {
-    "cta": "Počni besplatno",
+    "cta": {
+      "primary": "Zakaži demo",
+      "secondary": "Kontaktiraj nas"
+    },
     "subtitle": "Pouzdane fiskalne kase sa e-fakturama. Dok drugi dodaju AI, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
     "tagline": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
-    "title": "Konačno. Fiskalna kasa koja neće pući u subotu uveče."
+    "title": "Fiskalna kasa koja neće pući u subotu uveče."
   },
   "hospitalityPage": {
     "hero": {

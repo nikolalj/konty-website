@@ -130,10 +130,9 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use the new simplified SEO composable
+// SEO meta tags
 usePageSeo({
   title: t('seo.terms.title'),
-  description: t('seo.terms.description'),
-  type: 'website'
+  description: t('seo.terms.description')
 })
 </script>

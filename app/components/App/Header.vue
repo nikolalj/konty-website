@@ -171,9 +171,9 @@
         size="lg"
         variant="solid"
         color="primary"
-        :aria-label="$t('hero.cta')"
+        :aria-label="$t('hero.cta.primary')"
       >
-        {{ $t('hero.cta') }}
+        {{ $t('hero.cta.primary') }}
       </UButton>
 
       <AppCountrySelector class="ml-2" />

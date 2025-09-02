@@ -9,10 +9,16 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use the new simplified SEO composable
+// SEO meta tags
 usePageSeo({
   title: t('seo.products.title'),
-  description: t('seo.products.description'),
-  type: 'website'
+  description: t('seo.products.description')
+})
+
+// OG Image generation for Products overview
+defineOgImageComponent('Main', {
+  title: t('products.heading'),
+  description: t('products.subheading'),
+  cta: t('hero.cta.primary')
 })
 </script>

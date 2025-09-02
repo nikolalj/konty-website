@@ -19,7 +19,8 @@
   },
   "clients": {
     "description": "Restaurant POS, bar POS, liquor store POS, convenience store POS, salon POS - processing millions daily since 1998",
-    "title": "9,000 Restaurants and Retail Stores Trust Our POS System"
+    "title": "9,000 Restaurants and Retail Stores Trust Our POS System",
+    "trust": "More than 9.000 clients"
   },
   "common": {
     "currency": "USD",
@@ -183,7 +184,10 @@
     "title": "POS System Setup in 48 Hours. We Do Everything."
   },
   "hero": {
-    "cta": "Start Free Trial",
+    "cta": {
+      "primary": "Book a demo",
+      "secondary": "Contact us"
+    },
     "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
     "tagline": "Trusted by 9,000 small businesses who can't afford downtime",
     "title": "POS System That Won't Crash During Dinner Rush."
