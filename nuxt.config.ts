@@ -201,8 +201,7 @@ export default defineNuxtConfig({
     // All pages need server-side rendering for locale redirects to work
     prerender: {
       crawlLinks: false,
-      routes: [], // No prerendering - all pages use SSR
-      ignore: ['/admin', '/api', '/__nuxt_error']
+      routes: ['/'],
     },
 
     // Compression
