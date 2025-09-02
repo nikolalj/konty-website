@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   // PostCSS - Production CSS optimization
   postcss: {
     plugins: {
-      ...(process.env.APP_ENV === 'production' && {
+      ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com') && {
         cssnano: {
           preset: ['default', {
             discardComments: { removeAll: true },
@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Modules - Order matters for optimization
+  // Modules - Order matters
   modules: [
     '@nuxt/ui-pro',
     '@nuxt/image',
@@ -100,42 +100,108 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-  // SEO Configuration
+  // Site configuration - Single source of truth for all SEO/Schema data
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
+    // Core site info
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
-    description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
-    defaultLocale: 'sr',
+    description: 'Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9,000+ businesses trust us.',
+    
+    // SEO settings
+    trailingSlash: false,
+    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
+    
+    // Organization identity for Schema.org (automatically used on all pages)
     identity: {
-      type: 'Organization'
-    },
-    twitter: '@kontypos', // If you have Twitter
-    trailingSlash: false
+      type: 'Organization',
+      name: 'Konty d.o.o.',
+      logo: '/images/branding/logo-light.svg',
+      // Social profiles for Knowledge Graph
+      sameAs: [
+        'https://www.facebook.com/konty',
+        'https://www.linkedin.com/company/konty'
+      ],
+      // Trust signals
+      foundingDate: '1998',
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        minValue: 50,
+        maxValue: 100
+      }
+    }
   },
 
+  // Core SEO module settings
   seo: {
     redirectToCanonicalSiteUrl: true,
     fallbackTitle: false,
+    automaticDefaults: true
   },
 
-  // Sitemap with better configuration
+  // Schema.org configuration
+  schemaOrg: {
+    defaults: true,
+    identity: 'Organization', // Links to site.identity
+    // Enable reactive schemas for development
+    reactive: process.env.NODE_ENV === 'development'
+  },
+
+  // Robots.txt configuration
+  robots: {
+    enabled: true,
+    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+      ? {
+          // Production: Allow crawling with smart restrictions
+          allow: ['/'],
+          disallow: [
+            '/api/',      // Sitemap generation endpoints
+            '/*?utm_*',   // Marketing campaign tracking
+            '/*?ref=*',   // Referral tracking
+          ],
+          sitemap: '/sitemap_index.xml'
+        }
+      : {
+          // Non-production: Block everything
+          disallow: ['/']
+        }
+    )
+  },
+
+  // Sitemap with automatic i18n multi-sitemap generation
   sitemap: {
     cacheMaxAgeSeconds: 3600,
-    exclude: ['/admin/**', '/api/**', '/test/**'],
+    experimentalCompression: true,
     defaults: {
       changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString()
+      priority: 0.7
     },
-    urls: [
-      { loc: '/', priority: 1.0, changefreq: 'daily' },
-      { loc: '/products', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/konty-retail', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/konty-hospitality', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/pricing', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/demo', priority: 0.8, changefreq: 'monthly' },
-      { loc: '/about', priority: 0.7, changefreq: 'monthly' }
+    sources: [
+      '/api/__sitemap__/urls',
+      '/api/__sitemap__/blog'
     ]
+  },
+
+  // OG Image generation with Satori
+  ogImage: {
+    // Use Plus Jakarta Sans - supports Serbian/Bosnian
+    fonts: [
+      'Plus+Jakarta+Sans:400',
+      'Plus+Jakarta+Sans:600',
+      'Plus+Jakarta+Sans:700'
+    ],
+
+    // Default settings for all OG images
+    defaults: {
+      width: 1200,
+      height: 630,
+      renderer: 'satori', // Fast, universal compatibility
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7 // 7 days cache
+    },
+
+    // Component defaults
+    componentOptions: {
+      global: true // Make OG image components globally available
+    }
   },
 
   i18n: {
@@ -191,7 +257,7 @@ export default defineNuxtConfig({
   // Nitro - Server optimization
   nitro: {
     minify: true,
-    timing: false, // Disable timing in production for security
+    timing: false,
 
     externals: {
       inline: ['unhead']
@@ -204,6 +270,13 @@ export default defineNuxtConfig({
       routes: [],
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
+
+    // prerender: {
+    //   // Pre-render the homepage
+    //   routes: ['/'],
+    //   // Then crawl all the links on the page
+    //   crawlLinks: true
+    // },
 
     // Compression
     compressPublicAssets: {
@@ -258,6 +331,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
+
+    public: {
+      url: process.env.NUXT_PUBLIC_SITE_URL
+    }
   },
 
   // Google Analytics 4

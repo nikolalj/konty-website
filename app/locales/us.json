@@ -23,7 +23,6 @@
   },
   "common": {
     "currency": "USD",
-    "currencySymbol": "$",
     "bookDemo": "Get Personal Demo (15 min)",
     "dismiss": "Dismiss",
     "hospitality": "Hospitality",
@@ -42,18 +41,7 @@
       "namePlaceholder": "John",
       "submit": "Get My Custom Demo"
     },
-    "title": "See Your Custom POS Setup in 15 Minutes",
-    "info": {
-      "email": "help{'@'}konty.com",
-      "phone": "1-800-KONTY",
-      "structuredAddress": {
-        "addressCountry": "US",
-        "addressLocality": "Remote",
-        "addressRegion": "USA",
-        "postalCode": "00000",
-        "streetAddress": "Available Online"
-      }
-    }
+    "title": "See Your Custom POS Setup in 15 Minutes"
   },
   "demo": {
     "description": "Show us your current setup. We'll show you exactly how much you'll save.",
@@ -73,14 +61,6 @@
     "viewPricing": "View Pricing"
   },
   "faq": {
-    "features": {
-      "a1": "Konty includes sales management, inventory tracking, reporting, compliance, loyalty programs, employee management, and much more.",
-      "a2": "Yes, Konty works with all standard POS hardware - printers, scanners, cash drawers. Not locked to specific equipment.",
-      "a3": "Yes, you can manage multiple stores from one account. All data syncs in real-time.",
-      "q1": "What features does Konty include?",
-      "q2": "Can I connect existing equipment?",
-      "q3": "Does it support multiple locations?"
-    },
     "general": {
       "a1": "Konty is a modern point-of-sale system that helps businesses digitize their operations. It enables sales tracking, inventory management, reporting, and compliance.",
       "a2": "Yes, Konty works offline too. All data is stored locally and syncs automatically when you reconnect to the internet.",
@@ -96,20 +76,8 @@
     "pricing": {
       "a1": "We have three plans: Starter ($29), Standard ($49), and Premium ($129) per month. Each plan includes different features.",
       "a2": "No hidden costs. The plan price includes everything - updates, support, and hosting. You only pay the monthly subscription.",
-      "a3": "Yes, you can upgrade or downgrade your plan anytime. Changes take effect immediately.",
-      "a4": "We accept credit cards, PayPal, and bank transfers. Annual payment gets you 20% off.",
       "q1": "How much does Konty cost?",
-      "q2": "Are there any hidden costs?",
-      "q3": "Can I change my plan later?",
-      "q4": "What payment methods do you accept?"
-    },
-    "support": {
-      "a1": "We offer 24/7 support via chat, email, and phone. We also have a knowledge base with detailed guides.",
-      "a2": "Yes, we offer free online training and video tutorials. Premium users get personalized training.",
-      "a3": "Our support team is available 24/7. Average response time is under 5 minutes for chat and 1 hour for email.",
-      "q1": "What support do you offer?",
-      "q2": "Do you offer training?",
-      "q3": "What if I run into problems?"
+      "q2": "Are there any hidden costs?"
     }
   },
   "features": {
@@ -183,7 +151,9 @@
     "title": "POS System Setup in 48 Hours. We Do Everything."
   },
   "hero": {
-    "cta": "Start Free Trial",
+    "cta": {
+      "primary": "Book a demo"
+    },
     "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
     "tagline": "Trusted by 9,000 small businesses who can't afford downtime",
     "title": "POS System That Won't Crash During Dinner Rush."
@@ -234,6 +204,7 @@
         "title": "Enterprise",
         "description": "Enterprise POS for multi-location restaurants",
         "price": "Custom",
+        "priceValue": "200",
         "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
@@ -266,6 +237,7 @@
         "title": "Essential",
         "description": "Best POS for small restaurants and cafes",
         "price": "$59",
+        "priceValue": "59",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -285,6 +257,7 @@
         "title": "Enterprise",
         "description": "Multi-location retail chains",
         "price": "Custom",
+        "priceValue": "200",
         "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
@@ -298,6 +271,7 @@
         "title": "Professional",
         "description": "For growing retail businesses",
         "price": "$79",
+        "priceValue": "79",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -313,6 +287,7 @@
         "title": "Essential",
         "description": "Perfect for small shops",
         "price": "$39",
+        "priceValue": "39",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -338,47 +313,8 @@
     }
   },
   "schema": {
-    "areaServed": "United States",
-    "features": {
-      "analytics": "Advanced sales analytics and reports",
-      "cloudBased": "Fully cloud-based POS system",
-      "fiscalization": "Complete tax compliance",
-      "hospitality": {
-        "kitchenDisplay": "Kitchen display system",
-        "modifiers": "Dish modifiers",
-        "splitBills": "Split bill functionality",
-        "tableManagement": "Table management"
-      },
-      "inventory": "Real-time inventory management",
-      "multiLocation": "Multi-location support",
-      "offlineMode": "Offline mode functionality",
-      "retail": {
-        "barcode": "Barcode scanning",
-        "loyaltyProgram": "Customer loyalty program",
-        "suppliers": "Supplier management"
-      }
-    },
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "organization": {
-      "contactType": "customer service",
-      "name": "Konty"
-    },
     "requirements": {
       "minimal": "Windows 10+, macOS 10.14+, Android 8+, iOS 12+"
-    },
-    "services": {
-      "implementation": {
-        "description": "Professional installation and configuration of POS systems tailored to your business needs.",
-        "name": "POS System Implementation"
-      },
-      "support": {
-        "description": "24/7 technical support for all Konty POS users. Fast problem resolution and system updates.",
-        "name": "Technical Support"
-      },
-      "training": {
-        "description": "Complete staff training for working with Konty POS system. Includes hands-on training and documentation.",
-        "name": "Staff Training"
-      }
     }
   },
   "seo": {
@@ -476,5 +412,8 @@
       "role": "Entrepreneur and Small Business Association Member"
     },
     "title": "Restaurant Owners Who Sleep Better Now"
+  },
+  "products": {
+    "name": "Konty POS"
   }
 }

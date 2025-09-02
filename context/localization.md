@@ -2,42 +2,41 @@
 
 ## Overview
 
-The Konty website automatically detects visitors' location and shows them country-specific content with local prices, currency, and language. This happens via edge middleware that runs before the application loads, ensuring optimal performance.
+The Konty website automatically detects visitors' location and shows them country-specific content with local prices, currency, and language. This happens via Nuxt server middleware that runs on Cloudflare's edge infrastructure through NuxtHub, ensuring optimal performance.
 
 ## Architecture
 
-### Provider-Agnostic Design
+### Current Implementation (NuxtHub + Cloudflare Edge)
 
-The localization system is designed to work with any hosting provider that supports edge functions:
+The localization system now runs entirely within Nuxt's server middleware on Cloudflare's edge network:
 
-- **Cloudflare Pages**: Uses `functions/_middleware.ts`
-- **Vercel**: Would use `middleware.ts`
-- **Netlify**: Would use Edge Functions
-- **Any Provider**: Implements edge logic that sets `x-detected-locale` header
+- **NuxtHub Deployment**: Server code runs directly on Cloudflare edge workers
+- **No Separate Edge Functions**: All logic is in Nuxt server middleware (`server/middleware/02.locale-redirect.ts`)
+- **Cloudflare Headers**: Uses `cf-ipcountry` header for country detection
+- **Context Passing**: Detected locale is passed via `event.context.detectedLocale`
 
-The Nuxt application only reads the `x-detected-locale` header - it doesn't care who set it.
+The system no longer uses separate Cloudflare Functions (`functions/_middleware.ts`) - everything runs within the Nuxt application on the edge.
 
 ### Core Principles
 
-1. **Edge-First Processing** - All detection and redirects happen at the edge (0ms overhead)
+1. **Edge Processing** - Detection and redirects happen on Cloudflare edge via NuxtHub
 2. **Silent Redirects** - No "we redirected you" notifications
 3. **Respect User Choice** - Manual selections are permanent via `explicit` flag
-4. **Selective Localization** - Only 5 pages get locale-specific URLs
-5. **Provider Agnostic** - Works with any edge provider
+4. **Nuxt-Native** - Uses standard Nuxt server middleware, no external functions
 
 ## How It Works
 
 ```
-Edge Function (Cloudflare/Vercel/etc)
-├─ Detects country from IP
+Server Middleware (Nuxt on Cloudflare Edge)
+├─ Detects country from cf-ipcountry header
 ├─ Maps country to locale
 ├─ Checks cookie for manual selection
-├─ Redirects if needed
-└─ Sets x-detected-locale header
+├─ Determines redirect need
+├─ Sets event.context.detectedLocale
+└─ Redirects if needed (302)
     ↓
-Server Middleware (Nuxt)
-├─ Reads x-detected-locale header
-└─ Sets event.context.detectedLocale
+Server Plugin (locale-payload.server.ts)
+└─ Copies detectedLocale to nuxtApp.payload
     ↓
 Application (Vue)
 ├─ Reads from nuxtApp.payload.detectedLocale
@@ -79,23 +78,28 @@ Using `prefix_except_default` strategy:
 - **Serbia** (default): `konty.com`, `konty.com/pricing`
 - **Other locales**: `konty.com/me`, `konty.com/me/pricing`
 
-### Pages with Locale URLs
+### Pages with Automatic Locale Redirect
 
-Only these 5 pages redirect to locale-specific URLs:
+**All content pages are fully localized** and visitors are automatically redirected to their locale-specific URLs based on their location:
 
 1. `/` - Homepage
-2. `/pricing` - Pricing page
+2. `/pricing` - Pricing page with local currency
 3. `/demo` - Demo request
-4. `/konty-retail` - Retail product
-5. `/konty-hospitality` - Hospitality product
+4. `/konty-retail` - Retail product page
+5. `/konty-hospitality` - Hospitality product page
+6. `/products` - Products overview
+7. `/about` - About page
+8. `/terms` - Terms of service
+9. `/privacy` - Privacy policy
 
-### Universal Pages (No Redirect)
+### Excluded from Redirect (Technical Routes)
 
-- `/blog/*` - Blog posts
-- `/about` - Company info
-- `/terms`, `/privacy` - Legal pages
+These are never redirected as they're not content pages:
+
 - `/api/*` - API routes
-- Static files (`.css`, `.js`, images)
+- `/_nuxt/*` - Build assets
+- `/blog/*` - Blog posts (future)
+- Static files (`.css`, `.js`, `.xml`, `.txt`, images)
 
 ## Cookie System
 
@@ -117,22 +121,15 @@ Only these 5 pages redirect to locale-specific URLs:
 
 ## Implementation Files
 
-### Edge Function
-**`functions/_middleware.ts`** - Cloudflare Pages Function
+### Server Middleware (Primary Logic)
+**`server/middleware/02.locale-redirect.ts`** - Main locale detection and redirect handler
+- Runs on Cloudflare edge via NuxtHub
 - Detects country via `cf-ipcountry` header
-- Maps country to locale
+- Maps country to locale using `COUNTRY_TO_LOCALE_MAP`
 - Checks cookie for explicit choice
-- Redirects to locale URLs
-- Always sets `x-detected-locale` header
-
-### Server Middleware
-**`server/middleware/02.locale-redirect.ts`** - Minimal handler
-```typescript
-const detectedLocale = getHeader(event, 'x-detected-locale')
-if (detectedLocale) {
-  event.context.detectedLocale = detectedLocale
-}
-```
+- Redirects to locale URLs (302 redirect)
+- Sets `event.context.detectedLocale` for downstream use
+- Handles all redirect logic and cookie management
 
 ### Plugin
 **`app/plugins/locale-payload.server.ts`** - Payload injection
@@ -267,33 +264,33 @@ Stay/Switch clicked:
 | Redirect decision | <1ms | Edge logic |
 | Total overhead | ~1ms | All at edge |
 
-## Edge Function Algorithm
+## Server Middleware Algorithm
 
 ### Simplified Flow
 ```
 START
-├─ Quick Exits (return next())
+├─ Quick Exits (return)
 │   ├─ Non-GET/HEAD requests
-│   ├─ Excluded patterns (/api/, /blog, etc)
-│   └─ Static files
+│   ├─ Excluded patterns (/api/, /_nuxt/, /blog, etc)
+│   └─ Static files (.css, .js, .xml, etc)
 │
 ├─ Already on Locale URL? (/me/*, /ba/*, /us/*)
-│   ├─ Detect locale
-│   ├─ Set x-detected-locale header
-│   └─ Pass through
+│   ├─ Detect locale from cf-ipcountry
+│   ├─ Set event.context.detectedLocale
+│   └─ Return (no redirect)
 │
-├─ Page Needs Localization?
-│   ├─ No → Detect, set header, pass through
+├─ Page in PAGES_TO_REDIRECT list?
+│   ├─ No → Return (no redirect)
 │   └─ Yes → Continue
 │
 └─ Redirect Logic
-    ├─ Detect locale (ALWAYS)
-    ├─ Read cookie
-    ├─ If explicit → use cookie locale for redirect
-    ├─ Else → use detected locale for redirect
-    ├─ Set x-detected-locale header (always detected value)
-    ├─ If target = default → no redirect, update cookie
-    └─ Else → redirect to /locale/path, update cookie
+    ├─ Detect locale from cf-ipcountry
+    ├─ Read cookie (konty-locale)
+    ├─ If cookie.explicit → use cookie.locale
+    ├─ Else → use detected locale
+    ├─ Set/update cookie if needed
+    ├─ If target = DEFAULT_LOCALE (rs) → no redirect
+    └─ Else → 302 redirect to /locale/path
 ```
 
 ### Detailed Redirect Logic (for localized pages)
@@ -375,23 +372,19 @@ START
 
 ## Deployment
 
-### Cloudflare Pages
+### Current: NuxtHub + Cloudflare
 
-Already configured with `functions/_middleware.ts`
+The application is deployed via NuxtHub which automatically:
+1. Deploys server middleware to Cloudflare Workers
+2. Provides access to `cf-ipcountry` header for geolocation
+3. Runs all server code on the edge network
+4. No additional configuration needed
 
-### Other Providers
+### Key Requirements
 
-Create equivalent edge function that:
-1. Detects country using provider's geolocation
-2. Implements same redirect logic
-3. Sets `x-detected-locale` header
-
-Example for Vercel (`middleware.ts` in root):
-```typescript
-const country = request.geo?.country
-const detectedLocale = COUNTRY_TO_LOCALE_MAP[country] || DEFAULT_LOCALE
-response.headers.set('x-detected-locale', detectedLocale)
-```
+- **Cloudflare-specific**: The current implementation relies on Cloudflare's `cf-ipcountry` header
+- **Edge deployment**: Server middleware must run on edge for optimal performance
+- **Cookie access**: Platform must support reading/writing cookies
 
 ## Testing
 
