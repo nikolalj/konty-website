@@ -100,17 +100,18 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
+<<<<<<< HEAD
   // Site configuration - Single source of truth for all SEO/Schema data
   site: {
     // Core site info
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
     description: 'Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9,000+ businesses trust us.',
-    
+
     // SEO settings
     trailingSlash: false,
     indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
-    
+
     // Organization identity for Schema.org (automatically used on all pages)
     identity: {
       type: 'Organization',
@@ -129,6 +130,14 @@ export default defineNuxtConfig({
         maxValue: 100
       }
     }
+=======
+  // Site configuration
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: 'Konty',
+    trailingSlash: false,
+    indexable: process.env.APP_ENV === 'production'
+>>>>>>> master
   },
 
   // Core SEO module settings
