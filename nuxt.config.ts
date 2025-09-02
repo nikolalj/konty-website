@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   // PostCSS - Production CSS optimization
   postcss: {
     plugins: {
-      ...(process.env.APP_ENV === 'production' && {
+      ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com') && {
         cssnano: {
           preset: ['default', {
             discardComments: { removeAll: true },
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: 'Konty',
     trailingSlash: false,
-    indexable: process.env.APP_ENV === 'production'
+    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
   },
 
   // Core SEO module settings
@@ -123,10 +123,22 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    // TODO enable before release
-    // disallow: process.env.APP_ENV !== 'production' ? ['/'] : [],
-    disallow: [],
-    sitemap: '/sitemap_index.xml' // Points to the sitemap index with all locales
+    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+      ? {
+          // Production: Allow crawling with smart restrictions
+          allow: ['/'],
+          disallow: [
+            '/api/',      // Sitemap generation endpoints
+            '/*?utm_*',   // Marketing campaign tracking
+            '/*?ref=*',   // Referral tracking
+          ],
+          sitemap: '/sitemap_index.xml'
+        }
+      : {
+          // Non-production: Block everything
+          disallow: ['/']
+        }
+    )
   },
 
   // Sitemap with automatic i18n multi-sitemap generation
