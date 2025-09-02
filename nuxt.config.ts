@@ -125,29 +125,23 @@ export default defineNuxtConfig({
     enabled: true,
     // TODO enable before release
     // disallow: process.env.APP_ENV !== 'production' ? ['/'] : [],
-    disallow: ['/'],
-    sitemap: '/sitemap.xml'
+    disallow: [],
+    sitemap: '/sitemap_index.xml' // Points to the sitemap index with all locales
   },
 
-  // Enhanced sitemap with i18n support
-  // sitemap: {
-  //   enabled: true,
-  //   cacheMaxAgeSeconds: 3600,
-  //   exclude: [
-  //     '/admin/**',
-  //     '/api/**',
-  //     '/test/**',
-  //     '/__nuxt_error',
-  //     '/404'
-  //   ],
-  //   defaults: {
-  //     changefreq: 'weekly',
-  //     priority: 0.8
-  //   },
-  //   sources: [
-  //     '/api/__sitemap__/urls'
-  //   ]
-  // },
+  // Sitemap with automatic i18n multi-sitemap generation
+  sitemap: {
+    cacheMaxAgeSeconds: 3600,
+    experimentalCompression: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.7
+    },
+    sources: [
+      '/api/__sitemap__/urls',
+      '/api/__sitemap__/blog'
+    ]
+  },
 
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
@@ -208,20 +202,20 @@ export default defineNuxtConfig({
       inline: ['unhead']
     },
 
-    // // Prerendering disabled - using SSR for dynamic locale detection
-    // // All pages need server-side rendering for locale redirects to work
-    // prerender: {
-    //   crawlLinks: false,
-    //   routes: [], // No prerendering - all pages use SSR
-    //   ignore: ['/admin', '/api', '/__nuxt_error']
-    // },
-
+    // Prerendering disabled - using SSR for dynamic locale detection
+    // All pages need server-side rendering for locale redirects to work
     prerender: {
-      // Pre-render the homepage
-      routes: ['/'],
-      // Then crawl all the links on the page
-      crawlLinks: true
+      crawlLinks: false,
+      routes: [], // No prerendering - all pages use SSR
+      ignore: ['/admin', '/api', '/__nuxt_error']
     },
+
+    // prerender: {
+    //   // Pre-render the homepage
+    //   routes: ['/'],
+    //   // Then crawl all the links on the page
+    //   crawlLinks: true
+    // },
 
     // Compression
     compressPublicAssets: {

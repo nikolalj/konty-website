@@ -1,77 +1,42 @@
-# Remaining TODOs
+# Konty Website - TODO List
 
-## Design/Content Tasks
+## SITEMAP
 
-### 1. Create Product Dashboard Image
-**Files needed:** `/public/images/konty-dashboard.png`
-- Create actual Konty dashboard screenshot
-- Dimensions: 1200x630px (also works for OG images)
-- Currently referenced in Schema components but doesn't exist
+### Before Launch (CRITICAL)
+- [ ] **Activate blog sitemap handler**
+  - Implement data fetching in `/server/api/__sitemap__/blog.ts`
+  - Connect to CMS/database for blog posts
+  - Return actual blog URLs with proper lastmod dates
+  - Test with real blog content
 
-### 2. Create OG Images  
-**Files needed:** In `/public/og/` directory
-- `homepage.jpg` - 1200x630px
-- `products.jpg` - 1200x630px  
-- `retail.jpg` - 1200x630px
-- `hospitality.jpg` - 1200x630px
-- `pricing.jpg` - 1200x630px
-- `demo.jpg` - 1200x630px
-- `about.jpg` - 1200x630px
-- `legal.jpg` - 1200x630px (for privacy/terms)
-- `default.jpg` - 1200x630px (fallback)
+- [ ] **Update lastmod dates** in `/server/api/__sitemap__/urls.ts`
+  - Set actual dates when each page content was last modified
+  - Currently all set to `2025-09-15` (placeholder)
+  - CRITICAL: Update pricing page lastmod immediately when prices change
 
-**Note:** System is ready, just needs actual image files
+- [ ] **Set production environment variables**
+  - `NUXT_PUBLIC_SITE_URL` - Set to production domain (https://konty.com)
+  - `APP_ENV=production` - Enable proper indexing in robots.txt
+  - Verify URLs in sitemap show correct domain, not `http://[:3000`
 
-## Technical Tasks (Optional Enhancements)
+- [ ] **Submit sitemap to Google Search Console**
+  1. Go to Google Search Console
+  2. Add property for konty.com (if not already added)
+  3. Navigate to Sitemaps section
+  4. Submit: `https://konty.com/sitemap_index.xml`
+  5. Wait for validation (may show initial error - wait a few days)
+  6. Monitor indexing status for all 4 locales
+  7. Read https://nuxtseo.com/docs/sitemap/guides/submitting-sitemap for more info
 
-### 3. Replace External Image URLs
-**Current issue:** Some components use `martex-nuxtjs.vercel.app` images
-- Hero component
-- Other placeholder images
-- Replace with actual Konty branded images
+- [ ] **Verify sitemap accessibility**
+  - Test: `https://konty.com/sitemap_index.xml`
+  - Test: `https://konty.com/robots.txt` (should include sitemap URL)
+  - Validate XML at: https://www.xml-sitemaps.com/validate-xml-sitemap.html
 
-### 4. Blog/Article Schema
-**When needed:** Only when blog section is added
-- Article schema for posts
-- Author schema
-- Not needed until content exists
-
-### 5. Advanced Schema Types
-**Nice to have:**
-- LocalBusiness schema (if physical locations)
-- Event schema (for webinars)
-- VideoObject schema (when videos added)
-
-### 6. Performance Monitoring Setup
-**For production:**
-- Core Web Vitals tracking
-- 404 monitoring
-- SEO ranking tracking
-
----
-
-## Completed SEO Tasks ✓
-
-### Critical Issues (All Fixed)
-- ✓ Removed noindex from legal pages
-- ✓ Fixed multiple H1 issues 
-- ✓ Added H1 to pricing page
-- ✓ Fixed duplicate hreflang
-- ✓ Verified trailing slash consistency
-- ✓ Canonical URLs working correctly
-
-### Implementations (All Done)
-- ✓ Schema markup (SoftwareApplication, Product, FAQ, Reviews)
-- ✓ Breadcrumbs in header
-- ✓ Sitemap with lastmod tracking
-- ✓ Git pre-commit reminder for lastmod
-- ✓ OG image system configured
-- ✓ URL redirect system (using routeRules)
-- ✓ Internal linking (already well-implemented)
-- ✓ Alt text for images
-
----
-
-## Summary
-**Technical SEO: Complete** - All code/configuration tasks are done
-**Remaining: Design work** - Need actual images to be created
+## Important Files
+- **Sitemap Config**: `/nuxt.config.ts` (lines 133-144)
+- **Main Pages Handler**: `/server/api/__sitemap__/urls.ts`
+- **Blog Handler**: `/server/api/__sitemap__/blog.ts`
+- **Test URLs**:
+  - Dev: `http://localhost:3000/sitemap_index.xml`
+  - Prod: `https://konty.com/sitemap_index.xml`
