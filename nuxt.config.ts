@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Modules - Order matters for optimization
+  // Modules - Order matters
   modules: [
     '@nuxt/ui-pro',
     '@nuxt/image',
@@ -100,43 +100,54 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-  // SEO Configuration
+  // Site configuration
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Konty POS',
-    description: 'Profesionalni POS sistem za restorane i maloprodaju. Povećajte efikasnost poslovanja sa Konty rešenjem.',
-    defaultLocale: 'sr',
-    identity: {
-      type: 'Organization'
-    },
-    twitter: '@kontypos', // If you have Twitter
-    trailingSlash: false
+    name: 'Konty',
+    trailingSlash: false,
+    indexable: process.env.APP_ENV === 'production'
   },
 
+  // Core SEO module settings
   seo: {
     redirectToCanonicalSiteUrl: true,
     fallbackTitle: false,
+    automaticDefaults: true
   },
 
-  // Sitemap with better configuration
-  sitemap: {
-    cacheMaxAgeSeconds: 3600,
-    exclude: ['/admin/**', '/api/**', '/test/**'],
-    defaults: {
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString()
-    },
-    urls: [
-      { loc: '/', priority: 1.0, changefreq: 'daily' },
-      { loc: '/products', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/konty-retail', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/konty-hospitality', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/pricing', priority: 0.9, changefreq: 'weekly' },
-      { loc: '/demo', priority: 0.8, changefreq: 'monthly' },
-      { loc: '/about', priority: 0.7, changefreq: 'monthly' }
-    ]
+  // Schema.org configuration
+  schemaOrg: {
+    defaults: true
   },
+
+  // Robots.txt configuration
+  robots: {
+    enabled: true,
+    // TODO enable before release
+    // disallow: process.env.APP_ENV !== 'production' ? ['/'] : [],
+    disallow: ['/'],
+    sitemap: '/sitemap.xml'
+  },
+
+  // Enhanced sitemap with i18n support
+  // sitemap: {
+  //   enabled: true,
+  //   cacheMaxAgeSeconds: 3600,
+  //   exclude: [
+  //     '/admin/**',
+  //     '/api/**',
+  //     '/test/**',
+  //     '/__nuxt_error',
+  //     '/404'
+  //   ],
+  //   defaults: {
+  //     changefreq: 'weekly',
+  //     priority: 0.8
+  //   },
+  //   sources: [
+  //     '/api/__sitemap__/urls'
+  //   ]
+  // },
 
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
@@ -191,18 +202,25 @@ export default defineNuxtConfig({
   // Nitro - Server optimization
   nitro: {
     minify: true,
-    timing: false, // Disable timing in production for security
+    timing: false,
 
     externals: {
       inline: ['unhead']
     },
 
-    // Prerendering disabled - using SSR for dynamic locale detection
-    // All pages need server-side rendering for locale redirects to work
+    // // Prerendering disabled - using SSR for dynamic locale detection
+    // // All pages need server-side rendering for locale redirects to work
+    // prerender: {
+    //   crawlLinks: false,
+    //   routes: [], // No prerendering - all pages use SSR
+    //   ignore: ['/admin', '/api', '/__nuxt_error']
+    // },
+
     prerender: {
-      crawlLinks: false,
-      routes: [], // No prerendering - all pages use SSR
-      ignore: ['/admin', '/api', '/__nuxt_error']
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true
     },
 
     // Compression

@@ -176,7 +176,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useCustomSeoMeta({
+// Use the new simplified SEO composable
+usePageSeo({
   title: t('seo.privacy.title'),
   description: t('seo.privacy.description'),
   type: 'website'

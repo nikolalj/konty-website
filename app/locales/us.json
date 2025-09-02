@@ -234,6 +234,7 @@
         "title": "Enterprise",
         "description": "Enterprise POS for multi-location restaurants",
         "price": "Custom",
+        "priceValue": "200",
         "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
@@ -250,6 +251,7 @@
         "title": "Professional",
         "description": "Restaurant POS system for growing businesses",
         "price": "$99",
+        "priceValue": "99",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -266,6 +268,7 @@
         "title": "Essential",
         "description": "Best POS for small restaurants and cafes",
         "price": "$59",
+        "priceValue": "59",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -285,6 +288,7 @@
         "title": "Enterprise",
         "description": "Multi-location retail chains",
         "price": "Custom",
+        "priceValue": "200",
         "billingCycle": "/ month",
         "button": "Contact Sales Team",
         "features": {
@@ -298,6 +302,7 @@
         "title": "Professional",
         "description": "For growing retail businesses",
         "price": "$79",
+        "priceValue": "79",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {
@@ -313,6 +318,7 @@
         "title": "Essential",
         "description": "Perfect for small shops",
         "price": "$39",
+        "priceValue": "39",
         "billingCycle": "/ month",
         "button": "Start 30-Day Free Trial",
         "features": {

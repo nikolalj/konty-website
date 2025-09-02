@@ -35,9 +35,6 @@
         </template>
       </li>
     </ol>
-
-    <!-- Structured data -->
-    <SchemaBreadcrumbList :items="items" />
   </nav>
 </template>
 

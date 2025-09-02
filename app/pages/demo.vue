@@ -9,7 +9,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useCustomSeoMeta({
+// Use the new simplified SEO composable
+usePageSeo({
   title: t('seo.demo.title'),
   description: t('seo.demo.description'),
   type: 'website'

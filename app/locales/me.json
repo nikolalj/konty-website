@@ -234,6 +234,7 @@
         "title": "Enterprise",
         "description": "Za lance restorana",
         "price": "Po dogovoru",
+        "priceValue": "200",
         "billingCycle": "/ mjesečno",
         "button": "Kontaktiraj prodaju",
         "features": {
@@ -250,6 +251,7 @@
         "title": "Profesional",
         "description": "Za ozbiljne restorane spremne za rast",
         "price": "99€",
+        "priceValue": "99",
         "billingCycle": "/ mjesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
@@ -266,6 +268,7 @@
         "title": "Osnovni",
         "description": "Savršen za kafiće i male restorane",
         "price": "59€",
+        "priceValue": "59",
         "billingCycle": "/ mjesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
@@ -285,6 +288,7 @@
         "title": "Enterprise",
         "description": "Za lance prodavnica",
         "price": "Po dogovoru",
+        "priceValue": "200",
         "billingCycle": "/ mjesečno",
         "button": "Kontaktiraj prodaju",
         "features": {
@@ -298,6 +302,7 @@
         "title": "Profesional",
         "description": "Za rastuće trgovine",
         "price": "79€",
+        "priceValue": "79",
         "billingCycle": "/ mjesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
@@ -313,6 +318,7 @@
         "title": "Osnovni",
         "description": "Savršen za male prodavnice",
         "price": "39€",
+        "priceValue": "39",
         "billingCycle": "/ mjesečno",
         "button": "Počni 30 dana besplatno",
         "features": {
