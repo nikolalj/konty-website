@@ -60,7 +60,7 @@ const localePath = useLocalePath()
 // Determine error message
 const errorMessage = computed(() => {
   if (error.value?.statusCode === 404) {
-    return t('error.404')
+    return t('error.400')
   }
   if (error.value?.statusCode === 500) {
     return t('error.500')
@@ -71,12 +71,14 @@ const errorMessage = computed(() => {
   return t('error.generic')
 })
 
-// SEO Meta - prevent indexing of error pages
-useCustomSeoMeta({
-  title: `${error.value?.statusCode || 'Error'} - Konty POS`,
-  description: errorMessage.value,
-  robots: 'noindex, nofollow',
-  noindex: true
+// SEO Meta for error pages - using useHead directly for reliability
+// Error pages should always be noindex to avoid search engines indexing them
+useHead({
+  title: () => `${error.value?.statusCode || 'Error'} - Konty`,
+  meta: () => [
+    { name: 'robots', content: 'noindex, nofollow' },
+    { name: 'description', content: errorMessage.value }
+  ]
 })
 
 // Track error in analytics

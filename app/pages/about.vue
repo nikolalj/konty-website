@@ -13,9 +13,16 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useCustomSeoMeta({
+// SEO meta tags
+usePageSeo({
+  title: t('seo.about.title'),
+  description: t('seo.about.description')
+})
+
+// OG Image generation for About page
+defineOgImageComponent('Main', {
   title: t('seo.about.title'),
   description: t('seo.about.description'),
-  type: 'website'
+  cta: t('contact.form.submit')
 })
 </script>

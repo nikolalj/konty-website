@@ -9,9 +9,17 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useCustomSeoMeta({
+// SEO meta tags
+usePageSeo({
   title: t('seo.demo.title'),
-  description: t('seo.demo.description'),
-  type: 'website'
+  description: t('seo.demo.description')
+})
+
+// OG Image generation for Demo page
+defineOgImageComponent('Main', {
+  title: t('demo.seeInAction'),
+  description: t('demo.description'),
+  badge: t('pricing.freeTrial'),
+  cta: t('demo.requestDemo')
 })
 </script>

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <SchemaSoftwareApplication product="kontyRetail" />
-    <SchemaReviews product="kontyRetail" />
     <konty-retail-hero />
     <shared-client-list product="kontyRetail" />
     <shared-benefits product="kontyRetail" />
@@ -15,9 +13,44 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useCustomSeoMeta({
+// SEO meta tags
+usePageSeo({
   title: t('seo.kontyRetail.title'),
+  description: t('seo.kontyRetail.description')
+})
+
+// OG Image generation for Retail product
+defineOgImageComponent('Product', {
+  product: 'Konty Retail',
+  title: t('retailPage.hero.title'),
+  features: [
+    t('features.retail.inventory.title'),
+    t('features.retail.customerInsights.title'),
+    t('features.retail.quickCheckout.title')
+  ],
+  cta: t('hero.cta.primary'),
+  icon: '🛍️'
+})
+
+// Product schema for retail POS
+// Get currency from current locale
+const { $i18n } = useNuxtApp()
+const currency = $i18n.localeProperties.value?.currency || 'EUR'
+
+// Get price values from translations
+const lowPrice = t('pricing.retail.start.priceValue')
+const highPrice = t('pricing.retail.premium.priceValue')
+
+defineSoftwareApp({
+  name: 'Konty Retail',
   description: t('seo.kontyRetail.description'),
-  type: 'website'
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Windows, macOS, Linux, iOS, Android',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: currency,
+    lowPrice,
+    highPrice
+  }
 })
 </script>
