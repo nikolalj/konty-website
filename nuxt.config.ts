@@ -372,7 +372,7 @@ export default defineNuxtConfig({
     env: process.env.APP_ENV,
 
     public: {
-      url: process.env.NUXT_PUBLIC_SITE_URL
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL
     }
   },
 

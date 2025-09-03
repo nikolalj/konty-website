@@ -3,6 +3,9 @@
 </template>
 
 <script setup lang="ts">
+import { useRuntimeConfig } from '#imports'
+
+const config = useRuntimeConfig()
 const items = useBreadcrumbItems()
 
 const breadcrumbSchema = computed(() => ({
@@ -10,12 +13,14 @@ const breadcrumbSchema = computed(() => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.label,
-    item: item.path
+    item: `${config.public.siteUrl}/${item.to}`
   }))
 }))
+
 setTimeout(() => {
   console.log(items.value, breadcrumbSchema.value)
 }, 5000)
+
 watch(breadcrumbSchema, val => {
   useSchemaOrg([
     defineBreadcrumb(val)

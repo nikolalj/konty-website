@@ -24,7 +24,7 @@ export const useCompanyInfo = () => {
         name: currentCompany.legalName,
         legalName: currentCompany.legalName,
         logo: '/images/branding/logo-light.svg',
-        url: config.public.url || 'https://konty.com',
+        url: config.public.siteUrl || 'https://konty.com',
 
         // Social profiles
         sameAs: Object.values(currentCompany.social || {}).filter(Boolean),
