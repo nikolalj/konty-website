@@ -7,11 +7,11 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale, locales } = useI18n()
+import { LOCALES } from '../../config/locale.config'
 
-// Get current locale config for currency
-const currentLocale = locales.value.find(l => l.code === locale.value)
-const currency = currentLocale?.currencySymbol || '€'
+const { t, locale } = useI18n()
+
+const currentLocale = LOCALES.find(l => l.code === locale.value)
 
 // SEO meta tags
 usePageSeo({
@@ -22,7 +22,7 @@ usePageSeo({
 // OG Image generation with localized pricing
 defineOgImageComponent('Pricing', {
   title: t('pricing.title'),
-  currency,
+  currency: currentLocale?.currencySymbol,
   period: t('pricing.retail.start.billingCycle'),
   cta: t('pricing.freeTrial'),
   ctaSubtext: t('pricing.retail.start.button'),

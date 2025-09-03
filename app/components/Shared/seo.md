@@ -49,6 +49,17 @@ https://nuxtseo.com/docs/site-config/guides/i18n.md
 https://nuxtseo.com/docs/site-config/guides/runtime-site-config.md
 https://nuxtseo.com/docs/site-config/guides/multi-tenancy.md
 
+https://nuxtseo.com/docs/schema-org/getting-started/introduction.md
+https://nuxtseo.com/docs/schema-org/getting-started/installation.md
+https://nuxtseo.com/docs/schema-org/getting-started/troubleshooting.md
+https://nuxtseo.com/docs/schema-org/guides/how-it-works.md
+https://nuxtseo.com/docs/schema-org/guides/content.md
+https://nuxtseo.com/docs/schema-org/guides/default-schema-org.md
+https://nuxtseo.com/docs/schema-org/guides/setup-identity.md
+https://nuxtseo.com/docs/schema-org/guides/i18n.md
+https://nuxtseo.com/docs/schema-org/guides/nodes.md
+https://nuxtseo.com/docs/schema-org/guides/full-documentation.md
+
 https://nuxtseo.com/docs/og-image/getting-started/introduction.md
 https://nuxtseo.com/docs/og-image/getting-started/installation.md
 https://nuxtseo.com/docs/og-image/getting-started/troubleshooting.md

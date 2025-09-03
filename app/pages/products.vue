@@ -7,7 +7,11 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+import { LOCALES } from '../../config/locale.config'
+
+const { t, locale } = useI18n()
+
+const currentLocale = LOCALES.find(l => l.code === locale.value)
 
 // SEO meta tags
 usePageSeo({
@@ -21,10 +25,6 @@ defineOgImageComponent('Main', {
   description: t('seo.products.description'),
   cta: t('hero.cta.primary')
 })
-
-// Get locale for currency
-const { locale, locales } = useI18n()
-const currentLocale = locales.value.find(l => l.code === locale.value)
 
 // SoftwareApplication schema for better visibility in search
 // Shows app details, compatibility, and ratings
