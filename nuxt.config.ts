@@ -158,9 +158,7 @@ export default defineNuxtConfig({
         vatID: company.vatID,
         legalName: company.legalName
       }
-    })(),
-
-    reactive: true
+    })()
   },
 
   // Core SEO module settings
@@ -202,8 +200,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     defaults: true,
     identity: 'Organization', // Links to site.identity
-    // Enable reactive schemas for development
-    reactive: process.env.NODE_ENV === 'development'
+    reactive: true
   },
 
   // Robots.txt configuration
