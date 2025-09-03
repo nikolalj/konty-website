@@ -14,7 +14,9 @@ const breadcrumbSchema = computed(() => ({
   }))
 }))
 
-useSchemaOrg([
-  defineBreadcrumb(breadcrumbSchema.value)
-])
+watch(breadcrumbSchema, val => {
+  useSchemaOrg([
+    defineBreadcrumb(val)
+  ])
+}, { immediate: true })
 </script>

@@ -158,7 +158,9 @@ export default defineNuxtConfig({
         vatID: company.vatID,
         legalName: company.legalName
       }
-    })()
+    })(),
+
+    reactive: true
   },
 
   // Core SEO module settings
