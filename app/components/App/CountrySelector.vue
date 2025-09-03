@@ -56,12 +56,13 @@
 
 <script setup lang="ts">
 import type { LocaleConfig, ValidLocale } from '~/types/locale'
+import { LOCALES } from '../../../config/locale.config'
 
 const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
 const { locale, locales } = useI18n()
+const currentLocale = LOCALES.find(l => l.code === locale.value)
 
-const currentLocale = computed(() => (locales.value as LocaleConfig[]).find(l => l.code === locale.value))
 const suggestedLocale: Ref<ValidLocale | undefined> = ref()
 
 onMounted(() => {

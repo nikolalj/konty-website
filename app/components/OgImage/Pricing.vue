@@ -1,13 +1,13 @@
 <template>
   <div style="position: relative; width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', sans-serif;">
     <img
-      :src="`${config.public.url}/images/og/main.jpg`"
+      :src="`${config.public.siteUrl}/images/og/main.jpg`"
       style="position: absolute; width: 100%; height: 100%; object-fit: cover;"
     >
 
     <div style="width: 100%; height: 100%; padding: 48px;">
       <img
-        :src="`${config.public.url}/images/branding/logo-full-horizontal-light.svg`"
+        :src="`${config.public.siteUrl}/images/branding/logo-full-horizontal-light.svg`"
         style="width: 330px;"
       >
 
@@ -43,7 +43,7 @@
             </div>
 
             <div style="margin-bottom: 8px;">
-              <span style="font-size: 36px; font-weight: 700; color: #1F6FE2;">50 {{ currency }}</span>
+              <span style="font-size: 36px; font-weight: 700; color: #1F6FE2;">{{ plan.price }} {{ currency }}</span>
             </div>
 
             <div v-if="period" style="font-size: 14px; color: #6b7280;">

@@ -27,4 +27,7 @@ const filteredHead = computed(() => {
 })
 
 useHead(filteredHead)
+
+// Update company info based on locale for proper Schema.org per market
+useCompanyInfo()
 </script>

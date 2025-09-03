@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { DEFAULT_LOCALE, LOCALE_CONFIG } from './config/locale.config'
+import { DEFAULT_LOCALE, LOCALE_CONFIG, LOCALES } from './config/locale.config'
+import { getCompanyInfo, BUSINESS_METRICS } from './config/company.config'
 
 export default defineNuxtConfig({
   // Development
@@ -100,59 +101,106 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-<<<<<<< HEAD
   // Site configuration - Single source of truth for all SEO/Schema data
   site: {
     // Core site info
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
     name: 'Konty POS',
-    description: 'Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9,000+ businesses trust us.',
+    description: `Modern Point of Sale system for restaurants and retail. ${BUSINESS_METRICS.yearsInBusiness}+ years of reliability. ${BUSINESS_METRICS.totalCustomers.toLocaleString()}+ businesses trust us.`,
 
     // SEO settings
     trailingSlash: false,
     indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
 
-    // Organization identity for Schema.org (automatically used on all pages)
-    identity: {
-      type: 'Organization',
-      name: 'Konty d.o.o.',
-      logo: '/images/branding/logo-light.svg',
-      // Social profiles for Knowledge Graph
-      sameAs: [
-        'https://www.facebook.com/konty',
-        'https://www.linkedin.com/company/konty'
-      ],
-      // Trust signals
-      foundingDate: '1998',
-      numberOfEmployees: {
-        '@type': 'QuantitativeValue',
-        minValue: 50,
-        maxValue: 100
+    // Using company config as single source of truth
+    identity: (() => {
+      const company = getCompanyInfo('rs')
+      return {
+        type: 'Organization',
+        name: company.legalName,
+        logo: '/images/branding/logo-light.svg',
+        url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
+
+        // Social profiles for Knowledge Graph
+        sameAs: Object.values(company.social || {}).filter(Boolean),
+
+        // Contact information
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: company.contact.phone,
+          email: company.contact.email,
+          contactType: 'sales',
+          areaServed: ['RS', 'ME', 'BA', 'HR', 'MK', 'SI', 'US']
+        },
+
+        // Physical address
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: company.address.street,
+          addressLocality: company.address.city,
+          addressRegion: company.address.region,
+          postalCode: company.address.postalCode,
+          addressCountry: company.address.countryCode
+        },
+
+        // Trust signals
+        foundingDate: company.foundingDate,
+        numberOfEmployees: company.numberOfEmployees ? {
+          '@type': 'QuantitativeValue',
+          minValue: company.numberOfEmployees.min,
+          maxValue: company.numberOfEmployees.max
+        } : undefined,
+
+        // Areas of expertise
+        knowsAbout: company.knowsAbout,
+
+        // Business registration
+        vatID: company.vatID,
+        legalName: company.legalName
       }
-    }
-=======
-  // Site configuration
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Konty',
-    trailingSlash: false,
-    indexable: process.env.APP_ENV === 'production'
->>>>>>> master
+    })()
   },
 
   // Core SEO module settings
   seo: {
     redirectToCanonicalSiteUrl: true,
-    fallbackTitle: false,
+    fallbackTitle: false, // We handle titles explicitly via usePageSeo
     automaticDefaults: true
+  },
+
+  // Link Checker - Find and fix broken links automatically
+  linkChecker: {
+    enabled: true,
+
+    // Exclude non-checkable links
+    excludeLinks: [
+      'mailto:*',     // Email links
+      'tel:*',        // Phone links
+      'sms:*',        // SMS links
+      '#*'            // Anchor links
+    ],
+
+    // Don't fail builds on broken links (just warn)
+    failOnError: true,
+
+    // Report settings
+    report: {
+      html: true,      // Generate HTML report
+      markdown: true   // Generate markdown report for CI
+    },
+
+    // Only run in production builds
+    runOnBuild: true,
+
+    // Show in DevTools during development
+    showLiveInspections: true
   },
 
   // Schema.org configuration
   schemaOrg: {
     defaults: true,
     identity: 'Organization', // Links to site.identity
-    // Enable reactive schemas for development
-    reactive: process.env.NODE_ENV === 'development'
+    reactive: true
   },
 
   // Robots.txt configuration
@@ -163,11 +211,30 @@ export default defineNuxtConfig({
           // Production: Allow crawling with smart restrictions
           allow: ['/'],
           disallow: [
-            '/api/',      // Sitemap generation endpoints
-            '/*?utm_*',   // Marketing campaign tracking
-            '/*?ref=*',   // Referral tracking
+            '/api/'
           ],
-          sitemap: '/sitemap_index.xml'
+          sitemap: '/sitemap_index.xml',
+          cleanParam: [
+            // UTM (complete set)
+            'utm_source',
+            'utm_medium',
+            'utm_campaign',
+            'utm_term',
+            'utm_content',
+
+            // Platform click IDs
+            'fbclid',
+            'gclid',
+            'msclkid',
+
+            // General
+            'ref',
+            'source',
+
+            // Email if you use it
+            'mc_cid',
+            'mc_eid'
+          ]
         }
       : {
           // Non-production: Block everything
@@ -178,7 +245,7 @@ export default defineNuxtConfig({
 
   // Sitemap with automatic i18n multi-sitemap generation
   sitemap: {
-    cacheMaxAgeSeconds: 3600,
+    cacheMaxAgeSeconds: process.env.NODE_ENV === 'production' ? 3600 : 0,
     experimentalCompression: true,
     defaults: {
       changefreq: 'weekly',
@@ -222,44 +289,7 @@ export default defineNuxtConfig({
     customRoutes: 'config',
     trailingSlash: false,
     strategy: LOCALE_CONFIG.STRATEGY,
-    locales: [
-      {
-        code: 'me',
-        iso: 'sr-ME',
-        name: 'Crna Gora',
-        file: 'me.json',
-        flag: 'i-circle-flags:me',
-        currency: 'EUR',
-        currencySymbol: '€'
-      },
-      {
-        code: 'rs',
-        iso: 'sr-RS',
-        name: 'Srbija',
-        file: 'rs.json',
-        flag: 'i-circle-flags:rs',
-        currency: 'RSD',
-        currencySymbol: 'RSD'
-      },
-      {
-        code: 'ba',
-        iso: 'bs-BA',
-        name: 'Bosna i Hercegovina',
-        file: 'ba.json',
-        flag: 'i-circle-flags:ba',
-        currency: 'BAM',
-        currencySymbol: 'KM'
-      },
-      {
-        code: 'us',
-        iso: 'en-US',
-        name: 'United States',
-        file: 'us.json',
-        flag: 'i-circle-flags:us',
-        currency: 'USD',
-        currencySymbol: '$'
-      }
-    ],
+    locales: LOCALES,
     vueI18n: './i18n.config.ts'
   },
 
@@ -342,7 +372,7 @@ export default defineNuxtConfig({
     env: process.env.APP_ENV,
 
     public: {
-      url: process.env.NUXT_PUBLIC_SITE_URL
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL
     }
   },
 
