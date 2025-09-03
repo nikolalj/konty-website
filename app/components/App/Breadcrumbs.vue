@@ -13,7 +13,9 @@ const breadcrumbSchema = computed(() => ({
     item: item.path
   }))
 }))
-
+setTimeout(() => {
+  console.log(items.value, breadcrumbSchema.value)
+}, 5000)
 watch(breadcrumbSchema, val => {
   useSchemaOrg([
     defineBreadcrumb(val)
