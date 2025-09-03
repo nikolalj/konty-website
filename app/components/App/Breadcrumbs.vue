@@ -13,13 +13,9 @@ const breadcrumbSchema = computed(() => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.label,
-    item: `${config.public.siteUrl}/${item.to}`
+    item: `${config.public.siteUrl}${item.to}`
   }))
 }))
-
-setTimeout(() => {
-  console.log(items.value, breadcrumbSchema.value)
-}, 5000)
 
 watch(breadcrumbSchema, val => {
   useSchemaOrg([
