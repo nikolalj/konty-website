@@ -200,7 +200,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     defaults: true,
     identity: 'Organization', // Links to site.identity
-    reactive: true
+    reactive: process.env.NODE_ENV === 'development'
   },
 
   // Robots.txt configuration
