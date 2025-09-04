@@ -39,7 +39,7 @@
               color="primary"
               variant="soft"
             >
-              {{ $t('common.recommended', 'Recommended') }}
+              {{ t('common.recommended', 'Recommended') }}
             </UBadge>
 
             <UIcon
@@ -60,7 +60,7 @@ import { LOCALES } from '../../../config/locale.config'
 
 const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
-const { locale, locales } = useI18n()
+const { t, locale, locales } = useI18n()
 const currentLocale = LOCALES.find(l => l.code === locale.value)
 
 const suggestedLocale: Ref<ValidLocale | undefined> = ref()

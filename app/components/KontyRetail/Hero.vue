@@ -29,12 +29,12 @@
       <div class="max-w-2xl">
         <!-- TODO: finalize headline (≤ ~70 chars) -->
         <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-          {{ $t('retailPage.hero.title') }}
+          {{ t('retailPage.hero.title') }}
         </h1>
 
         <!-- TODO: tighten supporting copy to 1–2 sentences focused on outcomes -->
         <p class="mt-4 text-lg text-white/90 md:text-xl">
-          {{ $t('retailPage.hero.subtitle') }}
+          {{ t('retailPage.hero.subtitle') }}
         </p>
 
         <!-- CTAs -->
@@ -46,7 +46,7 @@
             aria-label="Request a free Konty Retail demo"
             @click="onPrimaryCta"
           >
-            {{ $t('retailPage.hero.cta') }}
+            {{ t('retailPage.hero.cta') }}
           </UButton>
           <UButton
             size="lg"
@@ -56,12 +56,12 @@
             aria-label="See Konty pricing"
             @click="onSecondaryCta"
           >
-            {{ $t('retailPage.hero.viewDemo') }}
+            {{ t('retailPage.hero.viewDemo') }}
           </UButton>
         </div>
 
         <p class="mt-3 text-sm text-white/80">
-          {{ $t('retailPage.hero.features') }}
+          {{ t('retailPage.hero.features') }}
         </p>
       </div>
     </UContainer>
@@ -69,6 +69,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const { track } = useTracking()
 
 const onPrimaryCta = () => {

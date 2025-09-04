@@ -2,8 +2,8 @@
   <section class="py-12 sm:py-16">
     <UContainer>
       <SharedSectionHeading
-        :title="$t('testimonials.title')"
-        :description="$t('testimonials.description')"
+        :title="t('testimonials.title')"
+        :description="t('testimonials.description')"
       />
 
       <UPageMarquee

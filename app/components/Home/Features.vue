@@ -3,8 +3,8 @@
     <UContainer>
       <SharedSectionHeading
         v-model="product"
-        :title="$t(`features.${productKey}.title`)"
-        :description="$t(`features.${productKey}.description`)"
+        :title="t(`features.${productKey}.title`)"
+        :description="t(`features.${productKey}.description`)"
         :product-switch="true"
         product-switch-position="top"
       />
@@ -49,10 +49,10 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {{ $t(`features.${productKey}.${feature.key}.title`) }}
+                    {{ t(`features.${productKey}.${feature.key}.title`) }}
                   </h3>
                   <p class="text-gray-600 dark:text-gray-300">
-                    {{ $t(`features.${productKey}.${feature.key}.description`) }}
+                    {{ t(`features.${productKey}.${feature.key}.description`) }}
                   </p>
                 </div>
               </div>
@@ -70,7 +70,7 @@
                 size="lg"
                 class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
               >
-                {{ $t(link.labelKey) }}
+                {{ t(link.labelKey) }}
               </UButton>
             </div>
           </div>
@@ -81,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const localePath = useLocalePath()
 const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 

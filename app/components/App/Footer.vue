@@ -3,10 +3,10 @@
     <UContainer>
       <UFooterColumns :columns="columns">
         <template #right>
-          <UFormField name="email" :label="$t('footer.newsletter')" size="lg">
-            <UInput type="email" class="w-full" :placeholder="$t('footer.emailPlaceholder')">
+          <UFormField name="email" :label="t('footer.newsletter')" size="lg">
+            <UInput type="email" class="w-full" :placeholder="t('footer.emailPlaceholder')">
               <template #trailing>
-                <UButton type="submit" size="xs" color="neutral" :label="$t('footer.subscribe')" />
+                <UButton type="submit" size="xs" color="neutral" :label="t('footer.subscribe')" />
               </template>
             </UInput>
           </UFormField>

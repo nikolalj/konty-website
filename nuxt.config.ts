@@ -59,7 +59,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/fonts',
     '@nuxtjs/seo',
-    'nuxt-gtag',
+    '@saslavik/nuxt-gtm',
     '@nuxt/eslint',
     '@nuxthub/core'
   ],
@@ -376,13 +376,16 @@ export default defineNuxtConfig({
     }
   },
 
-  // Google Analytics 4
-  gtag: {
-    id: process.env.GOOGLE_ANALYTICS_ID || '',
-    config: {
-      send_page_view: false,
-      debug_mode: process.env.APP_ENV === 'development'
-    }
+  // Google Tag Manager
+  gtm: {
+    id: process.env.GTM_ID || '',
+    enabled: true,
+    debug: process.env.APP_ENV === 'development',
+    loadScript: true,
+    enableRouterSync: true,
+    ignoredViews: [],
+    trackOnNextTick: false,
+    devtools: true
   },
 
   features: {
@@ -422,7 +425,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: '' },
-        { rel: 'preconnect', href: 'https://www.google-analytics.com', crossorigin: '' },
 
         // Preload font
         { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },

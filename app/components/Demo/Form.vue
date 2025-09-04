@@ -3,15 +3,15 @@
     <UContainer>
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">
-          {{ $t('demo.requestDemo') }}
+          {{ t('demo.requestDemo') }}
         </h2>
         <p class="text-xl text-gray-600">
-          {{ $t('demo.description') }}
+          {{ t('demo.description') }}
         </p>
       </div>
       <div class="placeholder-content">
         <UCard class="max-w-2xl mx-auto">
-          <p class="text-center text-gray-500">{{ $t('demo.formPlaceholder') }}</p>
+          <p class="text-center text-gray-500">{{ t('demo.formPlaceholder') }}</p>
         </UCard>
       </div>
     </UContainer>
@@ -19,4 +19,5 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 </script>

@@ -18,7 +18,7 @@
             color="neutral"
             variant="ghost"
             square
-            :aria-label="$t('common.dismiss', 'Dismiss')"
+            :aria-label="t('common.dismiss', 'Dismiss')"
             @click="dismissBanner()"
           >
             <UIcon name="i-lucide:x" class="size-3.5" />
@@ -31,7 +31,7 @@
             size="sm"
             @click="stayOnThisLocale()"
           >
-            {{ $t('common.stayHere') }}
+            {{ t('common.stayHere') }}
           </UButton>
 
           <UButton
@@ -39,7 +39,7 @@
             size="sm"
             @click="acceptSuggestedLocale()"
           >
-            {{ $t('banner.switchTo') }}
+            {{ t('banner.switchTo') }}
           </UButton>
         </div>
       </div>

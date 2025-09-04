@@ -2,8 +2,8 @@
   <section class="py-20">
     <UContainer>
       <SharedSectionHeading
-        :title="$t('contact.title')"
-        :description="$t('contact.description')"
+        :title="t('contact.title')"
+        :description="t('contact.description')"
       />
 
       <div class="flex justify-center">
@@ -11,13 +11,13 @@
           <form class="space-y-6" @submit.prevent="onSubmit">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ $t('contact.form.name') }}
+                {{ t('contact.form.name') }}
               </label>
               <UInput
                 id="name"
                 v-model="form.name"
                 class="w-full"
-                :placeholder="$t('contact.form.namePlaceholder')"
+                :placeholder="t('contact.form.namePlaceholder')"
                 size="xl"
                 required
               />
@@ -25,14 +25,14 @@
 
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ $t('contact.form.email') }}
+                {{ t('contact.form.email') }}
               </label>
               <UInput
                 id="email"
                 v-model="form.email"
                 class="w-full"
                 type="email"
-                :placeholder="$t('contact.form.emailPlaceholder')"
+                :placeholder="t('contact.form.emailPlaceholder')"
                 size="xl"
                 required
               />
@@ -40,13 +40,13 @@
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ $t('contact.form.message') }}
+                {{ t('contact.form.message') }}
               </label>
               <UTextarea
                 id="message"
                 v-model="form.message"
                 class="w-full"
-                :placeholder="$t('contact.form.messagePlaceholder')"
+                :placeholder="t('contact.form.messagePlaceholder')"
                 :rows="5"
                 size="xl"
                 required
@@ -61,7 +61,7 @@
               block
               :loading="loading"
             >
-              {{ $t('contact.form.submit') }}
+              {{ t('contact.form.submit') }}
             </UButton>
           </form>
         </div>
@@ -73,6 +73,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 
+const { t } = useI18n()
 const { track } = useTracking()
 
 const form = reactive({
@@ -85,14 +86,14 @@ const loading = ref(false)
 
 const onSubmit = async () => {
   loading.value = true
-  
+
   // Track form submission (GA4 standard event)
   track('generate_lead', {
     lead_type: 'contact_form',
     lead_source: 'contact_section',
     value: 25
   })
-  
+
   // TODO: Implement actual form submission
   await new Promise(resolve => setTimeout(resolve, 1000))
   loading.value = false

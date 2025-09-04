@@ -29,12 +29,12 @@
       <div class="max-w-2xl">
         <!-- TODO: finalize headline -->
         <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-          {{ $t('hospitalityPage.hero.title') }}
+          {{ t('hospitalityPage.hero.title') }}
         </h1>
 
         <!-- TODO: refine benefits -->
         <p class="mt-4 text-lg text-white/90 md:text-xl">
-          {{ $t('hospitalityPage.hero.subtitle') }}
+          {{ t('hospitalityPage.hero.subtitle') }}
         </p>
 
         <!-- CTAs -->
@@ -46,7 +46,7 @@
             aria-label="Request a free Konty Hospitality demo"
             @click="onPrimaryCta"
           >
-            {{ $t('hospitalityPage.hero.cta') }}
+            {{ t('hospitalityPage.hero.cta') }}
           </UButton>
           <UButton
             size="lg"
@@ -56,12 +56,12 @@
             aria-label="View Konty pricing"
             @click="onSecondaryCta"
           >
-            {{ $t('hospitalityPage.hero.viewPricing') }}
+            {{ t('hospitalityPage.hero.viewPricing') }}
           </UButton>
         </div>
 
         <p class="mt-3 text-sm text-white/80">
-          {{ $t('hospitalityPage.hero.features') }}
+          {{ t('hospitalityPage.hero.features') }}
         </p>
       </div>
     </UContainer>
@@ -69,6 +69,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const { track } = useTracking()
 
 const onPrimaryCta = () => {

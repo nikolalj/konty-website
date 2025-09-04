@@ -1,6 +1,6 @@
 <template>
   <UPageSection
-    :title="$t('getStarted.title')"
+    :title="t('getStarted.title')"
     orientation="horizontal"
     :features="features"
     :reverse="product !== 'kontyRetail'"
