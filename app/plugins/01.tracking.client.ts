@@ -5,7 +5,7 @@
 
 export default defineNuxtPlugin((nuxtApp) => {
   // Import only what we need
-  const { initializeConsent } = useConsent()
+  const { consentGiven } = useConsent()
   const { track, trackPage, onUpdateConsent } = useTracking()
   const router = useRouter()
 
@@ -33,11 +33,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
   }
 
-  // Load saved consent from cookie
-  const hasExistingConsent = initializeConsent()
-
   // If user has previously given consent, apply it immediately
-  if (hasExistingConsent) {
+  if (consentGiven.value) {
     onUpdateConsent()
     if (import.meta.dev) {
       console.log('[Tracking] Applied saved consent preferences')
