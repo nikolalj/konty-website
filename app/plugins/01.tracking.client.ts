@@ -7,7 +7,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Import only what we need
   const { initializeConsent } = useConsent()
   const { track, trackPage, onUpdateConsent } = useTracking()
-  const { gtag } = useGtag()
   const router = useRouter()
 
   // ============================================
@@ -15,14 +14,18 @@ export default defineNuxtPlugin((nuxtApp) => {
   // ============================================
 
   // Set DEFAULT consent mode before ANY tracking
-  // This is required by Google's Consent Mode v2
-  if (gtag) {
-    gtag('consent', 'default', {
+  // Push consent defaults to GTM dataLayer using Google's standard fields
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: 'consent_default',
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied',
-      'wait_for_update': 500 // Wait 500ms for consent to load
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      wait_for_update: 500 // Wait 500ms for consent to load
     })
 
     if (import.meta.dev) {

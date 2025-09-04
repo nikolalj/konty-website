@@ -106,7 +106,6 @@
 </template>
 
 <script setup lang="ts">
-import type { header } from '#build/ui-pro'
 import type { Ref } from 'vue'
 
 interface LogEntry {

@@ -1,34 +1,39 @@
-import { useNuxtApp } from '#app'
-
 export const useTracking = () => {
-  const { gtag } = useGtag()
   const { consent } = useConsent()
   const route = useRoute()
 
-  // Update Google Consent Mode based on consent state
-  const onUpdateConsent = () => {
-    if (!gtag) return
+  // Helper to safely push to dataLayer
+  const pushToDataLayer = (data: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push(data)
+    }
+  }
 
-    gtag('consent', 'update', {
+  // Update consent state in GTM dataLayer
+  const onUpdateConsent = () => {
+    // Push consent update with Google's Consent Mode v2 field names
+    pushToDataLayer({
+      event: 'consent_update',
       'analytics_storage': consent.value.analytics ? 'granted' : 'denied',
       'ad_storage': consent.value.marketing ? 'granted' : 'denied',
       'ad_user_data': consent.value.marketing ? 'granted' : 'denied',
-      'ad_personalization': consent.value.marketing ? 'granted' : 'denied'
+      'ad_personalization': consent.value.marketing ? 'granted' : 'denied',
+      'functionality_storage': 'granted', // Always granted for necessary cookies
+      'security_storage': 'granted' // Always granted for necessary cookies
     })
   }
 
   /**
-   * Generic tracking with GA4 standard or custom events
-   * @param eventName - GA4 standard event name (generate_lead, sign_up, purchase, etc.) or custom
+   * Generic tracking with standard or custom events pushed to GTM dataLayer
+   * @param eventName - Standard event name (generate_lead, sign_up, purchase, etc.) or custom
    * @param parameters - Event parameters including value, currency, etc.
    */
   const track = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (!gtag) return
-
     // Check consent before tracking - NO events are exempt from consent
     if (!consent.value.analytics) {
       if (import.meta.dev) {
-        console.log(`[GA4] Event blocked (no consent): ${eventName}`)
+        console.log(`[GTM] Event blocked (no consent): ${eventName}`)
       }
       return
     }
@@ -50,20 +55,23 @@ export const useTracking = () => {
 
     // Debug logging in development
     if (import.meta.dev) {
-      console.log(`[GA4] ${eventName}:`, enrichedParams)
+      console.log(`[GTM] ${eventName}:`, enrichedParams)
     }
 
-    // Safe gtag call with error boundary
+    // Push event to GTM dataLayer with error boundary
     try {
-      gtag('event', eventName, enrichedParams)
+      pushToDataLayer({
+        event: eventName,
+        ...enrichedParams
+      })
     } catch (error) {
-      console.warn('[GA4] Failed to send event:', error)
+      console.warn('[GTM] Failed to send event:', error)
     }
   }
 
   /**
    * Enhanced page view with business context
-   * Uses GA4 standard 'page_view' event with custom parameters
+   * Pushes 'page_view' event to GTM dataLayer with custom parameters
    */
   const trackPage = () => {
     const getPageCategory = () => {

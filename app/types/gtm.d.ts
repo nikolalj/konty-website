@@ -2,36 +2,33 @@
  * Google Tag Manager TypeScript definitions for Nuxt 4
  */
 
-export interface GTMConsentState {
-  analytics_storage: 'granted' | 'denied'
-  ad_storage: 'granted' | 'denied'
-  ad_user_data: 'granted' | 'denied'
-  ad_personalization: 'granted' | 'denied'
-  functionality_storage?: 'granted' | 'denied'
-  personalization_storage?: 'granted' | 'denied'
-  security_storage?: 'granted' | 'denied'
+// Google Consent Mode v2 standard fields
+export interface GTMConsentEvent {
+  event: 'consent_default' | 'consent_update'
+  'analytics_storage': 'granted' | 'denied'
+  'ad_storage': 'granted' | 'denied'
+  'ad_user_data': 'granted' | 'denied'
+  'ad_personalization': 'granted' | 'denied'
+  'functionality_storage'?: 'granted' | 'denied'
+  'security_storage'?: 'granted' | 'denied'
   wait_for_update?: number
 }
 
-export interface GTMDataLayerEvent extends Record<string, unknown> {
+// Standard tracking event
+export interface GTMTrackingEvent {
   event: string
+  page_path?: string
+  page_location?: string
+  locale?: string
+  [key: string]: unknown
 }
 
-export interface GTMInstance {
-  push(data: GTMDataLayerEvent | [string, string, unknown]): void
-  enabled(): boolean
-  enable(enable: boolean): void
-}
-
-declare module '#app' {
-  interface NuxtApp {
-    $gtm: GTMInstance
-  }
-}
+// The GTM instance is provided by @saslavik/nuxt-gtm module
+// We don't need to define it ourselves
 
 declare global {
   interface Window {
-    dataLayer?: Array<GTMDataLayerEvent | [string, string, unknown]>
+    dataLayer?: Array<GTMConsentEvent | GTMTrackingEvent | Record<string, unknown>>
     google_tag_manager?: Record<string, unknown>
   }
 }
