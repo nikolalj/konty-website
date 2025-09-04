@@ -25,7 +25,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       'ad_personalization': 'denied',
       'functionality_storage': 'granted',
       'security_storage': 'granted',
-      wait_for_update: 500 // Wait 500ms for consent to load
+      'wait_for_update': 500 // Wait 500ms for consent to load
     })
 
     if (import.meta.dev) {
