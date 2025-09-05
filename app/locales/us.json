@@ -415,5 +415,9 @@
   },
   "products": {
     "name": "Konty POS"
+  },
+  "nuxtSiteConfig": {
+    "name": "Konty POS - Modern Point of Sale",
+    "description": "Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9000+ businesses trust us."
   }
 }

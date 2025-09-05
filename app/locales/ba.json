@@ -415,5 +415,9 @@
   },
   "products": {
     "name": "Konty POS"
+  },
+  "nuxtSiteConfig": {
+    "name": "Konty POS",
+    "description": "Moderni POS sistem za restorane i maloprodaju. 26+ godina pouzdanosti. 9000+ preduzeća nam vjeruje."
   }
 }
