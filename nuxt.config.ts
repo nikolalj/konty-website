@@ -164,7 +164,7 @@ export default defineNuxtConfig({
   // Core SEO module settings
   seo: {
     redirectToCanonicalSiteUrl: true,
-    fallbackTitle: false, // We handle titles explicitly via usePageSeo
+    fallbackTitle: true,
     automaticDefaults: true
   },
 
