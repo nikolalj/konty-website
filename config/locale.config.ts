@@ -1,4 +1,4 @@
-import type { LocaleConfig, ValidLocale } from '~/types/locale'
+import type { LocaleConfig, ValidLocale } from '../app/types/locale'
 
 export const DEFAULT_LOCALE = {
   code: 'rs' as ValidLocale,
