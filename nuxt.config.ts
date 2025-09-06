@@ -1,5 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import { DEFAULT_LOCALE, LOCALE_CONFIG, LOCALES } from './config/locale.config'
+import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config'
 
 export default defineNuxtConfig({
   // Development
@@ -237,13 +236,13 @@ export default defineNuxtConfig({
 
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
-    defaultLocale: DEFAULT_LOCALE,
+    defaultLocale: DEFAULT_LOCALE.code,
     langDir: '../app/locales',
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: false,
     customRoutes: 'config',
     trailingSlash: false,
-    strategy: LOCALE_CONFIG.STRATEGY,
+    strategy: LOCALE_STRATEGY,
     locales: LOCALES,
     vueI18n: './i18n.config.ts'
   },

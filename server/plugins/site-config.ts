@@ -49,7 +49,7 @@ export default defineNitroPlugin((nitroApp) => {
 
     const locale: ValidLocale = VALID_LOCALES.includes(firstSegment as ValidLocale)
       ? firstSegment as ValidLocale
-      : DEFAULT_LOCALE
+      : DEFAULT_LOCALE.code
 
     // Load company data from translation file
     let company: CompanyData | undefined
