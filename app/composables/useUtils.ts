@@ -1,9 +1,3 @@
-interface PageSeoOptions {
-  title: string
-  description: string
-  noindex?: boolean
-}
-
 export const useUtils = () => {
   const { tm, rt } = useI18n()
 
