@@ -67,7 +67,7 @@ useSchemaOrg([
     },
 
     // Service area
-    areaServed: JSON.parse(JSON.stringify(t('company.areaServed'))),
+    areaServed: tArray('company.areaServed'),
 
     // Business hours
     openingHoursSpecification: [
@@ -83,6 +83,9 @@ useSchemaOrg([
     priceRange: '$$',
     currenciesAccepted: currentLocale ? currentLocale.currency : 'EUR',
     paymentAccepted: t('company.paymentAccepted'),
+    knowsAbout: tArray('company.knowsAbout'),
+    serviceType: 'Point of Sale Software',
+    additionalType: 'https://schema.org/SoftwareApplication',
 
     // Social profiles (helps with Knowledge Graph)
     sameAs: Object.values(tObject('company.social')),
