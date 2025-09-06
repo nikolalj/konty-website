@@ -37,7 +37,6 @@ defineOgImageComponent('Main', {
 // This helps with local SEO and "near me" searches
 useSchemaOrg([
   defineLocalBusiness({
-    // Required fields
     '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
     '@id': `${config.public.siteUrl}/#/schema/LocalBusiness/${locale.value}`,
     name: t('company.tradeName'),
