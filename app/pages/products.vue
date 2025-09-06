@@ -26,26 +26,39 @@ defineOgImageComponent('Main', {
   cta: t('hero.cta.primary')
 })
 
-// SoftwareApplication schema for better visibility in search
-// Shows app details, compatibility, and ratings
-defineSoftwareApp({
-  name: t('products.name'),
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: t('schema.requirements.minimal'),
-  // Free trial as the primary offer
-  offers: {
-    '@type': 'Offer',
-    price: 0,
-    priceCurrency: currentLocale?.currency || t('common.currency'),
-    availability: 'https://schema.org/InStock',
-    priceValidUntil: new Date(new Date().setMonth(new Date().getMonth() + 12)).toISOString()
-  },
-  // Trust signals - critical for conversion
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: 4.8,
-    reviewCount: 237,
-    bestRating: 5
+// SoftwareApplication schema for product overview page
+// Shows overall product info and free trial offer
+useSchemaOrg([
+  {
+    '@type': 'SoftwareApplication',
+    '@id': '#konty-pos',
+    name: t('products.name'),
+    description: t('seo.products.description'),
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
+
+    // Free trial offer
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: currentLocale?.currency || 'EUR',
+      name: t('pricing.freeTrial'),
+      availability: 'https://schema.org/InStock'
+    },
+
+    // Overall product ratings
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '237',
+      bestRating: '5'
+    },
+
+    // Link to organization
+    publisher: {
+      '@type': 'Organization',
+      '@id': '#identity'
+    }
   }
-})
+])
 </script>

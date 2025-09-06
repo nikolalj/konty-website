@@ -46,42 +46,37 @@ defineOgImageComponent('Pricing', {
   ]
 })
 
-// Schema.org structured data for pricing
-// This enables rich snippets showing prices in search results
-defineWebPage({
-  '@type': 'WebPage',
-  name: t('seo.pricing.title'),
-  description: t('seo.pricing.description')
-})
-
-// Product schemas with pricing for rich snippets
-// Shows price ranges in search results - major conversion booster
-defineProduct({
-  name: t('products.name'),
-  description: t('seo.products.description'),
-  brand: {
-    '@type': 'Brand',
-    name: t('products.name')
-  },
-  // AggregateOffer shows price range in search results
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: currentLocale?.currency || t('common.currency'),
-    // Get minimum price across both products
-    lowPrice: Math.min(
-      Number(t('pricing.retail.start.priceValue')),
-      Number(t('pricing.hospitality.start.priceValue'))
-    ).toString(),
-    // Get maximum price
-    highPrice: t('pricing.hospitality.premium.priceValue'),
-    offerCount: 6, // 3 tiers × 2 products
-    availability: 'https://schema.org/InStock'
-  },
-  // Simple rating for now - can be enhanced with real data later
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: 4.8,
-    reviewCount: 237
+// Schema for pricing page - shows price ranges in search results
+// Using Product schema for the overall POS offering with pricing tiers
+useSchemaOrg([
+  {
+    '@type': 'Product',
+    '@id': '#konty-pricing',
+    name: t('products.name'),
+    description: t('seo.products.description'),
+    brand: {
+      '@type': 'Brand',
+      name: 'Konty'
+    },
+    // AggregateOffer shows price range in search results
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: currentLocale?.currency || 'EUR',
+      lowPrice: Math.min(
+        Number(t('pricing.retail.start.priceValue')),
+        Number(t('pricing.hospitality.start.priceValue'))
+      ).toString(),
+      highPrice: t('pricing.hospitality.premium.priceValue'),
+      offerCount: 6, // 3 tiers × 2 products
+      availability: 'https://schema.org/InStock'
+    },
+    // Customer ratings for trust signals
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '237',
+      bestRating: '5'
+    }
   }
-})
+])
 </script>

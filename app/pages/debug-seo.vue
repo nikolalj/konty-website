@@ -340,8 +340,6 @@
 </template>
 
 <script setup lang="ts">
-import { useSiteConfig } from '#imports'
-
 // Tab management
 const activeTab = ref('core')
 const tabs = [

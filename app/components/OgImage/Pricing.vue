@@ -74,8 +74,6 @@
 </template>
 
 <script setup lang="ts">
-import { useRuntimeConfig } from '#imports'
-
 withDefaults(defineProps<{
   title?: string
   badge?: string

@@ -51,8 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import { useRuntimeConfig } from '#imports'
-
 withDefaults(defineProps<{
   product?: string
   title?: string
