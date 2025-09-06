@@ -4,7 +4,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const route = useRoute()
 const { public: { siteUrl } } = useRuntimeConfig()
 
 // Don't use automatic schema generation since we need localized labels

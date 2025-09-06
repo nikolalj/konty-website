@@ -314,7 +314,14 @@
   },
   "schema": {
     "requirements": {
-      "minimal": "Windows 10+, macOS 10.14+, Android 8+, iOS 12+"
+      "minimal": "Windows 10+, macOS 10.14+, Android 8+, iOS 12+",
+      "software": "2GB RAM minimum, Internet konekcija za cloud sinhronizaciju"
+    },
+    "permissions": {
+      "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
+    },
+    "screenshots": {
+      "retail": "/images/screenshots/konty-retail-dashboard.png"
     }
   },
   "seo": {
@@ -414,7 +421,10 @@
     "title": "Vlasnici restorana koji sada mirno spavaju"
   },
   "products": {
-    "name": "Konty POS"
+    "name": "Konty POS",
+    "retail": {
+      "name": "Konty Trgovina"
+    }
   },
   "nuxtSiteConfig": {
     "name": "Konty POS",

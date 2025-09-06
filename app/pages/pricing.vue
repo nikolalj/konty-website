@@ -10,6 +10,7 @@
 import { LOCALES } from '../../config/locale.config'
 
 const { t, locale } = useI18n()
+const schemas = useSchemas()
 
 const currentLocale = LOCALES.find(l => l.code === locale.value)
 
@@ -46,37 +47,6 @@ defineOgImageComponent('Pricing', {
   ]
 })
 
-// Schema for pricing page - shows price ranges in search results
-// Using Product schema for the overall POS offering with pricing tiers
-useSchemaOrg([
-  {
-    '@type': 'Product',
-    '@id': '#konty-pricing',
-    name: t('products.name'),
-    description: t('seo.products.description'),
-    brand: {
-      '@type': 'Brand',
-      name: 'Konty'
-    },
-    // AggregateOffer shows price range in search results
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: currentLocale?.currency || 'EUR',
-      lowPrice: Math.min(
-        Number(t('pricing.retail.start.priceValue')),
-        Number(t('pricing.hospitality.start.priceValue'))
-      ).toString(),
-      highPrice: t('pricing.hospitality.premium.priceValue'),
-      offerCount: 6, // 3 tiers × 2 products
-      availability: 'https://schema.org/InStock'
-    },
-    // Customer ratings for trust signals
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '237',
-      bestRating: '5'
-    }
-  }
-])
+// Use centralized schema
+useSchemaOrg([schemas.pricingProduct()])
 </script>
