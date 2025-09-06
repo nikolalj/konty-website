@@ -13,11 +13,14 @@ const items = useBreadcrumbItems({
 })
 
 const localizedItems = computed(() => {
-  return items.value.map((item) => {
-    if (item.to === '/' || item.to === `/${route.params.locale || ''}`) {
+  return items.value.map((item, index) => {
+    // First item is always home - use icon instead of label
+    if (index === 0) {
       return {
         ...item,
-        label: t('breadcrumb.items.index')
+        label: '',  // Empty label since we'll show icon
+        icon: 'i-heroicons-home-20-solid',
+        ariaLabel: t('breadcrumb.items.index') // For accessibility
       }
     }
 
@@ -39,7 +42,8 @@ useSchemaOrg([
     itemListElement: localizedItems.value.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: item.label,
+      // For schema, use the aria label for home (index 0) or regular label
+      name: index === 0 ? t('breadcrumb.items.index') : item.label,
       item: `${siteUrl}${item.to}`
     }))
   })
