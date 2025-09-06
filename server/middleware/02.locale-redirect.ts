@@ -27,8 +27,8 @@ function getCountryFromHeaders(event: H3Event): string | null {
  * Convert country code to locale
  */
 function countryToLocale(country: string | null): ValidLocale {
-  if (!country) return DEFAULT_LOCALE
-  return COUNTRY_TO_LOCALE_MAP[country.toUpperCase()] || DEFAULT_LOCALE
+  if (!country) return DEFAULT_LOCALE.code
+  return COUNTRY_TO_LOCALE_MAP[country.toUpperCase()] || DEFAULT_LOCALE.code
 }
 
 // All pages are localized and should redirect to locale-specific URLs
@@ -129,7 +129,7 @@ export default defineEventHandler(async (event: H3Event) => {
     }
 
     // Only redirect if not default locale
-    if (targetLocale === DEFAULT_LOCALE) return
+    if (targetLocale === DEFAULT_LOCALE.code) return
 
     // 5. BUILD TARGET URL - Preserve query params
 

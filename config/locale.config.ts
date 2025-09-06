@@ -1,7 +1,17 @@
-// Import types directly to avoid circular dependency
-type ValidLocale = 'me' | 'rs' | 'ba' | 'us'
+import type { LocaleConfig, ValidLocale } from '~/types/locale'
 
-export const LOCALES = [
+export const DEFAULT_LOCALE = {
+  code: 'rs' as ValidLocale,
+  iso: 'sr-RS',
+  name: 'Srbija',
+  file: 'rs.json',
+  flag: 'i-circle-flags:rs',
+  currency: 'RSD',
+  currencySymbol: 'RSD'
+}
+
+export const LOCALES: LocaleConfig[] = [
+  DEFAULT_LOCALE,
   {
     code: 'me',
     iso: 'sr-ME',
@@ -10,15 +20,6 @@ export const LOCALES = [
     flag: 'i-circle-flags:me',
     currency: 'EUR',
     currencySymbol: '€'
-  },
-  {
-    code: 'rs',
-    iso: 'sr-RS',
-    name: 'Srbija',
-    file: 'rs.json',
-    flag: 'i-circle-flags:rs',
-    currency: 'RSD',
-    currencySymbol: 'RSD'
   },
   {
     code: 'ba',
@@ -40,38 +41,21 @@ export const LOCALES = [
   }
 ]
 
-/**
- * Centralized locale configuration
- * Change DEFAULT_LOCALE here to update it everywhere
- */
-export const LOCALE_CONFIG = {
-  // Default locale for the site (used when no locale is detected or specified)
-  // RS (Serbia) is the primary market for Konty POS
-  DEFAULT_LOCALE: 'rs' as ValidLocale,
+export const LOCALE_STRATEGY = 'prefix_except_default'
 
-  // Available locales
-  VALID_LOCALES: ['me', 'rs', 'ba', 'us'] as ValidLocale[],
+export const VALID_LOCALES = ['me', 'rs', 'ba', 'us'] as ValidLocale[]
 
-  // Strategy for URL prefixing
-  STRATEGY: 'prefix_except_default' as const,
-
-  // Country to locale mapping
-  COUNTRY_TO_LOCALE_MAP: {
-    'ME': 'me',
-    'RS': 'rs',
-    'BA': 'ba',
-    'US': 'us',
-    // Fallback for neighboring countries
-    'HR': 'ba',
-    'MK': 'rs',
-    'GB': 'us',
-    'CA': 'us',
-    'AU': 'us',
-    'NZ': 'us',
-    'IE': 'us',
-  } as Record<string, ValidLocale>
+export const COUNTRY_TO_LOCALE_MAP: Record<string, ValidLocale> = {
+  'ME': 'me',
+  'RS': 'rs',
+  'BA': 'ba',
+  'US': 'us',
+  // Fallback for neighboring countries
+  'HR': 'ba',
+  'MK': 'rs',
+  'GB': 'us',
+  'CA': 'us',
+  'AU': 'us',
+  'NZ': 'us',
+  'IE': 'us',
 }
-
-export const DEFAULT_LOCALE = LOCALE_CONFIG.DEFAULT_LOCALE
-export const VALID_LOCALES = LOCALE_CONFIG.VALID_LOCALES
-export const COUNTRY_TO_LOCALE_MAP = LOCALE_CONFIG.COUNTRY_TO_LOCALE_MAP
