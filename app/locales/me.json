@@ -479,7 +479,10 @@
       "products": "Proizvodi",
       "konty-retail": "Maloprodaja",
       "konty-hospitality": "Ugostiteljstvo",
-      "about": "O nama",
+      "about": {
+        "icon": "i-heroicons-home",
+        "ariaLabel": "O nama"
+      },
       "demo": "Demo",
       "privacy": "Privatnost",
       "terms": "Uslovi"
