@@ -428,8 +428,8 @@
     "foundingDate": "2021-12-22",
     "founder": "Nikola Ljumovic",
     "geo": {
-      "latitude": 44.8125,
-      "longitude": 20.4612
+      "latitude": "44.8125",
+      "longitude": "20.4612"
     },
     "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
     "businessHours": {
