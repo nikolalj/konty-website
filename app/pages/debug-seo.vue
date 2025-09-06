@@ -4,7 +4,7 @@
       <h1 class="text-2xl font-bold mb-6">SEO Debug Info</h1>
 
       <!-- Navigation tabs -->
-      <div class="border-b mb-6">
+      <div class="mb-6">
         <div class="flex space-x-4 overflow-x-auto">
           <button
             v-for="tab in tabs"

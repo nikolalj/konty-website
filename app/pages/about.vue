@@ -10,10 +10,12 @@
 </template>
 
 <script setup lang="ts">
+import { useRuntimeConfig } from '#imports'
 import { LOCALES } from '../../config/locale.config'
-import { getCompanyInfo } from '../../config/company.config'
 
 const { t, locale } = useI18n()
+const { tArray, tObject } = useUtils()
+const config = useRuntimeConfig()
 
 const currentLocale = LOCALES.find(l => l.code === locale.value)
 
@@ -30,40 +32,71 @@ defineOgImageComponent('Main', {
   cta: t('contact.form.submit')
 })
 
-// Get company info for current locale
-const company = getCompanyInfo(locale.value)
-
 // LocalBusiness schema for About/Contact page
 // This helps with local SEO and "near me" searches
-defineLocalBusiness({
-  name: company.tradeName || 'Konty POS',
-  image: '/images/branding/logo-light.svg',
-  telephone: company.contact.phone,
-  email: company.contact.email,
+useSchemaOrg([
+  defineLocalBusiness({
+    // Required fields
+    '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+    '@id': `${config.public.siteUrl}/#/schema/LocalBusiness/${locale.value}`,
+    name: t('company.tradeName'),
+    url: config.public.siteUrl,
+    logo: `${config.public.siteUrl}/images/branding/logo-light.svg`,
+    image: `${config.public.siteUrl}/images/branding/logo-light.svg`,
+    description: t('seo.about.description'),
 
-  address: {
-    streetAddress: company.address.street,
-    addressLocality: company.address.city,
-    addressRegion: company.address.region || company.address.city,
-    postalCode: company.address.postalCode,
-    addressCountry: company.address.countryCode
-  },
+    // Contact information
+    telephone: t('company.contact.phone'),
+    email: t('company.contact.email'),
 
-  // Business hours
-  openingHoursSpecification: [
-    {
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '17:00'
+    // Physical address (required)
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: t('company.address.street'),
+      addressLocality: t('company.address.city'),
+      addressRegion: t('company.address.region'),
+      postalCode: t('company.address.postalCode'),
+      addressCountry: t('company.address.countryCode')
+    },
+
+    // Geographic coordinates (recommended for local SEO)
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: Number(t('company.geo.latitude')),
+      longitude: Number(t('company.geo.longitude'))
+    },
+
+    // Service area
+    areaServed: JSON.parse(JSON.stringify(t('company.areaServed'))),
+
+    // Business hours
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: t('company.businessHours.weekdays.opens'),
+        closes: t('company.businessHours.weekdays.closes')
+      }
+    ],
+
+    // Additional business details
+    priceRange: '$$',
+    currenciesAccepted: currentLocale ? currentLocale.currency : 'EUR',
+    paymentAccepted: t('company.paymentAccepted'),
+
+    // Social profiles (helps with Knowledge Graph)
+    sameAs: Object.values(tObject('company.social')),
+
+    // Business identifiers
+    vatID: t('company.vatID'),
+    taxID: t('company.vatID'),
+
+    // Founding information
+    foundingDate: t('company.foundingDate'),
+    founder: {
+      '@type': 'Person',
+      name: t('company.founder')
     }
-  ],
-
-  // Service details
-  priceRange: '$$',
-  areaServed: company.areaServed,
-  currenciesAccepted: currentLocale ? currentLocale.currencySymbol : undefined,
-  paymentAccepted: 'Credit Card, Bank Transfer',
-
-  sameAs: Object.values(company.social || {}).filter(Boolean)
-})
+  })
+])
 </script>

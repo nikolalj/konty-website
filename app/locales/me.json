@@ -34,7 +34,7 @@
     "description": "Reci nam o svom restoranu. Pokazaćemo tačno kako Konty rješava tvoje probleme.",
     "form": {
       "email": "Email",
-      "emailPlaceholder": "marko{'@'}restoran.me",
+      "emailPlaceholder": "marko&#64;restoran.me",
       "message": "Najveći problem sa POS? (Opciono)",
       "messagePlaceholder": "Sistem puca svake subote...",
       "name": "Ime",
@@ -419,5 +419,57 @@
   "nuxtSiteConfig": {
     "name": "Konty POS",
     "description": "Moderni POS sistem za restorane i maloprodaju. 26+ godina pouzdanosti. 9000+ preduzeća nam vjeruje."
+  },
+  "company": {
+    "legalName": "OllieTech d.o.o. Podgorica",
+    "tradeName": "OllieTech",
+    "vatID": "03554759",
+    "registrationNumber": "03554759",
+    "foundingDate": "2021-12-22",
+    "founder": "Nikola Ljumovic",
+    "geo": {
+      "latitude": 44.8125,
+      "longitude": 20.4612
+    },
+    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "businessHours": {
+      "weekdays": {
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    },
+    "address": {
+      "street": "Baku 3",
+      "city": "Podgorica",
+      "region": "Podgorica",
+      "postalCode": "81000",
+      "country": "Montenegro",
+      "countryCode": "ME"
+    },
+    "contact": {
+      "phone": "+38267607670",
+      "email": "contact&#64;konty.com",
+      "supportEmail": "support&#64;konty.com",
+      "salesEmail": "sales&#64;konty.com"
+    },
+    "areaServed": ["US", "RS", "ME", "BA", "HR"],
+    "availableLanguage": ["Serbian", "Bosnian", "Croatian", "English"],
+    "numberOfEmployees": {
+      "min": 1,
+      "max": 20
+    },
+    "knowsAbout": [
+      "POS sistemi",
+      "Softver za upravljanje restoranima",
+      "Softver za upravljanje maloprodajom",
+      "Upravljanje zalihama",
+      "Fiskalna usklađenost",
+      "POS rešenja u oblaku"
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/kontypos",
+      "linkedin": "https://www.linkedin.com/company/kontypos",
+      "instagram": "https://www.instagram.com/kontypos"
+    }
   }
 }

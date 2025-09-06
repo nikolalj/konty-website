@@ -1,34 +1,74 @@
 /**
  * Server plugin to inject company data into site config at runtime
- * This merges business/legal entity data with NuxtSEO site config
- * based on the current locale from i18n
+ * Reads company data from translation files and builds Organization schema
  */
-import { getCompanyInfo, BUSINESS_METRICS } from '../../config/company.config'
 import { DEFAULT_LOCALE, VALID_LOCALES } from '../../config/locale.config'
 import type { ValidLocale } from '../../app/types/locale'
 
+interface CompanyData {
+  legalName: string
+  tradeName: string
+  vatID?: string
+  registrationNumber?: string
+  foundingDate?: string
+  address?: {
+    street: string
+    city: string
+    region?: string
+    postalCode: string
+    country?: string
+    countryCode: string
+  }
+  contact?: {
+    phone: string
+    email: string
+    supportEmail?: string
+    salesEmail?: string
+  }
+  social?: {
+    facebook?: string
+    linkedin?: string
+    twitter?: string
+    instagram?: string
+  }
+  numberOfEmployees?: {
+    min: number
+    max: number
+  }
+  knowsAbout?: string[]
+  availableLanguage?: string[]
+  areaServed?: string[]
+}
+
 export default defineNitroPlugin((nitroApp) => {
-  // Hook into site config initialization for runtime updates
-  nitroApp.hooks.hook('site-config:init', ({ event, siteConfig }) => {
-    // Get the current locale from the URL path (i18n sets this)
-    // The path will have the locale prefix (e.g., /me/pricing, /us/about)
-    // or no prefix for default locale (rs)
+  nitroApp.hooks.hook('site-config:init', async ({ event, siteConfig }) => {
+    // Get the current locale from the URL path
     const path = event.node.req.url || ''
     const pathSegments = path.split('/').filter(Boolean)
     const firstSegment = pathSegments[0]
-    
-    // Determine locale from URL structure
-    const locale: ValidLocale = VALID_LOCALES.includes(firstSegment as ValidLocale) 
-      ? firstSegment as ValidLocale 
+
+    const locale: ValidLocale = VALID_LOCALES.includes(firstSegment as ValidLocale)
+      ? firstSegment as ValidLocale
       : DEFAULT_LOCALE
-    
-    // Get company info for the current locale
-    const company = getCompanyInfo(locale)
-    
-    // Get the site URL from config or environment
+
+    // Load company data from translation file
+    let company: CompanyData | undefined
+    try {
+      const translations = await import(`../../app/locales/${locale}.json`)
+      company = translations.company as CompanyData
+    } catch {
+      console.warn(`Failed to load company data for locale ${locale}`)
+      return
+    }
+
+    if (!company) {
+      console.warn(`No company data found for locale ${locale}`)
+      return
+    }
+
     const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com'
-    
-    // Build the organization identity for Schema.org
+
+    // Build Organization schema from translation data
     const identity = {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization-${locale}`,
@@ -37,59 +77,52 @@ export default defineNitroPlugin((nitroApp) => {
       logo: {
         '@type': 'ImageObject',
         url: `${siteUrl}/images/branding/logo-light.svg`,
-        width: 200,
-        height: 60
+        width: 213,
+        height: 107
       },
       url: siteUrl,
-      
-      // Social profiles for Knowledge Graph
       sameAs: Object.values(company.social || {}).filter(Boolean),
-      
-      // Contact information
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: company.contact.phone,
-        email: company.contact.email,
-        contactType: 'sales',
-        areaServed: company.areaServed,
-        availableLanguage: company.availableLanguage
-      },
-      
-      // Physical address
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: company.contact?.phone,
+          email: company.contact?.email,
+          contactType: 'sales',
+          areaServed: company.areaServed,
+          availableLanguage: company.availableLanguage
+        },
+        company.contact?.supportEmail ? {
+          '@type': 'ContactPoint',
+          email: company.contact.supportEmail,
+          contactType: 'customer support',
+          areaServed: company.areaServed,
+          availableLanguage: company.availableLanguage
+        } : null
+      ].filter(Boolean),
       address: {
         '@type': 'PostalAddress',
-        streetAddress: company.address.street,
-        addressLocality: company.address.city,
-        addressRegion: company.address.region,
-        postalCode: company.address.postalCode,
-        addressCountry: company.address.countryCode
+        streetAddress: company.address?.street,
+        addressLocality: company.address?.city,
+        addressRegion: company.address?.region,
+        postalCode: company.address?.postalCode,
+        addressCountry: company.address?.country || company.address?.countryCode
       },
-      
-      // Trust signals
       foundingDate: company.foundingDate,
       numberOfEmployees: company.numberOfEmployees ? {
         '@type': 'QuantitativeValue',
         minValue: company.numberOfEmployees.min,
         maxValue: company.numberOfEmployees.max
       } : undefined,
-      
-      // Areas of expertise
       knowsAbout: company.knowsAbout,
-      
-      // Business registration
       vatID: company.vatID,
       taxID: company.vatID,
       registrationNumber: company.registrationNumber,
-      
-      // Business type
       additionalType: 'https://schema.org/Corporation'
     }
-    
-    // Push locale-specific configuration to the site config stack
-    // Note: currentLocale is automatically set by i18n module
+
+    // Push company identity to site config stack
     siteConfig.push({
-      identity,
-      businessMetrics: BUSINESS_METRICS
+      identity
     })
   })
 })
