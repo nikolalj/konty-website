@@ -16,6 +16,7 @@ import { LOCALES } from '../../config/locale.config'
 const { t, locale } = useI18n()
 const { tArray, tObject } = useUtils()
 const config = useRuntimeConfig()
+const localePath = useLocalePath()
 
 const currentLocale = LOCALES.find(l => l.code === locale.value)
 
@@ -40,7 +41,7 @@ useSchemaOrg([
     '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
     '@id': `${config.public.siteUrl}/#/schema/LocalBusiness/${locale.value}`,
     name: t('company.tradeName'),
-    url: config.public.siteUrl,
+    url: config.public.siteUrl + localePath('/'),
     logo: `${config.public.siteUrl}/images/branding/logo-light.svg`,
     image: `${config.public.siteUrl}/images/branding/logo-light.svg`,
     description: t('seo.about.description'),
@@ -80,7 +81,7 @@ useSchemaOrg([
     ],
 
     // Additional business details
-    priceRange: '$$',
+    priceRange: `${t('pricing.retail.start.priceValue')}-${t('pricing.hospitality.premium.priceValue')} ${currentLocale?.currency}/month`,
     currenciesAccepted: currentLocale ? currentLocale.currency : 'EUR',
     paymentAccepted: t('company.paymentAccepted'),
     knowsAbout: tArray('company.knowsAbout'),
