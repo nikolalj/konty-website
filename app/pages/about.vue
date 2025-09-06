@@ -17,6 +17,11 @@ const { t, locale } = useI18n()
 const { tArray, tObject } = useUtils()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
+const route = useRoute()
+
+setTimeout(() => {
+  console.log(route.name)
+}, 3000)
 
 const currentLocale = LOCALES.find(l => l.code === locale.value)
 

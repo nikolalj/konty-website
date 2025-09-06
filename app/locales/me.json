@@ -475,23 +475,14 @@
   "breadcrumb": {
     "items": {
       "index": "Početna",
-      "index___me": "Početna",
       "pricing": "Cijene",
-      "pricing___me": "Cijene",
       "products": "Proizvodi",
-      "products___me": "Proizvodi",
       "konty-retail": "Maloprodaja",
-      "konty-retail___me": "Maloprodaja",
       "konty-hospitality": "Ugostiteljstvo",
-      "konty-hospitality___me": "Ugostiteljstvo",
       "about": "O nama",
-      "about___me": "O nama",
       "demo": "Demo",
-      "demo___me": "Demo",
       "privacy": "Privatnost",
-      "privacy___me": "Privatnost",
-      "terms": "Uslovi",
-      "terms___me": "Uslovi"
+      "terms": "Uslovi"
     }
   }
 }
