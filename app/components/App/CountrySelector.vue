@@ -16,7 +16,7 @@
       >
         <div
           v-if="suggestedLocale && suggestedLocale !== locale"
-          class="absolute size-2 bg-primary-500 rounded-full animate-pulse"
+          class="absolute top-0 -right-1 size-2 bg-primary-500 rounded-full animate-pulse"
         />
 
         <UIcon

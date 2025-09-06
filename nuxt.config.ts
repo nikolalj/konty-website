@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DEFAULT_LOCALE, LOCALE_CONFIG, LOCALES } from './config/locale.config'
-import { getCompanyInfo, BUSINESS_METRICS } from './config/company.config'
 
 export default defineNuxtConfig({
   // Development
@@ -101,70 +100,26 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
-  // Site configuration - Single source of truth for all SEO/Schema data
+  // Site configuration - Foundation for all NuxtSEO modules
   site: {
     // Core site info
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
-    name: 'Konty POS',
-    description: `Modern Point of Sale system for restaurants and retail. ${BUSINESS_METRICS.yearsInBusiness}+ years of reliability. ${BUSINESS_METRICS.totalCustomers.toLocaleString()}+ businesses trust us.`,
+
+    // Environment detection for proper indexing control
+    env: process.env.APP_ENV || process.env.NODE_ENV || 'development',
 
     // SEO settings
     trailingSlash: false,
     indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
 
-    // Using company config as single source of truth
-    identity: (() => {
-      const company = getCompanyInfo('rs')
-      return {
-        type: 'Organization',
-        name: company.legalName,
-        logo: '/images/branding/logo-light.svg',
-        url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
-
-        // Social profiles for Knowledge Graph
-        sameAs: Object.values(company.social || {}).filter(Boolean),
-
-        // Contact information
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: company.contact.phone,
-          email: company.contact.email,
-          contactType: 'sales',
-          areaServed: ['RS', 'ME', 'BA', 'HR', 'MK', 'SI', 'US']
-        },
-
-        // Physical address
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: company.address.street,
-          addressLocality: company.address.city,
-          addressRegion: company.address.region,
-          postalCode: company.address.postalCode,
-          addressCountry: company.address.countryCode
-        },
-
-        // Trust signals
-        foundingDate: company.foundingDate,
-        numberOfEmployees: company.numberOfEmployees ? {
-          '@type': 'QuantitativeValue',
-          minValue: company.numberOfEmployees.min,
-          maxValue: company.numberOfEmployees.max
-        } : undefined,
-
-        // Areas of expertise
-        knowsAbout: company.knowsAbout,
-
-        // Business registration
-        vatID: company.vatID,
-        legalName: company.legalName
-      }
-    })()
+    // Name and description will come from i18n translations
+    // Identity will be set at runtime by server plugin based on locale
   },
 
   // Core SEO module settings
   seo: {
     redirectToCanonicalSiteUrl: true,
-    fallbackTitle: false, // We handle titles explicitly via usePageSeo
+    fallbackTitle: true,
     automaticDefaults: true
   },
 

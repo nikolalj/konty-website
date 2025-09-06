@@ -34,7 +34,7 @@
     "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches.",
     "form": {
       "email": "Email",
-      "emailPlaceholder": "john{'@'}restaurant.com",
+      "emailPlaceholder": "john&#64;restaurant.com",
       "message": "Biggest POS frustration? (Optional)",
       "messagePlaceholder": "System crashes every Saturday night...",
       "name": "Your Name",
@@ -415,5 +415,61 @@
   },
   "products": {
     "name": "Konty POS"
+  },
+  "nuxtSiteConfig": {
+    "name": "Konty POS - Modern Point of Sale",
+    "description": "Modern Point of Sale system for restaurants and retail. 26+ years of reliability. 9000+ businesses trust us."
+  },
+  "company": {
+    "legalName": "Codeux d.o.o. Beograd",
+    "tradeName": "Codeux",
+    "vatID": "112821082",
+    "registrationNumber": "21746282",
+    "foundingDate": "2021-12-22",
+    "founder": "Nikola Ljumovic",
+    "geo": {
+      "latitude": 44.8125,
+      "longitude": 20.4612
+    },
+    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "businessHours": {
+      "weekdays": {
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    },
+    "address": {
+      "street": "Trnska 7",
+      "city": "Belgrade",
+      "region": "Belgrade",
+      "postalCode": "11000",
+      "country": "Serbia",
+      "countryCode": "RS"
+    },
+    "contact": {
+      "phone": "+38267607670",
+      "email": "contact&#64;konty.com",
+      "supportEmail": "support&#64;konty.com",
+      "salesEmail": "sales&#64;konty.com"
+    },
+    "areaServed": ["US", "RS", "ME", "BA", "HR"],
+    "availableLanguage": ["Serbian", "Bosnian", "Croatian", "English"],
+    "numberOfEmployees": {
+      "min": 1,
+      "max": 20
+    },
+    "knowsAbout": [
+      "Point of Sale Systems",
+      "Restaurant Management Software",
+      "Retail Management Software",
+      "Inventory Management",
+      "Fiscal Compliance",
+      "Cloud-based POS Solutions"
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/kontypos",
+      "linkedin": "https://www.linkedin.com/company/kontypos",
+      "instagram": "https://www.instagram.com/kontypos"
+    }
   }
 }

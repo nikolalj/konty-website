@@ -3,7 +3,7 @@
  */
 
 // GA4 Standard event names for better type safety
-export type GA4StandardEvent = 
+export type GA4StandardEvent =
   | 'add_payment_info'
   | 'add_to_cart'
   | 'begin_checkout'
@@ -27,14 +27,6 @@ export type KontyCustomEvent =
 
 // All trackable events
 export type TrackableEvent = GA4StandardEvent | KontyCustomEvent | string
-
-// Standard parameters for conversion events
-export interface ConversionParameters {
-  value?: number
-  currency?: string
-  transaction_id?: string
-  [key: string]: unknown
-}
 
 // Tracking composable return type
 export interface UseTrackingReturn {

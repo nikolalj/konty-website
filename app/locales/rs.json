@@ -34,7 +34,7 @@
     "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme.",
     "form": {
       "email": "Email",
-      "emailPlaceholder": "marko{'@'}restoran.rs",
+      "emailPlaceholder": "marko&#64;restoran.rs",
       "message": "Najveći problem sa POS? (Opciono)",
       "messagePlaceholder": "Sistem puca svake subote...",
       "name": "Ime",
@@ -415,5 +415,61 @@
   },
   "products": {
     "name": "Konty POS"
+  },
+  "nuxtSiteConfig": {
+    "name": "Konty POS",
+    "description": "Moderni POS sistem za restorane i maloprodaju. 26+ godina pouzdanosti. 9000+ preduzeća nam veruje."
+  },
+  "company": {
+    "legalName": "Codeux d.o.o. Beograd",
+    "tradeName": "Codeux",
+    "vatID": "112821082",
+    "registrationNumber": "21746282",
+    "foundingDate": "2021-12-22",
+    "founder": "Nikola Ljumovic",
+    "geo": {
+      "latitude": 44.8125,
+      "longitude": 20.4612
+    },
+    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "businessHours": {
+      "weekdays": {
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    },
+    "address": {
+      "street": "Trnska 7",
+      "city": "Belgrade",
+      "region": "Belgrade",
+      "postalCode": "11000",
+      "country": "Serbia",
+      "countryCode": "RS"
+    },
+    "contact": {
+      "phone": "+38267607670",
+      "email": "contact&#64;konty.com",
+      "supportEmail": "support&#64;konty.com",
+      "salesEmail": "sales&#64;konty.com"
+    },
+    "areaServed": ["US", "RS", "ME", "BA", "HR"],
+    "availableLanguage": ["Serbian", "Bosnian", "Croatian", "English"],
+    "numberOfEmployees": {
+      "min": 1,
+      "max": 20
+    },
+    "knowsAbout": [
+      "POS sistemi",
+      "Softver za upravljanje restoranima",
+      "Softver za upravljanje maloprodajom",
+      "Upravljanje zalihama",
+      "Fiskalna usklađenost",
+      "POS rešenja u oblaku"
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/kontypos",
+      "linkedin": "https://www.linkedin.com/company/kontypos",
+      "instagram": "https://www.instagram.com/kontypos"
+    }
   }
 }
