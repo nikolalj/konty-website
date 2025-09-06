@@ -428,10 +428,10 @@
     "foundingDate": "2021-12-22",
     "founder": "Nikola Ljumovic",
     "geo": {
-      "latitude": "44.8125",
-      "longitude": "20.4612"
+      "latitude": "42.4469",
+      "longitude": "19.2499"
     },
-    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "paymentAccepted": "Credit Card",
     "businessHours": {
       "weekdays": {
         "opens": "09:00",
@@ -439,7 +439,7 @@
       }
     },
     "address": {
-      "street": "Baku 3",
+      "street": "Moskovska 153",
       "city": "Podgorica",
       "region": "Podgorica",
       "postalCode": "81000",
@@ -470,6 +470,19 @@
       "facebook": "https://www.facebook.com/kontypos",
       "linkedin": "https://www.linkedin.com/company/kontypos",
       "instagram": "https://www.instagram.com/kontypos"
+    }
+  },
+  "breadcrumb": {
+    "items": {
+      "index": "Početna",
+      "pricing": "Cijene",
+      "products": "Proizvodi",
+      "konty-retail": "Maloprodaja",
+      "konty-hospitality": "Ugostiteljstvo",
+      "about": "O nama",
+      "demo": "Demo",
+      "privacy": "Privatnost",
+      "terms": "Uslovi"
     }
   }
 }

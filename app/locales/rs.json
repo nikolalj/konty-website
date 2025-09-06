@@ -428,10 +428,10 @@
     "foundingDate": "2021-12-22",
     "founder": "Nikola Ljumovic",
     "geo": {
-      "latitude": "44.8125",
-      "longitude": "20.4612"
+      "latitude": "44.8022",
+      "longitude": "20.4766"
     },
-    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "paymentAccepted": "Credit Card",
     "businessHours": {
       "weekdays": {
         "opens": "09:00",
@@ -470,6 +470,19 @@
       "facebook": "https://www.facebook.com/kontypos",
       "linkedin": "https://www.linkedin.com/company/kontypos",
       "instagram": "https://www.instagram.com/kontypos"
+    }
+  },
+  "breadcrumb": {
+    "items": {
+      "index": "Početna",
+      "pricing": "Cene",
+      "products": "Proizvodi",
+      "konty-retail": "Maloprodaja",
+      "konty-hospitality": "Ugostiteljstvo",
+      "about": "O nama",
+      "demo": "Demo",
+      "privacy": "Privatnost",
+      "terms": "Uslovi"
     }
   }
 }
