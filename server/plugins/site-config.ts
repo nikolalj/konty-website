@@ -55,7 +55,7 @@ export default defineNitroPlugin((nitroApp) => {
     let company: CompanyData | undefined
     try {
       const translations = await import(`../../app/locales/${locale}.json`)
-      company = translations.company as CompanyData
+      company = translations.data.company as CompanyData
     } catch {
       console.warn(`Failed to load company data for locale ${locale}`)
       return
