@@ -5,19 +5,44 @@
 import { DEFAULT_LOCALE, VALID_LOCALES } from '../../config/locale.config'
 import type { ValidLocale } from '../../app/types/locale'
 
+// Static imports for edge compatibility
+import meData from '../../app/locales/me.json'
+import rsData from '../../app/locales/rs.json'
+import baData from '../../app/locales/ba.json'
+import usData from '../../app/locales/us.json'
+
+const localeData = {
+  me: meData,
+  rs: rsData,
+  ba: baData,
+  us: usData
+}
+
 interface CompanyData {
-  legalName: string
   tradeName: string
   vatID?: string
-  registrationNumber?: string
   foundingDate?: string
+  founder?: string
+  legalName?: string
+  registrationNumber?: string
+  geo?: {
+    latitude: string
+    longitude: string
+  }
+  paymentAccepted?: string
+  businessHours?: {
+    weekdays?: {
+      opens: string
+      closes: string
+    }
+  }
   address?: {
     street: string
     city: string
     region?: string
     postalCode: string
     country?: string
-    countryCode: string
+    countryCode?: string
   }
   contact?: {
     phone: string
@@ -51,15 +76,14 @@ export default defineNitroPlugin((nitroApp) => {
       ? firstSegment as ValidLocale
       : DEFAULT_LOCALE.code
 
-    // Load company data from translation file
-    let company: CompanyData | undefined
-    try {
-      const translations = await import(`../../app/locales/${locale}.json`)
-      company = translations.data.company as CompanyData
-    } catch {
-      console.warn(`Failed to load company data for locale ${locale}`)
+    // Load company data from static imports
+    const translations = localeData[locale]
+    if (!translations) {
+      console.warn(`No translations found for locale ${locale}`)
       return
     }
+
+    const company = translations.data?.company as CompanyData
 
     if (!company) {
       console.warn(`No company data found for locale ${locale}`)
@@ -73,7 +97,7 @@ export default defineNitroPlugin((nitroApp) => {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization-${locale}`,
       name: company.tradeName,
-      legalName: company.legalName,
+      legalName: company.legalName || company.tradeName,
       logo: {
         '@type': 'ImageObject',
         url: `${siteUrl}/images/branding/logo-light.svg`,
