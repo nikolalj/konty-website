@@ -253,6 +253,11 @@ export default defineNuxtConfig({
 
   // Nitro - Server optimization for Nuxt 4
   nitro: {
+    preset: 'cloudflare-pages',
+    cloudflare: {
+      deployConfig: true
+    },
+
     minify: true,
     timing: false,
 
@@ -387,7 +392,7 @@ export default defineNuxtConfig({
     writeEarlyHints: true,       // HTTP/2 Server Push hints
     crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
     renderJsonPayloads: true,    // Optimize JSON payload rendering
-    
+
     // Link prefetching strategy - optimized for conversion
     defaults: {
       nuxtLink: {
