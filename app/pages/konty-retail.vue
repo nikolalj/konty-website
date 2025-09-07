@@ -11,7 +11,7 @@
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="kontyRetail" hydrate-on-visible />
     <LazySharedGetStarted product="kontyRetail" hydrate-on-idle />
-    <LazySharedContactForm hydrate-on-interaction />
+    <LazySharedContactForm hydrate-on-visible />
   </div>
 </template>
 

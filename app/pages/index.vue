@@ -2,18 +2,18 @@
   <div>
     <!-- Critical above-fold - hydrate immediately -->
     <HomeHero />
-    
+
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList hydrate-on-visible />
     <LazyHomeFeatures hydrate-on-visible />
     <LazySharedTestimonials hydrate-on-idle />
     <LazySharedStatistics hydrate-on-idle />
     <LazySharedGetStarted hydrate-on-visible />
-    
+
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedPricing hydrate-on-visible />
-    <LazySharedContactForm hydrate-on-interaction />
-    
+    <LazySharedContactForm hydrate-on-visible />
+
     <!-- Far below fold - maximum delay -->
     <LazyHomeBlogPosts hydrate-on-idle />
   </div>

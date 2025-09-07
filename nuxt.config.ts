@@ -1,9 +1,8 @@
 import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config'
 
 export default defineNuxtConfig({
-  // Development
+  ssr: true,
   devtools: { enabled: true },
-  sourcemap: false,
 
   // TypeScript - Simplified, letting Nuxt handle most configs
   typescript: {
@@ -14,19 +13,21 @@ export default defineNuxtConfig({
   // Vite Build Optimization - Nuxt 4 optimized
   vite: {
     build: {
-      minify: 'esbuild',
+      minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
       cssMinify: true,
       cssCodeSplit: true,
 
-      // Module preload for critical dependencies only
-      modulePreload: {
-        resolveDependencies: (url, deps) => {
-          // Only preload Vue core modules
-          return deps.filter(dep => dep.includes('vue'))
+      // Let Nuxt 4 handle automatic chunking
+      rollupOptions: {
+        output: {
+          // Removed manual chunks - Nuxt's auto-chunking is smarter
         }
       },
 
-      chunkSizeWarningLimit: 1000
+      chunkSizeWarningLimit: 1000,
+
+      // Source maps only in development
+      sourcemap: process.env.NODE_ENV === 'development'
     },
     css: {
       devSourcemap: false
@@ -254,12 +255,18 @@ export default defineNuxtConfig({
   nitro: {
     minify: true,
     timing: false,
-    
-    // Tree-shake server bundles aggressively
+
+    // Optimize server bundles
     rollupConfig: {
+      output: {
+        format: 'es',
+        generatedCode: {
+          constBindings: true
+        }
+      },
       treeshake: 'smallest'
     },
-    
+
     // Module side effects optimization
     moduleSideEffects: ['unhead'],
 
@@ -313,10 +320,10 @@ export default defineNuxtConfig({
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      // ISR for dynamic content
-      '/': { isr: 3600 },
-      '/products': { isr: 7200 },
-      '/pricing': { isr: 86400 }, // Daily
+      // SWR for dynamic content (better than ISR for SSR with locale detection)
+      '/': { swr: 3600 },
+      '/products': { swr: 7200 },
+      '/pricing': { swr: 86400 }, // Daily
 
       // API configuration
       '/api/**': {
@@ -348,12 +355,26 @@ export default defineNuxtConfig({
 
   // Build optimizations
   build: {
-    analyze: process.env.NODE_ENV === 'development',
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
   },
 
   features: {
-    inlineStyles: false  // Use external CSS files for better caching
+    // Smart CSS inlining - only inline critical above-fold components
+    inlineStyles: (id) => {
+      if (!id) return false
+
+      // Inline critical above-fold components for faster FCP
+      const criticalComponents = [
+        'Hero',
+        'Header',
+        'AppHeader',
+        'CountrySelector',
+        'Button',
+        'LocaleSuggestionBanner'
+      ]
+
+      return criticalComponents.some(component => id.includes(component))
+    }
   },
 
   // Experimental features for Nuxt 4
@@ -365,8 +386,9 @@ export default defineNuxtConfig({
     asyncContext: true,          // Better async component handling
     writeEarlyHints: true,       // HTTP/2 Server Push hints
     crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
-
-    // Link prefetching strategy - conservative to reduce JS loading
+    renderJsonPayloads: true,    // Optimize JSON payload rendering
+    
+    // Link prefetching strategy - optimized for conversion
     defaults: {
       nuxtLink: {
         prefetch: false,         // Don't prefetch all links by default
