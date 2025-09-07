@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     build: {
       minify: 'terser',
       cssMinify: true,
-      cssCodeSplit: false,
+      cssCodeSplit: true,
       rollupOptions: {
         output: {
           manualChunks: {

@@ -1,14 +1,17 @@
 <template>
   <div>
+    <!-- Above the fold - Load immediately -->
     <HomeHero />
-    <SharedClientList />
-    <HomeFeatures />
-    <SharedTestimonials />
-    <SharedStatistics />
-    <SharedGetStarted />
-    <SharedPricing />
-    <SharedContactForm />
-    <HomeBlogPosts />
+    
+    <!-- Below the fold - Lazy load these components -->
+    <LazySharedClientList />
+    <LazyHomeFeatures />
+    <LazySharedTestimonials />
+    <LazySharedStatistics />
+    <LazySharedGetStarted />
+    <LazySharedPricing />
+    <LazySharedContactForm />
+    <LazyHomeBlogPosts />
   </div>
 </template>
 

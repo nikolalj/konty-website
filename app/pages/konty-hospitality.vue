@@ -1,12 +1,15 @@
 <template>
   <div>
-    <konty-hospitality-hero />
-    <shared-client-list product="kontyHospitality" />
-    <shared-benefits product="kontyHospitality" />
-    <konty-hospitality-features />
-    <shared-pricing product="kontyHospitality" />
-    <shared-get-started product="kontyHospitality" />
-    <shared-contact-form />
+    <!-- Above the fold -->
+    <KontyHospitalityHero />
+    
+    <!-- Below the fold - Lazy load -->
+    <LazySharedClientList product="kontyHospitality" />
+    <LazySharedBenefits product="kontyHospitality" />
+    <LazyKontyHospitalityFeatures />
+    <LazySharedPricing product="kontyHospitality" />
+    <LazySharedGetStarted product="kontyHospitality" />
+    <LazySharedContactForm />
   </div>
 </template>
 

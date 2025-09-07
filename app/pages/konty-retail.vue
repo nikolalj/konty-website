@@ -1,12 +1,15 @@
 <template>
   <div>
-    <konty-retail-hero />
-    <shared-client-list product="kontyRetail" />
-    <shared-benefits product="kontyRetail" />
-    <konty-retail-features />
-    <shared-pricing product="kontyRetail" />
-    <shared-get-started product="kontyRetail" />
-    <shared-contact-form />
+    <!-- Above the fold -->
+    <KontyRetailHero />
+    
+    <!-- Below the fold - Lazy load -->
+    <LazySharedClientList product="kontyRetail" />
+    <LazySharedBenefits product="kontyRetail" />
+    <LazyKontyRetailFeatures />
+    <LazySharedPricing product="kontyRetail" />
+    <LazySharedGetStarted product="kontyRetail" />
+    <LazySharedContactForm />
   </div>
 </template>
 
