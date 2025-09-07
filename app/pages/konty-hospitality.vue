@@ -1,15 +1,17 @@
 <template>
   <div>
-    <!-- Above the fold -->
+    <!-- Critical above-fold - hydrate immediately -->
     <KontyHospitalityHero />
     
-    <!-- Below the fold - Lazy load -->
-    <LazySharedClientList product="kontyHospitality" />
-    <LazySharedBenefits product="kontyHospitality" />
-    <LazyKontyHospitalityFeatures />
-    <LazySharedPricing product="kontyHospitality" />
-    <LazySharedGetStarted product="kontyHospitality" />
-    <LazySharedContactForm />
+    <!-- Below-fold components - delay hydration, keep SSR -->
+    <LazySharedClientList product="kontyHospitality" hydrate-on-visible />
+    <LazySharedBenefits product="kontyHospitality" hydrate-on-visible />
+    <LazyKontyHospitalityFeatures hydrate-on-visible />
+    
+    <!-- Interactive components - hydrate on visibility -->
+    <LazySharedPricing product="kontyHospitality" hydrate-on-visible />
+    <LazySharedGetStarted product="kontyHospitality" hydrate-on-idle />
+    <LazySharedContactForm hydrate-on-interaction />
   </div>
 </template>
 

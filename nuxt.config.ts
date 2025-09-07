@@ -11,19 +11,21 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  // Vite Build Optimization
+  // Vite Build Optimization - Nuxt 4 optimized
   vite: {
     build: {
-      minify: 'terser',
+      minify: 'esbuild',
       cssMinify: true,
       cssCodeSplit: true,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vue-vendor': ['vue', 'vue-router']
-          },
+
+      // Module preload for critical dependencies only
+      modulePreload: {
+        resolveDependencies: (url, deps) => {
+          // Only preload Vue core modules
+          return deps.filter(dep => dep.includes('vue'))
         }
       },
+
       chunkSizeWarningLimit: 1000
     },
     css: {
@@ -248,10 +250,18 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
 
-  // Nitro - Server optimization
+  // Nitro - Server optimization for Nuxt 4
   nitro: {
     minify: true,
     timing: false,
+    
+    // Tree-shake server bundles aggressively
+    rollupConfig: {
+      treeshake: 'smallest'
+    },
+    
+    // Module side effects optimization
+    moduleSideEffects: ['unhead'],
 
     externals: {
       inline: ['unhead']
@@ -264,13 +274,6 @@ export default defineNuxtConfig({
       routes: [],
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
-
-    // prerender: {
-    //   // Pre-render the homepage
-    //   routes: ['/'],
-    //   // Then crawl all the links on the page
-    //   crawlLinks: true
-    // },
 
     // Compression
     compressPublicAssets: {
@@ -343,21 +346,33 @@ export default defineNuxtConfig({
     devtools: true
   },
 
+  // Build optimizations
+  build: {
+    analyze: process.env.NODE_ENV === 'development',
+    transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
+  },
+
   features: {
-    inlineStyles: true
+    inlineStyles: false  // Use external CSS files for better caching
   },
 
   // Experimental features for Nuxt 4
   experimental: {
     viewTransition: true,        // Enable native view transitions API
+    lazyHydration: true,         // Enable lazy hydration for components
+    payloadExtraction: true,     // Extract payload for faster hydration
+    componentIslands: true,      // Enable component islands for selective hydration
+    asyncContext: true,          // Better async component handling
+    writeEarlyHints: true,       // HTTP/2 Server Push hints
+    crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
 
-    // Link prefetching strategy
+    // Link prefetching strategy - conservative to reduce JS loading
     defaults: {
       nuxtLink: {
-        prefetch: true,
+        prefetch: false,         // Don't prefetch all links by default
         prefetchOn: {
-          visibility: true,    // Prefetch when visible
-          interaction: true    // Prefetch on hover
+          visibility: true,      // Only prefetch when link is visible
+          interaction: false     // Don't prefetch on hover to save bandwidth
         }
       }
     }
