@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
+  // Vite Build Optimization
   vite: {
     build: {
       minify: 'terser',
@@ -133,7 +134,7 @@ export default defineNuxtConfig({
       '#*'            // Anchor links
     ],
 
-    // Don't fail builds on broken links (just warn)
+    // Fail builds on broken links
     failOnError: true,
 
     // Report settings
