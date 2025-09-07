@@ -14,7 +14,7 @@
           class="flex flex-col bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6 h-full"
         >
           <!-- Quote at the top, flex-grow to push author to bottom -->
-          <blockquote class="text-gray-600 dark:text-gray-300 flex-grow mb-6">
+          <blockquote class="text-gray-600 dark:text-gray-300 flex-grow mb-4">
             "{{ testimonial.quote }}"
           </blockquote>
 

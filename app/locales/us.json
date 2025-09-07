@@ -123,15 +123,18 @@
       "statistics": {
         "stat1": {
           "description": "Uptime when you need it most",
-          "suffix": "%"
+          "suffix": "%",
+          "value": "99"
         },
         "stat2": {
           "description": "Real human answers your call",
-          "suffix": " seconds"
+          "suffix": " seconds",
+          "value": "30"
         },
         "stat3": {
           "description": "Outlasting the competition",
-          "suffix": " years"
+          "suffix": " years",
+          "value": "15"
         }
       },
       "testimonials": {

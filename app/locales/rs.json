@@ -123,15 +123,18 @@
       "statistics": {
         "stat1": {
           "description": "Radi kad je najbitnije",
-          "suffix": "%"
+          "suffix": "%",
+          "value": "99"
         },
         "stat2": {
           "description": "Pravi čovek javlja se",
-          "suffix": " sekundi"
+          "suffix": " sekundi",
+          "value": "30"
         },
         "stat3": {
           "description": "Preživeli smo sve",
-          "suffix": " godina"
+          "suffix": " godina",
+          "value": "15"
         }
       },
       "testimonials": {
