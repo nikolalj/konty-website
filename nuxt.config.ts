@@ -134,7 +134,7 @@ export default defineNuxtConfig({
       'sms:*',        // SMS links
     ],
 
-    // Don't fail builds on broken links (just warn)
+    // Fail builds on broken links
     failOnError: true,
 
     // Report settings
