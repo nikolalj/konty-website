@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  // Vite Build Optimization
   vite: {
     build: {
       minify: 'terser',
