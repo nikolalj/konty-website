@@ -3,8 +3,8 @@
     <UContainer>
       <SharedSectionHeading
         v-model="product"
-        :title="t(`features.${productKey}.title`)"
-        :description="t(`features.${productKey}.description`)"
+        :title="t(`pages.products.features.${productKey}.title`)"
+        :description="t(`pages.products.features.${productKey}.description`)"
         :product-switch="true"
         product-switch-position="top"
       />
@@ -49,10 +49,10 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {{ t(`features.${productKey}.${feature.key}.title`) }}
+                    {{ t(`pages.products.features.${productKey}.${feature.key}.title`) }}
                   </h3>
                   <p class="text-gray-600 dark:text-gray-300">
-                    {{ t(`features.${productKey}.${feature.key}.description`) }}
+                    {{ t(`pages.products.features.${productKey}.${feature.key}.description`) }}
                   </p>
                 </div>
               </div>
@@ -138,14 +138,14 @@ interface FeatureLink {
 const links: Record<string, FeatureLink[]> = {
   kontyHospitality: [
     {
-      labelKey: 'features.exploreFeatures',
+      labelKey: 'ui.common.buttons.learnMore',
       to: '/konty-hospitality',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'
     },
     {
-      labelKey: 'features.scheduleDemo',
+      labelKey: 'ui.common.buttons.scheduleDemo',
       to: '/demo',
       color: 'neutral',
       variant: 'subtle',
@@ -154,14 +154,14 @@ const links: Record<string, FeatureLink[]> = {
   ],
   kontyRetail: [
     {
-      labelKey: 'features.exploreFeatures',
+      labelKey: 'ui.common.buttons.learnMore',
       to: '/konty-retail',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'
     },
     {
-      labelKey: 'features.scheduleDemo',
+      labelKey: 'ui.common.buttons.scheduleDemo',
       to: '/demo',
       color: 'neutral',
       variant: 'outline',

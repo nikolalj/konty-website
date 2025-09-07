@@ -49,7 +49,7 @@ export const useTracking = () => {
     // Add currency for conversion events if not provided
     if (['generate_lead', 'sign_up', 'purchase', 'begin_checkout'].includes(eventName)) {
       if (!parameters?.currency) {
-        Object.assign(enrichedParams, { currency: useNuxtApp().$i18n.t('common.currency') })
+        Object.assign(enrichedParams, { currency: useNuxtApp().$i18n.t('ui.common.labels.currency') })
       }
     }
 

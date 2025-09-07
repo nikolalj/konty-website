@@ -2,8 +2,8 @@
   <section class="py-12 sm:py-16">
     <UContainer>
       <SharedSectionHeading
-        :title="t('testimonials.title')"
-        :description="t('testimonials.description')"
+        :title="t('pages.home.testimonials.title')"
+        :description="t('pages.home.testimonials.description')"
       />
 
       <UPageMarquee
@@ -37,14 +37,14 @@ const testimonials = computed(() => {
   return testimonialKeys.map((key, index) => {
     return {
       user: {
-        name: t(`testimonials.${key}.name`),
-        description: t(`testimonials.${key}.role`),
+        name: t(`pages.home.testimonials.items.${key}.name`),
+        description: t(`pages.home.testimonials.items.${key}.role`),
         avatar: {
           src: `/images/testimonials/${index + 1}.jpg`,
           loading: 'lazy'
         }
       },
-      quote: t(`testimonials.${key}.quote`)
+      quote: t(`pages.home.testimonials.items.${key}.quote`)
     }
   })
 })

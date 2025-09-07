@@ -2,8 +2,8 @@
   <section class="py-20">
     <UContainer>
       <SharedSectionHeading
-        :title="t('contact.title')"
-        :description="t('contact.description')"
+        :title="t('pages.contact.title')"
+        :description="t('pages.contact.description')"
       />
 
       <div class="flex justify-center">
@@ -11,13 +11,13 @@
           <form class="space-y-6" @submit.prevent="onSubmit">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ t('contact.form.name') }}
+                {{ t('ui.forms.fields.name') }}
               </label>
               <UInput
                 id="name"
                 v-model="form.name"
                 class="w-full"
-                :placeholder="t('contact.form.namePlaceholder')"
+                :placeholder="t('ui.forms.placeholders.name')"
                 size="xl"
                 required
               />
@@ -25,14 +25,14 @@
 
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ t('contact.form.email') }}
+                {{ t('ui.forms.fields.email') }}
               </label>
               <UInput
                 id="email"
                 v-model="form.email"
                 class="w-full"
                 type="email"
-                :placeholder="t('contact.form.emailPlaceholder')"
+                :placeholder="t('ui.forms.placeholders.email')"
                 size="xl"
                 required
               />
@@ -40,13 +40,13 @@
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-                {{ t('contact.form.message') }}
+                {{ t('ui.forms.fields.message') }}
               </label>
               <UTextarea
                 id="message"
                 v-model="form.message"
                 class="w-full"
-                :placeholder="t('contact.form.messagePlaceholder')"
+                :placeholder="t('ui.forms.placeholders.message')"
                 :rows="5"
                 size="xl"
                 required
@@ -61,7 +61,7 @@
               block
               :loading="loading"
             >
-              {{ t('contact.form.submit') }}
+              {{ t('ui.forms.buttons.submit') }}
             </UButton>
           </form>
         </div>

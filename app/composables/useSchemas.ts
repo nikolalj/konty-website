@@ -29,13 +29,13 @@ export const useSchemas = () => {
    */
   const kontyRetail = () => {
     // Get price values from translations (same as in page)
-    const lowPrice = t('pricing.retail.start.priceValue')
-    const highPrice = t('pricing.retail.premium.priceValue')
+    const lowPrice = t('pages.pricing.plans.retail.start.priceValue')
+    const highPrice = t('pages.pricing.plans.retail.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
       '@id': '#konty-retail',
-      name: t('products.retail.name'),
+      name: t('data.products.retail.name'),
       description: t('seo.kontyRetail.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Point of Sale',
@@ -58,12 +58,12 @@ export const useSchemas = () => {
 
       // Key features list
       featureList: [
-        t('features.retail.inventory.title'),
-        t('features.retail.barcode.title'),
-        t('features.retail.loyalty.title'),
-        t('features.retail.multiLocation.title'),
-        t('features.retail.analytics.title'),
-        t('features.retail.offline.title')
+        t('pages.products.features.retail.inventory.title'),
+        'Barcode Scanner Integration',
+        'Customer Loyalty Program',
+        'Multi-Location Support',
+        'Advanced Analytics Dashboard',
+        'Offline Mode'
       ],
 
       // Screenshot for rich results
@@ -90,8 +90,8 @@ export const useSchemas = () => {
    * SoftwareApplication schema for Konty Hospitality
    */
   const kontyHospitality = () => {
-    const lowPrice = t('pricing.hospitality.start.priceValue')
-    const highPrice = t('pricing.hospitality.premium.priceValue')
+    const lowPrice = t('pages.pricing.plans.hospitality.start.priceValue')
+    const highPrice = t('pages.pricing.plans.hospitality.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
@@ -148,7 +148,7 @@ export const useSchemas = () => {
   const pricingProduct = () => ({
     '@type': 'Product',
     '@id': '#konty-pricing',
-    name: t('products.name'),
+    name: t('data.products.name'),
     description: t('seo.products.description'),
     brand: {
       '@type': 'Brand',
@@ -158,10 +158,10 @@ export const useSchemas = () => {
       '@type': 'AggregateOffer',
       priceCurrency: currency.value,
       lowPrice: Math.min(
-        Number(t('pricing.retail.start.priceValue')),
-        Number(t('pricing.hospitality.start.priceValue'))
+        Number(t('pages.pricing.plans.retail.start.priceValue')),
+        Number(t('pages.pricing.plans.hospitality.start.priceValue'))
       ).toString(),
-      highPrice: t('pricing.hospitality.premium.priceValue'),
+      highPrice: t('pages.pricing.plans.hospitality.premium.priceValue'),
       offerCount: 6,
       availability: 'https://schema.org/InStock'
     },
@@ -179,7 +179,7 @@ export const useSchemas = () => {
   const productsOverview = () => ({
     '@type': 'SoftwareApplication',
     '@id': '#konty-pos',
-    name: t('products.name'),
+    name: t('data.products.name'),
     description: t('seo.products.description'),
     applicationCategory: 'BusinessApplication',
     operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -187,9 +187,9 @@ export const useSchemas = () => {
       '@type': 'Offer',
       price: '0',
       priceCurrency: currency.value,
-      name: t('pricing.freeTrial'),
+      name: t('pages.pricing.freeTrial'),
       availability: 'https://schema.org/InStock',
-      description: `30 ${t('pricing.days')} ${t('pricing.freeTrial')}`
+      description: `30 days ${t('pages.pricing.freeTrial')}`
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -223,45 +223,45 @@ export const useSchemas = () => {
    */
   const howToSetup = () => ({
     '@type': 'HowTo',
-    name: t('howto.setup.title'),
-    description: t('howto.setup.description'),
+    name: 'How to Set Up Konty POS',
+    description: 'Get your Konty POS system up and running in just 5 minutes',
     totalTime: 'PT5M',
     supply: [
       {
         '@type': 'HowToSupply',
-        name: t('howto.setup.device')
+        name: 'Computer or mobile device'
       }
     ],
     step: [
       {
         '@type': 'HowToStep',
         position: 1,
-        name: t('howto.setup.step1'),
-        text: t('howto.setup.step1')
+        name: 'Sign up for Konty account',
+        text: 'Sign up for Konty account'
       },
       {
         '@type': 'HowToStep',
         position: 2,
-        name: t('howto.setup.step2'),
-        text: t('howto.setup.step2')
+        name: 'Configure your business details',
+        text: 'Configure your business details'
       },
       {
         '@type': 'HowToStep',
         position: 3,
-        name: t('howto.setup.step3'),
-        text: t('howto.setup.step3')
+        name: 'Add your products or menu items',
+        text: 'Add your products or menu items'
       },
       {
         '@type': 'HowToStep',
         position: 4,
-        name: t('howto.setup.step4'),
-        text: t('howto.setup.step4')
+        name: 'Set up payment methods',
+        text: 'Set up payment methods'
       },
       {
         '@type': 'HowToStep',
         position: 5,
-        name: t('howto.setup.step5'),
-        text: t('howto.setup.step5')
+        name: 'Start accepting orders',
+        text: 'Start accepting orders'
       }
     ]
   })
@@ -277,66 +277,66 @@ export const useSchemas = () => {
     return defineLocalBusiness({
       '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
       '@id': `${config.public.siteUrl}/#/schema/LocalBusiness/${locale.value}`,
-      name: t('company.tradeName'),
+      name: t('data.company.tradeName'),
       url: config.public.siteUrl + localePath('/'),
       logo: `${config.public.siteUrl}/images/branding/logo-light.svg`,
       image: `${config.public.siteUrl}/images/branding/logo-light.svg`,
       description: t('seo.about.description'),
 
       // Contact information
-      telephone: t('company.contact.phone'),
-      email: t('company.contact.email'),
+      telephone: t('data.company.contact.phone'),
+      email: t('data.company.contact.email'),
 
       // Physical address (required)
       address: {
         '@type': 'PostalAddress',
-        streetAddress: t('company.address.street'),
-        addressLocality: t('company.address.city'),
-        addressRegion: t('company.address.region'),
-        postalCode: t('company.address.postalCode'),
-        addressCountry: t('company.address.countryCode')
+        streetAddress: t('data.company.address.street'),
+        addressLocality: t('data.company.address.city'),
+        addressRegion: t('data.company.address.region'),
+        postalCode: t('data.company.address.postalCode'),
+        addressCountry: t('data.company.address.countryCode')
       },
 
       // Geographic coordinates (recommended for local SEO)
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: Number(t('company.geo.latitude')),
-        longitude: Number(t('company.geo.longitude'))
+        latitude: Number(t('data.company.geo.latitude')),
+        longitude: Number(t('data.company.geo.longitude'))
       },
 
       // Service area
-      areaServed: tArray('company.areaServed'),
+      areaServed: tArray('data.company.areaServed'),
 
       // Business hours
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: t('company.businessHours.weekdays.opens'),
-          closes: t('company.businessHours.weekdays.closes')
+          opens: t('data.company.businessHours.weekdays.opens'),
+          closes: t('data.company.businessHours.weekdays.closes')
         }
       ],
 
       // Additional business details
-      priceRange: `${t('pricing.retail.start.priceValue')}-${t('pricing.hospitality.premium.priceValue')} ${currentLocale.value?.currency}/month`,
+      priceRange: `${t('pages.pricing.plans.retail.start.priceValue')}-${t('pages.pricing.plans.hospitality.premium.priceValue')} ${currentLocale.value?.currency}/month`,
       currenciesAccepted: currentLocale.value ? currentLocale.value.currency : 'EUR',
-      paymentAccepted: t('company.paymentAccepted'),
-      knowsAbout: tArray('company.knowsAbout'),
+      paymentAccepted: t('data.company.paymentAccepted'),
+      knowsAbout: tArray('data.company.knowsAbout'),
       serviceType: 'Point of Sale Software',
       additionalType: 'https://schema.org/SoftwareApplication',
 
       // Social profiles (helps with Knowledge Graph)
-      sameAs: Object.values(tObject('company.social')),
+      sameAs: Object.values(tObject('data.company.social')),
 
       // Business identifiers
-      vatID: t('company.vatID'),
-      taxID: t('company.vatID'),
+      vatID: t('data.company.vatID'),
+      taxID: t('data.company.vatID'),
 
       // Founding information
-      foundingDate: t('company.foundingDate'),
+      foundingDate: t('data.company.foundingDate'),
       founder: {
         '@type': 'Person',
-        name: t('company.founder')
+        name: t('data.company.founder')
       }
     })
   }

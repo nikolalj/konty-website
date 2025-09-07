@@ -42,22 +42,22 @@ const { t } = useI18n()
 
 const posts = ref([
   {
-    title: t('blog.post1.title'),
-    description: t('blog.post1.description'),
+    title: t('pages.home.blog.post1.title'),
+    description: t('pages.home.blog.post1.description'),
     image: '/images/features/hospitality.avif',
     date: '2025-07-08',
     to: '#'
   },
   {
-    title: t('blog.post2.title'),
-    description: t('blog.post2.description'),
+    title: t('pages.home.blog.post2.title'),
+    description: t('pages.home.blog.post2.description'),
     image: '/images/features/hospitality.avif',
     date: '2025-06-12',
     to: '#'
   },
   {
-    title: t('blog.post3.title'),
-    description: t('blog.post3.description'),
+    title: t('pages.home.blog.post3.title'),
+    description: t('pages.home.blog.post3.description'),
     image: '/images/features/hospitality.avif',
     date: '2025-05-20',
     to: '#'

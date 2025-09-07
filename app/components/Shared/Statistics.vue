@@ -41,9 +41,9 @@ const getStatValue = (key: string): number => {
 }
 
 const statistics = ref<Stat[]>([
-  { value: getStatValue('stat1'), suffix: t('statistics.stat1.suffix'), description: t('statistics.stat1.description') },
-  { value: getStatValue('stat2'), suffix: t('statistics.stat2.suffix'), description: t('statistics.stat2.description') },
-  { value: getStatValue('stat3'), suffix: t('statistics.stat3.suffix'), description: t('statistics.stat3.description') }
+  { value: getStatValue('stat1'), suffix: t('pages.home.statistics.stat1.suffix'), description: t('pages.home.statistics.stat1.description') },
+  { value: getStatValue('stat2'), suffix: t('pages.home.statistics.stat2.suffix'), description: t('pages.home.statistics.stat2.description') },
+  { value: getStatValue('stat3'), suffix: t('pages.home.statistics.stat3.suffix'), description: t('pages.home.statistics.stat3.description') }
 ])
 
 const animatedStats = ref<number[]>(statistics.value.map(() => 0))

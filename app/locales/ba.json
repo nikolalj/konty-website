@@ -1,327 +1,418 @@
 {
-  "banner": {
-    "suggestion": "Izgleda da ste u {country}. Želite li da predjete na lokalnu verziju?",
-    "switchTo": "Vidi lokalnu verziju"
-  },
-  "blog": {
-    "post1": {
-      "description": "Tehnički razlozi padova u gužvi i kako da zaštitiš svoj biznis.",
-      "title": "Zašto POS puca u špicu (i kako to spriječiti)"
+  "ui": {
+    "common": {
+      "buttons": {
+        "bookDemo": "Lični demo (15 min)",
+        "dismiss": "Odbaci",
+        "stayHere": "Ostani ovdje",
+        "learnMore": "Istraži funkcije",
+        "scheduleDemo": "Zakaži demo"
+      },
+      "labels": {
+        "currency": "BAM",
+        "hospitality": "Ugostiteljstvo",
+        "retail": "Trgovina",
+        "recommended": "Preporučeno"
+      },
+      "loading": {
+        "formPlaceholder": "Učitavanje..."
+      }
     },
-    "post2": {
-      "description": "Skriveni troškovi, izgubljene narudžbe, spora usluga - prepoznaj znake prije nego što bude kasno.",
-      "title": "5 znakova da ti POS ubija profit"
+    "navigation": {
+      "main": {
+        "products": "Proizvodi",
+        "pricing": "Cijene",
+        "about": "O nama",
+        "hospitality": "Ugostiteljstvo",
+        "hospitalityDesc": "Radi i kad je najgore. Nikad ne puca u špicu.",
+        "retail": "Trgovina",
+        "retailDesc": "Prodaj više. Manje brojana. Bez stresa."
+      },
+      "breadcrumb": {
+        "index": "Početna"
+      },
+      "categories": {
+        "barLounge": "Bar & Lounge",
+        "butcherShop": "Mesara",
+        "cafeBakery": "Kafić & Pekara",
+        "casualDining": "Restoran",
+        "enterprise": "Enterprise",
+        "fineDining": "Fine Dining",
+        "foodTruck": "Food Truck",
+        "generalStore": "Opšta prodavnica",
+        "hotelRestaurant": "Hotel & Restoran",
+        "liquorStore": "Prodavnica pića",
+        "pizzeria": "Picerija",
+        "supermarket": "Supermarket"
+      },
+      "productNames": {
+        "forHospitality": "Konty za ugostiteljstvo",
+        "forRetail": "Konty za trgovinu"
+      }
     },
-    "post3": {
-      "description": "Kako je 9.000 restorana prešlo bez ijednog dana zastoja.",
-      "title": "Prelazak na novi POS: Vodič za 48 sati"
+    "footer": {
+      "newsletter": {
+        "title": "Prijavi se na newsletter",
+        "emailPlaceholder": "Tvoj email",
+        "subscribe": "Prijavi se"
+      },
+      "links": {
+        "aboutUs": "O nama",
+        "careers": "Karijere",
+        "company": "Kompanija",
+        "contact": "Kontakt",
+        "dpa": "Obrada podataka",
+        "legal": "Pravno",
+        "partners": "Partneri",
+        "privacy": "Privatnost",
+        "products": "Proizvodi",
+        "terms": "Uslovi korišćenja"
+      }
+    },
+    "banner": {
+      "suggestion": "Izgleda da ste u {country}. Želite li da predjete na lokalnu verziju?",
+      "switchTo": "Vidi lokalnu verziju"
+    },
+    "forms": {
+      "fields": {
+        "name": "Ime",
+        "email": "Email",
+        "message": "Najveći problem sa POS? (Opciono)"
+      },
+      "placeholders": {
+        "name": "Marko",
+        "email": "marko&#64;restoran.ba",
+        "message": "Sistem puca svake subote..."
+      },
+      "buttons": {
+        "submit": "Dobij svoj demo",
+        "requestDemo": "Dobij svoj demo"
+      }
+    },
+    "errors": {
+      "400": {
+        "title": "Strana nije pronađena",
+        "actions": {
+          "bookDemo": "Zakaži demo",
+          "goHome": "Idi na početnu stranu",
+          "viewPricing": "Vidi cijene"
+        }
+      },
+      "403": {
+        "title": "Pristup nije dozvoljen"
+      },
+      "500": {
+        "title": "Došlo je do greške na serveru – radimo na rješavanju problema."
+      },
+      "generic": {
+        "title": "Došlo je do greške",
+        "helpText": "Ako vam je potrebna pomoć, kontaktirajte nas na"
+      }
     }
   },
-  "clients": {
-    "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998",
-    "title": "9.000 restorana vjeruje Konty-ju svoje najgore večeri"
-  },
-  "common": {
-    "currency": "BAM",
-    "bookDemo": "Lični demo (15 min)",
-    "dismiss": "Odbaci",
-    "hospitality": "Ugostiteljstvo",
-    "recommended": "Preporučeno",
-    "retail": "Trgovina",
-    "stayHere": "Ostani ovdje"
-  },
-  "contact": {
-    "description": "Reci nam o svom restoranu. Pokazat ćemo tačno kako Konty rješava tvoje probleme.",
-    "form": {
-      "email": "Email",
-      "emailPlaceholder": "marko&#64;restoran.ba",
-      "message": "Najveći problem sa POS? (Opciono)",
-      "messagePlaceholder": "Sistem puca svake subote...",
-      "name": "Ime",
-      "namePlaceholder": "Marko",
-      "submit": "Dobij svoj demo"
-    },
-    "title": "Vidi svoj setup za 15 minuta"
-  },
-  "demo": {
-    "description": "Pokaži nam trenutni setup. Pokazat ćemo tačno koliko štediš.",
-    "formPlaceholder": "Učitavanje...",
-    "requestDemo": "Dobij svoj demo",
-    "revolutionize": "Gledaj kako radiš bez prekida kad drugi pucaju",
-    "seeInAction": "Vidi kako Konty radi u najgoroj večeri"
-  },
-  "error": {
-    "400": "Strana nije pronađena",
-    "403": "Pristup nije dozvoljen",
-    "500": "Došlo je do greške na serveru – radimo na rješavanju problema.",
-    "bookDemo": "Zakaži demo",
-    "generic": "Došlo je do greške",
-    "goHome": "Idi na početnu stranu",
-    "helpText": "Ako vam je potrebna pomoć, kontaktirajte nas na",
-    "viewPricing": "Vidi cijene"
-  },
-  "faq": {
-    "general": {
-      "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
-      "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
-      "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
-      "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u BiH. Automatski izdaje fiskalne račune prema propisima.",
-      "a5": "Dobijate 30 dana besplatnog korištenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
-      "q1": "Šta je Konty POS sistem?",
-      "q2": "Mogu li koristiti Konty bez interneta?",
-      "q3": "Koliko brzo mogu početi sa korištenjem?",
-      "q4": "Da li Konty podržava fiskalizaciju?",
-      "q5": "Kako funkcioniše besplatni probni period?"
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Konačno. POS terminal koji neće pući u subotu uveče.",
+        "subtitle": "Dok drugi dodaju AI i buzzwords, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
+        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri",
+        "cta": {
+          "primary": "Zakaži demo"
+        }
+      },
+      "statistics": {
+        "stat1": {
+          "description": "Radi kad je najbitnije",
+          "suffix": "%"
+        },
+        "stat2": {
+          "description": "Pravi čovjek javlja se",
+          "suffix": " sekundi"
+        },
+        "stat3": {
+          "description": "Preživjeli smo sve",
+          "suffix": " godina"
+        }
+      },
+      "testimonials": {
+        "title": "Vlasnici restorana koji sada mirno spavaju",
+        "description": "Prave priče od kolega koji su prešli i preživjeli najgore večeri",
+        "items": {
+          "t1": {
+            "name": "Miloš Petrović",
+            "quote": "Prije Konty sistema imali smo problem sa praćenjem stolova i narudžbi. Sada konobari rade brže, kuhinja je uvijek sinhronizovana, a gosti primjete koliko je usluga efikasnija.",
+            "role": "Vlasnik restorana \"Dolina Ukusa\""
+          },
+          "t2": {
+            "name": "Jelena Marković",
+            "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno imam jasnu sliku o proizvodima koji se najbolje prodaju, a izvještaji mi pomažu da donosim brže odluke.",
+            "role": "Vlasnica butika \"Moda J\""
+          },
+          "t3": {
+            "name": "Nikola Jovanović",
+            "quote": "Uštedjeli smo sate administracije zahvaljujući Konty sistemu. Sve je pregledno – od smjena konobara do izvještaja o prometu na kraju dana.",
+            "role": "Menadžer kafića \"Urban Bar\""
+          },
+          "t4": {
+            "name": "Ana Lazić",
+            "quote": "Prelazak na Konty je bio pravo olakšanje. Nema više gubljenja računa ni nesporazuma sa mušterijama – blagajna radi savršeno i brza je kao što smo željeli.",
+            "role": "Vlasnica pekare \"Miris Kruha\""
+          },
+          "t5": {
+            "name": "Dragan Ilić",
+            "quote": "Konty POS mi omogućava da kontrolišem više lokacija sa jednog mjesta. Prodaja, lager i izvještaji su uvijek ažurni – štedi mi sate i sate posla svake sedmice.",
+            "role": "Lanac kioska \"Mini Market\""
+          },
+          "t6": {
+            "name": "Ivana Ristić",
+            "quote": "Preporučujem Konty svojim klijentima jer je jednostavan, pouzdan i lako se obučava osoblje. U poređenju sa starim sistemima, razlika je nebo i zemlja.",
+            "role": "Frilenser i konsultant za ugostiteljstvo"
+          },
+          "t7": {
+            "name": "Marko Kovačević",
+            "quote": "Sviđa mi se koliko je interfejs jasan i moderan. Moji zaposleni su za manje od jednog dana u potpunosti savladali sistem.",
+            "role": "Vlasnik poslastičarnice \"Slatki Kutak\""
+          },
+          "t8": {
+            "name": "Sara Nikolić",
+            "quote": "Konty POS koristim već godinu dana i mogu reći da mi je pomogao da povećam profitabilnost i smanjim troškove. Za svaki mali biznis – ovo je pravi izbor.",
+            "role": "Preduzetnica i članica Udruženja malih biznisa"
+          }
+        }
+      },
+      "clients": {
+        "title": "9.000 restorana vjeruje Konty-ju svoje najgore večeri",
+        "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998"
+      },
+      "blog": {
+        "post1": {
+          "description": "Tehnički razlozi padova u gužvi i kako da zaštitiš svoj biznis.",
+          "title": "Zašto POS puca u špicu (i kako to spriječiti)"
+        },
+        "post2": {
+          "description": "Skriveni troškovi, izgubljene narudžbe, spora usluga - prepoznaj znake prije nego što bude kasno.",
+          "title": "5 znakova da ti POS ubija profit"
+        },
+        "post3": {
+          "description": "Kako je 9.000 restorana prešlo bez ijednog dana zastoja.",
+          "title": "Prelazak na novi POS: Vodič za 48 sati"
+        }
+      },
+      "getStarted": {
+        "certificate": {
+          "description": "Reci nam o svom restoranu. Mi napravimo setup. To je bukvalno sve što radiš danas.",
+          "title": "Dan 1 ujutru: 15-minutni poziv"
+        },
+        "equipment": {
+          "description": "Dolazimo kod tebe van špica. 30-minutne sesije. I tehnofobi nauče odmah.",
+          "title": "Dan 2 ujutru: Obuka osoblja"
+        },
+        "register": {
+          "description": "Uzmi prvu narudžbu. Ostajemo cijeli dan. Radi paralelno stari ako hoćeš. Bez pritiska.",
+          "title": "Dan 2 popodne: Radiš"
+        },
+        "sepPortal": {
+          "description": "Meni, osoblje, stolovi, historija - sve prebačeno perfektno. Integracije povezane. Ti ne radiš ništa.",
+          "title": "Dan 1 popodne: Sve se prebacuje"
+        },
+        "title": "POS sistem radi za 48 sati. Mi sve sredimo."
+      }
     },
     "pricing": {
-      "a1": "Imamo tri paketa: Start (59 KM), Standard (99 KM) i Premium (199 KM) mjesečno. Svaki paket uključuje različite funkcionalnosti.",
-      "a2": "Ne, nema skrivenih troškova. Cijena paketa uključuje sve - ažuriranja, podršku i hosting. Plaćate samo mjesečnu pretplatu.",
-      "q1": "Koliko košta Konty?",
-      "q2": "Ima li skrivenih troškova?"
-    }
-  },
-  "features": {
-    "exploreFeatures": "Istraži funkcije",
-    "scheduleDemo": "Zakaži demo",
-    "hospitality": {
-      "description": "Kad subota uveče postane haos, ovo su jedine funkcije koje su bitne.",
-      "kitchenDisplay": {
-        "description": "Svaka narudžba sačuvana lokalno prije cloud-a. Internet pao? Kuhinja radi. Struja trepnula? Sve je tu. Nikad ne izgubi catering od 600 KM.",
-        "title": "Narudžbe koje se ne gube"
-      },
-      "staffManagement": {
-        "description": "Interfejs otporan na greške. Bez muke sa dodacima. Bez potrebe za šefom. I pomoćnik može da radi. Smanji vrijeme obuke za 75%.",
-        "title": "Novi konobar? Obučen za 15 minuta"
-      },
-      "tableManagement": {
-        "description": "Sinhronizacija u realnom vremenu radi i offline. Hostesa vidi što i konobar. Bez ljutih gostiju, bez poklanjanja. Uštedi 1.000+ KM nedjeljno.",
-        "title": "Nema više duplih rezervacija"
-      },
-      "title": "Rješenja za probleme u 3 ujutru"
-    },
-    "retail": {
-      "customerInsights": {
-        "description": "Vidi šablone koje ljudi propuštaju. Šalji ponude koje se kupuju. Bez diplome iz analitike. 3x veća konverzija.",
-        "title": "Znaj šta će kupiti prije njih"
-      },
-      "description": "Fokusiraj se na kupce, ne na probleme sa tehnikom.",
-      "inventory": {
-        "description": "Automatska narudžba prije nestanka. Upozorenja koja rade. Nikad ne vraćaj kupce. Povećaj prodaju 15% bez out-of-stock.",
-        "title": "Nikad bez najprodavanijih artikala"
-      },
-      "quickCheckout": {
-        "description": "Skeniraj, naplati, gotovo. Radi sa svim karticama. Brži red, kupci se vraćaju. 40% više kupaca u špicu.",
-        "title": "Naplata za 30 sekundi, ne 3 minuta"
-      },
-      "title": "Prodaj više. Manje brojanja. Bez stresa."
-    }
-  },
-  "footer": {
-    "aboutUs": "O nama",
-    "careers": "Karijere",
-    "company": "Kompanija",
-    "contact": "Kontakt",
-    "dpa": "Obrada podataka",
-    "emailPlaceholder": "Tvoj email",
-    "legal": "Pravno",
-    "newsletter": "Prijavi se na newsletter",
-    "partners": "Partneri",
-    "privacy": "Privatnost",
-    "products": "Proizvodi",
-    "subscribe": "Prijavi se",
-    "terms": "Uslovi korišćenja"
-  },
-  "getStarted": {
-    "certificate": {
-      "description": "Reci nam o svom restoranu. Mi napravimo setup. To je bukvalno sve što radiš danas.",
-      "title": "Dan 1 ujutru: 15-minutni poziv"
-    },
-    "equipment": {
-      "description": "Dolazimo kod tebe van špica. 30-minutne sesije. I tehnofobi nauče odmah.",
-      "title": "Dan 2 ujutru: Obuka osoblja"
-    },
-    "register": {
-      "description": "Uzmi prvu narudžbu. Ostajemo cijeli dan. Radi paralelno stari ako hoćeš. Bez pritiska.",
-      "title": "Dan 2 popodne: Radiš"
-    },
-    "sepPortal": {
-      "description": "Meni, osoblje, stolovi, historija - sve prebačeno perfektno. Integracije povezane. Ti ne radiš ništa.",
-      "title": "Dan 1 popodne: Sve se prebacuje"
-    },
-    "title": "POS sistem radi za 48 sati. Mi sve sredimo."
-  },
-  "hero": {
-    "cta": {
-      "primary": "Zakaži demo"
-    },
-    "subtitle": "Dok drugi dodaju AI i buzzwords, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-    "tagline": "9.000 restorana nam vjeruje svoje najgore večeri",
-    "title": "Konačno. POS terminal koji neće pući u subotu uveče."
-  },
-  "hospitalityPage": {
-    "hero": {
-      "cta": "Počni besplatno",
-      "features": "Nikad ne puca • Prava podrška • Bez ugovora",
-      "subtitle": "Kad udari subota uveče, trebaš POS koji neće da te izda. 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
-      "title": "Za restorane koji ne smiju da stanu",
-      "viewPricing": "Vidi cijene"
-    }
-  },
-  "nav": {
-    "about": "O nama",
-    "barLounge": "Bar & Lounge",
-    "butcherShop": "Mesara",
-    "cafeBakery": "Kafić & Pekara",
-    "casualDining": "Restoran",
-    "demo": "Demo",
-    "enterprise": "Enterprise",
-    "fineDining": "Fine Dining",
-    "foodTruck": "Food Truck",
-    "forHospitality": "Konty za ugostiteljstvo",
-    "forRetail": "Konty za trgovinu",
-    "generalStore": "Opšta prodavnica",
-    "home": "Početna",
-    "hospitality": "Ugostiteljstvo",
-    "hospitalityDesc": "Radi i kad je najgore. Nikad ne puca u špicu.",
-    "hotelRestaurant": "Hotel & Restoran",
-    "kontyHospitality": "Konty Ugostiteljstvo",
-    "kontyRetail": "Konty Trgovina",
-    "liquorStore": "Prodavnica pića",
-    "pizzeria": "Picerija",
-    "pricing": "Cijene",
-    "privacy": "Privatnost",
-    "products": "Proizvodi",
-    "retail": "Trgovina",
-    "retailDesc": "Prodaj više. Manje brojana. Bez stresa.",
-    "supermarket": "Supermarket",
-    "terms": "Uslovi korištenja"
-  },
-  "pricing": {
-    "description": "Uštedi 40% u odnosu na konkurenciju. Sve uključeno. Otkaži kad hoćeš.",
-    "freeTrial": "30 dana besplatno",
-    "hospitality": {
-      "premium": {
-        "title": "Enterprise",
-        "description": "Za lance restorana",
-        "price": "Po dogovoru",
-        "priceValue": "200",
-        "billingCycle": "/ mjesečno",
-        "button": "Kontaktiraj prodaju",
-        "features": {
-          "feat0": "Neograničeno POS terminala",
-          "feat1": "Sve iz Profesional",
-          "feat2": "Multi-lokacijski dashboard",
-          "feat3": "Dedikovan account manager",
-          "feat4": "Custom integracije",
-          "feat5": "Obuka na lokaciji",
-          "feat6": "White-glove migracija"
+      "title": "Poštene cijene. Bez skrivenih troškova.",
+      "description": "Uštedi 40% u odnosu na konkurenciju. Sve uključeno. Otkaži kad hoćeš.",
+      "freeTrial": "30 dana besplatno",
+      "plans": {
+        "hospitality": {
+          "premium": {
+            "title": "Enterprise",
+            "description": "Za lance restorana",
+            "price": "Po dogovoru",
+            "priceValue": "200",
+            "billingCycle": "/ mjesečno",
+            "button": "Kontaktiraj prodaju",
+            "features": {
+              "feat0": "Neograničeno POS terminala",
+              "feat1": "Sve iz Profesional",
+              "feat2": "Multi-lokacijski dashboard",
+              "feat3": "Dedikovan account manager",
+              "feat4": "Custom integracije",
+              "feat5": "Obuka na lokaciji",
+              "feat6": "White-glove migracija"
+            }
+          },
+          "standard": {
+            "title": "Profesional",
+            "description": "Za ozbiljne restorane spremne za rast",
+            "price": "199 KM",
+            "billingCycle": "/ mjesečno",
+            "button": "Počni 30 dana besplatno",
+            "features": {
+              "feat0": "3 POS terminala uključena",
+              "feat1": "Sve iz Osnovnog",
+              "feat2": "Napredna analitika",
+              "feat3": "Upravljanje zalihama",
+              "feat4": "Raspored osoblja",
+              "feat5": "Program lojalnosti"
+            },
+            "badge": "popularno"
+          },
+          "start": {
+            "title": "Osnovni",
+            "description": "Savršen za kafiće i male restorane",
+            "price": "119 KM",
+            "priceValue": "119",
+            "billingCycle": "/ mjesečno",
+            "button": "Počni 30 dana besplatno",
+            "features": {
+              "feat0": "1 POS terminal uključen",
+              "feat1": "Neograničen meni",
+              "feat2": "Rad po stolovima",
+              "feat3": "24/7 podrška uživo",
+              "feat4": "Besplatna instalacija (1.200 KM vrijednost)",
+              "feat5": "Besplatna obuka (600 KM vrijednost)",
+              "feat6": "Sve integracije uključene",
+              "feat7": "Bez ugovorne obaveze"
+            }
+          }
+        },
+        "retail": {
+          "premium": {
+            "title": "Enterprise",
+            "description": "Za lance prodavnica",
+            "price": "Po dogovoru",
+            "priceValue": "200",
+            "billingCycle": "/ mjesečno",
+            "button": "Kontaktiraj prodaju",
+            "features": {
+              "feat0": "Neograničeno terminala",
+              "feat1": "Sve iz Profesional",
+              "feat2": "Custom integracije",
+              "feat3": "Dedikovan account manager"
+            }
+          },
+          "standard": {
+            "title": "Profesional",
+            "description": "Za rastuće trgovine",
+            "price": "159 KM",
+            "priceValue": "159",
+            "billingCycle": "/ mjesečno",
+            "button": "Počni 30 dana besplatno",
+            "features": {
+              "feat0": "3 POS terminala uključena",
+              "feat1": "Sve iz Osnovnog",
+              "feat2": "Program lojalnosti",
+              "feat3": "Upravljanje nabavkom",
+              "feat4": "Multi-lokacijske zalihe"
+            },
+            "badge": "Najpopularniji"
+          },
+          "start": {
+            "title": "Osnovni",
+            "description": "Savršen za male prodavnice",
+            "price": "79 KM",
+            "priceValue": "79",
+            "billingCycle": "/ mjesečno",
+            "button": "Počni 30 dana besplatno",
+            "features": {
+              "feat0": "1 POS terminal uključen",
+              "feat1": "Neograničeno artikala",
+              "feat2": "Skeniranje barkoda",
+              "feat3": "24/7 podrška uživo",
+              "feat4": "Besplatna instalacija",
+              "feat5": "Praćenje zaliha",
+              "feat6": "Analitika prodaje"
+            }
+          }
         }
       },
-      "standard": {
-        "title": "Profesional",
-        "description": "Za ozbiljne restorane spremne za rast",
-        "price": "199 KM",
-        "billingCycle": "/ mjesečno",
-        "button": "Počni 30 dana besplatno",
-        "features": {
-          "feat0": "3 POS terminala uključena",
-          "feat1": "Sve iz Osnovnog",
-          "feat2": "Napredna analitika",
-          "feat3": "Upravljanje zalihama",
-          "feat4": "Raspored osoblja",
-          "feat5": "Program lojalnosti"
-        },
-        "badge": "popularno"
-      },
-      "start": {
-        "title": "Osnovni",
-        "description": "Savršen za kafiće i male restorane",
-        "price": "119 KM",
-        "priceValue": "119",
-        "billingCycle": "/ mjesečno",
-        "button": "Počni 30 dana besplatno",
-        "features": {
-          "feat0": "1 POS terminal uključen",
-          "feat1": "Neograničen meni",
-          "feat2": "Rad po stolovima",
-          "feat3": "24/7 podrška uživo",
-          "feat4": "Besplatna instalacija (1.200 KM vrijednost)",
-          "feat5": "Besplatna obuka (600 KM vrijednost)",
-          "feat6": "Sve integracije uključene",
-          "feat7": "Bez ugovorne obaveze"
+      "faq": {
+        "pricing": {
+          "a1": "Imamo tri paketa: Start (59 KM), Standard (99 KM) i Premium (199 KM) mjesečno. Svaki paket uključuje različite funkcionalnosti.",
+          "a2": "Ne, nema skrivenih troškova. Cijena paketa uključuje sve - ažuriranja, podršku i hosting. Plaćate samo mjesečnu pretplatu.",
+          "q1": "Koliko košta Konty?",
+          "q2": "Ima li skrivenih troškova?"
         }
       }
     },
-    "retail": {
-      "premium": {
-        "title": "Enterprise",
-        "description": "Za lance prodavnica",
-        "price": "Po dogovoru",
-        "priceValue": "200",
-        "billingCycle": "/ mjesečno",
-        "button": "Kontaktiraj prodaju",
-        "features": {
-          "feat0": "Neograničeno terminala",
-          "feat1": "Sve iz Profesional",
-          "feat2": "Custom integracije",
-          "feat3": "Dedikovan account manager"
+    "products": {
+      "features": {
+        "hospitality": {
+          "description": "Kad subota uveče postane haos, ovo su jedine funkcije koje su bitne.",
+          "kitchenDisplay": {
+            "description": "Svaka narudžba sačuvana lokalno prije cloud-a. Internet pao? Kuhinja radi. Struja trepnula? Sve je tu. Nikad ne izgubi catering od 600 KM.",
+            "title": "Narudžbe koje se ne gube"
+          },
+          "staffManagement": {
+            "description": "Interfejs otporan na greške. Bez muke sa dodacima. Bez potrebe za šefom. I pomoćnik može da radi. Smanji vrijeme obuke za 75%.",
+            "title": "Novi konobar? Obučen za 15 minuta"
+          },
+          "tableManagement": {
+            "description": "Sinhronizacija u realnom vremenu radi i offline. Hostesa vidi što i konobar. Bez ljutih gostiju, bez poklanjanja. Uštedi 1.000+ KM nedjeljno.",
+            "title": "Nema više duplih rezervacija"
+          },
+          "title": "Rješenja za probleme u 3 ujutru"
+        },
+        "retail": {
+          "customerInsights": {
+            "description": "Vidi šablone koje ljudi propuštaju. Šalji ponude koje se kupuju. Bez diplome iz analitike. 3x veća konverzija.",
+            "title": "Znaj šta će kupiti prije njih"
+          },
+          "description": "Fokusiraj se na kupce, ne na probleme sa tehnikom.",
+          "inventory": {
+            "description": "Automatska narudžba prije nestanka. Upozorenja koja rade. Nikad ne vraćaj kupce. Povećaj prodaju 15% bez out-of-stock.",
+            "title": "Nikad bez najprodavanijih artikala"
+          },
+          "quickCheckout": {
+            "description": "Skeniraj, naplati, gotovo. Radi sa svim karticama. Brži red, kupci se vraćaju. 40% više kupaca u špicu.",
+            "title": "Naplata za 30 sekundi, ne 3 minuta"
+          },
+          "title": "Prodaj više. Manje brojanja. Bez stresa."
         }
       },
-      "standard": {
-        "title": "Profesional",
-        "description": "Za rastuće trgovine",
-        "price": "159 KM",
-        "priceValue": "159",
-        "billingCycle": "/ mjesečno",
-        "button": "Počni 30 dana besplatno",
-        "features": {
-          "feat0": "3 POS terminala uključena",
-          "feat1": "Sve iz Osnovnog",
-          "feat2": "Program lojalnosti",
-          "feat3": "Upravljanje nabavkom",
-          "feat4": "Multi-lokacijske zalihe"
-        },
-        "badge": "Najpopularniji"
-      },
-      "start": {
-        "title": "Osnovni",
-        "description": "Savršen za male prodavnice",
-        "price": "79 KM",
-        "priceValue": "79",
-        "billingCycle": "/ mjesečno",
-        "button": "Počni 30 dana besplatno",
-        "features": {
-          "feat0": "1 POS terminal uključen",
-          "feat1": "Neograničeno artikala",
-          "feat2": "Skeniranje barkoda",
-          "feat3": "24/7 podrška uživo",
-          "feat4": "Besplatna instalacija",
-          "feat5": "Praćenje zaliha",
-          "feat6": "Analitika prodaje"
+      "faq": {
+        "general": {
+          "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
+          "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
+          "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
+          "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u BiH. Automatski izdaje fiskalne račune prema propisima.",
+          "a5": "Dobijate 30 dana besplatnog korištenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
+          "q1": "Šta je Konty POS sistem?",
+          "q2": "Mogu li koristiti Konty bez interneta?",
+          "q3": "Koliko brzo mogu početi sa korištenjem?",
+          "q4": "Da li Konty podržava fiskalizaciju?",
+          "q5": "Kako funkcioniše besplatni probni period?"
         }
       }
     },
-    "title": "Poštene cijene. Bez skrivenih troškova."
-  },
-  "retailPage": {
-    "hero": {
-      "cta": "Počni besplatno",
-      "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
-      "subtitle": "POS koji stvarno radi na Black Friday. 99.97% uptime kad drugi pucaju.",
-      "title": "Prodaj više. Manje brojanja. Bez stresa.",
-      "viewDemo": "2-minutni demo"
-    }
-  },
-  "schema": {
-    "requirements": {
-      "minimal": "Windows 10+, macOS 10.14+, Android 8+, iOS 12+",
-      "software": "2GB RAM minimum, Internet konekcija za cloud sinhronizaciju"
+    "kontyHospitality": {
+      "hero": {
+        "cta": "Počni besplatno",
+        "features": "Nikad ne puca • Prava podrška • Bez ugovora",
+        "subtitle": "Kad udari subota uveče, trebaš POS koji neće da te izda. 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
+        "title": "Za restorane koji ne smiju da stanu",
+        "viewPricing": "Vidi cijene"
+      }
     },
-    "permissions": {
-      "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
+    "kontyRetail": {
+      "hero": {
+        "cta": "Počni besplatno",
+        "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
+        "subtitle": "POS koji stvarno radi na Black Friday. 99.97% uptime kad drugi pucaju.",
+        "title": "Prodaj više. Manje brojanja. Bez stresa.",
+        "viewDemo": "2-minutni demo"
+      }
     },
-    "screenshots": {
-      "retail": "/images/screenshots/konty-retail-dashboard.png"
+    "demo": {
+      "demo": {
+        "description": "Pokaži nam trenutni setup. Pokazat ćemo tačno koliko štediš.",
+        "revolutionize": "Gledaj kako radiš bez prekida kad drugi pucaju",
+        "seeInAction": "Vidi kako Konty radi u najgoroj večeri"
+      }
+    },
+    "contact": {
+      "title": "Vidi svoj setup za 15 minuta",
+      "description": "Reci nam o svom restoranu. Pokazat ćemo tačno kako Konty rješava tvoje probleme."
     }
   },
   "seo": {
@@ -362,137 +453,71 @@
       "title": "Uslovi korištenja - Konty"
     }
   },
-  "statistics": {
-    "stat1": {
-      "description": "Radi kad je najbitnije",
-      "suffix": "%"
-    },
-    "stat2": {
-      "description": "Pravi čovjek javlja se",
-      "suffix": " sekundi"
-    },
-    "stat3": {
-      "description": "Preživjeli smo sve",
-      "suffix": " godina"
-    }
-  },
-  "testimonials": {
-    "description": "Prave priče od kolega koji su prešli i preživjeli najgore večeri",
-    "t1": {
-      "name": "Miloš Petrović",
-      "quote": "Prije Konty sistema imali smo problem sa praćenjem stolova i narudžbi. Sada konobari rade brže, kuhinja je uvijek sinhronizovana, a gosti primjete koliko je usluga efikasnija.",
-      "role": "Vlasnik restorana \"Dolina Ukusa\""
-    },
-    "t2": {
-      "name": "Jelena Marković",
-      "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno imam jasnu sliku o proizvodima koji se najbolje prodaju, a izvještaji mi pomažu da donosim brže odluke.",
-      "role": "Vlasnica butika \"Moda J\""
-    },
-    "t3": {
-      "name": "Nikola Jovanović",
-      "quote": "Uštedjeli smo sate administracije zahvaljujući Konty sistemu. Sve je pregledno – od smjena konobara do izvještaja o prometu na kraju dana.",
-      "role": "Menadžer kafića \"Urban Bar\""
-    },
-    "t4": {
-      "name": "Ana Lazić",
-      "quote": "Prelazak na Konty je bio pravo olakšanje. Nema više gubljenja računa ni nesporazuma sa mušterijama – blagajna radi savršeno i brza je kao što smo željeli.",
-      "role": "Vlasnica pekare \"Miris Kruha\""
-    },
-    "t5": {
-      "name": "Dragan Ilić",
-      "quote": "Konty POS mi omogućava da kontrolišem više lokacija sa jednog mjesta. Prodaja, lager i izvještaji su uvijek ažurni – štedi mi sate i sate posla svake sedmice.",
-      "role": "Lanac kioska \"Mini Market\""
-    },
-    "t6": {
-      "name": "Ivana Ristić",
-      "quote": "Preporučujem Konty svojim klijentima jer je jednostavan, pouzdan i lako se obučava osoblje. U poređenju sa starim sistemima, razlika je nebo i zemlja.",
-      "role": "Frilenser i konsultant za ugostiteljstvo"
-    },
-    "t7": {
-      "name": "Marko Kovačević",
-      "quote": "Sviđa mi se koliko je interfejs jasan i moderan. Moji zaposleni su za manje od jednog dana u potpunosti savladali sistem.",
-      "role": "Vlasnik poslastičarnice \"Slatki Kutak\""
-    },
-    "t8": {
-      "name": "Sara Nikolić",
-      "quote": "Konty POS koristim već godinu dana i mogu reći da mi je pomogao da povećam profitabilnost i smanjim troškove. Za svaki mali biznis – ovo je pravi izbor.",
-      "role": "Preduzetnica i članica Udruženja malih biznisa"
-    },
-    "title": "Vlasnici restorana koji sada mirno spavaju"
-  },
-  "products": {
-    "name": "Konty POS",
-    "retail": {
-      "name": "Konty Trgovina"
-    }
-  },
-  "nuxtSiteConfig": {
-    "name": "Konty POS",
-    "description": "Moderni POS sistem za restorane i maloprodaju. 26+ godina pouzdanosti. 9000+ preduzeća nam vjeruje."
-  },
-  "company": {
-    "legalName": "Codeux d.o.o. Beograd",
-    "tradeName": "Codeux",
-    "vatID": "112821082",
-    "registrationNumber": "21746282",
-    "foundingDate": "2021-12-22",
-    "founder": "Nikola Ljumovic",
-    "geo": {
-      "latitude": "44.8125",
-      "longitude": "20.4612"
-    },
-    "paymentAccepted": "Credit Card",
-    "businessHours": {
-      "weekdays": {
-        "opens": "09:00",
-        "closes": "17:00"
+  "data": {
+    "company": {
+      "tradeName": "Codeux",
+      "vatID": "112821082",
+      "foundingDate": "2021-12-22",
+      "founder": "Nikola Ljumovic",
+      "geo": {
+        "latitude": "44.8125",
+        "longitude": "20.4612"
+      },
+      "paymentAccepted": "Credit Card",
+      "businessHours": {
+        "weekdays": {
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      "address": {
+        "street": "Trnska 7",
+        "city": "Belgrade",
+        "region": "Belgrade",
+        "postalCode": "11000",
+        "countryCode": "RS"
+      },
+      "contact": {
+        "phone": "+38267607670",
+        "email": "contact&#64;konty.com"
+      },
+      "areaServed": [
+        "US",
+        "RS",
+        "ME",
+        "BA",
+        "HR"
+      ],
+      "knowsAbout": [
+        "POS sistemi",
+        "Softver za upravljanje restoranima",
+        "Softver za upravljanje maloprodajom",
+        "Upravljanje zalihama",
+        "Fiskalna usklađenost",
+        "POS rešenja u oblaku"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/kontypos",
+        "linkedin": "https://www.linkedin.com/company/kontypos",
+        "instagram": "https://www.instagram.com/kontypos"
       }
     },
-    "address": {
-      "street": "Trnska 7",
-      "city": "Belgrade",
-      "region": "Belgrade",
-      "postalCode": "11000",
-      "country": "Serbia",
-      "countryCode": "RS"
-    },
-    "contact": {
-      "phone": "+38267607670",
-      "email": "contact&#64;konty.com",
-      "supportEmail": "support&#64;konty.com",
-      "salesEmail": "sales&#64;konty.com"
-    },
-    "areaServed": ["US", "RS", "ME", "BA", "HR"],
-    "availableLanguage": ["Serbian", "Bosnian", "Croatian", "English"],
-    "numberOfEmployees": {
-      "min": 1,
-      "max": 20
-    },
-    "knowsAbout": [
-      "POS sistemi",
-      "Softver za upravljanje restoranima",
-      "Softver za upravljanje maloprodajom",
-      "Upravljanje zalihama",
-      "Fiskalna usklađenost",
-      "POS rešenja u oblaku"
-    ],
-    "social": {
-      "facebook": "https://www.facebook.com/kontypos",
-      "linkedin": "https://www.linkedin.com/company/kontypos",
-      "instagram": "https://www.instagram.com/kontypos"
+    "products": {
+      "name": "Konty POS",
+      "retail": {
+        "name": "Konty Trgovina"
+      }
     }
   },
-  "breadcrumb": {
-    "items": {
-      "index": "Početna",
-      "pricing": "Cijene",
-      "products": "Proizvodi",
-      "konty-retail": "Trgovina",
-      "konty-hospitality": "Ugostiteljstvo",
-      "about": "O nama",
-      "demo": "Demo",
-      "privacy": "Privatnost",
-      "terms": "Uslovi"
+  "schema": {
+    "requirements": {
+      "software": "2GB RAM minimum, Internet konekcija za cloud sinhronizaciju"
+    },
+    "permissions": {
+      "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
+    },
+    "screenshots": {
+      "retail": "/images/screenshots/konty-retail-dashboard.png"
     }
   }
 }

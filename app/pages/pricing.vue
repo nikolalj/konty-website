@@ -22,26 +22,26 @@ usePageSeo({
 
 // OG Image generation with localized pricing
 defineOgImageComponent('Pricing', {
-  title: t('pricing.title'),
+  title: t('pages.pricing.title'),
   currency: currentLocale?.currencySymbol,
-  period: t('pricing.retail.start.billingCycle'),
-  cta: t('pricing.freeTrial'),
-  ctaSubtext: t('pricing.retail.start.button'),
+  period: t('pages.pricing.plans.retail.start.billingCycle'),
+  cta: t('pages.pricing.freeTrial'),
+  ctaSubtext: t('pages.pricing.plans.retail.start.button'),
   plans: [
     {
-      name: t('pricing.retail.start.title'),
-      price: t('pricing.retail.start.priceValue'),
+      name: t('pages.pricing.plans.retail.start.title'),
+      price: t('pages.pricing.plans.retail.start.priceValue'),
       badge: ''
     },
     {
-      name: t('pricing.retail.standard.title'),
-      price: t('pricing.retail.standard.priceValue'),
+      name: t('pages.pricing.plans.retail.standard.title'),
+      price: t('pages.pricing.plans.retail.standard.priceValue'),
       popular: true,
-      badge: t('pricing.retail.standard.badge')
+      badge: t('pages.pricing.plans.retail.standard.badge')
     },
     {
-      name: t('pricing.retail.premium.title'),
-      price: t('pricing.retail.premium.priceValue'),
+      name: t('pages.pricing.plans.retail.premium.title'),
+      price: t('pages.pricing.plans.retail.premium.priceValue'),
       badge: ''
     }
   ]

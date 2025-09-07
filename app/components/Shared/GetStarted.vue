@@ -1,6 +1,6 @@
 <template>
   <UPageSection
-    :title="t('getStarted.title')"
+    :title="t('pages.home.getStarted.title')"
     orientation="horizontal"
     :features="features"
     :reverse="product !== 'kontyRetail'"
@@ -33,26 +33,26 @@ const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
 
 const features = computed(() => [
   {
-    title: t('getStarted.certificate.title'),
-    description: t('getStarted.certificate.description'),
+    title: t('pages.home.getStarted.certificate.title'),
+    description: t('pages.home.getStarted.certificate.description'),
     icon: 'i-lucide-shield-check',
     to: localePath('#')
   },
   {
-    title: t('getStarted.sepPortal.title'),
-    description: t('getStarted.sepPortal.description'),
+    title: t('pages.home.getStarted.sepPortal.title'),
+    description: t('pages.home.getStarted.sepPortal.description'),
     icon: 'i-lucide-user-round-pen',
     to: localePath('#')
   },
   {
-    title: t('getStarted.equipment.title'),
-    description: t('getStarted.equipment.description'),
+    title: t('pages.home.getStarted.equipment.title'),
+    description: t('pages.home.getStarted.equipment.description'),
     icon: 'i-lucide-smartphone',
     to: localePath('#')
   },
   {
-    title: t('getStarted.register.title'),
-    description: t('getStarted.register.description'),
+    title: t('pages.home.getStarted.register.title'),
+    description: t('pages.home.getStarted.register.description'),
     icon: 'i-lucide-user-round-check',
     to: localePath('#')
   }

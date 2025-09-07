@@ -75,12 +75,12 @@ watch(productInternal, val => emit('update:modelValue', val))
 
 const items = ref<TabsItem[]>([
   {
-    label: t('common.hospitality'),
+    label: t('ui.common.labels.hospitality'),
     icon: 'i-lucide-utensils-crossed',
     value: 'kontyHospitality'
   },
   {
-    label: t('common.retail'),
+    label: t('ui.common.labels.retail'),
     icon: 'i-lucide-shopping-bag',
     value: 'kontyRetail'
   }

@@ -171,9 +171,9 @@
         size="lg"
         variant="solid"
         color="primary"
-        :aria-label="t('hero.cta.primary')"
+        :aria-label="t('pages.home.hero.cta.primary')"
       >
-        {{ t('hero.cta.primary') }}
+        {{ t('pages.home.hero.cta.primary') }}
       </UButton>
 
       <AppCountrySelector class="ml-2" />
@@ -214,57 +214,57 @@ watch(y, () => {
 
 const items = computed(() => [
   {
-    label: t('nav.products'),
+    label: t('ui.navigation.main.products'),
     class: 'font-bold',
     slot: 'products' as const,
     children: [
       {
-        label: t('nav.forHospitality'),
-        description: t('nav.hospitalityDesc'),
+        label: t('ui.navigation.productNames.forHospitality'),
+        description: t('ui.navigation.main.hospitalityDesc'),
         to: localePath('/konty-hospitality')
       },
       {
-        label: t('nav.forRetail'),
-        description: t('nav.retailDesc'),
+        label: t('ui.navigation.productNames.forRetail'),
+        description: t('ui.navigation.main.retailDesc'),
         to: localePath('/konty-retail')
       }
     ]
   },
   {
-    label: t('nav.hospitality'),
+    label: t('ui.navigation.main.hospitality'),
     class: 'font-bold',
     slot: 'hospitality' as const,
     to: localePath('/konty-hospitality'),
     children: [
-      { label: t('nav.barLounge'), to: localePath('/about') },
-      { label: t('nav.casualDining'), to: localePath('/about') },
-      { label: t('nav.cafeBakery'), to: localePath('/about') },
-      { label: t('nav.fineDining'), to: localePath('/about') },
-      { label: t('nav.enterprise'), to: localePath('/about') },
-      { label: t('nav.foodTruck'), to: localePath('/about') },
-      { label: t('nav.pizzeria'), to: localePath('/about') },
-      { label: t('nav.hotelRestaurant'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.barLounge'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.casualDining'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.cafeBakery'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.fineDining'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.enterprise'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.foodTruck'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.pizzeria'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.hotelRestaurant'), to: localePath('/about') },
     ]
   },
   {
-    label: t('nav.retail'),
+    label: t('ui.navigation.main.retail'),
     class: 'font-bold',
     to: localePath('/konty-retail'),
     slot: 'retail' as const,
     children: [
-      { label: t('nav.generalStore'), to: localePath('/about') },
-      { label: t('nav.liquorStore'), to: localePath('/about') },
-      { label: t('nav.supermarket'), to: localePath('/about') },
-      { label: t('nav.butcherShop'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.generalStore'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.liquorStore'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.supermarket'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.butcherShop'), to: localePath('/about') },
     ]
   },
   {
-    label: t('nav.pricing'),
+    label: t('ui.navigation.main.pricing'),
     class: 'font-bold',
     to: localePath('/pricing')
   },
   {
-    label: t('nav.about'),
+    label: t('ui.navigation.main.about'),
     class: 'font-bold',
     to: localePath('/about')
   }

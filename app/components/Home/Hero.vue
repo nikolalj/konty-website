@@ -2,21 +2,21 @@
 <template>
   <section
     class="py-28 sm:py-34 bg-fixed relative isolate bg-[url('/images/hero/bg-light.avif')] dark:bg-[url('/images/hero/bg-dark.avif')] bg-cover bg-no-repeat bg-center"
-    :aria-label="t('hero.title')"
+    :aria-label="t('pages.home.hero.title')"
   >
     <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
       <UIAppear direction="right" :distance="64">
         <div>
           <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
-            {{ t('hero.tagline') }}
+            {{ t('pages.home.hero.tagline') }}
           </div>
 
           <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">
-            {{ t('hero.title') }}
+            {{ t('pages.home.hero.title') }}
           </h1>
 
           <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">
-            {{ t('hero.subtitle') }}
+            {{ t('pages.home.hero.subtitle') }}
           </p>
 
           <div class="mt-10">
@@ -28,7 +28,7 @@
                 class="text-base"
                 @click="onPrimaryCta"
               >
-                {{ t('hero.cta.primary') }}
+                {{ t('pages.home.hero.cta.primary') }}
               </UButton>
             </div>
           </div>

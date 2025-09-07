@@ -23,7 +23,7 @@ usePageSeo({
 defineOgImageComponent('Main', {
   title: t('seo.about.title'),
   description: t('seo.about.description'),
-  cta: t('contact.form.submit')
+  cta: t('ui.forms.buttons.submit')
 })
 
 // LocalBusiness schema for About/Contact page

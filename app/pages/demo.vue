@@ -17,9 +17,9 @@ usePageSeo({
 
 // OG Image generation for Demo page
 defineOgImageComponent('Main', {
-  title: t('demo.seeInAction'),
-  description: t('demo.description'),
-  badge: t('pricing.freeTrial'),
-  cta: t('demo.requestDemo')
+  title: t('pages.demo.demo.seeInAction'),
+  description: t('pages.demo.demo.description'),
+  badge: t('pages.pricing.freeTrial'),
+  cta: t('ui.forms.buttons.requestDemo')
 })
 </script>

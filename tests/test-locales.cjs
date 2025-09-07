@@ -51,6 +51,15 @@ localeFiles.forEach(file => {
   localeData[locale] = JSON.parse(content);
 });
 
+// Dynamically detect valid prefixes from the actual locale files
+const validPrefixes = new Set();
+Object.values(localeData).forEach(data => {
+  Object.keys(data).forEach(key => {
+    validPrefixes.add(key);
+  });
+});
+logInfo(`Detected translation prefixes: ${[...validPrefixes].join(', ')}`);
+
 // Function to get all keys recursively with full paths
 function getAllKeys(obj, prefix = '') {
   let keys = [];
@@ -144,21 +153,33 @@ log('└────────────────────────
 
 // Search for translation usage patterns in Vue files and composables
 const appDir = path.join(__dirname, '../app');
+
+// Build dynamic patterns based on detected prefixes
+const prefixPattern = [...validPrefixes].join('|');
 const searchPatterns = [
   /\$t\(['"`]([^'"`]+)['"`]/g,           // $t('key')
   /(?<![a-zA-Z])t\(['"`]([^'"`]+)['"`]/g, // t('key') - with word boundary
   /\$i18n\.t\(['"`]([^'"`]+)['"`]/g,     // $i18n.t('key')
   /i18n\.t\(['"`]([^'"`]+)['"`]/g,       // i18n.t('key')
-  /\$t\(`([^`]+)`/g,                     // $t(`key`) - template literals
-  /(?<![a-zA-Z])t\(`([^`]+)`/g,          // t(`key`) - template literals
+  /\$t\(`([^`]+)`/g,                     // $t(`key`) - template literals in t()
+  /(?<![a-zA-Z])t\(`([^`]+)`/g,          // t(`key`) - template literals in t()
   /\$t\(['"`]([^'"`]+)['"`]\s*,/g,       // $t('key', 'fallback') - with fallback
   /(?<![a-zA-Z])t\(['"`]([^'"`]+)['"`]\s*,/g, // t('key', 'fallback') - with fallback
+  // New patterns for edge cases
+  /['"`]([a-zA-Z][a-zA-Z0-9]*(?:\.[a-zA-Z][a-zA-Z0-9]*){2,})['"`]/g, // String literals that look like translation keys (3+ segments)
+  /tArray\(['"`]([^'"`]+)['"`]\)/g,      // tArray('key') helper function
+  /tObject\(['"`]([^'"`]+)['"`]\)/g,     // tObject('key') helper function
+  /labelKey:\s*['"`]([^'"`]+)['"`]/g,    // labelKey: 'key' in objects
+  /translationKey:\s*['"`]([^'"`]+)['"`]/g, // translationKey: 'key' in objects
+  // Dynamic patterns based on actual prefixes
+  new RegExp(`(?:label|title|description|placeholder|message|text):\\s*['"\`]((?:${prefixPattern})[a-zA-Z0-9.]+)['"\`]`, 'g'),
+  new RegExp(`(?:label|title|description|placeholder|message|text):\\s*\`((?:${prefixPattern})[^\`]+)\``, 'g'),
 ];
 
 const usedKeys = new Set();
 
 // Function to extract keys from file content
-function extractKeysFromContent(content) {
+function extractKeysFromContent(content, filePath, validPrefixes) {
   const keys = new Set();
   
   searchPatterns.forEach(pattern => {
@@ -173,10 +194,44 @@ function extractKeysFromContent(content) {
       if (key === '/' || key === '.' || key === ';' || key === '=' || key === 'T') continue;
       if (['script', 'style', 'template', 'error', 'load', 'CTA', 'Conversion', 'Engagement', 
            'External Link', 'File Download', 'Lead Generation', 'web-vitals', 'konty:cookie-consent',
-           'update:modelValue'].includes(key)) continue;
+           'update:modelValue', 'click', 'submit', 'change', 'input', 'focus', 'blur'].includes(key)) continue;
       if (!key.match(/^[a-zA-Z]/)) continue; // Keys should start with a letter
       if (key.includes(':') && !key.includes('.')) continue; // Skip event names
-      if (!key.includes('.') && key.length < 4) continue; // Very short keys without dots are likely not translation keys
+      
+      // Additional validation for string literals that look like translation keys
+      if (pattern.source.includes('(?:\\.') && key.split('.').length >= 3) {
+        // This is a string literal pattern - validate it looks like a translation key
+        const segments = key.split('.');
+        // Each segment must start with letter and contain only letters/numbers
+        // Also reject segments that are just single letters (except common ones like 'i18n')
+        const validKey = segments.every((seg, idx) => {
+          if (!/^[a-zA-Z][a-zA-Z0-9]*$/.test(seg)) return false;
+          // Reject single letter segments unless it's a known abbreviation
+          if (seg.length === 1 && seg !== 'i') return false;
+          // Reject segments that are pure numbers after the first character
+          if (idx > 0 && /^\d+$/.test(seg.slice(1))) return false;
+          return true;
+        });
+        if (!validKey) continue;
+        
+        // Check if first segment matches actual prefixes from locale files
+        const firstSegment = segments[0];
+        if (!validPrefixes.has(firstSegment)) {
+          continue;
+        }
+      }
+      
+      // Skip very short keys without dots unless they're in a translation function
+      if (!key.includes('.') && key.length < 4 && !pattern.source.includes('\\$t\\(')) continue;
+      
+      // Additional validation for 2-segment keys
+      if (key.split('.').length === 2) {
+        const segments = key.split('.');
+        // Both segments should be meaningful (at least 2 chars each)
+        if (segments.some(seg => seg.length < 2)) continue;
+        // Second segment shouldn't be just numbers
+        if (/^\d+$/.test(segments[1])) continue;
+      }
       
       if (key.includes('${')) {
         // For dynamic keys, try to extract the base pattern
@@ -195,7 +250,7 @@ function extractKeysFromContent(content) {
 }
 
 // Recursively search for translation keys in all relevant files
-function searchDirectory(dir) {
+function searchDirectory(dir, validPrefixes) {
   const files = fs.readdirSync(dir);
   
   files.forEach(file => {
@@ -203,16 +258,16 @@ function searchDirectory(dir) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      searchDirectory(fullPath);
+      searchDirectory(fullPath, validPrefixes);
     } else if (stat.isFile() && (file.endsWith('.vue') || file.endsWith('.ts') || file.endsWith('.js'))) {
       const content = fs.readFileSync(fullPath, 'utf8');
-      const keys = extractKeysFromContent(content);
+      const keys = extractKeysFromContent(content, fullPath, validPrefixes);
       keys.forEach(key => usedKeys.add(key));
     }
   });
 }
 
-searchDirectory(appDir);
+searchDirectory(appDir, validPrefixes);
 logInfo(`Found ${usedKeys.size} unique translation keys used in the app`);
 
 // Check if all used keys exist in locale files
@@ -230,9 +285,14 @@ usedKeys.forEach(usedKey => {
       test2Passed = false;
     }
   } else {
+    // Check if the key exists directly
     if (!allLocaleKeys.includes(usedKey)) {
-      missingKeysInLocales.push(usedKey);
-      test2Passed = false;
+      // Check if it's a parent key that has children
+      const hasChildren = allLocaleKeys.some(k => k.startsWith(usedKey + '.'));
+      if (!hasChildren) {
+        missingKeysInLocales.push(usedKey);
+        test2Passed = false;
+      }
     }
   }
 });
@@ -281,6 +341,19 @@ allLocaleKeys.forEach(localeKey => {
     if (isParentKey) {
       // Parent keys might not be directly used but are structural
       isUsed = true;
+    }
+  }
+  
+  // Check if a parent of this key is used (e.g., data.company.social is used, so data.company.social.facebook is also used)
+  if (!isUsed) {
+    const keyParts = localeKey.split('.');
+    for (let i = keyParts.length - 1; i > 0; i--) {
+      const parentKey = keyParts.slice(0, i).join('.');
+      if (usedKeys.has(parentKey)) {
+        // Parent is used, so this child is also considered used
+        isUsed = true;
+        break;
+      }
     }
   }
   

@@ -53,8 +53,8 @@ const props = defineProps({
 const { t } = useI18n()
 
 const config = ref({
-  title: t('clients.title'),
-  description: t('clients.description')
+  title: t('pages.home.clients.title'),
+  description: t('pages.home.clients.description')
 })
 
 const clients = ref([

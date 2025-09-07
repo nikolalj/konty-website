@@ -39,7 +39,7 @@
               color="primary"
               variant="soft"
             >
-              {{ t('common.recommended', 'Recommended') }}
+              {{ t('ui.common.labels.recommended', 'Recommended') }}
             </UBadge>
 
             <UIcon

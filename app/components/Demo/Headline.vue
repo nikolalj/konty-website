@@ -3,10 +3,10 @@
     <UContainer>
       <div class="text-center">
         <h1 class="text-5xl font-bold text-gray-900 mb-6">
-          {{ t('demo.seeInAction') }}
+          {{ t('pages.demo.demo.seeInAction') }}
         </h1>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          {{ t('demo.revolutionize') }}
+          {{ t('pages.demo.demo.revolutionize') }}
         </p>
       </div>
     </UContainer>

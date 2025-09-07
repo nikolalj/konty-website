@@ -131,7 +131,6 @@ export default defineNuxtConfig({
       'mailto:*',     // Email links
       'tel:*',        // Phone links
       'sms:*',        // SMS links
-      '#*'            // Anchor links
     ],
 
     // Don't fail builds on broken links (just warn)
@@ -139,8 +138,9 @@ export default defineNuxtConfig({
 
     // Report settings
     report: {
-      html: true,      // Generate HTML report
-      markdown: true   // Generate markdown report for CI
+      html: true,
+      markdown: true,
+      json: true
     },
 
     // Only run in production builds

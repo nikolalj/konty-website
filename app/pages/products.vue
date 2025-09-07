@@ -18,9 +18,9 @@ usePageSeo({
 
 // OG Image generation for Products overview
 defineOgImageComponent('Main', {
-  title: t('nav.products'),
+  title: t('ui.navigation.main.products'),
   description: t('seo.products.description'),
-  cta: t('hero.cta.primary')
+  cta: t('pages.home.hero.cta.primary')
 })
 
 // Use centralized schema

@@ -18,20 +18,20 @@
             color="neutral"
             variant="ghost"
             square
-            :aria-label="t('common.dismiss', 'Dismiss')"
+            :aria-label="t('ui.common.buttons.dismiss', 'Dismiss')"
             @click="dismissBanner()"
           >
             <UIcon name="i-lucide:x" class="size-3.5" />
           </UButton>
 
-          <p class="text-sm">{{ t('banner.suggestion', { country }) }}</p>
+          <p class="text-sm">{{ t('ui.banner.suggestion', { country }) }}</p>
 
           <UButton
             variant="ghost"
             size="sm"
             @click="stayOnThisLocale()"
           >
-            {{ t('common.stayHere') }}
+            {{ t('ui.common.buttons.stayHere') }}
           </UButton>
 
           <UButton
@@ -39,7 +39,7 @@
             size="sm"
             @click="acceptSuggestedLocale()"
           >
-            {{ t('banner.switchTo') }}
+            {{ t('ui.banner.switchTo') }}
           </UButton>
         </div>
       </div>

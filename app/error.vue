@@ -19,7 +19,7 @@
           variant="solid"
           block
         >
-          {{ t('error.goHome') }}
+          {{ t('ui.errors.400.actions.goHome') }}
         </UButton>
 
         <UButton
@@ -28,7 +28,7 @@
           variant="outline"
           block
         >
-          {{ t('error.viewPricing') }}
+          {{ t('ui.errors.400.actions.viewPricing') }}
         </UButton>
 
         <UButton
@@ -37,13 +37,13 @@
           variant="ghost"
           block
         >
-          {{ t('error.bookDemo') }}
+          {{ t('ui.errors.400.actions.bookDemo') }}
         </UButton>
       </div>
 
       <!-- Help text -->
       <p class="mt-8 text-sm text-gray-500 dark:text-gray-400">
-        {{ t('error.helpText') }}
+        {{ t('ui.errors.generic.helpText') }}
         <a href="mailto:support@konty.com" class="text-primary-500 hover:underline">
           support@konty.com
         </a>
@@ -60,15 +60,15 @@ const localePath = useLocalePath()
 // Determine error message
 const errorMessage = computed(() => {
   if (error.value?.statusCode === 404) {
-    return t('error.400')
+    return t('ui.errors.400.title')
   }
   if (error.value?.statusCode === 500) {
-    return t('error.500')
+    return t('ui.errors.500.title')
   }
   if (error.value?.statusCode === 403) {
-    return t('error.403')
+    return t('ui.errors.403.title')
   }
-  return t('error.generic')
+  return t('ui.errors.generic.title')
 })
 
 // SEO Meta for error pages - using useHead directly for reliability
