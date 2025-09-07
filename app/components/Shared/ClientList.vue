@@ -6,37 +6,26 @@
         :description="config.description"
       />
 
-      <!-- Client Logos Grid -->
+      <!-- Simplified Client Logos Grid - Less DOM nesting -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-        <UPageCard
-          v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
+        <a
+          v-for="(client, index) in filteredClients"
           :key="index"
+          :href="client.to"
           :title="client.name"
-          :to="client.to"
-          description="Nuxt UI v3 integrates with latest."
           target="_blank"
-          variant="outline"
-          spotlight
-          spotlight-color="primary"
-          :ui="{
-            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
-          }"
-          class="w-full bg-elevated hover:bg-muted cursor-pointer"
+          rel="noopener"
+          class="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full flex justify-center items-center"
         >
-          <div class="flex justify-center">
-            <NuxtImg
-              :src="client.logo"
-              format="avif"
-              loading="lazy"
-              :alt="client.name"
-              role="presentation"
-              width="80"
-              height="80"
-              quality="70"
-              fit="cover"
-            />
-          </div>
-        </UPageCard>
+          <img
+            :src="client.logo"
+            :alt="client.name"
+            loading="lazy"
+            width="80"
+            height="80"
+            class="opacity-60 group-hover:opacity-100 transition-opacity"
+          >
+        </a>
       </div>
     </UContainer>
   </section>
@@ -55,6 +44,11 @@ const { t } = useI18n()
 const config = ref({
   title: t('pages.home.clients.title'),
   description: t('pages.home.clients.description')
+})
+
+// Computed property for filtered clients
+const filteredClients = computed(() => {
+  return clients.value.filter(client => !props.product || client.product === props.product)
 })
 
 const clients = ref([
@@ -109,20 +103,3 @@ const clients = ref([
 ])
 </script>
 
-<style scoped>
-/* Additional custom styles if needed */
-.grid {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
