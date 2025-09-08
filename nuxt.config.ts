@@ -392,6 +392,7 @@ export default defineNuxtConfig({
     writeEarlyHints: true,       // HTTP/2 Server Push hints
     crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
     renderJsonPayloads: true,    // Optimize JSON payload rendering
+    appManifest: false,          // Disable app manifest for Cloudflare Workers compatibility
 
     // Link prefetching strategy - optimized for conversion
     defaults: {
