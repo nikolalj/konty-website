@@ -255,7 +255,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'cloudflare-module',
     cloudflare: {
-      deployConfig: true
+      deployConfig: false  // Use our wrangler.toml
     },
 
     minify: true,

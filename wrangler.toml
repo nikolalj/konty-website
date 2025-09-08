@@ -63,15 +63,3 @@ NUXT_UI_PRO_LICENSE = "24880184-C60C-472E-82F7-CBFE4D0A9ABA"
 # Staging also uses Smart Placement
 [env.staging.placement]
 mode = "smart"
-
-# Development environment (local testing)
-[env.development]
-name = "dev-konty-website"
-workers_dev = true
-
-[env.development.vars]
-NODE_ENV = "development"
-APP_ENV = "development"
-NUXT_PUBLIC_SITE_URL = "http://localhost:8787"
-GTM_ID = "GTM-5PP3XMG7"
-NUXT_UI_PRO_LICENSE = "24880184-C60C-472E-82F7-CBFE4D0A9ABA"

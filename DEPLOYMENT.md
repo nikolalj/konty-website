@@ -8,7 +8,7 @@
 wrangler login
 ```
 
-2. Build the project:
+2. Build the project (single build for all environments):
 ```bash
 pnpm build
 ```
@@ -25,9 +25,14 @@ pnpm deploy:staging
 
 ## Configuration Overview
 
-The `wrangler.toml` file is configured with:
+### Key Setup
+- **Nitro Config**: `deployConfig: false` - This allows us to use wrangler.toml with environments
+- **wrangler.toml**: Full environment support with production and staging configurations
+- **Single Build**: One build deployed to multiple environments
+
+### Features Enabled
 - ✅ **Smart Placement** - Automatically selects optimal edge location (Belgrade/Zagreb for Balkans)
-- ✅ **Environment Separation** - Production and staging environments
+- ✅ **Environment Separation** - Production and staging environments with different configs
 - ✅ **Node.js Compatibility** - Required for Nuxt/Nitro
 - ✅ **Observability** - Logging and analytics enabled
 - ✅ **Optimized Performance** - 50ms CPU limit for better performance
@@ -45,12 +50,20 @@ The `wrangler.toml` file is configured with:
 - `NUXT_PUBLIC_SITE_URL`: `https://staging-konty-website.codeusteam.workers.dev`
 - Same GTM_ID and license
 
+## Important: Why deployConfig is false
+
+We set `deployConfig: false` in nuxt.config.ts because:
+1. **Nitro's auto-generated wrangler.json doesn't support environments**
+2. **Wrangler blocks environments in "redirected" (generated) configs**
+3. **We need true Cloudflare environment separation for staging/production**
+4. **Single build can be deployed to multiple environments**
+
 ## Testing Edge Location
 
 After deployment, verify you're hitting the right edge:
 ```bash
 # Check production
-curl -I https://konty.com | grep cf-ray
+curl -I https://konty-website.codeusteam.workers.dev | grep cf-ray
 
 # Check staging  
 curl -I https://staging-konty-website.codeusteam.workers.dev | grep cf-ray
@@ -59,7 +72,7 @@ curl -I https://staging-konty-website.codeusteam.workers.dev | grep cf-ray
 Look for:
 - **BEG** = Belgrade ✅
 - **ZAG** = Zagreb ✅
-- **VIE** = Vienna ⚠️ (suboptimal for Balkans)
+- **VIE** = Vienna ⚠️ (suboptimal for Balkans, but Smart Placement should fix this)
 
 ## Optional: Enable KV for Locale Caching
 
