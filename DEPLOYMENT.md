@@ -35,7 +35,7 @@ pnpm deploy:staging
 - ✅ **Environment Separation** - Production and staging environments with different configs
 - ✅ **Node.js Compatibility** - Required for Nuxt/Nitro
 - ✅ **Observability** - Logging and analytics enabled
-- ✅ **Optimized Performance** - 50ms CPU limit for better performance
+- ⚠️ **CPU Limits** - Commented out (requires paid Workers plan)
 
 ## Environment Variables
 
@@ -49,6 +49,16 @@ pnpm deploy:staging
 - `APP_ENV`: `staging`
 - `NUXT_PUBLIC_SITE_URL`: `https://staging-konty-website.codeusteam.workers.dev`
 - Same GTM_ID and license
+
+## Free Plan Limitations
+
+On Cloudflare's free plan:
+- **CPU time**: 10ms per request (sufficient for most SSR)
+- **No CPU limits**: Cannot set custom CPU limits
+- **Request limit**: 100,000 requests/day
+- **Smart Placement**: Still works on free plan ✅
+
+To enable CPU limits and better performance, upgrade to Workers Paid plan ($5/month).
 
 ## Important: Why deployConfig is false
 
