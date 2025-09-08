@@ -252,7 +252,7 @@ export default defineNuxtConfig({
 
   // Nitro - Server optimization for Nuxt 4
   nitro: {
-    preset: 'cloudflare-pages',
+    preset: 'cloudflare-module',
     cloudflare: {
       deployConfig: true
     },
