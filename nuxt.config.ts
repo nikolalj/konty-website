@@ -225,6 +225,7 @@ export default defineNuxtConfig({
 
     // Default settings for all OG images
     defaults: {
+      extension: 'png',
       width: 1200,
       height: 630,
       renderer: 'satori', // Fast, universal compatibility
