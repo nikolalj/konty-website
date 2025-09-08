@@ -1,0 +1,32 @@
+# Minimal Cloudflare Workers configuration
+name = "konty-website"
+main = "dist/_worker.js/index.js"
+compatibility_date = "2024-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Static assets from Nuxt build
+[site]
+bucket = "dist"
+
+# Production environment
+[env.production]
+name = "konty-website"
+workers_dev = true  # Always available at konty-website.workers.dev
+routes = [
+  { pattern = "konty.com/*", zone_name = "konty.com" },
+  { pattern = "www.konty.com/*", zone_name = "konty.com" }
+]
+[env.production.vars]
+NODE_ENV = "production"
+NUXT_PUBLIC_SITE_URL = "https://konty.com"  # Use custom domain as primary
+
+# Staging environment  
+[env.staging]
+name = "staging-konty-website"
+workers_dev = true  # Always available at staging-konty-website.workers.dev
+routes = [
+  { pattern = "staging.konty.com/*", zone_name = "konty.com" }
+]
+[env.staging.vars]
+NODE_ENV = "production"
+NUXT_PUBLIC_SITE_URL = "https://staging.konty.com"  # Use custom domain as primary
