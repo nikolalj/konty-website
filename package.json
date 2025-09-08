@@ -14,8 +14,8 @@
     "test": "echo 'No tests specified' && exit 0",
     "lighthouse": "lhci autorun",
     "analyze": "nuxt analyze",
-    "deploy": "wrangler deploy --env production",
-    "deploy:staging": "wrangler deploy --env staging",
+    "deploy": "cd dist/_worker.js && npx wrangler deploy --name konty-website --compatibility-date 2024-09-01",
+    "deploy:staging": "cd dist/_worker.js && npx wrangler deploy --name staging-konty-website --compatibility-date 2024-09-01",
     "dev:worker": "wrangler dev --local --persist",
     "tail": "wrangler tail --env production",
     "tail:staging": "wrangler tail --env staging"
