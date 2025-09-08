@@ -14,10 +14,10 @@
     "test": "echo 'No tests specified' && exit 0",
     "lighthouse": "lhci autorun",
     "analyze": "nuxt analyze",
-    "deploy": "cd .output && npx wrangler deploy --name konty-website --compatibility-date 2024-09-01",
-    "deploy:staging": "cd .output && npx wrangler deploy --name staging-konty-website --compatibility-date 2024-09-01",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
     "dev:worker": "wrangler dev --local --persist",
-    "tail": "wrangler tail --env production",
+    "tail": "wrangler tail",
     "tail:staging": "wrangler tail --env staging"
   },
   "dependencies": {
