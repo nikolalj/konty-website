@@ -19,11 +19,6 @@
     "mode": "smart"
   },
 
-  // Build configuration
-  "build": {
-    "command": "pnpm build"
-  },
-
   "vars": {
     "NODE_ENV": "development",
     "APP_ENV": "development",
