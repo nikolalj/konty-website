@@ -17,13 +17,6 @@ export default defineNuxtConfig({
       cssMinify: true,
       cssCodeSplit: true,
 
-      // Let Nuxt 4 handle automatic chunking
-      rollupOptions: {
-        output: {
-          // Removed manual chunks - Nuxt's auto-chunking is smarter
-        }
-      },
-
       chunkSizeWarningLimit: 1000,
 
       // Source maps only in development
