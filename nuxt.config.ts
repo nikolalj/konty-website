@@ -16,10 +16,7 @@ export default defineNuxtConfig({
       minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
       cssMinify: true,
       cssCodeSplit: true,
-
       chunkSizeWarningLimit: 1000,
-
-      // Source maps only in development
       sourcemap: process.env.NODE_ENV === 'development'
     },
     css: {
