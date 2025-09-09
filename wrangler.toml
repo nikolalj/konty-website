@@ -46,6 +46,7 @@ NUXT_UI_PRO_LICENSE = "24880184-C60C-472E-82F7-CBFE4D0A9ABA"
 [env.staging]
 name = "staging-konty-website"
 workers_dev = true
+assets = { directory = ".output/public" }  # Static assets for staging
 
 # Staging environment variables
 [env.staging.vars]
