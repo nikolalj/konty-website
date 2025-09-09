@@ -16,7 +16,7 @@
           </div>
           <div class="flex justify-between">
             <span class="text-muted">GTM Loaded:</span>
-            <UBadge :color="gtmLoaded ? 'green' : 'red'">
+            <UBadge :color="gtmLoaded ? 'success' : 'error'">
               {{ gtmLoaded ? 'Yes' : 'No' }}
             </UBadge>
           </div>
@@ -26,7 +26,7 @@
           </div>
           <div class="flex justify-between">
             <span class="text-muted">Consent Mode:</span>
-            <UBadge :color="consentGranted ? 'green' : 'orange'">
+            <UBadge :color="consentGranted ? 'success' : 'error'">
               {{ consentGranted ? 'Granted' : 'Denied' }}
             </UBadge>
           </div>
@@ -43,10 +43,10 @@
           <UButton icon="i-lucide-send" @click="testEvent">
             Send Test Event
           </UButton>
-          <UButton icon="i-lucide-dollar-sign" color="green" @click="testConversion">
+          <UButton icon="i-lucide-dollar-sign" color="success" @click="testConversion">
             Send Conversion
           </UButton>
-          <UButton icon="i-lucide-shopping-cart" color="blue" @click="testEcommerce">
+          <UButton icon="i-lucide-shopping-cart" color="primary" @click="testEcommerce">
             Send E-commerce
           </UButton>
           <UButton icon="i-lucide-database" variant="outline" @click="checkDataLayer">
