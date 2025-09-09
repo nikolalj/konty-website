@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "konty-website",
+  "main": "./.output/server/index.mjs",
+	"compatibility_date": "2025-09-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true, //TODO Production - change to false. Add real domain
+
+  "assets": {
+		"binding": "ASSETS",
+		"directory": "./.output/public/"
+	},
+
+	"observability": {
+		"enabled": true
+	},
+
+  "placement": {
+    "mode": "smart"
+  },
+
+  // Build configuration
+  "build": {
+    "command": "pnpm build"
+  },
+
+  "vars": {
+    "NODE_ENV": "production",
+    "APP_ENV": "production",
+    "NUXT_PUBLIC_SITE_URL": "https://konty-website.codeusteam.workers.dev",
+  },
+
+  "env": {
+    "staging": {
+      "workers_dev": true,
+      "vars": {
+        "NODE_ENV": "production",
+        "APP_ENV": "staging",
+        "NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev",
+      }
+    }
+  }
+}
