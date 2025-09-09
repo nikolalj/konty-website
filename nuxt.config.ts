@@ -228,7 +228,7 @@ export default defineNuxtConfig({
       extension: 'png',
       width: 1200,
       height: 630,
-      renderer: 'satori', // Fast, universal compatibility
+      renderer: 'satori',
       cacheMaxAgeSeconds: 60 * 60 * 24 * 7 // 7 days cache
     },
 
