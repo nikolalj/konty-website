@@ -6,7 +6,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "preview": "nuxt preview",
+    "preview": "pnpm run build && wrangler dev",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -16,9 +16,9 @@
     "analyze": "nuxt analyze",
     "deploy": "wrangler deploy --env=\"\"",
     "deploy:staging": "wrangler deploy --env staging",
-    "dev:worker": "wrangler dev --local --persist",
-    "tail": "wrangler tail",
-    "tail:staging": "wrangler tail --env staging"
+    "tail": "wrangler tail --env production",
+    "tail:staging": "wrangler tail --env staging",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.58",

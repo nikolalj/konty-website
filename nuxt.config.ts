@@ -253,7 +253,7 @@ export default defineNuxtConfig({
 
   // Nitro - Server optimization for Nuxt 4
   nitro: {
-    preset: 'cloudflare-module',
+    preset: 'cloudflare_module',
     cloudflare: {
       deployConfig: false  // Use our wrangler.toml
     },

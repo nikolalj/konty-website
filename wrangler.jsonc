@@ -1,0 +1,59 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "konty-website",
+  "main": "./.output/server/index.mjs",
+	"compatibility_date": "2025-09-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+
+  "assets": {
+		"binding": "ASSETS",
+		"directory": "./.output/public/"
+	},
+
+	"observability": {
+		"enabled": true
+	},
+
+  "placement": {
+    "mode": "smart"
+  },
+
+  // Build configuration
+  "build": {
+    "command": "pnpm build"
+  },
+
+  "vars": {
+    "NODE_ENV": "development",
+    "APP_ENV": "development",
+    "NUXT_PUBLIC_SITE_URL": "http://localhost:3000"
+  },
+
+  "env": {
+    "production": {
+      "workers_dev": true, // TODO Production - set to false and use real domain
+      "assets": {
+        "binding": "ASSETS",
+        "directory": "./.output/public/"
+      },
+      "vars": {
+        "NODE_ENV": "production",
+        "APP_ENV": "production",
+        "NUXT_PUBLIC_SITE_URL": "https://konty-website-production.codeusteam.workers.dev"
+      }
+    },
+    "staging": {
+      "workers_dev": true,
+      "assets": {
+        "binding": "ASSETS",
+        "directory": "./.output/public/"
+      },
+      "vars": {
+        "NODE_ENV": "production",
+        "APP_ENV": "staging",
+        "NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev"
+      }
+    }
+  }
+}
