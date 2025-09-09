@@ -251,9 +251,8 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
 
-  // Nitro - Server optimization for Nuxt 4
   nitro: {
-    preset: 'cloudflare-module',
+    preset: 'cloudflare_module',
     cloudflare: {
       deployConfig: false  // Use our wrangler.toml
     },
