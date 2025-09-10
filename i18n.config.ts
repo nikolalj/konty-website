@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE } from './config/locale.config.mjs'
+import { DEFAULT_LOCALE } from './app/config/locale.config.mjs'
 
 export default defineI18nConfig(() => ({
   legacy: false,

@@ -1,6 +1,6 @@
 import type { H3Event } from 'h3'
 import type { ValidLocale } from '~/types/locale'
-import { DEFAULT_LOCALE } from '../../config/locale.config.mjs'
+import { DEFAULT_LOCALE } from '~/config/locale.config.mjs'
 
 /**
  * Locale context middleware

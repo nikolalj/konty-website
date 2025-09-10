@@ -1,4 +1,4 @@
-import { LOCALES } from "~~/config/locale.config.mjs"
+import { LOCALES } from "~/config/locale.config.mjs"
 
 interface PageSeoOptions {
   title: string

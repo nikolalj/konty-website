@@ -4,7 +4,7 @@
  * All values come from translations - no hardcoded strings
  */
 
-import { LOCALES } from "~~/config/locale.config.mjs"
+import { LOCALES } from "~/config/locale.config.mjs"
 
 export const useSchemas = () => {
   const { t, locale } = useI18n()

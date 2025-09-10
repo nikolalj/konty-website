@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config.mjs'
+import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './app/config/locale.config.mjs'
 
 export default defineNuxtConfig({
   ssr: true,
@@ -11,28 +11,21 @@ export default defineNuxtConfig({
   },
 
   // Vite Build Optimization
-  vite: {
-    build: {
-      minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
-      cssMinify: true,
-      cssCodeSplit: true,
+  // vite: {
+  //   build: {
+  //     minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
+  //     cssMinify: true,
+  //     cssCodeSplit: true,
 
-      // Let Nuxt 4 handle automatic chunking
-      rollupOptions: {
-        output: {
-          // Removed manual chunks - Nuxt's auto-chunking is smarter
-        }
-      },
+  //     chunkSizeWarningLimit: 1000,
 
-      chunkSizeWarningLimit: 1000,
-
-      // Source maps only in development
-      sourcemap: process.env.NODE_ENV === 'development'
-    },
-    css: {
-      devSourcemap: false
-    },
-  },
+  //     // Source maps only in development
+  //     sourcemap: process.env.NODE_ENV === 'development'
+  //   },
+  //   css: {
+  //     devSourcemap: false
+  //   },
+  // },
 
   // PostCSS - Production CSS optimization
   postcss: {
@@ -62,7 +55,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@saslavik/nuxt-gtm',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    'nitro-cloudflare-dev'
   ],
 
   fonts: {
@@ -293,11 +287,6 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-      // URL Redirects - SEO-preserving redirects for changed URLs
-      // Add redirects here when changing URL structure or fixing broken links
-      // Example redirects:
-      // '/old-pricing': { redirect: { to: '/pricing', statusCode: 301 } },
-
       '/allegra': { redirect: '/' },
       '/aria': { redirect: '/' },
       '/allegrapos': { redirect: '/' },
@@ -306,34 +295,30 @@ export default defineNuxtConfig({
       '/price': { redirect: '/pricing' },
       '/contact': { redirect: '/about' },
 
-      // Security headers for all routes
       '/**': {
         headers: {
           'X-Frame-Options': 'DENY',
           'X-Content-Type-Options': 'nosniff',
           'Referrer-Policy': 'strict-origin-when-cross-origin',
           'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-          'X-XSS-Protection': '1; mode=block',
           'Content-Security-Policy': "default-src 'self' 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://www.google.com; img-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com"
         }
       },
 
-      // Immutable assets
       '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      // SWR for dynamic content (better than ISR for SSR with locale detection)
-      '/': { swr: 3600 },
+      '/': { swr: 3600,  headers: { 'Vary': 'Accept-Language' } },
       '/products': { swr: 7200 },
       '/pricing': { swr: 86400 }, // Daily
 
-      // API configuration
       '/api/**': {
         cors: true,
         headers: { 'cache-control': 'no-store' }
-      },
+      }
     }
   },
 
@@ -350,7 +335,7 @@ export default defineNuxtConfig({
     id: process.env.GTM_ID || '',
     enabled: true,
     debug: process.env.APP_ENV === 'development',
-    loadScript: true,
+    loadScript: false,
     enableRouterSync: true,
     ignoredViews: [],
     trackOnNextTick: false,
@@ -363,22 +348,7 @@ export default defineNuxtConfig({
   },
 
   features: {
-    // Smart CSS inlining - only inline critical above-fold components
-    inlineStyles: (id) => {
-      if (!id) return false
-
-      // Inline critical above-fold components for faster FCP
-      const criticalComponents = [
-        'Hero',
-        'Header',
-        'AppHeader',
-        'CountrySelector',
-        'Button',
-        'LocaleSuggestionBanner'
-      ]
-
-      return criticalComponents.some(component => id.includes(component))
-    }
+    inlineStyles: true
   },
 
   // Experimental features for Nuxt 4

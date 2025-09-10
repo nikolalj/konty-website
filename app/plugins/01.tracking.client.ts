@@ -52,7 +52,45 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   // ============================================
-  // STEP 2: PAGE VIEW TRACKING
+  // STEP 2: DEFERRED GTM LOADING
+  // ============================================
+
+  // Load GTM after all critical resources are loaded for optimal performance
+  if (typeof window !== 'undefined') {
+    const loadGTM = async () => {
+      const gtmConfig = useRuntimeConfig().public.gtm
+      const gtmId = gtmConfig?.id
+
+      if (gtmId && typeof gtmId === 'string' && !document.querySelector(`script[src*="${gtmId}"]`)) {
+        // Dynamically import the loadScript function from @gtm-support/core
+        try {
+          const { loadScript } = await import('@gtm-support/core')
+          // Use minimal options for loading - just the GTM ID is required
+          loadScript(gtmId, {
+            defer: false,
+            compatibility: false
+          })
+          if (import.meta.dev) {
+            console.log('[Tracking] GTM loaded after window.load')
+          }
+        } catch (error) {
+          console.error('[Tracking] Failed to load GTM:', error)
+        }
+      }
+    }
+
+    // Load GTM after window.load event
+    if (document.readyState === 'complete') {
+      // If page already loaded, defer to next tick
+      setTimeout(loadGTM, 0)
+    } else {
+      // Wait for window.load event
+      window.addEventListener('load', loadGTM, { once: true })
+    }
+  }
+
+  // ============================================
+  // STEP 3: PAGE VIEW TRACKING
   // ============================================
 
   // Track initial page view when app is ready
@@ -75,7 +113,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   })
 
   // ============================================
-  // STEP 3: SCROLL DEPTH TRACKING
+  // STEP 4: SCROLL DEPTH TRACKING
   // ============================================
 
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -125,7 +163,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   // ============================================
-  // STEP 4: ERROR TRACKING
+  // STEP 5: ERROR TRACKING
   // ============================================
 
   if (typeof window !== 'undefined') {

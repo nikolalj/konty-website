@@ -1,6 +1,6 @@
 /// <reference types="./worker-configuration.d.ts" />
 import serverEntry from './.output/server/index.mjs';
-import { DEFAULT_LOCALE, VALID_LOCALES, COUNTRY_TO_LOCALE_MAP } from './config/locale.config.mjs';
+import { DEFAULT_LOCALE, VALID_LOCALES, COUNTRY_TO_LOCALE_MAP } from './app/config/locale.config.mjs';
 
 // Type definitions
 type ValidLocale = 'me' | 'rs' | 'ba' | 'us';

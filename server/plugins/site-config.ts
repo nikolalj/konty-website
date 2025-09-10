@@ -2,7 +2,7 @@
  * Server plugin to inject company data into site config at runtime
  * Reads company data from translation files and builds Organization schema
  */
-import { DEFAULT_LOCALE } from '../../config/locale.config.mjs'
+import { DEFAULT_LOCALE } from '~/config/locale.config.mjs'
 import type { ValidLocale } from '../../app/types/locale'
 
 // Static imports for edge compatibility
