@@ -31,25 +31,14 @@ function countryToLocale(country: string | null): ValidLocale {
   return COUNTRY_TO_LOCALE_MAP[country.toUpperCase()] || DEFAULT_LOCALE.code
 }
 
-// All pages are localized and should redirect to locale-specific URLs
-const PAGES_TO_REDIRECT = [
-  '/',                  // Homepage
-  '/pricing',           // Pricing with local currency
-  '/demo',              // Demo request
-  '/konty-retail',      // Retail product page
-  '/konty-hospitality', // Hospitality product page
-  '/products',          // Products overview
-  '/about',             // About page
-  '/terms',             // Terms of service
-  '/privacy'            // Privacy policy
-]
-
 // Patterns to NEVER redirect (order matters for performance)
+// Everything else gets locale redirects automatically
 const EXCLUDE_PATTERNS = [
   '/api/',              // API routes
   '/_',                 // Nuxt internals (_nuxt, _ipx, etc)
   '.xml',               // Sitemaps
   '.txt',               // Robots, etc
+  '.json',              // JSON
 ]
 
 /**
@@ -60,7 +49,7 @@ export default defineEventHandler(async (event: H3Event) => {
   const startTime = Date.now()
   const path = event.path || ''
   const query = getQuery(event)
-  
+
   console.log(`[Locale] START processing ${path} at ${new Date().toISOString()}`)
 
   // 1. EXCLUSIONS - Quick exits for non-applicable requests
@@ -97,11 +86,11 @@ export default defineEventHandler(async (event: H3Event) => {
   const beforeCookie = Date.now()
   const cookie = getLocaleCookie(event)
   console.log(`[Locale] Cookie parse: ${Date.now() - beforeCookie}ms`)
-  
+
   const beforeCountry = Date.now()
   const country = getCountryFromHeaders(event)
   console.log(`[Locale] Country header: ${Date.now() - beforeCountry}ms`)
-  
+
   const beforeDetect = Date.now()
   const detectedLocale = countryToLocale(country)
   event.context.detectedLocale = detectedLocale
@@ -112,18 +101,11 @@ export default defineEventHandler(async (event: H3Event) => {
     return
   }
 
-  // 2. INCLUSIONS - Only redirect if page needs localization
-
-  if (!PAGES_TO_REDIRECT.includes(path)) {
-    console.log(`[Locale] Not a redirect page: ${path} - Total: ${Date.now() - startTime}ms`)
-    return
-  }
-
-  // 3. REDIRECT LOGIC - Determine if redirect needed
+  // 2. REDIRECT LOGIC - All non-excluded pages get locale redirects
 
   try {
     const beforeLocaleLogic = Date.now()
-    
+
     // Determine which locale to use
     let targetLocale: ValidLocale
 
@@ -137,7 +119,7 @@ export default defineEventHandler(async (event: H3Event) => {
         event.context.previousLocale = cookie.locale
       }
     }
-    
+
     console.log(`[Locale] Locale logic: ${Date.now() - beforeLocaleLogic}ms`)
 
     // 4. SET COOKIE & REDIRECT
