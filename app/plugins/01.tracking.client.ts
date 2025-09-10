@@ -60,16 +60,18 @@ export default defineNuxtPlugin((nuxtApp) => {
     const loadGTM = async () => {
       const gtmConfig = useRuntimeConfig().public.gtm
       const gtmId = gtmConfig?.id
-      
+
       if (gtmId && typeof gtmId === 'string' && !document.querySelector(`script[src*="${gtmId}"]`)) {
         // Dynamically import the loadScript function from @gtm-support/core
         try {
           const { loadScript } = await import('@gtm-support/core')
           // Use minimal options for loading - just the GTM ID is required
-          loadScript(gtmId, {
-            defer: false,
-            compatibility: false
-          })
+          setTimeout(() => {
+            loadScript(gtmId, {
+              defer: false,
+              compatibility: false
+            })
+          }, 5000)
           if (import.meta.dev) {
             console.log('[Tracking] GTM loaded after window.load')
           }
