@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  // Vite Build Optimization - Nuxt 4 optimized
+  // Vite Build Optimization
   vite: {
     build: {
       minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
