@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config'
+import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config.mjs'
 
 export default defineNuxtConfig({
   ssr: true,

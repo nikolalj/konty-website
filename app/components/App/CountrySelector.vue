@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 import type { LocaleConfig, ValidLocale } from '~/types/locale'
-import { LOCALES } from '../../../config/locale.config'
+import { LOCALES } from '../../../config/locale.config.mjs'
 
 const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
