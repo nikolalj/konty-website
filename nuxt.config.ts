@@ -347,6 +347,10 @@ export default defineNuxtConfig({
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
   },
 
+  features: {
+    inlineStyles: true
+  },
+
   // Experimental features for Nuxt 4
   experimental: {
     viewTransition: true,        // Enable native view transitions API

@@ -66,12 +66,10 @@ export default defineNuxtPlugin((nuxtApp) => {
         try {
           const { loadScript } = await import('@gtm-support/core')
           // Use minimal options for loading - just the GTM ID is required
-          setTimeout(() => {
-            loadScript(gtmId, {
-              defer: false,
-              compatibility: false
-            })
-          }, 5000)
+          loadScript(gtmId, {
+            defer: false,
+            compatibility: false
+          })
           if (import.meta.dev) {
             console.log('[Tracking] GTM loaded after window.load')
           }
