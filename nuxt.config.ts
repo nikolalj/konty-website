@@ -362,25 +362,6 @@ export default defineNuxtConfig({
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
   },
 
-  features: {
-    // Smart CSS inlining - only inline critical above-fold components
-    inlineStyles: (id) => {
-      if (!id) return false
-
-      // Inline critical above-fold components for faster FCP
-      const criticalComponents = [
-        'Hero',
-        'Header',
-        'AppHeader',
-        'CountrySelector',
-        'Button',
-        'LocaleSuggestionBanner'
-      ]
-
-      return criticalComponents.some(component => id.includes(component))
-    }
-  },
-
   // Experimental features for Nuxt 4
   experimental: {
     viewTransition: true,        // Enable native view transitions API
