@@ -11,21 +11,21 @@ export default defineNuxtConfig({
   },
 
   // Vite Build Optimization
-  vite: {
-    build: {
-      minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
-      cssMinify: true,
-      cssCodeSplit: false,
+  // vite: {
+  //   build: {
+  //     minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
+  //     cssMinify: true,
+  //     cssCodeSplit: false,
 
-      chunkSizeWarningLimit: 1000,
+  //     chunkSizeWarningLimit: 1000,
 
-      // Source maps only in development
-      sourcemap: process.env.NODE_ENV === 'development'
-    },
-    css: {
-      devSourcemap: false
-    },
-  },
+  //     // Source maps only in development
+  //     sourcemap: process.env.NODE_ENV === 'development'
+  //   },
+  //   css: {
+  //     devSourcemap: false
+  //   },
+  // },
 
   // PostCSS - Production CSS optimization
   postcss: {
@@ -347,9 +347,9 @@ export default defineNuxtConfig({
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
   },
 
-  features: {
-    inlineStyles: true
-  },
+  // features: {
+  //   inlineStyles: true
+  // },
 
   // Experimental features for Nuxt 4
   experimental: {
