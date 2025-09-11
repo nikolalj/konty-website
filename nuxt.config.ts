@@ -51,24 +51,6 @@ export default defineNuxtConfig({
     }
   },
 
-  // PostCSS - Production CSS optimization
-  postcss: {
-    plugins: {
-      ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com') && {
-        cssnano: {
-          preset: ['default', {
-            discardComments: { removeAll: true },
-            reduceIdents: true,
-            mergeRules: true,
-            normalizeWhitespace: true,
-            minifyFontValues: true,
-            minifySelectors: true
-          }]
-        }
-      })
-    }
-  },
-
   fonts: {
     provider: 'local',
     families: [
@@ -78,12 +60,6 @@ export default defineNuxtConfig({
         weights: ['200 800'],
         styles: ['normal'],
         global: true
-      },
-      {
-        name: 'Plus Jakarta Sans',
-        src: '/fonts/PlusJakartaSans-Variable-Italic.woff2',
-        weights: ['200 800'],
-        styles: ['italic']
       }
     ]
   },
@@ -91,15 +67,10 @@ export default defineNuxtConfig({
   // Image optimization
   image: {
     quality: 80,
-    format: ['avif', 'webp'],
+    format: ['avif', 'webp'], // AVIF primary, WebP fallback
     provider: 'ipx',
-    screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536 },
-    presets: {
-      og: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 630, fit: 'cover' }},
-      twitter: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 600, fit: 'cover' }},
-    },
-    domains: ['konty.com'],
-    ipx: { maxAge: 31536000 }
+    screens: { sm: 640, md: 768, lg: 1024, xl: 1280 },
+    domains: ['konty.com']
   },
 
   css: [
@@ -160,8 +131,7 @@ export default defineNuxtConfig({
   // Schema.org configuration
   schemaOrg: {
     defaults: true,
-    identity: 'Organization', // Links to site.identity
-    reactive: process.env.NODE_ENV === 'development'
+    identity: 'Organization' // Links to site.identity
   },
 
   // Robots.txt configuration
@@ -266,20 +236,7 @@ export default defineNuxtConfig({
 
     // Optimize server bundles
     rollupConfig: {
-      output: {
-        format: 'es',
-        generatedCode: {
-          constBindings: true
-        }
-      },
-      treeshake: 'smallest'
-    },
-
-    // Module side effects optimization
-    moduleSideEffects: ['unhead'],
-
-    externals: {
-      inline: ['unhead']
+      treeshake: 'smallest'  // Most impactful optimization
     },
 
     // Prerendering disabled - using SSR for dynamic locale detection
@@ -345,37 +302,22 @@ export default defineNuxtConfig({
     id: process.env.GTM_ID || '',
     enabled: true,
     debug: process.env.APP_ENV === 'development',
-    loadScript: false,
+    loadScript: false,  // Manual loading for performance
     enableRouterSync: true,
-    ignoredViews: [],
-    trackOnNextTick: false,
-    devtools: true
+    devtools: process.env.APP_ENV === 'development'
   },
 
-  // Build optimizations
-  build: {
-    transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
-  },
-
-  // Experimental features for Nuxt 4
+  // Experimental features
   experimental: {
-    viewTransition: true,        // Enable native view transitions API
-    lazyHydration: true,         // Enable lazy hydration for components
-    payloadExtraction: true,     // Extract payload for faster hydration
-    componentIslands: true,      // Enable component islands for selective hydration
-    asyncContext: true,          // Better async component handling
-    writeEarlyHints: true,       // HTTP/2 Server Push hints
-    crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
-    renderJsonPayloads: true,    // Optimize JSON payload rendering
-    appManifest: false,          // Disable app manifest for Cloudflare Workers compatibility
+    crossOriginPrefetch: true,   // Smart prefetching with Speculation Rules API
+    appManifest: false,          // Cloudflare Workers compatibility
 
-    // Link prefetching strategy - optimized for conversion
+    // Link prefetching strategy - critical for conversions
     defaults: {
       nuxtLink: {
         prefetch: false,         // Don't prefetch all links by default
         prefetchOn: {
-          visibility: true,      // Only prefetch when link is visible
-          interaction: false     // Don't prefetch on hover to save bandwidth
+          visibility: true       // Only prefetch when link is visible
         }
       }
     }
@@ -392,7 +334,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'color-scheme', content: 'light dark' },
-        { name: 'theme-color', content: '#00dc82' }
+        { name: 'theme-color', content: '#1F6FE2' }  // Match brand primary color
       ],
 
       link: [
