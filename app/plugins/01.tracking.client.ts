@@ -79,14 +79,23 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
     }
 
-    // Load GTM after window.load event
-    if (document.readyState === 'complete') {
-      // If page already loaded, defer to next tick
-      setTimeout(loadGTM, 0)
-    } else {
-      // Wait for window.load event
-      window.addEventListener('load', loadGTM, { once: true })
+    // Load GTM only after user interaction to save 59KB
+    let gtmLoaded = false
+    
+    const loadGTMOnce = () => {
+      if (!gtmLoaded) {
+        gtmLoaded = true
+        loadGTM()
+      }
     }
+    
+    // Load on first user interaction
+    window.addEventListener('scroll', loadGTMOnce, { once: true, passive: true })
+    window.addEventListener('click', loadGTMOnce, { once: true })
+    window.addEventListener('mousemove', loadGTMOnce, { once: true, passive: true })
+    
+    // Fallback: load after 4 seconds if no interaction
+    setTimeout(loadGTMOnce, 4000)
   }
 
   // ============================================
