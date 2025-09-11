@@ -347,9 +347,9 @@ export default defineNuxtConfig({
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
   },
 
-  // features: {
-  //   inlineStyles: true
-  // },
+  features: {
+    inlineStyles: true  // Inline all styles for zero render-blocking CSS
+  },
 
   // Experimental features for Nuxt 4
   experimental: {

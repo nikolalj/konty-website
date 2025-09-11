@@ -9,7 +9,7 @@
   >
     <div
       v-if="showBanner"
-      class="fixed bottom-0 left-0 right-0 z-[9999] p-4 sm:bottom-4 sm:right-4 sm:left-auto sm:max-w-md"
+      class="bottom-0 left-0 right-0 z-[9999] p-4 sm:bottom-4 sm:right-4 sm:left-auto sm:max-w-md"
     >
       <UCard
         class="shadow-2xl border-0"
@@ -129,7 +129,7 @@
   >
     <div
       v-if="!showBanner && consentGiven"
-      class="fixed bottom-4 left-4 z-[9998]"
+      class="bottom-4 left-4 z-[9998]"
     >
       <UTooltip text="Cookie Settings">
         <UButton
@@ -218,10 +218,3 @@ onMounted(() => {
   }
 })
 </script>
-
-<style scoped>
-/* Ensure the component doesn't affect CLS scores */
-.fixed {
-  will-change: transform;
-}
-</style>
