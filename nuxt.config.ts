@@ -10,22 +10,46 @@ export default defineNuxtConfig({
     typeCheck: true
   },
 
-  // Vite Build Optimization
-  // vite: {
-  //   build: {
-  //     minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
-  //     cssMinify: true,
-  //     cssCodeSplit: false,
+  // Modules - Order matters
+  modules: [
+    '@nuxt/ui-pro',
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/fonts',
+    '@nuxtjs/seo',
+    '@saslavik/nuxt-gtm',
+    '@nuxt/eslint',
+    'nitro-cloudflare-dev'
+  ],
 
-  //     chunkSizeWarningLimit: 1000,
+  features: {
+    inlineStyles: true  // Inline all styles for zero render-blocking CSS
+  },
 
-  //     // Source maps only in development
-  //     sourcemap: process.env.NODE_ENV === 'development'
-  //   },
-  //   css: {
-  //     devSourcemap: false
-  //   },
-  // },
+  // Vite Build Optimization - Only options that actually matter
+  vite: {
+    build: {
+      // CSS optimization for ATF performance
+      cssCodeSplit: false,     // CRITICAL: Bundles all CSS into single file for inlining
+      cssMinify: 'esbuild',    // Fast CSS minification (default but explicit for clarity)
+
+      // JS minification
+      minify: 'esbuild',
+
+      // Rollup output configuration
+      rollupOptions: {
+        output: {
+          // Prevent vendor splitting - reduces chunks for faster initial load
+          manualChunks: undefined
+        }
+      },
+
+      // No sourcemaps in production for smaller bundles and security
+      sourcemap: false
+    }
+  },
 
   // PostCSS - Production CSS optimization
   postcss: {
@@ -44,20 +68,6 @@ export default defineNuxtConfig({
       })
     }
   },
-
-  // Modules - Order matters
-  modules: [
-    '@nuxt/ui-pro',
-    '@nuxt/image',
-    '@nuxt/icon',
-    '@vueuse/nuxt',
-    '@nuxtjs/i18n',
-    '@nuxt/fonts',
-    '@nuxtjs/seo',
-    '@saslavik/nuxt-gtm',
-    '@nuxt/eslint',
-    'nitro-cloudflare-dev'
-  ],
 
   fonts: {
     provider: 'local',
@@ -345,10 +355,6 @@ export default defineNuxtConfig({
   // Build optimizations
   build: {
     transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
-  },
-
-  features: {
-    inlineStyles: true  // Inline all styles for zero render-blocking CSS
   },
 
   // Experimental features for Nuxt 4
