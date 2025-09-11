@@ -278,9 +278,25 @@ export default defineNuxtConfig({
       '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      '/': { swr: 3600,  headers: { 'Vary': 'Accept-Language' } },
-      '/products': { swr: 7200 },
-      '/pricing': { swr: 86400 }, // Daily
+      '/': {
+        swr: 3600,
+        headers: {
+          'cache-control': 's-maxage=300, stale-while-revalidate=3600',
+          'Vary': 'Accept-Language'
+        }
+      },
+      '/products': {
+        swr: 7200,
+        headers: {
+          'cache-control': 's-maxage=600, stale-while-revalidate=7200'
+        }
+      },
+      '/pricing': {
+        swr: 86400,
+        headers: {
+          'cache-control': 's-maxage=3600, stale-while-revalidate=86400'
+        }
+      },
 
       '/api/**': {
         cors: true,
@@ -341,8 +357,10 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: '' },
 
-        // Preload font
+        // Preload critical resources
         { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', as: 'image', href: '/images/hero/bg-light.avif', type: 'image/avif', fetchpriority: 'high' },
+        { rel: 'preload', as: 'image', href: '/images/hero/bg-dark.avif', type: 'image/avif', fetchpriority: 'high' },
       ],
     }
   },
