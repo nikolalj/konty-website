@@ -38,14 +38,6 @@ export default defineNuxtConfig({
       // JS minification
       minify: 'esbuild',
 
-      // Rollup output configuration
-      rollupOptions: {
-        output: {
-          // Prevent vendor splitting - reduces chunks for faster initial load
-          // manualChunks: undefined
-        }
-      },
-
       // No sourcemaps in production for smaller bundles and security
       sourcemap: false
     }
