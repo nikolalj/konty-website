@@ -38,15 +38,11 @@ export default defineNuxtConfig({
       // JS minification
       minify: 'esbuild',
 
-      // Rollup output configuration with tree-shaking
+      // Rollup output configuration
       rollupOptions: {
         output: {
           // Prevent vendor splitting - reduces chunks for faster initial load
-          manualChunks: undefined
-        },
-        // Aggressive tree-shaking for smaller bundles
-        treeshake: {
-          preset: 'recommended',
+          // manualChunks: undefined
         }
       },
 
