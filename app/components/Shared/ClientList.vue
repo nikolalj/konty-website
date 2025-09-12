@@ -7,7 +7,12 @@
       />
 
       <!-- Client Logos Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+      <Transition
+        enter-active-class="transition duration-[600ms] ease-out"
+        enter-from-class="opacity-0 translate-y-5"
+        enter-to-class="opacity-100 translate-y-0"
+      >
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
         <UPageCard
           v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
           :key="index"
@@ -38,6 +43,7 @@
           </div>
         </UPageCard>
       </div>
+      </Transition>
     </UContainer>
   </section>
 </template>
@@ -108,21 +114,3 @@ const clients = ref([
   }
 ])
 </script>
-
-<style scoped>
-/* Additional custom styles if needed */
-.grid {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
