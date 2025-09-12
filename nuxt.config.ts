@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './config/locale.config'
+import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './app/config/locale.config.mjs'
 
 export default defineNuxtConfig({
   ssr: true,
@@ -8,38 +8,6 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true
-  },
-
-  // Vite Build Optimization - Nuxt 4 optimized
-  vite: {
-    build: {
-      minify: process.env.NODE_ENV === 'production' ? 'terser' : 'esbuild',  // Terser for prod (smaller), esbuild for dev (faster)
-      cssMinify: true,
-      cssCodeSplit: true,
-      chunkSizeWarningLimit: 1000,
-      sourcemap: process.env.NODE_ENV === 'development'
-    },
-    css: {
-      devSourcemap: false
-    },
-  },
-
-  // PostCSS - Production CSS optimization
-  postcss: {
-    plugins: {
-      ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com') && {
-        cssnano: {
-          preset: ['default', {
-            discardComments: { removeAll: true },
-            reduceIdents: true,
-            mergeRules: true,
-            normalizeWhitespace: true,
-            minifyFontValues: true,
-            minifySelectors: true
-          }]
-        }
-      })
-    }
   },
 
   // Modules - Order matters
@@ -52,8 +20,36 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@saslavik/nuxt-gtm',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    'nitro-cloudflare-dev'
   ],
+
+  features: {
+    inlineStyles: true  // Inline all styles for zero render-blocking CSS
+  },
+
+  // Vite Build Optimization - Only options that actually matter
+  vite: {
+    build: {
+      // CSS optimization for ATF performance
+      cssCodeSplit: false,     // CRITICAL: Bundles all CSS into single file for inlining
+      cssMinify: 'esbuild',    // Fast CSS minification (default but explicit for clarity)
+
+      // JS minification
+      minify: 'esbuild',
+
+      // Rollup output configuration
+      rollupOptions: {
+        output: {
+          // Prevent vendor splitting - reduces chunks for faster initial load
+          // manualChunks: undefined
+        }
+      },
+
+      // No sourcemaps in production for smaller bundles and security
+      sourcemap: false
+    }
+  },
 
   fonts: {
     provider: 'local',
@@ -64,12 +60,6 @@ export default defineNuxtConfig({
         weights: ['200 800'],
         styles: ['normal'],
         global: true
-      },
-      {
-        name: 'Plus Jakarta Sans',
-        src: '/fonts/PlusJakartaSans-Variable-Italic.woff2',
-        weights: ['200 800'],
-        styles: ['italic']
       }
     ]
   },
@@ -77,15 +67,10 @@ export default defineNuxtConfig({
   // Image optimization
   image: {
     quality: 80,
-    format: ['avif', 'webp'],
+    format: ['avif', 'webp'], // AVIF primary, WebP fallback
     provider: 'ipx',
-    screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536 },
-    presets: {
-      og: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 630, fit: 'cover' }},
-      twitter: { modifiers: { format: 'avif', quality: 85, width: 1200, height: 600, fit: 'cover' }},
-    },
-    domains: ['konty.com'],
-    ipx: { maxAge: 31536000 }
+    screens: { sm: 640, md: 768, lg: 1024, xl: 1280 },
+    domains: ['konty.com']
   },
 
   css: [
@@ -146,8 +131,7 @@ export default defineNuxtConfig({
   // Schema.org configuration
   schemaOrg: {
     defaults: true,
-    identity: 'Organization', // Links to site.identity
-    reactive: process.env.NODE_ENV === 'development'
+    identity: 'Organization' // Links to site.identity
   },
 
   // Robots.txt configuration
@@ -252,20 +236,7 @@ export default defineNuxtConfig({
 
     // Optimize server bundles
     rollupConfig: {
-      output: {
-        format: 'es',
-        generatedCode: {
-          constBindings: true
-        }
-      },
-      treeshake: 'smallest'
-    },
-
-    // Module side effects optimization
-    moduleSideEffects: ['unhead'],
-
-    externals: {
-      inline: ['unhead']
+      treeshake: 'smallest'  // Most impactful optimization
     },
 
     // Prerendering disabled - using SSR for dynamic locale detection
@@ -283,11 +254,6 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-      // URL Redirects - SEO-preserving redirects for changed URLs
-      // Add redirects here when changing URL structure or fixing broken links
-      // Example redirects:
-      // '/old-pricing': { redirect: { to: '/pricing', statusCode: 301 } },
-
       '/allegra': { redirect: '/' },
       '/aria': { redirect: '/' },
       '/allegrapos': { redirect: '/' },
@@ -296,34 +262,46 @@ export default defineNuxtConfig({
       '/price': { redirect: '/pricing' },
       '/contact': { redirect: '/about' },
 
-      // Security headers for all routes
       '/**': {
         headers: {
           'X-Frame-Options': 'DENY',
           'X-Content-Type-Options': 'nosniff',
           'Referrer-Policy': 'strict-origin-when-cross-origin',
           'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-          'X-XSS-Protection': '1; mode=block',
           'Content-Security-Policy': "default-src 'self' 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://www.google.com; img-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com"
         }
       },
 
-      // Immutable assets
       '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/images/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      // SWR for dynamic content (better than ISR for SSR with locale detection)
-      '/': { swr: 3600 },
-      '/products': { swr: 7200 },
-      '/pricing': { swr: 86400 }, // Daily
+      '/': {
+        swr: 3600,
+        headers: {
+          'cache-control': 's-maxage=300, stale-while-revalidate=3600',
+          'Vary': 'Accept-Language'
+        }
+      },
+      '/products': {
+        swr: 7200,
+        headers: {
+          'cache-control': 's-maxage=600, stale-while-revalidate=7200'
+        }
+      },
+      '/pricing': {
+        swr: 86400,
+        headers: {
+          'cache-control': 's-maxage=3600, stale-while-revalidate=86400'
+        }
+      },
 
-      // API configuration
       '/api/**': {
         cors: true,
         headers: { 'cache-control': 'no-store' }
-      },
+      }
     }
   },
 
@@ -340,56 +318,22 @@ export default defineNuxtConfig({
     id: process.env.GTM_ID || '',
     enabled: true,
     debug: process.env.APP_ENV === 'development',
-    loadScript: true,
+    loadScript: false,  // Manual loading for performance
     enableRouterSync: true,
-    ignoredViews: [],
-    trackOnNextTick: false,
-    devtools: true
+    devtools: process.env.APP_ENV === 'development'
   },
 
-  // Build optimizations
-  build: {
-    transpile: process.env.NODE_ENV === 'production' ? [] : ['@nuxt/ui-pro']
-  },
-
-  features: {
-    // Smart CSS inlining - only inline critical above-fold components
-    inlineStyles: (id) => {
-      if (!id) return false
-
-      // Inline critical above-fold components for faster FCP
-      const criticalComponents = [
-        'Hero',
-        'Header',
-        'AppHeader',
-        'CountrySelector',
-        'Button',
-        'LocaleSuggestionBanner'
-      ]
-
-      return criticalComponents.some(component => id.includes(component))
-    }
-  },
-
-  // Experimental features for Nuxt 4
+  // Experimental features
   experimental: {
-    viewTransition: true,        // Enable native view transitions API
-    lazyHydration: true,         // Enable lazy hydration for components
-    payloadExtraction: true,     // Extract payload for faster hydration
-    componentIslands: true,      // Enable component islands for selective hydration
-    asyncContext: true,          // Better async component handling
-    writeEarlyHints: true,       // HTTP/2 Server Push hints
-    crossOriginPrefetch: true,   // Use Speculation Rules API for prefetching
-    renderJsonPayloads: true,    // Optimize JSON payload rendering
-    appManifest: false,          // Disable app manifest for Cloudflare Workers compatibility
+    crossOriginPrefetch: true,   // Smart prefetching with Speculation Rules API
+    appManifest: false,          // Cloudflare Workers compatibility
 
-    // Link prefetching strategy - optimized for conversion
+    // Link prefetching strategy - critical for conversions
     defaults: {
       nuxtLink: {
         prefetch: false,         // Don't prefetch all links by default
         prefetchOn: {
-          visibility: true,      // Only prefetch when link is visible
-          interaction: false     // Don't prefetch on hover to save bandwidth
+          visibility: true       // Only prefetch when link is visible
         }
       }
     }
@@ -406,15 +350,17 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'color-scheme', content: 'light dark' },
-        { name: 'theme-color', content: '#00dc82' }
+        { name: 'theme-color', content: '#1F6FE2' }  // Match brand primary color
       ],
 
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: '' },
 
-        // Preload font
+        // Preload critical resources
         { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', as: 'image', href: '/images/hero/bg-light.avif', type: 'image/avif', fetchpriority: 'high' },
+        { rel: 'preload', as: 'image', href: '/images/hero/bg-dark.avif', type: 'image/avif', fetchpriority: 'high' },
       ],
     }
   },

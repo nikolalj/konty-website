@@ -7,37 +7,39 @@
       />
 
       <!-- Client Logos Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-        <UPageCard
-          v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
-          :key="index"
-          :title="client.name"
-          :to="client.to"
-          description="Nuxt UI v3 integrates with latest."
-          target="_blank"
-          variant="outline"
-          spotlight
-          spotlight-color="primary"
-          :ui="{
-            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
-          }"
-          class="w-full bg-elevated hover:bg-muted cursor-pointer"
-        >
-          <div class="flex justify-center">
-            <NuxtImg
-              :src="client.logo"
-              format="avif"
-              loading="lazy"
-              :alt="client.name"
-              role="presentation"
-              width="80"
-              height="80"
-              quality="70"
-              fit="cover"
-            />
-          </div>
-        </UPageCard>
-      </div>
+      <UIAppear>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          <UPageCard
+            v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
+            :key="index"
+            :title="client.name"
+            :to="client.to"
+            description="Nuxt UI v3 integrates with latest."
+            target="_blank"
+            variant="outline"
+            spotlight
+            spotlight-color="primary"
+            :ui="{
+              root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
+            }"
+            class="w-full bg-elevated hover:bg-muted cursor-pointer"
+          >
+            <div class="flex justify-center">
+              <NuxtImg
+                :src="client.logo"
+                format="avif"
+                loading="lazy"
+                :alt="client.name"
+                role="presentation"
+                width="80"
+                height="80"
+                quality="70"
+                fit="cover"
+              />
+            </div>
+          </UPageCard>
+        </div>
+      </UIAppear>
     </UContainer>
   </section>
 </template>
@@ -108,21 +110,3 @@ const clients = ref([
   }
 ])
 </script>
-
-<style scoped>
-/* Additional custom styles if needed */
-.grid {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>

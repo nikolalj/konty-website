@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 import type { LocaleConfig, ValidLocale } from '~/types/locale'
-import { LOCALES } from '../../../config/locale.config'
+import { LOCALES } from '~/config/locale.config.mjs'
 
 const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
@@ -110,21 +110,3 @@ const items = computed(() => {
   return [localeItems]
 })
 </script>
-
-<style scoped>
-/* Pulsing dot animation for suggestion indicator */
-@keyframes pulse-dot {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-</style>

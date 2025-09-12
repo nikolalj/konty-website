@@ -2,7 +2,7 @@
  * Server plugin to inject company data into site config at runtime
  * Reads company data from translation files and builds Organization schema
  */
-import { DEFAULT_LOCALE, VALID_LOCALES } from '../../config/locale.config'
+import { DEFAULT_LOCALE } from '~/config/locale.config.mjs'
 import type { ValidLocale } from '../../app/types/locale'
 
 // Static imports for edge compatibility
@@ -67,14 +67,9 @@ interface CompanyData {
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('site-config:init', async ({ event, siteConfig }) => {
-    // Get the current locale from the URL path
-    const path = event.node.req.url || ''
-    const pathSegments = path.split('/').filter(Boolean)
-    const firstSegment = pathSegments[0]
-
-    const locale: ValidLocale = VALID_LOCALES.includes(firstSegment as ValidLocale)
-      ? firstSegment as ValidLocale
-      : DEFAULT_LOCALE.code
+    // Get the current locale from headers set by edge wrapper
+    const currentLocaleHeader = event.node.req.headers['x-current-locale'] as string
+    const locale = (currentLocaleHeader || DEFAULT_LOCALE.code) as ValidLocale
 
     // Load company data from static imports
     const translations = localeData[locale]

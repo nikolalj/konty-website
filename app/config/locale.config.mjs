@@ -1,16 +1,17 @@
-import type { LocaleConfig, ValidLocale } from '../app/types/locale'
+// Locale configuration shared between Nuxt and Edge wrapper
+// This is an .mjs file so it can be imported by both TypeScript and the Worker wrapper
 
 export const DEFAULT_LOCALE = {
-  code: 'rs' as ValidLocale,
+  code: 'rs',
   iso: 'sr-RS',
   name: 'Srbija',
   file: 'rs.json',
   flag: 'i-circle-flags:rs',
   currency: 'RSD',
   currencySymbol: 'RSD'
-}
+};
 
-export const LOCALES: LocaleConfig[] = [
+export const LOCALES = [
   DEFAULT_LOCALE,
   {
     code: 'me',
@@ -39,13 +40,13 @@ export const LOCALES: LocaleConfig[] = [
     currency: 'USD',
     currencySymbol: '$'
   }
-]
+];
 
-export const LOCALE_STRATEGY = 'prefix_except_default'
+export const LOCALE_STRATEGY = 'prefix_except_default';
 
-export const VALID_LOCALES = ['me', 'rs', 'ba', 'us'] as ValidLocale[]
+export const VALID_LOCALES = ['me', 'rs', 'ba', 'us'];
 
-export const COUNTRY_TO_LOCALE_MAP: Record<string, ValidLocale> = {
+export const COUNTRY_TO_LOCALE_MAP = {
   'ME': 'me',
   'RS': 'rs',
   'BA': 'ba',
@@ -58,4 +59,4 @@ export const COUNTRY_TO_LOCALE_MAP: Record<string, ValidLocale> = {
   'AU': 'us',
   'NZ': 'us',
   'IE': 'us',
-}
+};

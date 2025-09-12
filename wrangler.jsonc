@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "konty-website",
-  "main": "./.output/server/index.mjs",
+  "main": "./server-wrapper.ts",
 	"compatibility_date": "2025-09-09",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
@@ -17,11 +17,6 @@
 
   "placement": {
     "mode": "smart"
-  },
-
-  // Build configuration
-  "build": {
-    "command": "pnpm build"
   },
 
   "vars": {

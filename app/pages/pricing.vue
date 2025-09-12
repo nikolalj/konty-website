@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { LOCALES } from '../../config/locale.config'
+import { LOCALES } from '~/config/locale.config.mjs'
 
 const { t, locale } = useI18n()
 const schemas = useSchemas()

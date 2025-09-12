@@ -9,7 +9,7 @@
   >
     <div
       v-if="shouldShow"
-      class="w-full z-100"
+      class="w-full z-100 max-w-[calc(100vw-2rem)] sm:max-w-full"
     >
       <div class="rounded bg-[var(--ui-bg)]">
         <div class="flex items-center gap-3 h-full p-1 justify-center">
@@ -153,13 +153,3 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
-
-<style scoped>
-/* Ensure banner appears above other content but below modals */
-@media (max-width: 639px) {
-  /* Mobile: slide up from bottom */
-  .fixed {
-    max-width: calc(100vw - 2rem);
-  }
-}
-</style>

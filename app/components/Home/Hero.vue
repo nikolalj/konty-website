@@ -53,9 +53,14 @@
       </UIAppear>
     </UContainer>
 
-    <!-- Wave footer -->
-    <div class="wave-shape-bottom">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 170" aria-hidden="true">
+    <!-- Wave Shape -->
+    <div class="absolute left-0 right-0 -bottom-px w-full leading-[0] pointer-events-none fill-[var(--ui-bg)]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 170"
+        aria-hidden="true"
+        class="fill-[var(--ui-bg)]"
+      >
         <path
           fill-opacity="1"
           d="M0,160L120,160C240,160,480,160,720,138.7C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
@@ -79,16 +84,3 @@ function onPrimaryCta(): void {
   })
 }
 </script>
-
-<style scoped>
-.wave-shape-bottom {
-  fill: var(--ui-bg);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px; /* hides seam */
-  width: 100%;
-  line-height: 0;
-  pointer-events: none;
-}
-</style>

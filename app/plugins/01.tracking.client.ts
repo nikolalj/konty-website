@@ -52,7 +52,54 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   // ============================================
-  // STEP 2: PAGE VIEW TRACKING
+  // STEP 2: DEFERRED GTM LOADING
+  // ============================================
+
+  // Load GTM after all critical resources are loaded for optimal performance
+  if (typeof window !== 'undefined') {
+    const loadGTM = async () => {
+      const gtmConfig = useRuntimeConfig().public.gtm
+      const gtmId = gtmConfig?.id
+
+      if (gtmId && typeof gtmId === 'string' && !document.querySelector(`script[src*="${gtmId}"]`)) {
+        // Dynamically import the loadScript function from @gtm-support/core
+        try {
+          const { loadScript } = await import('@gtm-support/core')
+          // Use minimal options for loading - just the GTM ID is required
+          loadScript(gtmId, {
+            defer: false,
+            compatibility: false
+          })
+          if (import.meta.dev) {
+            console.log('[Tracking] GTM loaded after window.load')
+          }
+        } catch (error) {
+          console.error('[Tracking] Failed to load GTM:', error)
+        }
+      }
+    }
+
+    // Load GTM only after user interaction to save 59KB
+    let gtmLoaded = false
+    
+    const loadGTMOnce = () => {
+      if (!gtmLoaded) {
+        gtmLoaded = true
+        loadGTM()
+      }
+    }
+    
+    // Load on first user interaction
+    window.addEventListener('scroll', loadGTMOnce, { once: true, passive: true })
+    window.addEventListener('click', loadGTMOnce, { once: true })
+    window.addEventListener('mousemove', loadGTMOnce, { once: true, passive: true })
+    
+    // Fallback: load after 4 seconds if no interaction
+    setTimeout(loadGTMOnce, 4000)
+  }
+
+  // ============================================
+  // STEP 3: PAGE VIEW TRACKING
   // ============================================
 
   // Track initial page view when app is ready
@@ -75,7 +122,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   })
 
   // ============================================
-  // STEP 3: SCROLL DEPTH TRACKING
+  // STEP 4: SCROLL DEPTH TRACKING
   // ============================================
 
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -125,7 +172,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   // ============================================
-  // STEP 4: ERROR TRACKING
+  // STEP 5: ERROR TRACKING
   // ============================================
 
   if (typeof window !== 'undefined') {
