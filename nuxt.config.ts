@@ -38,16 +38,29 @@ export default defineNuxtConfig({
       // JS minification
       minify: 'esbuild',
 
-      // Rollup output configuration
+      // Rollup output configuration with tree-shaking
       rollupOptions: {
         output: {
           // Prevent vendor splitting - reduces chunks for faster initial load
           manualChunks: undefined
+        },
+        // Aggressive tree-shaking for smaller bundles
+        treeshake: {
+          preset: 'recommended',
+          moduleSideEffects: false,  // Assume no side effects in modules
+          propertyReadSideEffects: false,  // Assume property access has no side effects
+          tryCatchDeoptimization: false  // Don't deoptimize try-catch blocks
         }
       },
 
       // No sourcemaps in production for smaller bundles and security
       sourcemap: false
+    },
+
+    // Optimize dependencies
+    optimizeDeps: {
+      include: ['vue', 'vue-router'],  // Pre-bundle essentials
+      exclude: ['@nuxt/ui-pro']  // Let these be dynamically imported
     }
   },
 
