@@ -8,13 +8,10 @@ const route = useRoute()
 const localePath = useLocalePath()
 const { public: { siteUrl } } = useRuntimeConfig()
 
-const isHomepage = computed(() => route.path === localePath('/'))
-
-setTimeout(() => {
-  console.log(isHomepage.value)
-  console.log(route.path)
-  console.log(localePath('/'))
-}, 3000)
+const isHomepage = computed(() => {
+  const removeTrailingSlash = (str: string) => str.replace(/\/$/, '')
+  return removeTrailingSlash(route.path) === removeTrailingSlash(localePath('/'))
+})
 
 // Don't use automatic schema generation since we need localized labels
 const items = useBreadcrumbItems({
