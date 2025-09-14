@@ -10,12 +10,11 @@ const { public: { siteUrl } } = useRuntimeConfig()
 
 const isHomepage = computed(() => route.path === localePath('/'))
 
-//@ts-expect-error adsnsak dnsad jasndk jsankd
-window.isHomepage = isHomepage
-//@ts-expect-error adsnsak dnsad jasndk jsankd
-window.route = route
-//@ts-expect-error adsnsak dnsad jasndk
-window.localePath = localePath
+setTimeout(() => {
+  console.log(isHomepage.value)
+  console.log(route.path)
+  console.log(localePath('/'))
+}, 3000)
 
 // Don't use automatic schema generation since we need localized labels
 const items = useBreadcrumbItems({
