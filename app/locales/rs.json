@@ -1,8 +1,18 @@
 {
   "ui": {
     "breadcrumb": {
-      "index": "Početna"
+      "index": "Početna",
+      "products": "Proizvodi",
+      "pricing": "Cijene",
+      "konty-hospitality": "Ugostiteljstvo",
+      "konty-retail": "Trgovina",
+      "konty-download": "Download",
+      "features": "Funcionalnosti",
+      "contact": "Kontakt",
+      "client-stories": "Iskustva klijenata",
+      "partners": "Partneri"
     },
+    "readMore": "Read More",
     "cta": {
       "primary": "Zakaži demo",
       "secondary": "Kontaktiraj nas"
@@ -407,6 +417,29 @@
         "subtitle": "Kad udari subota uveče, trebaš POS terminal koji neće da te izda. Fiskalne kase sa 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
         "title": "Za restorane koji ne smeju da stanu",
         "viewPricing": "Vidi poštene cene"
+      },
+      "features": {
+        "hero": {
+          "title": "All Hospitality Features",
+          "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
+          "backToProduct": "Back to Hospitality"
+        },
+        "list": {
+          "title": "Complete Feature Set",
+          "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars."
+        }
+      },
+      "faq": {
+        "q1": "Can I manage multiple locations?",
+        "a1": "Yes, Konty supports multi-location management with centralized reporting.",
+        "q2": "Does it work offline?",
+        "a2": "Yes, all transactions sync automatically when connection is restored.",
+        "q3": "How long does setup take?",
+        "a3": "Most restaurants are up and running within 48 hours.",
+        "q4": "Can I keep my existing hardware?",
+        "a4": "Yes, Konty works with most existing POS hardware.",
+        "q5": "What about staff training?",
+        "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
       }
     },
     "kontyRetail": {
@@ -416,6 +449,29 @@
         "subtitle": "POS terminal sa bar kod čitačem koji stvarno radi na Crni petak. Fiskalne kase sa 99.97% uptime kad drugi pucaju.",
         "title": "Prodaj više. Manje brojanja. Bez stresa.",
         "viewDemo": "2-minutni demo"
+      },
+      "features": {
+        "hero": {
+          "title": "All Retail Features",
+          "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",
+          "backToProduct": "Back to Retail"
+        },
+        "list": {
+          "title": "Complete Feature Set",
+          "subtitle": "Discover all the tools built specifically for retail stores and chains."
+        }
+      },
+      "faq": {
+        "q1": "Can I manage inventory across multiple stores?",
+        "a1": "Yes, real-time inventory sync across all your locations.",
+        "q2": "Does it support barcode scanning?",
+        "a2": "Yes, works with all standard barcode scanners and mobile devices.",
+        "q3": "What about loyalty programs?",
+        "a3": "Built-in loyalty program with points, discounts, and customer tracking.",
+        "q4": "Can I import my existing inventory?",
+        "a4": "Yes, we provide free data migration from your current system.",
+        "q5": "How are returns handled?",
+        "a5": "Simple one-click returns with automatic inventory adjustment."
       }
     },
     "demo": {
@@ -428,12 +484,66 @@
     "contact": {
       "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
       "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme."
+    },
+    "about": {
+      "contact": {
+        "hero": {
+          "title": "Get In Touch",
+          "subtitle": "We're here to help you choose the perfect POS solution for your business."
+        },
+        "address": {
+          "title": "Address",
+          "line1": "Bulevar Svetog Petra Cetinjskog 56",
+          "line2": "81000 Podgorica, Montenegro"
+        },
+        "phone": {
+          "title": "Phone",
+          "number": "+382 67 607 670"
+        },
+        "email": {
+          "title": "Email",
+          "address": "contact"
+        },
+        "hours": {
+          "title": "Working Hours",
+          "weekdays": "Monday - Friday: 9:00 - 18:00",
+          "weekend": "Saturday: 10:00 - 14:00"
+        }
+      },
+      "clientStories": {
+        "hero": {
+          "title": "Success Stories",
+          "subtitle": "See how businesses like yours transformed their operations with Konty."
+        },
+        "badge": "Real Results"
+      },
+      "partners": {
+        "hero": {
+          "title": "Our Partners Network",
+          "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+        },
+        "cta": "Become a Partner",
+        "filterPlaceholder": "Filter by city...",
+        "noResults": "No partners found in this city"
+      }
     }
   },
   "seo": {
     "about": {
       "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
-      "title": "O nama - Konty tim"
+      "title": "O nama - Konty tim",
+      "contact": {
+        "title": "Contact Us - Konty POS",
+        "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+      },
+      "clientStories": {
+        "title": "Client Success Stories - Konty POS",
+        "description": "Real stories from businesses that transformed their operations with Konty POS."
+      },
+      "partners": {
+        "title": "Partners Network - Konty POS",
+        "description": "Join our growing network of partners delivering Konty solutions."
+      }
     },
     "demo": {
       "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
@@ -445,11 +555,19 @@
     },
     "kontyHospitality": {
       "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mestu.",
-      "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće"
+      "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
+      "features": {
+        "title": "All Hospitality Features - Konty POS",
+        "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+      }
     },
     "kontyRetail": {
       "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
-      "title": "Konty za trgovinu - POS terminal sa bar kod čitačem"
+      "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
+      "features": {
+        "title": "All Retail Features - Konty POS",
+        "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+      }
     },
     "pricing": {
       "description": "Transparentne cene bez skrivenih troškova. Mesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana.",
@@ -494,7 +612,7 @@
       },
       "contact": {
         "phone": "+38267607670",
-        "email": "contact&#64;konty.com"
+        "email": "contact"
       },
       "areaServed": [
         "US",

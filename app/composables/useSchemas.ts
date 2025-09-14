@@ -341,6 +341,42 @@ export const useSchemas = () => {
     })
   }
 
+  /**
+   * Schema for Konty Hospitality Features page
+   */
+  const kontyHospitalityFeatures = () => ({
+    '@type': 'WebPage',
+    name: t('seo.kontyHospitality.features.title'),
+    description: t('seo.kontyHospitality.features.description')
+  })
+
+  /**
+   * Schema for Konty Retail Features page
+   */
+  const kontyRetailFeatures = () => ({
+    '@type': 'WebPage',
+    name: t('seo.kontyRetail.features.title'),
+    description: t('seo.kontyRetail.features.description')
+  })
+
+  /**
+   * Schema for Client Stories page
+   */
+  const clientStories = () => ({
+    '@type': 'WebPage',
+    name: t('seo.about.clientStories.title'),
+    description: t('seo.about.clientStories.description')
+  })
+
+  /**
+   * Schema for Partners page
+   */
+  const partners = () => ({
+    '@type': 'WebPage',
+    name: t('seo.about.partners.title'),
+    description: t('seo.about.partners.description')
+  })
+
   return {
     // Product schemas
     kontyRetail,
@@ -350,6 +386,10 @@ export const useSchemas = () => {
 
     // Page schemas
     localBusiness,
+    kontyHospitalityFeatures,
+    kontyRetailFeatures,
+    clientStories,
+    partners,
 
     // Generator schemas
     faqSchema,

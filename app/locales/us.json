@@ -1,8 +1,18 @@
 {
   "ui": {
     "breadcrumb": {
-      "index": "Home"
+      "index": "Home",
+      "products": "Products",
+      "pricing": "Pricing",
+      "konty-hospitality": "Hospitality",
+      "konty-retail": "Retail",
+      "konty-download": "Download",
+      "features": "Features",
+      "contact": "Contact",
+      "client-stories": "Client stories",
+      "partners": "Partners"
     },
+    "readMore": "Read More",
     "cta": {
       "primary": "Get a demo",
       "secondary": "Contact us"
@@ -407,6 +417,29 @@
         "subtitle": "When Saturday night hits, you need a restaurant POS that won't quit. Cloud-based POS with 99.97% uptime. 30-second support. Switch in 48 hours.",
         "title": "Restaurant POS System That Can't Afford Downtime",
         "viewPricing": "See Honest Pricing"
+      },
+      "features": {
+        "hero": {
+          "title": "All Hospitality Features",
+          "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
+          "backToProduct": "Back to Hospitality"
+        },
+        "list": {
+          "title": "Complete Feature Set",
+          "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars."
+        }
+      },
+      "faq": {
+        "q1": "Can I manage multiple locations?",
+        "a1": "Yes, Konty supports multi-location management with centralized reporting.",
+        "q2": "Does it work offline?",
+        "a2": "Yes, all transactions sync automatically when connection is restored.",
+        "q3": "How long does setup take?",
+        "a3": "Most restaurants are up and running within 48 hours.",
+        "q4": "Can I keep my existing hardware?",
+        "a4": "Yes, Konty works with most existing POS hardware.",
+        "q5": "What about staff training?",
+        "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
       }
     },
     "kontyRetail": {
@@ -416,6 +449,29 @@
         "subtitle": "The retail POS system with inventory that actually works on Black Friday. Cloud POS with 99.97% uptime when others crash.",
         "title": "Retail POS System - Sell More. Count Less. Stress Never.",
         "viewDemo": "Watch 2-Min Demo"
+      },
+      "features": {
+        "hero": {
+          "title": "All Retail Features",
+          "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",
+          "backToProduct": "Back to Retail"
+        },
+        "list": {
+          "title": "Complete Feature Set",
+          "subtitle": "Discover all the tools built specifically for retail stores and chains."
+        }
+      },
+      "faq": {
+        "q1": "Can I manage inventory across multiple stores?",
+        "a1": "Yes, real-time inventory sync across all your locations.",
+        "q2": "Does it support barcode scanning?",
+        "a2": "Yes, works with all standard barcode scanners and mobile devices.",
+        "q3": "What about loyalty programs?",
+        "a3": "Built-in loyalty program with points, discounts, and customer tracking.",
+        "q4": "Can I import my existing inventory?",
+        "a4": "Yes, we provide free data migration from your current system.",
+        "q5": "How are returns handled?",
+        "a5": "Simple one-click returns with automatic inventory adjustment."
       }
     },
     "demo": {
@@ -428,12 +484,66 @@
     "contact": {
       "title": "See Your Custom POS Setup in 15 Minutes",
       "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches."
+    },
+    "about": {
+      "contact": {
+        "hero": {
+          "title": "Get In Touch",
+          "subtitle": "We're here to help you choose the perfect POS solution for your business."
+        },
+        "address": {
+          "title": "Address",
+          "line1": "Bulevar Svetog Petra Cetinjskog 56",
+          "line2": "81000 Podgorica, Montenegro"
+        },
+        "phone": {
+          "title": "Phone",
+          "number": "+382 67 607 670"
+        },
+        "email": {
+          "title": "Email",
+          "address": "contact"
+        },
+        "hours": {
+          "title": "Working Hours",
+          "weekdays": "Monday - Friday: 9:00 - 18:00",
+          "weekend": "Saturday: 10:00 - 14:00"
+        }
+      },
+      "clientStories": {
+        "hero": {
+          "title": "Success Stories",
+          "subtitle": "See how businesses like yours transformed their operations with Konty."
+        },
+        "badge": "Real Results"
+      },
+      "partners": {
+        "hero": {
+          "title": "Our Partners Network",
+          "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+        },
+        "cta": "Become a Partner",
+        "filterPlaceholder": "Filter by city...",
+        "noResults": "No partners found in this city"
+      }
     }
   },
   "seo": {
     "about": {
       "description": "26+ years of POS system development experience. Supporting local businesses with reliable technology.",
-      "title": "About Us - Konty Team"
+      "title": "About Us - Konty Team",
+      "contact": {
+        "title": "Contact Us - Konty POS",
+        "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+      },
+      "clientStories": {
+        "title": "Client Success Stories - Konty POS",
+        "description": "Real stories from businesses that transformed their operations with Konty POS."
+      },
+      "partners": {
+        "title": "Partners Network - Konty POS",
+        "description": "Join our growing network of partners delivering Konty solutions."
+      }
     },
     "demo": {
       "description": "See Konty in action. Free 15-minute demo tailored to your business. No obligations.",
@@ -445,11 +555,19 @@
     },
     "kontyHospitality": {
       "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place.",
-      "title": "Restaurant POS System - Konty Hospitality"
+      "title": "Restaurant POS System - Konty Hospitality",
+      "features": {
+        "title": "All Hospitality Features - Konty POS",
+        "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+      }
     },
     "kontyRetail": {
       "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains.",
-      "title": "Retail POS System - Konty Retail"
+      "title": "Retail POS System - Konty Retail",
+      "features": {
+        "title": "All Retail Features - Konty POS",
+        "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+      }
     },
     "pricing": {
       "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start free for 30 days.",
@@ -494,7 +612,7 @@
       },
       "contact": {
         "phone": "+38267607670",
-        "email": "contact&#64;konty.com"
+        "email": "contact"
       },
       "areaServed": [
         "US",
