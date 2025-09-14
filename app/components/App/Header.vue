@@ -101,7 +101,7 @@ const isTopBarCollapsed = ref(false)
 // Check if we're on homepage
 const isHomepage = computed(() => {
   const path = route.path
-  return path === '/' || path === '/me' || path === '/ba' || path === '/us' || path === '/rs'
+  return path === localePath('/')
 })
 
 watch(y, () => {
