@@ -14,7 +14,7 @@
         :aria-hidden="isTopBarCollapsed ? 'true' : 'false'"
         :inert="isTopBarCollapsed"
       >
-        <AppLocaleSuggestionBanner />
+        <AppHeaderLocaleSuggestionBanner />
 
         <UContainer
           class="h-full flex items-center text-sm transition-colors duration-500"
@@ -31,11 +31,11 @@
             </div>
 
             <!-- Breadcrumbs on left (only on inner pages) -->
-            <AppBreadcrumbs v-if="!isHomepage" />
+            <AppHeaderBreadcrumbs v-if="!isHomepage" />
           </div>
 
           <div class="flex gap-1">
-            <AppCountrySelector />
+            <AppHeaderCountrySelector />
             <UColorModeButton />
           </div>
         </UContainer>
@@ -90,19 +90,12 @@
 const { y } = useWindowScroll()
 const { t } = useI18n()
 const localePath = useLocalePath()
-const route = useRoute()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID  = 8
 
 const isHeaderSolid = ref(false)
 const isTopBarCollapsed = ref(false)
-
-// Check if we're on homepage
-const isHomepage = computed(() => {
-  const path = route.path
-  return path === localePath('/')
-})
 
 watch(y, () => {
   const cur = y.value

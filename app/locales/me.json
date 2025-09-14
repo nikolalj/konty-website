@@ -29,7 +29,6 @@
       "main": {
         "products": "Proizvodi",
         "pricing": "Cijene",
-        "download": "Download",
         "about": "O nama",
         "hospitality": "Ugostiteljstvo",
         "hospitalityDesc": "Radi i kad je najgore. Nikad ne puca u špicu.",
@@ -52,7 +51,8 @@
       },
       "products": {
         "forHospitality": "Konty za ugostiteljstvo",
-        "forRetail": "Konty za trgovinu"
+        "forRetail": "Konty za trgovinu",
+        "download": "Preuzmi Konty"
       },
       "about": {
         "contact": "Kontakt",

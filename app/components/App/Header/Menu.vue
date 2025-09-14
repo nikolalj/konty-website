@@ -32,7 +32,7 @@
               <p class="font-medium text-highlighted">
                 {{ child.label }}
               </p>
-              <p class="text-muted line-clamp-2">
+              <p v-if="child.description" class="text-muted line-clamp-2">
                 {{ child.description }}
               </p>
             </ULink>
@@ -176,7 +176,6 @@ const items = computed(() => [
       },
       {
         label: t('ui.navigation.products.download'),
-        description: t('ui.navigation.main.downloadDesc'),
         to: localePath('/download')
       }
     ]

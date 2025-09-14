@@ -1,10 +1,21 @@
 <template>
-  <UBreadcrumb :items="localizedItems" />
+  <UBreadcrumb v-if="!isHomepage" :items="localizedItems" />
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
 const { public: { siteUrl } } = useRuntimeConfig()
+
+const isHomepage = computed(() => route.path === localePath('/'))
+
+//@ts-expect-error adsnsak dnsad jasndk jsankd
+window.isHomepage = isHomepage
+//@ts-expect-error adsnsak dnsad jasndk jsankd
+window.route = route
+//@ts-expect-error adsnsak dnsad jasndk jsankd
+window.localePath = localePath
 
 // Don't use automatic schema generation since we need localized labels
 const items = useBreadcrumbItems({
