@@ -373,6 +373,31 @@
           "q4": "Does Konty support tax compliance?",
           "q5": "How does the free trial work?"
         }
+      },
+      "download": {
+        "hero": {
+          "title": "Everywhere you need it!",
+          "subtitle": "Get Konty for any device or platform.",
+          "description": "Whether you prefer the convenience of web-based access, the familiarity of Windows applications, the mobility of Android devices, or the reliability of MacOS, our software is adaptable to your preferred operating system.",
+          "docsLink": "For detailed instructions and documentation",
+          "docsLinkText": "click here"
+        },
+        "sections": {
+          "production": {
+            "title": "Download Konty",
+            "web": "Web App",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          },
+          "demo": {
+            "title": "Download Konty Demo",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          }
+        }
       }
     },
     "kontyHospitality": {

@@ -373,6 +373,31 @@
           "q4": "Da li Konty podržava fiskalizaciju?",
           "q5": "Kako funkcioniše besplatni probni period?"
         }
+      },
+      "download": {
+        "hero": {
+          "title": "Gdje god ti treba!",
+          "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
+          "description": "Bilo da preferirate pogodnost pristupa preko weba, poznato okruženje Windows aplikacija, mobilnost Android uređaja ili pouzdanost MacOS-a, naš softver se prilagođava vašem operativnom sistemu.",
+          "docsLink": "Za detaljne instrukcije i dokumentaciju",
+          "docsLinkText": "kliknite ovdje"
+        },
+        "sections": {
+          "production": {
+            "title": "Preuzmi Konty",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          },
+          "demo": {
+            "title": "Preuzmi Konty Demo",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          }
+        }
       }
     },
     "kontyHospitality": {
