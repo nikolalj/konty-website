@@ -31,7 +31,7 @@
             </div>
 
             <!-- Breadcrumbs on left (only on inner pages) -->
-            <AppHeaderBreadcrumbs v-if="!isHomepage" />
+            <AppHeaderBreadcrumbs />
           </div>
 
           <div class="flex gap-1">
