@@ -14,7 +14,7 @@ const isHomepage = computed(() => route.path === localePath('/'))
 window.isHomepage = isHomepage
 //@ts-expect-error adsnsak dnsad jasndk jsankd
 window.route = route
-//@ts-expect-error adsnsak dnsad jasndk jsankd
+//@ts-expect-error adsnsak dnsad jasndk
 window.localePath = localePath
 
 // Don't use automatic schema generation since we need localized labels
