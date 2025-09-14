@@ -51,7 +51,7 @@
           width="40"
           height="40"
         />
-        <span class="hidden lg:block text-2xl">konty</span>
+        <span class="hidden md:block text-2xl">konty</span>
       </div>
     </template>
 
