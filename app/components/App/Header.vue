@@ -199,13 +199,23 @@
 
     <template #right>
       <UButton
+        :to="localePath('/contact-us')"
+        size="lg"
+        variant="outline"
+        color="primary"
+        :aria-label="t('ui.cta.secondary')"
+        class="border-1"
+      >
+        {{ t('ui.cta.secondary') }}
+      </UButton>
+      <UButton
         :to="localePath('/demo')"
         size="lg"
         variant="solid"
         color="primary"
-        :aria-label="t('pages.home.hero.cta.primary')"
+        :aria-label="t('ui.cta.primary')"
       >
-        {{ t('pages.home.hero.cta.primary') }}
+        {{ t('ui.cta.primary') }}
       </UButton>
     </template>
   </UHeader>
@@ -247,14 +257,19 @@ const items = computed(() => [
     slot: 'products' as const,
     children: [
       {
-        label: t('ui.navigation.productNames.forHospitality'),
+        label: t('ui.navigation.products.forHospitality'),
         description: t('ui.navigation.main.hospitalityDesc'),
         to: localePath('/konty-hospitality')
       },
       {
-        label: t('ui.navigation.productNames.forRetail'),
+        label: t('ui.navigation.products.forRetail'),
         description: t('ui.navigation.main.retailDesc'),
         to: localePath('/konty-retail')
+      },
+      {
+        label: t('ui.navigation.products.download'),
+        description: t('ui.navigation.main.downloadDesc'),
+        to: localePath('/download')
       }
     ]
   },
@@ -288,11 +303,6 @@ const items = computed(() => [
   },
   {
     label: t('ui.navigation.main.pricing'),
-    class: 'font-bold',
-    to: localePath('/pricing')
-  },
-  {
-    label: t('ui.navigation.main.download'),
     class: 'font-bold',
     to: localePath('/pricing')
   },

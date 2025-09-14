@@ -26,8 +26,8 @@ const columns: FooterColumn[] = [
   {
     label: t('ui.footer.links.products'),
     children: [
-      { label: t('ui.navigation.productNames.forHospitality'), to: localePath('/konty-hospitality') },
-      { label: t('ui.navigation.productNames.forRetail'), to: localePath('/konty-retail') },
+      { label: t('ui.navigation.products.forHospitality'), to: localePath('/konty-hospitality') },
+      { label: t('ui.navigation.products.forRetail'), to: localePath('/konty-retail') },
       { label: t('ui.navigation.main.pricing'), to: localePath('/pricing') },
       { label: t('ui.common.buttons.bookDemo'), to: localePath('/demo') }
     ]

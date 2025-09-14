@@ -20,7 +20,7 @@ usePageSeo({
 defineOgImageComponent('Main', {
   title: t('ui.navigation.main.products'),
   description: t('seo.products.description'),
-  cta: t('pages.home.hero.cta.primary')
+  cta: t('ui.cta.primary')
 })
 
 // Use centralized schema

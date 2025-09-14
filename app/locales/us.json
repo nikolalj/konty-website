@@ -3,6 +3,10 @@
     "breadcrumb": {
       "index": "Home"
     },
+    "cta": {
+      "primary": "Get a demo",
+      "secondary": "Contact us"
+    },
     "common": {
       "buttons": {
         "bookDemo": "Get Personal Demo (15 min)",
@@ -25,7 +29,6 @@
       "main": {
         "products": "Products",
         "pricing": "Pricing",
-        "download": "Download",
         "about": "About",
         "hospitality": "Hospitality",
         "hospitalityDesc": "Restaurant POS system built to survive your worst nights. Never crashes when it matters.",
@@ -46,9 +49,10 @@
         "pizzeria": "Pizzeria",
         "supermarket": "Supermarket"
       },
-      "productNames": {
+      "products": {
         "forHospitality": "Konty for Hospitality",
-        "forRetail": "Konty for Retail"
+        "forRetail": "Konty for Retail",
+        "download": "Download"
       },
       "about": {
         "contact": "Contact",
@@ -121,10 +125,7 @@
       "hero": {
         "title": "POS System That Won't Crash During Dinner Rush.",
         "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
-        "tagline": "Trusted by 9,000 small businesses who can't afford downtime",
-        "cta": {
-          "primary": "Book a demo"
-        }
+        "tagline": "Trusted by 9,000 small businesses who can't afford downtime"
       },
       "statistics": {
         "stat1": {

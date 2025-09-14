@@ -28,7 +28,7 @@
                 class="text-base"
                 @click="onPrimaryCta"
               >
-                {{ t('pages.home.hero.cta.primary') }}
+                {{ t('ui.cta.primary') }}
               </UButton>
             </div>
           </div>

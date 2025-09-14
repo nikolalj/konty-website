@@ -3,6 +3,10 @@
     "breadcrumb": {
       "index": "Početna"
     },
+    "cta": {
+      "primary": "Zakaži demo",
+      "secondary": "Kontaktiraj nas"
+    },
     "common": {
       "buttons": {
         "bookDemo": "Lični demo (15 min)",
@@ -46,7 +50,7 @@
         "pizzeria": "Picerija",
         "supermarket": "Supermarket"
       },
-      "productNames": {
+      "products": {
         "forHospitality": "Konty za ugostiteljstvo",
         "forRetail": "Konty za trgovinu"
       },
@@ -121,10 +125,7 @@
       "hero": {
         "title": "Konačno. POS terminal koji neće pući u subotu uveče.",
         "subtitle": "Dok drugi dodaju AI i buzzwords, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri",
-        "cta": {
-          "primary": "Zakaži demo"
-        }
+        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri"
       },
       "statistics": {
         "stat1": {

@@ -34,7 +34,7 @@ defineOgImageComponent('Main', {
   title: t('pages.home.hero.title'),
   description: t('pages.home.hero.subtitle'),
   badge: t('pages.pricing.freeTrial'),
-  cta: t('pages.home.hero.cta.primary')
+  cta: t('ui.cta.primary')
 })
 
 // Schema.org structured data using module composables

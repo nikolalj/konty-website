@@ -2,12 +2,12 @@
   <div>
     <!-- Critical above-fold - hydrate immediately -->
     <KontyRetailHero />
-    
+
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList product="kontyRetail" hydrate-on-visible />
     <LazySharedBenefits product="kontyRetail" hydrate-on-visible />
     <LazyKontyRetailFeatures hydrate-on-visible />
-    
+
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="kontyRetail" hydrate-on-visible />
     <LazySharedGetStarted product="kontyRetail" hydrate-on-idle />
@@ -34,7 +34,7 @@ defineOgImageComponent('Product', {
     t('pages.products.features.retail.customerInsights.title'),
     t('pages.products.features.retail.quickCheckout.title')
   ],
-  cta: t('pages.home.hero.cta.primary'),
+  cta: t('ui.cta.primary'),
   icon: '🛍️'
 })
 

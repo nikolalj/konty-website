@@ -2,12 +2,12 @@
   <div>
     <!-- Critical above-fold - hydrate immediately -->
     <KontyHospitalityHero />
-    
+
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList product="kontyHospitality" hydrate-on-visible />
     <LazySharedBenefits product="kontyHospitality" hydrate-on-visible />
     <LazyKontyHospitalityFeatures hydrate-on-visible />
-    
+
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="kontyHospitality" hydrate-on-visible />
     <LazySharedGetStarted product="kontyHospitality" hydrate-on-idle />
@@ -34,7 +34,7 @@ defineOgImageComponent('Product', {
     t('pages.products.features.hospitality.kitchenDisplay.title'),
     t('pages.products.features.hospitality.staffManagement.title')
   ],
-  cta: t('pages.home.hero.cta.primary'),
+  cta: t('ui.cta.primary'),
   icon: '🍽️'
 })
 
