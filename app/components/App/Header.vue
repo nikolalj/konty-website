@@ -17,15 +17,10 @@
         <AppLocaleSuggestionBanner />
 
         <UContainer
-          class="h-full flex items-center justify-between text-sm transition-colors duration-500"
+          class="h-full flex items-center text-sm transition-colors duration-500"
         >
-          <!-- Breadcrumbs on left (only on inner pages) -->
-          <div>
-            <AppBreadcrumbs v-if="!isHomepage" />
-          </div>
-
           <!-- Contact info on right (or centered on homepage) -->
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 flex-1">
             <div class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400">
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact@konty.com</span>
@@ -34,6 +29,14 @@
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
             </div>
+
+            <!-- Breadcrumbs on left (only on inner pages) -->
+            <AppBreadcrumbs v-if="!isHomepage" />
+          </div>
+
+          <div class="flex gap-1">
+            <AppCountrySelector />
+            <UColorModeButton />
           </div>
         </UContainer>
       </div>
@@ -159,6 +162,35 @@
           </ul>
         </div>
       </template>
+
+      <template #about-content="{ item }">
+        <div class="grid grid-cols-2 gap-4 p-4">
+          <div>
+            <NuxtImg
+              src="/images/navigation/products.avif"
+              format="avif"
+              loading="lazy"
+              alt="Navigate to retail image"
+              role="presentation"
+              width="200"
+              height="200"
+              quality="80"
+              fit="cover"
+              class="rounded-md"
+            />
+          </div>
+
+          <ul>
+            <li v-for="child in item.children" :key="child.label">
+              <ULink :to="child.to || '#'" class="block text-sm text-left rounded-md px-3 py-2 transition-colors hover:bg-elevated/50">
+                <p class="font-medium text-highlighted">
+                  {{ child.label }}
+                </p>
+              </ULink>
+            </li>
+          </ul>
+        </div>
+      </template>
     </UNavigationMenu>
 
     <template #body>
@@ -175,10 +207,6 @@
       >
         {{ t('pages.home.hero.cta.primary') }}
       </UButton>
-
-      <AppCountrySelector class="ml-2" />
-
-      <UColorModeButton />
     </template>
   </UHeader>
 
@@ -264,9 +292,19 @@ const items = computed(() => [
     to: localePath('/pricing')
   },
   {
+    label: t('ui.navigation.main.download'),
+    class: 'font-bold',
+    to: localePath('/pricing')
+  },
+  {
     label: t('ui.navigation.main.about'),
     class: 'font-bold',
-    to: localePath('/about')
+    slot: 'about' as const,
+    children: [
+      { label: t('ui.navigation.about.contact'), to: localePath('/about/contact') },
+      { label: t('ui.navigation.about.clientStories'), to: localePath('/about/client-stories') },
+      { label: t('ui.navigation.about.partners'), to: localePath('/about/partners') },
+    ]
   }
 ])
 </script>

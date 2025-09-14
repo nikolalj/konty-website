@@ -1,5 +1,8 @@
 {
   "ui": {
+    "breadcrumb": {
+      "index": "Home"
+    },
     "common": {
       "buttons": {
         "bookDemo": "Get Personal Demo (15 min)",
@@ -22,14 +25,12 @@
       "main": {
         "products": "Products",
         "pricing": "Pricing",
+        "download": "Download",
         "about": "About",
         "hospitality": "Hospitality",
         "hospitalityDesc": "Restaurant POS system built to survive your worst nights. Never crashes when it matters.",
         "retail": "Retail",
         "retailDesc": "Retail POS with inventory management. Sell more. Count less. Stress never."
-      },
-      "breadcrumb": {
-        "index": "Home"
       },
       "categories": {
         "barLounge": "Bar & Lounge",
@@ -48,6 +49,11 @@
       "productNames": {
         "forHospitality": "Konty for Hospitality",
         "forRetail": "Konty for Retail"
+      },
+      "about": {
+        "contact": "Contact",
+        "clientStories": "Client stories",
+        "partners": "Partners"
       }
     },
     "footer": {

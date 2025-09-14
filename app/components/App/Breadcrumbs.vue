@@ -19,13 +19,13 @@ const localizedItems = computed(() => {
         ...item,
         label: '',  // Empty label since we'll show icon
         icon: 'i-heroicons-home-20-solid',
-        ariaLabel: t('ui.navigation.breadcrumb.index') // For accessibility
+        ariaLabel: t('ui.breadcrumb.index') // For accessibility
       }
     }
 
     const segments = item.to?.split('/').filter(Boolean) || []
     const segmentKey = segments[segments.length - 1] || 'index'
-    const translationKey = `ui.navigation.breadcrumb.${segmentKey}`
+    const translationKey = `ui.breadcrumb.${segmentKey}`
     const translation = t(translationKey)
 
     return {
@@ -42,7 +42,7 @@ useSchemaOrg([
       '@type': 'ListItem',
       position: index + 1,
       // For schema, use the aria label for home (index 0) or regular label
-      name: index === 0 ? t('ui.navigation.breadcrumb.index') : item.label,
+      name: index === 0 ? t('ui.breadcrumb.index') : item.label,
       item: `${siteUrl}${item.to}`
     }))
   })

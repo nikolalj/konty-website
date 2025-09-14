@@ -1,5 +1,8 @@
 {
   "ui": {
+    "breadcrumb": {
+      "index": "Početna"
+    },
     "common": {
       "buttons": {
         "bookDemo": "Lični demo (15 min)",
@@ -22,14 +25,12 @@
       "main": {
         "products": "Proizvodi",
         "pricing": "Cene",
+        "download": "Download",
         "about": "O nama",
         "hospitality": "Ugostiteljstvo",
         "hospitalityDesc": "Radi i kad je najgore. Nikad ne puca u špicu.",
         "retail": "Trgovina",
         "retailDesc": "Prodaj više. Manje brojanja. Bez stresa."
-      },
-      "breadcrumb": {
-        "index": "Početna"
       },
       "categories": {
         "barLounge": "Bar & Lounge",
@@ -48,6 +49,11 @@
       "productNames": {
         "forHospitality": "Konty za ugostiteljstvo",
         "forRetail": "Konty za trgovinu"
+      },
+      "about": {
+        "contact": "Kontakt",
+        "clientStories": "Iskustva klijenata",
+        "partners": "Partneri"
       }
     },
     "footer": {
