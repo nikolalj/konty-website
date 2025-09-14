@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@saslavik/nuxt-gtm',
     '@nuxt/eslint',
-    'nitro-cloudflare-dev'
+    ...(process.env.USE_CLOUDFLARE_DEV === 'true' ? ['nitro-cloudflare-dev'] : [])
   ],
 
   features: {
