@@ -52,10 +52,6 @@ export const useSchemas = () => {
         priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()
       },
 
-      // Software requirements
-      softwareRequirements: t('schema.requirements.software'),
-      permissions: t('schema.permissions.retail'),
-
       // Key features list
       featureList: [
         t('pages.products.features.retail.inventory.title'),
@@ -67,7 +63,7 @@ export const useSchemas = () => {
       ],
 
       // Screenshot for rich results
-      screenshot: t('schema.screenshots.retail'),
+      screenshot: '/images/screenshots/retail-dashboard.png',
 
       // Customer ratings for trust signals
       aggregateRating: {
@@ -219,54 +215,6 @@ export const useSchemas = () => {
   })
 
   /**
-   * HowTo schema for setup guides
-   */
-  const howToSetup = () => ({
-    '@type': 'HowTo',
-    name: 'How to Set Up Konty POS',
-    description: 'Get your Konty POS system up and running in just 5 minutes',
-    totalTime: 'PT5M',
-    supply: [
-      {
-        '@type': 'HowToSupply',
-        name: 'Computer or mobile device'
-      }
-    ],
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Sign up for Konty account',
-        text: 'Sign up for Konty account'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Configure your business details',
-        text: 'Configure your business details'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Add your products or menu items',
-        text: 'Add your products or menu items'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Set up payment methods',
-        text: 'Set up payment methods'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 5,
-        name: 'Start accepting orders',
-        text: 'Start accepting orders'
-      }
-    ]
-  })
-
-  /**
    * LocalBusiness schema for about page
    * Exact match from about.vue page
    */
@@ -393,7 +341,6 @@ export const useSchemas = () => {
 
     // Generator schemas
     faqSchema,
-    howToSetup,
 
     // Constants for external use
     RATINGS,

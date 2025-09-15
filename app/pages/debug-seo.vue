@@ -770,11 +770,4 @@ if (import.meta.client) {
     console.log('🔍 SEO Debug Page Loaded - Click "Log Detailed Info to Console" for full analysis')
   })
 }
-
-// Set page meta for this debug page
-useSeoMeta({
-  title: 'SEO Debug',
-  description: 'Debug page for SEO configuration',
-  robots: 'noindex, nofollow'
-})
 </script>

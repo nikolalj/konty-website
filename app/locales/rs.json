@@ -649,16 +649,5 @@
         "name": "Konty Trgovina"
       }
     }
-  },
-  "schema": {
-    "requirements": {
-      "software": "2GB RAM minimum, Internet konekcija za cloud sinhronizaciju"
-    },
-    "permissions": {
-      "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
-    },
-    "screenshots": {
-      "retail": "/images/screenshots/retail-dashboard.png"
-    }
   }
 }

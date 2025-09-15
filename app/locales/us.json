@@ -649,16 +649,5 @@
         "name": "Konty Retail"
       }
     }
-  },
-  "schema": {
-    "requirements": {
-      "software": "2GB RAM minimum, Internet connection for cloud sync"
-    },
-    "permissions": {
-      "retail": "camera (for barcode scanning), storage, network, printer"
-    },
-    "screenshots": {
-      "retail": "/images/screenshots/retail-dashboard.png"
-    }
   }
 }
