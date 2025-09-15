@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <KontyHospitalityFeaturesHero />
+    <HospitalityFeaturesHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyKontyHospitalityFeaturesList hydrate-on-visible />
-    <LazySharedFAQ product="kontyHospitality" hydrate-on-visible />
-    <LazySharedTestimonials product="kontyHospitality" hydrate-on-idle />
+    <LazyHospitalityFeaturesList hydrate-on-visible />
+    <LazySharedFAQ product="hospitality" hydrate-on-visible />
+    <LazySharedTestimonials product="hospitality" hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedContactForm hydrate-on-visible />
@@ -19,18 +19,18 @@ const schemas = useSchemas()
 
 // SEO meta tags
 usePageSeo({
-  title: t('seo.kontyHospitality.features.title'),
-  description: t('seo.kontyHospitality.features.description')
+  title: t('seo.hospitality.features.title'),
+  description: t('seo.hospitality.features.description')
 })
 
 // OG Image generation
 defineOgImageComponent('Main', {
-  title: t('pages.kontyHospitality.features.hero.title'),
-  description: t('pages.kontyHospitality.features.hero.subtitle'),
+  title: t('pages.hospitality.features.hero.title'),
+  description: t('pages.hospitality.features.hero.subtitle'),
   badge: t('pages.pricing.freeTrial'),
   cta: t('ui.cta.primary')
 })
 
 // Use centralized schema
-useSchemaOrg([schemas.kontyHospitalityFeatures()])
+useSchemaOrg([schemas.hospitalityFeatures()])
 </script>

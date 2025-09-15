@@ -4,10 +4,10 @@
       <UIAppear direction="up">
         <div class="text-center mb-12">
           <h2 class="text-3xl sm:text-4xl font-bold text-highlighted">
-            {{ t('pages.kontyHospitality.features.list.title') }}
+            {{ t('pages.hospitality.features.list.title') }}
           </h2>
           <p class="mt-4 text-lg text-muted max-w-3xl mx-auto">
-            {{ t('pages.kontyHospitality.features.list.subtitle') }}
+            {{ t('pages.hospitality.features.list.subtitle') }}
           </p>
         </div>
 

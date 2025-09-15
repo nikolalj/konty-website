@@ -1,7 +1,7 @@
 <template>
   <div>
     <products-headline />
-    <shared-product-features product="kontyRetail" />
+    <shared-product-features product="retail" />
     <shared-contact-form />
   </div>
 </template>

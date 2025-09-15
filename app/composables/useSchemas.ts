@@ -25,18 +25,18 @@ export const useSchemas = () => {
 
   /**
    * SoftwareApplication schema for Konty Retail
-   * Exact match from konty-retail.vue page
+   * Exact match from retail.vue page
    */
-  const kontyRetail = () => {
+  const retail = () => {
     // Get price values from translations (same as in page)
     const lowPrice = t('pages.pricing.plans.retail.start.priceValue')
     const highPrice = t('pages.pricing.plans.retail.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
-      '@id': '#konty-retail',
+      '@id': '#retail',
       name: t('data.products.retail.name'),
-      description: t('seo.kontyRetail.description'),
+      description: t('seo.retail.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Point of Sale',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -89,15 +89,15 @@ export const useSchemas = () => {
   /**
    * SoftwareApplication schema for Konty Hospitality
    */
-  const kontyHospitality = () => {
+  const hospitality = () => {
     const lowPrice = t('pages.pricing.plans.hospitality.start.priceValue')
     const highPrice = t('pages.pricing.plans.hospitality.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
-      '@id': '#konty-hospitality',
+      '@id': '#hospitality',
       name: 'Konty Hospitality',
-      description: t('seo.kontyHospitality.description'),
+      description: t('seo.hospitality.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Restaurant Management',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -125,7 +125,7 @@ export const useSchemas = () => {
         'Offline Mode'
       ],
 
-      screenshot: '/images/screenshots/konty-hospitality-dashboard.png',
+      screenshot: '/images/screenshots/hospitality-dashboard.png',
 
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -344,19 +344,19 @@ export const useSchemas = () => {
   /**
    * Schema for Konty Hospitality Features page
    */
-  const kontyHospitalityFeatures = () => ({
+  const hospitalityFeatures = () => ({
     '@type': 'WebPage',
-    name: t('seo.kontyHospitality.features.title'),
-    description: t('seo.kontyHospitality.features.description')
+    name: t('seo.hospitality.features.title'),
+    description: t('seo.hospitality.features.description')
   })
 
   /**
    * Schema for Konty Retail Features page
    */
-  const kontyRetailFeatures = () => ({
+  const retailFeatures = () => ({
     '@type': 'WebPage',
-    name: t('seo.kontyRetail.features.title'),
-    description: t('seo.kontyRetail.features.description')
+    name: t('seo.retail.features.title'),
+    description: t('seo.retail.features.description')
   })
 
   /**
@@ -379,15 +379,15 @@ export const useSchemas = () => {
 
   return {
     // Product schemas
-    kontyRetail,
-    kontyHospitality,
+    retail,
+    hospitality,
     productsOverview,
     pricingProduct,
 
     // Page schemas
     localBusiness,
-    kontyHospitalityFeatures,
-    kontyRetailFeatures,
+    hospitalityFeatures,
+    retailFeatures,
     clientStories,
     partners,
 

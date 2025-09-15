@@ -4,11 +4,11 @@
       <UIAppear direction="up" :distance="32">
         <div class="max-w-3xl">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-highlighted">
-            {{ t('pages.kontyHospitality.features.hero.title') }}
+            {{ t('pages.hospitality.features.hero.title') }}
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-muted">
-            {{ t('pages.kontyHospitality.features.hero.subtitle') }}
+            {{ t('pages.hospitality.features.hero.subtitle') }}
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4 justify-center">
@@ -23,9 +23,9 @@
             <UButton
               size="lg"
               variant="outline"
-              :to="localePath('/products/konty-hospitality')"
+              :to="localePath('/products/hospitality')"
             >
-              {{ t('pages.kontyHospitality.features.hero.backToProduct') }}
+              {{ t('pages.hospitality.features.hero.backToProduct') }}
             </UButton>
           </div>
         </div>

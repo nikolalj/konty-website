@@ -4,9 +4,10 @@
       "index": "Home",
       "products": "Products",
       "pricing": "Pricing",
-      "konty-hospitality": "Hospitality",
-      "konty-retail": "Retail",
-      "konty-download": "Download",
+      "hospitality": "Hospitality",
+      "retail": "Retail",
+      "download": "Download",
+      "faqdocs": "FAQ & Documentation",
       "features": "Features",
       "contact": "Contact",
       "client-stories": "Client stories",
@@ -62,7 +63,8 @@
       "products": {
         "forHospitality": "Konty for Hospitality",
         "forRetail": "Konty for Retail",
-        "download": "Download Konty"
+        "download": "Download Konty",
+        "faqdocs": "FAQ & Documentation"
       },
       "about": {
         "contact": "Contact",
@@ -371,18 +373,16 @@
         }
       },
       "faq": {
-        "general": {
-          "a1": "Konty is a modern point-of-sale system that helps businesses digitize their operations. It enables sales tracking, inventory management, reporting, and compliance.",
-          "a2": "Yes, Konty works offline too. All data is stored locally and syncs automatically when you reconnect to the internet.",
-          "a3": "You can start in just 5 minutes! Sign up, add products, and start selling. No installation or special hardware required.",
-          "a4": "Yes, Konty is fully compliant with US tax regulations. Automatically generates compliant receipts and reports.",
-          "a5": "You get 30 days of free access to all features. No credit card required. After expiry, choose the plan that suits you.",
-          "q1": "What is Konty POS system?",
-          "q2": "Can I use Konty without internet?",
-          "q3": "How quickly can I start using it?",
-          "q4": "Does Konty support tax compliance?",
-          "q5": "How does the free trial work?"
-        }
+        "a1": "Konty is a modern point-of-sale system that helps businesses digitize their operations. It enables sales tracking, inventory management, reporting, and compliance.",
+        "a2": "Yes, Konty works offline too. All data is stored locally and syncs automatically when you reconnect to the internet.",
+        "a3": "You can start in just 5 minutes! Sign up, add products, and start selling. No installation or special hardware required.",
+        "a4": "Yes, Konty is fully compliant with US tax regulations. Automatically generates compliant receipts and reports.",
+        "a5": "You get 30 days of free access to all features. No credit card required. After expiry, choose the plan that suits you.",
+        "q1": "What is Konty POS system?",
+        "q2": "Can I use Konty without internet?",
+        "q3": "How quickly can I start using it?",
+        "q4": "Does Konty support tax compliance?",
+        "q5": "How does the free trial work?"
       },
       "download": {
         "hero": {
@@ -410,7 +410,7 @@
         }
       }
     },
-    "kontyHospitality": {
+    "hospitality": {
       "hero": {
         "cta": "Start Free Trial",
         "features": "Never crashes • Real human support • No contracts",
@@ -442,7 +442,7 @@
         "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
       }
     },
-    "kontyRetail": {
+    "retail": {
       "hero": {
         "cta": "Start Free Trial",
         "features": "Zero downtime • Auto-reorder • 30-second support",
@@ -553,22 +553,6 @@
       "description": "Reliable cloud POS system trusted by 25,000+ businesses. 30-second support response. Switch in 48 hours. Keep your hardware.",
       "title": "Konty - Professional POS System for Restaurants & Retail"
     },
-    "kontyHospitality": {
-      "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place.",
-      "title": "Restaurant POS System - Konty Hospitality",
-      "features": {
-        "title": "All Hospitality Features - Konty POS",
-        "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
-      }
-    },
-    "kontyRetail": {
-      "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains.",
-      "title": "Retail POS System - Konty Retail",
-      "features": {
-        "title": "All Retail Features - Konty POS",
-        "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
-      }
-    },
     "pricing": {
       "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start free for 30 days.",
       "title": "Pricing - Konty POS System"
@@ -579,7 +563,31 @@
     },
     "products": {
       "description": "Choose the perfect POS solution for your business. Specialized systems for restaurants, cafes, retail stores, and chains.",
-      "title": "Products - Konty POS Solutions"
+      "title": "Products - Konty POS Solutions",
+      "hospitality": {
+        "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place.",
+        "title": "Restaurant POS System - Konty Hospitality",
+        "features": {
+          "title": "All Hospitality Features - Konty POS",
+          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+        }
+      },
+      "retail": {
+        "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains.",
+        "title": "Retail POS System - Konty Retail",
+        "features": {
+          "title": "All Retail Features - Konty POS",
+          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+        }
+      },
+      "download": {
+        "title": "Download Konty",
+        "description": "Download Konty for any device or platform"
+      },
+      "faqdocs": {
+        "title": "FAQ and Documentation",
+        "description": "FAQ and Documentation for Konty"
+      }
     },
     "terms": {
       "description": "Terms of service for Konty POS system and related services.",
@@ -650,7 +658,7 @@
       "retail": "camera (for barcode scanning), storage, network, printer"
     },
     "screenshots": {
-      "retail": "/images/screenshots/konty-retail-dashboard.png"
+      "retail": "/images/screenshots/retail-dashboard.png"
     }
   }
 }

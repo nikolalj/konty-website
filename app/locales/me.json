@@ -4,9 +4,10 @@
       "index": "Početna",
       "products": "Proizvodi",
       "pricing": "Cijene",
-      "konty-hospitality": "Ugostiteljstvo",
-      "konty-retail": "Trgovina",
-      "konty-download": "Download",
+      "hospitality": "Ugostiteljstvo",
+      "retail": "Trgovina",
+      "download": "Download",
+      "faqdocs": "FAQ i dokumentacija",
       "features": "Funcionalnosti",
       "contact": "Kontakt",
       "client-stories": "Iskustva klijenata",
@@ -62,7 +63,8 @@
       "products": {
         "forHospitality": "Konty za ugostiteljstvo",
         "forRetail": "Konty za trgovinu",
-        "download": "Preuzmi Konty"
+        "download": "Preuzmi Konty",
+        "faqdocs": "FAQ i dokumentacija"
       },
       "about": {
         "contact": "Kontakt",
@@ -371,18 +373,16 @@
         }
       },
       "faq": {
-        "general": {
-          "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
-          "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
-          "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
-          "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u Crnoj Gori. Automatski izdaje fiskalne račune prema propisima.",
-          "a5": "Dobijate 30 dana besplatnog korišćenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
-          "q1": "Što je Konty POS sistem?",
-          "q2": "Mogu li koristiti Konty bez interneta?",
-          "q3": "Koliko brzo mogu početi sa korišćenjem?",
-          "q4": "Da li Konty podržava fiskalizaciju?",
-          "q5": "Kako funkcioniše besplatni probni period?"
-        }
+        "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
+        "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
+        "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
+        "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u Crnoj Gori. Automatski izdaje fiskalne račune prema propisima.",
+        "a5": "Dobijate 30 dana besplatnog korišćenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
+        "q1": "Što je Konty POS sistem?",
+        "q2": "Mogu li koristiti Konty bez interneta?",
+        "q3": "Koliko brzo mogu početi sa korišćenjem?",
+        "q4": "Da li Konty podržava fiskalizaciju?",
+        "q5": "Kako funkcioniše besplatni probni period?"
       },
       "download": {
         "hero": {
@@ -410,7 +410,7 @@
         }
       }
     },
-    "kontyHospitality": {
+    "hospitality": {
       "hero": {
         "cta": "Počni besplatno",
         "features": "Nikad ne puca • Prava podrška • Bez ugovora",
@@ -442,7 +442,7 @@
         "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
       }
     },
-    "kontyRetail": {
+    "retail": {
       "hero": {
         "cta": "Počni besplatno",
         "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
@@ -553,22 +553,6 @@
       "description": "Pouzdane fiskalne kase sa e-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
       "title": "Konty - POS za ugostiteljstvo i trgovinu"
     },
-    "kontyHospitality": {
-      "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mjestu.",
-      "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
-      "features": {
-        "title": "All Hospitality Features - Konty POS",
-        "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
-      }
-    },
-    "kontyRetail": {
-      "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
-      "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
-      "features": {
-        "title": "All Retail Features - Konty POS",
-        "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
-      }
-    },
     "pricing": {
       "description": "Transparentne cijene bez skrivenih troškova. Mjesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana.",
       "title": "Cijene - Konty POS sistema"
@@ -579,7 +563,31 @@
     },
     "products": {
       "description": "Izaberite savršeno POS rješenje za vaš biznis. Specijalizovani sistemi za restorane, kafiće, prodavnice i lance.",
-      "title": "Konty proizvodi - POS rješenja za sve tipove biznisa"
+      "title": "Konty proizvodi - POS rješenja za sve tipove biznisa",
+      "hospitality": {
+        "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mjestu.",
+        "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
+        "features": {
+          "title": "All Hospitality Features - Konty POS",
+          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+        }
+      },
+      "retail": {
+        "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
+        "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
+        "features": {
+          "title": "All Retail Features - Konty POS",
+          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+        }
+      },
+      "download": {
+        "title": "Preuzmi Konty",
+        "description": "Preuzmi Konty za bilo koji uređaj ili platformu."
+      },
+      "faqdocs": {
+        "title": "FAQ and Documentation",
+        "description": "FAQ and Documentation for Konty"
+      }
     },
     "terms": {
       "description": "Uslovi korišćenja Konty POS sistema i povezanih usluga.",
@@ -650,7 +658,7 @@
       "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
     },
     "screenshots": {
-      "retail": "/images/screenshots/konty-retail-dashboard.png"
+      "retail": "/images/screenshots/retail-dashboard.png"
     }
   }
 }

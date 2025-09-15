@@ -29,12 +29,12 @@
       <div class="max-w-2xl">
         <!-- TODO: finalize headline -->
         <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-          {{ t('pages.kontyHospitality.hero.title') }}
+          {{ t('pages.hospitality.hero.title') }}
         </h1>
 
         <!-- TODO: refine benefits -->
         <p class="mt-4 text-lg text-white/90 md:text-xl">
-          {{ t('pages.kontyHospitality.hero.subtitle') }}
+          {{ t('pages.hospitality.hero.subtitle') }}
         </p>
 
         <!-- CTAs -->
@@ -46,7 +46,7 @@
             aria-label="Request a free Konty Hospitality demo"
             @click="onPrimaryCta"
           >
-            {{ t('pages.kontyHospitality.hero.cta') }}
+            {{ t('pages.hospitality.hero.cta') }}
           </UButton>
           <UButton
             size="lg"
@@ -56,12 +56,12 @@
             aria-label="View Konty pricing"
             @click="onSecondaryCta"
           >
-            {{ t('pages.kontyHospitality.hero.viewPricing') }}
+            {{ t('pages.hospitality.hero.viewPricing') }}
           </UButton>
         </div>
 
         <p class="mt-3 text-sm text-white/80">
-          {{ t('pages.kontyHospitality.hero.features') }}
+          {{ t('pages.hospitality.hero.features') }}
         </p>
       </div>
     </UContainer>

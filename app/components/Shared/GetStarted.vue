@@ -3,7 +3,7 @@
     :title="t('pages.home.getStarted.title')"
     orientation="horizontal"
     :features="features"
-    :reverse="product !== 'kontyRetail'"
+    :reverse="product !== 'retail'"
     :ui="{
       root: 'bg-[var(--bg-100)] dark:bg-[var(--bg-200)]',
     }"
@@ -29,7 +29,7 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
+const product: Ref<'hospitality' | 'retail'> = ref('hospitality')
 
 const features = computed(() => [
   {

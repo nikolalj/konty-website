@@ -1,7 +1,7 @@
 <template>
   <div>
     <about-headline />
-    <shared-client-list product="kontyRetail" />
+    <shared-client-list product="retail" />
     <about-contact-info />
     <div id="contact">
       <shared-contact-form />

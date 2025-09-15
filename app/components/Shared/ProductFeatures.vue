@@ -5,9 +5,10 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  product?: 'kontyRetail' | 'kontyHospitality'
-}
-
-defineProps<Props>()
+defineProps({
+  product: {
+    type: String as PropType<'retail' | 'hospitality' | undefined>,
+    default: undefined
+  },
+})
 </script>

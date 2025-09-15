@@ -167,16 +167,20 @@ const items = computed(() => [
       {
         label: t('ui.navigation.products.forHospitality'),
         description: t('ui.navigation.main.hospitalityDesc'),
-        to: localePath('/products/konty-hospitality')
+        to: localePath('/products/hospitality')
       },
       {
         label: t('ui.navigation.products.forRetail'),
         description: t('ui.navigation.main.retailDesc'),
-        to: localePath('/products/konty-retail')
+        to: localePath('/products/retail')
       },
       {
         label: t('ui.navigation.products.download'),
-        to: localePath('/products/konty-download')
+        to: localePath('/products/download')
+      },
+      {
+        label: t('ui.navigation.products.faqdocs'),
+        to: localePath('/products/faqdocs')
       }
     ]
   },

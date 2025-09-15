@@ -11,8 +11,8 @@ module.exports = {
       url: [
         'http://localhost:3000/',                    // Homepage
         'http://localhost:3000/pricing',             // Pricing (critical for conversion)
-        'http://localhost:3000/konty-retail',        // Product page
-        'http://localhost:3000/konty-hospitality',   // Product page
+        'http://localhost:3000/products/retail',        // Product page
+        'http://localhost:3000/products/hospitality',   // Product page
         'http://localhost:3000/demo'                 // Demo request page
       ],
 

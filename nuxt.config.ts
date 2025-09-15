@@ -218,7 +218,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'cloudflare_module',
+    preset: process.env.APP_ENV === 'development' ? 'node-server' : 'cloudflare_module',
     cloudflare: {
       deployConfig: false  // Use our wrangler.toml
     },
