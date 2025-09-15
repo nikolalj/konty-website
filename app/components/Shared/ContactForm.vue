@@ -1,9 +1,9 @@
 <template>
   <SharedSection
+    :variant="props.variant"
     :title="t('pages.contact.title')"
     :description="t('pages.contact.description')"
   >
-
     <div class="flex justify-center">
       <div class="p-8 rounded-2xl max-w-3xl w-full">
         <form class="space-y-6" @submit.prevent="onSubmit">
@@ -68,7 +68,18 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import type { SectionVariantType } from '~/types/components'
+
+const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
+  product: {
+    type: String as PropType<'retail' | 'hospitality' | undefined>,
+    default: undefined
+  },
+})
 
 const { t } = useI18n()
 const { track } = useTracking()

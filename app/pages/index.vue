@@ -8,7 +8,7 @@
     <LazyHomeFeatures hydrate-on-visible />
     <LazySharedTestimonials hydrate-on-idle />
     <LazySharedStatistics hydrate-on-idle />
-    <LazySharedGetStarted hydrate-on-visible />
+    <LazySharedGetStarted variant="1" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedPricing hydrate-on-visible />

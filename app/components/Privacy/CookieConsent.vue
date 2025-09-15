@@ -9,7 +9,7 @@
   >
     <div
       v-if="showBanner"
-      class="absolute bottom-0 left-0 z-[9999] p-4 sm:bottom-4 sm:right-4 sm:left-auto sm:max-w-md"
+      class="fixed bottom-0 left-0 z-[9999] p-4 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-md"
     >
       <UCard
         class="shadow-2xl border-0"

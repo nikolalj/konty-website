@@ -1,5 +1,7 @@
 <template>
   <SharedSection
+    :variant="props.variant"
+    :heading-level="props.headingLevel"
     :title="t('pages.home.testimonials.title')"
     :description="t('pages.home.testimonials.description')"
   >
@@ -15,18 +17,32 @@
           multiple
         />
       </div>
+
+      <div class="flex justify-center">
+        <slot />
+      </div>
     </UIAppear>
   </SharedSection>
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
+
 const { t } = useI18n()
 
 const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
   },
+  headingLevel: {
+    type: String as PropType<SectionHeadingLevel>,
+    default: 'h2'
+  }
 })
 
 const { tObject } = useUtils()

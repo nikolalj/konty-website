@@ -1,5 +1,6 @@
 <template>
   <SharedSection
+    :variant="props.variant"
     :title="t('pages.home.testimonials.title')"
     :description="t('pages.home.testimonials.description')"
   >
@@ -39,6 +40,15 @@
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType } from '~/types/components'
+
+const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
+})
+
 const { t } = useI18n()
 
 const testimonials = computed(() => {

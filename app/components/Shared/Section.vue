@@ -1,5 +1,5 @@
 <template>
-  <section :class="`${bgClasses} ${paddingClasses}`">
+  <section class="py-12 sm:py-16" :class="bgClasses">
     <UContainer>
       <div
         v-if="props.title || props.description || props.productSwitch"
@@ -18,7 +18,8 @@
           <component
             :is="props.headingLevel || 'h2'"
             v-if="props.title"
-            class="mt-4 mb-4 text-3xl sm:text-4xl lg:text-5xl text-center text-pretty tracking-tight font-bold text-highlighted"
+            class="mt-4 mb-4 text-center text-pretty tracking-tight font-bold text-highlighted"
+            :class="(props.headingLevel || 'h2') === 'h1' ? 'text-4xl sm:text-5xl lg:text-6xl' : 'text-3xl sm:text-4xl lg:text-5xl'"
           >
             {{ props.title }}
           </component>
@@ -51,17 +52,14 @@
 
 <script setup lang="ts">
 import type { TabsItem } from '@nuxt/ui'
+import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
 
 const { t } = useI18n()
 const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
-  paddingTop: {
-    type: String as PropType<'md' | 'xl'>,
-    default: 'md',
-  },
   variant: {
-    type: String as PropType<'1' | '2' | '3' | '4' | undefined>,
+    type: String as PropType<SectionVariantType>,
     default: undefined,
   },
   title: {
@@ -81,12 +79,12 @@ const props = defineProps({
     default: 'bottom'
   },
   headingLevel: {
-    type: String as PropType<'h1' | 'h2' | 'h3'>,
+    type: String as PropType<SectionHeadingLevel>,
     default: 'h2'
   }
 })
 
-const getBgClass = (variant: '1' | '2' | '3' | '4' | undefined) => {
+const getBgClass = (variant: SectionVariantType) => {
   if (variant === '1') return 'bg-[var(--bg-100)] dark:bg-[var(--bg-200)]'
   if (variant === '2') return 'bg-[var(--bg-200)] dark:bg-[var(--bg-300)]'
   if (variant === '3') return 'bg-[var(--bg-300)] dark:bg-[var(--bg-400)]'
@@ -94,13 +92,7 @@ const getBgClass = (variant: '1' | '2' | '3' | '4' | undefined) => {
   return ''
 }
 
-const getPaddingClass = (paddingTop: string) => {
-  if (paddingTop === 'xl') return 'py-24 sm:py-30'
-  return 'py-12 sm:py-16'
-}
-
 const bgClasses = ref(getBgClass(props.variant))
-const paddingClasses = ref(getPaddingClass(props.paddingTop))
 
 const productInternal = ref('hospitality')
 

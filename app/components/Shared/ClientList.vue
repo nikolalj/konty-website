@@ -1,5 +1,6 @@
 <template>
   <SharedSection
+    :variant="props.variant"
     :title="config.title"
     :description="config.description"
   >
@@ -40,7 +41,13 @@
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType } from '~/types/components'
+
 const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
