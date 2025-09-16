@@ -239,6 +239,13 @@ export default defineNuxtConfig({
     minify: true,
     timing: false,
 
+    sourceMap: false,
+
+    // Exclude heavy dependencies from Cloudflare build
+    externals: process.env.APP_ENV !== 'development' ? {
+      external: ['better-sqlite3']
+    } : {},
+
     // Optimize server bundles
     rollupConfig: {
       treeshake: 'smallest'  // Most impactful optimization
