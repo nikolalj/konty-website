@@ -23,7 +23,7 @@
           <div class="flex items-center gap-4 flex-1">
             <div class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400">
               <Icon name="i-lucide-mail" class="w-4 h-4" />
-              <span class="hidden md:inline">contact@konty.com</span>
+              <span class="hidden md:inline">contact</span>
             </div>
             <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
               <Icon name="i-lucide-phone" class="w-4 h-4" />

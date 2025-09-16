@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <HospitalityHero />
+    <ProductsHospitalityHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList product="hospitality" hydrate-on-visible />
     <LazySharedBenefits product="hospitality" hydrate-on-visible />
-    <LazyHospitalityFeatures hydrate-on-visible />
+    <LazyProductsHospitalityFeatures hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="hospitality" hydrate-on-visible />
@@ -21,14 +21,14 @@ const schemas = useSchemas()
 
 // SEO meta tags
 usePageSeo({
-  title: t('seo.hospitality.title'),
-  description: t('seo.hospitality.description')
+  title: t('seo.products.hospitality.title'),
+  description: t('seo.products.hospitality.description')
 })
 
 // OG Image generation for Hospitality product
 defineOgImageComponent('Product', {
   product: 'Konty Hospitality',
-  title: t('pages.hospitality.hero.title'),
+  title: t('pages.products.hospitality.hero.title'),
   features: [
     t('pages.products.features.hospitality.tableManagement.title'),
     t('pages.products.features.hospitality.kitchenDisplay.title'),

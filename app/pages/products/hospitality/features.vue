@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <HospitalityFeaturesHero />
+    <ProductsHospitalityFeaturesHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyHospitalityFeaturesList hydrate-on-visible />
+    <LazyProductsHospitalityFeaturesList hydrate-on-visible />
     <LazySharedFAQ product="hospitality" hydrate-on-visible />
     <LazySharedTestimonials product="hospitality" hydrate-on-idle />
 
@@ -19,14 +19,14 @@ const schemas = useSchemas()
 
 // SEO meta tags
 usePageSeo({
-  title: t('seo.hospitality.features.title'),
-  description: t('seo.hospitality.features.description')
+  title: t('seo.products.hospitality.features.title'),
+  description: t('seo.products.hospitality.features.description')
 })
 
 // OG Image generation
 defineOgImageComponent('Main', {
-  title: t('pages.hospitality.features.hero.title'),
-  description: t('pages.hospitality.features.hero.subtitle'),
+  title: t('pages.products.hospitality.features.hero.title'),
+  description: t('pages.products.hospitality.features.hero.subtitle'),
   badge: t('pages.pricing.freeTrial'),
   cta: t('ui.cta.primary')
 })

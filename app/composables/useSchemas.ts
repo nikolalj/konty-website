@@ -36,7 +36,7 @@ export const useSchemas = () => {
       '@type': 'SoftwareApplication',
       '@id': '#retail',
       name: t('data.products.retail.name'),
-      description: t('seo.retail.description'),
+      description: t('seo.products.retail.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Point of Sale',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -93,7 +93,7 @@ export const useSchemas = () => {
       '@type': 'SoftwareApplication',
       '@id': '#hospitality',
       name: 'Konty Hospitality',
-      description: t('seo.hospitality.description'),
+      description: t('seo.products.hospitality.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Restaurant Management',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -294,8 +294,8 @@ export const useSchemas = () => {
    */
   const hospitalityFeatures = () => ({
     '@type': 'WebPage',
-    name: t('seo.hospitality.features.title'),
-    description: t('seo.hospitality.features.description')
+    name: t('seo.products.hospitality.features.title'),
+    description: t('seo.products.hospitality.features.description')
   })
 
   /**
@@ -303,8 +303,8 @@ export const useSchemas = () => {
    */
   const retailFeatures = () => ({
     '@type': 'WebPage',
-    name: t('seo.retail.features.title'),
-    description: t('seo.retail.features.description')
+    name: t('seo.products.retail.features.title'),
+    description: t('seo.products.retail.features.description')
   })
 
   /**

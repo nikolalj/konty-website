@@ -4,11 +4,11 @@
       <UIAppear direction="up" :distance="32">
         <div class="max-w-3xl">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-highlighted">
-            {{ t('pages.retail.features.hero.title') }}
+            {{ t('pages.products.retail.features.hero.title') }}
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-muted">
-            {{ t('pages.retail.features.hero.subtitle') }}
+            {{ t('pages.products.retail.features.hero.subtitle') }}
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4 justify-center">
@@ -25,7 +25,7 @@
               variant="outline"
               :to="localePath('/products/retail')"
             >
-              {{ t('pages.retail.features.hero.backToProduct') }}
+              {{ t('pages.products.retail.features.hero.backToProduct') }}
             </UButton>
           </div>
         </div>
