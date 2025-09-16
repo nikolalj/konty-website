@@ -223,7 +223,7 @@ export default defineNuxtConfig({
     database: {
       ...(process.env.APP_ENV === 'development'
         ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
-        : { type: 'd1', bindingName: 'konty_content_db' })  // Match wrangler.jsonc binding
+        : { type: 'd1', bindingName: 'konty_content_db' })
     },
     experimental: {
       sqliteConnector: 'better-sqlite3'
