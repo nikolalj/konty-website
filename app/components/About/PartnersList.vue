@@ -7,7 +7,7 @@
           <UInput
             v-model="cityFilter"
             size="lg"
-            :placeholder="t('pages.about.partners.filterPlaceholder')"
+            :placeholder="t('pages.partners.filterPlaceholder')"
             icon="i-lucide-search"
           />
         </div>
@@ -28,7 +28,7 @@
         <!-- Empty state -->
         <div v-if="filteredPartners.length === 0" class="text-center py-12">
           <Icon name="i-lucide-search-x" class="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <p class="text-muted">{{ t('pages.about.partners.noResults') }}</p>
+          <p class="text-muted">{{ t('pages.partners.noResults') }}</p>
         </div>
       </UIAppear>
     </UContainer>

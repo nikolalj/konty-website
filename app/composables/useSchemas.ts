@@ -229,7 +229,7 @@ export const useSchemas = () => {
       url: config.public.siteUrl + localePath('/'),
       logo: `${config.public.siteUrl}/images/branding/logo-light.svg`,
       image: `${config.public.siteUrl}/images/branding/logo-light.svg`,
-      description: t('seo.about.description'),
+      description: t('data.company.description'),
 
       // Contact information
       telephone: t('data.company.contact.phone'),
@@ -312,8 +312,8 @@ export const useSchemas = () => {
    */
   const clientStories = () => ({
     '@type': 'WebPage',
-    name: t('seo.about.clientStories.title'),
-    description: t('seo.about.clientStories.description')
+    name: t('seo.clientStories.title'),
+    description: t('seo.clientStories.description')
   })
 
   /**
@@ -321,8 +321,8 @@ export const useSchemas = () => {
    */
   const partners = () => ({
     '@type': 'WebPage',
-    name: t('seo.about.partners.title'),
-    description: t('seo.about.partners.description')
+    name: t('seo.partners.title'),
+    description: t('seo.partners.description')
   })
 
   return {

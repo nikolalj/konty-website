@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <AboutClientStoriesHero />
+    <ContactHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyAboutClientStoriesList hydrate-on-visible />
-    <LazySharedStatistics hydrate-on-idle />
+    <LazyContactInfo hydrate-on-visible />
+    <LazySharedClientList hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedContactForm hydrate-on-visible />
@@ -18,18 +18,17 @@ const schemas = useSchemas()
 
 // SEO meta tags
 usePageSeo({
-  title: t('seo.about.clientStories.title'),
-  description: t('seo.about.clientStories.description')
+  title: t('seo.contact.title'),
+  description: t('seo.contact.description')
 })
 
 // OG Image generation
 defineOgImageComponent('Main', {
-  title: t('pages.about.clientStories.hero.title'),
-  description: t('pages.about.clientStories.hero.subtitle'),
-  badge: t('pages.about.clientStories.badge'),
-  cta: t('ui.cta.primary')
+  title: t('pages.contact.hero.title'),
+  description: t('pages.contact.hero.subtitle'),
+  cta: t('ui.forms.buttons.submit')
 })
 
 // Use centralized schema
-useSchemaOrg([schemas.clientStories()])
+useSchemaOrg([schemas.localBusiness()])
 </script>

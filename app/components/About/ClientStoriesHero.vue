@@ -4,15 +4,15 @@
       <UIAppear direction="up" :distance="32">
         <div class="max-w-3xl">
           <div class="mb-4 font-semibold text-primary">
-            {{ t('pages.about.clientStories.badge') }}
+            {{ t('pages.clientStories.badge') }}
           </div>
 
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-highlighted">
-            {{ t('pages.about.clientStories.hero.title') }}
+            {{ t('pages.clientStories.hero.title') }}
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-muted">
-            {{ t('pages.about.clientStories.hero.subtitle') }}
+            {{ t('pages.clientStories.hero.subtitle') }}
           </p>
         </div>
       </UIAppear>

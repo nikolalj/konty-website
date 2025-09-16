@@ -19,7 +19,8 @@
       "grocery-supermarkets": "Prodavnice hrane i supermarketi",
       "clothing-boutiques": "Prodavnice odeće",
       "convenience-stores": "Prodavnice mjesovite robe",
-      "b2b": "B2B prodaja i E fakture"
+      "b2b": "B2B prodaja i E fakture",
+      "blog": "Blog"
     },
     "readMore": "Read More",
     "cta": {
@@ -43,6 +44,10 @@
       "loading": {
         "formPlaceholder": "Učitavanje..."
       }
+    },
+    "contactForm": {
+      "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
+      "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme."
     },
     "navigation": {
       "main": {
@@ -188,20 +193,6 @@
       "clients": {
         "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
         "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998"
-      },
-      "blog": {
-        "post1": {
-          "description": "Tehnički razlozi padova u gužvi i kako da zaštitiš svoj biznis.",
-          "title": "Zašto POS puca u špicu (i kako to sprečiti)"
-        },
-        "post2": {
-          "description": "Skriveni troškovi, izgubljene porudžbine, spora usluga - prepoznaj znake pre nego što bude kasno.",
-          "title": "5 znakova da ti POS ubija profit"
-        },
-        "post3": {
-          "description": "Kako je 9.000 restorana prešlo bez ijednog dana zastoja.",
-          "title": "Prelazak na novi POS: Vodič za 48 sati"
-        }
       },
       "getStarted": {
         "certificate": {
@@ -695,68 +686,73 @@
       }
     },
     "contact": {
-      "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
-      "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme."
-    },
-    "about": {
-      "contact": {
-        "hero": {
-          "title": "Get In Touch",
-          "subtitle": "We're here to help you choose the perfect POS solution for your business."
-        },
-        "address": {
-          "title": "Address",
-          "line1": "Bulevar Svetog Petra Cetinjskog 56",
-          "line2": "81000 Podgorica, Montenegro"
-        },
-        "phone": {
-          "title": "Phone",
-          "number": "+382 67 607 670"
-        },
-        "email": {
-          "title": "Email",
-          "address": "contact"
-        },
-        "hours": {
-          "title": "Working Hours",
-          "weekdays": "Monday - Friday: 9:00 - 18:00",
-          "weekend": "Saturday: 10:00 - 14:00"
-        }
+      "hero": {
+        "title": "Get In Touch",
+        "subtitle": "We're here to help you choose the perfect POS solution for your business."
       },
-      "clientStories": {
-        "hero": {
-          "title": "Success Stories",
-          "subtitle": "See how businesses like yours transformed their operations with Konty."
-        },
-        "badge": "Real Results"
+      "address": {
+        "title": "Address",
+        "line1": "Bulevar Svetog Petra Cetinjskog 56",
+        "line2": "81000 Podgorica, Montenegro"
       },
-      "partners": {
-        "hero": {
-          "title": "Our Partners Network",
-          "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
-        },
-        "cta": "Become a Partner",
-        "filterPlaceholder": "Filter by city...",
-        "noResults": "No partners found in this city"
+      "phone": {
+        "title": "Phone",
+        "number": "+382 67 607 670"
+      },
+      "email": {
+        "title": "Email",
+        "address": "contact"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "weekdays": "Monday - Friday: 9:00 - 18:00",
+        "weekend": "Saturday: 10:00 - 14:00"
       }
+    },
+    "clientStories": {
+      "hero": {
+        "title": "Success Stories",
+        "subtitle": "See how businesses like yours transformed their operations with Konty."
+      },
+      "badge": "Real Results"
+    },
+    "partners": {
+      "hero": {
+        "title": "Our Partners Network",
+        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+      },
+      "cta": "Become a Partner",
+      "filterPlaceholder": "Filter by city...",
+      "noResults": "No partners found in this city"
+    },
+    "blog": {
+      "hero": {
+        "title": "Blog i resursi",
+        "subtitle": "Stručni uvidi i praktični savjeti za moderne POS sisteme"
+      },
+      "featured": "Istaknuto",
+      "related": {
+        "title": "Povezani članci",
+        "subtitle": "Nastavite čitati"
+      },
+      "readMore": "Pročitaj više",
+      "byAuthor": "Autor",
+      "publishedOn": "Objavljeno",
+      "minRead": "min čitanja"
     }
   },
   "seo": {
-    "about": {
-      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
-      "title": "O nama - Konty tim",
-      "contact": {
-        "title": "Contact Us - Konty POS",
-        "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
-      },
-      "clientStories": {
-        "title": "Client Success Stories - Konty POS",
-        "description": "Real stories from businesses that transformed their operations with Konty POS."
-      },
-      "partners": {
-        "title": "Partners Network - Konty POS",
-        "description": "Join our growing network of partners delivering Konty solutions."
-      }
+    "contact": {
+      "title": "Contact Us - Konty POS",
+      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+    },
+    "clientStories": {
+      "title": "Client Success Stories - Konty POS",
+      "description": "Real stories from businesses that transformed their operations with Konty POS."
+    },
+    "partners": {
+      "title": "Partners Network - Konty POS",
+      "description": "Join our growing network of partners delivering Konty solutions."
     },
     "demo": {
       "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
@@ -837,11 +833,16 @@
         "title": "Konty B2B i E-fakture | POS za veleprodaju",
         "description": "Profesionalno B2B rešenje sa e-fakturisanjem. Različite cene po partneru i napredni izveštaji."
       }
+    },
+    "blog": {
+      "title": "Blog - Konty POS uvidi i resursi",
+      "description": "Stručni uvidi, savjeti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako optimizovati vaše poslovanje."
     }
   },
   "data": {
     "company": {
       "tradeName": "Codeux",
+      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
       "vatID": "112821082",
       "foundingDate": "2021-12-22",
       "founder": "Nikola Ljumovic",

@@ -1,4 +1,4 @@
-import { LOCALES } from "~/config/locale.config.mjs"
+import { DEFAULT_LOCALE, LOCALES } from "~/config/locale.config.mjs"
 
 interface PageSeoOptions {
   title: string
@@ -12,7 +12,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
   useSeoMeta({
     title: options.title,
     description: options.description,
-    ogLocale: LOCALES.find(l => l.code === locale.value)?.iso || 'sr_RS',
+    ogLocale: LOCALES.find(l => l.code === locale.value)?.iso || DEFAULT_LOCALE.iso,
     ...(options.noindex && { robots: 'noindex, nofollow' })
   })
 }

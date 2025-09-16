@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   // Modules - Order matters
   modules: [
     '@nuxt/ui-pro',
+    '@nuxt/content',
     '@nuxt/image',
     '@nuxt/icon',
     '@vueuse/nuxt',
@@ -217,10 +218,34 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
 
+  // Nuxt Content configuration
+  content: {
+    database: {
+      ...(process.env.APP_ENV === 'development'
+        ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
+        : { type: 'd1', bindingName: 'DB' })
+    },
+    experimental: {
+      sqliteConnector: 'better-sqlite3'
+    }
+  },
+
   nitro: {
     preset: process.env.APP_ENV === 'development' ? 'node-server' : 'cloudflare_module',
     cloudflare: {
-      deployConfig: false  // Use our wrangler.toml
+      deployConfig: false,  // Use our wrangler.toml
+      // D1 database binding for Nuxt Content (production only)
+      ...(process.env.APP_ENV === 'production' && process.env.D1_DATABASE_ID ? {
+        wrangler: {
+          d1_databases: [
+            {
+              binding: 'DB',
+              database_name: 'konty-content',
+              database_id: process.env.D1_DATABASE_ID
+            }
+          ]
+        }
+      } : {})
     },
 
     minify: true,
@@ -252,7 +277,6 @@ export default defineNuxtConfig({
       '/ariapos': { redirect: '/' },
       '/product': { redirect: '/products' },
       '/price': { redirect: '/pricing' },
-      '/contact': { redirect: '/about' },
 
       '/**': {
         headers: {

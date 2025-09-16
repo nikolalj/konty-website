@@ -4,11 +4,11 @@
       <UIAppear direction="up" :distance="32">
         <div class="max-w-3xl">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-highlighted">
-            {{ t('pages.about.partners.hero.title') }}
+            {{ t('pages.partners.hero.title') }}
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-muted">
-            {{ t('pages.about.partners.hero.subtitle') }}
+            {{ t('pages.partners.hero.subtitle') }}
           </p>
 
           <div class="mt-10">
@@ -17,7 +17,7 @@
               color="primary"
               @click="scrollToForm"
             >
-              {{ t('pages.about.partners.cta') }}
+              {{ t('pages.partners.cta') }}
             </UButton>
           </div>
         </div>

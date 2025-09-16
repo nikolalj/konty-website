@@ -19,7 +19,8 @@
       "grocery-supermarkets": "Grocery & Supermarkets",
       "clothing-boutiques": "Clothing & Boutiques",
       "convenience-stores": "Convenience Stores",
-      "b2b": "B2B Sales & E-Invoicing"
+      "b2b": "B2B Sales & E-Invoicing",
+      "blog": "Blog"
     },
     "readMore": "Read More",
     "cta": {
@@ -43,6 +44,10 @@
       "loading": {
         "formPlaceholder": "Loading demo scheduler..."
       }
+    },
+    "contactForm": {
+      "title": "See Your Custom POS Setup in 15 Minutes",
+      "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches."
     },
     "navigation": {
       "main": {
@@ -188,20 +193,6 @@
       "clients": {
         "title": "9,000 Restaurants and Retail Stores Trust Our POS System",
         "description": "Restaurant POS, bar POS, liquor store POS, convenience store POS, salon POS - processing millions daily since 1998"
-      },
-      "blog": {
-        "post1": {
-          "description": "The technical reasons behind dinner rush crashes and what you can do to protect your business.",
-          "title": "Why Your POS Crashes During Rush (And How to Prevent It)"
-        },
-        "post2": {
-          "description": "Hidden costs, lost orders, slow service - recognize the warning signs before it's too late.",
-          "title": "5 Signs Your POS Is Killing Your Profits"
-        },
-        "post3": {
-          "description": "How 9,000 restaurants switched without losing a single day of service.",
-          "title": "Switching POS Systems: The 48-Hour Playbook"
-        }
       },
       "getStarted": {
         "certificate": {
@@ -695,68 +686,73 @@
       }
     },
     "contact": {
-      "title": "See Your Custom POS Setup in 15 Minutes",
-      "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches."
-    },
-    "about": {
-      "contact": {
-        "hero": {
-          "title": "Get In Touch",
-          "subtitle": "We're here to help you choose the perfect POS solution for your business."
-        },
-        "address": {
-          "title": "Address",
-          "line1": "Bulevar Svetog Petra Cetinjskog 56",
-          "line2": "81000 Podgorica, Montenegro"
-        },
-        "phone": {
-          "title": "Phone",
-          "number": "+382 67 607 670"
-        },
-        "email": {
-          "title": "Email",
-          "address": "contact"
-        },
-        "hours": {
-          "title": "Working Hours",
-          "weekdays": "Monday - Friday: 9:00 - 18:00",
-          "weekend": "Saturday: 10:00 - 14:00"
-        }
+      "hero": {
+        "title": "Get In Touch",
+        "subtitle": "We're here to help you choose the perfect POS solution for your business."
       },
-      "clientStories": {
-        "hero": {
-          "title": "Success Stories",
-          "subtitle": "See how businesses like yours transformed their operations with Konty."
-        },
-        "badge": "Real Results"
+      "address": {
+        "title": "Address",
+        "line1": "Bulevar Svetog Petra Cetinjskog 56",
+        "line2": "81000 Podgorica, Montenegro"
       },
-      "partners": {
-        "hero": {
-          "title": "Our Partners Network",
-          "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
-        },
-        "cta": "Become a Partner",
-        "filterPlaceholder": "Filter by city...",
-        "noResults": "No partners found in this city"
+      "phone": {
+        "title": "Phone",
+        "number": "+382 67 607 670"
+      },
+      "email": {
+        "title": "Email",
+        "address": "contact"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "weekdays": "Monday - Friday: 9:00 - 18:00",
+        "weekend": "Saturday: 10:00 - 14:00"
       }
+    },
+    "clientStories": {
+      "hero": {
+        "title": "Success Stories",
+        "subtitle": "See how businesses like yours transformed their operations with Konty."
+      },
+      "badge": "Real Results"
+    },
+    "partners": {
+      "hero": {
+        "title": "Our Partners Network",
+        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+      },
+      "cta": "Become a Partner",
+      "filterPlaceholder": "Filter by city...",
+      "noResults": "No partners found in this city"
+    },
+    "blog": {
+      "hero": {
+        "title": "Blog & Resources",
+        "subtitle": "Expert insights and practical tips for modern POS management"
+      },
+      "featured": "Featured",
+      "related": {
+        "title": "Related Articles",
+        "subtitle": "Continue reading"
+      },
+      "readMore": "Read more",
+      "byAuthor": "By",
+      "publishedOn": "Published on",
+      "minRead": "min read"
     }
   },
   "seo": {
-    "about": {
-      "description": "26+ years of POS system development experience. Supporting local businesses with reliable technology.",
-      "title": "About Us - Konty Team",
-      "contact": {
-        "title": "Contact Us - Konty POS",
-        "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
-      },
-      "clientStories": {
-        "title": "Client Success Stories - Konty POS",
-        "description": "Real stories from businesses that transformed their operations with Konty POS."
-      },
-      "partners": {
-        "title": "Partners Network - Konty POS",
-        "description": "Join our growing network of partners delivering Konty solutions."
-      }
+    "contact": {
+      "title": "Contact Us - Konty POS",
+      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+    },
+    "clientStories": {
+      "title": "Client Success Stories - Konty POS",
+      "description": "Real stories from businesses that transformed their operations with Konty POS."
+    },
+    "partners": {
+      "title": "Partners Network - Konty POS",
+      "description": "Join our growing network of partners delivering Konty solutions."
     },
     "demo": {
       "description": "See Konty in action. Free 15-minute demo tailored to your business. No obligations.",
@@ -837,11 +833,16 @@
         "title": "B2B POS & E-Invoicing | Wholesale Management System",
         "description": "Professional B2B solution with e-invoicing. Different pricing per partner and advanced reports."
       }
+    },
+    "blog": {
+      "title": "Blog - Konty POS Insights & Resources",
+      "description": "Expert insights, tips, and best practices for modern POS management. Learn how to optimize your business operations."
     }
   },
   "data": {
     "company": {
       "tradeName": "Codeux",
+      "description": "26+ years of POS system development experience. Supporting local businesses with reliable technology.",
       "vatID": "112821082",
       "foundingDate": "2021-12-22",
       "founder": "Nikola Ljumovic",

@@ -215,9 +215,9 @@ const items = computed(() => [
     class: 'font-bold',
     slot: 'about' as const,
     children: [
-      { label: t('ui.navigation.about.contact'), to: localePath('/about/contact') },
-      { label: t('ui.navigation.about.clientStories'), to: localePath('/about/client-stories') },
-      { label: t('ui.navigation.about.partners'), to: localePath('/about/partners') },
+      { label: t('ui.navigation.about.contact'), to: localePath('/contact') },
+      { label: t('ui.navigation.about.clientStories'), to: localePath('/client-stories') },
+      { label: t('ui.navigation.about.partners'), to: localePath('/partners') },
     ]
   }
 ])

@@ -19,7 +19,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { tArray } = useUtils()
 
 // SEO
 usePageSeo({

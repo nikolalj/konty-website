@@ -63,7 +63,7 @@
 
     <template #right>
       <UButton
-        :to="localePath('/contact-us')"
+        :to="localePath('/contact')"
         size="lg"
         variant="outline"
         color="primary"

@@ -1,8 +1,8 @@
 <template>
   <SharedSection
     :variant="props.variant"
-    :title="t('pages.contact.title')"
-    :description="t('pages.contact.description')"
+    :title="t('ui.contactForm.title')"
+    :description="t('ui.contactForm.description')"
   >
     <div class="flex justify-center">
       <div class="p-8 rounded-2xl max-w-3xl w-full">

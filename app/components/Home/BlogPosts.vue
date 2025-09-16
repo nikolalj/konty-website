@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16">
+  <section v-if="posts && posts.length > 0" class="py-16">
     <UIAppear>
       <UContainer>
         <UBlogPosts :posts="posts">
@@ -9,9 +9,8 @@
             :title="post.title"
             :description="post.description"
             :date="post.date"
-            :to="post.to"
+            :to="localePath(`/blog/${post.path?.split('/').pop() || ''}`)"
             variant="subtle"
-            target="_blank"
             :ui="{
               header: 'transform transition-transform duration-200 group-hover/blog-post:scale-110',
             }"
@@ -38,29 +37,34 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+import type { BlogPost } from '~/types/content'
+import { DEFAULT_LOCALE } from '~/config/locale.config.mjs'
 
-const posts = ref([
-  {
-    title: t('pages.home.blog.post1.title'),
-    description: t('pages.home.blog.post1.description'),
-    image: '/images/features/hospitality.avif',
-    date: '2025-07-08',
-    to: '#'
+const { locale } = useI18n()
+const localePath = useLocalePath()
+
+const { data: posts } = await useAsyncData(
+  () => `home-blog-${locale.value}`,
+  async () => {
+    const collectionName = `content_${locale.value}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+    let items = await queryCollection(collectionName)
+      .where('path', 'LIKE', '/blog/%')
+      .order('date', 'DESC')
+      .limit(3)
+      .all()
+
+    // Fallback to default locale if no posts found
+    if ((!items || items.length === 0) && locale.value !== DEFAULT_LOCALE.code) {
+      const defaultCollection = `content_${DEFAULT_LOCALE.code}` as 'content_rs'
+      items = await queryCollection(defaultCollection)
+        .where('path', 'LIKE', '/blog/%')
+        .order('date', 'DESC')
+        .limit(3)
+        .all()
+    }
+
+    return items as BlogPost[]
   },
-  {
-    title: t('pages.home.blog.post2.title'),
-    description: t('pages.home.blog.post2.description'),
-    image: '/images/features/hospitality.avif',
-    date: '2025-06-12',
-    to: '#'
-  },
-  {
-    title: t('pages.home.blog.post3.title'),
-    description: t('pages.home.blog.post3.description'),
-    image: '/images/features/hospitality.avif',
-    date: '2025-05-20',
-    to: '#'
-  },
-])
+  { watch: [locale] }
+)
 </script>
