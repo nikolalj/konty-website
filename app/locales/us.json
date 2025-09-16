@@ -11,7 +11,15 @@
       "features": "Features",
       "contact": "Contact",
       "client-stories": "Client stories",
-      "partners": "Partners"
+      "partners": "Partners",
+      "solutions": "Solutions",
+      "restaurants": "Restaurants",
+      "bars-cafes": "Bars & Cafes",
+      "fast-food": "Quick Service / Fast Food",
+      "grocery-supermarkets": "Grocery & Supermarkets",
+      "clothing-boutiques": "Clothing & Boutiques",
+      "convenience-stores": "Convenience Stores",
+      "b2b": "B2B Sales & E-Invoicing"
     },
     "readMore": "Read More",
     "cta": {
@@ -47,18 +55,13 @@
         "retailDesc": "Retail POS with inventory management. Sell more. Count less. Stress never."
       },
       "categories": {
-        "barLounge": "Bar & Lounge",
-        "butcherShop": "Butcher Shop",
-        "cafeBakery": "Cafe & Bakery",
-        "casualDining": "Casual Dining",
-        "enterprise": "Enterprise",
-        "fineDining": "Fine Dining",
-        "foodTruck": "Food Truck",
-        "generalStore": "General Store",
-        "hotelRestaurant": "Hotel & Restaurant",
-        "liquorStore": "Liquor Store",
-        "pizzeria": "Pizzeria",
-        "supermarket": "Supermarket"
+        "restaurants": "Restaurants",
+        "barsCafes": "Bars & Cafes",
+        "fastFood": "Quick Service / Fast Food",
+        "grocerySupermarkets": "Grocery & Supermarkets",
+        "clothingBoutiques": "Clothing & Boutiques",
+        "convenienceStores": "Convenience Stores",
+        "b2b": "B2B Sales & E-Invoicing"
       },
       "products": {
         "forHospitality": "Konty for Hospitality",
@@ -474,6 +477,216 @@
         }
       }
     },
+    "solutions": {
+      "hero": {
+        "title": "Industry-Specific Solutions",
+        "subtitle": "Konty adapts to your business - from restaurants to retail stores",
+        "cta": "Find Your Solution"
+      },
+      "categories": {
+        "hospitality": {
+          "title": "Hospitality",
+          "description": "Solutions for restaurants, cafes, and quick service"
+        },
+        "retail": {
+          "title": "Retail",
+          "description": "Solutions for all types of retail stores"
+        }
+      },
+      "restaurants": {
+        "hero": {
+          "title": "Konty for Restaurants",
+          "subtitle": "Complete restaurant management solution - from reservations to payment",
+          "cta": "Start Free Trial",
+          "features": "Tables • Kitchen • Reservations • Analytics"
+        },
+        "overview": {
+          "title": "Everything Your Restaurant Needs",
+          "description": "From table management to kitchen orders",
+          "image": "/images/solutions/restaurants.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Table Management",
+            "description": "Visual floor plan with real-time table status"
+          },
+          "b2": {
+            "title": "Kitchen Display System",
+            "description": "Direct communication between dining room and kitchen"
+          },
+          "b3": {
+            "title": "Split Bills",
+            "description": "Easy splitting by items or percentage"
+          }
+        }
+      },
+      "barsCafes": {
+        "hero": {
+          "title": "Konty for Bars & Cafes",
+          "subtitle": "Fast checkout and inventory management for high-volume venues",
+          "cta": "Start Free Trial",
+          "features": "Quick Pay • Inventory • Happy Hour • Loyalty"
+        },
+        "overview": {
+          "title": "Optimized for Speed",
+          "description": "System designed for fast service and high traffic",
+          "image": "/images/solutions/bars-cafes.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Fast Checkout",
+            "description": "Shortcuts and favorites for most common items"
+          },
+          "b2": {
+            "title": "Happy Hour Support",
+            "description": "Automatic pricing by time and day"
+          },
+          "b3": {
+            "title": "Inventory Tracking",
+            "description": "Real-time beverage inventory monitoring"
+          }
+        }
+      },
+      "fastFood": {
+        "hero": {
+          "title": "Konty for Quick Service",
+          "subtitle": "Optimized for speed and efficiency - perfect for fast food restaurants",
+          "cta": "Start Free Trial",
+          "features": "Quick Orders • Drive-thru • Delivery • KDS"
+        },
+        "overview": {
+          "title": "Speed is Everything",
+          "description": "System designed for maximum efficiency and throughput",
+          "image": "/images/solutions/fast-food.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Rapid Order Entry",
+            "description": "Optimized interface for fastest input"
+          },
+          "b2": {
+            "title": "Multi-channel Support",
+            "description": "Drive-thru, delivery, and dine-in from one system"
+          },
+          "b3": {
+            "title": "Automated Prep",
+            "description": "KDS system for more efficient kitchen"
+          }
+        }
+      },
+      "grocerySupermarkets": {
+        "hero": {
+          "title": "Konty for Grocery & Supermarkets",
+          "subtitle": "Manage thousands of products and high-volume transactions",
+          "cta": "Start Free Trial",
+          "features": "Inventory • Barcodes • Promotions • Analytics"
+        },
+        "overview": {
+          "title": "Control Thousands of Items",
+          "description": "Powerful system for managing large product catalogs",
+          "image": "/images/solutions/grocery.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Inventory Management",
+            "description": "Real-time stock tracking and automatic reordering"
+          },
+          "b2": {
+            "title": "Promotion Support",
+            "description": "Flexible promotions, discounts, and bundles"
+          },
+          "b3": {
+            "title": "Fast Scanning",
+            "description": "Integrated barcode scanners for faster checkout"
+          }
+        }
+      },
+      "clothingBoutiques": {
+        "hero": {
+          "title": "Konty for Clothing & Boutiques",
+          "subtitle": "Track sizes, colors, and seasonal collections",
+          "cta": "Start Free Trial",
+          "features": "Sizes/Colors • Seasons • Loyalty • Analytics"
+        },
+        "overview": {
+          "title": "Perfect for Fashion Retail",
+          "description": "Specialized for boutiques and clothing stores",
+          "image": "/images/solutions/clothing.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Size & Color Matrix",
+            "description": "Easy management of product variants"
+          },
+          "b2": {
+            "title": "Seasonal Collections",
+            "description": "Organize by seasons and collections"
+          },
+          "b3": {
+            "title": "Loyalty Program",
+            "description": "Build your regular customer base"
+          }
+        }
+      },
+      "convenienceStores": {
+        "hero": {
+          "title": "Konty for Convenience Stores",
+          "subtitle": "Simple management of diverse product mix",
+          "cta": "Start Free Trial",
+          "features": "Wide Range • Quick Checkout • 24/7 Operation • Inventory"
+        },
+        "overview": {
+          "title": "For Stores That Never Sleep",
+          "description": "Reliable system for 24/7 operation with diverse products",
+          "image": "/images/solutions/convenience.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Simplified Inventory",
+            "description": "Easy management of diverse products"
+          },
+          "b2": {
+            "title": "Shift Management",
+            "description": "Access control and shift tracking"
+          },
+          "b3": {
+            "title": "Quick Checkout",
+            "description": "Optimized for speed at the register"
+          }
+        }
+      },
+      "b2b": {
+        "hero": {
+          "title": "Konty for B2B Sales & E-Invoicing",
+          "subtitle": "Professional solutions for wholesale and B2B partnerships",
+          "cta": "Start Free Trial",
+          "features": "E-Invoicing • Wholesale • Partners • Reports"
+        },
+        "overview": {
+          "title": "B2B Digitalization",
+          "description": "Complete solution for B2B sales and e-invoicing",
+          "image": "/images/solutions/b2b.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "E-Invoicing",
+            "description": "Automatic generation and sending of e-invoices"
+          },
+          "b2": {
+            "title": "Partner Management",
+            "description": "Different pricing and terms per partner"
+          },
+          "b3": {
+            "title": "Advanced Reports",
+            "description": "Detailed reports for B2B analytics"
+          }
+        }
+      },
+      "cta": {
+        "learnMore": "Learn More",
+        "seeAll": "View All Solutions"
+      }
+    },
     "demo": {
       "demo": {
         "description": "Show us your current setup. We'll show you exactly how much you'll save.",
@@ -592,6 +805,38 @@
     "terms": {
       "description": "Terms of service for Konty POS system and related services.",
       "title": "Terms of Service - Konty"
+    },
+    "solutions": {
+      "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business",
+      "description": "Discover how Konty POS can transform your business. Specialized solutions for restaurants, cafes, retail stores, and B2B.",
+      "restaurants": {
+        "title": "Restaurant POS System | Konty for Full-Service Dining",
+        "description": "Complete POS solution for restaurants. Table management, kitchen display, reservations, and analytics."
+      },
+      "barsCafes": {
+        "title": "Bar & Cafe POS | Fast Service Point of Sale System",
+        "description": "Speed-optimized POS system. Perfect for bars and cafes with high-volume traffic."
+      },
+      "fastFood": {
+        "title": "Fast Food POS System | Quick Service Restaurant Solutions",
+        "description": "Efficient POS for quick service restaurants. Drive-thru, delivery, and dine-in from one system."
+      },
+      "grocerySupermarkets": {
+        "title": "Grocery Store POS | Supermarket Point of Sale System",
+        "description": "Manage thousands of products with ease. Barcode scanning, promotions, and real-time inventory."
+      },
+      "clothingBoutiques": {
+        "title": "Clothing Store POS | Fashion Retail Management System",
+        "description": "Specialized POS for fashion retail. Sizes, colors, seasons, and loyalty programs."
+      },
+      "convenienceStores": {
+        "title": "Convenience Store POS | 24/7 Retail Management System",
+        "description": "Reliable POS for round-the-clock operations. Simplified inventory and fast checkout."
+      },
+      "b2b": {
+        "title": "B2B POS & E-Invoicing | Wholesale Management System",
+        "description": "Professional B2B solution with e-invoicing. Different pricing per partner and advanced reports."
+      }
     }
   },
   "data": {

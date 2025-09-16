@@ -11,7 +11,15 @@
       "features": "Funcionalnosti",
       "contact": "Kontakt",
       "client-stories": "Iskustva klijenata",
-      "partners": "Partneri"
+      "partners": "Partneri",
+      "solutions": "Rješenja",
+      "restaurants": "Restorani",
+      "bars-cafes": "Barovi i kafići",
+      "fast-food": "Brza hrana / Fast food",
+      "grocery-supermarkets": "Prodavnice hrane i supermarketi",
+      "clothing-boutiques": "Prodavnice odjeće",
+      "convenience-stores": "Prodavnice mješovite robe",
+      "b2b": "B2B prodaja i E fakture"
     },
     "readMore": "Read More",
     "cta": {
@@ -47,18 +55,13 @@
         "retailDesc": "Prodaj više. Manje brojana. Bez stresa."
       },
       "categories": {
-        "barLounge": "Bar & Lounge",
-        "butcherShop": "Mesara",
-        "cafeBakery": "Kafić & Pekara",
-        "casualDining": "Restoran",
-        "enterprise": "Enterprise",
-        "fineDining": "Fine Dining",
-        "foodTruck": "Food Truck",
-        "generalStore": "Opšta prodavnica",
-        "hotelRestaurant": "Hotel & Restoran",
-        "liquorStore": "Prodavnica pića",
-        "pizzeria": "Picerija",
-        "supermarket": "Supermarket"
+        "restaurants": "Restorani",
+        "barsCafes": "Barovi i kafići",
+        "fastFood": "Brza hrana / Fast food",
+        "grocerySupermarkets": "Prodavnice hrane i supermarketi",
+        "clothingBoutiques": "Prodavnice odjeće",
+        "convenienceStores": "Prodavnice mješovite robe",
+        "b2b": "B2B prodaja i E fakture"
       },
       "products": {
         "forHospitality": "Konty za ugostiteljstvo",
@@ -474,6 +477,216 @@
         }
       }
     },
+    "solutions": {
+      "hero": {
+        "title": "Rješenja po djelatnosti",
+        "subtitle": "Konty se prilagođava vašem poslovanju - od restorana do prodavnica",
+        "cta": "Pronađi svoje rješenje"
+      },
+      "categories": {
+        "hospitality": {
+          "title": "Ugostiteljstvo",
+          "description": "Rješenja za restorane, kafiće i brzu hranu"
+        },
+        "retail": {
+          "title": "Trgovina",
+          "description": "Rješenja za sve tipove prodavnica"
+        }
+      },
+      "restaurants": {
+        "hero": {
+          "title": "Konty za restorane",
+          "subtitle": "Kompletno rješenje za upravljanje restoranom - od rezervacija do naplate",
+          "cta": "Počni besplatno",
+          "features": "Stolovi • Kuhinja • Rezervacije • Analitika"
+        },
+        "overview": {
+          "title": "Sve što restoranu treba",
+          "description": "Od upravljanja stolovima do kuhinjskih narudžbina",
+          "image": "/images/solutions/restaurants.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Upravljanje stolovima",
+            "description": "Vizualni prikaz sala i stolova u realnom vremenu"
+          },
+          "b2": {
+            "title": "Kuhinjski ekran",
+            "description": "Direktna komunikacija između sale i kuhinje"
+          },
+          "b3": {
+            "title": "Podjela računa",
+            "description": "Jednostavna podjela po stavkama ili procentualno"
+          }
+        }
+      },
+      "barsCafes": {
+        "hero": {
+          "title": "Konty za barove i kafiće",
+          "subtitle": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom",
+          "cta": "Počni besplatno",
+          "features": "Brza naplata • Zalihe • Happy hour • Lojalnost"
+        },
+        "overview": {
+          "title": "Optimizirano za brzinu",
+          "description": "Sistem dizajniran za brzu uslugu i visok promet",
+          "image": "/images/solutions/bars-cafes.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Brza naplata",
+            "description": "Prečice i favoriti za najčešće proizvode"
+          },
+          "b2": {
+            "title": "Happy hour podrška",
+            "description": "Automatske cijene po vremenu i danima"
+          },
+          "b3": {
+            "title": "Praćenje inventara",
+            "description": "Real-time praćenje stanja pića"
+          }
+        }
+      },
+      "fastFood": {
+        "hero": {
+          "title": "Konty za brzu hranu",
+          "subtitle": "Optimizirano za brzinu i efikasnost - savršeno za restorane brze hrane",
+          "cta": "Počni besplatno",
+          "features": "Brze narudžbe • Drive-thru • Dostava • KDS"
+        },
+        "overview": {
+          "title": "Brzina je sve",
+          "description": "Sistem dizajniran za maksimalnu efikasnost i protok",
+          "image": "/images/solutions/fast-food.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Brze narudžbe",
+            "description": "Optimizirani interfejs za najbrže unose"
+          },
+          "b2": {
+            "title": "Multi-kanal podrška",
+            "description": "Drive-thru, dostava i sala iz jednog sistema"
+          },
+          "b3": {
+            "title": "Automatska priprema",
+            "description": "KDS sistem za efikasniju kuhinju"
+          }
+        }
+      },
+      "grocerySupermarkets": {
+        "hero": {
+          "title": "Konty za prodavnice hrane i supermarkete",
+          "subtitle": "Upravljanje velikim brojem artikala i brzim prometom",
+          "cta": "Počni besplatno",
+          "features": "Inventar • Barkodovi • Akcije • Analitika"
+        },
+        "overview": {
+          "title": "Kontrola hiljada artikala",
+          "description": "Moćan sistem za upravljanje velikim asortimanom",
+          "image": "/images/solutions/grocery.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Upravljanje zalihama",
+            "description": "Real-time praćenje nivoa zaliha i automatsko naručivanje"
+          },
+          "b2": {
+            "title": "Podrška za akcije",
+            "description": "Fleksibilne promocije, popusti i paketi"
+          },
+          "b3": {
+            "title": "Brzo skeniranje",
+            "description": "Integrirani barkod skeneri za brže kase"
+          }
+        }
+      },
+      "clothingBoutiques": {
+        "hero": {
+          "title": "Konty za prodavnice odjeće",
+          "subtitle": "Praćenje veličina, boja i sezonskih kolekcija",
+          "cta": "Počni besplatno",
+          "features": "Veličine/Boje • Sezone • Lojalnost • Analitika"
+        },
+        "overview": {
+          "title": "Savršeno za modnu industriju",
+          "description": "Specijalizovano za potrebe butika i prodavnica odjeće",
+          "image": "/images/solutions/clothing.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Matrica veličina i boja",
+            "description": "Lako upravljanje varijantama proizvoda"
+          },
+          "b2": {
+            "title": "Sezonske kolekcije",
+            "description": "Organizacija po sezonama i kolekcijama"
+          },
+          "b3": {
+            "title": "Program lojalnosti",
+            "description": "Izgradite bazu stalnih kupaca"
+          }
+        }
+      },
+      "convenienceStores": {
+        "hero": {
+          "title": "Konty za prodavnice mješovite robe",
+          "subtitle": "Jednostavno upravljanje raznovrsnim asortimanom",
+          "cta": "Počni besplatno",
+          "features": "Širok asortiman • Brza kasa • 24/7 rad • Inventar"
+        },
+        "overview": {
+          "title": "Za prodavnice koje rade non-stop",
+          "description": "Pouzdan sistem za 24/7 rad sa raznovrsnom robom",
+          "image": "/images/solutions/convenience.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Uprošćen inventar",
+            "description": "Lako upravljanje raznovrsnim proizvodima"
+          },
+          "b2": {
+            "title": "Smjene i radnici",
+            "description": "Kontrola pristupa i praćenje smjena"
+          },
+          "b3": {
+            "title": "Brza naplata",
+            "description": "Optimizirano za brzinu na kasi"
+          }
+        }
+      },
+      "b2b": {
+        "hero": {
+          "title": "Konty za B2B prodaju i E-fakture",
+          "subtitle": "Profesionalna rješenja za veleprodaju i B2B saradnju",
+          "cta": "Počni besplatno",
+          "features": "E-fakture • Veleprodaja • Partneri • Izvještaji"
+        },
+        "overview": {
+          "title": "B2B digitalizacija",
+          "description": "Kompletno rješenje za B2B prodaju i e-fakturisanje",
+          "image": "/images/solutions/b2b.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "E-fakture",
+            "description": "Automatsko izdavanje i slanje e-faktura"
+          },
+          "b2": {
+            "title": "Upravljanje partnerima",
+            "description": "Različite cijene i uslovi po partneru"
+          },
+          "b3": {
+            "title": "Napredni izvještaji",
+            "description": "Detaljni izvještaji za B2B analitiku"
+          }
+        }
+      },
+      "cta": {
+        "learnMore": "Saznajte više",
+        "seeAll": "Pogledajte sva rješenja"
+      }
+    },
     "demo": {
       "demo": {
         "description": "Pokaži nam trenutni setup. Pokazat ćemo tačno koliko štediš.",
@@ -592,6 +805,38 @@
     "terms": {
       "description": "Uslovi korištenja Konty POS sistema i povezanih usluga.",
       "title": "Uslovi korištenja - Konty"
+    },
+    "solutions": {
+      "title": "Konty rješenja po djelatnostima | POS sistem prilagođen vašem poslovanju",
+      "description": "Otkrijte kako Konty POS može da unapredi vaše poslovanje. Specijalizovana rješenja za restorane, kafiće, prodavnice i B2B.",
+      "restaurants": {
+        "title": "Konty za restorane | POS sistem za ugostiteljstvo",
+        "description": "Kompletno POS rješenje za restorane. Upravljanje stolovima, kuhinjski ekran, rezervacije i analitika."
+      },
+      "barsCafes": {
+        "title": "Konty za barove i kafiće | Brz POS za visok promet",
+        "description": "POS sistem optimiziran za brzinu. Idealan za barove i kafiće sa velikim prometom."
+      },
+      "fastFood": {
+        "title": "Konty za brzu hranu | Fast food POS sistem",
+        "description": "Efikasan POS za restorane brze hrane. Drive-thru, dostava i sala iz jednog sistema."
+      },
+      "grocerySupermarkets": {
+        "title": "Konty za prodavnice hrane | POS za supermarkete",
+        "description": "Upravljanje hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i real-time inventar."
+      },
+      "clothingBoutiques": {
+        "title": "Konty za prodavnice odjeće | POS za butike",
+        "description": "Specijalizovan POS za modnu industriju. Veličine, boje, sezone i program lojalnosti."
+      },
+      "convenienceStores": {
+        "title": "Konty za prodavnice mješovite robe | 24/7 POS sistem",
+        "description": "Pouzdan POS za non-stop prodavnice. Uprošćen inventar i brza naplata."
+      },
+      "b2b": {
+        "title": "Konty B2B i E-fakture | POS za veleprodaju",
+        "description": "Profesionalno B2B rješenje sa e-fakturisanjem. Različite cijene po partneru i napredni izvještaji."
+      }
     }
   },
   "data": {

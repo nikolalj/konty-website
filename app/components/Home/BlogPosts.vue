@@ -61,6 +61,6 @@ const posts = ref([
     image: '/images/features/hospitality.avif',
     date: '2025-05-20',
     to: '#'
-  }
+  },
 ])
 </script>

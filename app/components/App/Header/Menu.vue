@@ -189,14 +189,9 @@ const items = computed(() => [
     class: 'font-bold',
     slot: 'hospitality' as const,
     children: [
-      { label: t('ui.navigation.categories.barLounge'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.casualDining'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.cafeBakery'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.fineDining'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.enterprise'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.foodTruck'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.pizzeria'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.hotelRestaurant'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.restaurants'), to: localePath('/solutions/restaurants') },
+      { label: t('ui.navigation.categories.barsCafes'), to: localePath('/solutions/bars-cafes') },
+      { label: t('ui.navigation.categories.fastFood'), to: localePath('/solutions/fast-food') },
     ]
   },
   {
@@ -204,10 +199,10 @@ const items = computed(() => [
     class: 'font-bold',
     slot: 'retail' as const,
     children: [
-      { label: t('ui.navigation.categories.generalStore'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.liquorStore'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.supermarket'), to: localePath('/about') },
-      { label: t('ui.navigation.categories.butcherShop'), to: localePath('/about') },
+      { label: t('ui.navigation.categories.grocerySupermarkets'), to: localePath('/solutions/grocery-supermarkets') },
+      { label: t('ui.navigation.categories.clothingBoutiques'), to: localePath('/solutions/clothing-boutiques') },
+      { label: t('ui.navigation.categories.convenienceStores'), to: localePath('/solutions/convenience-stores') },
+      { label: t('ui.navigation.categories.b2b'), to: localePath('/solutions/b2b') },
     ]
   },
   {

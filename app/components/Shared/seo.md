@@ -53,3 +53,87 @@ Translation are used on:
 This means translations can be used only once or multiple times in multiple sections above.
 
 I want you to analyze where translations are used. Then I want you to propose the optimal organization of translations in JSON files. You must make sure that all changes in JSON files are also applied where those translations are used in the codebase. You must not change any translation messages. I need a clean and clear organization that makes most sense. Think hardest. Do not write any code. Present me with a plan for reorganization and optimization.
+
+
+We are going to continue working on this high converting website. Before we do, I need you to read all files from context directory. Then, you need to analyze all code in this project related to the page organization. Figure out how pages are organized, how they are structured, how they are translated, how is SEO and Schema defined for them, and all related details.
+
+I want you to analyze and prepare for a discussion. Do not write any code yet. Think hardest.
+
+
+
+
+
+
+I need you to create placeholder pages:
+
+1. /solutions
+   This page will show a list of Konty use cases - applications of Konty to differenty bussiness types. There will be 3 business types for hospitality and 4 business types for retail. Each of these will contain the one paragraph of description with an image related to the business tupe. It will have see more option that will take the user to a separate page for that particular Konty use case.
+
+   Use cases to cover for Hospitality:
+    - Restorani (Restaurants): /solutions/restaurants
+    - Barovi i kafići (Bars & Cafés): /solutions/bars-cafes
+    - Brza hrana / Fast food (Quick Service / Fast Food): /fast-food
+
+  Use cases to cover for Retail:
+    - Prodavnice hrane i supermarketi (Grocery & Supermarkets): /grocery-supermarkets
+    - Prodavnice odeće (Clothing & Boutiques): /clothing-boutiques
+    - Prodavnice mjesovite robe (Convenience Stores): /convenience-stores
+    - B2B prodaja i E fakture (b2b): /b2b
+
+  Page stucture:
+
+  ATF – HERO Placeholder
+  ClientList.vue
+  Statistics.vue
+  <list of Konty use cases>
+  Pricing.vue
+  FAQ
+  ContactForm
+
+2. Create a separate page for each use case
+
+  Page stucture:
+
+  ATF – HERO Placeholder
+  ClientList.vue
+  Statistics.vue
+  <section for showcasing Konty for that business type>
+  Pricing.vue
+  FAQ
+  ContactForm
+
+3. Data: For all of these pages there must be single source of truth for data. All if must come from translation files. Data must be structured so that:
+ - it follows the current organization of translation files
+ - it allows for simple change / edit in the future or addition of new use cases
+
+Make a detailed plan to accomplish this. Think hardest.
+How will we implement only the functionality we need right now?
+Identify files that need to be changed.
+
+We need minimal, clean code, with no backwards compatibility, written Nuxt 4 way. Go step by step. Take your time. Think hardest. Follow best practices and do not overengineer.
+
+Present me with a plan and propose data structure. Do not write any code yet.
+
+
+
+
+
+
+
+ 2 pages that are going to be one under /konty-hospitality and one under /konty-retail and will have a longer description of features for each. /konty-hospitality and /konty-retail are pages about Konty Point of Sale for hospitality and for retail and include different sections. they do have features section with high level feature explanation and when user clicks see more he is to be taken to one of these new two pages with a detailed decription of features.
+
+Next 3 pages that we need to create are pages in about us section in header menu.
+
+
+Sections:
+ATF - headline i subjeadline
+Detailed list of all features
+FAQ for hospitality / retail
+Social proof / testimonials
+Contact form
+
+
+Microgoals for the page:
+Go to konty-hospitality or konty-retail page
+Ask for a free demo
+Contact us
