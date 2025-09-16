@@ -1,101 +1,98 @@
 <template>
-  <section class="py-10 bg-[var(--bg-100)] dark:bg-[var(--bg-200)]">
-    <UContainer>
-      <SharedSectionHeading
-        v-model="product"
-        :title="t(`pages.products.features.${productKey}.title`)"
-        :description="t(`pages.products.features.${productKey}.description`)"
-        :product-switch="true"
-        product-switch-position="top"
-      />
+  <SharedSection
+    v-model="product"
+    variant="1"
+    :title="t(`pages.products.features.${productKey}.title`)"
+    :description="t(`pages.products.features.${productKey}.description`)"
+    :product-switch="true"
+    product-switch-position="top"
+  >
+    <div
+      :key="product"
+      class="grid lg:grid-cols-2 gap-16 min-h-110"
+    >
+      <UIAppear direction="right" :distance="32" :animate-on="product">
+        <div :class="product !== 'retail' ? 'lg:order-2' : 'lg:order-1'">
+          <NuxtImg
+            :src="featureImages[product]"
+            format="avif"
+            loading="lazy"
+            :alt="product === 'hospitality' ? 'Hospitality features' : 'Retail features'"
+            role="presentation"
+            width="500"
+            height="500"
+            quality="80"
+            fit="inside"
+            class="w-full h-auto rounded-2xl transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      </UIAppear>
 
-      <div
-        :key="product"
-        class="grid lg:grid-cols-2 gap-16 min-h-110"
-      >
-        <UIAppear direction="right" :distance="32" :animate-on="product">
-          <div :class="product !== 'kontyRetail' ? 'lg:order-2' : 'lg:order-1'">
-            <NuxtImg
-              :src="featureImages[product]"
-              format="avif"
-              loading="lazy"
-              :alt="product === 'kontyHospitality' ? 'Hospitality features' : 'Retail features'"
-              role="presentation"
-              width="500"
-              height="500"
-              quality="80"
-              fit="inside"
-              class="w-full h-auto rounded-2xl transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-        </UIAppear>
-
-        <UIAppear direction="left" :distance="32" :animate-on="product">
-          <div :class="product !== 'kontyRetail' ? 'lg:order-1' : 'lg:order-2'">
-            <!-- Features -->
-            <div class="space-y-8 mb-12">
-              <div
-                v-for="(feature, index) in features[product]"
-                :key="`${product}-${index}`"
-                class="flex gap-4 transition-all duration-300 hover:translate-x-2"
-              >
-                <div class="flex-shrink-0">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-900/50">
-                    <UIcon
-                      :name="feature.icon"
-                      class="h-6 w-6 text-white"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {{ t(`pages.products.features.${productKey}.${feature.key}.title`) }}
-                  </h3>
-                  <p class="text-gray-600 dark:text-gray-300">
-                    {{ t(`pages.products.features.${productKey}.${feature.key}.description`) }}
-                  </p>
+      <UIAppear direction="left" :distance="32" :animate-on="product">
+        <div :class="product !== 'retail' ? 'lg:order-1' : 'lg:order-2'">
+          <!-- Features -->
+          <div class="space-y-8 mb-12">
+            <div
+              v-for="(feature, index) in features[product]"
+              :key="`${product}-${index}`"
+              class="flex gap-4 transition-all duration-300 hover:translate-x-2"
+            >
+              <div class="flex-shrink-0">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-900/50">
+                  <UIcon
+                    :name="feature.icon"
+                    class="h-6 w-6 text-white"
+                  />
                 </div>
               </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4">
-              <UButton
-                v-for="(link, index) in links[product]"
-                :key="`${product}-${index}`"
-                :to="link.to ? localePath(link.to) : undefined"
-                :color="link.color"
-                :variant="link.variant"
-                :trailing-icon="link.trailingIcon"
-                size="lg"
-                class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
-              >
-                {{ t(link.labelKey) }}
-              </UButton>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {{ t(`pages.products.features.${productKey}.${feature.key}.title`) }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  {{ t(`pages.products.features.${productKey}.${feature.key}.description`) }}
+                </p>
+              </div>
             </div>
           </div>
-        </UIAppear>
-      </div>
-    </UContainer>
-  </section>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <UButton
+              v-for="(link, index) in links[product]"
+              :key="`${product}-${index}`"
+              :to="link.to ? localePath(link.to) : undefined"
+              :color="link.color"
+              :variant="link.variant"
+              :trailing-icon="link.trailingIcon"
+              size="lg"
+              class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+            >
+              {{ t(link.labelKey) }}
+            </UButton>
+          </div>
+        </div>
+      </UIAppear>
+    </div>
+  </SharedSection>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const product: Ref<'kontyHospitality' | 'kontyRetail'> = ref('kontyHospitality')
+const product: Ref<'hospitality' | 'retail'> = ref('hospitality')
 
 // Feature images (could be moved to static assets later)
 const featureImages = {
-  kontyHospitality: '/images/features/hospitality.avif',
-  kontyRetail: '/images/features/retail.avif'
+  hospitality: '/images/features/hospitality.avif',
+  retail: '/images/features/retail.avif'
 }
 
-const productKey = computed(() => product.value === 'kontyHospitality' ? 'hospitality' : 'retail')
+const productKey = computed(() => product.value === 'hospitality' ? 'hospitality' : 'retail')
 
 // Feature configuration with translation keys
 const features = {
-  kontyHospitality: [
+  hospitality: [
     {
       key: 'tableManagement',
       icon: 'i-lucide-layout-grid'
@@ -109,7 +106,7 @@ const features = {
       icon: 'i-lucide-users'
     }
   ],
-  kontyRetail: [
+  retail: [
     {
       key: 'inventory',
       icon: 'i-lucide-package'
@@ -136,10 +133,10 @@ interface FeatureLink {
 
 // Links configuration with translation keys
 const links: Record<string, FeatureLink[]> = {
-  kontyHospitality: [
+  hospitality: [
     {
       labelKey: 'ui.common.buttons.learnMore',
-      to: '/konty-hospitality',
+      to: '/products/hospitality',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'
@@ -152,10 +149,10 @@ const links: Record<string, FeatureLink[]> = {
       trailingIcon: 'i-lucide-calendar'
     }
   ],
-  kontyRetail: [
+  retail: [
     {
       labelKey: 'ui.common.buttons.learnMore',
-      to: '/konty-retail',
+      to: '/products/retail',
       color: 'primary',
       variant: 'solid',
       trailingIcon: 'i-lucide-arrow-right'

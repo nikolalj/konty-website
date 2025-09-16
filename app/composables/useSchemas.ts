@@ -25,18 +25,18 @@ export const useSchemas = () => {
 
   /**
    * SoftwareApplication schema for Konty Retail
-   * Exact match from konty-retail.vue page
+   * Exact match from retail.vue page
    */
-  const kontyRetail = () => {
+  const retail = () => {
     // Get price values from translations (same as in page)
     const lowPrice = t('pages.pricing.plans.retail.start.priceValue')
     const highPrice = t('pages.pricing.plans.retail.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
-      '@id': '#konty-retail',
+      '@id': '#retail',
       name: t('data.products.retail.name'),
-      description: t('seo.kontyRetail.description'),
+      description: t('seo.products.retail.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Point of Sale',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -52,10 +52,6 @@ export const useSchemas = () => {
         priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()
       },
 
-      // Software requirements
-      softwareRequirements: t('schema.requirements.software'),
-      permissions: t('schema.permissions.retail'),
-
       // Key features list
       featureList: [
         t('pages.products.features.retail.inventory.title'),
@@ -67,7 +63,7 @@ export const useSchemas = () => {
       ],
 
       // Screenshot for rich results
-      screenshot: t('schema.screenshots.retail'),
+      screenshot: '/images/screenshots/retail-dashboard.png',
 
       // Customer ratings for trust signals
       aggregateRating: {
@@ -89,15 +85,15 @@ export const useSchemas = () => {
   /**
    * SoftwareApplication schema for Konty Hospitality
    */
-  const kontyHospitality = () => {
+  const hospitality = () => {
     const lowPrice = t('pages.pricing.plans.hospitality.start.priceValue')
     const highPrice = t('pages.pricing.plans.hospitality.premium.priceValue')
 
     return {
       '@type': 'SoftwareApplication',
-      '@id': '#konty-hospitality',
+      '@id': '#hospitality',
       name: 'Konty Hospitality',
-      description: t('seo.kontyHospitality.description'),
+      description: t('seo.products.hospitality.description'),
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Restaurant Management',
       operatingSystem: ['Windows', 'macOS', 'Linux', 'iOS', 'Android'],
@@ -125,7 +121,7 @@ export const useSchemas = () => {
         'Offline Mode'
       ],
 
-      screenshot: '/images/screenshots/konty-hospitality-dashboard.png',
+      screenshot: '/images/screenshots/hospitality-dashboard.png',
 
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -219,54 +215,6 @@ export const useSchemas = () => {
   })
 
   /**
-   * HowTo schema for setup guides
-   */
-  const howToSetup = () => ({
-    '@type': 'HowTo',
-    name: 'How to Set Up Konty POS',
-    description: 'Get your Konty POS system up and running in just 5 minutes',
-    totalTime: 'PT5M',
-    supply: [
-      {
-        '@type': 'HowToSupply',
-        name: 'Computer or mobile device'
-      }
-    ],
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Sign up for Konty account',
-        text: 'Sign up for Konty account'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Configure your business details',
-        text: 'Configure your business details'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Add your products or menu items',
-        text: 'Add your products or menu items'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Set up payment methods',
-        text: 'Set up payment methods'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 5,
-        name: 'Start accepting orders',
-        text: 'Start accepting orders'
-      }
-    ]
-  })
-
-  /**
    * LocalBusiness schema for about page
    * Exact match from about.vue page
    */
@@ -281,7 +229,7 @@ export const useSchemas = () => {
       url: config.public.siteUrl + localePath('/'),
       logo: `${config.public.siteUrl}/images/branding/logo-light.svg`,
       image: `${config.public.siteUrl}/images/branding/logo-light.svg`,
-      description: t('seo.about.description'),
+      description: t('data.company.description'),
 
       // Contact information
       telephone: t('data.company.contact.phone'),
@@ -341,19 +289,58 @@ export const useSchemas = () => {
     })
   }
 
+  /**
+   * Schema for Konty Hospitality Features page
+   */
+  const hospitalityFeatures = () => ({
+    '@type': 'WebPage',
+    name: t('seo.products.hospitality.features.title'),
+    description: t('seo.products.hospitality.features.description')
+  })
+
+  /**
+   * Schema for Konty Retail Features page
+   */
+  const retailFeatures = () => ({
+    '@type': 'WebPage',
+    name: t('seo.products.retail.features.title'),
+    description: t('seo.products.retail.features.description')
+  })
+
+  /**
+   * Schema for Client Stories page
+   */
+  const clientStories = () => ({
+    '@type': 'WebPage',
+    name: t('seo.clientStories.title'),
+    description: t('seo.clientStories.description')
+  })
+
+  /**
+   * Schema for Partners page
+   */
+  const partners = () => ({
+    '@type': 'WebPage',
+    name: t('seo.partners.title'),
+    description: t('seo.partners.description')
+  })
+
   return {
     // Product schemas
-    kontyRetail,
-    kontyHospitality,
+    retail,
+    hospitality,
     productsOverview,
     pricingProduct,
 
     // Page schemas
     localBusiness,
+    hospitalityFeatures,
+    retailFeatures,
+    clientStories,
+    partners,
 
     // Generator schemas
     faqSchema,
-    howToSetup,
 
     // Constants for external use
     RATINGS,

@@ -1,25 +1,38 @@
 <template>
-  <section class="py-12 sm:py-16">
-    <UContainer>
-      <div ref="root" class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-        <article v-for="(stat, index) in statistics" :key="index" class="text-center">
-          <h2 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            <span class="tabular-nums tracking-tight">
-              {{ new Intl.NumberFormat().format(animatedStats[index] || 0) }}
-            </span>{{ stat.suffix }}
-          </h2>
-          <p class="text-base text-gray-600 dark:text-gray-400">
-            {{ stat.description }}
-          </p>
-        </article>
-      </div>
-    </UContainer>
-  </section>
+  <SharedSection
+    :variant="props.variant"
+  >
+    <div ref="root" class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+      <article v-for="(stat, index) in statistics" :key="index" class="text-center">
+        <h2 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <span class="tabular-nums tracking-tight">
+            {{ new Intl.NumberFormat().format(animatedStats[index] || 0) }}
+          </span>{{ stat.suffix }}
+        </h2>
+        <p class="text-base text-gray-600 dark:text-gray-400">
+          {{ stat.description }}
+        </p>
+      </article>
+    </div>
+  </SharedSection>
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType } from '~/types/components'
+
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { getAppearObserver } from '~/utils/appearObserver'
+
+const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
+  product: {
+    type: String as PropType<'retail' | 'hospitality' | undefined>,
+    default: undefined
+  },
+})
 
 type Stat = { value: number; suffix: string; description: string }
 

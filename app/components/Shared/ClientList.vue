@@ -1,53 +1,55 @@
 <template>
-  <section class="py-12 sm:py-16">
-    <UContainer>
-      <SharedSectionHeading
-        :title="config.title"
-        :description="config.description"
-      />
-
-      <!-- Client Logos Grid -->
-      <UIAppear>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-          <UPageCard
-            v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
-            :key="index"
-            :title="client.name"
-            :to="client.to"
-            description="Nuxt UI v3 integrates with latest."
-            target="_blank"
-            variant="outline"
-            spotlight
-            spotlight-color="primary"
-            :ui="{
-              root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
-            }"
-            class="w-full bg-elevated hover:bg-muted cursor-pointer"
-          >
-            <div class="flex justify-center">
-              <NuxtImg
-                :src="client.logo"
-                format="avif"
-                loading="lazy"
-                :alt="client.name"
-                role="presentation"
-                width="80"
-                height="80"
-                quality="70"
-                fit="cover"
-              />
-            </div>
-          </UPageCard>
-        </div>
-      </UIAppear>
-    </UContainer>
-  </section>
+  <SharedSection
+    :variant="props.variant"
+    :title="config.title"
+    :description="config.description"
+  >
+    <UIAppear>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <UPageCard
+          v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
+          :key="index"
+          :title="client.name"
+          :to="client.to"
+          description="Nuxt UI v3 integrates with latest."
+          target="_blank"
+          variant="outline"
+          spotlight
+          spotlight-color="primary"
+          :ui="{
+            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
+          }"
+          class="w-full bg-elevated hover:bg-muted cursor-pointer"
+        >
+          <div class="flex justify-center">
+            <NuxtImg
+              :src="client.logo"
+              format="avif"
+              loading="lazy"
+              :alt="client.name"
+              role="presentation"
+              width="80"
+              height="80"
+              quality="70"
+              fit="cover"
+            />
+          </div>
+        </UPageCard>
+      </div>
+    </UIAppear>
+  </SharedSection>
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType } from '~/types/components'
+
 const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
   product: {
-    type: String as PropType<'kontyRetail' | 'kontyHospitality' | undefined>,
+    type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
   },
 })
@@ -65,7 +67,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-microsoft',
     colorClass: 'text-[#00A1F1]',
-    product: 'kontyRetail',
+    product: 'retail',
     to: '#'
   },
   {
@@ -73,7 +75,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-google',
     colorClass: 'text-[#4285F4]',
-    product: 'kontyRetail',
+    product: 'retail',
     to: '#'
   },
   {
@@ -81,7 +83,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-apple',
     colorClass: 'text-default',
-    product: 'kontyHospitality',
+    product: 'hospitality',
     to: '#'
   },
   {
@@ -89,7 +91,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-amazon',
     colorClass: 'text-[#FF9900]',
-    product: 'kontyHospitality',
+    product: 'hospitality',
     to: '#'
   },
   {
@@ -97,7 +99,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-meta',
     colorClass: 'text-[#1877F2]',
-    product: 'kontyHospitality',
+    product: 'hospitality',
     to: '#'
   },
   {
@@ -105,7 +107,7 @@ const clients = ref([
     logo: '/images/clients/client1.png',
     icon: 'i-simple-icons-netflix',
     colorClass: 'text-[#E50914]',
-    product: 'kontyHospitality',
+    product: 'hospitality',
     to: '#'
   }
 ])

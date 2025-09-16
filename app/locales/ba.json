@@ -1,5 +1,32 @@
 {
   "ui": {
+    "breadcrumb": {
+      "index": "Početna",
+      "products": "Proizvodi",
+      "pricing": "Cijene",
+      "hospitality": "Ugostiteljstvo",
+      "retail": "Trgovina",
+      "download": "Download",
+      "faqdocs": "FAQ i dokumentacija",
+      "features": "Funcionalnosti",
+      "contact": "Kontakt",
+      "client-stories": "Iskustva klijenata",
+      "partners": "Partneri",
+      "solutions": "Rješenja",
+      "restaurants": "Restorani",
+      "bars-cafes": "Barovi i kafići",
+      "fast-food": "Brza hrana / Fast food",
+      "grocery-supermarkets": "Prodavnice hrane i supermarketi",
+      "clothing-boutiques": "Prodavnice odjeće",
+      "convenience-stores": "Prodavnice mješovite robe",
+      "b2b": "B2B prodaja i E fakture",
+      "blog": "Blog"
+    },
+    "readMore": "Read More",
+    "cta": {
+      "primary": "Zakaži demo",
+      "secondary": "Kontaktiraj nas"
+    },
     "common": {
       "buttons": {
         "bookDemo": "Lični demo (15 min)",
@@ -18,6 +45,10 @@
         "formPlaceholder": "Učitavanje..."
       }
     },
+    "contactForm": {
+      "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
+      "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme."
+    },
     "navigation": {
       "main": {
         "products": "Proizvodi",
@@ -28,26 +59,25 @@
         "retail": "Trgovina",
         "retailDesc": "Prodaj više. Manje brojana. Bez stresa."
       },
-      "breadcrumb": {
-        "index": "Početna"
-      },
       "categories": {
-        "barLounge": "Bar & Lounge",
-        "butcherShop": "Mesara",
-        "cafeBakery": "Kafić & Pekara",
-        "casualDining": "Restoran",
-        "enterprise": "Enterprise",
-        "fineDining": "Fine Dining",
-        "foodTruck": "Food Truck",
-        "generalStore": "Opšta prodavnica",
-        "hotelRestaurant": "Hotel & Restoran",
-        "liquorStore": "Prodavnica pića",
-        "pizzeria": "Picerija",
-        "supermarket": "Supermarket"
+        "restaurants": "Restorani",
+        "barsCafes": "Barovi i kafići",
+        "fastFood": "Brza hrana / Fast food",
+        "grocerySupermarkets": "Prodavnice hrane i supermarketi",
+        "clothingBoutiques": "Prodavnice odjeće",
+        "convenienceStores": "Prodavnice mješovite robe",
+        "b2b": "B2B prodaja i E fakture"
       },
-      "productNames": {
+      "products": {
         "forHospitality": "Konty za ugostiteljstvo",
-        "forRetail": "Konty za trgovinu"
+        "forRetail": "Konty za trgovinu",
+        "download": "Preuzmi Konty",
+        "faqdocs": "FAQ i dokumentacija"
+      },
+      "about": {
+        "contact": "Kontakt",
+        "clientStories": "Iskustva klijenata",
+        "partners": "Partneri"
       }
     },
     "footer": {
@@ -115,10 +145,7 @@
       "hero": {
         "title": "Konačno. POS terminal koji neće pući u subotu uveče.",
         "subtitle": "Dok drugi dodaju AI i buzzwords, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri",
-        "cta": {
-          "primary": "Zakaži demo"
-        }
+        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri"
       },
       "statistics": {
         "stat1": {
@@ -166,20 +193,6 @@
       "clients": {
         "title": "9.000 restorana vjeruje Konty-ju svoje najgore večeri",
         "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998"
-      },
-      "blog": {
-        "post1": {
-          "description": "Tehnički razlozi padova u gužvi i kako da zaštitiš svoj biznis.",
-          "title": "Zašto POS puca u špicu (i kako to spriječiti)"
-        },
-        "post2": {
-          "description": "Skriveni troškovi, izgubljene narudžbe, spora usluga - prepoznaj znake prije nego što bude kasno.",
-          "title": "5 znakova da ti POS ubija profit"
-        },
-        "post3": {
-          "description": "Kako je 9.000 restorana prešlo bez ijednog dana zastoja.",
-          "title": "Prelazak na novi POS: Vodič za 48 sati"
-        }
       },
       "getStarted": {
         "certificate": {
@@ -354,36 +367,315 @@
         }
       },
       "faq": {
-        "general": {
-          "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
-          "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
-          "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
-          "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u BiH. Automatski izdaje fiskalne račune prema propisima.",
-          "a5": "Dobijate 30 dana besplatnog korištenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
-          "q1": "Šta je Konty POS sistem?",
-          "q2": "Mogu li koristiti Konty bez interneta?",
-          "q3": "Koliko brzo mogu početi sa korištenjem?",
-          "q4": "Da li Konty podržava fiskalizaciju?",
-          "q5": "Kako funkcioniše besplatni probni period?"
+        "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
+        "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
+        "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
+        "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u BiH. Automatski izdaje fiskalne račune prema propisima.",
+        "a5": "Dobijate 30 dana besplatnog korištenja sa svim funkcionalnostima. Ne zahtijeva kreditnu karticu. Nakon isteka, možete izabrati plan.",
+        "q1": "Šta je Konty POS sistem?",
+        "q2": "Mogu li koristiti Konty bez interneta?",
+        "q3": "Koliko brzo mogu početi sa korištenjem?",
+        "q4": "Da li Konty podržava fiskalizaciju?",
+        "q5": "Kako funkcioniše besplatni probni period?"
+      },
+      "download": {
+        "hero": {
+          "title": "Gdje god ti treba!",
+          "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
+          "description": "Bilo da preferirate pogodnost pristupa preko weba, poznato okruženje Windows aplikacija, mobilnost Android uređaja ili pouzdanost MacOS-a, naš softver se prilagođava vašem operativnom sistemu.",
+          "docsLink": "Za detaljne instrukcije i dokumentaciju",
+          "docsLinkText": "kliknite ovdje"
+        },
+        "sections": {
+          "production": {
+            "title": "Preuzmi Konty",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          },
+          "demo": {
+            "title": "Preuzmi Konty Demo",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          }
+        }
+      },
+      "hospitality": {
+        "hero": {
+          "cta": "Počni besplatno",
+          "features": "Nikad ne puca • Prava podrška • Bez ugovora",
+          "subtitle": "Kad udari subota uveče, trebaš POS koji neće da te izda. 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
+          "title": "Za restorane koji ne smiju da stanu",
+          "viewPricing": "Vidi cijene"
+        },
+        "features": {
+          "hero": {
+            "title": "All Hospitality Features",
+            "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
+            "backToProduct": "Back to Hospitality"
+          },
+          "list": {
+            "title": "Complete Feature Set",
+            "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars."
+          }
+        },
+        "faq": {
+          "q1": "Can I manage multiple locations?",
+          "a1": "Yes, Konty supports multi-location management with centralized reporting.",
+          "q2": "Does it work offline?",
+          "a2": "Yes, all transactions sync automatically when connection is restored.",
+          "q3": "How long does setup take?",
+          "a3": "Most restaurants are up and running within 48 hours.",
+          "q4": "Can I keep my existing hardware?",
+          "a4": "Yes, Konty works with most existing POS hardware.",
+          "q5": "What about staff training?",
+          "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
+        }
+      },
+      "retail": {
+        "hero": {
+          "cta": "Počni besplatno",
+          "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
+          "subtitle": "POS koji stvarno radi na Black Friday. 99.97% uptime kad drugi pucaju.",
+          "title": "Prodaj više. Manje brojanja. Bez stresa.",
+          "viewDemo": "2-minutni demo"
+        },
+        "features": {
+          "hero": {
+            "title": "All Retail Features",
+            "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",
+            "backToProduct": "Back to Retail"
+          },
+          "list": {
+            "title": "Complete Feature Set",
+            "subtitle": "Discover all the tools built specifically for retail stores and chains."
+          }
+        },
+        "faq": {
+          "q1": "Can I manage inventory across multiple stores?",
+          "a1": "Yes, real-time inventory sync across all your locations.",
+          "q2": "Does it support barcode scanning?",
+          "a2": "Yes, works with all standard barcode scanners and mobile devices.",
+          "q3": "What about loyalty programs?",
+          "a3": "Built-in loyalty program with points, discounts, and customer tracking.",
+          "q4": "Can I import my existing inventory?",
+          "a4": "Yes, we provide free data migration from your current system.",
+          "q5": "How are returns handled?",
+          "a5": "Simple one-click returns with automatic inventory adjustment."
         }
       }
     },
-    "kontyHospitality": {
+    "solutions": {
       "hero": {
-        "cta": "Počni besplatno",
-        "features": "Nikad ne puca • Prava podrška • Bez ugovora",
-        "subtitle": "Kad udari subota uveče, trebaš POS koji neće da te izda. 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
-        "title": "Za restorane koji ne smiju da stanu",
-        "viewPricing": "Vidi cijene"
-      }
-    },
-    "kontyRetail": {
-      "hero": {
-        "cta": "Počni besplatno",
-        "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
-        "subtitle": "POS koji stvarno radi na Black Friday. 99.97% uptime kad drugi pucaju.",
-        "title": "Prodaj više. Manje brojanja. Bez stresa.",
-        "viewDemo": "2-minutni demo"
+        "title": "Rješenja po djelatnosti",
+        "subtitle": "Konty se prilagođava vašem poslovanju - od restorana do prodavnica",
+        "cta": "Pronađi svoje rješenje"
+      },
+      "categories": {
+        "hospitality": {
+          "title": "Ugostiteljstvo",
+          "description": "Rješenja za restorane, kafiće i brzu hranu"
+        },
+        "retail": {
+          "title": "Trgovina",
+          "description": "Rješenja za sve tipove prodavnica"
+        }
+      },
+      "restaurants": {
+        "hero": {
+          "title": "Konty za restorane",
+          "subtitle": "Kompletno rješenje za upravljanje restoranom - od rezervacija do naplate",
+          "cta": "Počni besplatno",
+          "features": "Stolovi • Kuhinja • Rezervacije • Analitika"
+        },
+        "overview": {
+          "title": "Sve što restoranu treba",
+          "description": "Od upravljanja stolovima do kuhinjskih narudžbina",
+          "image": "/images/solutions/restaurants.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Upravljanje stolovima",
+            "description": "Vizualni prikaz sala i stolova u realnom vremenu"
+          },
+          "b2": {
+            "title": "Kuhinjski ekran",
+            "description": "Direktna komunikacija između sale i kuhinje"
+          },
+          "b3": {
+            "title": "Podjela računa",
+            "description": "Jednostavna podjela po stavkama ili procentualno"
+          }
+        }
+      },
+      "barsCafes": {
+        "hero": {
+          "title": "Konty za barove i kafiće",
+          "subtitle": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom",
+          "cta": "Počni besplatno",
+          "features": "Brza naplata • Zalihe • Happy hour • Lojalnost"
+        },
+        "overview": {
+          "title": "Optimizirano za brzinu",
+          "description": "Sistem dizajniran za brzu uslugu i visok promet",
+          "image": "/images/solutions/bars-cafes.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Brza naplata",
+            "description": "Prečice i favoriti za najčešće proizvode"
+          },
+          "b2": {
+            "title": "Happy hour podrška",
+            "description": "Automatske cijene po vremenu i danima"
+          },
+          "b3": {
+            "title": "Praćenje inventara",
+            "description": "Real-time praćenje stanja pića"
+          }
+        }
+      },
+      "fastFood": {
+        "hero": {
+          "title": "Konty za brzu hranu",
+          "subtitle": "Optimizirano za brzinu i efikasnost - savršeno za restorane brze hrane",
+          "cta": "Počni besplatno",
+          "features": "Brze narudžbe • Drive-thru • Dostava • KDS"
+        },
+        "overview": {
+          "title": "Brzina je sve",
+          "description": "Sistem dizajniran za maksimalnu efikasnost i protok",
+          "image": "/images/solutions/fast-food.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Brze narudžbe",
+            "description": "Optimizirani interfejs za najbrže unose"
+          },
+          "b2": {
+            "title": "Multi-kanal podrška",
+            "description": "Drive-thru, dostava i sala iz jednog sistema"
+          },
+          "b3": {
+            "title": "Automatska priprema",
+            "description": "KDS sistem za efikasniju kuhinju"
+          }
+        }
+      },
+      "grocerySupermarkets": {
+        "hero": {
+          "title": "Konty za prodavnice hrane i supermarkete",
+          "subtitle": "Upravljanje velikim brojem artikala i brzim prometom",
+          "cta": "Počni besplatno",
+          "features": "Inventar • Barkodovi • Akcije • Analitika"
+        },
+        "overview": {
+          "title": "Kontrola hiljada artikala",
+          "description": "Moćan sistem za upravljanje velikim asortimanom",
+          "image": "/images/solutions/grocery.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Upravljanje zalihama",
+            "description": "Real-time praćenje nivoa zaliha i automatsko naručivanje"
+          },
+          "b2": {
+            "title": "Podrška za akcije",
+            "description": "Fleksibilne promocije, popusti i paketi"
+          },
+          "b3": {
+            "title": "Brzo skeniranje",
+            "description": "Integrirani barkod skeneri za brže kase"
+          }
+        }
+      },
+      "clothingBoutiques": {
+        "hero": {
+          "title": "Konty za prodavnice odjeće",
+          "subtitle": "Praćenje veličina, boja i sezonskih kolekcija",
+          "cta": "Počni besplatno",
+          "features": "Veličine/Boje • Sezone • Lojalnost • Analitika"
+        },
+        "overview": {
+          "title": "Savršeno za modnu industriju",
+          "description": "Specijalizovano za potrebe butika i prodavnica odjeće",
+          "image": "/images/solutions/clothing.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Matrica veličina i boja",
+            "description": "Lako upravljanje varijantama proizvoda"
+          },
+          "b2": {
+            "title": "Sezonske kolekcije",
+            "description": "Organizacija po sezonama i kolekcijama"
+          },
+          "b3": {
+            "title": "Program lojalnosti",
+            "description": "Izgradite bazu stalnih kupaca"
+          }
+        }
+      },
+      "convenienceStores": {
+        "hero": {
+          "title": "Konty za prodavnice mješovite robe",
+          "subtitle": "Jednostavno upravljanje raznovrsnim asortimanom",
+          "cta": "Počni besplatno",
+          "features": "Širok asortiman • Brza kasa • 24/7 rad • Inventar"
+        },
+        "overview": {
+          "title": "Za prodavnice koje rade non-stop",
+          "description": "Pouzdan sistem za 24/7 rad sa raznovrsnom robom",
+          "image": "/images/solutions/convenience.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "Uprošćen inventar",
+            "description": "Lako upravljanje raznovrsnim proizvodima"
+          },
+          "b2": {
+            "title": "Smjene i radnici",
+            "description": "Kontrola pristupa i praćenje smjena"
+          },
+          "b3": {
+            "title": "Brza naplata",
+            "description": "Optimizirano za brzinu na kasi"
+          }
+        }
+      },
+      "b2b": {
+        "hero": {
+          "title": "Konty za B2B prodaju i E-fakture",
+          "subtitle": "Profesionalna rješenja za veleprodaju i B2B saradnju",
+          "cta": "Počni besplatno",
+          "features": "E-fakture • Veleprodaja • Partneri • Izvještaji"
+        },
+        "overview": {
+          "title": "B2B digitalizacija",
+          "description": "Kompletno rješenje za B2B prodaju i e-fakturisanje",
+          "image": "/images/solutions/b2b.jpg"
+        },
+        "benefits": {
+          "b1": {
+            "title": "E-fakture",
+            "description": "Automatsko izdavanje i slanje e-faktura"
+          },
+          "b2": {
+            "title": "Upravljanje partnerima",
+            "description": "Različite cijene i uslovi po partneru"
+          },
+          "b3": {
+            "title": "Napredni izvještaji",
+            "description": "Detaljni izvještaji za B2B analitiku"
+          }
+        }
+      },
+      "cta": {
+        "learnMore": "Saznajte više",
+        "seeAll": "Pogledajte sva rješenja"
       }
     },
     "demo": {
@@ -394,14 +686,73 @@
       }
     },
     "contact": {
-      "title": "Vidi svoj setup za 15 minuta",
-      "description": "Reci nam o svom restoranu. Pokazat ćemo tačno kako Konty rješava tvoje probleme."
+      "hero": {
+        "title": "Get In Touch",
+        "subtitle": "We're here to help you choose the perfect POS solution for your business."
+      },
+      "address": {
+        "title": "Address",
+        "line1": "Bulevar Svetog Petra Cetinjskog 56",
+        "line2": "81000 Podgorica, Montenegro"
+      },
+      "phone": {
+        "title": "Phone",
+        "number": "+382 67 607 670"
+      },
+      "email": {
+        "title": "Email",
+        "address": "contact"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "weekdays": "Monday - Friday: 9:00 - 18:00",
+        "weekend": "Saturday: 10:00 - 14:00"
+      }
+    },
+    "clientStories": {
+      "hero": {
+        "title": "Success Stories",
+        "subtitle": "See how businesses like yours transformed their operations with Konty."
+      },
+      "badge": "Real Results"
+    },
+    "partners": {
+      "hero": {
+        "title": "Our Partners Network",
+        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+      },
+      "cta": "Become a Partner",
+      "filterPlaceholder": "Filter by city...",
+      "noResults": "No partners found in this city"
+    },
+    "blog": {
+      "hero": {
+        "title": "Blog i resursi",
+        "subtitle": "Stručni uvidi i praktični savjeti za moderne POS sisteme"
+      },
+      "featured": "Istaknuto",
+      "related": {
+        "title": "Povezani članci",
+        "subtitle": "Nastavite čitati"
+      },
+      "readMore": "Pročitaj više",
+      "byAuthor": "Autor",
+      "publishedOn": "Objavljeno",
+      "minRead": "min čitanja"
     }
   },
   "seo": {
-    "about": {
-      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
-      "title": "O nama - Konty tim"
+    "contact": {
+      "title": "Contact Us - Konty POS",
+      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+    },
+    "clientStories": {
+      "title": "Client Success Stories - Konty POS",
+      "description": "Real stories from businesses that transformed their operations with Konty POS."
+    },
+    "partners": {
+      "title": "Partners Network - Konty POS",
+      "description": "Join our growing network of partners delivering Konty solutions."
     },
     "demo": {
       "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
@@ -410,14 +761,6 @@
     "home": {
       "description": "Pouzdane fiskalne kase sa e-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
       "title": "Konty - POS za ugostiteljstvo i trgovinu"
-    },
-    "kontyHospitality": {
-      "description": "Specijalizirani POS za restorane, kafiće i barove. Rezervacije, narudžbe, stolovi, dostava - sve na jednom mjestu.",
-      "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće"
-    },
-    "kontyRetail": {
-      "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
-      "title": "Konty za trgovinu - POS terminal sa bar kod čitačem"
     },
     "pricing": {
       "description": "Transparentne cijene bez skrivenih troškova. Mjesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana.",
@@ -429,16 +772,77 @@
     },
     "products": {
       "description": "Izaberite savršeno POS rješenje za vaš biznis. Specijalizirani sistemi za restorane, kafiće, prodavnice i lance.",
-      "title": "Konty proizvodi - POS rješenja za sve tipove biznisa"
+      "title": "Konty proizvodi - POS rješenja za sve tipove biznisa",
+      "hospitality": {
+        "description": "Specijalizirani POS za restorane, kafiće i barove. Rezervacije, narudžbe, stolovi, dostava - sve na jednom mjestu.",
+        "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
+        "features": {
+          "title": "All Hospitality Features - Konty POS",
+          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+        }
+      },
+      "retail": {
+        "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
+        "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
+        "features": {
+          "title": "All Retail Features - Konty POS",
+          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+        }
+      },
+      "download": {
+        "title": "Preuzmi Konty",
+        "description": "Preuzmi Konty za bilo koji uređaj ili platformu."
+      },
+      "faqdocs": {
+        "title": "FAQ and Documentation",
+        "description": "FAQ and Documentation for Konty"
+      }
     },
     "terms": {
       "description": "Uslovi korištenja Konty POS sistema i povezanih usluga.",
       "title": "Uslovi korištenja - Konty"
+    },
+    "solutions": {
+      "title": "Konty rješenja po djelatnostima | POS sistem prilagođen vašem poslovanju",
+      "description": "Otkrijte kako Konty POS može da unapredi vaše poslovanje. Specijalizovana rješenja za restorane, kafiće, prodavnice i B2B.",
+      "restaurants": {
+        "title": "Konty za restorane | POS sistem za ugostiteljstvo",
+        "description": "Kompletno POS rješenje za restorane. Upravljanje stolovima, kuhinjski ekran, rezervacije i analitika."
+      },
+      "barsCafes": {
+        "title": "Konty za barove i kafiće | Brz POS za visok promet",
+        "description": "POS sistem optimiziran za brzinu. Idealan za barove i kafiće sa velikim prometom."
+      },
+      "fastFood": {
+        "title": "Konty za brzu hranu | Fast food POS sistem",
+        "description": "Efikasan POS za restorane brze hrane. Drive-thru, dostava i sala iz jednog sistema."
+      },
+      "grocerySupermarkets": {
+        "title": "Konty za prodavnice hrane | POS za supermarkete",
+        "description": "Upravljanje hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i real-time inventar."
+      },
+      "clothingBoutiques": {
+        "title": "Konty za prodavnice odjeće | POS za butike",
+        "description": "Specijalizovan POS za modnu industriju. Veličine, boje, sezone i program lojalnosti."
+      },
+      "convenienceStores": {
+        "title": "Konty za prodavnice mješovite robe | 24/7 POS sistem",
+        "description": "Pouzdan POS za non-stop prodavnice. Uprošćen inventar i brza naplata."
+      },
+      "b2b": {
+        "title": "Konty B2B i E-fakture | POS za veleprodaju",
+        "description": "Profesionalno B2B rješenje sa e-fakturisanjem. Različite cijene po partneru i napredni izvještaji."
+      }
+    },
+    "blog": {
+      "title": "Blog - Konty POS uvidi i resursi",
+      "description": "Stručni uvidi, savjeti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako optimizirati vaše poslovanje."
     }
   },
   "data": {
     "company": {
       "tradeName": "Codeux",
+      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
       "vatID": "112821082",
       "foundingDate": "2021-12-22",
       "founder": "Nikola Ljumovic",
@@ -462,7 +866,7 @@
       },
       "contact": {
         "phone": "+38267607670",
-        "email": "contact&#64;konty.com"
+        "email": "contact"
       },
       "areaServed": [
         "US",
@@ -490,17 +894,6 @@
       "retail": {
         "name": "Konty Trgovina"
       }
-    }
-  },
-  "schema": {
-    "requirements": {
-      "software": "2GB RAM minimum, Internet konekcija za cloud sinhronizaciju"
-    },
-    "permissions": {
-      "retail": "kamera (za bar kod skeniranje), skladište, mreža, štampač"
-    },
-    "screenshots": {
-      "retail": "/images/screenshots/konty-retail-dashboard.png"
     }
   }
 }

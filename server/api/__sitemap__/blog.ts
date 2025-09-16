@@ -1,70 +1,58 @@
 /**
- * Blog Sitemap Handler - PLACEHOLDER
- * 
- * This handler is ready for when blog content is added.
- * Currently returns empty array to avoid sitemap errors.
- * 
- * When blog launches:
- * 1. Connect to your CMS/database
- * 2. Fetch published blog posts
- * 3. Return URLs with proper lastmod dates
+ * Blog Sitemap Handler
+ *
+ * Fetches blog posts from Nuxt Content and generates sitemap entries.
+ * Supports multi-locale content with automatic URL generation.
  */
 
-export default defineSitemapEventHandler(async () => {
-  // TODO: Uncomment and modify when blog is ready
-  
-  /*
-  // Example implementation for future blog integration:
-  
+import { LOCALES } from '~/config/locale.config.mjs'
+import type { BlogPost } from '~/types/content'
+import { queryCollection } from '@nuxt/content/server'
+
+export default defineSitemapEventHandler(async (event) => {
   try {
-    // Fetch blog posts from your data source
-    // const posts = await $fetch('/api/blog/posts')
-    // OR
-    // const posts = await fetchFromCMS()
-    // OR
-    // const posts = await queryDatabase()
-    
-    // Example static data structure for reference:
-    const posts = [
-      {
-        slug: 'how-to-choose-pos-system',
-        updatedAt: '2025-02-01',
-        category: 'guides'
-      },
-      {
-        slug: 'restaurant-management-tips',
-        updatedAt: '2025-02-05',
-        category: 'hospitality'
-      },
-      {
-        slug: 'retail-inventory-best-practices',
-        updatedAt: '2025-02-10',
-        category: 'retail'
+    // Collect all unique blog posts across locales
+    const allPosts = new Map<string, { slug: string, date: string }>()
+
+    // Fetch blog posts from each locale collection
+    for (const locale of LOCALES) {
+      const collectionName = `content_${locale.code}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+
+      try {
+        const posts = await queryCollection(event, collectionName)
+          .where('path', 'LIKE', '/blog/%')
+          .all()
+
+        // Add posts to map (using slug as key to avoid duplicates)
+        for (const post of posts) {
+          const slug = post.path?.split('/').pop()
+          if (slug && !allPosts.has(slug)) {
+            const typedPost = post as unknown as BlogPost
+            const date = (typedPost.date || new Date().toISOString().split('T')[0]) as string
+            allPosts.set(slug, {
+              slug,
+              date
+            })
+          }
+        }
+      } catch {
+        // Collection might not exist for some locales, continue
+        console.log(`[Sitemap] No blog content for locale ${locale.code}`)
       }
-    ]
-    
-    // Return blog URLs with i18n support
-    return posts.map(post => ({
+    }
+
+    // Convert to sitemap entries
+    return Array.from(allPosts.values()).map(post => ({
       loc: `/blog/${post.slug}`,
-      lastmod: post.updatedAt,
+      lastmod: post.date,
       changefreq: 'weekly' as const,
       priority: 0.7,
       // Enable i18n transformation for multi-locale blogs
-      _i18nTransform: true,
-      // Optional: Add images from blog posts
-      // images: post.images?.map(img => ({
-      //   loc: img.url,
-      //   caption: img.alt,
-      // }))
+      _i18nTransform: true
     }))
-    
+
   } catch (error) {
     console.error('[Sitemap] Error fetching blog posts:', error)
     return []
   }
-  */
-  
-  // Return empty array until blog is ready
-  // This prevents sitemap errors while keeping the structure in place
-  return []
 })

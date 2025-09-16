@@ -1,59 +1,62 @@
 <template>
-  <section class="py-12 sm:py-16">
-    <UContainer>
-      <SharedSectionHeading
-        v-model="productInternal"
-        :title="config.title"
-        :description="config.description"
-        :product-switch="!props.product"
-        :heading-level="props.headingLevel"
-      />
-
-      <UIAppear direction="none" :animate-on="productInternal">
-        <div class="flex justify-center">
-          <UPricingPlans class="max-w-5xl">
-            <UPricingPlan
-              v-for="(plan, index) in config.plans[productInternal]"
-              :key="index"
-              :title="plan.title"
-              :description="plan.description"
-              :price="plan.price"
-              :features="plan.features"
-              :highlight="plan.highlight"
-              :badge="plan.badge"
-              :billing-cycle="plan.billingCycle"
-              :scale="plan.scale"
-              :button="plan.button"
-              variant="subtle"
-            />
-          </UPricingPlans>
-        </div>
-      </UIAppear>
-    </UContainer>
-  </section>
+  <SharedSection
+    v-model="productInternal"
+    :variant="props.variant"
+    :title="config.title"
+    :description="config.description"
+    :product-switch="!props.product"
+    :heading-level="props.headingLevel"
+  >
+    <UIAppear direction="none" :animate-on="productInternal">
+      <div class="flex justify-center">
+        <UPricingPlans class="max-w-5xl">
+          <UPricingPlan
+            v-for="(plan, index) in config.plans[productInternal]"
+            :key="index"
+            :title="plan.title"
+            :description="plan.description"
+            :price="plan.price"
+            :features="plan.features"
+            :highlight="plan.highlight"
+            :badge="plan.badge"
+            :billing-cycle="plan.billingCycle"
+            :scale="plan.scale"
+            :button="plan.button"
+            variant="subtle"
+          />
+        </UPricingPlans>
+      </div>
+    </UIAppear>
+  </SharedSection>
 </template>
 
 <script setup lang="ts">
+import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
+
 const { t } = useI18n()
 
 const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
   product: {
-    type: String as PropType<'kontyRetail' | 'kontyHospitality' | undefined>,
+    type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
   },
   headingLevel: {
-    type: String as PropType<'h1' | 'h2' | 'h3'>,
+    type: String as PropType<SectionHeadingLevel>,
     default: 'h2'
   }
 })
 
-const productInternal = ref(props.product || 'kontyHospitality')
+const productInternal = ref(props.product || 'hospitality')
 
 const config = computed(() => ({
   title: t('pages.pricing.title'),
   description: t('pages.pricing.description'),
   plans: {
-    kontyHospitality: [
+    hospitality: [
       {
         title: t('pages.pricing.plans.hospitality.start.title'),
         description: t('pages.pricing.plans.hospitality.start.description'),
@@ -112,7 +115,7 @@ const config = computed(() => ({
         }
       }
     ],
-    kontyRetail: [
+    retail: [
       {
         title: t('pages.pricing.plans.retail.start.title'),
         description: t('pages.pricing.plans.retail.start.description'),

@@ -4,30 +4,30 @@ Za SR,ME i BA je bolje zadržati lokalizovane verzije hreflanga kao sr-RS, sr-ME
 
 Za svaki jezik je potrebno da postoji po jedan hreflang i jedan X-default <link rel=”hreflang”> tag, kao što je navedeno u dokumentu sa Tech SEO zahjevima
 ",To do
-Canononical / na kraju,"Obratiti pažnju da canonical bude postavljen kao self-referencing, tj. da pokazuje na sebe. 
+Canononical / na kraju,"Obratiti pažnju da canonical bude postavljen kao self-referencing, tj. da pokazuje na sebe.
 U ovom slučaju canonical sadrži / na kraju koji je potrebno ukloniti - skrinšot
 
 Stranice koje sadrže u canonicalima / na kraju (trenutno na stagingu):
-https://staging.konty.com/ba 
-https://staging.konty.com/us 
-https://staging.konty.com/me 
+https://staging.konty.com/ba
+https://staging.konty.com/us
+https://staging.konty.com/me
 
 Obratiti pažnju jer su stvoreni duplikati tih stranica sa / na kraju:
-https://staging.konty.com/ba/ 
-https://staging.konty.com/me/ 
+https://staging.konty.com/ba/
+https://staging.konty.com/me/
 https://staging.konty.com/us/ ",To do
 Ukloniti noindex/nofollow sa stranica uslovi korišćenja i politika privatnosti,"Stranice kao što su politika privatnosti i uslovi korišćenja ne treba da imaju noindex, nofollow. Iako nisu važne za rangiranje, korisne su za poverenje i autoritet sajta.
 
 Primer za SR:
-https://staging.konty.com/terms 
+https://staging.konty.com/terms
 https://staging.konty.com/privacy ",To do
 Dodati H1 na pricing stranicu,"Trenutno nedostaje H1 tag na stranicu sa cenovnikom usluga, potrebno je definisati H1 na svim jezicima.
 Primer za SR:
 https://staging.konty.com/pricing",To do
-Višestruki H1 tagovi,"Obratiti pažnju da svaka stranica ima samo jedan H1 tag 
+Višestruki H1 tagovi,"Obratiti pažnju da svaka stranica ima samo jedan H1 tag
 
 Trenutne stranice koje na stagingu imaju više od jednog H1 taga (ovo je lista stranica za ME, ali je identično za sve jezike):
-https://staging.konty.com/me/about 
-https://staging.konty.com/me/konty-hospitality 
-https://staging.konty.com/me/konty-retail 
+https://staging.konty.com/me/about
+https://staging.konty.com/me/products/hospitality
+https://staging.konty.com/me/products/retail
 https://staging.konty.com/me/products ",To do

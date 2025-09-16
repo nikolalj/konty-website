@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 sm:py-16">
+  <div class="mt-24">
     <shared-pricing heading-level="h1" />
     <shared-get-started />
     <shared-contact-form />

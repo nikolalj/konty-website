@@ -26,8 +26,8 @@ const columns: FooterColumn[] = [
   {
     label: t('ui.footer.links.products'),
     children: [
-      { label: t('ui.navigation.productNames.forHospitality'), to: localePath('/konty-hospitality') },
-      { label: t('ui.navigation.productNames.forRetail'), to: localePath('/konty-retail') },
+      { label: t('ui.navigation.products.forHospitality'), to: localePath('/products/hospitality') },
+      { label: t('ui.navigation.products.forRetail'), to: localePath('/products/retail') },
       { label: t('ui.navigation.main.pricing'), to: localePath('/pricing') },
       { label: t('ui.common.buttons.bookDemo'), to: localePath('/demo') }
     ]
@@ -35,10 +35,9 @@ const columns: FooterColumn[] = [
   {
     label: t('ui.footer.links.company'),
     children: [
-      { label: t('ui.footer.links.aboutUs'), to: localePath('/about') },
-      { label: t('ui.footer.links.contact'), to: localePath('/about') },
-      { label: t('ui.footer.links.partners'), to: localePath('/about') },
-      { label: t('ui.footer.links.careers'), to: localePath('/about') }
+      { label: t('ui.footer.links.contact'), to: localePath('/contact') },
+      { label: t('ui.footer.links.partners'), to: localePath('/partners') },
+      { label: t('ui.footer.links.careers'), to: localePath('/contact') }
     ]
   },
   {
@@ -46,7 +45,7 @@ const columns: FooterColumn[] = [
     children: [
       { label: t('ui.footer.links.privacy'), to: localePath('/privacy') },
       { label: t('ui.footer.links.terms'), to: localePath('/terms') },
-      { label: t('ui.footer.links.dpa'), to: localePath('/about') }
+      { label: t('ui.footer.links.dpa'), to: localePath('/contact') }
     ]
   }
 ]

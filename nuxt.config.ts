@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   // Modules - Order matters
   modules: [
     '@nuxt/ui-pro',
+    '@nuxt/content',
     '@nuxt/image',
     '@nuxt/icon',
     '@vueuse/nuxt',
@@ -21,7 +22,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@saslavik/nuxt-gtm',
     '@nuxt/eslint',
-    'nitro-cloudflare-dev'
+    ...(process.env.USE_CLOUDFLARE_DEV === 'true' ? ['nitro-cloudflare-dev'] : [])
   ],
 
   features: {
@@ -37,14 +38,6 @@ export default defineNuxtConfig({
 
       // JS minification
       minify: 'esbuild',
-
-      // Rollup output configuration
-      rollupOptions: {
-        output: {
-          // Prevent vendor splitting - reduces chunks for faster initial load
-          // manualChunks: undefined
-        }
-      },
 
       // No sourcemaps in production for smaller bundles and security
       sourcemap: false
@@ -225,10 +218,22 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
 
+  // Nuxt Content configuration
+  content: {
+    database: {
+      ...(process.env.APP_ENV === 'development'
+        ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
+        : { type: 'd1', bindingName: 'konty_content_db' })  // Match wrangler.jsonc binding
+    },
+    experimental: {
+      sqliteConnector: 'better-sqlite3'
+    }
+  },
+
   nitro: {
-    preset: 'cloudflare_module',
+    preset: process.env.APP_ENV === 'development' ? 'node-server' : 'cloudflare_module',
     cloudflare: {
-      deployConfig: false  // Use our wrangler.toml
+      deployConfig: false
     },
 
     minify: true,
@@ -260,7 +265,6 @@ export default defineNuxtConfig({
       '/ariapos': { redirect: '/' },
       '/product': { redirect: '/products' },
       '/price': { redirect: '/pricing' },
-      '/contact': { redirect: '/about' },
 
       '/**': {
         headers: {

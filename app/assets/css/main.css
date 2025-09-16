@@ -64,7 +64,19 @@
   --bg-900: #6D8DC7;
 }
 
-html { font-family: var(--font-sans); }
+html {
+  font-family: var(--font-sans);
+}
+
+/* Fix mobile viewport issues */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
 
 .ui-appear {
   opacity: 0;
