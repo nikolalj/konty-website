@@ -223,7 +223,7 @@ export default defineNuxtConfig({
     database: {
       ...(process.env.APP_ENV === 'development'
         ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
-        : { type: 'd1', bindingName: 'DB' })
+        : { type: 'd1', bindingName: 'konty_content_db' })  // Match wrangler.jsonc binding
     },
     experimental: {
       sqliteConnector: 'better-sqlite3'
@@ -233,19 +233,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: process.env.APP_ENV === 'development' ? 'node-server' : 'cloudflare_module',
     cloudflare: {
-      deployConfig: false,  // Use our wrangler.toml
-      // D1 database binding for Nuxt Content (production only)
-      ...(process.env.APP_ENV === 'production' && process.env.D1_DATABASE_ID ? {
-        wrangler: {
-          d1_databases: [
-            {
-              binding: 'DB',
-              database_name: 'konty-content',
-              database_id: process.env.D1_DATABASE_ID
-            }
-          ]
-        }
-      } : {})
+      deployConfig: false
     },
 
     minify: true,

@@ -1,54 +1,72 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "konty-website",
-  "main": "./server-wrapper.ts",
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "konty-website",
+	"main": "./server-wrapper.ts",
 	"compatibility_date": "2025-09-09",
-  "compatibility_flags": ["nodejs_compat"],
-  "workers_dev": true,
-
-  "assets": {
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"workers_dev": true,
+	"assets": {
 		"binding": "ASSETS",
 		"directory": "./.output/public/"
 	},
-
 	"observability": {
 		"enabled": true
 	},
-
-  "placement": {
-    "mode": "smart"
-  },
-
-  "vars": {
-    "NODE_ENV": "development",
-    "APP_ENV": "development",
-    "NUXT_PUBLIC_SITE_URL": "http://localhost:3000"
-  },
-
-  "env": {
-    "production": {
-      "workers_dev": true, // TODO Production - set to false and use real domain
-      "assets": {
-        "binding": "ASSETS",
-        "directory": "./.output/public/"
-      },
-      "vars": {
-        "NODE_ENV": "production",
-        "APP_ENV": "production",
-        "NUXT_PUBLIC_SITE_URL": "https://konty-website-production.codeusteam.workers.dev"
-      }
-    },
-    "staging": {
-      "workers_dev": true,
-      "assets": {
-        "binding": "ASSETS",
-        "directory": "./.output/public/"
-      },
-      "vars": {
-        "NODE_ENV": "production",
-        "APP_ENV": "staging",
-        "NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev"
-      }
-    }
-  }
+	"placement": {
+		"mode": "smart"
+	},
+	"d1_databases": [
+		{
+			"binding": "konty_content_db",
+			"database_name": "konty-content-staging",
+			"database_id": "90f3499d-3236-42d9-8174-96e7f51fcd05"
+		}
+	],
+	"vars": {
+		"NODE_ENV": "development",
+		"APP_ENV": "development",
+		"NUXT_PUBLIC_SITE_URL": "http://localhost:3000"
+	},
+	"env": {
+		"production": {
+			"workers_dev": true, // TODO Production - set to false and use real domain
+			"assets": {
+				"binding": "ASSETS",
+				"directory": "./.output/public/"
+			},
+			"d1_databases": [
+				{
+					"binding": "konty_content_db",
+					"database_name": "konty-content-production",
+					"database_id": "9eace770-2237-4f0a-8a98-23ed613ef7de"
+				}
+			],
+			"vars": {
+				"NODE_ENV": "production",
+				"APP_ENV": "production",
+				"NUXT_PUBLIC_SITE_URL": "https://konty-website-production.codeusteam.workers.dev"
+			}
+		},
+		"staging": {
+			"workers_dev": true,
+			"assets": {
+				"binding": "ASSETS",
+				"directory": "./.output/public/"
+			},
+			"d1_databases": [
+				{
+					"binding": "konty_content_db",
+					"database_name": "konty-content-staging",
+					"database_id": "90f3499d-3236-42d9-8174-96e7f51fcd05"
+				}
+			],
+			"vars": {
+				"NODE_ENV": "production",
+				"APP_ENV": "staging",
+				"NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev"
+			}
+		}
+	}
 }
