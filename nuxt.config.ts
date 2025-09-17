@@ -41,19 +41,7 @@ export default defineNuxtConfig({
 
       // No sourcemaps in production for smaller bundles and security
       sourcemap: false,
-
-      rollupOptions: {
-        external: process.env.NODE_ENV !== 'development'
-          ? ['better-sqlite3']
-          : []
-      }
     },
-
-    ssr: {
-      external: process.env.NODE_ENV !== 'development'
-        ? ['better-sqlite3']
-        : []
-    }
   },
 
   fonts: {
@@ -209,17 +197,7 @@ export default defineNuxtConfig({
 
   // Nuxt Content configuration
   content: {
-    database: {
-      ...(process.env.APP_ENV === 'development'
-        ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
-        : { type: 'd1', bindingName: 'konty_content_db' })
-    },
-    // Only use better-sqlite3 in development
-    ...(process.env.APP_ENV === 'development' && {
-      experimental: {
-        sqliteConnector: 'better-sqlite3'
-      }
-    })
+    database: { type: 'd1', bindingName: 'konty_content_db' },
   },
 
   nitro: {
@@ -230,9 +208,6 @@ export default defineNuxtConfig({
 
     minify: true,
     timing: false,
-
-    // Exclude better-sqlite3 from production server bundle
-    ...(process.env.NODE_ENV !== 'development' && {externals: { external: ['better-sqlite3'] }}),
 
     // Optimize server bundles
     rollupConfig: {
