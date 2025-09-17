@@ -20,7 +20,8 @@
       "clothing-boutiques": "Clothing & Boutiques",
       "convenience-stores": "Convenience Stores",
       "b2b": "B2B Sales & E-Invoicing",
-      "blog": "Blog"
+      "blog": "Blog",
+      "demo": "Demo"
     },
     "readMore": "Read More",
     "cta": {
@@ -41,9 +42,7 @@
         "retail": "Retail",
         "recommended": "Recommended"
       },
-      "loading": {
-        "formPlaceholder": "Loading demo scheduler..."
-      }
+      "loading": {}
     },
     "contactForm": {
       "title": "See Your Custom POS Setup in 15 Minutes",
@@ -440,7 +439,7 @@
       },
       "hospitality": {
         "hero": {
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Never crashes • Real human support • No contracts",
           "subtitle": "When Saturday night hits, you need a restaurant POS that won't quit. Cloud-based POS with 99.97% uptime. 30-second support. Switch in 48 hours.",
           "title": "Restaurant POS System That Can't Afford Downtime",
@@ -472,7 +471,7 @@
       },
       "retail": {
         "hero": {
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Zero downtime • Auto-reorder • 30-second support",
           "subtitle": "The retail POS system with inventory that actually works on Black Friday. Cloud POS with 99.97% uptime when others crash.",
           "title": "Retail POS System - Sell More. Count Less. Stress Never.",
@@ -523,7 +522,7 @@
         "hero": {
           "title": "Konty for Restaurants",
           "subtitle": "Complete restaurant management solution - from reservations to payment",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Tables • Kitchen • Reservations • Analytics"
         },
         "overview": {
@@ -550,7 +549,7 @@
         "hero": {
           "title": "Konty for Bars & Cafes",
           "subtitle": "Fast checkout and inventory management for high-volume venues",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Quick Pay • Inventory • Happy Hour • Loyalty"
         },
         "overview": {
@@ -577,7 +576,7 @@
         "hero": {
           "title": "Konty for Quick Service",
           "subtitle": "Optimized for speed and efficiency - perfect for fast food restaurants",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Quick Orders • Drive-thru • Delivery • KDS"
         },
         "overview": {
@@ -604,7 +603,7 @@
         "hero": {
           "title": "Konty for Grocery & Supermarkets",
           "subtitle": "Manage thousands of products and high-volume transactions",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Inventory • Barcodes • Promotions • Analytics"
         },
         "overview": {
@@ -631,7 +630,7 @@
         "hero": {
           "title": "Konty for Clothing & Boutiques",
           "subtitle": "Track sizes, colors, and seasonal collections",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Sizes/Colors • Seasons • Loyalty • Analytics"
         },
         "overview": {
@@ -658,7 +657,7 @@
         "hero": {
           "title": "Konty for Convenience Stores",
           "subtitle": "Simple management of diverse product mix",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Wide Range • Quick Checkout • 24/7 Operation • Inventory"
         },
         "overview": {
@@ -685,7 +684,7 @@
         "hero": {
           "title": "Konty for B2B Sales & E-Invoicing",
           "subtitle": "Professional solutions for wholesale and B2B partnerships",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "E-Invoicing • Wholesale • Partners • Reports"
         },
         "overview": {
@@ -714,17 +713,127 @@
       }
     },
     "demo": {
-      "demo": {
-        "description": "Show us your current setup. We'll show you exactly how much you'll save.",
-        "revolutionize": "Watch how we keep you running when others crash",
-        "seeInAction": "See Konty Handle Your Worst Night"
+      "hero": {
+        "title": "Schedule Your Personalized Demo",
+        "subtitle": "15 minutes that will transform your business. See exactly how Konty solves your problems.",
+        "benefit1": "Personalized for your business type",
+        "benefit2": "See all features that matter to you",
+        "benefit3": "Get a quote tailored to your needs",
+        "benefit4": "No obligations, no pressure",
+        "scheduleButton": "Schedule Demo",
+        "watchVideoButton": "Watch Video",
+        "calendarTitle": "Choose a time that works for you",
+        "calendarDescription": "We're available weekdays from 9 AM to 6 PM",
+        "calendarPlaceholder": "Calendar will load here",
+        "openCalendar": "Open Calendar"
+      },
+      "process": {
+        "title": "What happens during the demo?",
+        "subtitle": "4 simple steps to your new POS system",
+        "step1": {
+          "title": "Understanding your needs",
+          "description": "First we learn what's important to you and where you have problems",
+          "duration": "5 minutes"
+        },
+        "step2": {
+          "title": "Feature demonstration",
+          "description": "We show exactly those features that solve your problems",
+          "duration": "15-20 minutes"
+        },
+        "step3": {
+          "title": "Custom proposal",
+          "description": "You get a proposal tailored to your needs, no hidden costs",
+          "duration": "5 minutes"
+        },
+        "step4": {
+          "title": "Migration plan",
+          "description": "If you decide to switch, we create a 48-hour migration plan",
+          "duration": "5 minutes"
+        },
+        "whatYouGet": {
+          "title": "What you get after the demo?",
+          "outcome1": {
+            "title": "Clear picture of capabilities",
+            "description": "You'll know exactly what Konty can do for your business"
+          },
+          "outcome2": {
+            "title": "Personalized quote",
+            "description": "Pricing and features tailored just for you"
+          },
+          "outcome3": {
+            "title": "30 days free",
+            "description": "Test all features with no obligations"
+          }
+        }
+      },
+      "categorySelector": {
+        "title": "What type of business do you run?",
+        "subtitle": "We'll customize the demonstration for your industry",
+        "personalizedFor": "Demo customized for {business}",
+        "demoFeatures": "In the demo we'll focus on:",
+        "scheduleButton": "Schedule demo for this industry",
+        "examples": {
+          "restaurants": "Fine dining, family restaurants, pizzerias",
+          "barsCafes": "Cafes, bars, clubs, cafeterias",
+          "fastFood": "Fast food, kiosks, food trucks",
+          "grocery": "Supermarkets, grocery stores, mini markets",
+          "clothing": "Boutiques, clothing stores, shoe stores",
+          "convenience": "Tobacco shops, gas stations, 24/7 stores"
+        },
+        "features": {
+          "tableManagement": "Table management and reservations",
+          "kitchenDisplay": "Kitchen display and coordination",
+          "reservations": "Online reservations",
+          "splitBills": "Split bills by items",
+          "inventoryTracking": "Inventory tracking",
+          "barcodeScanning": "Barcode scanning",
+          "promotions": "Promotions and discounts",
+          "loyaltyProgram": "Loyalty program",
+          "onlineOrdering": "Online ordering",
+          "inventoryManagement": "Inventory management",
+          "multiLocation": "Multi-location support",
+          "analytics": "Advanced analytics"
+        }
+      },
+      "meetingDetails": {
+        "title": "What can you expect from the demo meeting?",
+        "format": {
+          "title": "Online video call",
+          "description": "We use Zoom or Google Meet. Phone call works too if you prefer."
+        },
+        "duration": {
+          "title": "15-30 minutes",
+          "description": "Short, focused meeting. We respect your time."
+        },
+        "language": {
+          "title": "In your language",
+          "description": "English or local language - whatever you prefer."
+        },
+        "participants": {
+          "title": "You and our expert",
+          "description": "Invite anyone from your team. We come with one expert."
+        },
+        "preparation": {
+          "title": "Prepare before the meeting:",
+          "item1": "Current POS system problems",
+          "item2": "Number of locations and registers",
+          "item3": "Monthly revenue (approximate)",
+          "item4": "Specific features you need"
+        },
+        "questions": "Have questions before the demo meeting?",
+        "viewFaq": "View FAQ",
+        "testimonial": {
+          "quote": "The demo was exactly what we were looking for - no sales pitch, just concrete solutions to our problems.",
+          "author": "Mark Johnson",
+          "role": "Restaurant Owner"
+        }
       },
       "features": {
         "liveDemo": "Live Demo",
         "personalizedWalkthrough": "Personalized Walkthrough",
-        "industrySpecific": "Industry Specific",
+        "industrySpecific": "Industry Specific Solutions",
         "qaSession": "Q&A Session",
-        "trialSetup": "Trial Setup"
+        "trialSetup": "Free Trial Setup"
       }
     },
     "contact": {

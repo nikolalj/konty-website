@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-24">
     <!-- Hero sekcija sa zakazivanjem termina -->
     <demo-hero />
 
