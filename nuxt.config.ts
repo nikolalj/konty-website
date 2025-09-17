@@ -40,8 +40,8 @@ export default defineNuxtConfig({
       minify: 'esbuild',
 
       // No sourcemaps in production for smaller bundles and security
-      sourcemap: false,
-    },
+      sourcemap: false
+    }
   },
 
   fonts: {
@@ -132,7 +132,7 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    ...(process.env.APP_ENV === 'production' || process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
       ? {
           allow: ['/'],
           disallow: ['/api/'],
@@ -197,7 +197,14 @@ export default defineNuxtConfig({
 
   // Nuxt Content configuration
   content: {
-    database: { type: 'd1', bindingName: 'konty_content_db' },
+    database: {
+      ...(process.env.APP_ENV === 'development'
+        ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
+        : { type: 'd1', bindingName: 'konty_content_db' })
+    },
+    experimental: {
+      sqliteConnector: 'better-sqlite3'
+    }
   },
 
   nitro: {
