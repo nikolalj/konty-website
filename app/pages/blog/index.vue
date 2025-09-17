@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-24">
     <!-- Hero Section -->
     <section class="relative py-16 sm:py-24">
       <UContainer>

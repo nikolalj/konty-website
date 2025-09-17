@@ -1,30 +1,9 @@
 <template>
-  <article>
+  <article class="pt-20">
     <!-- Article Header -->
     <header class="py-16 sm:py-24">
       <UContainer>
         <div class="max-w-4xl mx-auto">
-          <!-- Breadcrumb -->
-          <nav class="mb-8">
-            <ol class="flex items-center space-x-2 text-sm">
-              <li>
-                <NuxtLink :to="localePath('/')" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                  {{ t('ui.breadcrumb.index') }}
-                </NuxtLink>
-              </li>
-              <li class="text-gray-400">/</li>
-              <li>
-                <NuxtLink :to="localePath('/blog')" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                  {{ t('ui.breadcrumb.blog') }}
-                </NuxtLink>
-              </li>
-              <li class="text-gray-400">/</li>
-              <li class="text-gray-900 dark:text-white">
-                {{ currentPost.title }}
-              </li>
-            </ol>
-          </nav>
-
           <!-- Article Meta -->
           <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-6">
             <time :datetime="currentPost.date">
@@ -119,8 +98,20 @@
 </template>
 
 <script setup lang="ts">
+import type { PageCollectionItemBase } from '@nuxt/content'
 import { DEFAULT_LOCALE, LOCALES } from '~/config/locale.config.mjs'
-import type { BlogPost } from '~/types/content'
+
+// Extend PageCollectionItemBase with our blog-specific fields
+interface BlogPost extends PageCollectionItemBase {
+  title: string
+  description: string
+  date: string
+  author: string
+  readTime: string
+  image?: string
+  category: string
+  featured: boolean
+}
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
