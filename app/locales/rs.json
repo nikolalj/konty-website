@@ -141,25 +141,25 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Fiskalna kasa koja neće pući u subotu uveče.",
-        "subtitle": "Pouzdane fiskalne kase sa e-fakturama. Dok drugi dodaju AI, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-        "tagline": "9.000 restorana i prodavnica nam veruje svoje najgore večeri"
+        "title": "Moderni POS sistem za restrane i prodavnice",
+        "subtitle": "Upravljaj prodajom, zalihama i računovodstvom kroz jedan sistem. Fokusiraj se na kupce dok Konty vodi računa o operativnim poslovima.",
+        "tagline": "Koristi više od 9.000 poslovnih objekata širom regiona"
       },
       "statistics": {
         "stat1": {
-          "description": "Radi kad je najbitnije",
-          "suffix": "%",
-          "value": "99"
+          "description": "Aktivnih poslovnih lokacija",
+          "suffix": "+",
+          "value": "9.000"
         },
         "stat2": {
-          "description": "Pravi čovek javlja se",
-          "suffix": " sekundi",
-          "value": "30"
+          "description": "Godina iskustva u POS sistemima",
+          "suffix": "+",
+          "value": "26"
         },
         "stat3": {
-          "description": "Preživeli smo sve",
-          "suffix": " godina",
-          "value": "15"
+          "description": "Prosečno vreme odgovora podrške",
+          "suffix": " sekundi",
+          "value": "30"
         }
       },
       "testimonials": {
@@ -189,8 +189,8 @@
         }
       },
       "clients": {
-        "title": "9.000 restorana i prodavnica nam veruje svoje najgore večeri",
-        "description": "Od kafića do hotelskih lanaca - procesiramo milione dnevno od 1998"
+        "title": "Koristi više od 9.000 poslovnih objekata",
+        "description": "Od restorana do maloprodajnih lanaca, naši korisnici se oslanjaju na Konty svakodnevno"
       },
       "getStarted": {
         "certificate": {

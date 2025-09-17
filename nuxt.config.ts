@@ -72,6 +72,8 @@ export default defineNuxtConfig({
 
   // Site configuration - Foundation for all NuxtSEO modules
   site: {
+    name: 'Konty',
+
     // Core site info
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://konty.com',
 
@@ -130,66 +132,12 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
-      ? {
-          // Production: Allow crawling with smart restrictions
+    // Production: Allow crawling with smart restrictions
           allow: ['/'],
           disallow: [
             '/api/'
           ],
           sitemap: '/sitemap_index.xml',
-          cleanParam: [
-            // UTM (complete set)
-            'utm_source',
-            'utm_medium',
-            'utm_campaign',
-            'utm_term',
-            'utm_content',
-
-            // Platform click IDs
-            'fbclid',
-            'gclid',
-            'msclkid',
-
-            // General
-            'ref',
-            'source',
-
-            // Email if you use it
-            'mc_cid',
-            'mc_eid'
-          ]
-        }
-      : {
-          // Production: Allow crawling with smart restrictions
-          allow: ['/'],
-          disallow: [
-            '/api/'
-          ],
-          sitemap: '/sitemap_index.xml',
-          cleanParam: [
-            // UTM (complete set)
-            'utm_source',
-            'utm_medium',
-            'utm_campaign',
-            'utm_term',
-            'utm_content',
-
-            // Platform click IDs
-            'fbclid',
-            'gclid',
-            'msclkid',
-
-            // General
-            'ref',
-            'source',
-
-            // Email if you use it
-            'mc_cid',
-            'mc_eid'
-          ]
-        }
-    )
   },
 
   // Sitemap with automatic i18n multi-sitemap generation
@@ -263,13 +211,6 @@ export default defineNuxtConfig({
 
     minify: true,
     timing: false,
-
-    sourceMap: false,
-
-    // Exclude heavy dependencies from Cloudflare build
-    externals: process.env.APP_ENV !== 'development' ? {
-      external: ['better-sqlite3']
-    } : {},
 
     // Optimize server bundles
     rollupConfig: {

@@ -141,30 +141,30 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Konačno. POS terminal koji neće pući u subotu uveče.",
-        "subtitle": "Dok drugi dodaju AI i buzzwords, mi se fokusiramo na jedno: da radiš bez prekida kad je najteže. Podrška za 30 sekundi. Prelazak za 48 sati. Zadrži svoj hardver.",
-        "tagline": "9.000 restorana nam vjeruje svoje najgore večeri"
+        "title": "Moderni POS sistem za vaš biznis",
+        "subtitle": "Upravljajte prodajom, zalihama i računovodstvom kroz jedan sistem. Fokusirajte se na kupce dok Konty vodi računa o operativnim poslovima.",
+        "tagline": "Koristi više od 9.000 poslovnih objekata širom regiona"
       },
       "statistics": {
         "stat1": {
-          "description": "Radi kad je najbitnije",
-          "suffix": "%",
-          "value": "99"
+          "description": "Aktivnih poslovnih lokacija",
+          "suffix": "+",
+          "value": "9.000"
         },
         "stat2": {
-          "description": "Pravi čovjek javlja se",
-          "suffix": " sekundi",
-          "value": "30"
+          "description": "Godina iskustva u POS sistemima",
+          "suffix": "+",
+          "value": "26"
         },
         "stat3": {
-          "description": "Preživjeli smo sve",
-          "suffix": " godina",
-          "value": "15"
+          "description": "Prosječno vrijeme odgovora podrške",
+          "suffix": " sekundi",
+          "value": "30"
         }
       },
       "testimonials": {
-        "title": "Vlasnici restorana koji sada mirno spavaju",
-        "description": "Prave priče od kolega koji su prešli i preživjeli najgore večeri",
+        "title": "Šta kažu naši korisnici",
+        "description": "Iskustva vlasnika biznisa koji svakodnevno koriste Konty",
         "items": {
           "t1": {
             "name": "Miloš Petrović",
