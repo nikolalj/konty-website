@@ -13,13 +13,13 @@ export default defineNuxtConfig({
   // Modules - Order matters
   modules: [
     '@nuxt/ui-pro',
-    '@nuxt/content',
     '@nuxt/image',
     '@nuxt/icon',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/fonts',
     '@nuxtjs/seo',
+    '@nuxt/content',
     '@saslavik/nuxt-gtm',
     '@nuxt/eslint',
     ...(process.env.USE_CLOUDFLARE_DEV === 'true' ? ['nitro-cloudflare-dev'] : [])
@@ -132,12 +132,16 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    // Production: Allow crawling with smart restrictions
+    ...(process.env.APP_ENV === 'production' || process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+      ? {
           allow: ['/'],
-          disallow: [
-            '/api/'
-          ],
+          disallow: ['/api/'],
           sitemap: '/sitemap_index.xml',
+        }
+      : {
+          disallow: ['/']
+        }
+    )
   },
 
   // Sitemap with automatic i18n multi-sitemap generation
