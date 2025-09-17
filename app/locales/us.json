@@ -141,56 +141,56 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "POS System That Won't Crash During Dinner Rush.",
-        "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
-        "tagline": "Trusted by 9,000 small businesses who can't afford downtime"
+        "title": "Modern POS System Built for Growing Businesses",
+        "subtitle": "Streamline operations with a POS system designed for restaurants and retail. Focus on serving customers while we handle payments, inventory, and reporting.",
+        "tagline": "Join 9,000+ businesses using Konty to run their operations"
       },
       "statistics": {
         "stat1": {
-          "description": "Uptime when you need it most",
-          "suffix": "%",
-          "value": "99"
+          "description": "Active business locations",
+          "suffix": "+",
+          "value": "9,000"
         },
         "stat2": {
-          "description": "Real human answers your call",
-          "suffix": " seconds",
-          "value": "30"
+          "description": "Years of POS experience",
+          "suffix": "+",
+          "value": "26"
         },
         "stat3": {
-          "description": "Outlasting the competition",
-          "suffix": " years",
-          "value": "15"
+          "description": "Average support response",
+          "suffix": " seconds",
+          "value": "30"
         }
       },
       "testimonials": {
-        "title": "Restaurant Owners Who Sleep Better Now",
-        "description": "Real stories from your peers who switched and survived their worst nights",
+        "title": "What Our Customers Say",
+        "description": "Real feedback from business owners using Konty daily",
         "items": {
           "t1": {
-            "name": "Mike Peterson",
-            "quote": "Before Konty, we had problems tracking tables and orders. Now servers work faster, kitchen is always synced, and guests notice how much more efficient our service is.",
-            "role": "Owner of \"Taste Valley\" Restaurant"
+            "name": "Marko Petrović",
+            "quote": "Our old system would crash every Saturday night during dinner rush. Lost orders, angry customers, servers stressed out. With Konty, we haven't had a single crash in eight months. Now Saturday nights are profitable instead of stressful.",
+            "role": "Owner of Taste Valley Restaurant"
           },
           "t2": {
-            "name": "Helen Marcus",
-            "quote": "Konty POS made inventory management and invoicing so much easier. I finally have clear insight into bestselling products, and reports help me make faster decisions.",
-            "role": "Owner of \"Fashion J\" Boutique"
+            "name": "Ana Nikolić",
+            "quote": "I used to spend three hours every morning checking inventory and figuring out what we ran out of. Konty shows me everything in real-time. I get that time back to actually run my business.",
+            "role": "Owner of Fashion Forward Boutique"
           },
           "t3": {
-            "name": "Nick Johnson",
-            "quote": "We saved hours of admin work thanks to Konty. Everything is transparent - from staff shifts to daily revenue reports.",
-            "role": "Manager of \"Urban Bar\" Cafe"
+            "name": "Stefan Jovanović",
+            "quote": "Training new baristas was a nightmare with our old system. Twenty buttons, complicated screens, constant mistakes. Now I can train someone in fifteen minutes and they're confident on day one.",
+            "role": "Manager of Urban Grounds Coffee"
           },
           "t4": {
-            "name": "Anna Lazarus",
-            "quote": "Switching to Konty was a real relief. No more lost receipts or customer misunderstandings - the register works perfectly and it's as fast as we wanted.",
-            "role": "Owner of \"Fresh Bread\" Bakery"
+            "name": "Milica Stojanović",
+            "quote": "The peace of mind is worth everything. I don't worry anymore about the system going down during a busy morning rush. Konty just works, day after day.",
+            "role": "Owner of Fresh Start Bakery"
           }
         }
       },
       "clients": {
-        "title": "9,000 Restaurants and Retail Stores Trust Our POS System",
-        "description": "Restaurant POS, bar POS, liquor store POS, convenience store POS, salon POS - processing millions daily since 1998"
+        "title": "9,000+ Businesses Trust Konty to Keep Them Running",
+        "description": "From busy restaurants to retail chains, our customers rely on Konty when failure isn't an option"
       },
       "getStarted": {
         "certificate": {

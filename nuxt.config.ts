@@ -130,7 +130,7 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+    ...(process.env.APP_ENV === 'production' || process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
       ? {
           // Production: Allow crawling with smart restrictions
           allow: ['/'],
