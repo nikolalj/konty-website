@@ -17,13 +17,6 @@
 	"placement": {
 		"mode": "smart"
 	},
-	"d1_databases": [
-		{
-			"binding": "konty_content_db",
-			"database_name": "konty-content-staging",
-			"database_id": "90f3499d-3236-42d9-8174-96e7f51fcd05"
-		}
-	],
 	"vars": {
 		"NODE_ENV": "development",
 		"APP_ENV": "development",
