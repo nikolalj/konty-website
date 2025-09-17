@@ -87,7 +87,6 @@
         "subscribe": "Subscribe"
       },
       "links": {
-        "aboutUs": "About Us",
         "careers": "Careers",
         "company": "Company",
         "contact": "Contact",
@@ -211,115 +210,115 @@
           "description": "Menu, staff, tables, history - all moved perfectly. Your integrations reconnected. You do nothing.",
           "title": "Day 1 Afternoon: Everything Transfers"
         },
-        "title": "POS System Setup in 48 Hours. We Do Everything."
+        "title": "POS System Setup in 48 Hours. We Do Everything.",
+        "description": "Switching to Konty is quick and easy"
       }
     },
     "pricing": {
-      "title": "Simple POS System Pricing. No Surprises.",
-      "description": "Transparent POS system cost for small business. Save $420/month vs competitors. Everything included. Cancel anytime.",
+      "title": "Simple, Fair Pricing. No hidden costs.",
+      "description": "Choose the plan that fits your needs. Cancel whenever you want.",
       "freeTrial": "30-day free trial",
-      "plans": {
-        "hospitality": {
-          "premium": {
-            "title": "Enterprise",
-            "description": "Enterprise POS for multi-location restaurants",
-            "price": "Custom",
-            "priceValue": "200",
-            "billingCycle": "/ month",
-            "button": "Contact Sales Team",
-            "features": {
-              "feat0": "Unlimited POS terminals",
-              "feat1": "Everything in Professional",
-              "feat2": "Multi-location dashboard",
-              "feat3": "Dedicated account manager",
-              "feat4": "Custom integrations",
-              "feat5": "On-site training for all locations",
-              "feat6": "White-glove migration service"
-            }
-          },
-          "standard": {
-            "title": "Professional",
-            "description": "Restaurant POS system for growing businesses",
-            "price": "$99",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "3 POS terminals included",
-              "feat1": "Everything in Essential",
-              "feat2": "Advanced analytics dashboard",
-              "feat3": "Inventory management",
-              "feat4": "Staff scheduling",
-              "feat5": "Customer loyalty program"
-            },
-            "badge": "popular"
-          },
-          "start": {
-            "title": "Essential",
-            "description": "Best POS for small restaurants and cafes",
-            "price": "$59",
-            "priceValue": "59",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "1 POS terminal included",
-              "feat1": "Unlimited menu items",
-              "feat2": "Table management",
-              "feat3": "24/7 human support",
-              "feat4": "Free setup ($599 value)",
-              "feat5": "Free training ($299 value)",
-              "feat6": "All integrations included",
-              "feat7": "No contract - cancel anytime"
-            }
-          }
+      "hospitality": {
+        "start": {
+          "title": "Starter",
+          "description": "For small venues needing simple checkout.",
+          "price": "$29",
+          "priceValue": "29",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Single register",
+            "Table management",
+            "Product catalog",
+            "Receipt printing",
+            "Sales reports",
+            "Inventory management",
+            "Complete sales and inventory analytics",
+            "Cloud-based back office"
+          ]
         },
-        "retail": {
-          "premium": {
-            "title": "Enterprise",
-            "description": "Multi-location retail chains",
-            "price": "Custom",
-            "priceValue": "200",
-            "billingCycle": "/ month",
-            "button": "Contact Sales Team",
-            "features": {
-              "feat0": "Unlimited POS terminals",
-              "feat1": "Everything in Professional",
-              "feat2": "Custom integrations",
-              "feat3": "Dedicated account manager"
-            }
-          },
-          "standard": {
-            "title": "Professional",
-            "description": "For growing retail businesses",
-            "price": "$79",
-            "priceValue": "79",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "3 POS terminals included",
-              "feat1": "Everything in Essential",
-              "feat2": "Customer loyalty program",
-              "feat3": "Purchase order management",
-              "feat4": "Multi-location inventory"
-            },
-            "badge": "Most Popular"
-          },
-          "start": {
-            "title": "Essential",
-            "description": "Perfect for small shops",
-            "price": "$39",
-            "priceValue": "39",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "1 POS terminal included",
-              "feat1": "Unlimited products",
-              "feat2": "Barcode scanning",
-              "feat3": "24/7 human support",
-              "feat4": "Free setup ($599 value)",
-              "feat5": "Inventory tracking",
-              "feat6": "Sales analytics"
-            }
-          }
+        "standard": {
+          "title": "Standard",
+          "description": "For restaurants needing more control and tracking.",
+          "price": "$35",
+          "priceValue": "35",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "badge": "Most Popular",
+          "features": [
+            "Everything in Starter plus",
+            "Multiple price lists",
+            "Recipe management",
+            "Ingredient usage reports",
+            "Purchase invoices",
+            "Vendor management"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "description": "For larger operations needing advanced features.",
+          "price": "$59",
+          "priceValue": "59",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Multiple registers",
+            "Everything in Standard plus",
+            "Network capabilities",
+            "Mobile ordering",
+            "Kitchen display system",
+            "Advanced accounting (optional)",
+            "Third-party integrations (accounting, hotels, etc.)"
+          ]
+        }
+      },
+      "retail": {
+        "start": {
+          "title": "Starter",
+          "description": "For small shops needing simple checkout.",
+          "price": "$15",
+          "priceValue": "15",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Single register",
+            "Quick product entry (barcodes, shortcuts)",
+            "Receipt printing",
+            "Sales reports",
+            "Inventory management",
+            "Complete sales and inventory analytics",
+            "Cloud-based back office"
+          ]
+        },
+        "standard": {
+          "title": "Standard",
+          "description": "For stores needing more control and tracking.",
+          "price": "$19",
+          "priceValue": "19",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "badge": "Most Popular",
+          "features": [
+            "Everything in Starter plus",
+            "Quick keys",
+            "Weight-based barcodes (scale integration)",
+            "Purchase invoices",
+            "Vendor management"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "description": "For larger operations needing advanced features.",
+          "price": "$25",
+          "priceValue": "25",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Everything in Standard plus",
+            "Multiple registers",
+            "Advanced accounting (optional)",
+            "Third-party integrations (accounting, etc.)"
+          ]
         }
       },
       "faq": {
@@ -347,7 +346,28 @@
             "description": "Real-time table management sync that works even offline. Your restaurant POS shows every server the same view. No angry customers, no comped meals. Save $500+/week on comp'd meals.",
             "title": "Table Management That Actually Works"
           },
-          "title": "Restaurant POS Features Built for Your 3 AM Problems"
+          "title": "Restaurant POS Features Built for Your 3 AM Problems",
+          "tables": {
+            "title": "Table Management"
+          },
+          "kitchen": {
+            "title": "Kitchen Display"
+          },
+          "staff": {
+            "title": "Staff Management"
+          },
+          "onlineOrdering": {
+            "title": "Online Ordering"
+          },
+          "reservations": {
+            "title": "Reservations"
+          },
+          "splitBills": {
+            "title": "Split Bills"
+          },
+          "offline": {
+            "title": "Offline Mode"
+          }
         },
         "retail": {
           "customerInsights": {
@@ -363,7 +383,22 @@
             "description": "Scan, pay, done. Works with any payment type. Lines move fast, customers come back. Handle 40% more customers during rush.",
             "title": "Checkout in 30 Seconds, Not 3 Minutes"
           },
-          "title": "Retail POS System That Sells More, Counts Less"
+          "title": "Retail POS System That Sells More, Counts Less",
+          "barcode": {
+            "title": "Barcode Scanning"
+          },
+          "loyalty": {
+            "title": "Loyalty Program"
+          },
+          "multiLocation": {
+            "title": "Multi-Location"
+          },
+          "analytics": {
+            "title": "Analytics"
+          },
+          "offline": {
+            "title": "Offline Mode"
+          }
         }
       },
       "faq": {
@@ -683,6 +718,13 @@
         "description": "Show us your current setup. We'll show you exactly how much you'll save.",
         "revolutionize": "Watch how we keep you running when others crash",
         "seeInAction": "See Konty Handle Your Worst Night"
+      },
+      "features": {
+        "liveDemo": "Live Demo",
+        "personalizedWalkthrough": "Personalized Walkthrough",
+        "industrySpecific": "Industry Specific",
+        "qaSession": "Q&A Session",
+        "trialSetup": "Trial Setup"
       }
     },
     "contact": {
@@ -714,7 +756,11 @@
         "title": "Success Stories",
         "subtitle": "See how businesses like yours transformed their operations with Konty."
       },
-      "badge": "Real Results"
+      "badge": "Real Results",
+      "empty": {
+        "title": "No stories yet",
+        "description": "Check back soon for client success stories."
+      }
     },
     "partners": {
       "hero": {
@@ -732,12 +778,10 @@
       },
       "featured": "Featured",
       "related": {
-        "title": "Related Articles",
-        "subtitle": "Continue reading"
+        "title": "Related Articles"
       },
       "readMore": "Read more",
       "byAuthor": "By",
-      "publishedOn": "Published on",
       "minRead": "min read"
     }
   },

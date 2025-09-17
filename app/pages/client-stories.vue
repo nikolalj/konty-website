@@ -30,6 +30,6 @@ defineOgImageComponent('Main', {
   cta: t('ui.cta.primary')
 })
 
-// Use centralized schema
-useSchemaOrg([schemas.clientStories()])
+// Use centralized schema - returns array of schemas
+useSchemaOrg(schemas.clientStoriesCollection())
 </script>

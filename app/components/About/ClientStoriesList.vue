@@ -5,7 +5,7 @@
         <!-- Loading State -->
         <div v-if="!posts" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="i in 3" :key="i" class="animate-pulse">
-            <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64"></div>
+            <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64" />
           </div>
         </div>
 

@@ -24,24 +24,24 @@ usePageSeo({
 defineOgImageComponent('Pricing', {
   title: t('pages.pricing.title'),
   currency: currentLocale?.currencySymbol,
-  period: t('pages.pricing.plans.retail.start.billingCycle'),
+  period: t('pages.pricing.retail.start.billingCycle'),
   cta: t('pages.pricing.freeTrial'),
-  ctaSubtext: t('pages.pricing.plans.retail.start.button'),
+  ctaSubtext: t('pages.pricing.retail.start.button'),
   plans: [
     {
-      name: t('pages.pricing.plans.retail.start.title'),
-      price: t('pages.pricing.plans.retail.start.priceValue'),
+      name: t('pages.pricing.retail.start.title'),
+      price: t('pages.pricing.retail.start.priceValue'),
       badge: ''
     },
     {
-      name: t('pages.pricing.plans.retail.standard.title'),
-      price: t('pages.pricing.plans.retail.standard.priceValue'),
+      name: t('pages.pricing.retail.standard.title'),
+      price: t('pages.pricing.retail.standard.priceValue'),
       popular: true,
-      badge: t('pages.pricing.plans.retail.standard.badge')
+      badge: t('pages.pricing.retail.standard.badge')
     },
     {
-      name: t('pages.pricing.plans.retail.premium.title'),
-      price: t('pages.pricing.plans.retail.premium.priceValue'),
+      name: t('pages.pricing.retail.premium.title'),
+      price: t('pages.pricing.retail.premium.priceValue'),
       badge: ''
     }
   ]

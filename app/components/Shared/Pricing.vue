@@ -33,6 +33,7 @@
 <script setup lang="ts">
 import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
 
+const { tArray } = useUtils()
 const { t } = useI18n()
 
 const props = defineProps({
@@ -58,114 +59,71 @@ const config = computed(() => ({
   plans: {
     hospitality: [
       {
-        title: t('pages.pricing.plans.hospitality.start.title'),
-        description: t('pages.pricing.plans.hospitality.start.description'),
-        price: t('pages.pricing.plans.hospitality.start.price'),
-        billingCycle: t('pages.pricing.plans.hospitality.start.billingCycle'),
-        features: [
-          t('pages.pricing.plans.hospitality.start.features.feat0'),
-          t('pages.pricing.plans.hospitality.start.features.feat1'),
-          t('pages.pricing.plans.hospitality.start.features.feat2'),
-          t('pages.pricing.plans.hospitality.start.features.feat3'),
-          t('pages.pricing.plans.hospitality.start.features.feat4'),
-          t('pages.pricing.plans.hospitality.start.features.feat5'),
-          t('pages.pricing.plans.hospitality.start.features.feat6'),
-          t('pages.pricing.plans.hospitality.start.features.feat7'),
-        ],
+        title: t('pages.pricing.hospitality.start.title'),
+        description: t('pages.pricing.hospitality.start.description'),
+        price: t('pages.pricing.hospitality.start.price'),
+        billingCycle: t('pages.pricing.hospitality.start.billingCycle'),
+        features: tArray('pages.pricing.hospitality.start.features'),
         button: {
-          label: t('pages.pricing.plans.hospitality.start.button'),
+          label: t('pages.pricing.hospitality.start.button'),
         }
       },
       {
-        title: t('pages.pricing.plans.hospitality.standard.title'),
-        description: t('pages.pricing.plans.hospitality.standard.description'),
-        price: t('pages.pricing.plans.hospitality.standard.price'),
-        billingCycle: t('pages.pricing.plans.hospitality.standard.billingCycle'),
-        features: [
-          t('pages.pricing.plans.hospitality.standard.features.feat0'),
-          t('pages.pricing.plans.hospitality.standard.features.feat1'),
-          t('pages.pricing.plans.hospitality.standard.features.feat2'),
-          t('pages.pricing.plans.hospitality.standard.features.feat3'),
-          t('pages.pricing.plans.hospitality.standard.features.feat4'),
-          t('pages.pricing.plans.hospitality.standard.features.feat5'),
-        ],
+        title: t('pages.pricing.hospitality.standard.title'),
+        description: t('pages.pricing.hospitality.standard.description'),
+        price: t('pages.pricing.hospitality.standard.price'),
+        billingCycle: t('pages.pricing.hospitality.standard.billingCycle'),
+        features: tArray('pages.pricing.hospitality.standard.features'),
         highlight: true,
         scale: true,
-        badge: t('pages.pricing.plans.hospitality.standard.badge'),
+        badge: t('pages.pricing.hospitality.standard.badge'),
         button: {
-          label: t('pages.pricing.plans.hospitality.standard.button'),
+          label: t('pages.pricing.hospitality.standard.button'),
         }
       },
       {
-        title: t('pages.pricing.plans.hospitality.premium.title'),
-        description: t('pages.pricing.plans.hospitality.premium.description'),
-        price: t('pages.pricing.plans.hospitality.premium.price'),
-        billingCycle: t('pages.pricing.plans.hospitality.premium.billingCycle'),
-        features: [
-          t('pages.pricing.plans.hospitality.premium.features.feat0'),
-          t('pages.pricing.plans.hospitality.premium.features.feat1'),
-          t('pages.pricing.plans.hospitality.premium.features.feat2'),
-          t('pages.pricing.plans.hospitality.premium.features.feat3'),
-          t('pages.pricing.plans.hospitality.premium.features.feat4'),
-          t('pages.pricing.plans.hospitality.premium.features.feat5'),
-          t('pages.pricing.plans.hospitality.premium.features.feat6'),
-        ],
+        title: t('pages.pricing.hospitality.premium.title'),
+        description: t('pages.pricing.hospitality.premium.description'),
+        price: t('pages.pricing.hospitality.premium.price'),
+        billingCycle: t('pages.pricing.hospitality.premium.billingCycle'),
+        features: tArray('pages.pricing.hospitality.premium.features'),
         button: {
-          label: t('pages.pricing.plans.hospitality.premium.button'),
+          label: t('pages.pricing.hospitality.premium.button'),
         }
       }
     ],
     retail: [
       {
-        title: t('pages.pricing.plans.retail.start.title'),
-        description: t('pages.pricing.plans.retail.start.description'),
-        price: t('pages.pricing.plans.retail.start.price'),
-        billingCycle: t('pages.pricing.plans.retail.start.billingCycle'),
-        features: [
-          t('pages.pricing.plans.retail.start.features.feat0'),
-          t('pages.pricing.plans.retail.start.features.feat1'),
-          t('pages.pricing.plans.retail.start.features.feat2'),
-          t('pages.pricing.plans.retail.start.features.feat3'),
-          t('pages.pricing.plans.retail.start.features.feat4'),
-          t('pages.pricing.plans.retail.start.features.feat5'),
-          t('pages.pricing.plans.retail.start.features.feat6'),
-        ],
+        title: t('pages.pricing.retail.start.title'),
+        description: t('pages.pricing.retail.start.description'),
+        price: t('pages.pricing.retail.start.price'),
+        billingCycle: t('pages.pricing.retail.start.billingCycle'),
+        features: tArray('pages.pricing.retail.start.features'),
         button: {
-          label: t('pages.pricing.plans.retail.start.button'),
+          label: t('pages.pricing.retail.start.button'),
         }
       },
       {
-        title: t('pages.pricing.plans.retail.standard.title'),
-        description: t('pages.pricing.plans.retail.standard.description'),
-        price: t('pages.pricing.plans.retail.standard.price'),
-        billingCycle: t('pages.pricing.plans.retail.standard.billingCycle'),
-        features: [
-          t('pages.pricing.plans.retail.standard.features.feat0'),
-          t('pages.pricing.plans.retail.standard.features.feat1'),
-          t('pages.pricing.plans.retail.standard.features.feat2'),
-          t('pages.pricing.plans.retail.standard.features.feat3'),
-          t('pages.pricing.plans.retail.standard.features.feat4'),
-        ],
+        title: t('pages.pricing.retail.standard.title'),
+        description: t('pages.pricing.retail.standard.description'),
+        price: t('pages.pricing.retail.standard.price'),
+        billingCycle: t('pages.pricing.retail.standard.billingCycle'),
+        features: tArray('pages.pricing.retail.standard.features'),
         highlight: true,
         scale: true,
-        badge: t('pages.pricing.plans.retail.standard.badge'),
+        badge: t('pages.pricing.retail.standard.badge'),
         button: {
-          label: t('pages.pricing.plans.retail.standard.button'),
+          label: t('pages.pricing.retail.standard.button'),
         }
       },
       {
-        title: t('pages.pricing.plans.retail.premium.title'),
-        description: t('pages.pricing.plans.retail.premium.description'),
-        price: t('pages.pricing.plans.retail.premium.price'),
-        billingCycle: t('pages.pricing.plans.retail.premium.billingCycle'),
-        features: [
-          t('pages.pricing.plans.retail.premium.features.feat0'),
-          t('pages.pricing.plans.retail.premium.features.feat1'),
-          t('pages.pricing.plans.retail.premium.features.feat2'),
-          t('pages.pricing.plans.retail.premium.features.feat3'),
-        ],
+        title: t('pages.pricing.retail.premium.title'),
+        description: t('pages.pricing.retail.premium.description'),
+        price: t('pages.pricing.retail.premium.price'),
+        billingCycle: t('pages.pricing.retail.premium.billingCycle'),
+        features: tArray('pages.pricing.retail.premium.features'),
         button: {
-          label: t('pages.pricing.plans.retail.premium.button'),
+          label: t('pages.pricing.retail.premium.button'),
         }
       }
     ]
