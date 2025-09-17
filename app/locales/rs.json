@@ -45,8 +45,8 @@
       "loading": {}
     },
     "contactForm": {
-      "title": "Vidi Setup Fiskalnih Kasa za 15 Minuta",
-      "description": "Reci nam o svom restoranu ili prodavnici. Pokazaćemo tačno kako naš POS terminal rešava tvoje probleme."
+      "title": "Vidi kako Konty radi za tvoj biznis",
+      "description": "Kratka demonstracija funkcija relevantnih za tvoj tip biznisa. Bez obaveza - samo praktične informacije."
     },
     "navigation": {
       "main": {
@@ -54,9 +54,9 @@
         "pricing": "Cene",
         "about": "O nama",
         "hospitality": "Ugostiteljstvo",
-        "hospitalityDesc": "Radi i kad je najgore. Nikad ne puca u špicu.",
+        "hospitalityDesc": "Kompletan sistem za upravljanje restoranima sa uslugom za stolovima, koordinacijom kuhinje i procesiranjem plaćanja.",
         "retail": "Trgovina",
-        "retailDesc": "Prodaj više. Manje brojanja. Bez stresa."
+        "retailDesc": "POS sistem sa praćenjem zaliha, skeniranjem barkoda i izveštajima o prodaji za maloprodajne radnje."
       },
       "categories": {
         "restaurants": "Restorani",

@@ -202,9 +202,12 @@ export default defineNuxtConfig({
         ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
         : { type: 'd1', bindingName: 'konty_content_db' })
     },
-    experimental: {
-      sqliteConnector: 'better-sqlite3'
-    }
+    // Only use better-sqlite3 in development
+    ...(process.env.APP_ENV === 'development' && {
+      experimental: {
+        sqliteConnector: 'better-sqlite3'
+      }
+    })
   },
 
   nitro: {
