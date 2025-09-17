@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <ClientStoriesHero />
+    <AboutClientStoriesHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyClientStoriesList hydrate-on-visible />
+    <LazyAboutClientStoriesList hydrate-on-visible />
     <LazySharedStatistics hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
