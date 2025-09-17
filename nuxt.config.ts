@@ -40,7 +40,19 @@ export default defineNuxtConfig({
       minify: 'esbuild',
 
       // No sourcemaps in production for smaller bundles and security
-      sourcemap: false
+      sourcemap: false,
+
+      rollupOptions: {
+        external: process.env.NODE_ENV !== 'development'
+          ? ['better-sqlite3']
+          : []
+      }
+    },
+
+    ssr: {
+      external: process.env.NODE_ENV !== 'development'
+        ? ['better-sqlite3']
+        : []
     }
   },
 
@@ -202,9 +214,11 @@ export default defineNuxtConfig({
         ? { type: 'sqlite', filename: '.nuxt/content.sqlite' }
         : { type: 'd1', bindingName: 'konty_content_db' })
     },
-    // Only use sqlite in development
+    // Only use better-sqlite3 in development
     ...(process.env.APP_ENV === 'development' && {
-      experimental: { nativeSqlite: true },
+      experimental: {
+        sqliteConnector: 'better-sqlite3'
+      }
     })
   },
 
@@ -216,6 +230,9 @@ export default defineNuxtConfig({
 
     minify: true,
     timing: false,
+
+    // Exclude better-sqlite3 from production server bundle
+    ...(process.env.NODE_ENV !== 'development' && {externals: { external: ['better-sqlite3'] }}),
 
     // Optimize server bundles
     rollupConfig: {
