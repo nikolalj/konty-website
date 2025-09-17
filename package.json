@@ -45,13 +45,10 @@
     "cssnano": "^7.1.0",
     "eslint": "^9.35.0",
     "nitro-cloudflare-dev": "^0.2.2",
+    "sharp": "0.34.3",
     "typescript": "^5.9.2",
     "vue-tsc": "^3.0.6",
     "wrangler": "^4.33.1"
-  },
-  "optionalDependencies": {
-    "better-sqlite3": "^12.2.0",
-    "sharp": "0.34.3"
   },
   "pnpm": {
     "overrides": {
