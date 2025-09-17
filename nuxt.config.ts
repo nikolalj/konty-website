@@ -130,7 +130,7 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    ...(process.env.APP_ENV === 'production' || process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
+    ...(process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
       ? {
           // Production: Allow crawling with smart restrictions
           allow: ['/'],
@@ -161,8 +161,33 @@ export default defineNuxtConfig({
           ]
         }
       : {
-          // Non-production: Block everything
-          disallow: ['/']
+          // Production: Allow crawling with smart restrictions
+          allow: ['/'],
+          disallow: [
+            '/api/'
+          ],
+          sitemap: '/sitemap_index.xml',
+          cleanParam: [
+            // UTM (complete set)
+            'utm_source',
+            'utm_medium',
+            'utm_campaign',
+            'utm_term',
+            'utm_content',
+
+            // Platform click IDs
+            'fbclid',
+            'gclid',
+            'msclkid',
+
+            // General
+            'ref',
+            'source',
+
+            // Email if you use it
+            'mc_cid',
+            'mc_eid'
+          ]
         }
     )
   },

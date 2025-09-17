@@ -45,8 +45,8 @@
       "loading": {}
     },
     "contactForm": {
-      "title": "See Your Custom POS Setup in 15 Minutes",
-      "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches."
+      "title": "See How Konty Works for Your Business",
+      "description": "Brief demo showing features relevant to your type of business. No obligation - just practical information."
     },
     "navigation": {
       "main": {
@@ -54,9 +54,9 @@
         "pricing": "Pricing",
         "about": "About",
         "hospitality": "Hospitality",
-        "hospitalityDesc": "Restaurant POS system built to survive your worst nights. Never crashes when it matters.",
+        "hospitalityDesc": "Complete restaurant management system with table service, kitchen coordination, and payment processing.",
         "retail": "Retail",
-        "retailDesc": "Retail POS with inventory management. Sell more. Count less. Stress never."
+        "retailDesc": "Point of sale system with inventory tracking, barcode scanning, and sales reporting for retail stores."
       },
       "categories": {
         "restaurants": "Restaurants",
@@ -105,16 +105,16 @@
       "fields": {
         "name": "Your Name",
         "email": "Email",
-        "message": "Biggest POS frustration? (Optional)"
+        "message": "What would you like to see in the demo? (Optional)"
       },
       "placeholders": {
         "name": "John",
         "email": "john&#64;restaurant.com",
-        "message": "System crashes every Saturday night..."
+        "message": "Table management, inventory tracking..."
       },
       "buttons": {
-        "submit": "Get My Custom Demo",
-        "requestDemo": "Get Your Custom Demo"
+        "submit": "Book a Demo",
+        "requestDemo": "Book a Demo"
       }
     },
     "errors": {
@@ -168,29 +168,29 @@
         "items": {
           "t1": {
             "name": "Marko Petrović",
-            "quote": "Our old system would crash every Saturday night during dinner rush. Lost orders, angry customers, servers stressed out. With Konty, we haven't had a single crash in eight months. Now Saturday nights are profitable instead of stressful.",
+            "quote": "We switched to Konty six months ago and it's made a real difference. Orders flow smoothly from front to kitchen, and my staff picked it up quickly. Much less stressful during busy periods.",
             "role": "Owner of Taste Valley Restaurant"
           },
           "t2": {
             "name": "Ana Nikolić",
-            "quote": "I used to spend three hours every morning checking inventory and figuring out what we ran out of. Konty shows me everything in real-time. I get that time back to actually run my business.",
+            "quote": "Inventory management used to take me hours each week. Now I can see stock levels instantly and get alerts when items are running low. Saves me a lot of time.",
             "role": "Owner of Fashion Forward Boutique"
           },
           "t3": {
             "name": "Stefan Jovanović",
-            "quote": "Training new baristas was a nightmare with our old system. Twenty buttons, complicated screens, constant mistakes. Now I can train someone in fifteen minutes and they're confident on day one.",
+            "quote": "The interface is intuitive - new employees learn it quickly. Customer checkout is faster and we can track our daily sales easily. Good investment for our coffee shop.",
             "role": "Manager of Urban Grounds Coffee"
           },
           "t4": {
             "name": "Milica Stojanović",
-            "quote": "The peace of mind is worth everything. I don't worry anymore about the system going down during a busy morning rush. Konty just works, day after day.",
+            "quote": "Clean, simple system that does what we need. Processing payments is straightforward and the daily reports help me understand our sales patterns better.",
             "role": "Owner of Fresh Start Bakery"
           }
         }
       },
       "clients": {
-        "title": "9,000+ Businesses Trust Konty to Keep Them Running",
-        "description": "From busy restaurants to retail chains, our customers rely on Konty when failure isn't an option"
+        "title": "Used by 9,000+ Business Locations",
+        "description": "Restaurants, cafes, retail stores, and service businesses across the region use Konty daily"
       },
       "getStarted": {
         "certificate": {
@@ -322,30 +322,30 @@
       },
       "faq": {
         "pricing": {
-          "a1": "We have three plans: Starter ($29), Standard ($49), and Premium ($129) per month. Each plan includes different features.",
-          "a2": "No hidden costs. The plan price includes everything - updates, support, and hosting. You only pay the monthly subscription.",
+          "a1": "We offer three tiers: Starter, Standard, and Premium with monthly billing. Each plan includes core POS features with additional capabilities at higher tiers.",
+          "a2": "All plan prices include software updates, customer support, and cloud hosting. No setup fees or long-term contracts required.",
           "q1": "How much does Konty cost?",
-          "q2": "Are there any hidden costs?"
+          "q2": "What's included in the price?"
         }
       }
     },
     "products": {
       "features": {
         "hospitality": {
-          "description": "When Saturday night becomes chaos, these are the POS system features that matter.",
+          "description": "Essential features designed specifically for restaurants, cafes, and food service businesses.",
           "kitchenDisplay": {
-            "description": "Internet dies? Your kitchen display system keeps working. Power flickers? Orders still there. Never lose a $300 catering order again.",
-            "title": "Kitchen Display System That Never Loses Orders"
+            "description": "Orders display clearly in the kitchen with timing and preparation notes. Helps coordinate service and reduce wait times for customers.",
+            "title": "Kitchen Display System"
           },
           "staffManagement": {
-            "description": "Color-coded, mistake-proof interface. No modifier nightmares. No manager overrides needed. Even your nephew can run it. Cut training time by 75%.",
-            "title": "New Server? Trained in 15 Minutes"
+            "description": "Intuitive interface that's easy to learn. Role-based access and simple workflows help new team members get up to speed quickly.",
+            "title": "Easy Staff Training"
           },
           "tableManagement": {
-            "description": "Real-time table management sync that works even offline. Your restaurant POS shows every server the same view. No angry customers, no comped meals. Save $500+/week on comp'd meals.",
-            "title": "Table Management That Actually Works"
+            "description": "Visual table layout shows current status, order progress, and payment details. Helps servers coordinate service efficiently.",
+            "title": "Table Management"
           },
-          "title": "Restaurant POS Features Built for Your 3 AM Problems",
+          "title": "Restaurant Features That Make Daily Operations Smoother",
           "tables": {
             "title": "Table Management"
           },
@@ -370,19 +370,19 @@
         },
         "retail": {
           "customerInsights": {
-            "description": "See patterns humans miss. Send offers that actually convert. No complex analytics degree required. 3x higher email conversion rates.",
-            "title": "Know What They'll Buy Before They Do"
+            "description": "Track customer preferences and purchase history. Generate reports to understand buying patterns and optimize inventory.",
+            "title": "Customer Analytics"
           },
-          "description": "The best POS for small retail business. Focus on customers, not fixing tech problems.",
+          "description": "Streamlined POS features designed for retail stores, boutiques, and merchandise businesses.",
           "inventory": {
-            "description": "Your POS system with inventory tracking auto-reorders before you're out. Barcode scanner integration for quick counts. Increase sales 15% by never being out of stock.",
-            "title": "Inventory Management That Never Runs Out"
+            "description": "Real-time stock tracking with low inventory alerts. Barcode scanning for quick updates and accurate counts.",
+            "title": "Inventory Management"
           },
           "quickCheckout": {
-            "description": "Scan, pay, done. Works with any payment type. Lines move fast, customers come back. Handle 40% more customers during rush.",
-            "title": "Checkout in 30 Seconds, Not 3 Minutes"
+            "description": "Fast payment processing with support for cards, cash, and mobile payments. Simple interface speeds up transactions.",
+            "title": "Quick Checkout Process"
           },
-          "title": "Retail POS System That Sells More, Counts Less",
+          "title": "Retail Features That Keep Your Store Running Smoothly",
           "barcode": {
             "title": "Barcode Scanning"
           },
@@ -440,10 +440,10 @@
       "hospitality": {
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Never crashes • Real human support • No contracts",
-          "subtitle": "When Saturday night hits, you need a restaurant POS that won't quit. Cloud-based POS with 99.97% uptime. 30-second support. Switch in 48 hours.",
-          "title": "Restaurant POS System That Can't Afford Downtime",
-          "viewPricing": "See Honest Pricing"
+          "features": "Easy setup • Local support • Flexible plans",
+          "subtitle": "Complete restaurant management system with table service, order processing, and kitchen coordination. Designed for food service businesses of all sizes.",
+          "title": "Restaurant POS System for Modern Food Service",
+          "viewPricing": "View Pricing Plans"
         },
         "features": {
           "hero": {
@@ -472,9 +472,9 @@
       "retail": {
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Zero downtime • Auto-reorder • 30-second support",
-          "subtitle": "The retail POS system with inventory that actually works on Black Friday. Cloud POS with 99.97% uptime when others crash.",
-          "title": "Retail POS System - Sell More. Count Less. Stress Never.",
+          "features": "Inventory tracking • Fast checkout • Sales reporting",
+          "subtitle": "Point of sale system designed for retail businesses. Manage inventory, process payments, and track sales with an intuitive interface.",
+          "title": "Retail POS System Built for Store Operations",
           "viewDemo": "Watch 2-Min Demo"
         },
         "features": {
