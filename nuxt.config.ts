@@ -132,16 +132,9 @@ export default defineNuxtConfig({
   // Robots.txt configuration
   robots: {
     enabled: true,
-    ...(process.env.APP_ENV === 'production' || process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com')
-      ? {
-          allow: ['/'],
-          disallow: ['/api/'],
-          sitemap: '/sitemap_index.xml',
-        }
-      : {
-          disallow: ['/']
-        }
-    )
+    allow: ['/'],
+    disallow: ['/api/'],
+    sitemap: '/sitemap_index.xml',
   },
 
   // Sitemap with automatic i18n multi-sitemap generation
