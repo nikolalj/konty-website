@@ -77,7 +77,7 @@ export default {
       // Redirect if target locale is not the default
       if (targetLocale !== DEFAULT_LOCALE.code) {
         // Build redirect URL
-        const targetUrl = new URL(`/${targetLocale}${pathname}`, url.origin);
+        const targetUrl = new URL(`/${targetLocale}${pathname !== '/' ? pathname : '' }`, url.origin);
         targetUrl.search = url.search;
 
         // Create redirect with cookie if needed

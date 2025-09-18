@@ -20,7 +20,8 @@
       "clothing-boutiques": "Clothing & Boutiques",
       "convenience-stores": "Convenience Stores",
       "b2b": "B2B Sales & E-Invoicing",
-      "blog": "Blog"
+      "blog": "Blog",
+      "demo": "Demo"
     },
     "readMore": "Read More",
     "cta": {
@@ -41,13 +42,11 @@
         "retail": "Retail",
         "recommended": "Recommended"
       },
-      "loading": {
-        "formPlaceholder": "Loading demo scheduler..."
-      }
+      "loading": {}
     },
     "contactForm": {
-      "title": "See Your Custom POS Setup in 15 Minutes",
-      "description": "Tell us about your restaurant or retail business. We'll show exactly how our POS system solves your biggest headaches."
+      "title": "See How Konty Works for Your Business",
+      "description": "Brief demo showing features relevant to your type of business. No obligation - just practical information."
     },
     "navigation": {
       "main": {
@@ -55,9 +54,9 @@
         "pricing": "Pricing",
         "about": "About",
         "hospitality": "Hospitality",
-        "hospitalityDesc": "Restaurant POS system built to survive your worst nights. Never crashes when it matters.",
+        "hospitalityDesc": "Complete restaurant management system with table service, kitchen coordination, and payment processing.",
         "retail": "Retail",
-        "retailDesc": "Retail POS with inventory management. Sell more. Count less. Stress never."
+        "retailDesc": "Point of sale system with inventory tracking, barcode scanning, and sales reporting for retail stores."
       },
       "categories": {
         "restaurants": "Restaurants",
@@ -87,7 +86,6 @@
         "subscribe": "Subscribe"
       },
       "links": {
-        "aboutUs": "About Us",
         "careers": "Careers",
         "company": "Company",
         "contact": "Contact",
@@ -107,16 +105,16 @@
       "fields": {
         "name": "Your Name",
         "email": "Email",
-        "message": "Biggest POS frustration? (Optional)"
+        "message": "What would you like to see in the demo? (Optional)"
       },
       "placeholders": {
         "name": "John",
         "email": "john&#64;restaurant.com",
-        "message": "System crashes every Saturday night..."
+        "message": "Table management, inventory tracking..."
       },
       "buttons": {
-        "submit": "Get My Custom Demo",
-        "requestDemo": "Get Your Custom Demo"
+        "submit": "Book a Demo",
+        "requestDemo": "Book a Demo"
       }
     },
     "errors": {
@@ -143,56 +141,56 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "POS System That Won't Crash During Dinner Rush.",
-        "subtitle": "The reliable POS for restaurants and retail. Others add AI, we keep you running on your worst nights. Real support in 30 seconds. Switch in 48 hours. Keep your hardware.",
-        "tagline": "Trusted by 9,000 small businesses who can't afford downtime"
+        "title": "Modern POS System Built for Growing Businesses",
+        "subtitle": "Streamline operations with a POS system designed for restaurants and retail. Focus on serving customers while we handle payments, inventory, and reporting.",
+        "tagline": "Join 9,000+ businesses using Konty to run their operations"
       },
       "statistics": {
         "stat1": {
-          "description": "Uptime when you need it most",
-          "suffix": "%",
-          "value": "99"
+          "description": "Active business locations",
+          "suffix": "+",
+          "value": "9,000"
         },
         "stat2": {
-          "description": "Real human answers your call",
-          "suffix": " seconds",
-          "value": "30"
+          "description": "Years of POS experience",
+          "suffix": "+",
+          "value": "26"
         },
         "stat3": {
-          "description": "Outlasting the competition",
-          "suffix": " years",
-          "value": "15"
+          "description": "Average support response",
+          "suffix": " seconds",
+          "value": "30"
         }
       },
       "testimonials": {
-        "title": "Restaurant Owners Who Sleep Better Now",
-        "description": "Real stories from your peers who switched and survived their worst nights",
+        "title": "What Our Customers Say",
+        "description": "Real feedback from business owners using Konty daily",
         "items": {
           "t1": {
-            "name": "Mike Peterson",
-            "quote": "Before Konty, we had problems tracking tables and orders. Now servers work faster, kitchen is always synced, and guests notice how much more efficient our service is.",
-            "role": "Owner of \"Taste Valley\" Restaurant"
+            "name": "Marko Petrović",
+            "quote": "We switched to Konty six months ago and it's made a real difference. Orders flow smoothly from front to kitchen, and my staff picked it up quickly. Much less stressful during busy periods.",
+            "role": "Owner of Taste Valley Restaurant"
           },
           "t2": {
-            "name": "Helen Marcus",
-            "quote": "Konty POS made inventory management and invoicing so much easier. I finally have clear insight into bestselling products, and reports help me make faster decisions.",
-            "role": "Owner of \"Fashion J\" Boutique"
+            "name": "Ana Nikolić",
+            "quote": "Inventory management used to take me hours each week. Now I can see stock levels instantly and get alerts when items are running low. Saves me a lot of time.",
+            "role": "Owner of Fashion Forward Boutique"
           },
           "t3": {
-            "name": "Nick Johnson",
-            "quote": "We saved hours of admin work thanks to Konty. Everything is transparent - from staff shifts to daily revenue reports.",
-            "role": "Manager of \"Urban Bar\" Cafe"
+            "name": "Stefan Jovanović",
+            "quote": "The interface is intuitive - new employees learn it quickly. Customer checkout is faster and we can track our daily sales easily. Good investment for our coffee shop.",
+            "role": "Manager of Urban Grounds Coffee"
           },
           "t4": {
-            "name": "Anna Lazarus",
-            "quote": "Switching to Konty was a real relief. No more lost receipts or customer misunderstandings - the register works perfectly and it's as fast as we wanted.",
-            "role": "Owner of \"Fresh Bread\" Bakery"
+            "name": "Milica Stojanović",
+            "quote": "Clean, simple system that does what we need. Processing payments is straightforward and the daily reports help me understand our sales patterns better.",
+            "role": "Owner of Fresh Start Bakery"
           }
         }
       },
       "clients": {
-        "title": "9,000 Restaurants and Retail Stores Trust Our POS System",
-        "description": "Restaurant POS, bar POS, liquor store POS, convenience store POS, salon POS - processing millions daily since 1998"
+        "title": "Used by 9,000+ Business Locations",
+        "description": "Restaurants, cafes, retail stores, and service businesses across the region use Konty daily"
       },
       "getStarted": {
         "certificate": {
@@ -211,159 +209,195 @@
           "description": "Menu, staff, tables, history - all moved perfectly. Your integrations reconnected. You do nothing.",
           "title": "Day 1 Afternoon: Everything Transfers"
         },
-        "title": "POS System Setup in 48 Hours. We Do Everything."
+        "title": "POS System Setup in 48 Hours. We Do Everything.",
+        "description": "Switching to Konty is quick and easy"
       }
     },
     "pricing": {
-      "title": "Simple POS System Pricing. No Surprises.",
-      "description": "Transparent POS system cost for small business. Save $420/month vs competitors. Everything included. Cancel anytime.",
+      "title": "Simple, Fair Pricing. No hidden costs.",
+      "description": "Choose the plan that fits your needs. Cancel whenever you want.",
       "freeTrial": "30-day free trial",
-      "plans": {
-        "hospitality": {
-          "premium": {
-            "title": "Enterprise",
-            "description": "Enterprise POS for multi-location restaurants",
-            "price": "Custom",
-            "priceValue": "200",
-            "billingCycle": "/ month",
-            "button": "Contact Sales Team",
-            "features": {
-              "feat0": "Unlimited POS terminals",
-              "feat1": "Everything in Professional",
-              "feat2": "Multi-location dashboard",
-              "feat3": "Dedicated account manager",
-              "feat4": "Custom integrations",
-              "feat5": "On-site training for all locations",
-              "feat6": "White-glove migration service"
-            }
-          },
-          "standard": {
-            "title": "Professional",
-            "description": "Restaurant POS system for growing businesses",
-            "price": "$99",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "3 POS terminals included",
-              "feat1": "Everything in Essential",
-              "feat2": "Advanced analytics dashboard",
-              "feat3": "Inventory management",
-              "feat4": "Staff scheduling",
-              "feat5": "Customer loyalty program"
-            },
-            "badge": "popular"
-          },
-          "start": {
-            "title": "Essential",
-            "description": "Best POS for small restaurants and cafes",
-            "price": "$59",
-            "priceValue": "59",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "1 POS terminal included",
-              "feat1": "Unlimited menu items",
-              "feat2": "Table management",
-              "feat3": "24/7 human support",
-              "feat4": "Free setup ($599 value)",
-              "feat5": "Free training ($299 value)",
-              "feat6": "All integrations included",
-              "feat7": "No contract - cancel anytime"
-            }
-          }
+      "hospitality": {
+        "start": {
+          "title": "Starter",
+          "description": "For small venues needing simple checkout.",
+          "price": "$29",
+          "priceValue": "29",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Single register",
+            "Table management",
+            "Product catalog",
+            "Receipt printing",
+            "Sales reports",
+            "Inventory management",
+            "Complete sales and inventory analytics",
+            "Cloud-based back office"
+          ]
         },
-        "retail": {
-          "premium": {
-            "title": "Enterprise",
-            "description": "Multi-location retail chains",
-            "price": "Custom",
-            "priceValue": "200",
-            "billingCycle": "/ month",
-            "button": "Contact Sales Team",
-            "features": {
-              "feat0": "Unlimited POS terminals",
-              "feat1": "Everything in Professional",
-              "feat2": "Custom integrations",
-              "feat3": "Dedicated account manager"
-            }
-          },
-          "standard": {
-            "title": "Professional",
-            "description": "For growing retail businesses",
-            "price": "$79",
-            "priceValue": "79",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "3 POS terminals included",
-              "feat1": "Everything in Essential",
-              "feat2": "Customer loyalty program",
-              "feat3": "Purchase order management",
-              "feat4": "Multi-location inventory"
-            },
-            "badge": "Most Popular"
-          },
-          "start": {
-            "title": "Essential",
-            "description": "Perfect for small shops",
-            "price": "$39",
-            "priceValue": "39",
-            "billingCycle": "/ month",
-            "button": "Start 30-Day Free Trial",
-            "features": {
-              "feat0": "1 POS terminal included",
-              "feat1": "Unlimited products",
-              "feat2": "Barcode scanning",
-              "feat3": "24/7 human support",
-              "feat4": "Free setup ($599 value)",
-              "feat5": "Inventory tracking",
-              "feat6": "Sales analytics"
-            }
-          }
+        "standard": {
+          "title": "Standard",
+          "description": "For restaurants needing more control and tracking.",
+          "price": "$35",
+          "priceValue": "35",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "badge": "Most Popular",
+          "features": [
+            "Everything in Starter plus",
+            "Multiple price lists",
+            "Recipe management",
+            "Ingredient usage reports",
+            "Purchase invoices",
+            "Vendor management"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "description": "For larger operations needing advanced features.",
+          "price": "$59",
+          "priceValue": "59",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Multiple registers",
+            "Everything in Standard plus",
+            "Network capabilities",
+            "Mobile ordering",
+            "Kitchen display system",
+            "Advanced accounting (optional)",
+            "Third-party integrations (accounting, hotels, etc.)"
+          ]
+        }
+      },
+      "retail": {
+        "start": {
+          "title": "Starter",
+          "description": "For small shops needing simple checkout.",
+          "price": "$15",
+          "priceValue": "15",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Single register",
+            "Quick product entry (barcodes, shortcuts)",
+            "Receipt printing",
+            "Sales reports",
+            "Inventory management",
+            "Complete sales and inventory analytics",
+            "Cloud-based back office"
+          ]
+        },
+        "standard": {
+          "title": "Standard",
+          "description": "For stores needing more control and tracking.",
+          "price": "$19",
+          "priceValue": "19",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "badge": "Most Popular",
+          "features": [
+            "Everything in Starter plus",
+            "Quick keys",
+            "Weight-based barcodes (scale integration)",
+            "Purchase invoices",
+            "Vendor management"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "description": "For larger operations needing advanced features.",
+          "price": "$25",
+          "priceValue": "25",
+          "billingCycle": "/ month",
+          "button": "Sign Up",
+          "features": [
+            "Everything in Standard plus",
+            "Multiple registers",
+            "Advanced accounting (optional)",
+            "Third-party integrations (accounting, etc.)"
+          ]
         }
       },
       "faq": {
         "pricing": {
-          "a1": "We have three plans: Starter ($29), Standard ($49), and Premium ($129) per month. Each plan includes different features.",
-          "a2": "No hidden costs. The plan price includes everything - updates, support, and hosting. You only pay the monthly subscription.",
+          "a1": "We offer three tiers: Starter, Standard, and Premium with monthly billing. Each plan includes core POS features with additional capabilities at higher tiers.",
+          "a2": "All plan prices include software updates, customer support, and cloud hosting. No setup fees or long-term contracts required.",
           "q1": "How much does Konty cost?",
-          "q2": "Are there any hidden costs?"
+          "q2": "What's included in the price?"
         }
       }
     },
     "products": {
       "features": {
         "hospitality": {
-          "description": "When Saturday night becomes chaos, these are the POS system features that matter.",
+          "description": "Essential features designed specifically for restaurants, cafes, and food service businesses.",
           "kitchenDisplay": {
-            "description": "Internet dies? Your kitchen display system keeps working. Power flickers? Orders still there. Never lose a $300 catering order again.",
-            "title": "Kitchen Display System That Never Loses Orders"
+            "description": "Orders display clearly in the kitchen with timing and preparation notes. Helps coordinate service and reduce wait times for customers.",
+            "title": "Kitchen Display System"
           },
           "staffManagement": {
-            "description": "Color-coded, mistake-proof interface. No modifier nightmares. No manager overrides needed. Even your nephew can run it. Cut training time by 75%.",
-            "title": "New Server? Trained in 15 Minutes"
+            "description": "Intuitive interface that's easy to learn. Role-based access and simple workflows help new team members get up to speed quickly.",
+            "title": "Easy Staff Training"
           },
           "tableManagement": {
-            "description": "Real-time table management sync that works even offline. Your restaurant POS shows every server the same view. No angry customers, no comped meals. Save $500+/week on comp'd meals.",
-            "title": "Table Management That Actually Works"
+            "description": "Visual table layout shows current status, order progress, and payment details. Helps servers coordinate service efficiently.",
+            "title": "Table Management"
           },
-          "title": "Restaurant POS Features Built for Your 3 AM Problems"
+          "title": "Restaurant Features That Make Daily Operations Smoother",
+          "tables": {
+            "title": "Table Management"
+          },
+          "kitchen": {
+            "title": "Kitchen Display"
+          },
+          "staff": {
+            "title": "Staff Management"
+          },
+          "onlineOrdering": {
+            "title": "Online Ordering"
+          },
+          "reservations": {
+            "title": "Reservations"
+          },
+          "splitBills": {
+            "title": "Split Bills"
+          },
+          "offline": {
+            "title": "Offline Mode"
+          }
         },
         "retail": {
           "customerInsights": {
-            "description": "See patterns humans miss. Send offers that actually convert. No complex analytics degree required. 3x higher email conversion rates.",
-            "title": "Know What They'll Buy Before They Do"
+            "description": "Track customer preferences and purchase history. Generate reports to understand buying patterns and optimize inventory.",
+            "title": "Customer Analytics"
           },
-          "description": "The best POS for small retail business. Focus on customers, not fixing tech problems.",
+          "description": "Streamlined POS features designed for retail stores, boutiques, and merchandise businesses.",
           "inventory": {
-            "description": "Your POS system with inventory tracking auto-reorders before you're out. Barcode scanner integration for quick counts. Increase sales 15% by never being out of stock.",
-            "title": "Inventory Management That Never Runs Out"
+            "description": "Real-time stock tracking with low inventory alerts. Barcode scanning for quick updates and accurate counts.",
+            "title": "Inventory Management"
           },
           "quickCheckout": {
-            "description": "Scan, pay, done. Works with any payment type. Lines move fast, customers come back. Handle 40% more customers during rush.",
-            "title": "Checkout in 30 Seconds, Not 3 Minutes"
+            "description": "Fast payment processing with support for cards, cash, and mobile payments. Simple interface speeds up transactions.",
+            "title": "Quick Checkout Process"
           },
-          "title": "Retail POS System That Sells More, Counts Less"
+          "title": "Retail Features That Keep Your Store Running Smoothly",
+          "barcode": {
+            "title": "Barcode Scanning"
+          },
+          "loyalty": {
+            "title": "Loyalty Program"
+          },
+          "multiLocation": {
+            "title": "Multi-Location"
+          },
+          "analytics": {
+            "title": "Analytics"
+          },
+          "offline": {
+            "title": "Offline Mode"
+          }
         }
       },
       "faq": {
@@ -405,11 +439,11 @@
       },
       "hospitality": {
         "hero": {
-          "cta": "Start Free Trial",
-          "features": "Never crashes • Real human support • No contracts",
-          "subtitle": "When Saturday night hits, you need a restaurant POS that won't quit. Cloud-based POS with 99.97% uptime. 30-second support. Switch in 48 hours.",
-          "title": "Restaurant POS System That Can't Afford Downtime",
-          "viewPricing": "See Honest Pricing"
+          "cta": "Start 30-Day Free Trial",
+          "features": "Easy setup • Local support • Flexible plans",
+          "subtitle": "Complete restaurant management system with table service, order processing, and kitchen coordination. Designed for food service businesses of all sizes.",
+          "title": "Restaurant POS System for Modern Food Service",
+          "viewPricing": "View Pricing Plans"
         },
         "features": {
           "hero": {
@@ -437,10 +471,10 @@
       },
       "retail": {
         "hero": {
-          "cta": "Start Free Trial",
-          "features": "Zero downtime • Auto-reorder • 30-second support",
-          "subtitle": "The retail POS system with inventory that actually works on Black Friday. Cloud POS with 99.97% uptime when others crash.",
-          "title": "Retail POS System - Sell More. Count Less. Stress Never.",
+          "cta": "Start 30-Day Free Trial",
+          "features": "Inventory tracking • Fast checkout • Sales reporting",
+          "subtitle": "Point of sale system designed for retail businesses. Manage inventory, process payments, and track sales with an intuitive interface.",
+          "title": "Retail POS System Built for Store Operations",
           "viewDemo": "Watch 2-Min Demo"
         },
         "features": {
@@ -488,7 +522,7 @@
         "hero": {
           "title": "Konty for Restaurants",
           "subtitle": "Complete restaurant management solution - from reservations to payment",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Tables • Kitchen • Reservations • Analytics"
         },
         "overview": {
@@ -515,7 +549,7 @@
         "hero": {
           "title": "Konty for Bars & Cafes",
           "subtitle": "Fast checkout and inventory management for high-volume venues",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Quick Pay • Inventory • Happy Hour • Loyalty"
         },
         "overview": {
@@ -542,7 +576,7 @@
         "hero": {
           "title": "Konty for Quick Service",
           "subtitle": "Optimized for speed and efficiency - perfect for fast food restaurants",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Quick Orders • Drive-thru • Delivery • KDS"
         },
         "overview": {
@@ -569,7 +603,7 @@
         "hero": {
           "title": "Konty for Grocery & Supermarkets",
           "subtitle": "Manage thousands of products and high-volume transactions",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Inventory • Barcodes • Promotions • Analytics"
         },
         "overview": {
@@ -596,7 +630,7 @@
         "hero": {
           "title": "Konty for Clothing & Boutiques",
           "subtitle": "Track sizes, colors, and seasonal collections",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Sizes/Colors • Seasons • Loyalty • Analytics"
         },
         "overview": {
@@ -623,7 +657,7 @@
         "hero": {
           "title": "Konty for Convenience Stores",
           "subtitle": "Simple management of diverse product mix",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "Wide Range • Quick Checkout • 24/7 Operation • Inventory"
         },
         "overview": {
@@ -650,7 +684,7 @@
         "hero": {
           "title": "Konty for B2B Sales & E-Invoicing",
           "subtitle": "Professional solutions for wholesale and B2B partnerships",
-          "cta": "Start Free Trial",
+          "cta": "Start 30-Day Free Trial",
           "features": "E-Invoicing • Wholesale • Partners • Reports"
         },
         "overview": {
@@ -679,10 +713,127 @@
       }
     },
     "demo": {
-      "demo": {
-        "description": "Show us your current setup. We'll show you exactly how much you'll save.",
-        "revolutionize": "Watch how we keep you running when others crash",
-        "seeInAction": "See Konty Handle Your Worst Night"
+      "hero": {
+        "title": "Schedule Your Personalized Demo",
+        "subtitle": "15 minutes that will transform your business. See exactly how Konty solves your problems.",
+        "benefit1": "Personalized for your business type",
+        "benefit2": "See all features that matter to you",
+        "benefit3": "Get a quote tailored to your needs",
+        "benefit4": "No obligations, no pressure",
+        "scheduleButton": "Schedule Demo",
+        "watchVideoButton": "Watch Video",
+        "calendarTitle": "Choose a time that works for you",
+        "calendarDescription": "We're available weekdays from 9 AM to 6 PM",
+        "calendarPlaceholder": "Calendar will load here",
+        "openCalendar": "Open Calendar"
+      },
+      "process": {
+        "title": "What happens during the demo?",
+        "subtitle": "4 simple steps to your new POS system",
+        "step1": {
+          "title": "Understanding your needs",
+          "description": "First we learn what's important to you and where you have problems",
+          "duration": "5 minutes"
+        },
+        "step2": {
+          "title": "Feature demonstration",
+          "description": "We show exactly those features that solve your problems",
+          "duration": "15-20 minutes"
+        },
+        "step3": {
+          "title": "Custom proposal",
+          "description": "You get a proposal tailored to your needs, no hidden costs",
+          "duration": "5 minutes"
+        },
+        "step4": {
+          "title": "Migration plan",
+          "description": "If you decide to switch, we create a 48-hour migration plan",
+          "duration": "5 minutes"
+        },
+        "whatYouGet": {
+          "title": "What you get after the demo?",
+          "outcome1": {
+            "title": "Clear picture of capabilities",
+            "description": "You'll know exactly what Konty can do for your business"
+          },
+          "outcome2": {
+            "title": "Personalized quote",
+            "description": "Pricing and features tailored just for you"
+          },
+          "outcome3": {
+            "title": "30 days free",
+            "description": "Test all features with no obligations"
+          }
+        }
+      },
+      "categorySelector": {
+        "title": "What type of business do you run?",
+        "subtitle": "We'll customize the demonstration for your industry",
+        "personalizedFor": "Demo customized for {business}",
+        "demoFeatures": "In the demo we'll focus on:",
+        "scheduleButton": "Schedule demo for this industry",
+        "examples": {
+          "restaurants": "Fine dining, family restaurants, pizzerias",
+          "barsCafes": "Cafes, bars, clubs, cafeterias",
+          "fastFood": "Fast food, kiosks, food trucks",
+          "grocery": "Supermarkets, grocery stores, mini markets",
+          "clothing": "Boutiques, clothing stores, shoe stores",
+          "convenience": "Tobacco shops, gas stations, 24/7 stores"
+        },
+        "features": {
+          "tableManagement": "Table management and reservations",
+          "kitchenDisplay": "Kitchen display and coordination",
+          "reservations": "Online reservations",
+          "splitBills": "Split bills by items",
+          "inventoryTracking": "Inventory tracking",
+          "barcodeScanning": "Barcode scanning",
+          "promotions": "Promotions and discounts",
+          "loyaltyProgram": "Loyalty program",
+          "onlineOrdering": "Online ordering",
+          "inventoryManagement": "Inventory management",
+          "multiLocation": "Multi-location support",
+          "analytics": "Advanced analytics"
+        }
+      },
+      "meetingDetails": {
+        "title": "What can you expect from the demo meeting?",
+        "format": {
+          "title": "Online video call",
+          "description": "We use Zoom or Google Meet. Phone call works too if you prefer."
+        },
+        "duration": {
+          "title": "15-30 minutes",
+          "description": "Short, focused meeting. We respect your time."
+        },
+        "language": {
+          "title": "In your language",
+          "description": "English or local language - whatever you prefer."
+        },
+        "participants": {
+          "title": "You and our expert",
+          "description": "Invite anyone from your team. We come with one expert."
+        },
+        "preparation": {
+          "title": "Prepare before the meeting:",
+          "item1": "Current POS system problems",
+          "item2": "Number of locations and registers",
+          "item3": "Monthly revenue (approximate)",
+          "item4": "Specific features you need"
+        },
+        "questions": "Have questions before the demo meeting?",
+        "viewFaq": "View FAQ",
+        "testimonial": {
+          "quote": "The demo was exactly what we were looking for - no sales pitch, just concrete solutions to our problems.",
+          "author": "Mark Johnson",
+          "role": "Restaurant Owner"
+        }
+      },
+      "features": {
+        "liveDemo": "Live Demo",
+        "personalizedWalkthrough": "Personalized Walkthrough",
+        "industrySpecific": "Industry Specific Solutions",
+        "qaSession": "Q&A Session",
+        "trialSetup": "Free Trial Setup"
       }
     },
     "contact": {
@@ -714,7 +865,11 @@
         "title": "Success Stories",
         "subtitle": "See how businesses like yours transformed their operations with Konty."
       },
-      "badge": "Real Results"
+      "badge": "Real Results",
+      "empty": {
+        "title": "No stories yet",
+        "description": "Check back soon for client success stories."
+      }
     },
     "partners": {
       "hero": {
@@ -732,12 +887,10 @@
       },
       "featured": "Featured",
       "related": {
-        "title": "Related Articles",
-        "subtitle": "Continue reading"
+        "title": "Related Articles"
       },
       "readMore": "Read more",
       "byAuthor": "By",
-      "publishedOn": "Published on",
       "minRead": "min read"
     }
   },

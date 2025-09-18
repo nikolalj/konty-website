@@ -5,7 +5,7 @@
         <!-- Loading State -->
         <div v-if="!posts" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="i in 3" :key="i" class="animate-pulse">
-            <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64"></div>
+            <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64" />
           </div>
         </div>
 
@@ -66,10 +66,10 @@
         <div v-else class="text-center py-12">
           <Icon name="i-lucide:file-text" class="w-16 h-16 mx-auto text-gray-400 mb-4" />
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-            {{ t('pages.clientStories.empty.title') || 'No stories yet' }}
+            {{ t('pages.clientStories.empty.title') }}
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            {{ t('pages.clientStories.empty.description') || 'Check back soon for client success stories.' }}
+            {{ t('pages.clientStories.empty.description') }}
           </p>
         </div>
       </UIAppear>

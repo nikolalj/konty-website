@@ -152,6 +152,10 @@ usePageSeo({
   description: t('seo.blog.description')
 })
 
+// Schema.org
+const schemas = useSchemas()
+useSchemaOrg([schemas.blogCollection()])
+
 // OG Image
 defineOgImageComponent('Main', {
   title: t('pages.blog.hero.title'),

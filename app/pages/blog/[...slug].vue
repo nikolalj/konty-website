@@ -98,20 +98,8 @@
 </template>
 
 <script setup lang="ts">
-import type { PageCollectionItemBase } from '@nuxt/content'
 import { DEFAULT_LOCALE, LOCALES } from '~/config/locale.config.mjs'
-
-// Extend PageCollectionItemBase with our blog-specific fields
-interface BlogPost extends PageCollectionItemBase {
-  title: string
-  description: string
-  date: string
-  author: string
-  readTime: string
-  image?: string
-  category: string
-  featured: boolean
-}
+import type { BlogPost } from '~/types/content'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -206,6 +194,19 @@ usePageSeo({
   title: currentPost.title,
   description: currentPost.description
 })
+
+// Schema.org
+const schemas = useSchemas()
+// For now, only use Article schema. Review schema commented out until we have verified reviews
+useSchemaOrg([schemas.article(currentPost)])
+// if (currentPost.category === 'clientStories') {
+//   useSchemaOrg([
+//     schemas.article(currentPost),
+//     schemas.clientStoryReview(currentPost)  // Disabled - fake ratings
+//   ])
+// } else {
+//   useSchemaOrg([schemas.article(currentPost)])
+// }
 
 // OG Image
 defineOgImageComponent('Main', {

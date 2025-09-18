@@ -4,9 +4,10 @@ export interface BlogPost extends PageCollectionItemBase {
   title: string
   description: string
   date: string
-  author: string
-  readTime: string
+  author?: string
+  readTime?: string
   image?: string
-  category: string
+  category?: string
   featured?: boolean
+  updatedAt?: string
 }

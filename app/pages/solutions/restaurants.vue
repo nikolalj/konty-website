@@ -14,12 +14,16 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const schemas = useSchemas()
 
 // SEO
 usePageSeo({
   title: t('seo.solutions.restaurants.title'),
   description: t('seo.solutions.restaurants.description')
 })
+
+// Schema.org
+useSchemaOrg([schemas.solutionService('restaurants')])
 
 // OG Image
 defineOgImageComponent('Main', {
