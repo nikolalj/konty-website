@@ -141,6 +141,7 @@ export default defineNuxtConfig({
   sitemap: {
     cacheMaxAgeSeconds: process.env.NODE_ENV === 'production' ? 3600 : 0,
     experimentalCompression: true,
+    excludeAppSources: true, // Only use custom sources specified in sources array
     defaults: {
       changefreq: 'weekly',
       priority: 0.7
