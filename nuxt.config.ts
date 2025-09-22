@@ -82,7 +82,7 @@ export default defineNuxtConfig({
 
     // SEO settings
     trailingSlash: false,
-    indexable: process.env.APP_ENV === 'production' && process.env.NUXT_PUBLIC_SITE_URL?.includes('konty.com'),
+    indexable: true,
 
     // Name and description will come from i18n translations
     // Identity will be set at runtime by server plugin based on locale
