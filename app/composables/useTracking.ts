@@ -41,7 +41,7 @@ export const useTracking = () => {
     // Always add context (check window exists for SSR safety)
     const enrichedParams = {
       page_path: route.path,
-      page_location: typeof window !== 'undefined' ? window.location.href : '',
+      page_url: typeof window !== 'undefined' ? window.location.href : '',
       locale: useNuxtApp().$i18n.locale.value,
       ...parameters
     }

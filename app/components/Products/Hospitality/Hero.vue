@@ -70,21 +70,12 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { track } = useTracking()
 
 const onPrimaryCta = () => {
-  track('generate_lead', {
-    lead_type: 'demo_interest',
-    lead_source: 'hospitality_hero',
-    product: 'konty_hospitality',
-    value: 50
-  })
+
 }
 
 const onSecondaryCta = () => {
-  track('view_item_list', {
-    item_list_name: 'pricing',
-    product: 'konty_hospitality'
-  })
+
 }
 </script>
