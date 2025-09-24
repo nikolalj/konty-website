@@ -40,10 +40,6 @@ const localePath = useLocalePath()
 const { track } = useTracking()
 
 const onDemoCta = () => {
-  track('generate_lead', {
-    lead_type: 'demo_interest',
-    lead_source: 'retail_features_hero',
-    product: 'konty_retail'
-  })
+  track('get_a_demo_cta', { location: 'Hero' })
 }
 </script>

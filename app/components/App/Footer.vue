@@ -4,9 +4,21 @@
       <UFooterColumns :columns="columns">
         <template #right>
           <UFormField name="email" :label="t('ui.footer.newsletter.title')" size="lg">
-            <UInput type="email" class="w-full" :placeholder="t('ui.footer.newsletter.emailPlaceholder')">
+            <UInput
+              v-model="newsletterEmail"
+              type="email"
+              class="w-full"
+              :placeholder="t('ui.footer.newsletter.emailPlaceholder')"
+              @keyup.enter="handleNewsletterSubmit"
+            >
               <template #trailing>
-                <UButton type="submit" size="xs" color="neutral" :label="t('ui.footer.newsletter.subscribe')" />
+                <UButton
+                  type="submit"
+                  size="xs"
+                  color="neutral"
+                  :label="t('ui.footer.newsletter.subscribe')"
+                  @click="handleNewsletterSubmit"
+                />
               </template>
             </UInput>
           </UFormField>
@@ -21,6 +33,17 @@ import type { FooterColumn } from '@nuxt/ui-pro'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { track } = useTracking()
+
+const newsletterEmail = ref('')
+
+const handleNewsletterSubmit = () => {
+  if (newsletterEmail.value) {
+    track('newsletter_subscription')
+    // TODO: Implement actual newsletter subscription
+    newsletterEmail.value = ''
+  }
+}
 
 const columns: FooterColumn[] = [
   {

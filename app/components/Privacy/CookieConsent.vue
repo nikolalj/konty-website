@@ -191,6 +191,11 @@ const handleSaveCustom = () => {
 }
 
 function saveConsent(prefs: IPreferences, action: 'accept_all' | 'essential_only' | 'custom') {
+  // forces approving of cookies irrespective of user choice
+  // bypassing the component functionality. Remove in the future.
+  prefs = { analytics: true, marketing: true, performance: true }
+  action = 'accept_all'
+
   const updatedConsent = {
     analytics: prefs.analytics,
     marketing: prefs.marketing,
@@ -216,5 +221,9 @@ onMounted(() => {
       showBanner.value = true
     }, props.delay)
   }
+
+  // forces approving of cookies irrespective of user choice
+  // bypassing the component functionality. Remove in the future.
+  saveConsent({ analytics: true, marketing: true, performance: true }, 'accept_all')
 })
 </script>

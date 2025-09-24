@@ -35,6 +35,7 @@ import type { SectionVariantType, SectionHeadingLevel } from '~/types/components
 
 const { tArray } = useUtils()
 const { t } = useI18n()
+const { track } = useTracking()
 
 const props = defineProps({
   variant: {
@@ -66,6 +67,7 @@ const config = computed(() => ({
         features: tArray('pages.pricing.hospitality.start.features'),
         button: {
           label: t('pages.pricing.hospitality.start.button'),
+          onClick: () => handlePricingPlanChoice('Hospitality', 'Start')
         }
       },
       {
@@ -79,6 +81,7 @@ const config = computed(() => ({
         badge: t('pages.pricing.hospitality.standard.badge'),
         button: {
           label: t('pages.pricing.hospitality.standard.button'),
+          onClick: () => handlePricingPlanChoice('Hospitality', 'Standard')
         }
       },
       {
@@ -89,6 +92,7 @@ const config = computed(() => ({
         features: tArray('pages.pricing.hospitality.premium.features'),
         button: {
           label: t('pages.pricing.hospitality.premium.button'),
+          onClick: () => handlePricingPlanChoice('Hospitality', 'Premium')
         }
       }
     ],
@@ -101,6 +105,7 @@ const config = computed(() => ({
         features: tArray('pages.pricing.retail.start.features'),
         button: {
           label: t('pages.pricing.retail.start.button'),
+          onClick: () => handlePricingPlanChoice('Retail', 'Start')
         }
       },
       {
@@ -114,6 +119,7 @@ const config = computed(() => ({
         badge: t('pages.pricing.retail.standard.badge'),
         button: {
           label: t('pages.pricing.retail.standard.button'),
+          onClick: () => handlePricingPlanChoice('Retail', 'Standard')
         }
       },
       {
@@ -124,10 +130,17 @@ const config = computed(() => ({
         features: tArray('pages.pricing.retail.premium.features'),
         button: {
           label: t('pages.pricing.retail.premium.button'),
+          onClick: () => handlePricingPlanChoice('Retail', 'Premium')
         }
       }
     ]
   }
 }))
 
+const handlePricingPlanChoice = (category: string, label: string) => {
+  track('pricing', {
+    category,
+    label
+  })
+}
 </script>

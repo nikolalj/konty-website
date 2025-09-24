@@ -78,6 +78,7 @@
         variant="solid"
         color="primary"
         :aria-label="t('ui.cta.primary')"
+        @click="handleGetDemo"
       >
         {{ t('ui.cta.primary') }}
       </UButton>
@@ -89,6 +90,7 @@
 <script setup lang="ts">
 const { y } = useWindowScroll()
 const { t } = useI18n()
+const { track } = useTracking()
 const localePath = useLocalePath()
 
 const ENTER_SOLID = 56
@@ -106,4 +108,8 @@ watch(y, () => {
   if (!isTopBarCollapsed.value && cur > ENTER_SOLID) isTopBarCollapsed.value = true
   else if (isTopBarCollapsed.value && cur < EXIT_SOLID) isTopBarCollapsed.value = false
 }, { immediate: true })
+
+function handleGetDemo() {
+  track('get_a_demo_cta', { location: 'Header' })
+}
 </script>

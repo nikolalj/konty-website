@@ -76,11 +76,6 @@ const localePath = useLocalePath()
 const { track } = useTracking()
 
 function onPrimaryCta(): void {
-  // GA4 standard event for lead generation
-  track('generate_lead', {
-    lead_type: 'demo_interest',
-    lead_source: 'homepage_hero',
-    value: 50
-  })
+  track('get_a_demo_cta', { location: 'Hero' })
 }
 </script>

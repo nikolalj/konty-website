@@ -41,6 +41,7 @@
               :href="option.link"
               target="_blank"
               class="flex flex-col items-center justify-center p-6 rounded-lg bg-white dark:bg-[var(--bg-300)] hover:bg-gray-100 dark:hover:bg-[var(--bg-400)] ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              @click="handleDownload('Full', option.platform)"
             >
               <UIcon :name="option.icon" class="w-12 h-12 text-primary mb-3" />
               <span class="text-sm font-medium">{{ option.title }}</span>
@@ -58,6 +59,7 @@
               :href="option.link"
               target="_blank"
               class="flex flex-col items-center justify-center p-6 rounded-lg bg-white dark:bg-[var(--bg-300)] hover:bg-gray-100 dark:hover:bg-[var(--bg-400)] ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              @click="handleDownload('Demo', option.platform)"
             >
               <UIcon :name="option.icon" class="w-12 h-12 text-gray-500 mb-3" />
               <span class="text-sm font-medium">{{ option.title }}</span>
@@ -84,6 +86,14 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const { track } = useTracking()
+
+const handleDownload = (version: 'Demo' | 'Full', platform: string) => {
+  track('download', {
+    category: version,
+    label: platform
+  })
+}
 
 const items = ref({
   production: {
@@ -91,21 +101,25 @@ const items = ref({
     options: [
       {
         title: t('pages.products.download.sections.production.web'),
+        platform: 'Web',
         icon: 'i-heroicons-globe-alt',
         link: 'https://app.konty.app'
       },
       {
         title: t('pages.products.download.sections.production.windows'),
+        platform: 'Windows',
         icon: 'i-simple-icons-windows',
         link: 'https://downloads.konty.app/windows/konty-setup.exe'
       },
       {
         title: t('pages.products.download.sections.production.android'),
+        platform: 'Android',
         icon: 'i-simple-icons-android',
         link: 'https://downloads.konty.app/android/konty.apk'
       },
       {
         title: t('pages.products.download.sections.production.macos'),
+        platform: 'Mac',
         icon: 'i-simple-icons-apple',
         link: 'https://downloads.konty.app/macos/konty.dmg'
       }
@@ -116,21 +130,25 @@ const items = ref({
     options: [
       {
         title: t('pages.products.download.sections.demo.web'),
+        platform: 'Web',
         icon: 'i-heroicons-globe-alt',
         link: 'https://demo.konty.app'
       },
       {
         title: t('pages.products.download.sections.demo.windows'),
+        platform: 'Windows',
         icon: 'i-simple-icons-windows',
         link: 'https://downloads.konty.app/demo/windows/konty-demo-setup.exe'
       },
       {
         title: t('pages.products.download.sections.demo.android'),
+        platform: 'Android',
         icon: 'i-simple-icons-android',
         link: 'https://downloads.konty.app/demo/android/konty-demo.apk'
       },
       {
         title: t('pages.products.download.sections.demo.macos'),
+        platform: 'Mac',
         icon: 'i-simple-icons-apple',
         link: 'https://downloads.konty.app/demo/macos/konty-demo.dmg'
       }

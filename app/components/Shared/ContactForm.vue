@@ -95,12 +95,16 @@ const loading = ref(false)
 const onSubmit = async () => {
   loading.value = true
 
-  // Track form submission (GA4 standard event)
-  track('generate_lead', {
-    lead_type: 'contact_form',
-    lead_source: 'contact_section',
-    value: 25
-  })
+  const route = useRoute()
+  const isDemoPage = route.path.includes('/demo')
+
+  // Track form submission based on context
+  if (isDemoPage) {
+    track('book_a_demo_form')
+  } else {
+    // Track general contact form submission
+    track('contact_form_submission')
+  }
 
   // TODO: Implement actual form submission
   await new Promise(resolve => setTimeout(resolve, 1000))
