@@ -60,16 +60,24 @@
       },
       "categories": {
         "restaurants": "Restaurants",
+        "restaurantsDesc": "Complete restaurant management solution - from reservations to payment.",
         "barsCafes": "Bars & Cafes",
+        "barsCafesDesc": "Fast checkout and inventory management for high-traffic venues.",
         "fastFood": "Quick Service / Fast Food",
+        "fastFoodDesc": "Optimized for speed and efficiency - perfect for quick service restaurants and delivery.",
         "grocerySupermarkets": "Grocery & Supermarkets",
+        "grocerySupermarketsDesc": "Manage thousands of products and high-volume transactions.",
         "clothingBoutiques": "Clothing & Boutiques",
+        "clothingBoutiquesDesc": "Track sizes, colors, and seasonal collections.",
         "convenienceStores": "Convenience Stores",
-        "b2b": "B2B Sales & E-Invoicing"
+        "convenienceStoresDesc": "Simple management of diverse product mix.",
+        "b2b": "B2B Sales & E-Invoicing",
+        "b2bDesc": "Professional solutions for wholesale and B2B partnerships."
       },
       "products": {
         "forHospitality": "Konty for Hospitality",
         "forRetail": "Konty for Retail",
+        "bookDemo": "Book a Demo",
         "download": "Download Konty",
         "faqdocs": "FAQ & Documentation"
       },
@@ -1021,13 +1029,7 @@
         "phone": "+38267607670",
         "email": "contact"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "knowsAbout": [
         "Point of Sale Systems",
         "Restaurant Management Software",

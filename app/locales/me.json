@@ -60,16 +60,24 @@
       },
       "categories": {
         "restaurants": "Restorani",
+        "restaurantsDesc": "Kompletno rješenje za upravljanje restoranom - od rezervacija do naplate.",
         "barsCafes": "Barovi i kafići",
+        "barsCafesDesc": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom.",
         "fastFood": "Brza hrana / Fast food",
+        "fastFoodDesc": "Optimizovan za brzinu i efikasnost - savršen za restorane brze hrane i dostavu.",
         "grocerySupermarkets": "Prodavnice hrane i supermarketi",
+        "grocerySupermarketsDesc": "Upravljanje velikim brojem artikala i brzim prometom.",
         "clothingBoutiques": "Prodavnice odjeće",
+        "clothingBoutiquesDesc": "Praćenje veličina, boja i sezonskih kolekcija.",
         "convenienceStores": "Prodavnice miješane robe",
-        "b2b": "B2B prodaja i E fakture"
+        "convenienceStoresDesc": "Jednostavno upravljanje raznovrsnim asortimanom.",
+        "b2b": "B2B prodaja i E fakture",
+        "b2bDesc": "Profesionalna rješenja za veleprodaju i B2B saradnju."
       },
       "products": {
         "forHospitality": "Konty za ugostiteljstvo",
         "forRetail": "Konty za trgovinu",
+        "bookDemo": "Zakaži demo",
         "download": "Preuzmi Konty",
         "faqdocs": "FAQ i dokumentacija"
       },
@@ -1021,13 +1029,7 @@
         "phone": "+38267607670",
         "email": "contact"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "knowsAbout": [
         "POS sistemi",
         "Softver za upravljanje restoranima",
