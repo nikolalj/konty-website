@@ -42,7 +42,6 @@ jobs:
           NODE_ENV: production
           APP_ENV: ${{ vars.APP_ENV }}
           NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
-          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
           GTM_ID: ${{ secrets.GTM_ID }}
 
       - name: Deploy to Cloudflare Workers
