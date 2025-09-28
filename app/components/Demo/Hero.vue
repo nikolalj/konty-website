@@ -72,6 +72,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const { track } = useTracking()
 
 const benefits = [
   { key: 'pages.demo.hero.benefit1' },
@@ -81,6 +82,9 @@ const benefits = [
 ]
 
 const scrollToCalendar = () => {
+  // Track demo CTA click
+  track('get_a_demo_cta', { location: 'Hero' })
+
   // Scroll to contact form section
   const element = document.querySelector('#contact-form')
   element?.scrollIntoView({ behavior: 'smooth' })
@@ -93,6 +97,9 @@ const scrollToVideo = () => {
 }
 
 const openCalendly = () => {
+  // Track demo CTA click
+  track('get_a_demo_cta', { location: 'Hero' })
+
   // Open Calendly in new tab or embed
   window.open('https://calendly.com/konty-demo', '_blank')
 }
