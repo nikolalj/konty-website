@@ -11,7 +11,6 @@ export interface GTMConsentEvent {
   'ad_personalization': 'granted' | 'denied'
   'functionality_storage'?: 'granted' | 'denied'
   'security_storage'?: 'granted' | 'denied'
-  wait_for_update?: number
 }
 
 // Standard tracking event
