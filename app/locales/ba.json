@@ -201,24 +201,28 @@
         "description": "Više od 9.000 preduzeća širom regiona svakodnevno koristi Konty"
       },
       "getStarted": {
-        "certificate": {
-          "description": "Reci nam o svom restoranu. Mi napravimo setup. To je bukvalno sve što radiš danas.",
-          "title": "Dan 1 ujutru: 15-minutni poziv"
+        "title": "Počni sa radom za 48h",
+        "description": "Prelazak na Konty je brz i jednostavan",
+        "step1": {
+          "tagline": "Prvi dan, ujutru",
+          "title": "15-minutni poziv",
+          "description": "Reci nam o svom restoranu. Mi napravimo setup. To je bukvalno sve što radiš danas."
         },
-        "equipment": {
-          "description": "Dolazimo kod tebe van špica. 30-minutne sesije. I tehnofobi nauče odmah.",
-          "title": "Dan 2 ujutru: Obuka osoblja"
+        "step2": {
+          "tagline": "Prvi dan, popodne",
+          "title": "Sve se prebacuje",
+          "description": "Meni, osoblje, stolovi, istorija - sve prebačeno perfektno. Integracije povezane. Ti ne radiš ništa."
         },
-        "register": {
-          "description": "Uzmi prvu narudžbu. Ostajemo cijeli dan. Radi paralelno stari ako hoćeš. Bez pritiska.",
-          "title": "Dan 2 popodne: Radiš"
+        "step3": {
+          "tagline": "Drugi dan, ujutru",
+          "title": "Obuka osoblja",
+          "description": "Dolazimo kod tebe van špica. 30-minutne sesije. I tehnofobovi nauče odmah."
         },
-        "sepPortal": {
-          "description": "Meni, osoblje, stolovi, historija - sve prebačeno perfektno. Integracije povezane. Ti ne radiš ništa.",
-          "title": "Dan 1 popodne: Sve se prebacuje"
-        },
-        "title": "POS sistem radi za 48 sati. Mi sve sredimo.",
-        "description": "Prelazak na Konty je brz i jednostavan"
+        "step4": {
+          "tagline": "Drugi dan, popodne",
+          "title": "Radiš",
+          "description": "Uzmi prvu porudžbinu. Ostajemo cijeli dan. Radi paralelno stari ako hoćeš. Bez pritiska."
+        }
       }
     },
     "pricing": {

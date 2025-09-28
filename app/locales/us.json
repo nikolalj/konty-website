@@ -201,24 +201,28 @@
         "description": "More than 9,000 businesses count on Konty every day"
       },
       "getStarted": {
-        "certificate": {
-          "description": "Tell us about your restaurant. We build your custom setup. That's literally all you do today.",
-          "title": "Day 1 Morning: 15-Minute Call"
+        "title": "Get started in 48 hours",
+        "description": "Switching to Konty is quick and easy",
+        "step1": {
+          "tagline": "Day 1, morning",
+          "title": "15-minute call",
+          "description": "Tell us about your restaurant. We build your custom setup. That's literally all you do today."
         },
-        "equipment": {
-          "description": "We come to you during slow hours. 30-minute sessions. Even tech-haters learn it instantly.",
-          "title": "Day 2 Morning: Happy Staff Training"
+        "step2": {
+          "tagline": "Day 1, afternoon",
+          "title": "Everything transfers",
+          "description": "Menu, staff, tables, history - all moved perfectly. Integrations connected. You do nothing."
         },
-        "register": {
-          "description": "Take your first order. We stay all day. Run old system parallel if you want. Zero pressure.",
-          "title": "Day 2 Afternoon: You're Live"
+        "step3": {
+          "tagline": "Day 2, morning",
+          "title": "Staff training",
+          "description": "We come to you during slow hours. 30-minute sessions. Even tech-haters learn it instantly."
         },
-        "sepPortal": {
-          "description": "Menu, staff, tables, history - all moved perfectly. Your integrations reconnected. You do nothing.",
-          "title": "Day 1 Afternoon: Everything Transfers"
-        },
-        "title": "POS System Setup in 48 Hours. We Do Everything.",
-        "description": "Switching to Konty is quick and easy"
+        "step4": {
+          "tagline": "Day 2, afternoon",
+          "title": "You're live",
+          "description": "Take your first order. We stay all day. Run old system parallel if you want. Zero pressure."
+        }
       }
     },
     "pricing": {
