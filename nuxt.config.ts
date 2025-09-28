@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   // Modules - Order matters
   modules: [
-    '@nuxt/ui-pro',
+    '@nuxt/ui',
     '@nuxt/image',
     '@nuxt/icon',
     '@vueuse/nuxt',
