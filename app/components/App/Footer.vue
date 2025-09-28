@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import type { FooterColumn } from '@nuxt/ui-pro'
+import type { FooterColumn } from '@nuxt/ui'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
