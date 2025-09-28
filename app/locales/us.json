@@ -149,15 +149,15 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Modern POS System Built for Growing Businesses",
-        "subtitle": "Streamline operations with a POS system designed for restaurants and retail. Focus on serving customers while we handle payments, inventory, and reporting.",
-        "tagline": "Join 9,000+ businesses using Konty to run their operations"
+        "title": "Focus on your business. Konty takes care of the rest.",
+        "subtitle": "A stable, reliable Point of Sale system you can count on — day after day.",
+        "tagline": "Trusted by 9,000+ businesses and growing"
       },
       "statistics": {
         "stat1": {
           "description": "Active business locations",
           "suffix": "+",
-          "value": "9,000"
+          "value": "9000"
         },
         "stat2": {
           "description": "Years of POS experience",
@@ -172,7 +172,7 @@
       },
       "testimonials": {
         "title": "What Our Customers Say",
-        "description": "Real feedback from business owners using Konty daily",
+        "description": "Stability, simplicity, and support that help them run their business with peace of mind",
         "items": {
           "t1": {
             "name": "Marko Petrović",
@@ -197,8 +197,8 @@
         }
       },
       "clients": {
-        "title": "Used by 9,000+ Business Locations",
-        "description": "Restaurants, cafes, retail stores, and service businesses across the region use Konty daily"
+        "title": "Partners Who Chose Konty",
+        "description": "More than 9,000 businesses count on Konty every day"
       },
       "getStarted": {
         "certificate": {
@@ -339,8 +339,9 @@
     },
     "products": {
       "features": {
+        "title": "Simple. Reliable. Ready to work.",
+        "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
         "hospitality": {
-          "description": "Essential features designed specifically for restaurants, cafes, and food service businesses.",
           "kitchenDisplay": {
             "description": "Orders display clearly in the kitchen with timing and preparation notes. Helps coordinate service and reduce wait times for customers.",
             "title": "Kitchen Display System"
@@ -353,7 +354,6 @@
             "description": "Visual table layout shows current status, order progress, and payment details. Helps servers coordinate service efficiently.",
             "title": "Table Management"
           },
-          "title": "Restaurant Features That Make Daily Operations Smoother",
           "tables": {
             "title": "Table Management"
           },
@@ -381,7 +381,6 @@
             "description": "Track customer preferences and purchase history. Generate reports to understand buying patterns and optimize inventory.",
             "title": "Customer Analytics"
           },
-          "description": "Streamlined POS features designed for retail stores, boutiques, and merchandise businesses.",
           "inventory": {
             "description": "Real-time stock tracking with low inventory alerts. Barcode scanning for quick updates and accurate counts.",
             "title": "Inventory Management"
@@ -390,7 +389,6 @@
             "description": "Fast payment processing with support for cards, cash, and mobile payments. Simple interface speeds up transactions.",
             "title": "Quick Checkout Process"
           },
-          "title": "Retail Features That Keep Your Store Running Smoothly",
           "barcode": {
             "title": "Barcode Scanning"
           },

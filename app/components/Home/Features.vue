@@ -2,17 +2,21 @@
   <SharedSection
     v-model="product"
     variant="1"
-    :title="t(`pages.products.features.${productKey}.title`)"
-    :description="t(`pages.products.features.${productKey}.description`)"
+    :title="t(`pages.products.features.title`)"
+    :description="t(`pages.products.features.description`)"
     :product-switch="true"
-    product-switch-position="top"
   >
     <div
-      :key="product"
       class="grid lg:grid-cols-2 gap-16 min-h-110"
     >
-      <UIAppear direction="right" :distance="32" :animate-on="product">
-        <div :class="product !== 'retail' ? 'lg:order-2' : 'lg:order-1'">
+      <UIAppear
+        :key="`image-${product}`"
+        direction="right"
+        :distance="32"
+        :animate-on="product"
+        :class="[product === 'retail' ? 'lg:order-1' : 'lg:order-2']"
+      >
+        <div>
           <NuxtImg
             :src="featureImages[product]"
             format="avif"
@@ -28,8 +32,14 @@
         </div>
       </UIAppear>
 
-      <UIAppear direction="left" :distance="32" :animate-on="product">
-        <div :class="product !== 'retail' ? 'lg:order-1' : 'lg:order-2'">
+      <UIAppear
+        :key="`content-${product}`"
+        direction="left"
+        :distance="32"
+        :animate-on="product"
+        :class="[product === 'retail' ? 'lg:order-2' : 'lg:order-1']"
+      >
+        <div>
           <!-- Features -->
           <div class="space-y-8 mb-12">
             <div
@@ -80,7 +90,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const product: Ref<'hospitality' | 'retail'> = ref('hospitality')
+const product = ref<'hospitality' | 'retail'>('hospitality')
 
 // Feature images (could be moved to static assets later)
 const featureImages = {

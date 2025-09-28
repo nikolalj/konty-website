@@ -149,15 +149,15 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Moderni POS sistem za vaš biznis",
-        "subtitle": "Upravljajte prodajom, zalihama i računovodstvom kroz jedan sistem. Fokusirajte se na kupce dok Konty vodi računa o operativnim poslovima.",
-        "tagline": "Koristi više od 9.000 poslovnih objekata širom regiona"
+        "title": "Posvetite se svom poslu. Konty brine o svemu ostalom.",
+        "subtitle": "Stabilan i pouzdan POS sistem na koji možete da se oslonite svakog dana.",
+        "tagline": "Više od 9.000 klijenata širom regiona koristi Konty"
       },
       "statistics": {
         "stat1": {
           "description": "Aktivnih poslovnih lokacija",
           "suffix": "+",
-          "value": "9.000"
+          "value": "9000"
         },
         "stat2": {
           "description": "Godina iskustva u POS sistemima",
@@ -171,8 +171,8 @@
         }
       },
       "testimonials": {
-        "title": "Šta kažu naši korisnici",
-        "description": "Iskustva vlasnika biznisa koji svakodnevno koriste Konty",
+        "title": "Šta naši korisnici kažu",
+        "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
             "name": "Miloš Petrović",
@@ -197,8 +197,8 @@
         }
       },
       "clients": {
-        "title": "Koristi više od 9.000 poslovnih objekata",
-        "description": "Od restorana do maloprodajnih lanaca, naši korisnici se oslanjaju na Konty svakodnevno"
+        "title": "Partneri koji su izabrali Konty",
+        "description": "Više od 9.000 preduzeća širom regiona svakodnevno koristi Konty"
       },
       "getStarted": {
         "certificate": {
@@ -339,8 +339,9 @@
     },
     "products": {
       "features": {
+        "title": "Jednostavan. Pouzdan. Spreman za rad.",
+        "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
         "hospitality": {
-          "description": "Kad subota uveče postane haos, ovo su jedine funkcije koje su bitne.",
           "kitchenDisplay": {
             "description": "Svaka narudžba sačuvana lokalno prije cloud-a. Internet pao? Kuhinja radi. Struja trepnula? Sve je tu. Nikad ne izgubi catering od 600 KM.",
             "title": "Narudžbe koje se ne gube"
@@ -353,7 +354,6 @@
             "description": "Sinhronizacija u realnom vremenu radi i offline. Hostesa vidi što i konobar. Bez ljutih gostiju, bez poklanjanja. Uštedi 1.000+ KM nedjeljno.",
             "title": "Nema više duplih rezervacija"
           },
-          "title": "Rješenja za probleme u 3 ujutru",
           "tables": {
             "title": "Upravljanje stolovima"
           },
@@ -381,7 +381,6 @@
             "description": "Vidi šablone koje ljudi propuštaju. Šalji ponude koje se kupuju. Bez diplome iz analitike. 3x veća konverzija.",
             "title": "Znaj šta će kupiti prije njih"
           },
-          "description": "Fokusiraj se na kupce, ne na probleme sa tehnikom.",
           "inventory": {
             "description": "Automatska narudžba prije nestanka. Upozorenja koja rade. Nikad ne vraćaj kupce. Povećaj prodaju 15% bez out-of-stock.",
             "title": "Nikad bez najprodavanijih artikala"
@@ -390,7 +389,6 @@
             "description": "Skeniraj, naplati, gotovo. Radi sa svim karticama. Brži red, kupci se vraćaju. 40% više kupaca u špicu.",
             "title": "Naplata za 30 sekundi, ne 3 minuta"
           },
-          "title": "Prodaj više. Manje brojanja. Bez stresa.",
           "barcode": {
             "title": "Barkod skeniranje"
           },

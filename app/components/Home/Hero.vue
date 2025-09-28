@@ -20,15 +20,27 @@
           </p>
 
           <div class="mt-10">
-            <div class="flex flex-wrap gap-x-6 gap-y-3">
+            <div class="flex flex-wrap gap-x-4">
               <UButton
                 color="primary"
                 size="lg"
                 :to="localePath('/demo')"
                 class="text-base"
+                icon="i-lucide-calendar"
                 @click="onPrimaryCta"
               >
                 {{ t('ui.cta.primary') }}
+              </UButton>
+              <UButton
+                :to="localePath('/contact')"
+                size="lg"
+                variant="outline"
+                color="primary"
+                :aria-label="t('ui.cta.secondary')"
+                class="border-1"
+                icon="i-lucide-mail"
+              >
+                {{ t('ui.cta.secondary') }}
               </UButton>
             </div>
           </div>
@@ -37,19 +49,21 @@
 
       <!-- Right column: product image -->
       <UIAppear direction="left" :distance="64">
-        <NuxtImg
-          src="/images/hero/hero.avif"
-          format="avif"
-          alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
-          width="500"
-          height="600"
-          loading="eager"
-          decoding="async"
-          quality="90"
-          fit="cover"
-          fetchpriority="high"
-          role="presentation"
-        />
+        <div class="flex justify-center">
+          <NuxtImg
+            src="/images/hero/hero.avif"
+            format="avif"
+            alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
+            width="500"
+            height="600"
+            loading="eager"
+            decoding="async"
+            quality="90"
+            fit="cover"
+            fetchpriority="high"
+            role="presentation"
+          />
+        </div>
       </UIAppear>
     </UContainer>
 
