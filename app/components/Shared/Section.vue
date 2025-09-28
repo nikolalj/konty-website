@@ -5,15 +5,6 @@
         v-if="props.title || props.description || props.productSwitch"
         class="flex flex-col items-center mb-16"
       >
-        <UIAppear>
-          <UTabs
-            v-if="props.productSwitch && props.productSwitchPosition === 'top'"
-            v-model="productInternal"
-            :items="items"
-            class="mt-8 w-full sm:w-lg"
-          />
-        </UIAppear>
-
         <UIAppear :animate-on="props.title">
           <component
             :is="props.headingLevel || 'h2'"
@@ -36,7 +27,7 @@
 
         <UIAppear>
           <UTabs
-            v-if="props.productSwitch && props.productSwitchPosition === 'bottom'"
+            v-if="props.productSwitch"
             v-model="productInternal"
             :items="items"
             class="mt-8 w-full sm:w-lg"
@@ -58,6 +49,10 @@ const { t } = useI18n()
 const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
+  modelValue: {
+    type: String,
+    default: 'hospitality'
+  },
   variant: {
     type: String as PropType<SectionVariantType>,
     default: undefined,
@@ -74,14 +69,10 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  productSwitchPosition: {
-    type: String as PropType<'top' | 'bottom'>,
-    default: 'bottom'
-  },
   headingLevel: {
     type: String as PropType<SectionHeadingLevel>,
     default: 'h2'
-  }
+  },
 })
 
 const getBgClass = (variant: SectionVariantType) => {
@@ -94,9 +85,13 @@ const getBgClass = (variant: SectionVariantType) => {
 
 const bgClasses = ref(getBgClass(props.variant))
 
-const productInternal = ref('hospitality')
+const productInternal = ref(props.modelValue)
 
 watch(productInternal, val => emit('update:modelValue', val))
+
+watch(() => props.modelValue, val => {
+  productInternal.value = val
+})
 
 const items = ref<TabsItem[]>([
   {

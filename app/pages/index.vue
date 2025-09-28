@@ -5,9 +5,9 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList hydrate-on-visible />
+    <LazySharedStatistics class="!pt-4" hydrate-on-visible />
     <LazyHomeFeatures hydrate-on-visible />
     <LazySharedTestimonials hydrate-on-idle />
-    <LazySharedStatistics hydrate-on-idle />
     <LazySharedGetStarted variant="1" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
