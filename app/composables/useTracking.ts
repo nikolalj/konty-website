@@ -46,13 +46,6 @@ export const useTracking = () => {
       ...parameters
     }
 
-    // Add currency for conversion events if not provided
-    if (['generate_lead', 'sign_up', 'purchase', 'begin_checkout'].includes(eventName)) {
-      if (!parameters?.currency) {
-        Object.assign(enrichedParams, { currency: useNuxtApp().$i18n.t('ui.common.labels.currency') })
-      }
-    }
-
     // Debug logging in development
     if (import.meta.dev) {
       console.log(`[GTM] ${eventName}:`, enrichedParams)
@@ -69,35 +62,8 @@ export const useTracking = () => {
     }
   }
 
-  /**
-   * Enhanced page view with business context
-   * Pushes 'page_view' event to GTM dataLayer with custom parameters
-   */
-  const trackPage = () => {
-    const getPageCategory = () => {
-      // Use route.name which is locale-agnostic in Nuxt i18n
-      const routeName = route.name?.toString() || ''
-
-      // Route names in Nuxt i18n are like 'pricing___me', 'pricing___rs', or just 'pricing'
-      const baseName = routeName.split('___')[0]
-
-      // Special case: index -> home
-      if (baseName === 'index') return 'home'
-
-      // Return the base name for everything else
-      return baseName || 'other'
-    }
-
-    track('page_view', {
-      page_title: typeof document !== 'undefined' ? document.title : '',
-      page_category: getPageCategory(),
-      user_type: useCookie('user_type').value || 'visitor'
-    })
-  }
-
   return {
     track,
-    trackPage,
     onUpdateConsent
   }
 }

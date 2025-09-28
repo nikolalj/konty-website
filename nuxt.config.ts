@@ -292,7 +292,7 @@ export default defineNuxtConfig({
     id: process.env.GTM_ID || '',
     enabled: true,
     debug: process.env.APP_ENV === 'development',
-    loadScript: false,  // Manual loading for performance
+    loadScript: true,
     enableRouterSync: true,
     devtools: process.env.APP_ENV === 'development'
   },
