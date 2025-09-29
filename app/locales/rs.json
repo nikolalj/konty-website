@@ -33,8 +33,7 @@
         "bookDemo": "Lični demo (15 min)",
         "dismiss": "Odbaci",
         "stayHere": "Ostani ovde",
-        "learnMore": "Istraži funkcije",
-        "scheduleDemo": "Zakaži demo"
+        "learnMore": "Istraži funkcije"
       },
       "labels": {
         "currency": "RSD",
@@ -45,7 +44,7 @@
       "loading": {}
     },
     "contactForm": {
-      "title": "Imaš pitanja? Kontaktiraj nas.",
+      "title": "Imate pitanja? Kontaktirajte nas.",
       "description": "Piši nam i naš tim će brzo odgovoriti."
     },
     "navigation": {
@@ -108,13 +107,12 @@
         "message": "Najveći problem sa POS? (Opciono)"
       },
       "placeholders": {
-        "name": "Marko",
-        "email": "marko&#64;restoran.rs",
-        "message": "Sistem puca svake subote..."
+        "name": "Ime",
+        "email": "Email adresa",
+        "message": "Poruka (opciono)"
       },
       "buttons": {
-        "submit": "Dobij svoj demo",
-        "requestDemo": "Dobij svoj demo"
+        "submit": "Pošalji"
       }
     },
     "errors": {
@@ -338,67 +336,31 @@
         "title": "Jednostavan. Pouzdan. Spreman za rad.",
         "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
         "hospitality": {
-          "kitchenDisplay": {
-            "description": "Svaka porudžbina sačuvana lokalno pre cloud-a. Internet pao? Kuhinja radi. Struja trepnula? Sve je tu. Nikad ne izgubi ketering od 30.000 din.",
-            "title": "Porudžbine koje se ne gube"
+          "feat1": {
+            "title": "Sektori i stolovi",
+            "description": "Rad po stolovima podeljenim u više sektora. Detaljan pregled računa, aktivnosti konobara, stanja naplatnog uređaja, izveštaja, itd."
           },
-          "staffManagement": {
-            "description": "Interfejs otporan na greške. Bez muke sa dodacima. Bez potrebe za šefom. I pratilac može da radi. Smanji vreme obuke za 75%.",
-            "title": "Novi konobar? Obučen za 15 minuta"
+          "feat2": {
+            "title": "Brza i efikasna prodaja",
+            "description": "Brz odabir artikala kroz intuitivan korisnički interfejs. Efikasno izdavanje računa i porudžbina uz različite metode gotovinskog i bezgotovinskog plaćanja, štampanje porudžbina na kuhinjskom ili šank printeru, itd."
           },
-          "tableManagement": {
-            "description": "Sinhronizacija u realnom vremenu radi i offline. Hostesa vidi što i konobar. Bez ljutih gostiju, bez poklanjanja. Uštedi 50.000+ din nedeljno.",
-            "title": "Nema više duplih rezervacija"
-          },
-          "tables": {
-            "title": "Upravljanje stolovima"
-          },
-          "kitchen": {
-            "title": "Kuhinjski ekran"
-          },
-          "staff": {
-            "title": "Upravljanje osobljem"
-          },
-          "onlineOrdering": {
-            "title": "Online naručivanje"
-          },
-          "reservations": {
-            "title": "Rezervacije"
-          },
-          "splitBills": {
-            "title": "Podela računa"
-          },
-          "offline": {
-            "title": "Offline rad"
+          "feat3": {
+            "title": "Administracija",
+            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe, itd. Precizni izveštaji i detaljan uvid u sve segmente vašeg poslovanja."
           }
         },
         "retail": {
-          "customerInsights": {
-            "description": "Vidi šablone koje ljudi propuštaju. Šalji ponude koje se kupuju. Bez diplome iz analitike. 3x veća konverzija.",
-            "title": "Znaj šta će kupiti pre njih"
+          "feat1": {
+            "title": "Brza i efikasna prodaja",
+            "description": "Brza pretraga i odabir artikala po imenu, šifri, barkodu (običnom i težinskom). Detaljan pregled računa, aktivnosti zaposlenih, stanja naplatnog uređaja, izveštaja, itd."
           },
-          "inventory": {
-            "description": "Automatska narudžba pre nestanka. Bar kod čitač za brzo brojanje. Nikad ne vraćaj kupce. Povećaj prodaju 15% bez out-of-stock.",
-            "title": "Nikad bez najprodavanijih artikala"
+          "feat2": {
+            "title": "Administracija",
+            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe i ostalim poslovnim procesima."
           },
-          "quickCheckout": {
-            "description": "Skeniraj, naplati, gotovo. Radi sa svim karticama. Brži red, kupci se vraćaju. 40% više kupaca u špicu.",
-            "title": "Naplata za 30 sekundi, ne 3 minuta"
-          },
-          "barcode": {
-            "title": "Barkod skeniranje"
-          },
-          "loyalty": {
-            "title": "Program lojalnosti"
-          },
-          "multiLocation": {
-            "title": "Više lokacija"
-          },
-          "analytics": {
-            "title": "Analitika"
-          },
-          "offline": {
-            "title": "Offline rad"
+          "feat3": {
+            "title": "Izveštaji i statistike",
+            "description": "Precizni i temeljni izveštaji koji će vam omogućiti detaljan uvid u sve segmente vašeg poslovanja."
           }
         }
       },

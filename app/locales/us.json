@@ -33,8 +33,7 @@
         "bookDemo": "Get Personal Demo (15 min)",
         "dismiss": "Dismiss",
         "stayHere": "Stay here",
-        "learnMore": "Explore Features",
-        "scheduleDemo": "Schedule Demo"
+        "learnMore": "Explore Features"
       },
       "labels": {
         "currency": "USD",
@@ -108,13 +107,12 @@
         "message": "What would you like to see in the demo? (Optional)"
       },
       "placeholders": {
-        "name": "John",
-        "email": "john&#64;restaurant.com",
-        "message": "Table management, inventory tracking..."
+        "name": "Name",
+        "email": "Email address",
+        "message": "Message (optional)"
       },
       "buttons": {
-        "submit": "Book a Demo",
-        "requestDemo": "Book a Demo"
+        "submit": "Submit"
       }
     },
     "errors": {
@@ -338,67 +336,31 @@
         "title": "Simple. Reliable. Ready to work.",
         "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
         "hospitality": {
-          "kitchenDisplay": {
-            "description": "Orders display clearly in the kitchen with timing and preparation notes. Helps coordinate service and reduce wait times for customers.",
-            "title": "Kitchen Display System"
+          "feat1": {
+            "title": "Sections and Tables",
+            "description": "Manage tables across multiple sections. Get detailed overview of bills, server activities, POS terminal status, reports, and more."
           },
-          "staffManagement": {
-            "description": "Intuitive interface that's easy to learn. Role-based access and simple workflows help new team members get up to speed quickly.",
-            "title": "Easy Staff Training"
+          "feat2": {
+            "title": "Fast and Efficient Sales",
+            "description": "Quick item selection through intuitive interface. Efficient billing and ordering with various cash and cashless payment methods, order printing to kitchen or bar printers, and more."
           },
-          "tableManagement": {
-            "description": "Visual table layout shows current status, order progress, and payment details. Helps servers coordinate service efficiently.",
-            "title": "Table Management"
-          },
-          "tables": {
-            "title": "Table Management"
-          },
-          "kitchen": {
-            "title": "Kitchen Display"
-          },
-          "staff": {
-            "title": "Staff Management"
-          },
-          "onlineOrdering": {
-            "title": "Online Ordering"
-          },
-          "reservations": {
-            "title": "Reservations"
-          },
-          "splitBills": {
-            "title": "Split Bills"
-          },
-          "offline": {
-            "title": "Offline Mode"
+          "feat3": {
+            "title": "Administration",
+            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods, etc. Precise reports and detailed insights into all segments of your business."
           }
         },
         "retail": {
-          "customerInsights": {
-            "description": "Track customer preferences and purchase history. Generate reports to understand buying patterns and optimize inventory.",
-            "title": "Customer Analytics"
+          "feat1": {
+            "title": "Fast and Efficient Sales",
+            "description": "Quick search and selection of items by name, code, barcode (regular and weight-based). Detailed overview of receipts, employee activities, POS terminal status, reports, and more."
           },
-          "inventory": {
-            "description": "Real-time stock tracking with low inventory alerts. Barcode scanning for quick updates and accurate counts.",
-            "title": "Inventory Management"
+          "feat2": {
+            "title": "Administration",
+            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods and other business processes."
           },
-          "quickCheckout": {
-            "description": "Fast payment processing with support for cards, cash, and mobile payments. Simple interface speeds up transactions.",
-            "title": "Quick Checkout Process"
-          },
-          "barcode": {
-            "title": "Barcode Scanning"
-          },
-          "loyalty": {
-            "title": "Loyalty Program"
-          },
-          "multiLocation": {
-            "title": "Multi-Location"
-          },
-          "analytics": {
-            "title": "Analytics"
-          },
-          "offline": {
-            "title": "Offline Mode"
+          "feat3": {
+            "title": "Reports and Statistics",
+            "description": "Precise and comprehensive reports that give you detailed insights into all segments of your business."
           }
         }
       },

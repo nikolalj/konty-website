@@ -35,6 +35,6 @@ defineOgImageComponent('Main', {
   title: t('pages.demo.hero.title'),
   description: t('pages.demo.hero.subtitle'),
   badge: t('pages.pricing.freeTrial'),
-  cta: t('ui.forms.buttons.requestDemo')
+  cta: t('ui.cta.primary')
 })
 </script>

@@ -14,7 +14,6 @@
         direction="right"
         :distance="32"
         :animate-on="product"
-        :class="[product === 'retail' ? 'lg:order-1' : 'lg:order-2']"
       >
         <div>
           <NuxtImg
@@ -37,7 +36,6 @@
         direction="left"
         :distance="32"
         :animate-on="product"
-        :class="[product === 'retail' ? 'lg:order-2' : 'lg:order-1']"
       >
         <div>
           <!-- Features -->
@@ -74,7 +72,7 @@
               :to="link.to ? localePath(link.to) : undefined"
               :color="link.color"
               :variant="link.variant"
-              :trailing-icon="link.trailingIcon"
+              :icon="link.icon"
               size="lg"
               class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
             >
@@ -103,32 +101,14 @@ const productKey = computed(() => product.value === 'hospitality' ? 'hospitality
 // Feature configuration with translation keys
 const features = {
   hospitality: [
-    {
-      key: 'tableManagement',
-      icon: 'i-lucide-layout-grid'
-    },
-    {
-      key: 'kitchenDisplay',
-      icon: 'i-lucide-chef-hat'
-    },
-    {
-      key: 'staffManagement',
-      icon: 'i-lucide-users'
-    }
+    { key: 'feat1', icon: 'i-lucide-layout-grid' },
+    { key: 'feat2', icon: 'i-lucide-receipt-text' },
+    { key: 'feat3', icon: 'i-lucide-settings' }
   ],
   retail: [
-    {
-      key: 'inventory',
-      icon: 'i-lucide-package'
-    },
-    {
-      key: 'customerInsights',
-      icon: 'i-lucide-user-check'
-    },
-    {
-      key: 'quickCheckout',
-      icon: 'i-lucide-zap'
-    }
+    { key: 'feat1', icon: 'i-lucide-shopping-cart' },
+    { key: 'feat2', icon: 'i-lucide-settings' },
+    { key: 'feat3', icon: 'i-lucide-chart-pie' }
   ]
 }
 
@@ -138,41 +118,41 @@ interface FeatureLink {
   to: string
   color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
   variant: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link'
-  trailingIcon: string
+  icon: string
 }
 
 // Links configuration with translation keys
 const links: Record<string, FeatureLink[]> = {
   hospitality: [
     {
-      labelKey: 'ui.common.buttons.learnMore',
-      to: '/products/hospitality',
+      labelKey: 'ui.cta.primary',
+      to: '/demo',
       color: 'primary',
       variant: 'solid',
-      trailingIcon: 'i-lucide-arrow-right'
+      icon: 'i-lucide-calendar'
     },
     {
-      labelKey: 'ui.common.buttons.scheduleDemo',
-      to: '/demo',
+      labelKey: 'ui.cta.secondary',
+      to: '/products/hospitality',
       color: 'neutral',
       variant: 'subtle',
-      trailingIcon: 'i-lucide-calendar'
+      icon: 'i-lucide-mail'
     }
   ],
   retail: [
     {
-      labelKey: 'ui.common.buttons.learnMore',
-      to: '/products/retail',
+      labelKey: 'ui.cta.primary',
+      to: '/demo',
       color: 'primary',
       variant: 'solid',
-      trailingIcon: 'i-lucide-arrow-right'
+      icon: 'i-lucide-calendar'
     },
     {
-      labelKey: 'ui.common.buttons.scheduleDemo',
-      to: '/demo',
+      labelKey: 'ui.cta.secondary',
+      to: '/products/retail',
       color: 'neutral',
-      variant: 'outline',
-      trailingIcon: 'i-lucide-play-circle'
+      variant: 'subtle',
+      icon: 'i-lucide-mail'
     }
   ]
 }
