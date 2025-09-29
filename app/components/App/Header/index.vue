@@ -21,11 +21,15 @@
         >
           <!-- Contact info on right (or centered on homepage) -->
           <div class="flex items-center gap-4 flex-1">
-            <div class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400">
+            <div
+              class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400"
+            >
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact</span>
             </div>
-            <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+            <div
+              class="flex items-center gap-1 text-gray-600 dark:text-gray-400"
+            >
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
             </div>
@@ -43,19 +47,21 @@
     </template>
 
     <template #title>
-      <div class="flex gap-2">
-        <UColorModeImage
-          light="/images/branding/logo-light.svg"
-          dark="/images/branding/logo-dark.svg"
-          alt="Konty logo"
-          width="40"
-          height="40"
-        />
-        <span class="hidden md:block text-2xl">konty</span>
+      <!-- Logo + horizontal navigation (nav shown only on large screens horizontally) -->
+      <div class="flex items-center gap-12">
+        <div class="flex items-center gap-2 shrink-0">
+          <UColorModeImage
+            light="/images/branding/logo-light.svg"
+            dark="/images/branding/logo-dark.svg"
+            alt="Konty logo"
+            width="40"
+            height="40"
+          />
+          <span class="hidden md:block text-2xl">konty</span>
+        </div>
+        <AppHeaderMenu orientation="horizontal" class="hidden lg:flex" />
       </div>
     </template>
-
-    <AppHeaderMenu orientation="horizontal" />
 
     <template #body>
       <AppHeaderMenu orientation="vertical" />
@@ -68,7 +74,7 @@
         variant="outline"
         color="primary"
         :aria-label="t('ui.cta.secondary')"
-        class="border-1"
+        class="border-1 lg:min-w-[150px] justify-center"
       >
         {{ t('ui.cta.secondary') }}
       </UButton>
@@ -78,13 +84,13 @@
         variant="solid"
         color="primary"
         :aria-label="t('ui.cta.primary')"
+        class="lg:min-w-[150px] justify-center"
         @click="handleGetDemo"
       >
         {{ t('ui.cta.primary') }}
       </UButton>
     </template>
   </UHeader>
-
 </template>
 
 <script setup lang="ts">
@@ -94,20 +100,27 @@ const { track } = useTracking()
 const localePath = useLocalePath()
 
 const ENTER_SOLID = 56
-const EXIT_SOLID  = 8
+const EXIT_SOLID = 8
 
 const isHeaderSolid = ref(false)
 const isTopBarCollapsed = ref(false)
 
-watch(y, () => {
-  const cur = y.value
+watch(
+  y,
+  () => {
+    const cur = y.value
 
-  if (!isHeaderSolid.value && cur > ENTER_SOLID) isHeaderSolid.value = true
-  else if (isHeaderSolid.value && cur < EXIT_SOLID) isHeaderSolid.value = false
+    if (!isHeaderSolid.value && cur > ENTER_SOLID) isHeaderSolid.value = true
+    else if (isHeaderSolid.value && cur < EXIT_SOLID)
+      isHeaderSolid.value = false
 
-  if (!isTopBarCollapsed.value && cur > ENTER_SOLID) isTopBarCollapsed.value = true
-  else if (isTopBarCollapsed.value && cur < EXIT_SOLID) isTopBarCollapsed.value = false
-}, { immediate: true })
+    if (!isTopBarCollapsed.value && cur > ENTER_SOLID)
+      isTopBarCollapsed.value = true
+    else if (isTopBarCollapsed.value && cur < EXIT_SOLID)
+      isTopBarCollapsed.value = false
+  },
+  { immediate: true }
+)
 
 function handleGetDemo() {
   track('get_a_demo_cta', { location: 'Header' })
