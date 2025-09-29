@@ -42,7 +42,7 @@ Odluka o promeni došla je nakon što je Milan posetio koleginu restoran u Kotor
 Konty tim stigao je početkom maja, taman pre početka sezone. "Bio sam prestrašen da menjam sisteme pre našeg najužurbanijeg perioda," priznaje Milan. "Ali oni su imali plan za sve."
 
 Dan 1: Podešavanje sistema i optimizacija mreže za pokrivanje plaže
-Dan 2: Obuka osoblja sa vežbanjem realnih scenarija
+Dan 2: Instalacija i obuka zaposlenih sa vežbanjem realnih scenarija
 Dan 3: Meko lansiranje sa ograničenom uslugom na plaži, zatim puna operacija do večere
 
 "Do treće večeri, moje osoblje je bilo brže na Konty sistemu nego što su ikad bili na našem starom sistemu."

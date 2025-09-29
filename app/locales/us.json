@@ -196,24 +196,24 @@
         "title": "Get started in 48 hours",
         "description": "Switching to Konty is quick and easy",
         "step1": {
-          "tagline": "Day 1, morning",
-          "title": "15-minute call",
-          "description": "Tell us about your restaurant. We build your custom setup. That's literally all you do today."
+          "tagline": "Day 1, Morning",
+          "title": "15-Minute Call",
+          "description": "You tell us about your business and your needs. Based on that, we create a system tailored to you."
         },
         "step2": {
-          "tagline": "Day 1, afternoon",
-          "title": "Everything transfers",
-          "description": "Menu, staff, tables, history - all moved perfectly. Integrations connected. You do nothing."
+          "tagline": "Day 1, Afternoon",
+          "title": "Account Setup",
+          "description": "We create and configure your account. We transfer products, customers, and everything you need. You don’t do a thing."
         },
         "step3": {
-          "tagline": "Day 2, morning",
-          "title": "Staff training",
-          "description": "We come to you during slow hours. 30-minute sessions. Even tech-haters learn it instantly."
+          "tagline": "Day 2, Morning",
+          "title": "Installation and Staff Training",
+          "description": "Our team carries out the system installation and staff training at the agreed time."
         },
         "step4": {
-          "tagline": "Day 2, afternoon",
-          "title": "You're live",
-          "description": "Take your first order. We stay all day. Run old system parallel if you want. Zero pressure."
+          "tagline": "Day 2, Afternoon",
+          "title": "You’re Ready to Start",
+          "description": "You’re ready to go. Our team is available to you 24/7."
         }
       }
     },

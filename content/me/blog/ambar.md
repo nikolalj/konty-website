@@ -136,7 +136,7 @@ On posebno naglašava važnost arhitekture oblaka: "Mogućnost upravljanja svime
 | Upravljane lokacije | 4 odvojena sistema | 1 jedinstvena platforma | Potpuna integracija |
 | Vrijeme ažuriranja menija | 2 sata po lokaciji | 5 minuta sve lokacije | 95% smanjenje |
 | Vidljivost inventara | Lokacija po lokacija | Real-time sve lokacije | Puna transparentnost |
-| Obuka osoblja | Specifično za lokaciju | Univerzalni sistem | Fleksibilna radna snaga |
+| Instalacija i obuka zaposlenih | Specifično za lokaciju | Univerzalni sistem | Fleksibilna radna snaga |
 | Vrijeme izvještavanja | 8+ sati sedmično | Automatski | Ušteda vremena |
 | Podešavanje širenja | 2-3 nedjelje | 2-3 sata | 98% brže |
 

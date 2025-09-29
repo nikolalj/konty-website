@@ -198,22 +198,22 @@
         "step1": {
           "tagline": "Prvi dan, ujutru",
           "title": "15-minutni poziv",
-          "description": "Reci nam o svom restoranu. Mi napravimo setup. To je bukvalno sve što radiš danas."
+          "description": "Opišeš nam svoj biznis i svoje potrebe. Na osnovu toga mi kreiramo sistem po tvojoj mjeri."
         },
         "step2": {
           "tagline": "Prvi dan, popodne",
-          "title": "Sve se prebacuje",
-          "description": "Meni, osoblje, stolovi, istorija - sve prebačeno perfektno. Integracije povezane. Ti ne radiš ništa."
+          "title": "Podešavanje naloga",
+          "description": "Kreiramo i konfigurišemo nalog. Prebacimo artikle, kupce i sve što je potrebno. Vi ne radite ništa."
         },
         "step3": {
           "tagline": "Drugi dan, ujutru",
-          "title": "Obuka osoblja",
-          "description": "Dolazimo kod tebe van špica. 30-minutne sesije. I tehnofobovi nauče odmah."
+          "title": "Instalacija i obuka zaposlenih",
+          "description": "Instalaciju sistema i obuku vaših zaposlenih realizuje naš tim u dogovorenom terminu."
         },
         "step4": {
           "tagline": "Drugi dan, popodne",
-          "title": "Radiš",
-          "description": "Uzmi prvu porudžbinu. Ostajemo cijeli dan. Radi paralelno stari ako hoćeš. Bez pritiska."
+          "title": "Možete da počnete sa radom",
+          "description": "Spremni ste za rad. Naš tim vam stoji na raspolaganju 24/7."
         }
       }
     },
