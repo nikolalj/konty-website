@@ -30,9 +30,9 @@ defineOgImageComponent('Product', {
   product: 'Konty Hospitality',
   title: t('pages.products.hospitality.hero.title'),
   features: [
-    t('pages.products.features.hospitality.tableManagement.title'),
-    t('pages.products.features.hospitality.kitchenDisplay.title'),
-    t('pages.products.features.hospitality.staffManagement.title')
+    t('pages.products.features.hospitality.feat1.title'),
+    t('pages.products.features.hospitality.feat2.title'),
+    t('pages.products.features.hospitality.feat3.title')
   ],
   cta: t('ui.cta.primary'),
   icon: '🍽️'

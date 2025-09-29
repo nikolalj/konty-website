@@ -56,12 +56,12 @@ export const useSchemas = () => {
 
       // Key features list
       featureList: [
-        t('pages.products.features.retail.inventory.title'),
-        t('pages.products.features.retail.barcode.title'),
-        t('pages.products.features.retail.loyalty.title'),
-        t('pages.products.features.retail.multiLocation.title'),
-        t('pages.products.features.retail.analytics.title'),
-        t('pages.products.features.retail.offline.title')
+        t('pages.products.features.retail.feat1.title'),
+        t('pages.products.features.retail.feat2.title'),
+        t('pages.products.features.retail.feat3.title'),
+        t('pages.products.features.retail.feat1.title'),
+        t('pages.products.features.retail.feat2.title'),
+        t('pages.products.features.retail.feat3.title')
       ],
 
       // Screenshot for rich results
@@ -109,13 +109,12 @@ export const useSchemas = () => {
       permissions: 'camera (for QR codes), storage, network, printer',
 
       featureList: [
-        t('pages.products.features.hospitality.tables.title'),
-        t('pages.products.features.hospitality.kitchen.title'),
-        t('pages.products.features.hospitality.staff.title'),
-        t('pages.products.features.hospitality.onlineOrdering.title'),
-        t('pages.products.features.hospitality.reservations.title'),
-        t('pages.products.features.hospitality.splitBills.title'),
-        t('pages.products.features.hospitality.offline.title')
+        t('pages.products.features.hospitality.feat1.title'),
+        t('pages.products.features.hospitality.feat2.title'),
+        t('pages.products.features.hospitality.feat3.title'),
+        t('pages.products.features.hospitality.feat1.title'),
+        t('pages.products.features.hospitality.feat2.title'),
+        t('pages.products.features.hospitality.feat3.title')
       ],
 
       // TODO: Replace with real images

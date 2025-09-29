@@ -30,9 +30,9 @@ defineOgImageComponent('Product', {
   product: 'Konty Retail',
   title: t('pages.products.retail.hero.title'),
   features: [
-    t('pages.products.features.retail.inventory.title'),
-    t('pages.products.features.retail.customerInsights.title'),
-    t('pages.products.features.retail.quickCheckout.title')
+    t('pages.products.features.retail.feat1.title'),
+    t('pages.products.features.retail.feat2.title'),
+    t('pages.products.features.retail.feat3.title')
   ],
   cta: t('ui.cta.primary'),
   icon: '🛍️'
