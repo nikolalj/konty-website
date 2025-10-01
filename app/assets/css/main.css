@@ -3,7 +3,7 @@
 @theme static {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
-  --ui-primary: #1F6FE2;
+  --ui-primary: #4a2d67;
   --ui-primary-foreground: #ffffff;
 
   --ui-bg: #ffffff;
@@ -20,24 +20,24 @@
   --color-primary-800: color-mix(in oklch, var(--ui-primary), black 24%);
   --color-primary-900: color-mix(in oklch, var(--ui-primary), black 32%);
 
-  --bg-50:  #fafaff;
-  --bg-100: #f4f5fd;
-  --bg-200: #ebecfb;
-  --bg-300: #dde0f7;
-  --bg-400: #c9cef2;
-  --bg-500: #b1b8ea;
-  --bg-600: #8f98d2;
-  --bg-700: #6f77b1;
-  --bg-800: #4c517e;
-  --bg-900: #2f3450;
+  --bg-50:  #fdfaff;
+  --bg-100: #fbf5fe;
+  --bg-200: #f7ecfd;
+  --bg-300: #f0dff9;
+  --bg-400: #e5cdf2;
+  --bg-500: #d6b7e8;
+  --bg-600: #c197d6;
+  --bg-700: #a477b9;
+  --bg-800: #7d5191;
+  --bg-900: #5c3569;
 }
 
 /* Dark theme overrides */
 :root.dark, .dark {
-  --ui-primary: #52a2ff;
+  --ui-primary: #c98ad9;
   --ui-primary-foreground: #0B1220;
 
-  --ui-bg: #151A28;
+  --ui-bg: #140d2a;
 
   --color-primary: var(--ui-primary);
   --color-primary-50:  color-mix(in oklch, var(--ui-primary), black 95%);
@@ -51,16 +51,16 @@
   --color-primary-800: color-mix(in oklch, var(--ui-primary), white 24%);
   --color-primary-900: color-mix(in oklch, var(--ui-primary), white 32%);
 
-  --bg-50:  #101320;
-  --bg-100: #151A28;
-  --bg-200: #1C2233;
-  --bg-300: #202133;
-  --bg-400: #293145;
-  --bg-500: #32405A;
-  --bg-600: #3D4F72;
-  --bg-700: #49608D;
-  --bg-800: #5774A9;
-  --bg-900: #6D8DC7;
+  --bg-50:  #140d2a;
+  --bg-100: #1b1335;
+  --bg-200: #241a42;
+  --bg-300: #2f2352;
+  --bg-400: #3d2e65;
+  --bg-500: #4e3c7b;
+  --bg-600: #614c93;
+  --bg-700: #775fae;
+  --bg-800: #9075cb;
+  --bg-900: #ab8eea;
 }
 
 html {

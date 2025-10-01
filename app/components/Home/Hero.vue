@@ -1,70 +1,75 @@
 <!-- components/HeroKonty.vue -->
 <template>
   <section
-    class="py-28 sm:py-34 bg-fixed relative isolate bg-[url('/images/hero/bg-light.avif')] dark:bg-[url('/images/hero/bg-dark.avif')] bg-cover bg-no-repeat bg-center"
+    class="pt-28 sm:pt-34 relative isolate overflow-hidden min-h-[85vh] flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_#8d5494_0%,_#563275_40%,_#1f1633_100%)]"
     :aria-label="t('pages.home.hero.title')"
   >
-    <UContainer class="flex flex-col lg:grid gap-16 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
-      <UIAppear direction="right" :distance="64">
-        <div>
-          <div class="mb-4 font-semibold text-primary flex items-center gap-1.5">
+    <UContainer class="relative z-10">
+      <div class="flex flex-col items-center text-center">
+        <!-- Tagline -->
+        <UIAppear direction="up">
+          <div class="mb-6 text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] bg-[length:100%_100%] transition-all duration-300 text-white rounded-lg">
             {{ t('pages.home.hero.tagline') }}
           </div>
+        </UIAppear>
 
-          <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">
+        <!-- Main Headline with Animation -->
+        <UIAppear direction="up">
+          <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
             {{ t('pages.home.hero.title') }}
           </h1>
+        </UIAppear>
 
-          <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">
+        <!-- Subtitle -->
+        <UIAppear direction="up">
+          <p class="mb-8 text-xl text-balance max-w-3xl text-white">
             {{ t('pages.home.hero.subtitle') }}
           </p>
+        </UIAppear>
 
-          <div class="mt-10">
-            <div class="flex flex-wrap gap-x-4">
-              <UButton
-                color="primary"
-                size="lg"
-                :to="localePath('/demo')"
-                class="text-base"
-                icon="i-lucide-calendar"
-                @click="onPrimaryCta"
-              >
-                {{ t('ui.cta.primary') }}
-              </UButton>
-              <UButton
-                :to="localePath('/contact')"
-                size="lg"
-                variant="outline"
-                color="primary"
-                :aria-label="t('ui.cta.secondary')"
-                class="border-1"
-                icon="i-lucide-mail"
-              >
-                {{ t('ui.cta.secondary') }}
-              </UButton>
-            </div>
+        <!-- CTA Buttons -->
+        <UIAppear direction="up">
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <UButton
+              :to="localePath('/demo')"
+              class="bg-white text-black font-semibold"
+              size="xl"
+              icon="i-lucide-calendar"
+              @click="onPrimaryCta"
+            >
+              {{ t('ui.cta.primary') }}
+            </UButton>
+            <UButton
+              :to="localePath('/contact')"
+              size="xl"
+              variant="outline"
+              class="ring-2 ring-[#fa7faa] text-white font-semibold"
+              icon="i-lucide-mail"
+              :aria-label="t('ui.cta.secondary')"
+            >
+              {{ t('ui.cta.secondary') }}
+            </UButton>
           </div>
-        </div>
-      </UIAppear>
+        </UIAppear>
 
-      <!-- Right column: product image -->
-      <UIAppear direction="left" :distance="64">
-        <div class="flex justify-center">
+        <!-- Hero Image/Dashboard Preview -->
+        <UIAppear class="mb-2 mt-12 w-full max-w-6xl" direction="down">
           <NuxtImg
             src="/images/hero/hero.avif"
             format="avif"
             alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
-            width="500"
-            height="600"
+            width="1200"
+            height="392"
             loading="eager"
             decoding="async"
             quality="90"
             fit="cover"
             fetchpriority="high"
             role="presentation"
+            class="h-auto"
           />
-        </div>
-      </UIAppear>
+        </UIAppear>
+      </div>
     </UContainer>
 
     <!-- Wave Shape -->

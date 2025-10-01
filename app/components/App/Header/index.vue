@@ -66,18 +66,15 @@
         :to="localePath('/contact')"
         size="lg"
         variant="outline"
-        color="primary"
+        class="ring-2 ring-[#fa7faa] text-black dark:text-white font-semibold"
         :aria-label="t('ui.cta.secondary')"
-        class="border-1"
       >
         {{ t('ui.cta.secondary') }}
       </UButton>
       <UButton
         :to="localePath('/demo')"
         size="lg"
-        variant="solid"
-        color="primary"
-        :aria-label="t('ui.cta.primary')"
+        class="dark:bg-white bg-[var(--ui-primary)] font-semibold dark:text-black text-white"
         @click="handleGetDemo"
       >
         {{ t('ui.cta.primary') }}

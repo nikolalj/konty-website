@@ -139,7 +139,7 @@ export default defineNuxtConfig({
 
   // Sitemap with automatic i18n multi-sitemap generation
   sitemap: {
-    cacheMaxAgeSeconds: process.env.NODE_ENV === 'production' ? 3600 : 0,
+    cacheMaxAgeSeconds: process.env.APP_ENV !== 'development' ? 3600 : 0,
     experimentalCompression: true,
     excludeAppSources: true, // Only use custom sources specified in sources array
     defaults: {
@@ -256,22 +256,22 @@ export default defineNuxtConfig({
       '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
       '/': {
-        swr: 3600,
+        swr: process.env.APP_ENV !== 'development' ? 3600 : false,
         headers: {
-          'cache-control': 's-maxage=300, stale-while-revalidate=3600',
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache',
           'Vary': 'Accept-Language'
         }
       },
       '/products': {
-        swr: 7200,
+        swr: process.env.APP_ENV !== 'development' ? 7200 : false,
         headers: {
-          'cache-control': 's-maxage=600, stale-while-revalidate=7200'
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=600, stale-while-revalidate=7200' : 'no-cache'
         }
       },
       '/pricing': {
-        swr: 86400,
+        swr: process.env.APP_ENV !== 'development' ? 86400 : false,
         headers: {
-          'cache-control': 's-maxage=3600, stale-while-revalidate=86400'
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=3600, stale-while-revalidate=86400' : 'no-cache'
         }
       },
 
