@@ -1,5 +1,9 @@
 <template>
-  <section v-if="posts && posts.length > 0" class="py-16">
+  <SharedSection
+    v-if="posts && posts.length > 0"
+    :variant="props.variant"
+    :dark="props.dark"
+  >
     <UIAppear>
       <UContainer>
         <UBlogPosts :posts="posts">
@@ -33,12 +37,24 @@
         </UBlogPosts>
       </UContainer>
     </UIAppear>
-  </section>
+  </SharedSection>
 </template>
 
 <script setup lang="ts">
 import type { BlogPost } from '~/types/content'
+import type { SectionVariantType } from '~/types/components'
 import { DEFAULT_LOCALE } from '~/config/locale.config.mjs'
+
+const props = defineProps({
+  variant: {
+    type: String as PropType<SectionVariantType>,
+    default: undefined,
+  },
+  dark: {
+    type: Boolean,
+    default: false
+  }
+})
 
 const { locale } = useI18n()
 const localePath = useLocalePath()

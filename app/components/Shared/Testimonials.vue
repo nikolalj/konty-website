@@ -9,7 +9,7 @@
       <article
         v-for="(testimonial, index) in testimonials"
         :key="index"
-        class="flex flex-col bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6 h-full"
+        class="flex flex-col bg-[var(--ui-bg-elevated)] rounded-lg p-6 h-full"
       >
         <!-- Quote at the top, flex-grow to push author to bottom -->
         <blockquote class="text-gray-600 dark:text-gray-300 flex-grow mb-4">

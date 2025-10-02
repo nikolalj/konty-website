@@ -1,5 +1,5 @@
 <template>
-  <section class="py-6 sm:py-9">
+  <section class="py-6 sm:py-9 bg-[var(--ui-bg-alt)]">
     <UContainer>
       <UFooterColumns :columns="columns">
         <template #right>

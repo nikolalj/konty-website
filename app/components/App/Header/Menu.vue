@@ -18,13 +18,11 @@
           <template #default="{ open }">
             <UButton
               :label="item.label"
-              :trailing-icon="
-                open ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'
-              "
+              :trailing-icon="open ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
               variant="ghost"
               :aria-expanded="open"
-              class="group text-base text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 font-bold transition-colors"
-              :class="open ? 'text-gray-700 dark:text-gray-200' : ''"
+              class="group border-none text-base text-white hover:text-gray-300 font-bold transition-colors"
+              :class="open ? 'text-gray-200' : ''"
             />
           </template>
 
@@ -189,10 +187,8 @@
         :to="item.to || '#'"
         :label="item.label"
         variant="ghost"
-        class="group text-base text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 font-bold transition-colors"
-        :class="
-          route.path === item.to ? 'text-gray-700 dark:text-gray-200' : ''
-        "
+        class="group text-base text-white hover:text-gray-300 font-bold transition-colors"
+        :class="route.path === item.to ? 'text-gray-200' : ''"
         :aria-current="route.path === item.to ? 'page' : undefined"
         @click="handleNavigate"
       />

@@ -3,6 +3,7 @@
     :variant="props.variant"
     :title="t('ui.contactForm.title')"
     :description="t('ui.contactForm.description')"
+    :rounded="true"
   >
     <div class="flex justify-center">
       <div class="p-8 rounded-2xl max-w-3xl w-full">

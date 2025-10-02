@@ -128,8 +128,8 @@
     leave-to-class="opacity-0 scale-95"
   >
     <div
-      v-if="!showBanner && consentGiven"
-      class="bottom-4 left-4 z-[9998]"
+      v-if="false && !showBanner && consentGiven"
+      class="fixed bottom-4 left-4 z-[9998]"
     >
       <UTooltip text="Cookie Settings">
         <UButton

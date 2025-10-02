@@ -7,15 +7,15 @@
     <LazySharedClientList hydrate-on-visible />
     <LazySharedStatistics class="!pt-4" hydrate-on-visible />
     <LazyHomeFeatures hydrate-on-visible />
-    <LazySharedTestimonials hydrate-on-idle />
-    <LazySharedGetStarted variant="1" hydrate-on-visible />
+    <LazySharedTestimonials  hydrate-on-idle />
+    <LazySharedGetStarted variant="alt" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedPricing hydrate-on-visible />
-    <LazySharedContactForm hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
 
     <!-- Far below fold - maximum delay -->
-    <LazyHomeBlogPosts hydrate-on-idle />
+    <LazyHomeBlogPosts class="mb-8" hydrate-on-idle />
   </div>
 </template>
 

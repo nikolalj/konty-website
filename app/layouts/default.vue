@@ -5,7 +5,7 @@
     <AppHeader />
     <!-- <AppAlertBar /> -->
 
-    <UPageBody class="mt-0">
+    <UPageBody class="m-0 p-0">
       <slot />
     </UPageBody>
 

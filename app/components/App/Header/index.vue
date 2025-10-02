@@ -1,7 +1,7 @@
 <template>
   <UHeader
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
-    :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[var(--ui-bg)]/90'"
+    :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[#201633]/90'"
     :ui="{
       container: 'min-h-16'
     }"
@@ -22,13 +22,13 @@
           <!-- Contact info on right (or centered on homepage) -->
           <div class="flex items-center gap-4 flex-1">
             <div
-              class="hidden sm:flex items-center gap-1 text-gray-600 dark:text-gray-400"
+              class="hidden sm:flex items-center gap-1 text-gray-300"
             >
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact</span>
             </div>
             <div
-              class="flex items-center gap-1 text-gray-600 dark:text-gray-400"
+              class="flex items-center gap-1 text-gray-300"
             >
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
@@ -40,7 +40,7 @@
 
           <div class="flex gap-1">
             <AppHeaderCountrySelector />
-            <UColorModeButton />
+            <UColorModeButton class="dark" />
           </div>
         </UContainer>
       </div>
@@ -50,14 +50,13 @@
       <!-- Logo + horizontal navigation (nav shown only on large screens horizontally) -->
       <div class="flex items-center gap-12">
         <div class="flex items-center gap-2 shrink-0">
-          <UColorModeImage
-            light="/images/branding/logo-light.svg"
-            dark="/images/branding/logo-dark.svg"
-            alt="Konty logo"
+          <NuxtImg
+            src="/images/branding/logo-dark.svg"
             width="40"
             height="40"
+            alt="Konty logo"
           />
-          <span class="hidden md:block text-2xl">konty</span>
+          <span class="hidden md:block text-2xl text-white">konty</span>
         </div>
         <AppHeaderMenu orientation="horizontal" class="hidden lg:flex" />
       </div>
@@ -72,7 +71,7 @@
         :to="localePath('/contact')"
         size="lg"
         variant="outline"
-        class="ring-2 ring-[#fa7faa] text-black dark:text-white font-semibold"
+        class="ring-2 ring-[#fa7faa] text-white font-semibold"
         :aria-label="t('ui.cta.secondary')"
       >
         {{ t('ui.cta.secondary') }}
@@ -80,7 +79,7 @@
       <UButton
         :to="localePath('/demo')"
         size="lg"
-        class="dark:bg-white bg-[var(--ui-primary)] font-semibold dark:text-black text-white"
+        class="bg-white font-semibold text-black"
         @click="handleGetDemo"
       >
         {{ t('ui.cta.primary') }}

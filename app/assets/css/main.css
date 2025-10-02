@@ -4,63 +4,17 @@
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
   --ui-primary: #4a2d67;
-  --ui-primary-foreground: #ffffff;
 
-  --ui-bg: #ffffff;
-
-  --color-primary: var(--ui-primary);
-  --color-primary-50:  color-mix(in oklch, var(--ui-primary), white 95%);
-  --color-primary-100: color-mix(in oklch, var(--ui-primary), white 90%);
-  --color-primary-200: color-mix(in oklch, var(--ui-primary), white 80%);
-  --color-primary-300: color-mix(in oklch, var(--ui-primary), white 70%);
-  --color-primary-400: color-mix(in oklch, var(--ui-primary), white 55%);
-  --color-primary-500: var(--ui-primary);
-  --color-primary-600: color-mix(in oklch, var(--ui-primary), black 8%);
-  --color-primary-700: color-mix(in oklch, var(--ui-primary), black 16%);
-  --color-primary-800: color-mix(in oklch, var(--ui-primary), black 24%);
-  --color-primary-900: color-mix(in oklch, var(--ui-primary), black 32%);
-
-  --bg-50:  #fdfaff;
-  --bg-100: #fbf5fe;
-  --bg-200: #f7ecfd;
-  --bg-300: #f0dff9;
-  --bg-400: #e5cdf2;
-  --bg-500: #d6b7e8;
-  --bg-600: #c197d6;
-  --bg-700: #a477b9;
-  --bg-800: #7d5191;
-  --bg-900: #5c3569;
+  --ui-bg: white;
+  --ui-bg-alt: #f3f4f8;
 }
 
 /* Dark theme overrides */
 :root.dark, .dark {
-  --ui-primary: #c98ad9;
-  --ui-primary-foreground: #0B1220;
-
-  --ui-bg: #140d2a;
-
-  --color-primary: var(--ui-primary);
-  --color-primary-50:  color-mix(in oklch, var(--ui-primary), black 95%);
-  --color-primary-100: color-mix(in oklch, var(--ui-primary), black 90%);
-  --color-primary-200: color-mix(in oklch, var(--ui-primary), black 80%);
-  --color-primary-300: color-mix(in oklch, var(--ui-primary), black 70%);
-  --color-primary-400: color-mix(in oklch, var(--ui-primary), black 55%);
-  --color-primary-500: var(--ui-primary);
-  --color-primary-600: color-mix(in oklch, var(--ui-primary), white 8%);
-  --color-primary-700: color-mix(in oklch, var(--ui-primary), white 16%);
-  --color-primary-800: color-mix(in oklch, var(--ui-primary), white 24%);
-  --color-primary-900: color-mix(in oklch, var(--ui-primary), white 32%);
-
-  --bg-50:  #140d2a;
-  --bg-100: #1b1335;
-  --bg-200: #241a42;
-  --bg-300: #2f2352;
-  --bg-400: #3d2e65;
-  --bg-500: #4e3c7b;
-  --bg-600: #614c93;
-  --bg-700: #775fae;
-  --bg-800: #9075cb;
-  --bg-900: #ab8eea;
+  --ui-primary: white;
+  --ui-bg: #201633;
+  --ui-bg-alt: #2f2350;
+  --ui-bg-elevated: #3d2d5e;
 }
 
 html {

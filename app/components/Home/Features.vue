@@ -1,7 +1,6 @@
 <template>
   <SharedSection
     v-model="product"
-    variant="1"
     :title="t(`pages.products.features.title`)"
     :description="t(`pages.products.features.description`)"
     :product-switch="true"
@@ -74,7 +73,8 @@
               :variant="link.variant"
               :icon="link.icon"
               size="lg"
-              class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+              :class="link.class"
+              class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 font-semibold"
             >
               {{ t(link.labelKey) }}
             </UButton>
@@ -119,6 +119,7 @@ interface FeatureLink {
   color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
   variant: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link'
   icon: string
+  class?: string
 }
 
 // Links configuration with translation keys
@@ -135,8 +136,9 @@ const links: Record<string, FeatureLink[]> = {
       labelKey: 'ui.cta.secondary',
       to: '/products/hospitality',
       color: 'neutral',
-      variant: 'subtle',
-      icon: 'i-lucide-mail'
+      variant: 'outline',
+      icon: 'i-lucide-mail',
+      class: 'ring-2 ring-[#fa7faa]'
     }
   ],
   retail: [
@@ -151,8 +153,9 @@ const links: Record<string, FeatureLink[]> = {
       labelKey: 'ui.cta.secondary',
       to: '/products/retail',
       color: 'neutral',
-      variant: 'subtle',
-      icon: 'i-lucide-mail'
+      variant: 'outline',
+      icon: 'i-lucide-mail',
+      class: 'ring-2 ring-[#fa7faa]'
     }
   ]
 }
