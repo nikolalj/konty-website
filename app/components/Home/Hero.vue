@@ -59,6 +59,8 @@
             format="avif"
             alt="Konty POS dashboard prikazuje analitiku prodaje i pregled transakcija"
             sizes="100vw xs:600px sm:768px md:1024px lg:1200px"
+            width="1200"
+            height="392"
             loading="eager"
             decoding="async"
             quality="90"
