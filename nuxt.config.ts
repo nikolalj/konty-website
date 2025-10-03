@@ -336,8 +336,6 @@ export default defineNuxtConfig({
 
         // Preload critical resources
         { rel: 'preload', as: 'font', href: '/fonts/PlusJakartaSans-Variable.woff2', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', as: 'image', href: '/images/hero/bg-light.avif', type: 'image/avif', fetchpriority: 'high' },
-        { rel: 'preload', as: 'image', href: '/images/hero/bg-dark.avif', type: 'image/avif', fetchpriority: 'high' },
       ],
     }
   },

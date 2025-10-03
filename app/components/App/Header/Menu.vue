@@ -78,7 +78,7 @@
                     <Icon
                       v-if="child.icon"
                       :name="child.icon"
-                      class="w-5 h-5 text-primary-500 flex-shrink-0"
+                      class="w-5 h-5 text-primary flex-shrink-0"
                     />
                     <p class="font-semibold text-sm">
                       {{ child.label }}
@@ -115,7 +115,7 @@
                       <Icon
                         v-if="child.icon"
                         :name="child.icon"
-                        class="w-5 h-5 text-primary-500 flex-shrink-0"
+                        class="w-5 h-5 text-primary flex-shrink-0"
                       />
                       <p class="text-sm font-semibold">
                         {{ child.label }}

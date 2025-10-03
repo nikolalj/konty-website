@@ -47,7 +47,6 @@
     </template>
 
     <template #title>
-      <!-- Logo + horizontal navigation (nav shown only on large screens horizontally) -->
       <div class="flex items-center gap-12">
         <div class="flex items-center gap-2 shrink-0">
           <NuxtImg
