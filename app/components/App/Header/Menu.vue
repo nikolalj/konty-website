@@ -140,7 +140,7 @@
                     "
                     class="pr-4 w-44"
                   >
-                    <p class="text-sm text-muted leading-relaxed whitespace-normal break-words">
+                    <p class="text-sm leading-relaxed whitespace-normal break-words">
                       {{ hoveredItem?.description || lastHoveredItem?.description }}
                     </p>
                   </div>
@@ -149,14 +149,19 @@
             </div>
 
             <!-- About content -->
-            <div v-else-if="item.slot === 'about'" class="p-4 w-48">
+            <div v-else-if="item.slot === 'about'" class="p-4">
               <ul class="space-y-1">
                 <li v-for="child in item.children" :key="child.label">
                   <ULink
                     :to="child.to || '#'"
-                    class="block text-sm text-left rounded-md px-3 py-2 transition-colors hover:bg-elevated/50"
+                    class="flex items-center space-x-3 px-4 py-3 rounded-md transition-colors hover:bg-elevated/50 whitespace-nowrap"
                     @click="handleNavigate"
                   >
+                    <Icon
+                      v-if="child.icon"
+                      :name="child.icon"
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                    />
                     <p class="text-sm font-semibold">
                       {{ child.label }}
                     </p>
@@ -288,7 +293,7 @@ const items = computed<MenuGroup[]>(() => [
       },
       {
         label: t('ui.navigation.products.faqdocs'),
-        icon: 'mi:document',
+        icon: 'i-lucide-file-text',
         to: localePath('/products/faqdocs')
       }
     ]
@@ -359,12 +364,21 @@ const items = computed<MenuGroup[]>(() => [
     class: 'font-bold',
     slot: 'about' as const,
     children: [
-      { label: t('ui.navigation.about.contact'), to: localePath('/contact') },
+      {
+        label: t('ui.navigation.about.contact'),
+        to: localePath('/contact'),
+        icon: 'i-lucide-phone',
+      },
       {
         label: t('ui.navigation.about.clientStories'),
-        to: localePath('/client-stories')
+        to: localePath('/client-stories'),
+        icon: 'i-lucide-users',
       },
-      { label: t('ui.navigation.about.partners'), to: localePath('/partners') }
+      {
+        label: t('ui.navigation.about.partners'),
+        to: localePath('/partners'),
+        icon: 'i-lucide-building-2',
+      }
     ]
   }
 ])

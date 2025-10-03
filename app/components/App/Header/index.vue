@@ -46,19 +46,17 @@
       </div>
     </template>
 
-    <template #title>
-      <div class="flex items-center gap-12">
-        <div class="flex items-center gap-2 shrink-0">
-          <NuxtImg
-            src="/images/branding/logo-dark.svg"
-            width="40"
-            height="40"
-            alt="Konty logo"
-          />
-          <span class="hidden md:block text-2xl text-white">konty</span>
-        </div>
-        <AppHeaderMenu orientation="horizontal" class="hidden lg:flex" />
-      </div>
+    <template #left>
+      <ULink to="/" class="flex items-center gap-2 shrink-0">
+        <NuxtImg
+          src="/images/branding/logo-dark.svg"
+          width="40"
+          height="40"
+          alt="Konty logo"
+        />
+        <span class="hidden md:block text-2xl text-white">konty</span>
+      </ULink>
+      <AppHeaderMenu orientation="horizontal" class="hidden lg:flex lg:ml-12" />
     </template>
 
     <template #body>
