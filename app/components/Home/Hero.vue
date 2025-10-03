@@ -1,14 +1,14 @@
 <!-- components/HeroKonty.vue -->
 <template>
   <section
-    class="pt-28 sm:pt-34 relative isolate overflow-hidden min-h-[85vh] flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_#8d5494_0%,_#563275_40%,_#1f1633_100%)]"
+    class="pt-34 relative isolate overflow-hidden flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_#8d5494_0%,_#563275_40%,_#1f1633_100%)]"
     :aria-label="t('pages.home.hero.title')"
   >
     <UContainer class="relative z-10">
       <div class="flex flex-col items-center text-center">
         <!-- Tagline -->
         <UIAppear direction="up">
-          <div class="mb-6 text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] bg-[length:100%_100%] transition-all duration-300 text-white rounded-lg">
+          <div class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] bg-[length:100%_100%] transition-all duration-300 text-white rounded-lg">
             {{ t('pages.home.hero.tagline') }}
           </div>
         </UIAppear>
@@ -32,7 +32,7 @@
           <div class="flex flex-wrap items-center justify-center gap-4">
             <UButton
               :to="localePath('/demo')"
-              class="bg-white text-black font-semibold"
+              class="bg-white hover:bg-[#f88eb3] font-semibold text-black"
               size="xl"
               icon="i-lucide-calendar"
               @click="onPrimaryCta"
@@ -43,7 +43,7 @@
               :to="localePath('/contact')"
               size="xl"
               variant="outline"
-              class="ring-2 ring-[#fa7faa] text-white font-semibold"
+              class="ring-2 ring-[#fa7faa] hover:bg-[#61356c] text-white font-semibold"
               icon="i-lucide-mail"
               :aria-label="t('ui.cta.secondary')"
             >
@@ -53,7 +53,7 @@
         </UIAppear>
 
         <!-- Hero Image/Dashboard Preview -->
-        <UIAppear class="mb-2 mt-12 w-full max-w-6xl" direction="down">
+        <UIAppear direction="down" class="mb-8 mt-12 w-full max-w-6xl flex justify-center">
           <NuxtImg
             src="/images/hero/hero.avif"
             format="avif"
@@ -66,7 +66,7 @@
             fit="cover"
             fetchpriority="high"
             role="presentation"
-            class="h-auto"
+            class="h-auto min-w-[120%] sm:min-w-auto"
           />
         </UIAppear>
       </div>

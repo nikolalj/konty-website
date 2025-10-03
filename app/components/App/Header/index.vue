@@ -71,7 +71,7 @@
         :to="localePath('/contact')"
         size="lg"
         variant="outline"
-        class="ring-2 ring-[#fa7faa] text-white font-semibold"
+        class="ring-2 ring-[#fa7faa] hover:bg-[#61356c] text-white font-semibold"
         :aria-label="t('ui.cta.secondary')"
       >
         {{ t('ui.cta.secondary') }}
@@ -79,7 +79,7 @@
       <UButton
         :to="localePath('/demo')"
         size="lg"
-        class="bg-white font-semibold text-black"
+        class="bg-white hover:bg-[#f88eb3] font-semibold text-black"
         @click="handleGetDemo"
       >
         {{ t('ui.cta.primary') }}

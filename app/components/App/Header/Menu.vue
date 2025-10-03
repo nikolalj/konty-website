@@ -50,16 +50,10 @@
                       class="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
-                    <div
-                      class="absolute inset-0 flex items-end justify-center pb-3 px-3"
-                    >
-                      <p
-                        class="text-white text-sm font-bold text-center leading-tight line-clamp-2"
-                      >
+                    <div class="absolute inset-0 flex items-end justify-center pb-3 px-3">
+                      <p class="text-white text-sm font-bold text-center leading-tight line-clamp-2">
                         {{ child.label }}
                       </p>
                     </div>
@@ -132,16 +126,12 @@
 
                 <div
                   class="transition-all duration-300 ease-in-out bg-gray-200 flex-shrink-0"
-                  :class="
-                    hoveredItem ? 'w-px opacity-100 mx-4' : 'w-0 opacity-0 mx-0'
-                  "
+                  :class="hoveredItem ? 'w-px opacity-100 mx-4' : 'w-0 opacity-0 mx-0'"
                 />
 
                 <div
                   class="transition-all duration-300 ease-in-out flex-1 min-w-0"
-                  :class="
-                    hoveredItem || lastHoveredItem ? 'opacity-100' : 'opacity-0'
-                  "
+                  :class="hoveredItem || lastHoveredItem ? 'opacity-100' : 'opacity-0'"
                 >
                   <div
                     v-if="
@@ -150,12 +140,8 @@
                     "
                     class="pr-4 w-44"
                   >
-                    <p
-                      class="text-sm text-muted leading-relaxed whitespace-normal break-words"
-                    >
-                      {{
-                        hoveredItem?.description || lastHoveredItem?.description
-                      }}
+                    <p class="text-sm text-muted leading-relaxed whitespace-normal break-words">
+                      {{ hoveredItem?.description || lastHoveredItem?.description }}
                     </p>
                   </div>
                 </div>
