@@ -45,8 +45,8 @@
       <ULink to="/" class="flex items-center gap-2 shrink-0">
         <NuxtImg
           src="/images/branding/logo-dark.svg"
-          width="32"
-          height="32"
+          width="38"
+          height="38"
           alt="Konty logo"
           class="sm:hidden"
         />
@@ -64,14 +64,24 @@
     <template #content>
       <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
         <ULink to="/" class="flex items-center gap-2 shrink-0">
-          <UColorModeImage
-            light="/images/branding/logo-full-horizontal-light.svg"
-            dark="/images/branding/logo-full-horizontal-dark.svg"
-            width="120"
-            height="23"
-            alt="Konty logo"
-            class="w-[120px] min-[440px]:w-[140px]"
-          />
+          <div class="sm:hidden">
+            <UColorModeImage
+              light="/images/branding/logo-light.svg"
+              dark="/images/branding/logo-dark.svg"
+              width="38"
+              height="38"
+              alt="Konty logo"
+            />
+          </div>
+          <div class="hidden sm:block">
+            <UColorModeImage
+              light="/images/branding/logo-full-horizontal-light.svg"
+              dark="/images/branding/logo-full-horizontal-dark.svg"
+              width="140"
+              height="23"
+              alt="Konty logo"
+            />
+          </div>
         </ULink>
         <div class="flex gap-2">
           <AppCTAButton variant="secondary" section="header" no-icon />
