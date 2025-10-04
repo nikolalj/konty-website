@@ -1,7 +1,7 @@
 <template>
   <section class="py-12 sm:py-16" :class="[!rounded ? bgClasses : '']">
-    <UContainer>
-      <div :class="[rounded ? `px-2 py-12 rounded-3xl ${bgClasses}` : '']">
+    <UContainer class="flex justify-center">
+      <div :class="[rounded ? `px-2 py-12 w-full max-w-5xl rounded-3xl ${bgClasses}` : '']">
         <div
           v-if="props.title || props.description || props.productSwitch"
           class="flex flex-col items-center mb-16"
