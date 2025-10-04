@@ -89,22 +89,33 @@
 const { y } = useWindowScroll()
 const { t } = useI18n()
 const { track } = useTracking()
+const route = useRoute()
 const localePath = useLocalePath()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID = 8
 
-const isHeaderSolid = ref(false)
+const routesWithTransparentHeader = [
+  '/',
+  '/products/hospitality',
+  '/products/retail',
+]
+
+const isHeaderSolid = ref(!routesWithTransparentHeader.includes(route.path))
 const isTopBarCollapsed = ref(false)
+
+watch(route, val => isHeaderSolid.value = !routesWithTransparentHeader.includes(val.path))
 
 watch(
   y,
   () => {
     const cur = y.value
 
-    if (!isHeaderSolid.value && cur > ENTER_SOLID) isHeaderSolid.value = true
-    else if (isHeaderSolid.value && cur < EXIT_SOLID)
+    if (!isHeaderSolid.value && cur > ENTER_SOLID) {
+      isHeaderSolid.value = true
+    } else if (isHeaderSolid.value && cur < EXIT_SOLID && routesWithTransparentHeader.includes(route.path)) {
       isHeaderSolid.value = false
+    }
 
     if (!isTopBarCollapsed.value && cur > ENTER_SOLID)
       isTopBarCollapsed.value = true
