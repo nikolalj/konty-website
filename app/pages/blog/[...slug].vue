@@ -1,7 +1,7 @@
 <template>
   <article class="pt-20">
     <!-- Article Header -->
-    <header class="py-16 sm:py-24">
+    <header class="pt-16 sm:pt-24 pb-2 sm:pb-4">
       <UContainer>
         <div class="max-w-4xl mx-auto">
           <!-- Article Meta -->

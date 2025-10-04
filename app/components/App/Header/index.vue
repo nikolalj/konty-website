@@ -83,21 +83,19 @@
 
 <script setup lang="ts">
 const { y } = useWindowScroll()
+const localePath = useLocalePath()
 const route = useRoute()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID = 8
 
-const routesWithTransparentHeader = [
-  '/',
-  '/products/hospitality',
-  '/products/retail',
-]
-
-const isHeaderSolid = ref(!routesWithTransparentHeader.includes(route.path))
+const isHeaderSolid = ref(!isRouteWithTransparentHeader(route.path))
 const isTopBarCollapsed = ref(false)
 
-watch(route, val => isHeaderSolid.value = !routesWithTransparentHeader.includes(val.path))
+watch(() => route.path, (newPath, oldPath) => {
+  console.log(oldPath + ' -> ' + newPath)
+  isHeaderSolid.value = !isRouteWithTransparentHeader(newPath)
+})
 
 watch(
   y,
@@ -106,7 +104,7 @@ watch(
 
     if (!isHeaderSolid.value && cur > ENTER_SOLID) {
       isHeaderSolid.value = true
-    } else if (isHeaderSolid.value && cur < EXIT_SOLID && routesWithTransparentHeader.includes(route.path)) {
+    } else if (isHeaderSolid.value && cur < EXIT_SOLID && isRouteWithTransparentHeader(route.path)) {
       isHeaderSolid.value = false
     }
 
@@ -117,4 +115,16 @@ watch(
   },
   { immediate: true }
 )
+
+function isRouteWithTransparentHeader(path: string) {
+  const removeTrailingSlash = (str: string) => str.replace(/\/$/, '')
+
+  const routesWithTransparentHeader = [
+    '/',
+    '/products/hospitality',
+    '/products/retail',
+  ]
+
+  return routesWithTransparentHeader.some(p => removeTrailingSlash(localePath(p)) === removeTrailingSlash(path))
+}
 </script>
