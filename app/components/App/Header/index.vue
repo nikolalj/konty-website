@@ -25,10 +25,10 @@
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact@konty.com</span>
             </a>
-            <div class="flex items-center gap-1 text-gray-300">
+            <a href="tel:+38267607670" class="flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
-            </div>
+            </a>
 
             <AppHeaderBreadcrumbs class="hidden lg:block" />
           </div>
