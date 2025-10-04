@@ -44,10 +44,18 @@
     <template #left>
       <ULink to="/" class="flex items-center gap-2 shrink-0">
         <NuxtImg
+          src="/images/branding/logo-dark.svg"
+          width="32"
+          height="32"
+          alt="Konty logo"
+          class="sm:hidden"
+        />
+        <NuxtImg
           src="/images/branding/logo-full-horizontal-dark.svg"
           width="140"
           height="23"
           alt="Konty logo"
+          class="hidden sm:block"
         />
       </ULink>
       <AppHeaderMenu orientation="horizontal" class="hidden lg:flex lg:ml-12" />
@@ -59,9 +67,10 @@
           <UColorModeImage
             light="/images/branding/logo-full-horizontal-light.svg"
             dark="/images/branding/logo-full-horizontal-dark.svg"
-            width="140"
+            width="120"
             height="23"
             alt="Konty logo"
+            class="w-[120px] min-[440px]:w-[140px]"
           />
         </ULink>
         <div class="flex gap-2">
