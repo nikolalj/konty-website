@@ -45,7 +45,7 @@
               class="flex gap-4 transition-all duration-300 hover:translate-x-2"
             >
               <div class="flex-shrink-0">
-                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-900/50">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600/60">
                   <UIcon
                     :name="feature.icon"
                     class="h-6 w-6 text-white"
@@ -65,19 +65,8 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4">
-            <UButton
-              v-for="(link, index) in links[product]"
-              :key="`${product}-${index}`"
-              :to="link.to ? localePath(link.to) : undefined"
-              :color="link.color"
-              :variant="link.variant"
-              :icon="link.icon"
-              size="lg"
-              :class="link.class"
-              class="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 font-semibold"
-            >
-              {{ t(link.labelKey) }}
-            </UButton>
+            <AppCTAButton variant="primary" section="features" />
+            <AppCTAButton variant="secondary" section="features" />
           </div>
         </div>
       </UIAppear>
@@ -87,7 +76,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
 const product = ref<'hospitality' | 'retail'>('hospitality')
 
 // Feature images (could be moved to static assets later)
@@ -111,53 +99,4 @@ const features = {
     { key: 'feat3', icon: 'i-lucide-chart-pie' }
   ]
 }
-
-// Custom type for links with labelKey
-interface FeatureLink {
-  labelKey: string
-  to: string
-  color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
-  variant: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link'
-  icon: string
-  class?: string
-}
-
-// Links configuration with translation keys
-const links: Record<string, FeatureLink[]> = {
-  hospitality: [
-    {
-      labelKey: 'ui.cta.primary',
-      to: '/demo',
-      color: 'primary',
-      variant: 'solid',
-      icon: 'i-lucide-calendar'
-    },
-    {
-      labelKey: 'ui.cta.secondary',
-      to: '/products/hospitality',
-      color: 'neutral',
-      variant: 'outline',
-      icon: 'i-lucide-mail',
-      class: 'ring-2 ring-[#fa7faa]'
-    }
-  ],
-  retail: [
-    {
-      labelKey: 'ui.cta.primary',
-      to: '/demo',
-      color: 'primary',
-      variant: 'solid',
-      icon: 'i-lucide-calendar'
-    },
-    {
-      labelKey: 'ui.cta.secondary',
-      to: '/products/retail',
-      color: 'neutral',
-      variant: 'outline',
-      icon: 'i-lucide-mail',
-      class: 'ring-2 ring-[#fa7faa]'
-    }
-  ]
-}
-
 </script>

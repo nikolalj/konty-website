@@ -12,14 +12,7 @@
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4 justify-center">
-            <UButton
-              size="lg"
-              color="primary"
-              :to="localePath('/demo')"
-              @click="onDemoCta"
-            >
-              {{ t('ui.cta.primary') }}
-            </UButton>
+            <AppCTAButton variant="primary" section="hero" />
             <UButton
               size="lg"
               variant="outline"
@@ -37,9 +30,4 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { track } = useTracking()
-
-const onDemoCta = () => {
-  track('get_a_demo_cta', { location: 'Hero' })
-}
 </script>

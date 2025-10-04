@@ -30,25 +30,8 @@
         <!-- CTA Buttons -->
         <UIAppear direction="up">
           <div class="flex flex-wrap items-center justify-center gap-4">
-            <UButton
-              :to="localePath('/demo')"
-              class="bg-white hover:bg-[#f88eb3] font-semibold text-black"
-              size="xl"
-              icon="i-lucide-calendar"
-              @click="onPrimaryCta"
-            >
-              {{ t('ui.cta.primary') }}
-            </UButton>
-            <UButton
-              :to="localePath('/contact')"
-              size="xl"
-              variant="outline"
-              class="ring-2 ring-[#fa7faa] hover:bg-[#61356c] text-white font-semibold"
-              icon="i-lucide-mail"
-              :aria-label="t('ui.cta.secondary')"
-            >
-              {{ t('ui.cta.secondary') }}
-            </UButton>
+            <AppCTAButton variant="primary" section="hero" class="dark" size="xl" />
+            <AppCTAButton variant="secondary" section="hero" class="dark" size="xl" />
           </div>
         </UIAppear>
 
@@ -92,10 +75,4 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
-const { track } = useTracking()
-
-function onPrimaryCta(): void {
-  track('get_a_demo_cta', { location: 'Hero' })
-}
 </script>

@@ -12,7 +12,7 @@
         variant="ghost"
         square
         :aria-label="`Current country: ${currentLocale?.name}`"
-        class="relative"
+        class="relative dark"
       >
         <div
           v-if="suggestedLocale && suggestedLocale !== locale"

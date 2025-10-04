@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <ContactHero />
+    <AboutContactHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyContactInfo hydrate-on-visible />
+    <LazyAboutContactInfo hydrate-on-visible />
     <LazySharedClientList hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->

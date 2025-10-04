@@ -1,5 +1,9 @@
 <template>
-  <UBreadcrumb v-if="!isHomepage" :items="localizedItems" />
+  <UBreadcrumb
+    v-if="!isHomepage"
+    :items="localizedItems"
+    class="dark"
+  />
 </template>
 
 <script setup lang="ts">

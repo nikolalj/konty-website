@@ -1,11 +1,14 @@
 <template>
   <UHeader
+    mode="slideover"
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
     :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[#201633]/90'"
     :ui="{
       container: 'min-h-16'
     }"
-    mode="slideover"
+    :toggle="{
+      class: 'text-white hover:bg-gray-100/10'
+    }"
   >
     <template #top>
       <div
@@ -16,25 +19,17 @@
       >
         <AppHeaderLocaleSuggestionBanner />
 
-        <UContainer
-          class="h-full flex items-center text-sm transition-colors duration-500"
-        >
-          <!-- Contact info on right (or centered on homepage) -->
+        <UContainer class="h-full flex items-center text-sm transition-colors duration-500">
           <div class="flex items-center gap-4 flex-1">
-            <div
-              class="hidden sm:flex items-center gap-1 text-gray-300"
-            >
+            <div class="hidden sm:flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact</span>
             </div>
-            <div
-              class="flex items-center gap-1 text-gray-300"
-            >
+            <div class="flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
             </div>
 
-            <!-- Breadcrumbs on left (only on inner pages) -->
             <AppHeaderBreadcrumbs />
           </div>
 
@@ -49,48 +44,46 @@
     <template #left>
       <ULink to="/" class="flex items-center gap-2 shrink-0">
         <NuxtImg
-          src="/images/branding/logo-dark.svg"
-          width="40"
-          height="40"
+          src="/images/branding/logo-full-horizontal-dark.svg"
+          width="140"
+          height="23"
           alt="Konty logo"
         />
-        <span class="hidden md:block text-2xl text-white">konty</span>
       </ULink>
       <AppHeaderMenu orientation="horizontal" class="hidden lg:flex lg:ml-12" />
     </template>
 
-    <template #body>
-      <AppHeaderMenu orientation="vertical" />
+    <template #content>
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
+        <ULink to="/" class="flex items-center gap-2 shrink-0">
+          <UColorModeImage
+            light="/images/branding/logo-full-horizontal-light.svg"
+            dark="/images/branding/logo-full-horizontal-dark.svg"
+            width="140"
+            height="23"
+            alt="Konty logo"
+          />
+        </ULink>
+        <div class="flex gap-2">
+          <AppCTAButton variant="secondary" section="header" no-icon />
+          <AppCTAButton variant="primary" section="header" no-icon />
+        </div>
+      </div>
+      <div class="p-4">
+        <AppHeaderMenu orientation="vertical" />
+      </div>
     </template>
 
     <template #right>
-      <UButton
-        :to="localePath('/contact')"
-        size="lg"
-        variant="outline"
-        class="ring-2 ring-[#fa7faa] hover:bg-[#61356c] text-white font-semibold"
-        :aria-label="t('ui.cta.secondary')"
-      >
-        {{ t('ui.cta.secondary') }}
-      </UButton>
-      <UButton
-        :to="localePath('/demo')"
-        size="lg"
-        class="bg-white hover:bg-[#f88eb3] font-semibold text-black"
-        @click="handleGetDemo"
-      >
-        {{ t('ui.cta.primary') }}
-      </UButton>
+      <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
+      <AppCTAButton variant="primary" section="header" class="dark" no-icon />
     </template>
   </UHeader>
 </template>
 
 <script setup lang="ts">
 const { y } = useWindowScroll()
-const { t } = useI18n()
-const { track } = useTracking()
 const route = useRoute()
-const localePath = useLocalePath()
 
 const ENTER_SOLID = 56
 const EXIT_SOLID = 8
@@ -124,8 +117,4 @@ watch(
   },
   { immediate: true }
 )
-
-function handleGetDemo() {
-  track('get_a_demo_cta', { location: 'Header' })
-}
 </script>

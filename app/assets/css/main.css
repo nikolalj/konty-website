@@ -4,6 +4,8 @@
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
   --ui-primary: #4a2d67;
+  --ui-secondary: #fa7faa;
+
   --color-primary-50: #f5f3f7;
   --color-primary-100: #ebe7ef;
   --color-primary-200: #d7cede;
@@ -23,6 +25,8 @@
 /* Dark theme overrides */
 :root.dark, .dark {
   --ui-primary: white;
+  --ui-secondary: #f88eb3;
+
   --color-primary-50: #ffffff;
   --color-primary-100: #fafafa;
   --color-primary-200: #f5f5f5;
