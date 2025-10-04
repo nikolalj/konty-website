@@ -21,16 +21,16 @@
 
         <UContainer class="h-full flex items-center text-sm transition-colors duration-500">
           <div class="flex items-center gap-4 flex-1">
-            <div class="hidden sm:flex items-center gap-1 text-gray-300">
+            <a href="mailto:contact@konty.com" class="flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-mail" class="w-4 h-4" />
-              <span class="hidden md:inline">contact</span>
-            </div>
+              <span class="hidden md:inline">contact@konty.com</span>
+            </a>
             <div class="flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
             </div>
 
-            <AppHeaderBreadcrumbs />
+            <AppHeaderBreadcrumbs class="hidden lg:block" />
           </div>
 
           <div class="flex gap-1">
