@@ -411,13 +411,61 @@
       },
       "hospitality": {
         "hero": {
-          "cta": "Start 30-Day Free Trial",
-          "features": "Easy setup • Local support • Flexible plans",
-          "subtitle": "Complete restaurant management system with table service, order processing, and kitchen coordination. Designed for food service businesses of all sizes.",
-          "title": "Restaurant POS System for Modern Food Service",
-          "viewPricing": "View Pricing Plans"
+          "tagline": "Trusted by 9,000+ businesses and growing",
+          "title": "POS system you can count on during peak hours",
+          "subtitle": "Complete restaurant management system with table service, order processing, and kitchen coordination. Designed for businesses of all sizes."
+        },
+        "benefits": {
+          "title": "Why Choose Konty for Your Restaurant",
+          "description": "Built specifically for hospitality businesses, from small cafes to high-volume restaurants.",
+          "benefit1": {
+            "title": "Built for Hospitality",
+            "description": "Complete solution designed specifically for restaurants and cafes. Covers all your business processes efficiently, whether you run a small cafe or a high-traffic restaurant."
+          },
+          "benefit2": {
+            "title": "Incredibly Easy to Use",
+            "description": "Tired of software that takes forever to do simple tasks? Konty is built to be intuitive, efficient, and gets the job done fast."
+          },
+          "benefit3": {
+            "title": "Reliable & Secure",
+            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
+          },
+          "benefit4": {
+            "title": "Available Everywhere, Always",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "benefit5": {
+            "title": "Advanced Reports",
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+          },
+          "benefit6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
+          }
         },
         "features": {
+          "title": "Simple. Reliable. Ready to work.",
+          "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
+          "feat1": {
+            "title": "Sections and Tables",
+            "description": "Manage tables across multiple sections. Get detailed overview of bills, server activities, POS terminal status, reports, and more."
+          },
+          "feat2": {
+            "title": "Fast and Efficient Sales",
+            "description": "Quick item selection through intuitive interface. Efficient billing and ordering with various cash and cashless payment methods, order printing to kitchen or bar printers, and more."
+          },
+          "feat3": {
+            "title": "Administration",
+            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods, etc. Precise reports and detailed insights into all segments of your business."
+          },
+          "feat4": {
+            "title": "Table Management & Orders",
+            "description": "Visual floor plan with real-time table status. Track orders from service to kitchen with seamless coordination. Split bills, merge tables, and manage reservations effortlessly."
+          },
+          "feat5": {
+            "title": "Sales Analytics",
+            "description": "Real-time insights into revenue, top-selling items, server performance, and peak hours. Make data-driven decisions to grow your restaurant's profitability."
+          },
           "hero": {
             "title": "All Hospitality Features",
             "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
@@ -443,13 +491,64 @@
       },
       "retail": {
         "hero": {
+          "tagline": "Trusted by 9,000+ businesses and growing",
           "cta": "Start 30-Day Free Trial",
           "features": "Inventory tracking • Fast checkout • Sales reporting",
-          "subtitle": "Point of sale system designed for retail businesses. Manage inventory, process payments, and track sales with an intuitive interface.",
-          "title": "Retail POS System Built for Store Operations",
+          "subtitle": "Retail and service POS that runs fast, secure, and without interruption — from quick checkout and inventory tracking to clear reports for decision making.",
+          "title": "POS system you can count on during peak hours",
           "viewDemo": "Watch 2-Min Demo"
         },
+        "benefits": {
+          "title": "Why Choose Konty for Your Store",
+          "description": "Complete solution built specifically for retail and service businesses. Covers your business processes efficiently.",
+          "benefit1": {
+            "title": "Built for Retail",
+            "description": "Complete solution designed specifically for retail and service businesses. Covers your business processes in an efficient way."
+          },
+          "benefit2": {
+            "title": "Incredibly Easy to Use",
+            "description": "Tired of software that takes significant time just to change a single item price? Konty is built to be intuitive, efficient, and gets your work done quickly."
+          },
+          "benefit3": {
+            "title": "Reliable & Secure",
+            "description": "No more fear of losing data from the first power surge. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
+          },
+          "benefit4": {
+            "title": "Available Everywhere, Always",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "benefit5": {
+            "title": "Advanced Reports",
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+          },
+          "benefit6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
+          }
+        },
         "features": {
+          "title": "Simple. Reliable. Ready to work.",
+          "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
+          "feat1": {
+            "title": "Fast and Efficient Sales",
+            "description": "Quick search and selection of items by name, code, barcode (regular and weight-based). Detailed overview of receipts, employee activities, POS terminal status, reports, and more."
+          },
+          "feat2": {
+            "title": "Administration",
+            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods and other business processes."
+          },
+          "feat3": {
+            "title": "Reports and Statistics",
+            "description": "Precise and comprehensive reports that give you detailed insights into all segments of your business."
+          },
+          "feat4": {
+            "title": "Barcode & Inventory Scanning",
+            "description": "Lightning-fast scanning with support for standard and weight-based barcodes. Automatic stock updates and low inventory alerts keep your shelves stocked."
+          },
+          "feat5": {
+            "title": "Multi-Store Management",
+            "description": "Manage inventory, sales, and employees across multiple locations from one dashboard. Real-time sync ensures consistent pricing and stock levels everywhere."
+          },
           "hero": {
             "title": "All Retail Features",
             "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",

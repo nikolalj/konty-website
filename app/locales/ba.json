@@ -411,13 +411,61 @@
       },
       "hospitality": {
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Nikad ne puca • Prava podrška • Bez ugovora",
-          "subtitle": "Kad udari subota uveče, trebaš POS koji neće da te izda. 99.97% uptime. Podrška za 30 sekundi. Prelazak za 48 sati.",
-          "title": "Za restorane koji ne smiju da stanu",
-          "viewPricing": "Vidi cijene"
+          "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
+          "title": "Konty - POS na koji možete da računate u najvećoj gužvi",
+          "subtitle": "Sveobuhvatan POS sistem za ugostiteljstvo — od rada po stolovima i praćenja porudžbina do potpune koordinacije kuhinje. Stvoren za lokale svih veličina."
+        },
+        "benefits": {
+          "title": "Zašto izabrati Konty za vaš lokal",
+          "description": "Napravljen specijalno za ugostiteljstvo, od malih kafića do restorana sa velikom frekvencijom gostiju.",
+          "benefit1": {
+            "title": "Softver pravljen po vašoj mjeri",
+            "description": "Kompletno rješenje je napravljeno specijalno za ugostiteljstvo. Pokriva sve vaše poslovne procese na efikasan način bilo da vodite mali ili veliki ugostiteljski objekat sa velikom frekvencijom gostiju."
+          },
+          "benefit2": {
+            "title": "Nevjerovatno lak za upotrebu",
+            "description": "Dosadili su vam programi kod kojih treba značajno vrijeme samo da bi odradili jednostavnu stvar? Konty je napravljen da bude vrlo intuitivan, efikasan i da vam brzo završava posao."
+          },
+          "benefit3": {
+            "title": "Pouzdan",
+            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbjeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvijek dostupni."
+          },
+          "benefit4": {
+            "title": "Dostupan svuda i uvijek",
+            "description": "Konty funkcioniše na Web-u, Windowsu i Androidu. 24h dnevno, svuda na svijetu imate besplatan udaljen pristup vašoj aplikaciji."
+          },
+          "benefit5": {
+            "title": "Napredni izvještaji",
+            "description": "Temeljni i precizni izvještaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
+          },
+          "benefit6": {
+            "title": "Superiorna korisnička podrška",
+            "description": "Naš tim vam je dostupan 24h dnevno, 7 dana u sedmici. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
+          }
         },
         "features": {
+          "title": "Jednostavan. Pouzdan. Spreman za rad.",
+          "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
+          "feat1": {
+            "title": "Sektori i stolovi",
+            "description": "Rad po stolovima podijeljenim u više sektora. Detaljan pregled računa, aktivnosti konobara, stanja naplatnog uređaja, izvještaja, itd."
+          },
+          "feat2": {
+            "title": "Brza i efikasna prodaja",
+            "description": "Brz odabir artikala kroz intuitivan korisnički interfejs. Efikasno izdavanje računa i narudžbina uz različite metode gotovinskog i bezgotovinskog plaćanja, štampanje narudžbina na kuhinjskom ili šank printeru, itd."
+          },
+          "feat3": {
+            "title": "Administracija",
+            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe, itd. Precizni izvještaji i detaljan uvid u sve segmente vašeg poslovanja."
+          },
+          "feat4": {
+            "title": "Upravljanje stolovima i narudžbama",
+            "description": "Vizuelni prikaz sale sa statusom stolova u realnom vremenu. Praćenje narudžbina od konobara do kuhinje uz besprijekoran protok. Podjela računa, spajanje stolova i rezervacije bez napora."
+          },
+          "feat5": {
+            "title": "Analitika prodaje",
+            "description": "Uvid u prihode, najprodavanije stavke, učinak zaposlenih i vrijeme najveće gužve u realnom vremenu. Donosite odluke zasnovane na podacima za rast profitabilnosti vašeg lokala."
+          },
           "hero": {
             "title": "All Hospitality Features",
             "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
@@ -443,13 +491,64 @@
       },
       "retail": {
         "hero": {
+          "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
           "cta": "Počni 30 dana besplatno",
           "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
-          "subtitle": "POS koji stvarno radi na Black Friday. 99.97% uptime kad drugi pucaju.",
-          "title": "Prodaj više. Manje brojanja. Bez stresa.",
+          "subtitle": "POS za maloprodaju i uslužne djelatnosti koji radi brzo, sigurno i bez prekida — od brze kase i evidencije zaliha do jasnih izvještaja za donošenje odluka.",
+          "title": "POS na koji možete da računate u najvećoj gužvi",
           "viewDemo": "2-minutni demo"
         },
+        "benefits": {
+          "title": "Zašto izabrati Konty za vašu prodavnicu",
+          "description": "Kompletno rješenje napravljeno specijalno za maloprodaju i uslužne djelatnosti. Pokriva vaše poslovne procese na efikasan način.",
+          "benefit1": {
+            "title": "Softver pravljen po vašoj mjeri",
+            "description": "Kompletno rješenje je napravljeno specijalno za maloprodaju i uslužne djelatnosti. Pokriva vaše poslovne procese na efikasan način."
+          },
+          "benefit2": {
+            "title": "Nevjerovatno lak za upotrebu",
+            "description": "Dosadili su vam programi kod kojih treba značajno vrijeme samo da bi promijenili cijenu jednog artikla? Konty je napravljen da bude intuitivan, efikasan i da vam brzo završava posao."
+          },
+          "benefit3": {
+            "title": "Pouzdan",
+            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbjeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvijek dostupni."
+          },
+          "benefit4": {
+            "title": "Dostupan svuda i uvijek",
+            "description": "Konty funkcioniše na Web-u, Windowsu i Androidu. 24h dnevno, svuda na svijetu imate besplatan udaljen pristup vašoj aplikaciji."
+          },
+          "benefit5": {
+            "title": "Napredni izvještaji",
+            "description": "Temeljni i precizni izvještaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
+          },
+          "benefit6": {
+            "title": "Superiorna korisnička podrška",
+            "description": "Naš tim vam je dostupan 24h dnevno, 7 dana u sedmici. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
+          }
+        },
         "features": {
+          "title": "Jednostavan. Pouzdan. Spreman za rad.",
+          "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
+          "feat1": {
+            "title": "Brza i efikasna prodaja",
+            "description": "Brza pretraga i odabir artikala po imenu, šifri, barkodu (običnom i težinskom). Detaljan pregled računa, aktivnosti zaposlenih, stanja naplatnog uređaja, izvještaja, itd."
+          },
+          "feat2": {
+            "title": "Administracija",
+            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe i ostalim poslovnim procesima."
+          },
+          "feat3": {
+            "title": "Izvještaji i statistike",
+            "description": "Precizni i temeljni izvještaji koji će vam omogućiti detaljan uvid u sve segmente vašeg poslovanja."
+          },
+          "feat4": {
+            "title": "Barkodovi i skeniranje inventara",
+            "description": "Munjevito skeniranje sa podrškom za standardne i težinske barkodove. Automatska ažuriranja zaliha i upozorenja pri niskom stanju održavaju police uvijek popunjenim."
+          },
+          "feat5": {
+            "title": "Upravljanje sa više lokacija",
+            "description": "Upravljajte zalihama, prodajom i zaposlenima na svim lokacijama iz jedne kontrolne ploče. Sinhronizacija u realnom vremenu osigurava konzistentne cijene i stanje zaliha svugdje."
+          },
           "hero": {
             "title": "All Retail Features",
             "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",

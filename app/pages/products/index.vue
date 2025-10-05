@@ -1,8 +1,8 @@
 <template>
   <div>
-    <products-headline />
-    <shared-product-features product="retail" />
-    <shared-contact-form />
+    <ProductsHeadline />
+    <SharedProductFeatures product="retail" />
+    <SharedContactForm />
   </div>
 </template>
 

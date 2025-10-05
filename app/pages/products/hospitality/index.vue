@@ -1,17 +1,17 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <ProductsHospitalityHero />
+    <ProductsHospitalityHero class="dark" />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazySharedClientList product="hospitality" hydrate-on-visible />
-    <LazySharedBenefits product="hospitality" hydrate-on-visible />
-    <LazyProductsHospitalityFeatures hydrate-on-visible />
+    <LazySharedClientList class="dark" product="hospitality" hydrate-on-visible />
+    <LazySharedBenefits variant="alt" product="hospitality" hydrate-on-visible />
+    <LazySharedProductFeatures product="hospitality" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="hospitality" hydrate-on-visible />
     <LazySharedGetStarted product="hospitality" hydrate-on-idle />
-    <LazySharedContactForm hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
