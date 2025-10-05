@@ -2,7 +2,6 @@
   <SharedSection
     v-if="posts && posts.length > 0"
     :variant="props.variant"
-    :dark="props.dark"
   >
     <UIAppear>
       <UContainer>
