@@ -32,6 +32,9 @@
               v-model="productInternal"
               :items="items"
               class="mt-8 w-full sm:w-lg"
+              :ui="{
+                list: 'grid grid-cols-2'
+              }"
             />
           </UIAppear>
         </div>

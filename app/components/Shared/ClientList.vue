@@ -5,7 +5,7 @@
     :description="config.description"
   >
     <UIAppear>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+      <div class="flex flex-wrap gap-8 items-center justify-center">
         <UPageCard
           v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
           :key="index"

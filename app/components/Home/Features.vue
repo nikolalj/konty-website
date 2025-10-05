@@ -64,9 +64,9 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <AppCTAButton variant="primary" section="features" />
-            <AppCTAButton variant="secondary" section="features" />
+          <div class="flex gap-4 flex-wrap justify-center sm:justify-start">
+            <AppCTAButton variant="primary" section="features" class="flex-1 max-w-[152px]" />
+            <AppCTAButton variant="secondary" section="features" class="flex-1 max-w-[152px]" />
           </div>
         </div>
       </UIAppear>
