@@ -9,7 +9,7 @@
     <LazySharedTestimonials product="hospitality" hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
-    <LazySharedContactForm hydrate-on-visible />
+     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 

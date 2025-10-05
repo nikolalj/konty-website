@@ -13,7 +13,7 @@
     <!-- Bottom sections -->
     <LazySharedPricing hydrate-on-visible />
     <LazySharedFAQ hydrate-on-visible />
-    <LazySharedContactForm hydrate-on-visible />
+     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 

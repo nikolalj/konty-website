@@ -8,7 +8,7 @@
     <LazySharedStatistics hydrate-on-visible />
     <LazySharedPricing product="retail" hydrate-on-visible />
     <LazySharedFAQ product="retail" hydrate-on-visible />
-    <LazySharedContactForm hydrate-on-visible />
+     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 

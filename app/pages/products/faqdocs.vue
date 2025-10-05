@@ -12,7 +12,7 @@
       </div>
     </LazySharedFAQ>
 
-    <LazySharedContactForm hydrate-on-visible />
+     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
