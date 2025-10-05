@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <HomeHero />
+    <HomeHero class="dark" />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazySharedClientList hydrate-on-visible />
-    <LazySharedStatistics class="!pt-4" hydrate-on-visible />
+    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazyHomeFeatures hydrate-on-visible />
     <LazySharedTestimonials  hydrate-on-idle />
     <LazySharedGetStarted variant="alt" hydrate-on-visible />

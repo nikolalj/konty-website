@@ -10,9 +10,6 @@
         <UPageCard
           v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
           :key="index"
-          :title="client.name"
-          :to="client.to"
-          description="Nuxt UI v3 integrates with latest."
           target="_blank"
           variant="outline"
           spotlight
@@ -20,7 +17,7 @@
           :ui="{
             root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
           }"
-          class="w-full bg-elevated hover:bg-muted cursor-pointer"
+          class="dark w-full bg-elevated hover:bg-muted cursor-pointer"
         >
           <div class="flex justify-center">
             <NuxtImg
@@ -29,9 +26,9 @@
               loading="lazy"
               :alt="client.name"
               role="presentation"
-              width="80"
-              height="80"
-              quality="70"
+              width="120"
+              height="120"
+              quality="80"
               fit="cover"
             />
           </div>
@@ -68,52 +65,64 @@ const config = ref({
 
 const clients = ref([
   {
-    name: 'Microsoft',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-microsoft',
-    colorClass: 'text-[#00A1F1]',
+    name: 'Adiya Hotel',
+    logo: '/images/clients/adiya.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Baracuda Fish Restaurant',
+    logo: '/images/clients/baracuda.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Fishermans Pub',
+    logo: '/images/clients/fishermanspub.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Hotel Enigma',
+    logo: '/images/clients/hotelenigma.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Pulena Bar',
+    logo: '/images/clients/pulenabar.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Hotel Pelikan',
+    logo: '/images/clients/hotelpelikan.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Sapore di Mare',
+    logo: '/images/clients/saporedimare.avif',
+    product: 'hospitality',
+  },
+  {
+    name: 'Tasa Restoran',
+    logo: '/images/clients/tasa.avif',
     product: 'retail',
-    to: '#'
   },
   {
-    name: 'Google',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-google',
-    colorClass: 'text-[#4285F4]',
-    product: 'retail',
-    to: '#'
-  },
-  {
-    name: 'Apple',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-apple',
-    colorClass: 'text-default',
+    name: 'Grand Hotel Cetinje',
+    logo: '/images/clients/grandhotelcetinje.avif',
     product: 'hospitality',
-    to: '#'
   },
   {
-    name: 'Amazon',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-amazon',
-    colorClass: 'text-[#FF9900]',
+    name: 'COCO Beach & Restaurant',
+    logo: '/images/clients/coco.avif',
     product: 'hospitality',
-    to: '#'
   },
   {
-    name: 'Meta',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-meta',
-    colorClass: 'text-[#1877F2]',
+    name: 'Tri Ribara',
+    logo: '/images/clients/triribara.avif',
     product: 'hospitality',
-    to: '#'
   },
   {
-    name: 'Netflix',
-    logo: '/images/clients/client1.png',
-    icon: 'i-simple-icons-netflix',
-    colorClass: 'text-[#E50914]',
+    name: 'Konoba Amanet',
+    logo: '/images/clients/konobaamanet.avif',
     product: 'hospitality',
-    to: '#'
-  }
+  },
 ])
 </script>
