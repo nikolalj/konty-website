@@ -62,7 +62,7 @@
             </p>
             <div class="grid md:grid-cols-2 gap-4 mb-8">
               <div v-for="feature in getDemoFeatures(selectedCategory)" :key="feature" class="flex items-center">
-                <UIcon name="i-heroicons-check-circle" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
                 <span class="text-gray-700 dark:text-gray-300">{{ t(feature) }}</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const selectedCategory = ref<string | null>(null)
 const mainCategories = [
   {
     key: 'hospitality',
-    icon: 'i-heroicons-building-storefront',
+    icon: 'i-lucide-store',
     title: 'ui.navigation.main.hospitality',
     description: 'ui.navigation.main.hospitalityDesc',
     examples: [
@@ -99,7 +99,7 @@ const mainCategories = [
   },
   {
     key: 'retail',
-    icon: 'i-heroicons-shopping-cart',
+    icon: 'i-lucide-shopping-cart',
     title: 'ui.navigation.main.retail',
     description: 'ui.navigation.main.retailDesc',
     examples: [

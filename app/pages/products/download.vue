@@ -18,7 +18,7 @@
         <!-- Documentation link - hidden on mobile, shown on desktop -->
         <div class="mt-8 hidden lg:block">
           <div class="inline-flex items-center gap-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
-            <UIcon name="i-heroicons-document-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <UIcon name="i-lucide-file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
             <p class="text-base text-gray-700 dark:text-gray-300">
               {{ t('pages.products.download.hero.docsLink') }}
               <a href="/docs" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline font-semibold">
@@ -71,7 +71,7 @@
       <!-- Documentation link - shown on mobile only, after downloads -->
       <div class="lg:hidden">
         <div class="inline-flex items-center gap-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
-          <UIcon name="i-heroicons-document-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          <UIcon name="i-lucide-file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
           <p class="text-base text-gray-700 dark:text-gray-300">
             {{ t('pages.products.download.hero.docsLink') }}
             <a href="/docs" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline font-semibold">
@@ -102,7 +102,7 @@ const items = ref({
       {
         title: t('pages.products.download.sections.production.web'),
         platform: 'Web',
-        icon: 'i-heroicons-globe-alt',
+        icon: 'i-lucide-globe',
         link: 'https://app.konty.app'
       },
       {
@@ -131,7 +131,7 @@ const items = ref({
       {
         title: t('pages.products.download.sections.demo.web'),
         platform: 'Web',
-        icon: 'i-heroicons-globe-alt',
+        icon: 'i-lucide-globe',
         link: 'https://demo.konty.app'
       },
       {

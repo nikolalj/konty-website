@@ -42,7 +42,7 @@
     </template>
 
     <template #left>
-      <ULink to="/" class="flex items-center gap-2 shrink-0">
+      <ULink :to="localePath('/')" class="flex items-center gap-2 shrink-0">
         <NuxtImg
           src="/images/branding/logo-dark.svg"
           width="38"
@@ -63,7 +63,7 @@
 
     <template #content>
       <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
-        <ULink to="/" class="flex items-center gap-2 shrink-0">
+        <ULink :to="localePath('/')" class="flex items-center gap-2 shrink-0">
           <div class="sm:hidden">
             <UColorModeImage
               light="/images/branding/logo-light.svg"

@@ -14,7 +14,7 @@
           <!-- Key Benefits -->
           <ul class="space-y-4 mb-8">
             <li v-for="benefit in benefits" :key="benefit.key" class="flex items-start">
-              <UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+              <UIcon name="i-lucide-check-circle" class="w-6 h-6 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
               <span class="text-gray-700 dark:text-gray-300">{{ t(benefit.key) }}</span>
             </li>
           </ul>
@@ -26,7 +26,7 @@
               color="primary"
               @click="scrollToCalendar"
             >
-              <UIcon name="i-heroicons-calendar" class="mr-2" />
+              <UIcon name="i-lucide-calendar" class="mr-2" />
               {{ t('pages.demo.hero.scheduleButton') }}
             </UButton>
             <UButton
@@ -34,7 +34,7 @@
               variant="outline"
               @click="scrollToVideo"
             >
-              <UIcon name="i-heroicons-play-circle" class="mr-2" />
+              <UIcon name="i-lucide-play-circle" class="mr-2" />
               {{ t('pages.demo.hero.watchVideoButton') }}
             </UButton>
           </div>
@@ -51,7 +51,7 @@
 
           <!-- Placeholder Calendar -->
           <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-8 text-center">
-            <UIcon name="i-heroicons-calendar-days" class="w-16 h-16 mx-auto text-gray-400 mb-4" />
+            <UIcon name="i-lucide-calendar-days" class="w-16 h-16 mx-auto text-gray-400 mb-4" />
             <p class="text-gray-500 dark:text-gray-400">
               {{ t('pages.demo.hero.calendarPlaceholder') }}
             </p>

@@ -42,7 +42,7 @@
 
             <!-- Duration -->
             <div class="mt-4 flex items-center text-sm text-gray-500 dark:text-gray-400">
-              <UIcon name="i-heroicons-clock" class="w-4 h-4 mr-1" />
+              <UIcon name="i-lucide-clock" class="w-4 h-4 mr-1" />
               {{ t(step.duration) }}
             </div>
           </div>
@@ -56,7 +56,7 @@
         </h3>
         <div class="grid md:grid-cols-3 gap-6">
           <div v-for="item in outcomes" :key="item.key" class="flex items-start">
-            <UIcon name="i-heroicons-sparkles" class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+            <UIcon name="i-lucide-sparkles" class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
             <div>
               <h4 class="font-semibold text-gray-900 dark:text-white mb-1">
                 {{ t(item.title) }}
@@ -78,28 +78,28 @@ const { t } = useI18n()
 const steps = [
   {
     key: 'step1',
-    icon: 'i-heroicons-chat-bubble-left-right',
+    icon: 'i-lucide-message-circle',
     title: 'pages.demo.process.step1.title',
     description: 'pages.demo.process.step1.description',
     duration: 'pages.demo.process.step1.duration'
   },
   {
     key: 'step2',
-    icon: 'i-heroicons-presentation-chart-line',
+    icon: 'i-lucide-presentation',
     title: 'pages.demo.process.step2.title',
     description: 'pages.demo.process.step2.description',
     duration: 'pages.demo.process.step2.duration'
   },
   {
     key: 'step3',
-    icon: 'i-heroicons-wrench-screwdriver',
+    icon: 'i-lucide-wrench',
     title: 'pages.demo.process.step3.title',
     description: 'pages.demo.process.step3.description',
     duration: 'pages.demo.process.step3.duration'
   },
   {
     key: 'step4',
-    icon: 'i-heroicons-rocket-launch',
+    icon: 'i-lucide-rocket',
     title: 'pages.demo.process.step4.title',
     description: 'pages.demo.process.step4.description',
     duration: 'pages.demo.process.step4.duration'

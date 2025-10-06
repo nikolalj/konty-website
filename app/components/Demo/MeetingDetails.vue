@@ -12,7 +12,7 @@
             <!-- Meeting Format -->
             <div class="flex items-start">
               <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                <UIcon name="i-heroicons-video-camera" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <UIcon name="i-lucide-video" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
               </div>
               <div class="ml-4">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
@@ -27,7 +27,7 @@
             <!-- Duration -->
             <div class="flex items-start">
               <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                <UIcon name="i-heroicons-clock" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <UIcon name="i-lucide-clock" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
               </div>
               <div class="ml-4">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
@@ -42,7 +42,7 @@
             <!-- Language -->
             <div class="flex items-start">
               <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                <UIcon name="i-heroicons-language" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <UIcon name="i-lucide-languages" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
               </div>
               <div class="ml-4">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
@@ -57,7 +57,7 @@
             <!-- Participants -->
             <div class="flex items-start">
               <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                <UIcon name="i-heroicons-user-group" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <UIcon name="i-lucide-users" class="w-6 h-6 text-primary-600 dark:text-primary-400" />
               </div>
               <div class="ml-4">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
@@ -77,7 +77,7 @@
             </h3>
             <ul class="space-y-2">
               <li v-for="item in preparationItems" :key="item" class="flex items-start">
-                <UIcon name="i-heroicons-check" class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                <UIcon name="i-lucide-check" class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-600 dark:text-gray-300">{{ t(item) }}</span>
               </li>
             </ul>
@@ -99,7 +99,7 @@
                   class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors group"
                   @click="playVideo"
                 >
-                  <UIcon name="i-heroicons-play-solid" class="w-8 h-8 text-gray-900 ml-1 group-hover:scale-110 transition-transform" />
+                  <UIcon name="i-lucide-play" class="w-8 h-8 text-gray-900 ml-1 group-hover:scale-110 transition-transform" />
                 </button>
               </div>
             </div>
@@ -130,7 +130,7 @@
             </p>
             <UButton variant="link" to="/faq">
               {{ t('pages.demo.meetingDetails.viewFaq') }}
-              <UIcon name="i-heroicons-arrow-right" class="ml-1" />
+              <UIcon name="i-lucide-arrow-right" class="ml-1" />
             </UButton>
           </div>
         </div>

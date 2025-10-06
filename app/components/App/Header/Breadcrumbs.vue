@@ -29,7 +29,7 @@ const localizedItems = computed(() => {
       return {
         ...item,
         label: '',  // Empty label since we'll show icon
-        icon: 'i-heroicons-home-20-solid',
+        icon: 'i-lucide-home',
         ariaLabel: t('ui.breadcrumb.index') // For accessibility
       }
     }

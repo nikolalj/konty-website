@@ -1,8 +1,8 @@
 <template>
   <div>
     <ProductsHeadline />
-    <SharedProductFeatures product="retail" />
-    <SharedContactForm />
+    <LazySharedProductFeatures product="retail" />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
