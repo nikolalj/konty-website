@@ -2,40 +2,34 @@
   <SharedSection
     :variant="props.variant"
     :heading-level="props.headingLevel"
-    :title="t('pages.home.testimonials.title')"
-    :description="t('pages.home.testimonials.description')"
+    :title="faqData.title"
+    :description="faqData.subtitle"
   >
     <UIAppear direction="up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
-          {{ faqData.title }}
-        </h2>
-        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          {{ faqData.subtitle }}
-        </p>
-      </div>
-
       <div class="max-w-4xl mx-auto space-y-4">
         <div
           v-for="(item, index) in faqItems"
           :key="index"
-          class="group rounded-xl bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 hover:ring-primary-300 dark:hover:ring-primary-700 transition-all duration-200 overflow-hidden"
+          class="group rounded-xl border border-primary/10 hover:border-primary/40  transition-all duration-200 overflow-hidden"
+          :class="openItems.includes(index) ? 'bg-primary/8' : 'bg-primary/3 hover:bg-primary/8'"
         >
           <button
-            class="w-full flex items-center justify-between p-6 text-left transition-all duration-200"
-            :class="openItems.includes(index) ? 'bg-primary-50/50 dark:bg-primary-950/30' : 'hover:bg-gray-50 dark:hover:bg-gray-800/50'"
+            class="w-full flex items-center justify-between gap-4 p-4 text-left transition-all duration-200"
             @click="toggleItem(index)"
           >
-            <div class="flex items-start gap-4 flex-1">
-              <div class="flex-shrink-0 mt-1">
-                <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center transition-all duration-200" :class="openItems.includes(index) ? 'bg-primary-200 dark:bg-primary-800/50' : ''">
+            <div class="flex items-center gap-4 flex-1 min-w-0">
+              <div class="flex-shrink-0">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
+                  :class="openItems.includes(index) ? 'bg-primary/20' : 'bg-primary/10'"
+                >
                   <UIcon
                     name="i-lucide-help-circle"
                     class="w-5 h-5 text-primary-600 dark:text-primary-400"
                   />
                 </div>
               </div>
-              <span class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors pr-8">
+              <span class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {{ item.label }}
               </span>
             </div>
@@ -46,16 +40,14 @@
             />
           </button>
 
-          <Transition
-            enter-active-class="transition-all duration-300 ease-out"
-            enter-from-class="max-h-0 opacity-0"
-            enter-to-class="max-h-[1000px] opacity-100"
-            leave-active-class="transition-all duration-300 ease-in"
-            leave-from-class="max-h-[1000px] opacity-100"
-            leave-to-class="max-h-0 opacity-0"
+          <div
+            class="grid transition-all duration-300 ease-in-out"
+            :style="{
+              gridTemplateRows: openItems.includes(index) ? '1fr' : '0fr'
+            }"
           >
-            <div v-if="openItems.includes(index)" class="overflow-hidden">
-              <div class="px-6 pb-6 pt-2">
+            <div class="overflow-hidden">
+              <div class="px-4 pb-4">
                 <div class="pl-14">
                   <div class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                     {{ item.content }}
@@ -63,7 +55,7 @@
                 </div>
               </div>
             </div>
-          </Transition>
+          </div>
         </div>
       </div>
     </UIAppear>
@@ -72,8 +64,6 @@
 
 <script setup lang="ts">
 import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
-
-const { t } = useI18n()
 
 const props = defineProps({
   variant: {

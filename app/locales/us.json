@@ -373,6 +373,8 @@
         }
       },
       "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions about Konty POS system",
         "a1": "Konty is a modern point-of-sale system that helps businesses digitize their operations. It enables sales tracking, inventory management, reporting, and compliance.",
         "a2": "Yes, Konty works offline too. All data is stored locally and syncs automatically when you reconnect to the internet.",
         "a3": "You can start in just 5 minutes! Sign up, add products, and start selling. No installation or special hardware required.",

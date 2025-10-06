@@ -5,7 +5,7 @@
 
     <!-- Reusable components -->
     <LazySharedClientList class="dark" hydrate-on-visible />
-    <LazySharedStatistics hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
 
     <!-- Solutions Grid -->
     <LazySolutionsGrid hydrate-on-visible />

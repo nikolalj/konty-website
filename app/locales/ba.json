@@ -373,6 +373,8 @@
         }
       },
       "faq": {
+        "title": "Često postavljana pitanja",
+        "subtitle": "Pronađite odgovore na uobičajena pitanja o Konty POS sistemu",
         "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izvještaja i fiskalizaciju.",
         "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povežete na internet.",
         "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahtijeva instalaciju ili poseban hardver.",
