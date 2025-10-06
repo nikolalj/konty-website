@@ -447,24 +447,20 @@
           "title": "Simple. Reliable. Ready to work.",
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "feat1": {
-            "title": "Sections and Tables",
-            "description": "Manage tables across multiple sections. Get detailed overview of bills, server activities, POS terminal status, reports, and more."
+            "title": "Built for Hospitality",
+            "description": "Complete solution designed specifically for restaurants and cafes. Covers all your business processes efficiently, whether you run a small cafe or a high-traffic restaurant."
           },
           "feat2": {
-            "title": "Fast and Efficient Sales",
-            "description": "Quick item selection through intuitive interface. Efficient billing and ordering with various cash and cashless payment methods, order printing to kitchen or bar printers, and more."
+            "title": "Incredibly Easy to Use",
+            "description": "Tired of software that takes forever to do simple tasks? Konty is built to be intuitive, efficient, and gets the job done fast."
           },
           "feat3": {
-            "title": "Administration",
-            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods, etc. Precise reports and detailed insights into all segments of your business."
+            "title": "Reliable & Secure",
+            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
           },
           "feat4": {
-            "title": "Table Management & Orders",
-            "description": "Visual floor plan with real-time table status. Track orders from service to kitchen with seamless coordination. Split bills, merge tables, and manage reservations effortlessly."
-          },
-          "feat5": {
-            "title": "Sales Analytics",
-            "description": "Real-time insights into revenue, top-selling items, server performance, and peak hours. Make data-driven decisions to grow your restaurant's profitability."
+            "title": "Advanced Reports",
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
           },
           "hero": {
             "title": "All Hospitality Features",
@@ -530,24 +526,20 @@
           "title": "Simple. Reliable. Ready to work.",
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "feat1": {
-            "title": "Fast and Efficient Sales",
-            "description": "Quick search and selection of items by name, code, barcode (regular and weight-based). Detailed overview of receipts, employee activities, POS terminal status, reports, and more."
+            "title": "Built for Retail",
+            "description": "Complete solution designed specifically for retail and service businesses. Covers your business processes in an efficient way."
           },
           "feat2": {
-            "title": "Administration",
-            "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods and other business processes."
+            "title": "Incredibly Easy to Use",
+            "description": "Tired of software that takes significant time just to change a single item price? Konty is built to be intuitive, efficient, and gets your work done quickly."
           },
           "feat3": {
-            "title": "Reports and Statistics",
-            "description": "Precise and comprehensive reports that give you detailed insights into all segments of your business."
+            "title": "Reliable & Secure",
+            "description": "No more fear of losing data from the first power surge. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
           },
           "feat4": {
-            "title": "Barcode & Inventory Scanning",
-            "description": "Lightning-fast scanning with support for standard and weight-based barcodes. Automatic stock updates and low inventory alerts keep your shelves stocked."
-          },
-          "feat5": {
-            "title": "Multi-Store Management",
-            "description": "Manage inventory, sales, and employees across multiple locations from one dashboard. Real-time sync ensures consistent pricing and stock levels everywhere."
+            "title": "Advanced Reports",
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
           },
           "hero": {
             "title": "All Retail Features",
