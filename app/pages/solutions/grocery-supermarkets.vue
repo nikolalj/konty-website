@@ -4,7 +4,7 @@
     <SolutionsOverview solution="grocerySupermarkets" />
 
     <!-- Reusable components -->
-    <LazySharedClientList product="retail" hydrate-on-visible />
+    <LazySharedClientList class="dark" product="retail" hydrate-on-visible />
     <LazySharedStatistics hydrate-on-visible />
     <LazySharedPricing product="retail" hydrate-on-visible />
     <LazySharedFAQ product="retail" hydrate-on-visible />

@@ -1,7 +1,13 @@
 <template>
   <div>
-    <ProductsHeadline />
+    <ProductsHero class="dark" />
+
+    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedProductFeatures />
+    <LazySharedTestimonials hydrate-on-idle />
+    <LazySharedGetStarted variant="alt" hydrate-on-visible />
+    <LazySharedPricing hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>

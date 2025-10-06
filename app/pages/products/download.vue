@@ -1,9 +1,9 @@
 <template>
-  <section class="pt-28 sm:pt-34 pb-16 bg-[var(--bg-200)] dark:bg-[var(--bg-200)]">
+  <section class="pt-44 pb-16">
     <UContainer class="flex flex-col lg:grid gap-y-16 gap-12 lg:grid-cols-2 lg:items-center">
       <!-- Left column: Text content -->
       <div>
-        <h1 class="text-5xl sm:text-6xl text-pretty tracking-tight font-bold text-highlighted">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl text-pretty tracking-tight font-bold text-highlighted">
           {{ t('pages.products.download.hero.title') }}
         </h1>
 
@@ -16,15 +16,15 @@
         </p>
 
         <!-- Documentation link - hidden on mobile, shown on desktop -->
-        <div class="mt-8 hidden lg:block">
-          <div class="inline-flex items-center gap-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
-            <UIcon name="i-lucide-file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            <p class="text-base text-gray-700 dark:text-gray-300">
-              {{ t('pages.products.download.hero.docsLink') }}
-              <a href="/docs" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline font-semibold">
-                {{ t('pages.products.download.hero.docsLinkText') }}
-              </a>
-            </p>
+        <div class="hidden lg:block">
+          <div class="mt-12 inline-flex items-center gap-2 px-4 py-3 bg-primary-500/10 rounded-lg border border-primary-200">
+            <UIcon name="i-lucide-file-text" class="w-5 h-5 text-primary" />
+              <p class="text-base text-gray-700 dark:text-gray-300">
+                {{ t('pages.products.download.hero.docsLink') }}
+                <a href="https://docs.konty.com" target="_blank" class="text-primary underline font-semibold cursor-pointer">
+                  {{ t('pages.products.download.hero.docsLinkText') }}
+                </a>
+              </p>
           </div>
         </div>
       </div>
@@ -70,11 +70,11 @@
 
       <!-- Documentation link - shown on mobile only, after downloads -->
       <div class="lg:hidden">
-        <div class="inline-flex items-center gap-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
-          <UIcon name="i-lucide-file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+        <div class="inline-flex items-center gap-2 px-4 py-3 bg-primary-500/10 rounded-lg border border-primary-200">
+          <UIcon name="i-lucide-file-text" class="w-5 h-5 text-primary" />
           <p class="text-base text-gray-700 dark:text-gray-300">
             {{ t('pages.products.download.hero.docsLink') }}
-            <a href="/docs" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline font-semibold">
+            <a href="https://docs.konty.com" target="_blank" class="text-primary underline font-semibold cursor-pointer">
               {{ t('pages.products.download.hero.docsLinkText') }}
             </a>
           </p>

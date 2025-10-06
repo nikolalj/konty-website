@@ -4,7 +4,7 @@
     <SolutionsOverview solution="restaurants" />
 
     <!-- Reusable components -->
-    <LazySharedClientList product="hospitality" hydrate-on-visible />
+    <LazySharedClientList class="dark" product="hospitality" hydrate-on-visible />
     <LazySharedStatistics hydrate-on-visible />
     <LazySharedPricing product="hospitality" hydrate-on-visible />
     <LazySharedFAQ product="hospitality" hydrate-on-visible />

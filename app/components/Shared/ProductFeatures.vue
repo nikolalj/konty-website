@@ -19,7 +19,7 @@
               :class="[
                 selectedFeature === index
                   ? 'bg-primary-600/10 dark:bg-primary-600/20'
-                  : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                  : 'hover:bg-gray-100 dark:bg-primary-600/20'
               ]"
               @click="selectedFeature = index"
             >

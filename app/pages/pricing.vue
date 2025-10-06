@@ -1,8 +1,8 @@
 <template>
   <div class="mt-24">
-    <shared-pricing heading-level="h1" />
-    <shared-get-started />
-    <shared-contact-form />
+    <SharedPricing heading-level="h1" />
+    <SharedGetStarted />
+    <SharedContactForm />
   </div>
 </template>
 

@@ -7,10 +7,8 @@
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazyHomeFeatures hydrate-on-visible />
-    <LazySharedTestimonials  hydrate-on-idle />
+    <LazySharedTestimonials hydrate-on-idle />
     <LazySharedGetStarted variant="alt" hydrate-on-visible />
-
-    <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedPricing hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
 

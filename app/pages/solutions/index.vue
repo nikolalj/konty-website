@@ -4,7 +4,7 @@
     <SolutionsHero />
 
     <!-- Reusable components -->
-    <LazySharedClientList hydrate-on-visible />
+    <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics hydrate-on-visible />
 
     <!-- Solutions Grid -->

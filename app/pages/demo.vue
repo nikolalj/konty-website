@@ -1,19 +1,19 @@
 <template>
   <div class="mt-24">
     <!-- Hero sekcija sa zakazivanjem termina -->
-    <demo-hero />
+    <DemoHero />
 
     <!-- Proces demonstracije - šta možete očekivati -->
-    <demo-process />
+    <DemoProcess />
 
     <!-- Interaktivni vodič za odabir kategorije -->
-    <demo-category-selector />
+    <DemoCategorySelector />
 
     <!-- Opis demo sastanka -->
-    <demo-meeting-details />
+    <DemoMeetingDetails />
 
     <!-- Kontakt forma -->
-    <shared-contact-form />
+    <SharedContactForm />
   </div>
 </template>
 

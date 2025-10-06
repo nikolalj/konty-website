@@ -140,6 +140,7 @@ function isRouteWithTransparentHeader(path: string) {
 
   const routesWithTransparentHeader = [
     '/',
+    '/products',
     '/products/hospitality',
     '/products/retail',
   ]

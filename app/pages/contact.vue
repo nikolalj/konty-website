@@ -5,7 +5,7 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazyAboutContactInfo hydrate-on-visible />
-    <LazySharedClientList hydrate-on-visible />
+    <LazySharedClientList class="dark" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
      <LazySharedContactForm variant="alt" hydrate-on-visible />
