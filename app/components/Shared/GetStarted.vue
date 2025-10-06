@@ -10,36 +10,39 @@
           <div
             v-for="(step, index) in steps"
             :key="`step-${index}`"
-            class="group flex flex-col relative"
+            class="group relative"
           >
-            <!-- Step Card -->
-            <div class="relative">
-              <div class="flex overflow-hidden aspect-[16/9]">
-                <!-- Strip with number -->
-                <div class="w-10 bg-[#c4b4ff] flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-bold text-primary">{{ index + 1 }}</span>
-                </div>
+            <!-- Mobile: Horizontal Layout, Desktop: Vertical Layout -->
+            <div class="flex sm:flex-col gap-4 sm:gap-0">
+              <!-- Step Card -->
+              <div class="relative flex-shrink-0 sm:flex-shrink">
+                <div class="flex overflow-hidden sm:aspect-[16/9] h-full sm:h-auto sm:w-full w-28">
+                  <!-- Strip with number -->
+                  <div class="w-6 sm:w-10 bg-[#c4b4ff] flex items-center justify-center flex-shrink-0">
+                    <span class="text-lg sm:text-2xl font-bold text-primary">{{ index + 1 }}</span>
+                  </div>
 
-                <!-- Icon area with gradient -->
-                <div class="relative flex-1 bg-gradient-to-r from-[#ede9fe] to-transparent">
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <UIcon :name="step.icon" class="w-20 h-20 text-primary [&_*]:[stroke-width:1.1]" />
+                  <!-- Icon area with gradient -->
+                  <div class="relative flex-1 bg-gradient-to-r from-[#c4b4ff]/30 to-transparent">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <UIcon :name="step.icon" class="w-12 sm:w-20 h-12 sm:h-20 text-primary [&_*]:[stroke-width:1]" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Content -->
-            <div class="pt-4 flex flex-col flex-1">
-              <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-                {{ step.tagline }}
-              </p>
-              <h3 class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2">
-                {{ step.title }}
-              </h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">
-                {{ step.description }}
-              </p>
+              <!-- Content -->
+              <div class="flex flex-col flex-1 sm:pt-4">
+                <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                  {{ step.tagline }}
+                </p>
+                <h3 class="font-semibold text-base sm:text-lg text-gray-900 dark:text-gray-100 mb-2">
+                  {{ step.title }}
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">
+                  {{ step.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
