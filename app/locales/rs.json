@@ -26,7 +26,8 @@
     "learnMore": "Saznaj više",
     "cta": {
       "primary": "Zakaži demo",
-      "secondary": "Kontaktiraj nas"
+      "secondary": "Kontaktiraj nas",
+      "tertiary": "Više detalja"
     },
     "common": {
       "buttons": {
@@ -355,6 +356,18 @@
           "feat3": {
             "title": "Administracija",
             "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe, itd. Precizni izveštaji i detaljan uvid u sve segmente vašeg poslovanja."
+          },
+          "feat4": {
+            "title": "Napredni izveštaji",
+            "description": "Sveobuhvatni i precizni izveštaji koji su vam potrebni za vođenje poslovanja. Omogućava tačno praćenje zaliha, prodaje, prihoda i rashoda."
+          },
+          "feat5": {
+            "title": "Dostupno svugde",
+            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+          },
+          "feat6": {
+            "title": "Vrhunska korisnička podrška",
+            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
           }
         },
         "retail": {
@@ -369,6 +382,18 @@
           "feat3": {
             "title": "Izveštaji i statistike",
             "description": "Precizni i temeljni izveštaji koji će vam omogućiti detaljan uvid u sve segmente vašeg poslovanja."
+          },
+          "feat4": {
+            "title": "Upravljanje zalihama",
+            "description": "Praćenje stanja zaliha u realnom vremenu sa automatskim upozorenjima kada su artikli pri kraju. Upravljajte hiljade proizvoda s lakoćom i optimizujte svoje nivoe zaliha."
+          },
+          "feat5": {
+            "title": "Dostupno svugde",
+            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+          },
+          "feat6": {
+            "title": "Vrhunska korisnička podrška",
+            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
           }
         }
       },
@@ -464,6 +489,14 @@
             "title": "Napredni izveštaji",
             "description": "Temeljni i precizni izveštaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
           },
+          "feat5": {
+            "title": "Dostupno svugde",
+            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+          },
+          "feat6": {
+            "title": "Vrhunska korisnička podrška",
+            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
+          },
           "hero": {
             "title": "All Hospitality Features",
             "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
@@ -542,6 +575,14 @@
           "feat4": {
             "title": "Napredni izveštaji",
             "description": "Temeljni i precizni izveštaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
+          },
+          "feat5": {
+            "title": "Dostupno svugde",
+            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+          },
+          "feat6": {
+            "title": "Vrhunska korisnička podrška",
+            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
           },
           "hero": {
             "title": "All Retail Features",

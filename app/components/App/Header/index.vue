@@ -111,8 +111,7 @@ const EXIT_SOLID = 8
 const isHeaderSolid = ref(!isRouteWithTransparentHeader(route.path))
 const isTopBarCollapsed = ref(false)
 
-watch(() => route.path, (newPath, oldPath) => {
-  console.log(oldPath + ' -> ' + newPath)
+watch(() => route.path, (newPath) => {
   isHeaderSolid.value = !isRouteWithTransparentHeader(newPath)
 })
 

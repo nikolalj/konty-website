@@ -26,7 +26,8 @@
     "learnMore": "Learn more",
     "cta": {
       "primary": "Get a demo",
-      "secondary": "Contact us"
+      "secondary": "Contact us",
+      "tertiary": "More details"
     },
     "common": {
       "buttons": {
@@ -355,6 +356,18 @@
           "feat3": {
             "title": "Administration",
             "description": "Advanced management of employees, items and inventory, suppliers, customers, receiving and shipping goods, etc. Precise reports and detailed insights into all segments of your business."
+          },
+          "feat4": {
+            "title": "Advanced Reports",
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+          },
+          "feat5": {
+            "title": "Available Everywhere",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "feat6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
           }
         },
         "retail": {
@@ -369,6 +382,18 @@
           "feat3": {
             "title": "Reports and Statistics",
             "description": "Precise and comprehensive reports that give you detailed insights into all segments of your business."
+          },
+          "feat4": {
+            "title": "Inventory Management",
+            "description": "Real-time stock tracking with automatic alerts when items are running low. Manage thousands of products with ease and optimize your inventory levels."
+          },
+          "feat5": {
+            "title": "Available Everywhere",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "feat6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
           }
         }
       },
@@ -464,6 +489,14 @@
             "title": "Advanced Reports",
             "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
           },
+          "feat5": {
+            "title": "Available Everywhere",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "feat6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
+          },
           "hero": {
             "title": "All Hospitality Features",
             "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
@@ -542,6 +575,14 @@
           "feat4": {
             "title": "Advanced Reports",
             "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+          },
+          "feat5": {
+            "title": "Available Everywhere",
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+          },
+          "feat6": {
+            "title": "Superior Customer Support",
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
           },
           "hero": {
             "title": "All Retail Features",

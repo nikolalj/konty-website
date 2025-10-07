@@ -38,7 +38,7 @@
       >
         <div>
           <!-- Features -->
-          <div class="space-y-8 mb-12">
+          <div class="space-y-8 mb-8">
             <div
               v-for="(feature, index) in features[product]"
               :key="`${product}-${index}`"
@@ -64,7 +64,7 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex gap-4 flex-wrap justify-center sm:justify-start">
+          <div class="flex ml-0 sm:ml-15 gap-4 flex-wrap justify-center sm:justify-start">
             <AppCTAButton variant="primary" section="features" class="flex-1 max-w-[152px]" />
             <AppCTAButton variant="secondary" section="features" class="flex-1 max-w-[152px]" />
           </div>
