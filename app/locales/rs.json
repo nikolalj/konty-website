@@ -111,17 +111,30 @@
     },
     "forms": {
       "fields": {
-        "name": "Ime",
+        "name": "Ime i prezime",
         "email": "Email",
-        "message": "Najveći problem sa POS? (Opciono)"
+        "message": "Najveći problem sa POS? (Opciono)",
+        "phone": "Telefon",
+        "preferredDateTime": "Željen datum i vreme",
+        "industry": "Tip poslovanja"
       },
       "placeholders": {
-        "name": "Ime",
+        "name": "Vaše ime i prezime",
         "email": "Email adresa",
-        "message": "Poruka (opciono)"
+        "message": "Poruka (opciono)",
+        "phone": "+381 60 123 4567",
+        "preferredDateTime": "npr. Ponedeljak 14h ili Utorak posle 16h"
       },
       "buttons": {
-        "submit": "Pošalji"
+        "submit": "Pošalji",
+        "bookDemo": "Zakaži demo"
+      },
+      "optional": "opciono",
+      "industryOptions": {
+        "select": "Izaberite tip poslovanja",
+        "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
+        "retail": "Trgovina (prodavnica, butik...)",
+        "other": "Ostalo"
       }
     },
     "errors": {
@@ -820,18 +833,64 @@
     },
     "demo": {
       "hero": {
-        "title": "Zakaži svoju personalizovanu demonstraciju",
-        "subtitle": "15 minuta koje će transformisati tvoj biznis. Vidi tačno kako Konty rešava tvoje probleme.",
-        "benefit1": "Personalizovano za tvoj tip biznisa",
-        "benefit2": "Vidi sve funkcije koje su ti bitne",
-        "benefit3": "Dobij ponudu prilagođenu tvojim potrebama",
-        "benefit4": "Bez obaveza, bez pritiska",
-        "scheduleButton": "Zakaži termin",
-        "watchVideoButton": "Pogledaj video",
-        "calendarTitle": "Izaberi termin koji ti odgovara",
-        "calendarDescription": "Dostupni smo radnim danima od 9 do 18h",
-        "calendarPlaceholder": "Kalendar će se učitati ovde",
-        "openCalendar": "Otvori kalendar"
+        "title": "Rezervišite besplatni demo već danas!",
+        "subtitle": "Saznajte kako Konty može da reši vaše probleme i unapredi poslovanje.",
+        "formTitle": "Zakažite demo",
+        "formDescription": "Popunite formu i kontaktiraćemo vas u najkraćem roku za dogovor termina.",
+        "benefits": {
+          "benefit1": "Personalizovana demonstracija (~30 min)",
+          "benefit2": "Prilagođeno vašoj industriji i tipu objekta",
+          "benefit3": "Odgovori na sva pitanja uživo",
+          "benefit4": "Mogućnost dogovora implementacije odmah"
+        }
+      },
+      "expectations": {
+        "title": "Šta očekivati od demoa",
+        "subtitle": "Personalizovana demonstracija prilagođena vašim potrebama",
+        "items": {
+          "personalized": {
+            "title": "Personalizirana prezentacija funkcionalnosti",
+            "description": "Pokazujemo samo one funkcije koje rešavaju vaše konkretne probleme"
+          },
+          "tailored": {
+            "title": "Prilagođeno vašoj industriji i tipu objekta",
+            "description": "Demo je fokusiran na vaš tip poslovanja - restoran, kafić, prodavnica ili drugi objekat"
+          },
+          "duration": {
+            "title": "Trajanje: cca 30 minuta",
+            "description": "Kratak, efikasan sastanak koji poštuje vaše vreme"
+          },
+          "qa": {
+            "title": "Pitanja i odgovori uživo",
+            "description": "Direktna komunikacija sa našim ekspertom - pitajte bilo šta što vas interesuje"
+          },
+          "next": {
+            "title": "Mogućnost da odmah dogovorite iduće korake",
+            "description": "Ako ste zainteresovani, možemo odmah planirati implementaciju i prelazak"
+          }
+        }
+      },
+      "testimonials": {
+        "title": "Brzo od demoa do implementacije",
+        "subtitle": "Naši klijenti su počeli da koriste Konty za svega nekoliko dana",
+        "testimonial1": {
+          "quote": "Demo je bio tačno ono što smo tražili. Za 3 dana smo bili potpuno operativni sa novim sistemom.",
+          "author": "Marko Petrović",
+          "role": "Vlasnik restorana 'Taste Valley'",
+          "timeline": "3 dana do implementacije"
+        },
+        "testimonial2": {
+          "quote": "Od prvog razgovora do prvog računa prošlo je samo 48 sati. Brzo, efikasno, bez komplikacija.",
+          "author": "Ana Nikolić",
+          "role": "Vlasnica butika 'Fashion Forward'",
+          "timeline": "2 dana do implementacije"
+        },
+        "testimonial3": {
+          "quote": "Demo nam je pokazao tačno ono što nam je trebalo. Implementacija je bila brža nego što smo očekivali.",
+          "author": "Stefan Jovanović",
+          "role": "Menadžer kafića 'Urban Grounds'",
+          "timeline": "4 dana do implementacije"
+        }
       },
       "process": {
         "title": "Kako izgleda demo sastanak?",

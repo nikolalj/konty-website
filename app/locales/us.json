@@ -111,17 +111,30 @@
     },
     "forms": {
       "fields": {
-        "name": "Your Name",
+        "name": "Full name",
         "email": "Email",
-        "message": "What would you like to see in the demo? (Optional)"
+        "message": "Biggest POS problem? (Optional)",
+        "phone": "Phone",
+        "preferredDateTime": "Preferred date & time",
+        "industry": "Business type"
       },
       "placeholders": {
-        "name": "Name",
+        "name": "Your full name",
         "email": "Email address",
-        "message": "Message (optional)"
+        "message": "Message (optional)",
+        "phone": "+1 555 123 4567",
+        "preferredDateTime": "e.g. Monday 2pm or Tuesday after 4pm"
       },
       "buttons": {
-        "submit": "Submit"
+        "submit": "Submit",
+        "bookDemo": "Book demo"
+      },
+      "optional": "optional",
+      "industryOptions": {
+        "select": "Select business type",
+        "hospitality": "Hospitality (restaurant, café, bar...)",
+        "retail": "Retail (store, boutique...)",
+        "other": "Other"
       }
     },
     "errors": {
@@ -820,18 +833,64 @@
     },
     "demo": {
       "hero": {
-        "title": "Schedule Your Personalized Demo",
-        "subtitle": "15 minutes that will transform your business. See exactly how Konty solves your problems.",
-        "benefit1": "Personalized for your business type",
-        "benefit2": "See all features that matter to you",
-        "benefit3": "Get a quote tailored to your needs",
-        "benefit4": "No obligations, no pressure",
-        "scheduleButton": "Schedule Demo",
-        "watchVideoButton": "Watch Video",
-        "calendarTitle": "Choose a time that works for you",
-        "calendarDescription": "We're available weekdays from 9 AM to 6 PM",
-        "calendarPlaceholder": "Calendar will load here",
-        "openCalendar": "Open Calendar"
+        "title": "Book your free demo today!",
+        "subtitle": "See how Konty can solve your problems and improve your business.",
+        "formTitle": "Schedule a demo",
+        "formDescription": "Fill out the form and we'll contact you shortly to arrange a time.",
+        "benefits": {
+          "benefit1": "Personalized demonstration (~30 min)",
+          "benefit2": "Tailored to your industry and business type",
+          "benefit3": "Live Q&A with our expert",
+          "benefit4": "Discuss implementation immediately"
+        }
+      },
+      "expectations": {
+        "title": "What to expect from the demo",
+        "subtitle": "Personalized demonstration tailored to your needs",
+        "items": {
+          "personalized": {
+            "title": "Personalized feature presentation",
+            "description": "We show only the features that solve your specific problems"
+          },
+          "tailored": {
+            "title": "Tailored to your industry and business type",
+            "description": "The demo is focused on your type of business - restaurant, café, store, or other establishment"
+          },
+          "duration": {
+            "title": "Duration: approximately 30 minutes",
+            "description": "Short, efficient meeting that respects your time"
+          },
+          "qa": {
+            "title": "Live Q&A",
+            "description": "Direct communication with our expert - ask anything you're interested in"
+          },
+          "next": {
+            "title": "Option to arrange next steps immediately",
+            "description": "If you're interested, we can immediately plan implementation and transition"
+          }
+        }
+      },
+      "testimonials": {
+        "title": "From demo to implementation in days",
+        "subtitle": "Our clients started using Konty in just a few days",
+        "testimonial1": {
+          "quote": "The demo was exactly what we were looking for. We were fully operational with the new system in 3 days.",
+          "author": "Marko Petrović",
+          "role": "Owner of 'Taste Valley' restaurant",
+          "timeline": "3 days to implementation"
+        },
+        "testimonial2": {
+          "quote": "From first conversation to first receipt took only 48 hours. Fast, efficient, no complications.",
+          "author": "Ana Nikolić",
+          "role": "Owner of 'Fashion Forward' boutique",
+          "timeline": "2 days to implementation"
+        },
+        "testimonial3": {
+          "quote": "The demo showed us exactly what we needed. Implementation was faster than we expected.",
+          "author": "Stefan Jovanović",
+          "role": "Manager of 'Urban Grounds' café",
+          "timeline": "4 days to implementation"
+        }
       },
       "process": {
         "title": "What happens during the demo?",
