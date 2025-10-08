@@ -1,8 +1,8 @@
 <template>
   <div class="mt-24">
     <SharedPricing heading-level="h1" />
-    <SharedGetStarted />
-    <SharedContactForm />
+    <LazySharedGetStarted variant="alt" />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
