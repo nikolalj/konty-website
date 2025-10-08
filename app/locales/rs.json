@@ -47,7 +47,8 @@
     },
     "contactForm": {
       "title": "Imate pitanja? Kontaktirajte nas.",
-      "description": "Piši nam i naš tim će odgovoriti u roku od 24 sata."
+      "description": "Piši nam i naš tim će odgovoriti u roku od 24 sata.",
+      "subtitle": "Odgovaramo unutar 24 sata"
     },
     "navigation": {
       "main": {

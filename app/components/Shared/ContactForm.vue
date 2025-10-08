@@ -3,6 +3,7 @@
     :variant="props.variant"
     :title="t('ui.contactForm.title')"
     :description="t('ui.contactForm.description')"
+    :subtitle="t('ui.contactForm.subtitle')"
     :rounded="true"
   >
     <div class="flex justify-center">

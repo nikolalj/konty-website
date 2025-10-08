@@ -5,10 +5,13 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazyAboutContactInfo hydrate-on-visible />
+
+    <!-- Social proof section - client logos and statistics -->
     <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
-     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
