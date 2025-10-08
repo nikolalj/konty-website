@@ -46,7 +46,7 @@
     },
     "contactForm": {
       "title": "Got Questions? Contact us.",
-      "description": "Fill out the form and our team will get back to you quickly."
+      "description": "Fill out the form and our team will get back to you within 24 hours."
     },
     "navigation": {
       "main": {
@@ -113,10 +113,11 @@
       "fields": {
         "name": "Full name",
         "email": "Email",
-        "message": "Biggest POS problem? (Optional)",
+        "message": "Message",
         "phone": "Phone",
-        "preferredDateTime": "Preferred date & time",
-        "industry": "Business type"
+        "preferredDateTime": "Preferred date & time for demo",
+        "industry": "Business type",
+        "category": "Business type"
       },
       "placeholders": {
         "name": "Your full name",
@@ -130,7 +131,13 @@
         "bookDemo": "Book demo"
       },
       "optional": "optional",
+      "responseTime": "We respond within 24 hours",
       "industryOptions": {
+        "hospitality": "Hospitality (restaurant, café, bar...)",
+        "retail": "Retail (store, boutique...)",
+        "other": "Other"
+      },
+      "categoryOptions": {
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "retail": "Retail (store, boutique...)",
         "other": "Other"

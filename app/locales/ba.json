@@ -46,7 +46,7 @@
     },
     "contactForm": {
       "title": "Imate pitanja? Kontaktirajte nas.",
-      "description": "Piši nam i naš tim će brzo odgovoriti."
+      "description": "Piši nam i naš tim će odgovoriti u roku od 24 sata."
     },
     "navigation": {
       "main": {
@@ -113,10 +113,11 @@
       "fields": {
         "name": "Ime i prezime",
         "email": "Email",
-        "message": "Najveći problem sa POS? (Opciono)",
+        "message": "Poruka",
         "phone": "Telefon",
-        "preferredDateTime": "Željeni datum i vrijeme",
-        "industry": "Tip poslovanja"
+        "preferredDateTime": "Željeni datum i vrijeme za demo",
+        "industry": "Tip poslovanja",
+        "category": "Tip poslovanja"
       },
       "placeholders": {
         "name": "Vaše ime i prezime",
@@ -130,7 +131,13 @@
         "bookDemo": "Zakaži demo"
       },
       "optional": "opciono",
+      "responseTime": "Odgovaramo unutar 24 sata",
       "industryOptions": {
+        "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
+        "retail": "Trgovina (prodavnica, butik...)",
+        "other": "Ostalo"
+      },
+      "categoryOptions": {
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "retail": "Trgovina (prodavnica, butik...)",
         "other": "Ostalo"

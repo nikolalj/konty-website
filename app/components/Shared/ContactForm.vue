@@ -6,10 +6,10 @@
     :rounded="true"
   >
     <div class="flex justify-center">
-      <div class="p-8 rounded-2xl max-w-3xl w-full">
+      <div class="px-8 pb-8 pt-0 rounded-2xl max-w-3xl w-full">
         <form class="space-y-6" @submit.prevent="onSubmit">
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
               {{ t('ui.forms.fields.name') }}
             </label>
             <UInput
@@ -23,7 +23,7 @@
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
               {{ t('ui.forms.fields.email') }}
             </label>
             <UInput
@@ -38,8 +38,36 @@
           </div>
 
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-              {{ t('ui.forms.fields.message') }}
+            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+              {{ t('ui.forms.fields.phone') }}
+            </label>
+            <UInput
+              id="phone"
+              v-model="form.phone"
+              class="w-full"
+              type="tel"
+              :placeholder="t('ui.forms.placeholders.phone')"
+              size="xl"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="industry" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+              {{ t('ui.forms.fields.industry') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            </label>
+            <USelect
+              id="industry"
+              v-model="form.industry"
+              :items="industryOptions"
+              class="w-full"
+              size="xl"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+              {{ t('ui.forms.fields.message') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
             </label>
             <UTextarea
               id="message"
@@ -48,7 +76,19 @@
               :placeholder="t('ui.forms.placeholders.message')"
               :rows="5"
               size="xl"
-              required
+            />
+          </div>
+
+          <div>
+            <label for="preferredDateTime" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+              {{ t('ui.forms.fields.preferredDateTime') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            </label>
+            <UInput
+              id="preferredDateTime"
+              v-model="form.preferredDateTime"
+              class="w-full"
+              :placeholder="t('ui.forms.placeholders.preferredDateTime')"
+              size="xl"
             />
           </div>
 
@@ -88,16 +128,27 @@ const { track } = useTracking()
 const form = reactive({
   name: '',
   email: '',
-  message: ''
+  phone: '',
+  industry: '',
+  message: '',
+  preferredDateTime: ''
 })
+
+const industryOptions = ref([
+  { label: t('ui.forms.industryOptions.hospitality'), value: 'hospitality' },
+  { label: t('ui.forms.industryOptions.retail'), value: 'retail' },
+  { label: t('ui.forms.industryOptions.other'), value: 'other' }
+])
 
 const loading = ref(false)
 
 const onSubmit = async () => {
   loading.value = true
 
-  // Track general contact form submission
-  track('contact_form_submission')
+  // Track general contact form submission with industry
+  track('contact_form_submission', {
+    industry: form.industry
+  })
 
   // TODO: Implement actual form submission
   await new Promise(resolve => setTimeout(resolve, 1000))
