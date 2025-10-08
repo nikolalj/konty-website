@@ -62,8 +62,13 @@ const expectations = [
   },
   {
     icon: 'i-lucide-rocket',
-    title: 'pages.demo.expectations.items.next.title',
-    description: 'pages.demo.expectations.items.next.description'
+    title: 'pages.demo.expectations.items.implementation.title',
+    description: 'pages.demo.expectations.items.implementation.description'
+  },
+  {
+    icon: 'i-lucide-gift',
+    title: 'pages.demo.expectations.items.trial.title',
+    description: 'pages.demo.expectations.items.trial.description'
   }
 ]
 </script>

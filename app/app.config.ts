@@ -3,14 +3,8 @@ export default defineAppConfig({
   icon: { mode: 'svg' },
   ui: {
     colors: {
-      primary: 'emerald',
+      primary: 'primary', // Maps to custom primary color in tailwind.config.ts
       neutral: 'slate',
-    },
-    button: {
-      defaultVariants: {
-        // Set default button color to neutral
-        // color: 'neutral'
-      }
     }
   }
 })

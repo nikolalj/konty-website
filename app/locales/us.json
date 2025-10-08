@@ -131,7 +131,6 @@
       },
       "optional": "optional",
       "industryOptions": {
-        "select": "Select business type",
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "retail": "Retail (store, boutique...)",
         "other": "Other"
@@ -853,8 +852,8 @@
             "description": "We show only the features that solve your specific problems"
           },
           "tailored": {
-            "title": "Tailored to your industry and business type",
-            "description": "The demo is focused on your type of business - restaurant, café, store, or other establishment"
+            "title": "Tailored to your industry",
+            "description": "Demo focused on your business type - restaurant, café, store, or other"
           },
           "duration": {
             "title": "Duration: approximately 30 minutes",
@@ -864,9 +863,13 @@
             "title": "Live Q&A",
             "description": "Direct communication with our expert - ask anything you're interested in"
           },
-          "next": {
-            "title": "Option to arrange next steps immediately",
-            "description": "If you're interested, we can immediately plan implementation and transition"
+          "implementation": {
+            "title": "Fast implementation",
+            "description": "If you decide to switch, we can have you up and running in 48 hours"
+          },
+          "trial": {
+            "title": "30-day free trial",
+            "description": "Start using Konty immediately with full access to all features - no obligations"
           }
         }
       },

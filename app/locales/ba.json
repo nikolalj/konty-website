@@ -131,7 +131,6 @@
       },
       "optional": "opciono",
       "industryOptions": {
-        "select": "Izaberite tip poslovanja",
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "retail": "Trgovina (prodavnica, butik...)",
         "other": "Ostalo"
@@ -853,8 +852,8 @@
             "description": "Pokazujemo samo one funkcije koje rješavaju vaše konkretne probleme"
           },
           "tailored": {
-            "title": "Prilagođeno vašoj industriji i tipu objekta",
-            "description": "Demo je fokusiran na vaš tip poslovanja - restoran, kafić, prodavnica ili drugi objekat"
+            "title": "Prilagođeno vašoj industriji",
+            "description": "Demo fokusiran na vaš tip poslovanja - restoran, kafić, prodavnica ili drugi objekat"
           },
           "duration": {
             "title": "Trajanje: cca 30 minuta",
@@ -864,9 +863,13 @@
             "title": "Pitanja i odgovori uživo",
             "description": "Direktna komunikacija sa našim ekspertom - pitajte bilo šta što vas interesuje"
           },
-          "next": {
-            "title": "Mogućnost da odmah dogovorite iduće korake",
-            "description": "Ako ste zainteresovani, možemo odmah planirati implementaciju i prelazak"
+          "implementation": {
+            "title": "Brza implementacija",
+            "description": "Ako se odlučite, možemo vas pokrenuti za 48 sati"
+          },
+          "trial": {
+            "title": "30 dana besplatnog korištenja",
+            "description": "Odmah počnite koristiti Konty sa punim pristupom svim funkcijama - bez obaveza"
           }
         }
       },

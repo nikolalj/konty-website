@@ -327,7 +327,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'color-scheme', content: 'light dark' },
-        { name: 'theme-color', content: '#1F6FE2' }  // Match brand primary color
+        { name: 'theme-color', content: '#4a2d67' }  // Match brand primary color (primary-500)
       ],
 
       link: [

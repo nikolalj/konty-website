@@ -1,43 +1,45 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
-@theme static {
+@theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 
-  --ui-primary: #4a2d67;
-  --ui-secondary: #fa7faa;
-
+  /* Primary color scale - 500 is the base brand color */
   --color-primary-50: #f5f3f7;
   --color-primary-100: #ebe7ef;
   --color-primary-200: #d7cede;
   --color-primary-300: #bbaace;
   --color-primary-400: #9c81ba;
-  --color-primary-500: #7f5ba5;
-  --color-primary-600: #4a2d67;
-  --color-primary-700: #3b2453;
-  --color-primary-800: #2d1c3e;
-  --color-primary-900: #1e132a;
-  --color-primary-950: #0f0a15;
+  --color-primary-500: #4a2d67;  /* Base brand color */
+  --color-primary-600: #3b2453;
+  --color-primary-700: #2d1c3e;
+  --color-primary-800: #1e132a;
+  --color-primary-900: #0f0a15;
+  --color-primary-950: #000000;
 
+  /* Semantic colors for custom usage */
+  --ui-secondary: #fa7faa;
+
+  /* Background colors */
   --ui-bg: white;
   --ui-bg-alt: #f3f4f8;
 }
 
 /* Dark theme overrides */
 :root.dark, .dark {
-  --ui-primary: white;
-  --ui-secondary: #f88eb3;
+  /* In dark mode, use lighter purple scale for better contrast */
+  --color-primary-50: #fdfbff;
+  --color-primary-100: #f9f5fd;
+  --color-primary-200: #f1e9fa;
+  --color-primary-300: #e4d4f4;
+  --color-primary-400: #d1b5eb;
+  --color-primary-500: #c9a5e8;  /* Lighter purple as base for dark mode */
+  --color-primary-600: #ba91dd;
+  --color-primary-700: #a67fca;
+  --color-primary-800: #8a5fb3;
+  --color-primary-900: #744c98;
+  --color-primary-950: #4a2d67;
 
-  --color-primary-50: #ffffff;
-  --color-primary-100: #fafafa;
-  --color-primary-200: #f5f5f5;
-  --color-primary-300: #e5e5e5;
-  --color-primary-400: #d4d4d4;
-  --color-primary-500: #a3a3a3;
-  --color-primary-600: #737373;
-  --color-primary-700: #525252;
-  --color-primary-800: #404040;
-  --color-primary-900: #262626;
-  --color-primary-950: #171717;
+  --ui-secondary: #f88eb3;
 
   --ui-bg: #201633;
   --ui-bg-alt: #2f2350;

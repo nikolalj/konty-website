@@ -6,15 +6,15 @@
     <UContainer class="relative z-10">
       <div class="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">
         <!-- Left Column - Text Content with Benefits -->
-        <div class="text-white">
+        <div class="text-white mt-6">
           <UIAppear direction="up">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
               {{ t('pages.demo.hero.title') }}
             </h1>
           </UIAppear>
 
           <UIAppear direction="up">
-            <p class="text-xl mb-8">
+            <p class="mb-8 text-xl text-balance text-white">
               {{ t('pages.demo.hero.subtitle') }}
             </p>
           </UIAppear>
@@ -36,17 +36,7 @@
 
         <!-- Right Column - Booking Form -->
         <UIAppear direction="left">
-          <div id="demo-form" class="bg-white rounded-2xl shadow-2xl p-8 lg:mt-0">
-            <h3 class="text-2xl font-bold mb-2">
-              {{ t('pages.demo.hero.formTitle') }}
-            </h3>
-            <p class="mb-6 text-sm">
-              {{ t('pages.demo.hero.formDescription') }}
-            </p>
-
-            <!-- Demo Contact Form -->
-            <SharedContactForm variant="demo" />
-          </div>
+          <DemoSchedulingForm />
         </UIAppear>
       </div>
     </UContainer>

@@ -1,14 +1,17 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <AboutClientStoriesHero />
+    <!-- <AboutClientStoriesHero /> -->
 
     <!-- Below-fold components - delay hydration, keep SSR -->
+    <LazySharedClientList variant="alt" class="dark !pt-42" hydrate-on-visible />
+    <LazySharedStatistics variant="alt" class="dark !pt-0" hydrate-on-idle />
+
+    <LazySharedTestimonials hydrate-on-idle />
     <LazyAboutClientStoriesList hydrate-on-visible />
-    <LazySharedStatistics hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
-     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 

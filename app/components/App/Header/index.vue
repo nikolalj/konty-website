@@ -95,7 +95,7 @@
 
     <template #right>
       <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
-      <AppCTAButton variant="primary" section="header" class="dark" no-icon />
+      <AppCTAButton variant="primary" section="header" class="dark bg-white" no-icon />
     </template>
   </UHeader>
 </template>
