@@ -458,34 +458,6 @@
         }
       },
       "partners": {
-        "benefits": {
-          "title": "Why Partner with Konty",
-          "description": "Join a growing network and expand your business with competitive advantages and comprehensive support.",
-          "benefit1": {
-            "title": "Competitive Pricing",
-            "description": "Attractive partner pricing structure with volume-based incentives to maximize your profitability and grow your business."
-          },
-          "benefit2": {
-            "title": "Proven Product",
-            "description": "Sell a reliable, cloud-based POS system trusted by thousands of businesses across retail and hospitality sectors."
-          },
-          "benefit3": {
-            "title": "Comprehensive Training",
-            "description": "Complete onboarding and ongoing product training to ensure you can confidently sell and support Konty solutions."
-          },
-          "benefit4": {
-            "title": "Technical Support",
-            "description": "Dedicated partner support line and technical assistance to help you successfully implement and maintain client solutions."
-          },
-          "benefit5": {
-            "title": "Marketing Materials",
-            "description": "Co-branded marketing materials, sales tools, and lead generation support to accelerate your sales process."
-          },
-          "benefit6": {
-            "title": "Growing Market",
-            "description": "Tap into the expanding POS market with a modern, feature-rich solution that meets diverse business needs."
-          }
-        }
       },
       "hospitality": {
         "hero": {
@@ -1111,6 +1083,34 @@
       "cta": "Become a Partner",
       "filterPlaceholder": "Search partners...",
       "noResults": "No results found for your search",
+      "benefits": {
+        "title": "Why Partner with Konty",
+        "description": "Join a growing network and expand your business with competitive advantages and comprehensive support.",
+        "benefit1": {
+          "title": "Competitive Pricing",
+          "description": "Attractive partner pricing structure with volume-based incentives to maximize your profitability and grow your business."
+        },
+        "benefit2": {
+          "title": "Proven Product",
+          "description": "Sell a reliable, cloud-based POS system trusted by thousands of businesses across retail and hospitality sectors."
+        },
+        "benefit3": {
+          "title": "Comprehensive Training",
+          "description": "Complete onboarding and ongoing product training to ensure you can confidently sell and support Konty solutions."
+        },
+        "benefit4": {
+          "title": "Technical Support",
+          "description": "Dedicated partner support line and technical assistance to help you successfully implement and maintain client solutions."
+        },
+        "benefit5": {
+          "title": "Marketing Materials",
+          "description": "Co-branded marketing materials, sales tools, and lead generation support to accelerate your sales process."
+        },
+        "benefit6": {
+          "title": "Growing Market",
+          "description": "Tap into the expanding POS market with a modern, feature-rich solution that meets diverse business needs."
+        }
+      },
       "flow": {
         "title": "Partnership Process",
         "description": "How to become a Konty partner in 4 simple steps",

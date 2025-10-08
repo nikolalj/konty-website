@@ -16,7 +16,7 @@
     <LazySharedProductFeatures hydrate-on-visible />
 
     <!-- Why become a partner - benefits -->
-    <LazySharedBenefits product="partners" variant="alt" hydrate-on-visible />
+    <LazySharedBenefits category="partners" variant="alt" hydrate-on-visible />
 
     <!-- Partnership process flow -->
     <LazyAboutPartnersFlow hydrate-on-visible />
@@ -25,7 +25,7 @@
     <LazyAboutPartnersSupport variant="alt" hydrate-on-visible />
 
     <!-- Partner FAQ -->
-    <LazySharedFAQ product="partners" hydrate-on-visible />
+    <LazySharedFAQ category="partners" hydrate-on-visible />
 
     <!-- Contact form -->
     <LazySharedContactForm variant="alt" hydrate-on-visible />

@@ -70,7 +70,7 @@ const props = defineProps({
     type: String as PropType<SectionVariantType>,
     default: undefined,
   },
-  product: {
+  category: {
     type: String as PropType<'retail' | 'hospitality' | 'partners' | undefined>,
     default: undefined
   },
@@ -83,8 +83,8 @@ const props = defineProps({
 const { tObject } = useUtils()
 
 const faqData = computed(() => {
-  if (props.product === 'partners') return tObject('pages.partners.faq')
-  if (props.product) return tObject(`pages.products.${props.product}.faq`)
+  if (props.category === 'partners') return tObject('pages.partners.faq')
+  if (props.category) return tObject(`pages.products.${props.category}.faq`)
   return tObject('pages.products.faq')
 })
 

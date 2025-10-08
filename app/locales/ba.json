@@ -457,36 +457,6 @@
           }
         }
       },
-      "partners": {
-        "benefits": {
-          "title": "Zašto postati Konty partner",
-          "description": "Pridružite se rastućoj mreži i proširite svoj biznis uz konkurentne prednosti i sveobuhvatnu podršku.",
-          "benefit1": {
-            "title": "Konkurentne cijene",
-            "description": "Atraktivna partnerska struktura cijena sa podsticajima zasnovanim na obimu kako biste maksimizovali profitabilnost i razvili svoj biznis."
-          },
-          "benefit2": {
-            "title": "Provjereni proizvod",
-            "description": "Prodajte pouzdan cloud-based POS sistem kojem vjeruje hiljade preduzeća u trgovini i ugostiteljstvu."
-          },
-          "benefit3": {
-            "title": "Sveobuhvatna obuka",
-            "description": "Kompletna obuka i kontinuirana edukacija o proizvodu kako biste mogli sa povjerenjem prodavati i podržavati Konty rješenja."
-          },
-          "benefit4": {
-            "title": "Tehnička podrška",
-            "description": "Dedicirani partnerni support line i tehnička pomoć za uspješnu implementaciju i održavanje klijentskih rješenja."
-          },
-          "benefit5": {
-            "title": "Marketing materijali",
-            "description": "Co-branded marketing materijali, alati za prodaju i podrška u generisanju potencijalnih klijenata za ubrzavanje prodajnog procesa."
-          },
-          "benefit6": {
-            "title": "Rastući market",
-            "description": "Iskoristite rastući POS market sa modernim, funkcionalnim rješenjem koje zadovoljava različite poslovne potrebe."
-          }
-        }
-      },
       "hospitality": {
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
@@ -1111,6 +1081,34 @@
       "cta": "Postanite partner",
       "filterPlaceholder": "Pretraži partnere...",
       "noResults": "Nema rezultata za vašu pretragu",
+      "benefits": {
+        "title": "Zašto postati Konty partner",
+        "description": "Pridružite se rastućoj mreži i proširite svoj biznis uz konkurentne prednosti i sveobuhvatnu podršku.",
+        "benefit1": {
+          "title": "Konkurentne cijene",
+          "description": "Atraktivna partnerska struktura cijena sa podsticajima zasnovanim na obimu kako biste maksimizovali profitabilnost i razvili svoj biznis."
+        },
+        "benefit2": {
+          "title": "Provjereni proizvod",
+          "description": "Prodajte pouzdan cloud-based POS sistem kojem vjeruje hiljade preduzeća u trgovini i ugostiteljstvu."
+        },
+        "benefit3": {
+          "title": "Sveobuhvatna obuka",
+          "description": "Kompletna obuka i kontinuirana edukacija o proizvodu kako biste mogli sa povjerenjem prodavati i podržavati Konty rješenja."
+        },
+        "benefit4": {
+          "title": "Tehnička podrška",
+          "description": "Dedicirani partnerni support line i tehnička pomoć za uspješnu implementaciju i održavanje klijentskih rješenja."
+        },
+        "benefit5": {
+          "title": "Marketing materijali",
+          "description": "Co-branded marketing materijali, alati za prodaju i podrška u generisanju potencijalnih klijenata za ubrzavanje prodajnog procesa."
+        },
+        "benefit6": {
+          "title": "Rastući market",
+          "description": "Iskoristite rastući POS market sa modernim, funkcionalnim rješenjem koje zadovoljava različite poslovne potrebe."
+        }
+      },
       "flow": {
         "title": "Proces partnerstva",
         "description": "Kako postati Konty partner u 4 jednostavna koraka",

@@ -5,7 +5,7 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazyProductsRetailFeaturesList hydrate-on-visible />
-    <LazySharedFAQ product="retail" hydrate-on-visible />
+    <LazySharedFAQ category="retail" hydrate-on-visible />
     <LazySharedTestimonials product="retail" hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->

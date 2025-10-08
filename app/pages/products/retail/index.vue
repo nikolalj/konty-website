@@ -5,7 +5,7 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList class="dark" product="retail" hydrate-on-visible />
-    <LazySharedBenefits variant="alt" product="retail" hydrate-on-visible />
+    <LazySharedBenefits variant="alt" category="retail" hydrate-on-visible />
     <LazySharedProductFeatures product="retail" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility -->

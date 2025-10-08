@@ -457,36 +457,6 @@
           }
         }
       },
-      "partners": {
-        "benefits": {
-          "title": "Zašto postati Konty partner",
-          "description": "Pridružite se našoj mreži partnera i rastite zajedno sa nama",
-          "benefit1": {
-            "title": "Atraktivna provizija",
-            "description": "Zaradite konkurentnu proviziju na svakoj prodaji i uživajte u predvidivom pasivnom prihodu kroz model mesečnih pretplata."
-          },
-          "benefit2": {
-            "title": "Ekskluzivna područja",
-            "description": "Dobijte ekskluzivna teritorijalna prava za vašu oblast i izgradite stabilnu klijentsku bazu bez direktne konkurencije."
-          },
-          "benefit3": {
-            "title": "Marketing podrška",
-            "description": "Pristup profesionalnim marketing materijalima, kampanjama i demo verzijama koje olakšavaju prodaju."
-          },
-          "benefit4": {
-            "title": "Obuke i sertifikacija",
-            "description": "Sveobuhvatni programi obuke za vas i vaš tim sa stalnim unapređenjem znanja i veština."
-          },
-          "benefit5": {
-            "title": "Tehnička podrška",
-            "description": "24/7 tehnička pomoć i specijalističke usluge za vaše klijente direktno od našeg stručnog tima."
-          },
-          "benefit6": {
-            "title": "Rastite zajedno",
-            "description": "Pridružite se kompaniji koja raste, sa 26+ godina iskustva i hiljade zadovoljnih korisnika širom regiona."
-          }
-        }
-      },
       "hospitality": {
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
@@ -1111,6 +1081,34 @@
       "cta": "Postani partner",
       "filterPlaceholder": "Pretraži partnere...",
       "noResults": "Nema rezultata za vašu pretragu",
+      "benefits": {
+        "title": "Zašto postati Konty partner",
+        "description": "Pridružite se našoj mreži partnera i rastite zajedno sa nama",
+        "benefit1": {
+          "title": "Atraktivna provizija",
+          "description": "Zaradite konkurentnu proviziju na svakoj prodaji i uživajte u predvidivom pasivnom prihodu kroz model mesečnih pretplata."
+        },
+        "benefit2": {
+          "title": "Ekskluzivna područja",
+          "description": "Dobijte ekskluzivna teritorijalna prava za vašu oblast i izgradite stabilnu klijentsku bazu bez direktne konkurencije."
+        },
+        "benefit3": {
+          "title": "Marketing podrška",
+          "description": "Pristup profesionalnim marketing materijalima, kampanjama i demo verzijama koje olakšavaju prodaju."
+        },
+        "benefit4": {
+          "title": "Obuke i sertifikacija",
+          "description": "Sveobuhvatni programi obuke za vas i vaš tim sa stalnim unapređenjem znanja i veština."
+        },
+        "benefit5": {
+          "title": "Tehnička podrška",
+          "description": "24/7 tehnička pomoć i specijalističke usluge za vaše klijente direktno od našeg stručnog tima."
+        },
+        "benefit6": {
+          "title": "Rastite zajedno",
+          "description": "Pridružite se kompaniji koja raste, sa 26+ godina iskustva i hiljade zadovoljnih korisnika širom regiona."
+        }
+      },
       "flow": {
         "title": "Kako postati partner",
         "description": "Jednostavan proces od prijave do pokretanja",

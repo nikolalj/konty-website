@@ -7,7 +7,7 @@
     <LazySharedClientList class="dark" product="hospitality" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedPricing product="hospitality" hydrate-on-visible />
-    <LazySharedFAQ product="hospitality" hydrate-on-visible />
+    <LazySharedFAQ category="hospitality" hydrate-on-visible />
      <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
