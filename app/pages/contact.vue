@@ -3,9 +3,6 @@
     <!-- Critical above-fold - hydrate immediately -->
     <AboutContactHero />
 
-    <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyAboutContactInfo hydrate-on-visible />
-
     <!-- Social proof section - client logos and statistics -->
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />

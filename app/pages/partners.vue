@@ -3,11 +3,11 @@
     <!-- Critical above-fold - hydrate immediately -->
     <AboutPartnersHero />
 
-    <!-- Social proof - partner metrics -->
-    <LazySharedStatistics class="!pt-4" hydrate-on-visible />
-
     <!-- Existing partner logos -->
-    <LazySharedClientList hydrate-on-visible />
+    <LazySharedClientList class="dark" hydrate-on-visible />
+
+    <!-- Social proof - partner metrics -->
+    <LazySharedStatistics class="dark !pt-0" hydrate-on-visible />
 
     <!-- Partner testimonials -->
     <LazySharedTestimonials hydrate-on-visible />

@@ -31,7 +31,7 @@
           <!-- CTA Buttons -->
           <UIAppear direction="up">
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <AppCTAButton variant="primary" section="hero" class="dark" size="xl" />
+              <AppCTAButton variant="primary" section="hero" class="dark bg-white" size="xl" />
               <AppCTAButton variant="secondary" section="hero" class="dark" size="xl" />
             </div>
           </UIAppear>
