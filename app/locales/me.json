@@ -521,26 +521,26 @@
             "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
           },
           "hero": {
-            "title": "All Hospitality Features",
-            "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
-            "backToProduct": "Back to Hospitality"
+            "title": "Sve funkcionalnosti za ugostiteljstvo",
+            "subtitle": "Sve što vašem restoranu treba za nesmetano poslovanje, od upravljanja stolovima do kuhinjskog displeja.",
+            "backToProduct": "Nazad na ugostiteljstvo"
           },
           "list": {
-            "title": "Complete Feature Set",
-            "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars."
+            "title": "Kompletan set funkcionalnosti",
+            "subtitle": "Istražite sve alate dizajnirane posebno za restorane, kafiće i barove."
           }
         },
         "faq": {
-          "q1": "Can I manage multiple locations?",
-          "a1": "Yes, Konty supports multi-location management with centralized reporting.",
-          "q2": "Does it work offline?",
-          "a2": "Yes, all transactions sync automatically when connection is restored.",
-          "q3": "How long does setup take?",
-          "a3": "Most restaurants are up and running within 48 hours.",
-          "q4": "Can I keep my existing hardware?",
-          "a4": "Yes, Konty works with most existing POS hardware.",
-          "q5": "What about staff training?",
-          "a5": "Our intuitive interface requires minimal training. Most staff learn in under 30 minutes."
+          "q1": "Mogu li da upravljam sa više lokacija?",
+          "a1": "Da, Konty podržava upravljanje sa više lokacija uz centralizovane izvještaje.",
+          "q2": "Da li radi bez interneta?",
+          "a2": "Da, sve transakcije se automatski sinhronizuju kad se veza ponovo uspostavi.",
+          "q3": "Koliko dugo traje podešavanje?",
+          "a3": "Većina restorana je spremna za rad u roku od 48 sati.",
+          "q4": "Mogu li zadržati postojeću opremu?",
+          "a4": "Da, Konty radi sa većinom postojeće POS opreme.",
+          "q5": "Šta je sa obukom osoblja?",
+          "a5": "Naš intuitivan interfejs zahtijeva minimalnu obuku. Većina osoblja nauči za manje od 30 minuta."
         }
       },
       "retail": {
@@ -608,26 +608,26 @@
             "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
           },
           "hero": {
-            "title": "All Retail Features",
-            "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",
-            "backToProduct": "Back to Retail"
+            "title": "Sve funkcionalnosti za maloprodaju",
+            "subtitle": "Kompletan sistem upravljanja zalihama, skeniranje barkodova i analitički alati za modernu maloprodaju.",
+            "backToProduct": "Nazad na maloprodaju"
           },
           "list": {
-            "title": "Complete Feature Set",
-            "subtitle": "Discover all the tools built specifically for retail stores and chains."
+            "title": "Kompletan set funkcionalnosti",
+            "subtitle": "Otkrijte sve alate kreirane posebno za prodavnice i lance."
           }
         },
         "faq": {
-          "q1": "Can I manage inventory across multiple stores?",
-          "a1": "Yes, real-time inventory sync across all your locations.",
-          "q2": "Does it support barcode scanning?",
-          "a2": "Yes, works with all standard barcode scanners and mobile devices.",
-          "q3": "What about loyalty programs?",
-          "a3": "Built-in loyalty program with points, discounts, and customer tracking.",
-          "q4": "Can I import my existing inventory?",
+          "q1": "Mogu li da upravljam zalihama u više prodavnica?",
+          "a1": "Da, sinhronizacija zaliha u realnom vremenu na svim vašim lokacijama.",
+          "q2": "Da li podržava skeniranje barkodova?",
+          "a2": "Da, radi sa svim standardnim skenerima barkodova i mobilnim uređajima.",
+          "q3": "Šta je sa programima lojalnosti?",
+          "a3": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca.",
+          "q4": "Mogu li da uvezem postojeće zalihe?",
           "a4": "Da, obezbjeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema.",
-          "q5": "How are returns handled?",
-          "a5": "Simple one-click returns with automatic inventory adjustment."
+          "q5": "Kako se obrađuju povraćaji?",
+          "a5": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha."
         }
       }
     },
@@ -1042,16 +1042,16 @@
     },
     "contact": {
       "hero": {
-        "title": "Get In Touch",
-        "subtitle": "We're here to help you choose the perfect POS solution for your business."
+        "title": "Stupite u kontakt",
+        "subtitle": "Tu smo da vam pomognemo da izaberete savršeno POS rješenje za vaš biznis."
       },
       "address": {
-        "title": "Address",
+        "title": "Adresa",
         "line1": "Bulevar Svetog Petra Cetinjskog 56",
         "line2": "81000 Podgorica, Montenegro"
       },
       "phone": {
-        "title": "Phone",
+        "title": "Telefon",
         "number": "+382 67 607 670"
       },
       "email": {
@@ -1200,16 +1200,16 @@
   },
   "seo": {
     "contact": {
-      "title": "Contact Us - Konty POS",
-      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution."
+      "title": "Kontaktirajte nas - Konty POS",
+      "description": "Stupite u kontakt sa našim timom. Tu smo da vam pomognemo da izaberete savršeno POS rješenje."
     },
     "clientStories": {
-      "title": "Client Success Stories - Konty POS",
-      "description": "Real stories from businesses that transformed their operations with Konty POS."
+      "title": "Priče o uspjehu klijenata - Konty POS",
+      "description": "Stvarne priče biznisa koji su transformisali svoje poslovanje sa Konty POS-om."
     },
     "partners": {
-      "title": "Partners Network - Konty POS",
-      "description": "Join our growing network of partners delivering Konty solutions."
+      "title": "Partnerska mreža - Konty POS",
+      "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rješenja."
     },
     "demo": {
       "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
@@ -1234,16 +1234,16 @@
         "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mjestu.",
         "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće",
         "features": {
-          "title": "All Hospitality Features - Konty POS",
-          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more."
+          "title": "Sve funkcionalnosti za ugostiteljstvo - Konty POS",
+          "description": "Kompletan spisak funkcionalnosti za restoranski POS: upravljanje stolovima, kuhinjski displej, raspored osoblja i još mnogo toga."
         }
       },
       "retail": {
         "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
         "title": "Konty za trgovinu - POS terminal sa bar kod čitačem",
         "features": {
-          "title": "All Retail Features - Konty POS",
-          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more."
+          "title": "Sve funkcionalnosti za maloprodaju - Konty POS",
+          "description": "Kompletan spisak funkcionalnosti za maloprodajni POS: upravljanje zalihama, skeniranje barkodova, programi lojalnosti i još mnogo toga."
         }
       },
       "download": {
@@ -1251,8 +1251,8 @@
         "description": "Preuzmi Konty za bilo koji uređaj ili platformu."
       },
       "faqdocs": {
-        "title": "FAQ and Documentation",
-        "description": "FAQ and Documentation for Konty"
+        "title": "FAQ i dokumentacija",
+        "description": "FAQ i dokumentacija za Konty"
       }
     },
     "terms": {
