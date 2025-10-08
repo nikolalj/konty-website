@@ -71,7 +71,7 @@ const props = defineProps({
     default: undefined,
   },
   product: {
-    type: String as PropType<'retail' | 'hospitality' | undefined>,
+    type: String as PropType<'retail' | 'hospitality' | 'partners' | undefined>,
     default: undefined
   },
   headingLevel: {
@@ -83,6 +83,7 @@ const props = defineProps({
 const { tObject } = useUtils()
 
 const faqData = computed(() => {
+  if (props.product === 'partners') return tObject('pages.partners.faq')
   if (props.product) return tObject(`pages.products.${props.product}.faq`)
   return tObject('pages.products.faq')
 })

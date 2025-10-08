@@ -45,7 +45,7 @@ const props = defineProps({
     default: undefined,
   },
   product: {
-    type: String as PropType<'hospitality' | 'retail'>,
+    type: String as PropType<'hospitality' | 'retail' | 'partners'>,
     required: true
   }
 })
@@ -104,6 +104,32 @@ const benefits = {
     {
       key: 'benefit6',
       icon: 'i-lucide-headphones'
+    }
+  ],
+  partners: [
+    {
+      key: 'benefit1',
+      icon: 'i-lucide-dollar-sign'
+    },
+    {
+      key: 'benefit2',
+      icon: 'i-lucide-award'
+    },
+    {
+      key: 'benefit3',
+      icon: 'i-lucide-graduation-cap'
+    },
+    {
+      key: 'benefit4',
+      icon: 'i-lucide-headset'
+    },
+    {
+      key: 'benefit5',
+      icon: 'i-lucide-megaphone'
+    },
+    {
+      key: 'benefit6',
+      icon: 'i-lucide-trending-up'
     }
   ]
 }

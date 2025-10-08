@@ -11,13 +11,20 @@
             {{ t('pages.partners.hero.subtitle') }}
           </p>
 
-          <div class="mt-10">
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <UButton
               size="lg"
               color="primary"
               @click="scrollToForm"
             >
               {{ t('pages.partners.cta') }}
+            </UButton>
+            <UButton
+              size="lg"
+              variant="outline"
+              :to="'/demo'"
+            >
+              {{ t('ui.cta.primary') }}
             </UButton>
           </div>
         </div>

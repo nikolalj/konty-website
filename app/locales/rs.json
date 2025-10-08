@@ -24,6 +24,7 @@
       "demo": "Demo"
     },
     "learnMore": "Saznaj više",
+    "readMore": "Pročitaj više",
     "cta": {
       "primary": "Zakaži demo",
       "secondary": "Kontaktiraj nas",
@@ -455,6 +456,36 @@
           }
         }
       },
+      "partners": {
+        "benefits": {
+          "title": "Zašto postati Konty partner",
+          "description": "Pridružite se našoj mreži partnera i rastite zajedno sa nama",
+          "benefit1": {
+            "title": "Atraktivna provizija",
+            "description": "Zaradite konkurentnu proviziju na svakoj prodaji i uživajte u predvidivom pasivnom prihodu kroz model mesečnih pretplata."
+          },
+          "benefit2": {
+            "title": "Ekskluzivna područja",
+            "description": "Dobijte ekskluzivna teritorijalna prava za vašu oblast i izgradite stabilnu klijentsku bazu bez direktne konkurencije."
+          },
+          "benefit3": {
+            "title": "Marketing podrška",
+            "description": "Pristup profesionalnim marketing materijalima, kampanjama i demo verzijama koje olakšavaju prodaju."
+          },
+          "benefit4": {
+            "title": "Obuke i sertifikacija",
+            "description": "Sveobuhvatni programi obuke za vas i vaš tim sa stalnim unapređenjem znanja i veština."
+          },
+          "benefit5": {
+            "title": "Tehnička podrška",
+            "description": "24/7 tehnička pomoć i specijalističke usluge za vaše klijente direktno od našeg stručnog tima."
+          },
+          "benefit6": {
+            "title": "Rastite zajedno",
+            "description": "Pridružite se kompaniji koja raste, sa 26+ godina iskustva i hiljade zadovoljnih korisnika širom regiona."
+          }
+        }
+      },
       "hospitality": {
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
@@ -880,6 +911,31 @@
           }
         }
       },
+      "benefits": {
+        "title": "Šta očekivati od demo sastanka",
+        "subtitle": "Dobijate personalizovanu demonstraciju prilagođenu vašim potrebama",
+        "benefit1": {
+          "title": "Personalizirana demonstracija funkcionalnosti",
+          "description": "Pokazujemo samo one funkcije koje rešavaju vaše konkretne probleme"
+        },
+        "benefit2": {
+          "title": "Prilagođeno vašoj industriji i tipu objekta",
+          "description": "Demo je fokusiran na vaš tip poslovanja - restoran, kafić, prodavnica ili drugi objekat"
+        },
+        "benefit3": {
+          "title": "Trajanje: cca 30 minuta",
+          "description": "Kratak, efikasan sastanak koji poštuje vaše vreme"
+        },
+        "benefit4": {
+          "title": "Pitanja i odgovori uživo",
+          "description": "Direktna komunikacija sa našim ekspertom - pitajte bilo šta što vas interesuje"
+        },
+        "benefit5": {
+          "title": "Mogućnost da odmah dogovorite iduće korake",
+          "description": "Ako ste zainteresovani, možemo odmah planirati implementaciju i prelazak"
+        },
+        "details": "Online (Zoom/Meet) ili telefonski • Srpski ili engleski • Radnim danima 9-18h"
+      },
       "testimonials": {
         "title": "Brzo od demoa do implementacije",
         "subtitle": "Naši klijenti su počeli da koriste Konty za svega nekoliko dana",
@@ -1048,12 +1104,84 @@
     },
     "partners": {
       "hero": {
-        "title": "Our Partners Network",
-        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+        "title": "Postanite Konty partner i rastite sa nama",
+        "subtitle": "Pridružite se vodećem provajderu POS rešenja u regionu. Izgradite profitabilan biznis pomoću našeg dokazanog modela partnerstva."
       },
-      "cta": "Become a Partner",
-      "filterPlaceholder": "Filter by city...",
-      "noResults": "No partners found in this city"
+      "cta": "Postani partner",
+      "filterPlaceholder": "Pretraži partnere...",
+      "noResults": "Nema rezultata za vašu pretragu",
+      "flow": {
+        "title": "Kako postati partner",
+        "description": "Jednostavan proces od prijave do pokretanja",
+        "steps": {
+          "step1": {
+            "title": "Kontaktirajte nas",
+            "description": "Popunite formular za prijavu i predstavite se"
+          },
+          "step2": {
+            "title": "Dogovor",
+            "description": "Razgovaramo o uslovima i potpisujemo partnerski ugovor"
+          },
+          "step3": {
+            "title": "Obuka",
+            "description": "Prođite kroz naš program obuke i dobijete sertifikat"
+          },
+          "step4": {
+            "title": "Pokretanje",
+            "description": "Počnite sa prodajom uz našu punu podršku"
+          }
+        }
+      },
+      "support": {
+        "title": "Šta dobijate kao partner",
+        "description": "Sveobuhvatna podrška za uspešno poslovanje",
+        "types": {
+          "technical": {
+            "title": "Tehnička podrška",
+            "description": "Dobijte tehničku podršku koja vam je potrebna za sigurnu implementaciju i podršku Konty rešenja.",
+            "features": {
+              "feature1": "24/7 tehnička pomoć za vaše klijente",
+              "feature2": "Pristup internom timu za složene slučajeve",
+              "feature3": "Redovne nadogradnje i nove funkcije",
+              "feature4": "Testno okruženje i demo računi"
+            }
+          },
+          "commercial": {
+            "title": "Komercijalna podrška",
+            "description": "Atraktivni komercijalni uslovi koji maksimizuju vašu profitabilnost.",
+            "features": {
+              "feature1": "Specijalne cene za partnere",
+              "feature2": "Fleksibilni uslovi plaćanja",
+              "feature3": "Mesečne provizije i bonusi",
+              "feature4": "Ekskluzivne promocije za partnere"
+            }
+          },
+          "marketing": {
+            "title": "Marketing podrška",
+            "description": "Marketing materijali i co-marketing prilike koje pomažu vašem uspehu.",
+            "features": {
+              "feature1": "Prilagodljivi marketing materijali",
+              "feature2": "Co-marketing kampanje",
+              "feature3": "Podrška na društvenim mrežama",
+              "feature4": "Lead generation programi"
+            }
+          }
+        }
+      },
+      "faq": {
+        "title": "Često postavljana pitanja o partnerstvu",
+        "subtitle": "Sve što treba da znate o Konty partnerskom programu",
+        "q1": "Koje su prednosti Konty partnerskog programa?",
+        "a1": "Naši partneri dobijaju atraktivne provizije, ekskluzivna područja, marketing podršku, obuke, tehničku pomoć 24/7 i mogućnost rasta sa kompanijom koja ima 26+ godina iskustva.",
+        "q2": "Da li je potrebno prethodno iskustvo?",
+        "a2": "Nije neophodno. Pružamo sveobuhvatne obuke za sve partnere. Ipak, iskustvo u prodaji softvera ili radu sa malim i srednjim preduzećima je od pomoći.",
+        "q3": "Kako izgleda struktura provizija?",
+        "a3": "Nudimo konkurentne provizije na inicijalne prodaje, kao i pasivni prihod kroz mesečne pretplate. Tačni uslovi se dogovaraju individualno na osnovu teritorije i obima poslovanja.",
+        "q4": "Koliko dugo traje proces obuke?",
+        "a4": "Osnovna obuka traje 2-3 dana. Nakon toga, dobijate pristup trajnim edukativnim resursima i podršci našeg tima. Redovno održavamo dodatne obuke o novim funkcijama.",
+        "q5": "Koju podršku dobijam za svoje klijente?",
+        "a5": "Vaši klijenti dobijaju direktnu 24/7 tehničku podršku od našeg tima, a vi imate pristup specijalističkim uslugama za složenije slučajeve. Fokusirajte se na prodaju dok mi brinemo o podršci."
+      }
     },
     "blog": {
       "hero": {

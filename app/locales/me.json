@@ -24,6 +24,7 @@
       "demo": "Demo"
     },
     "learnMore": "Saznaj više",
+    "readMore": "Pročitaj više",
     "cta": {
       "primary": "Zakaži demo",
       "secondary": "Kontaktiraj nas",
@@ -452,6 +453,36 @@
             "windows": "Windows",
             "android": "Android",
             "macos": "macOS"
+          }
+        }
+      },
+      "partners": {
+        "benefits": {
+          "title": "Zašto postati Konty partner",
+          "description": "Pridružite se rastućoj mreži i proširite svoj biznis uz konkurentne prednosti i sveobuhvatnu podršku.",
+          "benefit1": {
+            "title": "Konkurentne cijene",
+            "description": "Atraktivna partnerska struktura cijena sa podsticajima zasnovanim na obimu kako biste maksimizovali profitabilnost i razvili svoj biznis."
+          },
+          "benefit2": {
+            "title": "Provjereni proizvod",
+            "description": "Prodajte pouzdan cloud-based POS sistem kojem vjeruje hiljade preduzeća u trgovini i ugostiteljstvu."
+          },
+          "benefit3": {
+            "title": "Sveobuhvatna obuka",
+            "description": "Kompletna obuka i kontinuirana edukacija o proizvodu kako biste mogli sa povjerenjem prodavati i podržavati Konty rješenja."
+          },
+          "benefit4": {
+            "title": "Tehnička podrška",
+            "description": "Dedicirani partnerni support line i tehnička pomoć za uspješnu implementaciju i održavanje klijentskih rješenja."
+          },
+          "benefit5": {
+            "title": "Marketing materijali",
+            "description": "Co-branded marketing materijali, alati za prodaju i podrška u generisanju potencijalnih klijenata za ubrzavanje prodajnog procesa."
+          },
+          "benefit6": {
+            "title": "Rastući market",
+            "description": "Iskoristite rastući POS market sa modernim, funkcionalnim rješenjem koje zadovoljava različite poslovne potrebe."
           }
         }
       },
@@ -1073,12 +1104,84 @@
     },
     "partners": {
       "hero": {
-        "title": "Our Partners Network",
-        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+        "title": "Postanite Konty partner",
+        "subtitle": "Proširite svoju ponudu i nudite najsavremenija POS rješenja svojim klijentima. Pridružite se našoj rastućoj partnerskoj mreži."
       },
-      "cta": "Become a Partner",
-      "filterPlaceholder": "Filter by city...",
-      "noResults": "No partners found in this city"
+      "cta": "Postanite partner",
+      "filterPlaceholder": "Pretraži partnere...",
+      "noResults": "Nema rezultata za vašu pretragu",
+      "flow": {
+        "title": "Proces partnerstva",
+        "description": "Kako postati Konty partner u 4 jednostavna koraka",
+        "steps": {
+          "step1": {
+            "title": "Početni kontakt",
+            "description": "Popunite formular i naš tim za partnerstvo će vas kontaktirati u roku od 24 sata"
+          },
+          "step2": {
+            "title": "Ugovor o partnerstvu",
+            "description": "Pregledajte i potpišite uslove partnerstva i komercijalne uslove"
+          },
+          "step3": {
+            "title": "Obuka i uvođenje",
+            "description": "Završite sveobuhvatnu obuku o proizvodima, prodaji i tehničkoj implementaciji"
+          },
+          "step4": {
+            "title": "Počnite sa prodajom",
+            "description": "Počnite nuditi Konty rješenja uz punu podršku našeg tima"
+          }
+        }
+      },
+      "support": {
+        "title": "Podrška partnerima",
+        "description": "Sveobuhvatna podrška koja osigurava vaš uspjeh kao Konty partnera",
+        "types": {
+          "technical": {
+            "title": "Tehnička podrška",
+            "description": "Dobijte tehničku podršku koja vam je potrebna za sigurnu implementaciju i podršku Konty rješenja.",
+            "features": {
+              "feature1": "Dedicirani tehnički support line",
+              "feature2": "Pomoć pri implementaciji",
+              "feature3": "Redovne obuke o proizvodu",
+              "feature4": "Pristup tehničkoj dokumentaciji"
+            }
+          },
+          "commercial": {
+            "title": "Komercijalna podrška",
+            "description": "Atraktivni komercijalni uslovi koji maksimiziraju vašu profitabilnost.",
+            "features": {
+              "feature1": "Konkurentne partnerske cijene",
+              "feature2": "Podsticaji zasnovani na obimu",
+              "feature3": "Program registracije poslova",
+              "feature4": "Kvartalni poslovni pregledi"
+            }
+          },
+          "marketing": {
+            "title": "Marketing podrška",
+            "description": "Marketing materijali i co-marketing prilike koje pomažu vašem uspjehu.",
+            "features": {
+              "feature1": "Co-branded marketing materijali",
+              "feature2": "Podrška u generisanju potencijalnih klijenata",
+              "feature3": "Pristup partnerskom portalu",
+              "feature4": "Zajedničke marketing kampanje"
+            }
+          }
+        }
+      },
+      "faq": {
+        "title": "Partner FAQ",
+        "subtitle": "Najčešća pitanja o tome kako postati Konty partner",
+        "q1": "Kako da postanem Konty partner?",
+        "a1": "Jednostavno popunite kontakt formular na ovoj stranici i naš tim za partnerstvo će vas kontaktirati u roku od 24 sata kako bi razgovarali o mogućnostima i sljedećim koracima.",
+        "q2": "Koji su uslovi za partnerstvo?",
+        "a2": "Tražimo partnere sa iskustvom u tehnologiji za trgovinu ili ugostiteljstvo, dokazanim rezultatima u prodaji i sposobnošću pružanja lokalne podrške klijentima u vašem regionu.",
+        "q3": "Kakvu podršku dobijaju partneri?",
+        "a3": "Partneri dobijaju sveobuhvatnu tehničku, komercijalnu i marketing podršku uključujući obuku, dokumentaciju, co-branded materijale, dedicirane support linije i kontinuirana ažuriranja proizvoda.",
+        "q4": "Kako izgleda proces isporuke?",
+        "a4": "Nakon potpisivanja ugovora o partnerstvu i završetka obuke, imaćete pristup partnerskom portalu, demo sistemima i prodajnim materijalima. Naš tim vas podržava tokom cijelog procesa prodaje i implementacije.",
+        "q5": "Koji su komercijalni uslovi?",
+        "a5": "Nudimo konkurentne partnerske cijene sa podsticajima zasnovanim na obimu. Specifični uslovi se razmatraju tokom procesa evaluacije partnerstva i prilagođavaju se vašem tržištu i mogućnostima."
+      }
     },
     "blog": {
       "hero": {

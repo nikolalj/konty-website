@@ -24,6 +24,7 @@
       "demo": "Demo"
     },
     "learnMore": "Learn more",
+    "readMore": "Read more",
     "cta": {
       "primary": "Get a demo",
       "secondary": "Contact us",
@@ -455,6 +456,36 @@
           }
         }
       },
+      "partners": {
+        "benefits": {
+          "title": "Why Partner with Konty",
+          "description": "Join a growing network and expand your business with competitive advantages and comprehensive support.",
+          "benefit1": {
+            "title": "Competitive Pricing",
+            "description": "Attractive partner pricing structure with volume-based incentives to maximize your profitability and grow your business."
+          },
+          "benefit2": {
+            "title": "Proven Product",
+            "description": "Sell a reliable, cloud-based POS system trusted by thousands of businesses across retail and hospitality sectors."
+          },
+          "benefit3": {
+            "title": "Comprehensive Training",
+            "description": "Complete onboarding and ongoing product training to ensure you can confidently sell and support Konty solutions."
+          },
+          "benefit4": {
+            "title": "Technical Support",
+            "description": "Dedicated partner support line and technical assistance to help you successfully implement and maintain client solutions."
+          },
+          "benefit5": {
+            "title": "Marketing Materials",
+            "description": "Co-branded marketing materials, sales tools, and lead generation support to accelerate your sales process."
+          },
+          "benefit6": {
+            "title": "Growing Market",
+            "description": "Tap into the expanding POS market with a modern, feature-rich solution that meets diverse business needs."
+          }
+        }
+      },
       "hospitality": {
         "hero": {
           "tagline": "Trusted by 9,000+ businesses and growing",
@@ -880,6 +911,31 @@
           }
         }
       },
+      "benefits": {
+        "title": "What to expect from the demo",
+        "subtitle": "Get a personalized demonstration tailored to your needs",
+        "benefit1": {
+          "title": "Personalized feature demonstration",
+          "description": "We show only the features that solve your specific problems"
+        },
+        "benefit2": {
+          "title": "Tailored to your industry and business type",
+          "description": "Demo is focused on your business type - restaurant, café, store, or other"
+        },
+        "benefit3": {
+          "title": "Duration: approximately 30 minutes",
+          "description": "Short, efficient meeting that respects your time"
+        },
+        "benefit4": {
+          "title": "Live Q&A",
+          "description": "Direct communication with our expert - ask anything you're interested in"
+        },
+        "benefit5": {
+          "title": "Discuss next steps immediately",
+          "description": "If you're interested, we can plan implementation and transition right away"
+        },
+        "details": "Online (Zoom/Meet) or phone • English or local language • Weekdays 9am-6pm"
+      },
       "testimonials": {
         "title": "From demo to implementation in days",
         "subtitle": "Our clients started using Konty in just a few days",
@@ -1048,12 +1104,84 @@
     },
     "partners": {
       "hero": {
-        "title": "Our Partners Network",
-        "subtitle": "Join hundreds of partners delivering Konty solutions across the region."
+        "title": "Become a Konty Partner",
+        "subtitle": "Expand your offering and deliver cutting-edge POS solutions to your clients. Join our growing partner network."
       },
       "cta": "Become a Partner",
-      "filterPlaceholder": "Filter by city...",
-      "noResults": "No partners found in this city"
+      "filterPlaceholder": "Search partners...",
+      "noResults": "No results found for your search",
+      "flow": {
+        "title": "Partnership Process",
+        "description": "How to become a Konty partner in 4 simple steps",
+        "steps": {
+          "step1": {
+            "title": "Initial Contact",
+            "description": "Fill out the form and our partnership team will reach out within 24 hours"
+          },
+          "step2": {
+            "title": "Partnership Agreement",
+            "description": "Review and sign the partnership terms and commercial conditions"
+          },
+          "step3": {
+            "title": "Training & Onboarding",
+            "description": "Complete comprehensive training on products, sales, and technical implementation"
+          },
+          "step4": {
+            "title": "Start Selling",
+            "description": "Begin offering Konty solutions with full support from our team"
+          }
+        }
+      },
+      "support": {
+        "title": "Partner Support",
+        "description": "Comprehensive support to ensure your success as a Konty partner",
+        "types": {
+          "technical": {
+            "title": "Technical Support",
+            "description": "Get the technical backing you need to confidently implement and support Konty solutions.",
+            "features": {
+              "feature1": "Dedicated technical support line",
+              "feature2": "Implementation assistance",
+              "feature3": "Regular product training",
+              "feature4": "Access to technical documentation"
+            }
+          },
+          "commercial": {
+            "title": "Commercial Support",
+            "description": "Attractive commercial terms and conditions to maximize your profitability.",
+            "features": {
+              "feature1": "Competitive partner pricing",
+              "feature2": "Volume-based incentives",
+              "feature3": "Deal registration program",
+              "feature4": "Quarterly business reviews"
+            }
+          },
+          "marketing": {
+            "title": "Marketing Support",
+            "description": "Marketing materials and co-marketing opportunities to help you succeed.",
+            "features": {
+              "feature1": "Co-branded marketing materials",
+              "feature2": "Lead generation support",
+              "feature3": "Partner portal access",
+              "feature4": "Joint marketing campaigns"
+            }
+          }
+        }
+      },
+      "faq": {
+        "title": "Partner FAQ",
+        "subtitle": "Common questions about becoming a Konty partner",
+        "q1": "How do I become a Konty partner?",
+        "a1": "Simply fill out the contact form on this page and our partnership team will reach out to you within 24 hours to discuss the opportunity and next steps.",
+        "q2": "What are the requirements to become a partner?",
+        "a2": "We look for partners with experience in retail or hospitality technology, a proven sales track record, and the ability to provide local support to clients in your region.",
+        "q3": "What support do partners receive?",
+        "a3": "Partners receive comprehensive technical, commercial, and marketing support including training, documentation, co-branded materials, dedicated support lines, and ongoing product updates.",
+        "q4": "How does the delivery process work?",
+        "a4": "After signing the partnership agreement and completing training, you'll have access to our partner portal, demo systems, and sales materials. Our team supports you throughout the sales and implementation process.",
+        "q5": "What are the commercial terms?",
+        "a5": "We offer competitive partner pricing with volume-based incentives. Specific terms are discussed during the partnership evaluation process and tailored to your market and capabilities."
+      }
     },
     "blog": {
       "hero": {

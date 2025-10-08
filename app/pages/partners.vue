@@ -1,13 +1,34 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <PartnersHero />
+    <AboutPartnersHero />
 
-    <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyPartnersList hydrate-on-visible />
+    <!-- Social proof - partner metrics -->
+    <LazySharedStatistics class="!pt-4" hydrate-on-visible />
 
-    <!-- Interactive components - hydrate on visibility for better UX -->
-     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <!-- Existing partner logos -->
+    <LazySharedClientList hydrate-on-visible />
+
+    <!-- Partner testimonials -->
+    <LazySharedTestimonials hydrate-on-visible />
+
+    <!-- Segmented solutions - Retail/Hospitality -->
+    <LazySharedProductFeatures hydrate-on-visible />
+
+    <!-- Why become a partner - benefits -->
+    <LazySharedBenefits product="partners" variant="alt" hydrate-on-visible />
+
+    <!-- Partnership process flow -->
+    <LazyAboutPartnersFlow hydrate-on-visible />
+
+    <!-- Partner support details -->
+    <LazyAboutPartnersSupport variant="alt" hydrate-on-visible />
+
+    <!-- Partner FAQ -->
+    <LazySharedFAQ product="partners" hydrate-on-visible />
+
+    <!-- Contact form -->
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
