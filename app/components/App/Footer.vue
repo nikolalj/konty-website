@@ -22,7 +22,7 @@
         </div>
 
         <!-- Mobile: Accordion Layout -->
-        <div class="md:hidden space-y-2">
+        <div v-if="mobileLayout === 'accordion'" class="md:hidden space-y-2">
           <div
             v-for="(column, index) in columns"
             :key="column.label"
@@ -67,6 +67,25 @@
             </Transition>
           </div>
         </div>
+
+        <!-- Mobile: List Layout -->
+        <div v-else class="md:hidden space-y-6">
+          <div v-for="column in columns" :key="column.label" class="space-y-3">
+            <h3 class="font-semibold text-sm text-gray-900 dark:text-white">
+              {{ column.label }}
+            </h3>
+            <ul class="space-y-2">
+              <li v-for="link in column.children" :key="link.label">
+                <NuxtLink
+                  :to="link.to"
+                  class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors block"
+                >
+                  {{ link.label }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </div>
       </UContainer>
     </section>
 
@@ -76,7 +95,7 @@
           class="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:items-center"
         >
           <!-- CTA Buttons -->
-          <div class="flex gap-3 justify-center lg:justify-start mt-4 xl:mt-0">
+          <div class="flex gap-3 justify-center lg:justify-start mt-4 lg:mt-0">
             <AppCTAButton
               variant="primary"
               size="lg"
@@ -157,6 +176,14 @@ interface FooterColumn {
   label: string
   children: FooterLink[]
 }
+
+interface Props {
+  mobileLayout?: 'accordion' | 'list'
+}
+
+withDefaults(defineProps<Props>(), {
+  mobileLayout: 'accordion'
+})
 
 const { t } = useI18n()
 const localePath = useLocalePath()
