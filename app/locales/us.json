@@ -105,6 +105,28 @@
         "privacy": "Privacy",
         "products": "Products",
         "terms": "Terms of Service"
+      },
+      "hospitalitySolutions": {
+        "title": "Hospitality Solutions",
+        "restaurants": "Restaurants",
+        "cafes": "Cafes",
+        "bars": "Bars",
+        "pizzerias": "Pizzerias"
+      },
+      "retailSolutions": {
+        "title": "Retail Solutions",
+        "grocery": "Grocery Stores",
+        "supermarkets": "Supermarkets",
+        "clothing": "Clothing Stores",
+        "convenience": "Convenience Stores"
+      },
+      "about": {
+        "title": "About",
+        "contact": "Contact",
+        "clients": "Clients",
+        "partners": "Partners",
+        "careers": "Careers",
+        "blog": "Blog"
       }
     },
     "banner": {
@@ -457,8 +479,7 @@
           }
         }
       },
-      "partners": {
-      },
+      "partners": {},
       "hospitality": {
         "hero": {
           "tagline": "Trusted by 9,000+ businesses and growing",

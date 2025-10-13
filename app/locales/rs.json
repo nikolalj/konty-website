@@ -105,6 +105,28 @@
         "privacy": "Privatnost",
         "products": "Proizvodi",
         "terms": "Uslovi korišćenja"
+      },
+      "hospitalitySolutions": {
+        "title": "Rešenja za ugostiteljstvo",
+        "restaurants": "Restorani",
+        "cafes": "Kafići",
+        "bars": "Barovi",
+        "pizzerias": "Picerije"
+      },
+      "retailSolutions": {
+        "title": "Rešenja za trgovinu",
+        "grocery": "Prodavnice hrane",
+        "supermarkets": "Supermarketi",
+        "clothing": "Prodavnice odeće",
+        "convenience": "Prodavnice mešovite robe"
+      },
+      "about": {
+        "title": "O nama",
+        "contact": "Kontakt",
+        "clients": "Klijenti",
+        "partners": "Partneri",
+        "careers": "Karijere",
+        "blog": "Blog"
       }
     },
     "banner": {
@@ -457,8 +479,7 @@
           }
         }
       },
-      "partners": {
-      },
+      "partners": {},
       "hospitality": {
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
