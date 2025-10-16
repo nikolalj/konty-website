@@ -519,27 +519,33 @@
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "feat1": {
             "title": "Built for Hospitality",
-            "description": "Complete solution designed specifically for restaurants and cafes. Covers all your business processes efficiently, whether you run a small cafe or a high-traffic restaurant."
+            "description": "Complete solution designed specifically for restaurants and cafes. Covers all your business processes efficiently, whether you run a small cafe or a high-traffic restaurant.",
+            "icon": "i-heroicons-building-office"
           },
           "feat2": {
             "title": "Incredibly Easy to Use",
-            "description": "Tired of software that takes forever to do simple tasks? Konty is built to be intuitive, efficient, and gets the job done fast."
+            "description": "Tired of software that takes forever to do simple tasks? Konty is built to be intuitive, efficient, and gets the job done fast.",
+            "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
             "title": "Reliable & Secure",
-            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
+            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible.",
+            "icon": "i-heroicons-shield-check"
           },
           "feat4": {
             "title": "Advanced Reports",
-            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses.",
+            "icon": "i-heroicons-chart-bar"
           },
           "feat5": {
             "title": "Available Everywhere",
-            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application.",
+            "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
             "title": "Superior Customer Support",
-            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business.",
+            "icon": "i-heroicons-chat-bubble-left-right"
           },
           "hero": {
             "title": "All Hospitality Features",
@@ -548,7 +554,75 @@
           },
           "list": {
             "title": "Complete Feature Set",
-            "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars."
+            "subtitle": "Explore all the tools designed specifically for restaurants, cafes, and bars.",
+            "cta": "View All Features"
+          },
+          "groups": {
+            "title": "Comprehensive Tools for Your Restaurant",
+            "description": "Everything you need to deliver exceptional dining experiences and streamline operations.",
+            "group1": {
+              "title": "Table & Floor Management",
+              "description": "Visualize and manage your entire dining room with ease.",
+              "imageAlt": "Table management interface",
+              "item1": {
+                "text": "Interactive floor plan with drag-and-drop tables",
+                "icon": "i-heroicons-table-cells"
+              },
+              "item2": {
+                "text": "Real-time table status and availability",
+                "icon": "i-heroicons-clock"
+              },
+              "item3": {
+                "text": "Quick table transfers and merging",
+                "icon": "i-heroicons-arrows-right-left"
+              },
+              "item4": {
+                "text": "Reservation management integration",
+                "icon": "i-heroicons-calendar-days"
+              }
+            },
+            "group2": {
+              "title": "Kitchen Display System",
+              "description": "Seamless communication between front of house and kitchen.",
+              "imageAlt": "Kitchen display system",
+              "item1": {
+                "text": "Real-time order routing to kitchen stations",
+                "icon": "i-heroicons-arrow-path"
+              },
+              "item2": {
+                "text": "Course timing and fire control",
+                "icon": "i-heroicons-fire"
+              },
+              "item3": {
+                "text": "Order modification alerts",
+                "icon": "i-heroicons-bell"
+              },
+              "item4": {
+                "text": "Prep time tracking and analytics",
+                "icon": "i-heroicons-chart-bar"
+              }
+            },
+            "group3": {
+              "title": "Menu & Inventory Control",
+              "description": "Complete control over your menu items and stock levels.",
+              "imageAlt": "Menu and inventory management",
+              "item1": {
+                "text": "Flexible menu creation and pricing",
+                "icon": "i-heroicons-document-text"
+              },
+              "item2": {
+                "text": "Recipe costing and ingredient tracking",
+                "icon": "i-heroicons-calculator"
+              },
+              "item3": {
+                "text": "Automatic low stock alerts",
+                "icon": "i-heroicons-exclamation-triangle"
+              },
+              "item4": {
+                "text": "Supplier management and ordering",
+                "icon": "i-heroicons-truck"
+              }
+            }
           }
         },
         "faq": {
@@ -606,27 +680,33 @@
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "feat1": {
             "title": "Built for Retail",
-            "description": "Complete solution designed specifically for retail and service businesses. Covers your business processes in an efficient way."
+            "description": "Complete solution designed specifically for retail and service businesses. Covers your business processes in an efficient way.",
+            "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
             "title": "Incredibly Easy to Use",
-            "description": "Tired of software that takes significant time just to change a single item price? Konty is built to be intuitive, efficient, and gets your work done quickly."
+            "description": "Tired of software that takes significant time just to change a single item price? Konty is built to be intuitive, efficient, and gets your work done quickly.",
+            "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
             "title": "Reliable & Secure",
-            "description": "No more fear of losing data from the first power surge. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
+            "description": "No more fear of losing data from the first power surge. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible.",
+            "icon": "i-heroicons-shield-check"
           },
           "feat4": {
             "title": "Advanced Reports",
-            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses."
+            "description": "Comprehensive and precise reports you need to run your business. Enables accurate tracking of inventory, sales, revenue, and expenses.",
+            "icon": "i-heroicons-chart-bar"
           },
           "feat5": {
             "title": "Available Everywhere",
-            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application."
+            "description": "Konty works on Web, Windows, and Android. 24/7, anywhere in the world, you have free remote access to your application.",
+            "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
             "title": "Superior Customer Support",
-            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business."
+            "description": "Our team is available 24/7. Fast and efficient customer support is the foundation of our business.",
+            "icon": "i-heroicons-chat-bubble-left-right"
           },
           "hero": {
             "title": "All Retail Features",
@@ -635,7 +715,75 @@
           },
           "list": {
             "title": "Complete Feature Set",
-            "subtitle": "Discover all the tools built specifically for retail stores and chains."
+            "subtitle": "Discover all the tools built specifically for retail stores and chains.",
+            "cta": "View All Features"
+          },
+          "groups": {
+            "title": "Powerful Features for Your Retail Business",
+            "description": "Discover how Konty streamlines your retail operations with comprehensive tools.",
+            "group1": {
+              "title": "Smart Inventory Management",
+              "description": "Keep track of your stock in real-time across all locations.",
+              "imageAlt": "Inventory management dashboard",
+              "item1": {
+                "text": "Real-time stock tracking across multiple locations",
+                "icon": "i-heroicons-cube"
+              },
+              "item2": {
+                "text": "Automated low stock alerts and reorder points",
+                "icon": "i-heroicons-bell-alert"
+              },
+              "item3": {
+                "text": "Barcode scanning for fast product lookup",
+                "icon": "i-heroicons-qr-code"
+              },
+              "item4": {
+                "text": "Detailed inventory reports and analytics",
+                "icon": "i-heroicons-chart-bar"
+              }
+            },
+            "group2": {
+              "title": "Fast & Secure Checkout",
+              "description": "Process transactions quickly with our intuitive POS system.",
+              "imageAlt": "POS checkout interface",
+              "item1": {
+                "text": "Lightning-fast transaction processing",
+                "icon": "i-heroicons-bolt"
+              },
+              "item2": {
+                "text": "Multiple payment methods support",
+                "icon": "i-heroicons-credit-card"
+              },
+              "item3": {
+                "text": "Customer loyalty program integration",
+                "icon": "i-heroicons-gift"
+              },
+              "item4": {
+                "text": "Secure and encrypted payment processing",
+                "icon": "i-heroicons-lock-closed"
+              }
+            },
+            "group3": {
+              "title": "Business Intelligence & Reporting",
+              "description": "Make data-driven decisions with comprehensive analytics.",
+              "imageAlt": "Analytics and reporting dashboard",
+              "item1": {
+                "text": "Real-time sales and revenue tracking",
+                "icon": "i-heroicons-chart-pie"
+              },
+              "item2": {
+                "text": "Employee performance analytics",
+                "icon": "i-heroicons-users"
+              },
+              "item3": {
+                "text": "Product performance insights",
+                "icon": "i-heroicons-shopping-bag"
+              },
+              "item4": {
+                "text": "Customizable reports and exports",
+                "icon": "i-heroicons-document-chart-bar"
+              }
+            }
           }
         },
         "faq": {
@@ -693,6 +841,41 @@
             "title": "Split Bills",
             "description": "Easy splitting by items or percentage"
           }
+        },
+        "features": {
+          "title": "Everything Your Restaurant Needs",
+          "description": "Complete solution designed specifically for restaurant operations",
+          "cta": "Learn More About Restaurant Features",
+          "feat1": {
+            "title": "Table & Floor Management",
+            "description": "Visual floor plan with drag-and-drop tables, real-time status updates, and easy table transfers",
+            "icon": "i-heroicons-table-cells"
+          },
+          "feat2": {
+            "title": "Kitchen Display System",
+            "description": "Real-time order routing to kitchen stations, course timing, and order modification alerts",
+            "icon": "i-heroicons-fire"
+          },
+          "feat3": {
+            "title": "Reservation Management",
+            "description": "Integrated reservation system with table assignment and customer preferences tracking",
+            "icon": "i-heroicons-calendar-days"
+          },
+          "feat4": {
+            "title": "Split Bills & Payments",
+            "description": "Flexible bill splitting by items, seats, or percentage with multiple payment methods",
+            "icon": "i-heroicons-banknotes"
+          },
+          "feat5": {
+            "title": "Menu Engineering",
+            "description": "Easy menu management with modifiers, combos, and special pricing for different time periods",
+            "icon": "i-heroicons-document-text"
+          },
+          "feat6": {
+            "title": "Staff Performance",
+            "description": "Track server sales, tips, and performance with detailed analytics and reports",
+            "icon": "i-heroicons-user-group"
+          }
         }
       },
       "barsCafes": {
@@ -719,6 +902,41 @@
           "b3": {
             "title": "Inventory Tracking",
             "description": "Real-time beverage inventory monitoring"
+          }
+        },
+        "features": {
+          "title": "Optimized for High-Volume Service",
+          "description": "Fast, efficient tools designed for bars and cafes",
+          "cta": "Explore Bar & Cafe Features",
+          "feat1": {
+            "title": "Quick Order Entry",
+            "description": "Customizable shortcuts and favorites for lightning-fast order entry during rush hours",
+            "icon": "i-heroicons-bolt"
+          },
+          "feat2": {
+            "title": "Happy Hour Automation",
+            "description": "Automatic pricing adjustments by time and day with schedule management",
+            "icon": "i-heroicons-clock"
+          },
+          "feat3": {
+            "title": "Beverage Inventory",
+            "description": "Real-time tracking of kegs, bottles, and ingredients with automatic alerts",
+            "icon": "i-heroicons-beaker"
+          },
+          "feat4": {
+            "title": "Tab Management",
+            "description": "Easy open tab system with name or card lookup and automatic tab reminders",
+            "icon": "i-heroicons-credit-card"
+          },
+          "feat5": {
+            "title": "Loyalty & Rewards",
+            "description": "Built-in loyalty program to keep customers coming back with points and rewards",
+            "icon": "i-heroicons-gift"
+          },
+          "feat6": {
+            "title": "Quick Analytics",
+            "description": "Real-time sales tracking, top sellers, and profit margins at your fingertips",
+            "icon": "i-heroicons-chart-bar"
           }
         }
       },
@@ -747,6 +965,41 @@
             "title": "Automated Prep",
             "description": "KDS system for more efficient kitchen"
           }
+        },
+        "features": {
+          "title": "Built for Speed & Efficiency",
+          "description": "Maximum throughput for quick service restaurants",
+          "cta": "See Quick Service Features",
+          "feat1": {
+            "title": "Multi-Channel Orders",
+            "description": "Unified system for drive-thru, counter, delivery, and mobile orders in one place",
+            "icon": "i-heroicons-queue-list"
+          },
+          "feat2": {
+            "title": "Kitchen Display System",
+            "description": "Real-time order display with prep time tracking and priority management",
+            "icon": "i-heroicons-tv"
+          },
+          "feat3": {
+            "title": "Combo Meal Builder",
+            "description": "Easy combo creation and upsell prompts to increase average ticket size",
+            "icon": "i-heroicons-squares-2x2"
+          },
+          "feat4": {
+            "title": "Drive-Thru Timer",
+            "description": "Track service times and optimize speed with timer alerts and performance metrics",
+            "icon": "i-heroicons-clock"
+          },
+          "feat5": {
+            "title": "Delivery Integration",
+            "description": "Seamless integration with delivery platforms and in-house delivery management",
+            "icon": "i-heroicons-truck"
+          },
+          "feat6": {
+            "title": "Peak Time Management",
+            "description": "Special pricing and menu adjustments for breakfast, lunch, and dinner rushes",
+            "icon": "i-heroicons-sun"
+          }
         }
       },
       "grocerySupermarkets": {
@@ -773,6 +1026,41 @@
           "b3": {
             "title": "Fast Scanning",
             "description": "Integrated barcode scanners for faster checkout"
+          }
+        },
+        "features": {
+          "title": "Manage Thousands of Products",
+          "description": "Powerful inventory and checkout system for grocery stores",
+          "cta": "View Grocery Store Features",
+          "feat1": {
+            "title": "Advanced Inventory",
+            "description": "Real-time stock tracking across multiple locations with automatic reorder points",
+            "icon": "i-heroicons-cube"
+          },
+          "feat2": {
+            "title": "Barcode Scanning",
+            "description": "Fast checkout with integrated barcode scanners and weight scale support",
+            "icon": "i-heroicons-qr-code"
+          },
+          "feat3": {
+            "title": "Promotions Engine",
+            "description": "Flexible promotions, BOGO deals, bundle pricing, and seasonal discounts",
+            "icon": "i-heroicons-tag"
+          },
+          "feat4": {
+            "title": "Fresh Product Management",
+            "description": "Track expiration dates, batch numbers, and automatically rotate stock",
+            "icon": "i-heroicons-shopping-bag"
+          },
+          "feat5": {
+            "title": "Multi-Department",
+            "description": "Organize products by departments with specialized handling for each category",
+            "icon": "i-heroicons-building-storefront"
+          },
+          "feat6": {
+            "title": "Supplier Management",
+            "description": "Track suppliers, purchase orders, and delivery schedules in one system",
+            "icon": "i-heroicons-truck"
           }
         }
       },
@@ -801,6 +1089,41 @@
             "title": "Loyalty Program",
             "description": "Build your regular customer base"
           }
+        },
+        "features": {
+          "title": "Perfect for Fashion Retail",
+          "description": "Specialized tools for clothing stores and boutiques",
+          "cta": "Discover Fashion Retail Features",
+          "feat1": {
+            "title": "Size & Color Matrix",
+            "description": "Manage unlimited variants with size and color combinations, stock by variant",
+            "icon": "i-heroicons-swatch"
+          },
+          "feat2": {
+            "title": "Seasonal Collections",
+            "description": "Organize inventory by seasons, collections, and designers with easy filtering",
+            "icon": "i-heroicons-sparkles"
+          },
+          "feat3": {
+            "title": "Customer Profiles",
+            "description": "Track purchase history, preferences, and sizes for personalized service",
+            "icon": "i-heroicons-user-circle"
+          },
+          "feat4": {
+            "title": "Layaway & Hold",
+            "description": "Manage layaway plans and hold items for customers with payment tracking",
+            "icon": "i-heroicons-archive-box"
+          },
+          "feat5": {
+            "title": "Style Recommendations",
+            "description": "Suggest complementary items based on purchase history and current trends",
+            "icon": "i-heroicons-light-bulb"
+          },
+          "feat6": {
+            "title": "Loyalty & VIP",
+            "description": "Reward program with tiers, exclusive offers, and birthday rewards",
+            "icon": "i-heroicons-star"
+          }
         }
       },
       "convenienceStores": {
@@ -828,6 +1151,41 @@
             "title": "Quick Checkout",
             "description": "Optimized for speed at the register"
           }
+        },
+        "features": {
+          "title": "24/7 Reliability",
+          "description": "Simple, fast system for around-the-clock operation",
+          "cta": "See Convenience Store Features",
+          "feat1": {
+            "title": "Quick Checkout",
+            "description": "Lightning-fast scanning and payment processing for high customer turnover",
+            "icon": "i-heroicons-bolt"
+          },
+          "feat2": {
+            "title": "Age Verification",
+            "description": "Built-in age verification prompts for restricted items like tobacco and alcohol",
+            "icon": "i-heroicons-identification"
+          },
+          "feat3": {
+            "title": "Multi-Shift Control",
+            "description": "Easy shift changes, cash drawer management, and employee time tracking",
+            "icon": "i-heroicons-clock"
+          },
+          "feat4": {
+            "title": "Lottery & Prepaid",
+            "description": "Integrated support for lottery tickets, prepaid cards, and bill payments",
+            "icon": "i-heroicons-ticket"
+          },
+          "feat5": {
+            "title": "Fuel Integration",
+            "description": "Connect with fuel pumps for seamless gas station operations (optional)",
+            "icon": "i-heroicons-fire"
+          },
+          "feat6": {
+            "title": "Loss Prevention",
+            "description": "Track inventory shrinkage, suspicious transactions, and employee activity",
+            "icon": "i-heroicons-shield-check"
+          }
         }
       },
       "b2b": {
@@ -854,6 +1212,41 @@
           "b3": {
             "title": "Advanced Reports",
             "description": "Detailed reports for B2B analytics"
+          }
+        },
+        "features": {
+          "title": "Professional B2B Tools",
+          "description": "Complete solution for wholesale and business partnerships",
+          "cta": "Explore B2B Features",
+          "feat1": {
+            "title": "E-Invoicing System",
+            "description": "Automated e-invoice generation and sending compliant with local regulations",
+            "icon": "i-heroicons-document-check"
+          },
+          "feat2": {
+            "title": "Customer-Specific Pricing",
+            "description": "Set different price lists, discounts, and payment terms for each B2B partner",
+            "icon": "i-heroicons-currency-dollar"
+          },
+          "feat3": {
+            "title": "Credit & Payment Terms",
+            "description": "Manage credit limits, payment terms, and automatic payment reminders",
+            "icon": "i-heroicons-banknotes"
+          },
+          "feat4": {
+            "title": "Bulk Orders",
+            "description": "Quick entry for large wholesale orders with item lookup and quantity management",
+            "icon": "i-heroicons-shopping-cart"
+          },
+          "feat5": {
+            "title": "Partner Portal",
+            "description": "Give partners access to order history, invoices, and account statements",
+            "icon": "i-heroicons-user-group"
+          },
+          "feat6": {
+            "title": "Analytics & Forecasting",
+            "description": "Advanced reports on partner performance, trends, and revenue forecasting",
+            "icon": "i-heroicons-chart-bar-square"
           }
         }
       },
