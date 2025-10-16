@@ -3,13 +3,16 @@
     <!-- Critical above-fold - hydrate immediately -->
     <ProductsHospitalityFeaturesHero />
 
+    <!-- Feature Groups - visual feature showcase -->
+    <LazyProductsFeatureGroupsList product="hospitality" hydrate-on-visible />
+
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazyProductsHospitalityFeaturesList hydrate-on-visible />
+    <!-- <LazyProductsHospitalityFeaturesList hydrate-on-visible /> -->
     <LazySharedFAQ category="hospitality" hydrate-on-visible />
     <LazySharedTestimonials product="hospitality" hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
-     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
