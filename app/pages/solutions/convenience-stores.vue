@@ -3,12 +3,18 @@
     <!-- Solution-specific hero and overview -->
     <SolutionsOverview solution="convenienceStores" />
 
+    <!-- Features List -->
+    <LazySolutionsFeaturesList
+      solution="convenienceStores"
+      hydrate-on-visible
+    />
+
     <!-- Reusable components -->
     <LazySharedClientList class="dark" product="retail" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedPricing product="retail" hydrate-on-visible />
     <LazySharedFAQ category="retail" hydrate-on-visible />
-     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
 
