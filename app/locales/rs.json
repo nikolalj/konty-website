@@ -140,6 +140,7 @@
         "message": "Poruka",
         "phone": "Telefon",
         "preferredDateTime": "Željen datum i vreme za demo",
+        "time": "Odaberite vreme",
         "industry": "Tip poslovanja",
         "category": "Tip poslovanja"
       },
@@ -148,7 +149,7 @@
         "email": "Email adresa",
         "message": "Poruka (opciono)",
         "phone": "+381 60 123 4567",
-        "preferredDateTime": "npr. Ponedeljak 14h ili Utorak posle 16h"
+        "preferredDateTime": "Odaberite datum i vreme"
       },
       "buttons": {
         "submit": "Pošalji",

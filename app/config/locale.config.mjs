@@ -8,7 +8,9 @@ export const DEFAULT_LOCALE = {
   file: 'rs.json',
   flag: 'i-circle-flags:rs',
   currency: 'RSD',
-  currencySymbol: 'RSD'
+  currencySymbol: 'RSD',
+  uses12HourFormat: false,
+  dateTimeSeparator: 'u'
 };
 
 export const LOCALES = [
@@ -20,7 +22,9 @@ export const LOCALES = [
     file: 'me.json',
     flag: 'i-circle-flags:me',
     currency: 'EUR',
-    currencySymbol: '€'
+    currencySymbol: '€',
+    uses12HourFormat: false,
+    dateTimeSeparator: 'u'
   },
   {
     code: 'ba',
@@ -29,7 +33,9 @@ export const LOCALES = [
     file: 'ba.json',
     flag: 'i-circle-flags:ba',
     currency: 'BAM',
-    currencySymbol: 'KM'
+    currencySymbol: 'KM',
+    uses12HourFormat: false,
+    dateTimeSeparator: 'u'
   },
   {
     code: 'us',
@@ -38,7 +44,9 @@ export const LOCALES = [
     file: 'us.json',
     flag: 'i-circle-flags:us',
     currency: 'USD',
-    currencySymbol: '$'
+    currencySymbol: '$',
+    uses12HourFormat: true,
+    dateTimeSeparator: 'at'
   }
 ];
 

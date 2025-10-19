@@ -140,6 +140,7 @@
         "message": "Message",
         "phone": "Phone",
         "preferredDateTime": "Preferred date & time for demo",
+        "time": "Select time",
         "industry": "Business type",
         "category": "Business type"
       },
@@ -148,7 +149,7 @@
         "email": "Email address",
         "message": "Message (optional)",
         "phone": "+1 555 123 4567",
-        "preferredDateTime": "e.g. Monday 2pm or Tuesday after 4pm"
+        "preferredDateTime": "Select date and time"
       },
       "buttons": {
         "submit": "Submit",
