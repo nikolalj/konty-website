@@ -12,14 +12,8 @@
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4 justify-center">
-            <AppCTAButton variant="primary" section="hero" />
-            <UButton
-              size="lg"
-              variant="outline"
-              :to="localePath('/products/retail')"
-            >
-              {{ t('pages.products.retail.features.hero.backToProduct') }}
-            </UButton>
+            <AppCTAButton variant="primary" section="hero" size="xl" />
+            <AppCTAButton variant="secondary" section="hero" size="xl" />
           </div>
         </div>
       </UIAppear>
@@ -29,5 +23,4 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
 </script>

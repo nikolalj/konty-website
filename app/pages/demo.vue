@@ -7,7 +7,7 @@
     <DemoExpectations />
 
     <!-- Social proof - Implementation speed testimonials -->
-    <DemoTestimonials />
+    <!-- <DemoTestimonials /> -->
   </div>
 </template>
 
