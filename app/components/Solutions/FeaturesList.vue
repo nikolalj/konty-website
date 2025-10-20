@@ -36,15 +36,13 @@
         variant="primary"
         size="lg"
         section="footer"
-        icon-position="trailing"
-        custom-class="  justify-between"
+        custom-class="justify-between"
       />
       <AppCTAButton
         variant="secondary"
         size="lg"
         section="footer"
-        icon-position="trailing"
-        custom-class="  justify-between"
+        custom-class="justify-between"
       />
     </div>
   </SharedSection>
