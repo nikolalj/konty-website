@@ -3,12 +3,14 @@
     <!-- Solution-specific hero and overview -->
     <SolutionsOverview solution="barsCafes" />
 
+    <!-- Client List -->
+    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
+
     <!-- Features List -->
     <LazySolutionsFeaturesList solution="barsCafes" hydrate-on-visible />
 
     <!-- Reusable components -->
-    <LazySharedClientList class="dark" product="hospitality" hydrate-on-visible />
-    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedPricing product="hospitality" hydrate-on-visible />
     <LazySharedFAQ category="hospitality" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
