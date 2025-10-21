@@ -3,12 +3,14 @@
     <!-- Solution-specific hero and overview -->
     <SolutionsOverview solution="b2b" />
 
+    <!-- Client List -->
+    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
+
     <!-- Features List -->
     <LazySolutionsFeaturesList solution="b2b" hydrate-on-visible />
 
     <!-- Reusable components -->
-    <LazySharedClientList class="dark" product="retail" hydrate-on-visible />
-    <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedPricing product="retail" hydrate-on-visible />
     <LazySharedFAQ category="retail" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
