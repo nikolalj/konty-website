@@ -556,7 +556,9 @@
           },
           "hero": {
             "title": "Sve funkcionalnosti za ugostiteljstvo",
+            "tagline": "Kompletno rešenje za moderne restorane",
             "subtitle": "Sve što vašem restoranu treba za nesmetano poslovanje, od upravljanja stolovima do kuhinjskog displeja.",
+            "features": "Upravljanje stolovima • Kuhinjski displej • Praćenje narudžbi",
             "backToProduct": "Nazad na ugostiteljstvo"
           },
           "list": {
@@ -711,7 +713,9 @@
           },
           "hero": {
             "title": "Sve funkcionalnosti za maloprodaju",
+            "tagline": "Kompletno rešenje za modernu maloprodaju",
             "subtitle": "Kompletan sistem upravljanja zalihama, skeniranje barkodova i analitički alati za modernu maloprodaju.",
+            "features": "Praćenje zaliha • Brza naplata • Izveštaji o prodaji",
             "backToProduct": "Nazad na maloprodaju"
           },
           "list": {
@@ -827,7 +831,7 @@
         "overview": {
           "title": "Sve što restoranu treba",
           "description": "Od upravljanja stolovima do kuhinjskih narudžbina",
-          "image": "/images/solutions/restaurants.jpg"
+          "image": "/images/solutions/restaurants.avif"
         },
         "benefits": {
           "b1": {
@@ -889,7 +893,7 @@
         "overview": {
           "title": "Optimizovano za brzinu",
           "description": "Sistem dizajniran za brzu uslugu i visok promet",
-          "image": "/images/solutions/bars-cafes.jpg"
+          "image": "/images/solutions/bars-cafes.avif"
         },
         "benefits": {
           "b1": {
@@ -951,7 +955,7 @@
         "overview": {
           "title": "Brzina je sve",
           "description": "Sistem dizajniran za maksimalnu efikasnost i protok",
-          "image": "/images/solutions/fast-food.jpg"
+          "image": "/images/solutions/fast-food.avif"
         },
         "benefits": {
           "b1": {
@@ -1013,7 +1017,7 @@
         "overview": {
           "title": "Kontrola hiljada artikala",
           "description": "Moćan sistem za upravljanje velikim asortimanom",
-          "image": "/images/solutions/grocery.jpg"
+          "image": "/images/solutions/grocery-supermarkets.avif"
         },
         "benefits": {
           "b1": {
@@ -1075,7 +1079,7 @@
         "overview": {
           "title": "Savršeno za modnu industriju",
           "description": "Specijalizovan za potrebe butika i prodavnica odeće",
-          "image": "/images/solutions/clothing.jpg"
+          "image": "/images/solutions/clothing-boutiques.avif"
         },
         "benefits": {
           "b1": {
@@ -1137,7 +1141,7 @@
         "overview": {
           "title": "Za prodavnice koje rade non-stop",
           "description": "Pouzdan sistem za 24/7 rad sa raznovrsnom robom",
-          "image": "/images/solutions/convenience.jpg"
+          "image": "/images/solutions/convenience-stores.avif"
         },
         "benefits": {
           "b1": {
@@ -1199,7 +1203,7 @@
         "overview": {
           "title": "B2B digitalizacija",
           "description": "Kompletno rešenje za B2B prodaju i e-fakturisanje",
-          "image": "/images/solutions/b2b.jpg"
+          "image": "/images/solutions/b2b.avif"
         },
         "benefits": {
           "b1": {

@@ -18,7 +18,9 @@
           <template #default="{ open }">
             <UButton
               :label="item.label"
-              :trailing-icon="open ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
+              :trailing-icon="
+                open ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'
+              "
               variant="ghost"
               :aria-expanded="open"
               class="group border-none text-base text-white hover:text-gray-300 font-bold transition-colors"
@@ -50,10 +52,16 @@
                       class="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    />
 
-                    <div class="absolute inset-0 flex items-end justify-center pb-3 px-3">
-                      <p class="text-white text-sm font-bold text-center leading-tight line-clamp-2">
+                    <div
+                      class="absolute inset-0 flex items-end justify-center pb-3 px-3"
+                    >
+                      <p
+                        class="text-white text-sm font-bold text-center leading-tight line-clamp-2"
+                      >
                         {{ child.label }}
                       </p>
                     </div>
@@ -126,12 +134,16 @@
 
                 <div
                   class="transition-all duration-300 ease-in-out bg-gray-200 flex-shrink-0"
-                  :class="hoveredItem ? 'w-px opacity-100 mx-4' : 'w-0 opacity-0 mx-0'"
+                  :class="
+                    hoveredItem ? 'w-px opacity-100 mx-4' : 'w-0 opacity-0 mx-0'
+                  "
                 />
 
                 <div
                   class="transition-all duration-300 ease-in-out flex-1 min-w-0"
-                  :class="hoveredItem || lastHoveredItem ? 'opacity-100' : 'opacity-0'"
+                  :class="
+                    hoveredItem || lastHoveredItem ? 'opacity-100' : 'opacity-0'
+                  "
                 >
                   <div
                     v-if="
@@ -140,8 +152,12 @@
                     "
                     class="pr-4 w-44"
                   >
-                    <p class="text-sm leading-relaxed whitespace-normal break-words">
-                      {{ hoveredItem?.description || lastHoveredItem?.description }}
+                    <p
+                      class="text-sm leading-relaxed whitespace-normal break-words"
+                    >
+                      {{
+                        hoveredItem?.description || lastHoveredItem?.description
+                      }}
                     </p>
                   </div>
                 </div>
@@ -269,7 +285,7 @@ const items = computed<MenuGroup[]>(() => [
         description: t('ui.navigation.main.hospitalityDesc'),
         to: localePath('/products/hospitality'),
         image: {
-          src: '/images/features/hospitality.avif',
+          src: '/images/features/hospitality/main.avif',
           alt: 'Hospitality products'
         },
         icon: 'i-lucide-coffee'
@@ -278,7 +294,10 @@ const items = computed<MenuGroup[]>(() => [
         label: t('ui.navigation.products.forRetail'),
         description: t('ui.navigation.main.retailDesc'),
         to: localePath('/products/retail'),
-        image: { src: '/images/features/retail.avif', alt: 'Retail products' },
+        image: {
+          src: '/images/features/retail/main.avif',
+          alt: 'Retail products'
+        },
         icon: 'i-lucide-shopping-cart'
       },
       {
@@ -367,17 +386,17 @@ const items = computed<MenuGroup[]>(() => [
       {
         label: t('ui.navigation.about.contact'),
         to: localePath('/contact'),
-        icon: 'i-lucide-phone',
+        icon: 'i-lucide-phone'
       },
       {
         label: t('ui.navigation.about.clientStories'),
         to: localePath('/client-stories'),
-        icon: 'i-lucide-users',
+        icon: 'i-lucide-users'
       },
       {
         label: t('ui.navigation.about.partners'),
         to: localePath('/partners'),
-        icon: 'i-lucide-building-2',
+        icon: 'i-lucide-building-2'
       }
     ]
   }
