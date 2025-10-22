@@ -550,7 +550,9 @@
           },
           "hero": {
             "title": "All Hospitality Features",
+            "tagline": "Complete Solution for Modern Restaurants",
             "subtitle": "Everything your restaurant needs to run smoothly, from table management to kitchen display systems.",
+            "features": "Table management • Kitchen display • Order tracking",
             "backToProduct": "Back to Hospitality"
           },
           "list": {
@@ -711,7 +713,9 @@
           },
           "hero": {
             "title": "All Retail Features",
+            "tagline": "Complete Solution for Modern Retail",
             "subtitle": "Complete inventory management, barcode scanning, and analytics tools for modern retail.",
+            "features": "Inventory tracking • Fast checkout • Sales reporting",
             "backToProduct": "Back to Retail"
           },
           "list": {
@@ -827,7 +831,7 @@
         "overview": {
           "title": "Everything Your Restaurant Needs",
           "description": "From table management to kitchen orders",
-          "image": "/images/solutions/restaurants.jpg"
+          "image": "/images/solutions/restaurants.avif"
         },
         "benefits": {
           "b1": {
@@ -889,7 +893,7 @@
         "overview": {
           "title": "Optimized for Speed",
           "description": "System designed for fast service and high traffic",
-          "image": "/images/solutions/bars-cafes.jpg"
+          "image": "/images/solutions/bars-cafes.avif"
         },
         "benefits": {
           "b1": {
@@ -951,7 +955,7 @@
         "overview": {
           "title": "Speed is Everything",
           "description": "System designed for maximum efficiency and throughput",
-          "image": "/images/solutions/fast-food.jpg"
+          "image": "/images/solutions/fast-food.avif"
         },
         "benefits": {
           "b1": {
@@ -1013,7 +1017,7 @@
         "overview": {
           "title": "Control Thousands of Items",
           "description": "Powerful system for managing large product catalogs",
-          "image": "/images/solutions/grocery.jpg"
+          "image": "/images/solutions/grocery-supermarkets.avif"
         },
         "benefits": {
           "b1": {
@@ -1075,7 +1079,7 @@
         "overview": {
           "title": "Perfect for Fashion Retail",
           "description": "Specialized for boutiques and clothing stores",
-          "image": "/images/solutions/clothing.jpg"
+          "image": "/images/solutions/clothing-boutiques.avif"
         },
         "benefits": {
           "b1": {
@@ -1137,7 +1141,7 @@
         "overview": {
           "title": "For Stores That Never Sleep",
           "description": "Reliable system for 24/7 operation with diverse products",
-          "image": "/images/solutions/convenience.jpg"
+          "image": "/images/solutions/convenience-stores.avif"
         },
         "benefits": {
           "b1": {
@@ -1199,7 +1203,7 @@
         "overview": {
           "title": "B2B Digitalization",
           "description": "Complete solution for B2B sales and e-invoicing",
-          "image": "/images/solutions/b2b.jpg"
+          "image": "/images/solutions/b2b.avif"
         },
         "benefits": {
           "b1": {
