@@ -10,7 +10,11 @@
       <!-- Top Section: Features List and Image -->
       <div class="grid lg:grid-cols-2 gap-16">
         <!-- Left: Interactive Features List -->
-        <UIAppear direction="right" :distance="32" :class="{ 'lg:order-2': props.reverse }">
+        <UIAppear
+          direction="right"
+          :distance="32"
+          :class="{ 'lg:order-2': props.reverse }"
+        >
           <div class="flex flex-col gap-4">
             <div class="space-y-1">
               <button
@@ -32,10 +36,7 @@
                       : 'bg-primary-600/50 group-hover:bg-primary-600/80'
                   ]"
                 >
-                  <UIcon
-                    :name="feature.icon"
-                    class="h-5 w-5 text-white"
-                  />
+                  <UIcon :name="feature.icon" class="h-5 w-5 text-white" />
                 </div>
                 <h3
                   class="text-lg font-semibold transition-colors"
@@ -45,7 +46,11 @@
                       : 'text-gray-900 dark:text-white'
                   ]"
                 >
-                  {{ t(`pages.products.${innerProduct}.features.${feature.key}.title`) }}
+                  {{
+                    t(
+                      `pages.products.${innerProduct}.features.${feature.key}.title`
+                    )
+                  }}
                 </h3>
               </button>
             </div>
@@ -85,7 +90,11 @@
               />
             </div>
             <div class="text-gray-600 dark:text-gray-300 min-h-[80px] w-full">
-              {{ t(`pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.description`) }}
+              {{
+                t(
+                  `pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.description`
+                )
+              }}
             </div>
           </div>
         </UIAppear>
@@ -100,7 +109,7 @@ import type { SectionVariantType } from '~/types/components'
 const props = defineProps({
   variant: {
     type: String as PropType<SectionVariantType>,
-    default: undefined,
+    default: undefined
   },
   product: {
     type: String as PropType<'hospitality' | 'retail'>,
@@ -114,7 +123,9 @@ const props = defineProps({
 
 const { t } = useI18n()
 
-const innerProduct = ref<'hospitality' | 'retail'>(props.product || 'hospitality')
+const innerProduct = ref<'hospitality' | 'retail'>(
+  props.product || 'hospitality'
+)
 
 // Selected feature index (default to first feature)
 const selectedFeature = ref(0)
@@ -187,8 +198,8 @@ const features = {
   ]
 }
 
-// Computed active image based on selected feature
+// Computed active image based on product type
 const activeImage = computed(() => {
-  return features[innerProduct.value]?.[selectedFeature.value]?.image || '/images/features/placeholder.avif'
+  return `/images/features/${innerProduct.value}/featMain.avif`
 })
 </script>
