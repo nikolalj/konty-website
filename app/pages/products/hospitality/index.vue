@@ -4,8 +4,16 @@
     <ProductsHospitalityHero class="dark" />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazySharedClientList class="dark" product="hospitality" hydrate-on-visible />
-    <LazySharedBenefits variant="alt" category="hospitality" hydrate-on-visible />
+    <LazySharedClientList
+      class="dark"
+      product="hospitality"
+      hydrate-on-visible
+    />
+    <LazySharedBenefits
+      variant="alt"
+      category="hospitality"
+      hydrate-on-visible
+    />
     <LazySharedProductFeatures product="hospitality" hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility -->

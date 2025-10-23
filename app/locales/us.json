@@ -833,20 +833,6 @@
           "description": "From table management to kitchen orders",
           "image": "/images/solutions/restaurants.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Table Management",
-            "description": "Visual floor plan with real-time table status"
-          },
-          "b2": {
-            "title": "Kitchen Display System",
-            "description": "Direct communication between dining room and kitchen"
-          },
-          "b3": {
-            "title": "Split Bills",
-            "description": "Easy splitting by items or percentage"
-          }
-        },
         "features": {
           "title": "Everything Your Restaurant Needs",
           "description": "Complete solution designed specifically for restaurant operations",
@@ -894,20 +880,6 @@
           "title": "Optimized for Speed",
           "description": "System designed for fast service and high traffic",
           "image": "/images/solutions/bars-cafes.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "Fast Checkout",
-            "description": "Shortcuts and favorites for most common items"
-          },
-          "b2": {
-            "title": "Happy Hour Support",
-            "description": "Automatic pricing by time and day"
-          },
-          "b3": {
-            "title": "Inventory Tracking",
-            "description": "Real-time beverage inventory monitoring"
-          }
         },
         "features": {
           "title": "Optimized for High-Volume Service",
@@ -957,20 +929,6 @@
           "description": "System designed for maximum efficiency and throughput",
           "image": "/images/solutions/fast-food.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Rapid Order Entry",
-            "description": "Optimized interface for fastest input"
-          },
-          "b2": {
-            "title": "Multi-channel Support",
-            "description": "Drive-thru, delivery, and dine-in from one system"
-          },
-          "b3": {
-            "title": "Automated Prep",
-            "description": "KDS system for more efficient kitchen"
-          }
-        },
         "features": {
           "title": "Built for Speed & Efficiency",
           "description": "Maximum throughput for quick service restaurants",
@@ -1018,20 +976,6 @@
           "title": "Control Thousands of Items",
           "description": "Powerful system for managing large product catalogs",
           "image": "/images/solutions/grocery-supermarkets.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "Inventory Management",
-            "description": "Real-time stock tracking and automatic reordering"
-          },
-          "b2": {
-            "title": "Promotion Support",
-            "description": "Flexible promotions, discounts, and bundles"
-          },
-          "b3": {
-            "title": "Fast Scanning",
-            "description": "Integrated barcode scanners for faster checkout"
-          }
         },
         "features": {
           "title": "Manage Thousands of Products",
@@ -1081,20 +1025,6 @@
           "description": "Specialized for boutiques and clothing stores",
           "image": "/images/solutions/clothing-boutiques.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Size & Color Matrix",
-            "description": "Easy management of product variants"
-          },
-          "b2": {
-            "title": "Seasonal Collections",
-            "description": "Organize by seasons and collections"
-          },
-          "b3": {
-            "title": "Loyalty Program",
-            "description": "Build your regular customer base"
-          }
-        },
         "features": {
           "title": "Perfect for Fashion Retail",
           "description": "Specialized tools for clothing stores and boutiques",
@@ -1143,20 +1073,6 @@
           "description": "Reliable system for 24/7 operation with diverse products",
           "image": "/images/solutions/convenience-stores.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Simplified Inventory",
-            "description": "Easy management of diverse products"
-          },
-          "b2": {
-            "title": "Shift Management",
-            "description": "Access control and shift tracking"
-          },
-          "b3": {
-            "title": "Quick Checkout",
-            "description": "Optimized for speed at the register"
-          }
-        },
         "features": {
           "title": "24/7 Reliability",
           "description": "Simple, fast system for around-the-clock operation",
@@ -1204,20 +1120,6 @@
           "title": "B2B Digitalization",
           "description": "Complete solution for B2B sales and e-invoicing",
           "image": "/images/solutions/b2b.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "E-Invoicing",
-            "description": "Automatic generation and sending of e-invoices"
-          },
-          "b2": {
-            "title": "Partner Management",
-            "description": "Different pricing and terms per partner"
-          },
-          "b3": {
-            "title": "Advanced Reports",
-            "description": "Detailed reports for B2B analytics"
-          }
         },
         "features": {
           "title": "Professional B2B Tools",

@@ -833,20 +833,6 @@
           "description": "Od upravljanja stolovima do kuhinjskih narudžbina",
           "image": "/images/solutions/restaurants.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Upravljanje stolovima",
-            "description": "Vizualni prikaz sala i stolova u realnom vremenu"
-          },
-          "b2": {
-            "title": "Kuhinjski ekran",
-            "description": "Direktna komunikacija između sale i kuhinje"
-          },
-          "b3": {
-            "title": "Podjela računa",
-            "description": "Jednostavna podjela po stavkama ili procentualno"
-          }
-        },
         "features": {
           "title": "Sve što restoranu treba",
           "description": "Kompletno rješenje dizajnirano specifično za restorane",
@@ -894,20 +880,6 @@
           "title": "Optimizirano za brzinu",
           "description": "Sistem dizajniran za brzu uslugu i visok promet",
           "image": "/images/solutions/bars-cafes.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "Brza naplata",
-            "description": "Prečice i favoriti za najčešće proizvode"
-          },
-          "b2": {
-            "title": "Happy hour podrška",
-            "description": "Automatske cijene po vremenu i danima"
-          },
-          "b3": {
-            "title": "Praćenje inventara",
-            "description": "Real-time praćenje stanja pića"
-          }
         },
         "features": {
           "title": "Optimizirano za uslugu velikog obima",
@@ -957,20 +929,6 @@
           "description": "Sistem dizajniran za maksimalnu efikasnost i protok",
           "image": "/images/solutions/fast-food.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Brze narudžbe",
-            "description": "Optimizirani interfejs za najbrže unose"
-          },
-          "b2": {
-            "title": "Multi-kanal podrška",
-            "description": "Drive-thru, dostava i sala iz jednog sistema"
-          },
-          "b3": {
-            "title": "Automatska priprema",
-            "description": "KDS sistem za efikasniju kuhinju"
-          }
-        },
         "features": {
           "title": "Napravljeno za brzinu i efikasnost",
           "description": "Maksimalan protok za restorane brze hrane",
@@ -1018,20 +976,6 @@
           "title": "Kontrola hiljada artikala",
           "description": "Moćan sistem za upravljanje velikim asortimanom",
           "image": "/images/solutions/grocery-supermarkets.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "Upravljanje zalihama",
-            "description": "Real-time praćenje nivoa zaliha i automatsko naručivanje"
-          },
-          "b2": {
-            "title": "Podrška za akcije",
-            "description": "Fleksibilne promocije, popusti i paketi"
-          },
-          "b3": {
-            "title": "Brzo skeniranje",
-            "description": "Integrirani barkod skeneri za brže kase"
-          }
         },
         "features": {
           "title": "Upravljanje hiljade proizvoda",
@@ -1081,20 +1025,6 @@
           "description": "Specijalizovano za potrebe butika i prodavnica odjeće",
           "image": "/images/solutions/clothing-boutiques.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Matrica veličina i boja",
-            "description": "Lako upravljanje varijantama proizvoda"
-          },
-          "b2": {
-            "title": "Sezonske kolekcije",
-            "description": "Organizacija po sezonama i kolekcijama"
-          },
-          "b3": {
-            "title": "Program lojalnosti",
-            "description": "Izgradite bazu stalnih kupaca"
-          }
-        },
         "features": {
           "title": "Savršeno za modnu industriju",
           "description": "Specijalizovani alati za prodavnice odjeće i butike",
@@ -1143,20 +1073,6 @@
           "description": "Pouzdan sistem za 24/7 rad sa raznovrsnom robom",
           "image": "/images/solutions/convenience-stores.avif"
         },
-        "benefits": {
-          "b1": {
-            "title": "Uprošćen inventar",
-            "description": "Lako upravljanje raznovrsnim proizvodima"
-          },
-          "b2": {
-            "title": "Smjene i radnici",
-            "description": "Kontrola pristupa i praćenje smjena"
-          },
-          "b3": {
-            "title": "Brza naplata",
-            "description": "Optimizirano za brzinu na kasi"
-          }
-        },
         "features": {
           "title": "Pouzdanost 24/7",
           "description": "Jednostavan, brz sistem za rad non-stop",
@@ -1204,20 +1120,6 @@
           "title": "B2B digitalizacija",
           "description": "Kompletno rješenje za B2B prodaju i e-fakturisanje",
           "image": "/images/solutions/b2b.avif"
-        },
-        "benefits": {
-          "b1": {
-            "title": "E-fakture",
-            "description": "Automatsko izdavanje i slanje e-faktura"
-          },
-          "b2": {
-            "title": "Upravljanje partnerima",
-            "description": "Različite cijene i uslovi po partneru"
-          },
-          "b3": {
-            "title": "Napredni izvještaji",
-            "description": "Detaljni izvještaji za B2B analitiku"
-          }
         },
         "features": {
           "title": "Profesionalni B2B alati",

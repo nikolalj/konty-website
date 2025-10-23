@@ -75,27 +75,42 @@
           :class="{ 'lg:order-1': props.reverse }"
         >
           <div class="flex flex-col gap-4 h-full w-full">
-            <div class="flex items-center justify-center w-full">
-              <NuxtImg
-                :src="activeImage"
-                format="avif"
-                loading="lazy"
-                :alt="`${t(`pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.title`)} screenshot`"
-                role="presentation"
-                width="600"
-                height="600"
-                quality="80"
-                fit="inside"
-                class="w-full h-auto rounded-2xl"
-              />
-            </div>
-            <div class="text-gray-600 dark:text-gray-300 min-h-[80px] w-full">
-              {{
-                t(
-                  `pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.description`
-                )
-              }}
-            </div>
+            <UIAppear
+              :key="`feature-image-${innerProduct}-${selectedFeature}`"
+              direction="up"
+              :distance="20"
+              :animate-on="selectedFeature"
+            >
+              <div class="flex items-center justify-center w-full">
+                <NuxtImg
+                  :src="activeImage"
+                  format="avif"
+                  loading="lazy"
+                  :alt="`${t(`pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.title`)} screenshot`"
+                  role="presentation"
+                  width="600"
+                  height="600"
+                  quality="80"
+                  fit="inside"
+                  class="w-full h-auto rounded-2xl"
+                />
+              </div>
+            </UIAppear>
+            <UIAppear
+              :key="`feature-desc-${innerProduct}-${selectedFeature}`"
+              direction="up"
+              :distance="20"
+              :delay="100"
+              :animate-on="selectedFeature"
+            >
+              <div class="text-gray-600 dark:text-gray-300 min-h-[80px] w-full">
+                {{
+                  t(
+                    `pages.products.${innerProduct}.features.${features[innerProduct]?.[selectedFeature]?.key}.description`
+                  )
+                }}
+              </div>
+            </UIAppear>
           </div>
         </UIAppear>
       </div>
@@ -136,70 +151,78 @@ const features = {
     {
       key: 'feat1',
       icon: 'i-lucide-layout-grid',
-      image: '/images/features/hospitality/feat1.avif'
+      image: '/images/features/hospitality/prodFeat1.avif'
     },
     {
       key: 'feat2',
       icon: 'i-lucide-receipt-text',
-      image: '/images/features/hospitality/feat2.avif'
+      image: '/images/features/hospitality/prodFeat2.avif'
     },
     {
       key: 'feat3',
       icon: 'i-lucide-settings',
-      image: '/images/features/hospitality/feat3.avif'
+      image: '/images/features/hospitality/prodFeat3.avif'
     },
     {
       key: 'feat4',
       icon: 'i-lucide-chart-bar',
-      image: '/images/features/hospitality/feat4.avif'
+      image: '/images/features/hospitality/prodFeat4.avif'
     },
     {
       key: 'feat5',
       icon: 'i-lucide-globe',
-      image: '/images/features/hospitality/feat5.avif'
+      image: '/images/features/hospitality/prodFeat5.avif'
     },
     {
       key: 'feat6',
       icon: 'i-lucide-headset',
-      image: '/images/features/hospitality/feat1.avif'
+      image: '/images/features/hospitality/prodFeat6.avif'
     }
   ],
   retail: [
     {
       key: 'feat1',
       icon: 'i-lucide-shopping-cart',
-      image: '/images/features/retail/feat1.avif'
+      image: '/images/features/retail/prodFeat1.avif'
     },
     {
       key: 'feat2',
       icon: 'i-lucide-barcode',
-      image: '/images/features/retail/feat2.avif'
+      image: '/images/features/retail/prodFeat2.avif'
     },
     {
       key: 'feat3',
       icon: 'i-lucide-settings',
-      image: '/images/features/retail/feat3.avif'
+      image: '/images/features/retail/prodFeat3.avif'
     },
     {
       key: 'feat4',
       icon: 'i-lucide-chart-pie',
-      image: '/images/features/retail/feat4.avif'
+      image: '/images/features/retail/prodFeat4.avif'
     },
     {
       key: 'feat5',
       icon: 'i-lucide-package',
-      image: '/images/features/retail/feat5.avif'
+      image: '/images/features/retail/prodFeat5.avif'
     },
     {
       key: 'feat6',
       icon: 'i-lucide-headset',
-      image: '/images/features/retail/feat1.avif'
+      image: '/images/features/retail/prodFeat6.avif'
     }
   ]
 }
 
-// Computed active image based on product type
+// Computed active image based on selected feature
 const activeImage = computed(() => {
-  return `/images/features/${innerProduct.value}/featMain.avif`
+  const currentFeature = features[innerProduct.value]?.[selectedFeature.value]
+  return (
+    currentFeature?.image ||
+    `/images/features/${innerProduct.value}/featMain.avif`
+  )
+})
+
+watch(innerProduct, () => {
+  selectedFeature.value = 0
 })
 </script>
