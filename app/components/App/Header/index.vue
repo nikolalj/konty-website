@@ -19,7 +19,7 @@
       >
         <AppHeaderLocaleSuggestionBanner />
 
-        <UContainer class="h-full flex items-center text-sm transition-colors duration-500">
+        <UContainer class="h-full text-sm flex items-center transition-colors duration-500">
           <div class="flex items-center gap-4 flex-1">
             <a href="mailto:contact@konty.com" class="flex items-center gap-1 text-gray-300">
               <Icon name="i-lucide-mail" class="w-4 h-4" />
