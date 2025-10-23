@@ -7,13 +7,15 @@
     <UIAppear>
       <div class="flex flex-wrap gap-8 items-center justify-center">
         <UPageCard
-          v-for="(client, index) in clients.filter(client => !props.product || client.product === props.product)"
+          v-for="(client, index) in clients.filter(
+            (client) => !props.product || client.product === props.product
+          )"
           :key="index"
           variant="outline"
           spotlight
           spotlight-color="primary"
           :ui="{
-            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
+            root: 'group hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
           }"
         >
           <NuxtImg
@@ -39,7 +41,7 @@ import type { SectionVariantType } from '~/types/components'
 const props = defineProps({
   variant: {
     type: String as PropType<SectionVariantType>,
-    default: undefined,
+    default: undefined
   },
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
@@ -58,62 +60,62 @@ const clients = ref([
   {
     name: 'Adiya Hotel',
     logo: '/images/clients/adiya.avif',
-    product: 'hospitality',
+    product: 'retail'
   },
   {
     name: 'Baracuda Fish Restaurant',
     logo: '/images/clients/baracuda.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'Fishermans Pub',
     logo: '/images/clients/fishermanspub.avif',
-    product: 'hospitality',
+    product: 'retail'
   },
   {
     name: 'Hotel Enigma',
     logo: '/images/clients/hotelenigma.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'Pulena Bar',
     logo: '/images/clients/pulenabar.avif',
-    product: 'hospitality',
+    product: 'retail'
   },
   {
     name: 'Hotel Pelikan',
     logo: '/images/clients/hotelpelikan.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'Sapore di Mare',
     logo: '/images/clients/saporedimare.avif',
-    product: 'hospitality',
+    product: 'retail'
   },
   {
     name: 'Tasa Restoran',
     logo: '/images/clients/tasa.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'La Paz',
     logo: '/images/clients/lapaz.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'COCO Beach & Restaurant',
     logo: '/images/clients/coco.avif',
-    product: 'hospitality',
+    product: 'hospitality'
   },
   {
     name: 'Tri Ribara',
     logo: '/images/clients/triribara.avif',
-    product: 'hospitality',
+    product: 'retail'
   },
   {
     name: 'Konoba Amanet',
     logo: '/images/clients/konobaamanet.avif',
-    product: 'hospitality',
-  },
+    product: 'retail'
+  }
 ])
 </script>
