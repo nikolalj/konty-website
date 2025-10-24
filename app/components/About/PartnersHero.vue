@@ -48,13 +48,8 @@
               <AppCTAButton
                 variant="primary"
                 :label="t('pages.partners.cta')"
-                @click="scrollToForm"
               />
-              <AppCTAButton
-                variant="secondary"
-                :label="t('ui.cta.primary')"
-                :to="localePath('/demo')"
-              />
+              <AppCTAButton variant="secondary" :label="t('ui.cta.primary')" />
             </div>
           </UIAppear>
         </div>
@@ -98,10 +93,4 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
-
-const scrollToForm = () => {
-  const form = document.querySelector('#contact-form')
-  form?.scrollIntoView({ behavior: 'smooth' })
-}
 </script>
