@@ -10,7 +10,10 @@
     <div class="w-full">
       <form class="space-y-4" @submit.prevent="onSubmit">
         <div>
-          <label for="demo-name" class="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            for="demo-name"
+            class="block text-sm font-medium text-gray-700 mb-2"
+          >
             {{ t('ui.forms.fields.name') }}
           </label>
           <UInput
@@ -19,12 +22,22 @@
             class="w-full"
             :placeholder="t('ui.forms.placeholders.name')"
             size="lg"
-            required
+            :error="!!errors.name"
+            @blur="validateName"
           />
+          <p
+            v-if="errors.name"
+            class="mt-1 text-sm text-red-600 dark:text-red-400"
+          >
+            {{ errors.name }}
+          </p>
         </div>
 
         <div>
-          <label for="demo-email" class="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            for="demo-email"
+            class="block text-sm font-medium text-gray-700 mb-2"
+          >
             {{ t('ui.forms.fields.email') }}
           </label>
           <UInput
@@ -34,12 +47,22 @@
             type="email"
             :placeholder="t('ui.forms.placeholders.email')"
             size="lg"
-            required
+            :error="!!errors.email"
+            @blur="validateEmail"
           />
+          <p
+            v-if="errors.email"
+            class="mt-1 text-sm text-red-600 dark:text-red-400"
+          >
+            {{ errors.email }}
+          </p>
         </div>
 
         <div>
-          <label for="demo-phone" class="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            for="demo-phone"
+            class="block text-sm font-medium text-gray-700 mb-2"
+          >
             {{ t('ui.forms.fields.phone') }}
           </label>
           <UInput
@@ -49,12 +72,42 @@
             type="tel"
             :placeholder="t('ui.forms.placeholders.phone')"
             size="lg"
-            required
+            :error="!!errors.phone"
+            @blur="validatePhone"
+          />
+          <p
+            v-if="errors.phone"
+            class="mt-1 text-sm text-red-600 dark:text-red-400"
+          >
+            {{ errors.phone }}
+          </p>
+        </div>
+
+        <div>
+          <label
+            for="demo-industry"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ t('ui.forms.fields.industry') }}
+            <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+          </label>
+          <USelect
+            id="demo-industry"
+            v-model="form.industry"
+            :items="industryOptions"
+            :content="{
+              bodyLock: false
+            }"
+            class="w-full"
+            size="lg"
           />
         </div>
 
         <div>
-          <label for="demo-datetime" class="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            for="demo-datetime"
+            class="block text-sm font-medium text-gray-700 mb-2"
+          >
             {{ t('ui.forms.fields.preferredDateTime') }}
           </label>
           <UPopover>
@@ -75,37 +128,31 @@
                 <UCalendar
                   v-model="selectedDate"
                   :min-value="minDate"
+                  :is-date-unavailable="isDateUnavailable"
                 />
                 <div class="space-y-2">
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                  >
                     {{ t('ui.forms.fields.time') }}
                   </label>
                   <USelect
                     v-model="selectedTime"
-                    :items="timeOptions"
+                    :items="availableTimeSlots"
+                    :disabled="!selectedDate || availableTimeSlots.length === 0"
                     size="lg"
                     class="w-full"
                   />
+                  <p
+                    v-if="selectedDate && availableTimeSlots.length === 0"
+                    class="text-sm text-amber-600 dark:text-amber-400"
+                  >
+                    {{ t('ui.forms.noAvailableSlots') }}
+                  </p>
                 </div>
               </div>
             </template>
           </UPopover>
-        </div>
-
-        <div>
-          <label for="demo-industry" class="block text-sm font-medium text-gray-700">
-            {{ t('ui.forms.fields.industry') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
-          </label>
-          <USelect
-            id="demo-industry"
-            v-model="form.industry"
-            :items="industryOptions"
-            :content="{
-              bodyLock: false
-            }"
-            class="w-full"
-            size="lg"
-          />
         </div>
 
         <UButton
@@ -127,11 +174,22 @@
 </template>
 
 <script setup lang="ts">
-import { DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
-import { LOCALES } from '~/config/locale.config.mjs'
-
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const { track } = useTracking()
+const toast = useToast()
+
+// Use Calendly availability composable
+const {
+  selectedDate,
+  selectedTime,
+  minDate,
+  availableTimeSlots,
+  displayDateTime,
+  fetchAvailability,
+  isDateUnavailable,
+  getPreferredDateTimeISO,
+  resetDateTime
+} = useCalendlyAvailability()
 
 const form = reactive({
   name: '',
@@ -140,64 +198,14 @@ const form = reactive({
   industry: ''
 })
 
-const selectedDate = ref()
-const selectedTime = ref('')
-
-// Set minimum date to today
-const minDate = today(getLocalTimeZone())
-
-// Get current locale configuration
-const currentLocale = computed(() => LOCALES.find(l => l.code === locale.value))
-
-// Date formatter - locale-aware using locale config
-const df = computed(() => {
-  return new DateFormatter(currentLocale.value?.iso || 'en-US', {
-    dateStyle: 'medium'
-  })
+const errors = reactive({
+  name: '',
+  email: '',
+  phone: ''
 })
 
-// Generate time options (9 AM to 5 PM in 30-minute intervals)
-const timeOptions = computed(() => {
-  const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
-
-  const options = []
-  for (let hour = 9; hour <= 17; hour++) {
-    for (let minute = 0; minute < 60; minute += 30) {
-      if (hour === 17 && minute > 0) break // Stop at 5:00 PM (17:00)
-      const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-
-      let displayTime
-      if (uses12Hour) {
-        // 12-hour format with AM/PM
-        const period = hour >= 12 ? 'PM' : 'AM'
-        const displayHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour
-        displayTime = `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`
-      } else {
-        // 24-hour format
-        displayTime = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-      }
-
-      options.push({ label: displayTime, value: timeString })
-    }
-  }
-  return options
-})
-
-// Display formatted date and time
-const displayDateTime = computed(() => {
-  if (!selectedDate.value) {
-    return t('ui.forms.placeholders.preferredDateTime')
-  }
-
-  const dateStr = df.value.format(selectedDate.value.toDate(getLocalTimeZone()))
-
-  if (!selectedTime.value) {
-    return dateStr
-  }
-
-  const timeOption = timeOptions.value.find(opt => opt.value === selectedTime.value)
-  const separator = currentLocale.value?.dateTimeSeparator || 'at'
-  return `${dateStr} ${separator} ${timeOption?.label || selectedTime.value}`
+onMounted(() => {
+  fetchAvailability()
 })
 
 const industryOptions = ref([
@@ -208,20 +216,129 @@ const industryOptions = ref([
 
 const loading = ref(false)
 
+// Validation functions
+const validateName = () => {
+  if (!form.name.trim()) {
+    errors.name = t('ui.forms.errors.nameRequired')
+    return false
+  }
+  errors.name = ''
+  return true
+}
+
+const validateEmail = () => {
+  if (!form.email.trim()) {
+    errors.email = t('ui.forms.errors.emailRequired')
+    return false
+  }
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(form.email)) {
+    errors.email = t('ui.forms.errors.emailInvalid')
+    return false
+  }
+  errors.email = ''
+  return true
+}
+
+const validatePhone = () => {
+  if (!form.phone.trim()) {
+    errors.phone = t('ui.forms.errors.phoneRequired')
+    return false
+  }
+
+  // Phone validation - accept different formats:
+  // +381 60 123 4567, +387 60 123 456, 060-123-4567, itd.
+  const phoneRegex = /^[\d\s\-+()]{8,20}$/
+  const digitsOnly = form.phone.replace(/[\s\-+()]/g, '')
+
+  if (!phoneRegex.test(form.phone) || digitsOnly.length < 8) {
+    errors.phone = t('ui.forms.errors.phoneInvalid')
+    return false
+  }
+
+  errors.phone = ''
+  return true
+}
+
+const validateForm = () => {
+  const isNameValid = validateName()
+  const isEmailValid = validateEmail()
+  const isPhoneValid = validatePhone()
+
+  return isNameValid && isEmailValid && isPhoneValid
+}
+
 const onSubmit = async () => {
+  // Validate form fields
+  if (!validateForm()) {
+    return
+  }
+
   // Validate date and time are selected
   if (!selectedDate.value || !selectedTime.value) {
-    // You might want to show a toast notification here
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: t('ui.forms.errors.dateTimeRequired'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
     return
   }
 
   loading.value = true
 
-  // Track demo form submission
-  track('book_a_demo_form')
+  try {
+    const preferredDateTime = getPreferredDateTimeISO()
 
-  // TODO: Implement actual form submission with selectedDate and selectedTime
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  loading.value = false
+    // TODO: Replace with actual API endpoint for demo booking
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        industry: form.industry,
+        preferredDateTime
+      }
+    })
+
+    // Track demo form submission
+    track('book_a_demo_form', {
+      industry: form.industry,
+      hasPreferredDateTime: !!preferredDateTime
+    })
+
+    toast.add({
+      title: t('ui.forms.messages.success'),
+      description: t('ui.forms.messages.successDescription'),
+      color: 'success',
+      icon: 'i-lucide-check-circle'
+    })
+
+    // Reset form
+    form.name = ''
+    form.email = ''
+    form.phone = ''
+    form.industry = ''
+    errors.name = ''
+    errors.email = ''
+    errors.phone = ''
+    resetDateTime()
+  } catch (error) {
+    const errorMessage =
+      error && typeof error === 'object' && 'data' in error
+        ? (error.data as { statusMessage?: string })?.statusMessage
+        : undefined
+
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: errorMessage || t('ui.forms.messages.errorDescription'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
+  } finally {
+    loading.value = false
+  }
 }
 </script>

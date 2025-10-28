@@ -144,7 +144,11 @@
 
               <template #content>
                 <div class="p-4 space-y-4">
-                  <UCalendar v-model="selectedDate" :min-value="minDate" />
+                  <UCalendar
+                    v-model="selectedDate"
+                    :min-value="minDate"
+                    :is-date-unavailable="isDateUnavailable"
+                  />
                   <div class="space-y-2">
                     <label
                       class="block text-sm font-medium text-gray-700 dark:text-gray-200"
@@ -153,10 +157,19 @@
                     </label>
                     <USelect
                       v-model="selectedTime"
-                      :items="timeOptions"
+                      :items="availableTimeSlots"
+                      :disabled="
+                        !selectedDate || availableTimeSlots.length === 0
+                      "
                       size="lg"
                       class="w-full"
                     />
+                    <p
+                      v-if="selectedDate && availableTimeSlots.length === 0"
+                      class="text-sm text-amber-600 dark:text-amber-400"
+                    >
+                      {{ t('ui.forms.noAvailableSlots') }}
+                    </p>
                   </div>
                 </div>
               </template>
@@ -181,8 +194,6 @@
 
 <script setup lang="ts">
 import type { SectionVariantType } from '~/types/components'
-import { DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
-import { LOCALES } from '~/config/locale.config.mjs'
 
 const props = defineProps({
   variant: {
@@ -195,9 +206,22 @@ const props = defineProps({
   }
 })
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
+
+// Use Calendly availability composable
+const {
+  selectedDate,
+  selectedTime,
+  minDate,
+  availableTimeSlots,
+  displayDateTime,
+  fetchAvailability,
+  isDateUnavailable,
+  getPreferredDateTimeISO,
+  resetDateTime
+} = useCalendlyAvailability()
 
 const form = reactive({
   name: '',
@@ -213,68 +237,8 @@ const errors = reactive({
   phone: ''
 })
 
-const selectedDate = ref()
-const selectedTime = ref('')
-
-// Set minimum date to today
-const minDate = today(getLocalTimeZone())
-
-// Get current locale configuration
-const currentLocale = computed(() =>
-  LOCALES.find((l) => l.code === locale.value)
-)
-
-// Date formatter - locale-aware using locale config
-const df = computed(() => {
-  return new DateFormatter(currentLocale.value?.iso || 'en-US', {
-    dateStyle: 'medium'
-  })
-})
-
-// Generate time options (9 AM to 5 PM in 30-minute intervals)
-const timeOptions = computed(() => {
-  const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
-
-  const options = []
-  for (let hour = 9; hour <= 17; hour++) {
-    for (let minute = 0; minute < 60; minute += 30) {
-      if (hour === 17 && minute > 0) break // Stop at 5:00 PM (17:00)
-      const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-
-      let displayTime
-      if (uses12Hour) {
-        // 12-hour format with AM/PM
-        const period = hour >= 12 ? 'PM' : 'AM'
-        const displayHour = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour
-        displayTime = `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`
-      } else {
-        // 24-hour format
-        displayTime = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-      }
-
-      options.push({ label: displayTime, value: timeString })
-    }
-  }
-  return options
-})
-
-// Display formatted date and time
-const displayDateTime = computed(() => {
-  if (!selectedDate.value) {
-    return t('ui.forms.placeholders.preferredDateTime')
-  }
-
-  const dateStr = df.value.format(selectedDate.value.toDate(getLocalTimeZone()))
-
-  if (!selectedTime.value) {
-    return dateStr
-  }
-
-  const timeOption = timeOptions.value.find(
-    (opt) => opt.value === selectedTime.value
-  )
-  const separator = currentLocale.value?.dateTimeSeparator || 'at'
-  return `${dateStr} ${separator} ${timeOption?.label || selectedTime.value}`
+onMounted(() => {
+  fetchAvailability()
 })
 
 const industryOptions = ref([
@@ -345,8 +309,7 @@ const resetForm = () => {
   form.phone = ''
   form.industry = ''
   form.message = ''
-  selectedDate.value = undefined
-  selectedTime.value = ''
+  resetDateTime()
   errors.name = ''
   errors.email = ''
   errors.phone = ''
@@ -361,18 +324,8 @@ const onSubmit = async () => {
   loading.value = true
 
   try {
-    let preferredDateTime: string | undefined
-    if (selectedDate.value && selectedTime.value) {
-      const date = selectedDate.value.toDate(getLocalTimeZone())
-      const timeParts = selectedTime.value.split(':')
-      const hours = parseInt(timeParts[0] || '0')
-      const minutes = parseInt(timeParts[1] || '0')
-
-      date.setHours(hours, minutes, 0, 0)
-
-      // ISO format
-      preferredDateTime = date.toISOString()
-    }
+    // Use composable method to get ISO datetime
+    const preferredDateTime = getPreferredDateTimeISO()
 
     await $fetch('/api/contact', {
       method: 'POST',
