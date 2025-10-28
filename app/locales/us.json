@@ -157,6 +157,24 @@
       },
       "optional": "optional",
       "responseTime": "We respond within 24 hours",
+      "noAvailableSlots": "No available time slots for this date",
+      "errors": {
+        "nameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "dateTimeRequired": "Please select a preferred date and time"
+      },
+      "messages": {
+        "success": "Message sent successfully!",
+        "successDescription": "Thank you for contacting us. We'll get back to you within 24 hours.",
+        "error": "Something went wrong",
+        "errorDescription": "We couldn't send your message. Please try again or contact us directly."
+      },
+      "calendlyScheduled": "Demo scheduled",
+      "calendlySuccess": "Demo scheduled successfully!",
+      "calendlySuccessDescription": "You will receive a confirmation email shortly.",
       "industryOptions": {
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "retail": "Retail (store, boutique...)",

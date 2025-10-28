@@ -157,6 +157,24 @@
       },
       "optional": "opciono",
       "responseTime": "Odgovaramo unutar 24 sata",
+      "noAvailableSlots": "Nema dostupnih termina za ovaj datum",
+      "errors": {
+        "nameRequired": "Ime i prezime je obavezno",
+        "emailRequired": "Email je obavezan",
+        "emailInvalid": "Unesite validnu email adresu",
+        "phoneRequired": "Broj telefona je obavezan",
+        "phoneInvalid": "Unesite validan broj telefona",
+        "dateTimeRequired": "Molimo odaberite željeni datum i vreme"
+      },
+      "messages": {
+        "success": "Poruka je uspešno poslata!",
+        "successDescription": "Hvala vam što ste nas kontaktirali. Javićemo vam se u roku od 24 sata.",
+        "error": "Došlo je do greške",
+        "errorDescription": "Nismo mogli poslati vašu poruku. Molimo pokušajte ponovo ili nas kontaktirajte direktno."
+      },
+      "calendlyScheduled": "Demo zakazan",
+      "calendlySuccess": "Demo je uspešno zakazan!",
+      "calendlySuccessDescription": "Uskoro ćete primiti email potvrdu.",
       "industryOptions": {
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "retail": "Trgovina (prodavnica, butik...)",

@@ -284,6 +284,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
+    calendlyApiToken: process.env.CALENDLY_API_TOKEN,
 
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL

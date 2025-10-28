@@ -20,6 +20,32 @@ yarn install
 bun install
 ```
 
+### Environment Variables
+
+Copy `.env.example` to `.env` and configure your environment variables:
+
+```bash
+cp .env.example .env
+```
+
+**Required variables:**
+
+- `CALENDLY_API_TOKEN` - Your Calendly Personal Access Token for API integration
+
+**Getting your Calendly API Token:**
+
+1. Log in to your Calendly account
+2. Go to [Integrations & Apps](https://calendly.com/integrations/api_webhooks)
+3. Navigate to "API & Webhooks"
+4. Click "Generate New Token"
+5. Copy the token and add it to your `.env` file
+
+Example:
+
+```
+CALENDLY_API_TOKEN=your-personal-access-token-here
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
