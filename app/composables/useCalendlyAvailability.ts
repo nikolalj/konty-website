@@ -98,13 +98,8 @@ export const useCalendlyAvailability = () => {
           availableDatesMap.value.get(dateStr)?.push(slot)
         }
       })
-
-      // If no data, set fallback flag
-      if (allSlots.length === 0) {
-        console.warn('⚠️ No availability data received, using fallback mode')
-      }
     } catch (error) {
-      console.error('❌ Error fetching availability:', error)
+      console.error('Error fetching availability:', error)
       // If error occurs, clear data to trigger fallback
       availabilityData.value = null
       availableDatesMap.value.clear()
@@ -135,7 +130,7 @@ export const useCalendlyAvailability = () => {
     return !availableDatesMap.value.has(dateStr)
   }
 
-  // Generate default time slots (9 AM to 5 PM, every hour) - fallback kada nema Calendly podataka
+  // Generate default time slots (9 AM to 5 PM, every hour) - fallback when no Calendly data available
   const generateDefaultTimeSlots = (): TimeOption[] => {
     const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
     const options: TimeOption[] = []
@@ -169,7 +164,7 @@ export const useCalendlyAvailability = () => {
       return generateDefaultTimeSlots()
     }
 
-    // Konvertujemo DateValue u YYYY-MM-DD format bez timezone konverzije
+    // Convert DateValue to YYYY-MM-DD format without timezone conversion
     const year = selectedDate.value.year
     const month = String(selectedDate.value.month).padStart(2, '0')
     const day = String(selectedDate.value.day).padStart(2, '0')
@@ -182,7 +177,7 @@ export const useCalendlyAvailability = () => {
       return generateDefaultTimeSlots()
     }
 
-    // Mapiramo Calendly available times u dropdown format
+    // Map Calendly available times to dropdown format
     const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
 
     return slotsForDate.map((slot: CalendlyTimeSlot) => {
