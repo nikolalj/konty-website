@@ -10,7 +10,10 @@
       <div class="px-8 pb-8 pt-0 rounded-2xl max-w-3xl w-full">
         <form class="space-y-6" @submit.prevent="onSubmit">
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+            <label
+              for="name"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
               {{ t('ui.forms.fields.name') }}
             </label>
             <UInput
@@ -19,12 +22,22 @@
               class="w-full"
               :placeholder="t('ui.forms.placeholders.name')"
               size="xl"
-              required
+              :error="!!errors.name"
+              @blur="validateName"
             />
+            <p
+              v-if="errors.name"
+              class="mt-1 text-sm text-red-600 dark:text-red-400"
+            >
+              {{ errors.name }}
+            </p>
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
               {{ t('ui.forms.fields.email') }}
             </label>
             <UInput
@@ -34,12 +47,22 @@
               type="email"
               :placeholder="t('ui.forms.placeholders.email')"
               size="xl"
-              required
+              :error="!!errors.email"
+              @blur="validateEmail"
             />
+            <p
+              v-if="errors.email"
+              class="mt-1 text-sm text-red-600 dark:text-red-400"
+            >
+              {{ errors.email }}
+            </p>
           </div>
 
           <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
+            <label
+              for="phone"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
               {{ t('ui.forms.fields.phone') }}
             </label>
             <UInput
@@ -49,13 +72,24 @@
               type="tel"
               :placeholder="t('ui.forms.placeholders.phone')"
               size="xl"
-              required
+              :error="!!errors.phone"
+              @blur="validatePhone"
             />
+            <p
+              v-if="errors.phone"
+              class="mt-1 text-sm text-red-600 dark:text-red-400"
+            >
+              {{ errors.phone }}
+            </p>
           </div>
 
           <div>
-            <label for="industry" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-              {{ t('ui.forms.fields.industry') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            <label
+              for="industry"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
+              {{ t('ui.forms.fields.industry') }}
+              <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
             </label>
             <USelect
               id="industry"
@@ -67,8 +101,12 @@
           </div>
 
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-              {{ t('ui.forms.fields.message') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
+              {{ t('ui.forms.fields.message') }}
+              <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
             </label>
             <UTextarea
               id="message"
@@ -81,8 +119,12 @@
           </div>
 
           <div>
-            <label for="preferredDateTime" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
-              {{ t('ui.forms.fields.preferredDateTime') }} <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            <label
+              for="preferredDateTime"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
+              {{ t('ui.forms.fields.preferredDateTime') }}
+              <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
             </label>
             <UPopover>
               <UButton
@@ -92,19 +134,21 @@
                 icon="i-lucide-calendar"
                 size="xl"
                 class="w-full justify-start text-left font-normal"
-                :class="{ 'text-gray-400 dark:text-gray-500': !selectedDate || !selectedTime }"
+                :class="{
+                  'text-gray-400 dark:text-gray-500':
+                    !selectedDate || !selectedTime
+                }"
               >
                 {{ displayDateTime }}
               </UButton>
 
               <template #content>
                 <div class="p-4 space-y-4">
-                  <UCalendar
-                    v-model="selectedDate"
-                    :min-value="minDate"
-                  />
+                  <UCalendar v-model="selectedDate" :min-value="minDate" />
                   <div class="space-y-2">
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                    <label
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                    >
                       {{ t('ui.forms.fields.time') }}
                     </label>
                     <USelect
@@ -143,16 +187,17 @@ import { LOCALES } from '~/config/locale.config.mjs'
 const props = defineProps({
   variant: {
     type: String as PropType<SectionVariantType>,
-    default: undefined,
+    default: undefined
   },
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
-  },
+  }
 })
 
 const { t, locale } = useI18n()
 const { track } = useTracking()
+const toast = useToast()
 
 const form = reactive({
   name: '',
@@ -162,6 +207,12 @@ const form = reactive({
   message: ''
 })
 
+const errors = reactive({
+  name: '',
+  email: '',
+  phone: ''
+})
+
 const selectedDate = ref()
 const selectedTime = ref('')
 
@@ -169,7 +220,9 @@ const selectedTime = ref('')
 const minDate = today(getLocalTimeZone())
 
 // Get current locale configuration
-const currentLocale = computed(() => LOCALES.find(l => l.code === locale.value))
+const currentLocale = computed(() =>
+  LOCALES.find((l) => l.code === locale.value)
+)
 
 // Date formatter - locale-aware using locale config
 const df = computed(() => {
@@ -217,7 +270,9 @@ const displayDateTime = computed(() => {
     return dateStr
   }
 
-  const timeOption = timeOptions.value.find(opt => opt.value === selectedTime.value)
+  const timeOption = timeOptions.value.find(
+    (opt) => opt.value === selectedTime.value
+  )
   const separator = currentLocale.value?.dateTimeSeparator || 'at'
   return `${dateStr} ${separator} ${timeOption?.label || selectedTime.value}`
 })
@@ -230,16 +285,136 @@ const industryOptions = ref([
 
 const loading = ref(false)
 
+// Validation functions
+const validateName = () => {
+  if (!form.name.trim()) {
+    errors.name = t('ui.forms.errors.nameRequired')
+    return false
+  }
+  errors.name = ''
+  return true
+}
+
+const validateEmail = () => {
+  if (!form.email.trim()) {
+    errors.email = t('ui.forms.errors.emailRequired')
+    return false
+  }
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(form.email)) {
+    errors.email = t('ui.forms.errors.emailInvalid')
+    return false
+  }
+  errors.email = ''
+  return true
+}
+
+const validatePhone = () => {
+  if (!form.phone.trim()) {
+    errors.phone = t('ui.forms.errors.phoneRequired')
+    return false
+  }
+
+  // Phone validation - accept different formats:
+  // +381 60 123 4567, +387 60 123 456, 060-123-4567, itd.
+  const phoneRegex = /^[\d\s\-+()]{8,20}$/
+  const digitsOnly = form.phone.replace(/[\s\-+()]/g, '')
+
+  if (!phoneRegex.test(form.phone) || digitsOnly.length < 8) {
+    errors.phone = t('ui.forms.errors.phoneInvalid')
+    return false
+  }
+
+  errors.phone = ''
+  return true
+}
+
+const validateForm = () => {
+  const isNameValid = validateName()
+  const isEmailValid = validateEmail()
+  const isPhoneValid = validatePhone()
+
+  return isNameValid && isEmailValid && isPhoneValid
+}
+
+// Reset form to initial state
+const resetForm = () => {
+  form.name = ''
+  form.email = ''
+  form.phone = ''
+  form.industry = ''
+  form.message = ''
+  selectedDate.value = undefined
+  selectedTime.value = ''
+  errors.name = ''
+  errors.email = ''
+  errors.phone = ''
+}
+
 const onSubmit = async () => {
+  // Validate form before submission
+  if (!validateForm()) {
+    return
+  }
+
   loading.value = true
 
-  // Track general contact form submission with industry
-  track('contact_form_submission', {
-    industry: form.industry
-  })
+  try {
+    let preferredDateTime: string | undefined
+    if (selectedDate.value && selectedTime.value) {
+      const date = selectedDate.value.toDate(getLocalTimeZone())
+      const timeParts = selectedTime.value.split(':')
+      const hours = parseInt(timeParts[0] || '0')
+      const minutes = parseInt(timeParts[1] || '0')
 
-  // TODO: Implement actual form submission with selectedDate and selectedTime
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  loading.value = false
+      date.setHours(hours, minutes, 0, 0)
+
+      // ISO format
+      preferredDateTime = date.toISOString()
+    }
+
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        industry: form.industry,
+        message: form.message,
+        preferredDateTime
+      }
+    })
+
+    // Track successful form submission
+    track('contact_form_submission', {
+      industry: form.industry,
+      hasPreferredDateTime: !!preferredDateTime
+    })
+
+    toast.add({
+      title: t('ui.forms.messages.success'),
+      description: t('ui.forms.messages.successDescription'),
+      color: 'success',
+      icon: 'i-lucide-check-circle'
+    })
+
+    resetForm()
+  } catch (error) {
+    // Show error notification
+    const errorMessage =
+      error && typeof error === 'object' && 'data' in error
+        ? (error.data as { statusMessage?: string })?.statusMessage
+        : undefined
+
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: errorMessage || t('ui.forms.messages.errorDescription'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
+  } finally {
+    loading.value = false
+  }
 }
 </script>

@@ -157,6 +157,19 @@
       },
       "optional": "opciono",
       "responseTime": "Odgovaramo unutar 24 sata",
+      "errors": {
+        "nameRequired": "Ime i prezime je obavezno",
+        "emailRequired": "Email je obavezan",
+        "emailInvalid": "Unesite validnu email adresu",
+        "phoneRequired": "Broj telefona je obavezan",
+        "phoneInvalid": "Unesite validan broj telefona"
+      },
+      "messages": {
+        "success": "Poruka je uspešno poslata!",
+        "successDescription": "Hvala vam što ste nas kontaktirali. Javićemo vam se u roku od 24 sata.",
+        "error": "Došlo je do greške",
+        "errorDescription": "Nismo mogli poslati vašu poruku. Molimo pokušajte ponovo ili nas kontaktirajte direktno."
+      },
       "industryOptions": {
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "retail": "Trgovina (prodavnica, butik...)",

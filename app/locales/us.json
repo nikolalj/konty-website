@@ -157,6 +157,19 @@
       },
       "optional": "optional",
       "responseTime": "We respond within 24 hours",
+      "errors": {
+        "nameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Please enter a valid phone number"
+      },
+      "messages": {
+        "success": "Message sent successfully!",
+        "successDescription": "Thank you for contacting us. We'll get back to you within 24 hours.",
+        "error": "Something went wrong",
+        "errorDescription": "We couldn't send your message. Please try again or contact us directly."
+      },
       "industryOptions": {
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "retail": "Retail (store, boutique...)",
