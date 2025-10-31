@@ -41,7 +41,12 @@
         "currency": "RSD",
         "hospitality": "Ugostiteljstvo",
         "retail": "Trgovina",
-        "recommended": "Preporučeno"
+        "recommended": "Preporučeno",
+        "address": "Adresa",
+        "phone": "Telefon",
+        "email": "Email",
+        "businessHours": "Radno vreme",
+        "weekdays": "Ponedeljak - Petak"
       },
       "loading": {}
     },
@@ -1400,24 +1405,6 @@
       "hero": {
         "title": "Stupite u kontakt",
         "subtitle": "Tu smo da vam pomognemo da izaberete savršeno POS rešenje za vaš biznis."
-      },
-      "address": {
-        "title": "Adresa",
-        "line1": "Bulevar Svetog Petra Cetinjskog 56",
-        "line2": "81000 Podgorica, Montenegro"
-      },
-      "phone": {
-        "title": "Telefon",
-        "number": "+382 67 607 670"
-      },
-      "email": {
-        "title": "Email",
-        "address": "contact"
-      },
-      "hours": {
-        "title": "Radno vreme",
-        "weekdays": "Ponedeljak - Petak: 9:00 - 18:00",
-        "weekend": "Subota: 10:00 - 14:00"
       }
     },
     "clientStories": {

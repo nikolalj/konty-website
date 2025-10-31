@@ -60,13 +60,13 @@
                 <h3
                   class="font-bold text-base text-gray-900 dark:text-white mb-2"
                 >
-                  {{ t('pages.contact.address.title') }}
+                  {{ t('ui.common.labels.address') }}
                 </h3>
                 <p class="text-sm text-gray-600 dark:text-gray-300">
-                  {{ t('pages.contact.address.line1') }}
+                  {{ t('data.company.address.street') }}
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-300">
-                  {{ t('pages.contact.address.line2') }}
+                  {{ t('data.company.address.postalCode') }} {{ t('data.company.address.city') }}
                 </p>
               </div>
             </div>
@@ -84,13 +84,13 @@
                 <h3
                   class="font-bold text-base text-gray-900 dark:text-white mb-2"
                 >
-                  {{ t('pages.contact.phone.title') }}
+                  {{ t('ui.common.labels.phone') }}
                 </h3>
                 <a
-                  :href="`tel:${t('pages.contact.phone.number').replace(/\s/g, '')}`"
+                  :href="`tel:${t('data.company.contact.phone')}`"
                   class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium hover:underline transition-colors"
                 >
-                  {{ t('pages.contact.phone.number') }}
+                  {{ t('data.company.contact.phone') }}
                 </a>
               </div>
             </div>
@@ -108,13 +108,13 @@
                 <h3
                   class="font-bold text-base text-gray-900 dark:text-white mb-2"
                 >
-                  {{ t('pages.contact.email.title') }}
+                  {{ t('ui.common.labels.email') }}
                 </h3>
                 <a
-                  :href="`mailto:${t('pages.contact.email.address')}@konty.com`"
+                  :href="`mailto:${t('data.company.contact.email')}@konty.com`"
                   class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium hover:underline transition-colors break-all"
                 >
-                  {{ t('pages.contact.email.address') }}@konty.com
+                  {{ t('data.company.contact.email') }}@konty.com
                 </a>
               </div>
             </div>
@@ -132,13 +132,10 @@
                 <h3
                   class="font-bold text-base text-gray-900 dark:text-white mb-2"
                 >
-                  {{ t('pages.contact.hours.title') }}
+                  {{ t('ui.common.labels.businessHours') }}
                 </h3>
                 <p class="text-sm text-gray-600 dark:text-gray-300">
-                  {{ t('pages.contact.hours.weekdays') }}
-                </p>
-                <p class="text-sm text-gray-600 dark:text-gray-300">
-                  {{ t('pages.contact.hours.weekend') }}
+                  {{ t('ui.common.labels.weekdays') }}: {{ t('data.company.businessHours.weekdays.opens') }} - {{ t('data.company.businessHours.weekdays.closes') }}
                 </p>
               </div>
             </div>
