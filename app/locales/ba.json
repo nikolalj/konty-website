@@ -142,7 +142,8 @@
         "preferredDateTime": "Željeni datum i vrijeme za demo",
         "time": "Odaberite vrijeme",
         "industry": "Tip poslovanja",
-        "category": "Tip poslovanja"
+        "category": "Tip poslovanja",
+        "subscription": "Cjenovni paket"
       },
       "placeholders": {
         "name": "Vaše ime i prezime",
@@ -184,6 +185,14 @@
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "retail": "Trgovina (prodavnica, butik...)",
         "other": "Ostalo"
+      },
+      "subscriptionOptions": {
+        "hospitality_start": "Ugostiteljstvo - Start",
+        "hospitality_standard": "Ugostiteljstvo - Standard",
+        "hospitality_premium": "Ugostiteljstvo - Premium",
+        "retail_start": "Trgovina - Start",
+        "retail_standard": "Trgovina - Standard",
+        "retail_premium": "Trgovina - Premium"
       }
     },
     "errors": {
@@ -491,7 +500,10 @@
           "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
           "description": "Bilo da preferirate pogodnost pristupa preko weba, poznato okruženje Windows aplikacija, mobilnost Android uređaja ili pouzdanost MacOS-a, naš softver se prilagođava vašem operativnom sistemu.",
           "docsLink": "Za detaljne instrukcije i dokumentaciju",
-          "docsLinkText": "kliknite ovdje"
+          "docsLinkText": "kliknite ovdje",
+          "docsTitle": "Kompletna dokumentacija i vodiči",
+          "docsDescription": "Sve što ti treba da savladaš Konty POS - od brzih vodiča do napredne konfiguracije i rješavanja problema.",
+          "docsBadge": "Dokumentacija"
         },
         "sections": {
           "production": {
@@ -506,6 +518,11 @@
             "web": "Web",
             "windows": "Windows",
             "android": "Android",
+            "macos": "macOS"
+          },
+          "lprf": {
+            "title": "Preuzmi LPRF",
+            "windows": "Windows",
             "macos": "macOS"
           }
         }

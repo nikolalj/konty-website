@@ -12,7 +12,7 @@ import { LOCALES } from '~/config/locale.config.mjs'
 const { t, locale } = useI18n()
 const schemas = useSchemas()
 
-const currentLocale = LOCALES.find(l => l.code === locale.value)
+const currentLocale = LOCALES.find((l) => l.code === locale.value)
 
 // SEO meta tags
 usePageSeo({

@@ -142,7 +142,8 @@
         "preferredDateTime": "Preferred date & time for demo",
         "time": "Select time",
         "industry": "Business type",
-        "category": "Business type"
+        "category": "Business type",
+        "subscription": "Pricing plan"
       },
       "placeholders": {
         "name": "Your full name",
@@ -184,6 +185,14 @@
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "retail": "Retail (store, boutique...)",
         "other": "Other"
+      },
+      "subscriptionOptions": {
+        "hospitality_start": "Hospitality - Start",
+        "hospitality_standard": "Hospitality - Standard",
+        "hospitality_premium": "Hospitality - Premium",
+        "retail_start": "Retail - Start",
+        "retail_standard": "Retail - Standard",
+        "retail_premium": "Retail - Premium"
       }
     },
     "errors": {
@@ -479,7 +488,10 @@
           "subtitle": "Get Konty for any device or platform.",
           "description": "Whether you prefer the convenience of web-based access, the familiarity of Windows applications, the mobility of Android devices, or the reliability of MacOS, our software is adaptable to your preferred operating system.",
           "docsLink": "For detailed instructions and documentation",
-          "docsLinkText": "click here"
+          "docsLinkText": "click here",
+          "docsTitle": "Complete Documentation & Guides",
+          "docsDescription": "Everything you need to master Konty POS - from quick start guides to advanced configuration and troubleshooting.",
+          "docsBadge": "Documentation"
         },
         "sections": {
           "production": {
@@ -494,6 +506,11 @@
             "web": "Web",
             "windows": "Windows",
             "android": "Android",
+            "macos": "macOS"
+          },
+          "lprf": {
+            "title": "Download LPRF",
+            "windows": "Windows",
             "macos": "macOS"
           }
         }
