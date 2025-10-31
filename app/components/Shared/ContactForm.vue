@@ -1,5 +1,6 @@
 <template>
   <SharedSection
+    ref="contactFormSection"
     :variant="props.variant"
     :title="t('ui.contactForm.title')"
     :description="t('ui.contactForm.description')"
@@ -95,6 +96,23 @@
               id="industry"
               v-model="form.industry"
               :items="industryOptions"
+              class="w-full"
+              size="xl"
+            />
+          </div>
+
+          <div>
+            <label
+              for="subscription"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+            >
+              {{ t('ui.forms.fields.subscription') }}
+              <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+            </label>
+            <USelect
+              id="subscription"
+              v-model="form.subscription"
+              :items="subscriptionOptions"
               class="w-full"
               size="xl"
             />
@@ -209,6 +227,7 @@ const props = defineProps({
 const { t } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
+const { selectedSubscription } = usePricingContactForm()
 
 // Use Calendly availability composable
 const {
@@ -228,7 +247,8 @@ const form = reactive({
   email: '',
   phone: '',
   industry: '',
-  message: ''
+  message: '',
+  subscription: ''
 })
 
 const errors = reactive({
@@ -239,12 +259,72 @@ const errors = reactive({
 
 onMounted(() => {
   fetchAvailability()
+
+  // Listen for pricing plan selection event
+  const handlePricingPlanSelected = (event: CustomEvent) => {
+    const subscription = event.detail?.subscription
+    const industry = event.detail?.industry
+
+    if (subscription) {
+      form.subscription = subscription
+    }
+
+    if (industry) {
+      form.industry = industry
+    }
+
+    // Scroll to this form if subscription was selected
+    if (subscription) {
+      scrollToForm()
+    }
+  }
+
+  window.addEventListener(
+    'pricing-plan-selected',
+    handlePricingPlanSelected as EventListener
+  )
+
+  // Also check if there's a pre-selected subscription from state
+  if (selectedSubscription.value) {
+    form.subscription = selectedSubscription.value
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener('pricing-plan-selected', () => {})
 })
 
 const industryOptions = ref([
   { label: t('ui.forms.industryOptions.hospitality'), value: 'hospitality' },
   { label: t('ui.forms.industryOptions.retail'), value: 'retail' },
   { label: t('ui.forms.industryOptions.other'), value: 'other' }
+])
+
+const subscriptionOptions = ref([
+  {
+    label: t('ui.forms.subscriptionOptions.hospitality_start'),
+    value: 'hospitality_start'
+  },
+  {
+    label: t('ui.forms.subscriptionOptions.hospitality_standard'),
+    value: 'hospitality_standard'
+  },
+  {
+    label: t('ui.forms.subscriptionOptions.hospitality_premium'),
+    value: 'hospitality_premium'
+  },
+  {
+    label: t('ui.forms.subscriptionOptions.retail_start'),
+    value: 'retail_start'
+  },
+  {
+    label: t('ui.forms.subscriptionOptions.retail_standard'),
+    value: 'retail_standard'
+  },
+  {
+    label: t('ui.forms.subscriptionOptions.retail_premium'),
+    value: 'retail_premium'
+  }
 ])
 
 const loading = ref(false)
@@ -309,6 +389,7 @@ const resetForm = () => {
   form.phone = ''
   form.industry = ''
   form.message = ''
+  form.subscription = ''
   resetDateTime()
   errors.name = ''
   errors.email = ''
@@ -335,6 +416,7 @@ const onSubmit = async () => {
         phone: form.phone,
         industry: form.industry,
         message: form.message,
+        subscription: form.subscription,
         preferredDateTime
       }
     })
@@ -368,6 +450,18 @@ const onSubmit = async () => {
     })
   } finally {
     loading.value = false
+  }
+}
+
+// Ref to the section element
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const contactFormSection = ref<any>(null)
+
+// Function to scroll to this form
+const scrollToForm = () => {
+  if (contactFormSection.value) {
+    const element = contactFormSection.value.$el || contactFormSection.value
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 }
 </script>

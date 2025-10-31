@@ -5,6 +5,7 @@ export default defineEventHandler(async (event) => {
     phone: string
     industry?: string
     message?: string
+    subscription?: string
     preferredDateTime?: string
   }>(event)
 
@@ -35,6 +36,7 @@ export default defineEventHandler(async (event) => {
     phone: body.phone,
     industry: body.industry,
     message: body.message,
+    subscription: body.subscription,
     preferredDateTime: body.preferredDateTime,
     timestamp: new Date().toISOString()
   })

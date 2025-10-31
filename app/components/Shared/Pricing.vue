@@ -31,16 +31,20 @@
 </template>
 
 <script setup lang="ts">
-import type { SectionVariantType, SectionHeadingLevel } from '~/types/components'
+import type {
+  SectionVariantType,
+  SectionHeadingLevel
+} from '~/types/components'
 
 const { tArray } = useUtils()
 const { t } = useI18n()
 const { track } = useTracking()
+const { selectPricingPlan } = usePricingContactForm()
 
 const props = defineProps({
   variant: {
     type: String as PropType<SectionVariantType>,
-    default: undefined,
+    default: undefined
   },
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
@@ -142,5 +146,10 @@ const handlePricingPlanChoice = (category: string, label: string) => {
     category,
     label
   })
+
+  // Set subscription and trigger event for contact form
+  const subscriptionValue = `${category.toLowerCase()}_${label.toLowerCase()}`
+  const industryValue = category.toLowerCase() // 'hospitality' or 'retail'
+  selectPricingPlan(subscriptionValue, industryValue)
 }
 </script>
