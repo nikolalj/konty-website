@@ -246,7 +246,7 @@
         }
       },
       "testimonials": {
-        "title": "What Our Customers Say",
+        "title": "What Our Clients Say",
         "description": "Stability, simplicity, and support that help them run their business with peace of mind",
         "items": {
           "t1": {
@@ -272,7 +272,7 @@
         }
       },
       "clients": {
-        "title": "Partners Who Chose Konty",
+        "title": "Our Clients",
         "description": "More than 9,000 businesses count on Konty every day"
       },
       "getStarted": {

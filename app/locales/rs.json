@@ -246,7 +246,7 @@
         }
       },
       "testimonials": {
-        "title": "Šta naši korisnici kažu",
+        "title": "Šta naši klijenti kažu",
         "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
@@ -272,7 +272,7 @@
         }
       },
       "clients": {
-        "title": "Partneri koji su izabrali Konty",
+        "title": "Naši klijenti",
         "description": "Više od 9.000 preduzeća širom regiona svakodnevno koristi Konty"
       },
       "getStarted": {
@@ -1403,7 +1403,7 @@
     },
     "contact": {
       "hero": {
-        "title": "Stupite u kontakt",
+        "title": "Kontaktirajte nas",
         "subtitle": "Tu smo da vam pomognemo da izaberete savršeno POS rešenje za vaš biznis."
       }
     },
@@ -1544,7 +1544,7 @@
   "seo": {
     "contact": {
       "title": "Kontaktirajte nas - Konty POS",
-      "description": "Stupite u kontakt sa našim timom. Tu smo da vam pomognemo da izaberete savršeno POS rešenje."
+      "description": "Kontaktirajte nas sa našim timom. Tu smo da vam pomognemo da izaberete savršeno POS rešenje."
     },
     "clientStories": {
       "title": "Priče o uspehu klijenata - Konty POS",
