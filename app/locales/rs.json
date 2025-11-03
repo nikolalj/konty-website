@@ -67,7 +67,7 @@
       },
       "categories": {
         "restaurants": "Restorani",
-        "restaurantsDesc": "Kompletno rešenje za upravljanje restoranom - od rezervacija do naplate.",
+        "restaurantsDesc": "Kompletno rešenje za upravljanje restoranom - od stolova do naplate.",
         "barsCafes": "Barovi i kafići",
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mesta sa velikim prometom.",
         "fastFood": "Brza hrana / Fast food",
@@ -75,7 +75,7 @@
         "grocerySupermarkets": "Prodavnice hrane i supermarketi",
         "grocerySupermarketsDesc": "Upravljanje velikim brojem artikala i brzim prometom.",
         "clothingBoutiques": "Prodavnice odeće",
-        "clothingBoutiquesDesc": "Praćenje veličina, boja i sezonskih kolekcija.",
+        "clothingBoutiquesDesc": "Kompletno upravljanje prodajom i zalihama odeće.",
         "convenienceStores": "Prodavnice mešovite robe",
         "convenienceStoresDesc": "Jednostavno upravljanje raznovrsnim asortimanom.",
         "b2b": "B2B prodaja i E fakture",
@@ -246,7 +246,7 @@
         }
       },
       "testimonials": {
-        "title": "Šta naši klijenti kažu",
+        "title": "Šta kažu naši klijenti",
         "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
@@ -256,7 +256,7 @@
           },
           "t2": {
             "name": "Jelena Marković",
-            "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno imam jasnu sliku o proizvodima koji se najbolje prodaju, a izveštaji mi pomažu da donosim brže odluke.",
+            "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno vidim koji proizvodi idu najbolje, a izveštaji mi pomažu da donosim brže odluke.",
             "role": "Vlasnica butika \"Moda J\""
           },
           "t3": {
@@ -277,26 +277,26 @@
       },
       "getStarted": {
         "title": "Počni sa radom za 48h",
-        "description": "Prelazak na Konty je brz i jednostavan",
+        "description": "Prelazak na Konty je lak i brz",
         "step1": {
           "tagline": "Prvi dan, ujutru",
           "title": "15-minutni poziv",
-          "description": "Opišete nam svoj biznis i svoje potrebe. Na osnovu toga mi kreiramo sistem po vašoj meri."
+          "description": "Kažite nam kakav vam je posao i šta vam treba. Mi vam spremimo sistem koji vam odgovara."
         },
         "step2": {
           "tagline": "Prvi dan, popodne",
           "title": "Podešavanje naloga",
-          "description": "Kreiramo i konfigurišemo nalog. Prebacimo artikle, kupce i sve što je potrebno. Vi ne radite ništa."
+          "description": "Napravimo vam nalog i prebacimo artikle, kupce - sve što treba. Vi ne morate raditi ništa."
         },
         "step3": {
           "tagline": "Drugi dan, ujutru",
           "title": "Instalacija i obuka zaposlenih",
-          "description": "Instalaciju sistema i obuku vaših zaposlenih realizuje naš tim u dogovorenom terminu."
+          "description": "Naš tim će instalirati sistem i obučiti vaše zaposlene u dogovorenom terminu."
         },
         "step4": {
           "tagline": "Drugi dan, popodne",
           "title": "Možete da počnete sa radom",
-          "description": "Spremni ste za rad. Naš tim vam stoji na raspolaganju 24/7."
+          "description": "Spremni ste za rad. Tu smo za vas 24/7."
         }
       }
     },
@@ -503,7 +503,7 @@
         "hero": {
           "title": "Gde god ti treba!",
           "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-          "description": "Bilo da preferirate pogodnost pristupa preko veba, poznato okruženje Windows aplikacija, mobilnost Android uređaja ili pouzdanost MacOS-a, naš softver se prilagođava vašem operativnom sistemu.",
+          "description": "Dostupan na svim platformama - veb, Windows, Android i MacOS. Koristi Konty gde god ti je potreban.",
           "docsLink": "Za detaljne instrukcije i dokumentaciju",
           "docsLinkText": "kliknite ovde",
           "docsTitle": "Kompletna dokumentacija i vodiči",
@@ -552,7 +552,7 @@
           },
           "benefit3": {
             "title": "Pouzdan",
-            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvek dostupni."
+            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
           },
           "benefit4": {
             "title": "Dostupan svuda i uvek",
@@ -580,7 +580,7 @@
           },
           "feat3": {
             "title": "Pouzdan",
-            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvek dostupni."
+            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
           },
           "feat4": {
             "title": "Napredni izveštaji",
@@ -709,7 +709,7 @@
           },
           "benefit3": {
             "title": "Pouzdan",
-            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvek dostupni."
+            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
           },
           "benefit4": {
             "title": "Dostupan svuda i uvek",
@@ -737,7 +737,7 @@
           },
           "feat3": {
             "title": "Pouzdan",
-            "description": "Nema više straha da će vam sa prvim strujnim udarom nestati podaci. Konty je full cloud softver koji vam obezbeđuje da nikada ne izgubite svoje podatke. Svi podaci su centralizovani i uvek dostupni."
+            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
           },
           "feat4": {
             "title": "Napredni izveštaji",
@@ -864,9 +864,9 @@
       "restaurants": {
         "hero": {
           "title": "Konty za restorane",
-          "subtitle": "Kompletno rešenje za upravljanje restoranom - od rezervacija do naplate",
+          "subtitle": "Kompletno rešenje za upravljanje restoranom - od stolova do naplate",
           "cta": "Počni 30 dana besplatno",
-          "features": "Stolovi • Kuhinja • Rezervacije • Analitika"
+          "features": "Stolovi • Kuhinja • Narudžbe • Analitika"
         },
         "overview": {
           "title": "Sve što restoranu treba",
@@ -914,7 +914,7 @@
           "title": "Konty za barove i kafiće",
           "subtitle": "Brza naplata i upravljanje zalihama za mesta sa velikim prometom",
           "cta": "Počni 30 dana besplatno",
-          "features": "Brza naplata • Zalihe • Happy hour • Lojalnost"
+          "features": "Brza naplata • Zalihe • Popusti • Analitika"
         },
         "overview": {
           "title": "Optimizovano za brzinu",
@@ -1056,9 +1056,9 @@
       "clothingBoutiques": {
         "hero": {
           "title": "Konty za prodavnice odeće",
-          "subtitle": "Praćenje veličina, boja i sezonskih kolekcija",
+          "subtitle": "Kompletno upravljanje prodajom i zalihama odeće",
           "cta": "Počni 30 dana besplatno",
-          "features": "Veličine/Boje • Sezone • Lojalnost • Analitika"
+          "features": "Varijante • Zalihe • Popusti • Analitika"
         },
         "overview": {
           "title": "Savršeno za modnu industriju",
@@ -1601,6 +1601,10 @@
     "terms": {
       "description": "Uslovi korišćenja Konty POS sistema i povezanih usluga.",
       "title": "Uslovi korišćenja - Konty"
+    },
+    "dataProcessing": {
+      "description": "Sporazum o obradi podataka između Konty i naših klijenata. Saznajte kako obrađujemo i štitimo vaše lične podatke.",
+      "title": "Obrada podataka - Konty"
     },
     "solutions": {
       "title": "Konty rešenja po delatnostima | POS sistem prilagođen vašem poslovanju",

@@ -8,7 +8,9 @@
         <!-- Left Column - Text Content with Benefits -->
         <div class="text-white mt-6">
           <UIAppear direction="up">
-            <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
+            <h1
+              class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white"
+            >
               {{ t('pages.demo.hero.title') }}
             </h1>
           </UIAppear>
@@ -22,10 +24,19 @@
           <!-- Key Benefits -->
           <UIAppear direction="up">
             <div class="space-y-4 mb-8">
-              <div v-for="(benefit, index) in benefits" :key="index" class="flex items-start gap-3">
+              <div
+                v-for="(benefit, index) in benefits"
+                :key="index"
+                class="flex items-start gap-3"
+              >
                 <div class="flex-shrink-0">
-                  <div class="w-6 h-6 rounded-full bg-white/80 flex items-center justify-center">
-                    <UIcon name="i-lucide-check" class="w-4 h-4 text-primary" />
+                  <div
+                    class="w-6 h-6 rounded-full bg-white/80 flex items-center justify-center"
+                  >
+                    <UIcon
+                      name="i-lucide-check"
+                      class="w-4 h-4 text-primary-800"
+                    />
                   </div>
                 </div>
                 <p>{{ t(benefit) }}</p>
@@ -42,7 +53,9 @@
     </UContainer>
 
     <!-- Wave Shape -->
-    <div class="absolute left-0 right-0 -bottom-px w-full leading-[0] pointer-events-none">
+    <div
+      class="absolute left-0 right-0 -bottom-px w-full leading-[0] pointer-events-none"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 170"

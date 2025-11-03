@@ -67,7 +67,7 @@
       },
       "categories": {
         "restaurants": "Restaurants",
-        "restaurantsDesc": "Complete restaurant management solution - from reservations to payment.",
+        "restaurantsDesc": "Complete restaurant management solution - from tables to payment.",
         "barsCafes": "Bars & Cafes",
         "barsCafesDesc": "Fast checkout and inventory management for high-traffic venues.",
         "fastFood": "Quick Service / Fast Food",
@@ -75,7 +75,7 @@
         "grocerySupermarkets": "Grocery & Supermarkets",
         "grocerySupermarketsDesc": "Manage thousands of products and high-volume transactions.",
         "clothingBoutiques": "Clothing & Boutiques",
-        "clothingBoutiquesDesc": "Track sizes, colors, and seasonal collections.",
+        "clothingBoutiquesDesc": "Complete sales and inventory management for clothing.",
         "convenienceStores": "Convenience Stores",
         "convenienceStoresDesc": "Simple management of diverse product mix.",
         "b2b": "B2B Sales & E-Invoicing",
@@ -491,7 +491,7 @@
         "hero": {
           "title": "Everywhere you need it!",
           "subtitle": "Get Konty for any device or platform.",
-          "description": "Whether you prefer the convenience of web-based access, the familiarity of Windows applications, the mobility of Android devices, or the reliability of MacOS, our software is adaptable to your preferred operating system.",
+          "description": "Available on all platforms - web, Windows, Android, and macOS. Use Konty wherever you need it.",
           "docsLink": "For detailed instructions and documentation",
           "docsLinkText": "click here",
           "docsTitle": "Complete Documentation & Guides",
@@ -540,7 +540,7 @@
           },
           "benefit3": {
             "title": "Reliable & Secure",
-            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible."
+            "description": "Your data is always safe. Konty is cloud software that guarantees you'll never lose your data. Everything is centralized and always accessible."
           },
           "benefit4": {
             "title": "Available Everywhere, Always",
@@ -570,7 +570,7 @@
           },
           "feat3": {
             "title": "Reliable & Secure",
-            "description": "No more fear of losing data from power outages. Konty is a full cloud software that ensures you never lose your data. All data is centralized and always accessible.",
+            "description": "Your data is always safe. Konty is cloud software that guarantees you'll never lose your data. Everything is centralized and always accessible.",
             "icon": "i-heroicons-shield-check"
           },
           "feat4": {
@@ -864,9 +864,9 @@
       "restaurants": {
         "hero": {
           "title": "Konty for Restaurants",
-          "subtitle": "Complete restaurant management solution - from reservations to payment",
+          "subtitle": "Complete restaurant management solution - from tables to payment",
           "cta": "Start 30-Day Free Trial",
-          "features": "Tables • Kitchen • Reservations • Analytics"
+          "features": "Tables • Kitchen • Orders • Analytics"
         },
         "overview": {
           "title": "Everything Your Restaurant Needs",
@@ -914,7 +914,7 @@
           "title": "Konty for Bars & Cafes",
           "subtitle": "Fast checkout and inventory management for high-volume venues",
           "cta": "Start 30-Day Free Trial",
-          "features": "Quick Pay • Inventory • Happy Hour • Loyalty"
+          "features": "Quick Pay • Inventory • Discounts • Analytics"
         },
         "overview": {
           "title": "Optimized for Speed",
@@ -1056,9 +1056,9 @@
       "clothingBoutiques": {
         "hero": {
           "title": "Konty for Clothing & Boutiques",
-          "subtitle": "Track sizes, colors, and seasonal collections",
+          "subtitle": "Complete sales and inventory management for clothing",
           "cta": "Start 30-Day Free Trial",
-          "features": "Sizes/Colors • Seasons • Loyalty • Analytics"
+          "features": "Variants • Inventory • Discounts • Analytics"
         },
         "overview": {
           "title": "Perfect for Fashion Retail",
@@ -1601,6 +1601,10 @@
     "terms": {
       "description": "Terms of service for Konty POS system and related services.",
       "title": "Terms of Service - Konty"
+    },
+    "dataProcessing": {
+      "description": "Data Processing Agreement between Konty and our customers. Learn how we process and protect your personal data.",
+      "title": "Data Processing Agreement - Konty"
     },
     "solutions": {
       "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business",
