@@ -154,7 +154,7 @@
             </NuxtLink>
             <span>•</span>
             <NuxtLink
-              :to="localePath('/privacy')"
+              :to="localePath('/data-processing')"
               class="hover:text-gray-900 dark:hover:text-gray-100 transition-colors whitespace-nowrap"
             >
               {{ t('ui.footer.links.dpa') }}

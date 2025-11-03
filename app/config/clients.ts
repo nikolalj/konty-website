@@ -67,12 +67,30 @@ export const clients = {
       name: 'Marinada',
       logo: '/images/clients/marinada.avif',
       product: 'hospitality'
+    },
+    {
+      name: 'Transport Sped',
+      logo: '/images/clients/transportsped.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Roanda Comerc',
+      logo: '/images/clients/roandaComerc.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Aquastar Danube',
+      logo: '/images/clients/aquastarDanube.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'La Perouse',
+      logo: '/images/clients/laperouse.avif',
+      product: 'hospitality'
     }
   ],
 
-  ba: [
-  ],
+  ba: [],
 
-  us: [
-  ]
+  us: []
 }
