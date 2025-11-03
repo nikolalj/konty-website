@@ -888,9 +888,9 @@
             "icon": "i-heroicons-fire"
           },
           "feat3": {
-            "title": "Upravljanje rezervacijama",
-            "description": "Integrisani sistem rezervacija sa dodelom stolova i praćenjem preferencija gostiju",
-            "icon": "i-heroicons-calendar-days"
+            "title": "Modifikatori i posebni zahtevi",
+            "description": "Fleksibilni dodaci, izmene jela i specijalne napomene za kuhinju po stavkama",
+            "icon": "i-heroicons-adjustments-horizontal"
           },
           "feat4": {
             "title": "Podela računa i plaćanja",
@@ -931,8 +931,8 @@
             "icon": "i-heroicons-bolt"
           },
           "feat2": {
-            "title": "Happy hour automatizacija",
-            "description": "Automatsko prilagođavanje cena po vremenu i danima sa upravljanjem rasporedima",
+            "title": "Vremensko cenovništvo",
+            "description": "Automatske promene cena po vremenskim periodima i danima u nedelji",
             "icon": "i-heroicons-clock"
           },
           "feat3": {
@@ -946,13 +946,13 @@
             "icon": "i-heroicons-credit-card"
           },
           "feat5": {
-            "title": "Lojalnost i nagrade",
-            "description": "Ugrađeni program lojalnosti koji zadržava kupce sa bodovima i nagradama",
+            "title": "Program lojalnosti",
+            "description": "Bodovni sistem sa automatskim nagradama i popustima za stalne goste",
             "icon": "i-heroicons-gift"
           },
           "feat6": {
-            "title": "Brza analitika",
-            "description": "Praćenje prodaje u realnom vremenu, najprodavaniji proizvodi i marže na dohvat ruke",
+            "title": "Izveštaji prodaje",
+            "description": "Pregled prodaje po satima, najprodavaniji artikli i marže za svaki proizvod",
             "icon": "i-heroicons-chart-bar"
           }
         }
@@ -984,13 +984,13 @@
             "icon": "i-heroicons-tv"
           },
           "feat3": {
-            "title": "Kreator kombinacija",
-            "description": "Jednostavno kreiranje kombinacija i predlozi za dodatnu prodaju radi povećanja prosečnog računa",
+            "title": "Meni kombinacije",
+            "description": "Kreiranje setova i meni kombinacija sa fiksnim cenama i opcionalnim dodacima",
             "icon": "i-heroicons-squares-2x2"
           },
           "feat4": {
-            "title": "Drive-thru tajmer",
-            "description": "Praćenje vremena usluge i optimizacija brzine sa upozorenjima i metrikama učinka",
+            "title": "Praćenje brzine servisiranja",
+            "description": "Merenje vremena pripreme i izdavanja porudžbina sa upozorenjima i statistikom",
             "icon": "i-heroicons-clock"
           },
           "feat5": {
@@ -1070,13 +1070,13 @@
           "description": "Specijalizovani alati za prodavnice odeće i butike",
           "cta": "Otkrij funkcionalnosti za modu",
           "feat1": {
-            "title": "Matrica veličina i boja",
-            "description": "Upravljanje neograničenim varijantama sa kombinacijama veličina i boja, zalihe po varijantama",
+            "title": "Varijante proizvoda",
+            "description": "Praćenje zaliha po veličinama i bojama za svaki artikal odvojeno",
             "icon": "i-heroicons-swatch"
           },
           "feat2": {
-            "title": "Sezonske kolekcije",
-            "description": "Organizacija inventara po sezonama, kolekcijama i dizajnerima sa lakim filtriranjem",
+            "title": "Kategorije i kolekcije",
+            "description": "Organizacija proizvoda po kolekcijama, sezonama i kategorijama za lakše upravljanje",
             "icon": "i-heroicons-sparkles"
           },
           "feat3": {
@@ -1090,8 +1090,8 @@
             "icon": "i-heroicons-archive-box"
           },
           "feat5": {
-            "title": "Preporuke stilova",
-            "description": "Predlažite komplementarne proizvode na osnovu istorije kupovina i trenutnih trendova",
+            "title": "Istorija kupovina",
+            "description": "Praćenje kupovine svakog kupca za personalizovane preporuke i bolje iskustvo",
             "icon": "i-heroicons-light-bulb"
           },
           "feat6": {
@@ -1123,8 +1123,8 @@
             "icon": "i-heroicons-bolt"
           },
           "feat2": {
-            "title": "Provera starosti",
-            "description": "Ugrađene poruke za proveru starosti za ograničene proizvode poput cigareta i alkohola",
+            "title": "Upozorenja za starosnu granicu",
+            "description": "Automatska upozorenja pri prodaji proizvoda sa starosnim ograničenjem",
             "icon": "i-heroicons-identification"
           },
           "feat3": {
@@ -1133,14 +1133,14 @@
             "icon": "i-heroicons-clock"
           },
           "feat4": {
-            "title": "Lutrija i prepaid",
-            "description": "Integrisana podrška za lutriju, prepaid kartice i plaćanje računa",
+            "title": "Prepaid i uplatnice",
+            "description": "Prodaja dopune za telefone i obrada plaćanja računa direktno na kasi",
             "icon": "i-heroicons-ticket"
           },
           "feat5": {
-            "title": "Integracija goriva",
-            "description": "Povezivanje sa pumpama za besprekoran rad benzinske pumpe (opciono)",
-            "icon": "i-heroicons-fire"
+            "title": "Više kategorija proizvoda",
+            "description": "Upravljanje raznovrsnim asortimanom od hrane do hemije sa različitim PDV stopama",
+            "icon": "i-heroicons-squares-plus"
           },
           "feat6": {
             "title": "Prevencija gubitaka",
@@ -1176,8 +1176,8 @@
             "icon": "i-heroicons-currency-dollar"
           },
           "feat3": {
-            "title": "Kredit i uslovi plaćanja",
-            "description": "Upravljanje kreditnim limitima, uslovima plaćanja i automatskim podse ćanjima za plaćanje",
+            "title": "Odloženo plaćanje",
+            "description": "Praćenje otvorenih računa, rokova plaćanja i automatska obaveštenja o dospelim obavezama",
             "icon": "i-heroicons-banknotes"
           },
           "feat4": {
