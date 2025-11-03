@@ -46,8 +46,7 @@
         "phone": "Telefon",
         "email": "Email",
         "businessHours": "Radno vrijeme",
-        "weekdays": "Ponedjeljak - Petak",
-        "dataProtectionOfficer": "Službenik za zaštitu podataka"
+        "weekdays": "Ponedjeljak - Petak"
       },
       "loading": {}
     },

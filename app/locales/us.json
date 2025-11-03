@@ -46,8 +46,7 @@
         "phone": "Phone",
         "email": "Email",
         "businessHours": "Business Hours",
-        "weekdays": "Monday - Friday",
-        "dataProtectionOfficer": "Data Protection Officer"
+        "weekdays": "Monday - Friday"
       },
       "loading": {}
     },
