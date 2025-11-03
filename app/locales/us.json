@@ -888,9 +888,9 @@
             "icon": "i-heroicons-fire"
           },
           "feat3": {
-            "title": "Reservation Management",
-            "description": "Integrated reservation system with table assignment and customer preferences tracking",
-            "icon": "i-heroicons-calendar-days"
+            "title": "Modifiers & Special Requests",
+            "description": "Flexible add-ons, dish modifications, and special kitchen notes per item",
+            "icon": "i-heroicons-adjustments-horizontal"
           },
           "feat4": {
             "title": "Split Bills & Payments",
@@ -931,8 +931,8 @@
             "icon": "i-heroicons-bolt"
           },
           "feat2": {
-            "title": "Happy Hour Automation",
-            "description": "Automatic pricing adjustments by time and day with schedule management",
+            "title": "Time-Based Pricing",
+            "description": "Automatic price changes by time periods and days of the week",
             "icon": "i-heroicons-clock"
           },
           "feat3": {
@@ -946,13 +946,13 @@
             "icon": "i-heroicons-credit-card"
           },
           "feat5": {
-            "title": "Loyalty & Rewards",
-            "description": "Built-in loyalty program to keep customers coming back with points and rewards",
+            "title": "Loyalty Program",
+            "description": "Point-based system with automatic rewards and discounts for repeat customers",
             "icon": "i-heroicons-gift"
           },
           "feat6": {
-            "title": "Quick Analytics",
-            "description": "Real-time sales tracking, top sellers, and profit margins at your fingertips",
+            "title": "Sales Reports",
+            "description": "Hourly sales overview, best-selling items, and profit margins per product",
             "icon": "i-heroicons-chart-bar"
           }
         }
@@ -984,13 +984,13 @@
             "icon": "i-heroicons-tv"
           },
           "feat3": {
-            "title": "Combo Meal Builder",
-            "description": "Easy combo creation and upsell prompts to increase average ticket size",
+            "title": "Menu Combos",
+            "description": "Create meal sets and combo deals with fixed pricing and optional add-ons",
             "icon": "i-heroicons-squares-2x2"
           },
           "feat4": {
-            "title": "Drive-Thru Timer",
-            "description": "Track service times and optimize speed with timer alerts and performance metrics",
+            "title": "Service Speed Tracking",
+            "description": "Measure preparation and fulfillment times with alerts and performance statistics",
             "icon": "i-heroicons-clock"
           },
           "feat5": {
@@ -1070,13 +1070,13 @@
           "description": "Specialized tools for clothing stores and boutiques",
           "cta": "Discover Fashion Retail Features",
           "feat1": {
-            "title": "Size & Color Matrix",
-            "description": "Manage unlimited variants with size and color combinations, stock by variant",
+            "title": "Product Variants",
+            "description": "Track inventory by sizes and colors for each item separately",
             "icon": "i-heroicons-swatch"
           },
           "feat2": {
-            "title": "Seasonal Collections",
-            "description": "Organize inventory by seasons, collections, and designers with easy filtering",
+            "title": "Categories & Collections",
+            "description": "Organize products by collections, seasons, and categories for easier management",
             "icon": "i-heroicons-sparkles"
           },
           "feat3": {
@@ -1090,8 +1090,8 @@
             "icon": "i-heroicons-archive-box"
           },
           "feat5": {
-            "title": "Style Recommendations",
-            "description": "Suggest complementary items based on purchase history and current trends",
+            "title": "Purchase History",
+            "description": "Track each customer's purchases for personalized recommendations and better experience",
             "icon": "i-heroicons-light-bulb"
           },
           "feat6": {
@@ -1123,8 +1123,8 @@
             "icon": "i-heroicons-bolt"
           },
           "feat2": {
-            "title": "Age Verification",
-            "description": "Built-in age verification prompts for restricted items like tobacco and alcohol",
+            "title": "Age Restriction Alerts",
+            "description": "Automatic alerts when selling age-restricted products",
             "icon": "i-heroicons-identification"
           },
           "feat3": {
@@ -1133,14 +1133,14 @@
             "icon": "i-heroicons-clock"
           },
           "feat4": {
-            "title": "Lottery & Prepaid",
-            "description": "Integrated support for lottery tickets, prepaid cards, and bill payments",
+            "title": "Prepaid & Bill Payments",
+            "description": "Sell phone top-ups and process bill payments directly at checkout",
             "icon": "i-heroicons-ticket"
           },
           "feat5": {
-            "title": "Fuel Integration",
-            "description": "Connect with fuel pumps for seamless gas station operations (optional)",
-            "icon": "i-heroicons-fire"
+            "title": "Multiple Product Categories",
+            "description": "Manage diverse product mix from food to household items with different tax rates",
+            "icon": "i-heroicons-squares-plus"
           },
           "feat6": {
             "title": "Loss Prevention",
@@ -1176,8 +1176,8 @@
             "icon": "i-heroicons-currency-dollar"
           },
           "feat3": {
-            "title": "Credit & Payment Terms",
-            "description": "Manage credit limits, payment terms, and automatic payment reminders",
+            "title": "Deferred Payment",
+            "description": "Track open invoices, payment deadlines, and automatic notifications for due obligations",
             "icon": "i-heroicons-banknotes"
           },
           "feat4": {
