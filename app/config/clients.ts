@@ -75,7 +75,7 @@ export const clients = {
     },
     {
       name: 'Roanda Comerc',
-      logo: '/images/clients/roandaComerc.avif',
+      logo: '/images/clients/roandaKomerc.avif',
       product: 'retail'
     },
     {
@@ -85,8 +85,43 @@ export const clients = {
     },
     {
       name: 'La Perouse',
-      logo: '/images/clients/laperouse.avif',
+      logo: '/images/clients/laPerouse.avif',
       product: 'hospitality'
+    },
+    {
+      name: 'Međaš',
+      logo: '/images/clients/medjas.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Russ Spa',
+      logo: '/images/clients/russSpa.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Dom Zdravlja Dr Đorđe Lazić Sombor',
+      logo: '/images/clients/domZdravljaSombor.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Black George',
+      logo: '/images/clients/blackGeorge.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Petroland',
+      logo: '/images/clients/petroland.avif',
+      product: 'retail'
+    },
+    {
+      name: '187 Podrum',
+      logo: '/images/clients/187Podrum.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Prirodnjački Centar',
+      logo: '/images/clients/prirodnjackiCentar.avif',
+      product: 'retail'
     }
   ],
 
