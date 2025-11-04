@@ -1,9 +1,10 @@
 <template>
-  <div
-    class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-    :class="{ 'lg:flex lg:flex-row-reverse': reverse }"
-  >
-    <UIAppear :direction="reverse ? 'left' : 'right'" :distance="32">
+  <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <UIAppear
+      :direction="reverse ? 'left' : 'right'"
+      :distance="32"
+      :class="{ 'lg:order-2': reverse }"
+    >
       <div class="relative">
         <NuxtImg
           :src="image"
@@ -20,7 +21,11 @@
       </div>
     </UIAppear>
 
-    <UIAppear :direction="reverse ? 'right' : 'left'" :distance="32">
+    <UIAppear
+      :direction="reverse ? 'right' : 'left'"
+      :distance="32"
+      :class="{ 'lg:order-1': reverse }"
+    >
       <div class="space-y-6">
         <h3
           v-if="title"
