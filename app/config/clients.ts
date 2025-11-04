@@ -3,7 +3,7 @@ export const clients = {
     {
       name: 'Adiya Hotel',
       logo: '/images/clients/adiya.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Baracuda Fish Restaurant',
@@ -13,7 +13,7 @@ export const clients = {
     {
       name: 'Fishermans Pub',
       logo: '/images/clients/fishermanspub.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Hotel Enigma',
@@ -23,7 +23,7 @@ export const clients = {
     {
       name: 'Pulena Bar',
       logo: '/images/clients/pulenabar.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Hotel Pelikan',
@@ -33,7 +33,7 @@ export const clients = {
     {
       name: 'Sapore di Mare',
       logo: '/images/clients/saporedimare.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Tasa Restoran',
@@ -53,11 +53,51 @@ export const clients = {
     {
       name: 'Tri Ribara',
       logo: '/images/clients/triribara.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Konoba Amanet',
       logo: '/images/clients/konobaamanet.avif',
+      product: 'hospitality'
+    },
+    // {
+    //   name: 'Bellavista Trend Montenegro',
+    //   logo: '/images/clients/bellavistaTrend.avif',
+    //   product: 'retail'
+    // },
+    {
+      name: 'Studio Zoran',
+      logo: '/images/clients/studioZoran.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Inpek',
+      logo: '/images/clients/inpek.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Poslastičarnica Sonja',
+      logo: '/images/clients/sonjaPoslasticarnica.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Školijera',
+      logo: '/images/clients/skolijera.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Flex Decor',
+      logo: '/images/clients/flexDecor.avif',
+      product: 'retail'
+    },
+    // {
+    //   name: 'Optika Jovović',
+    //   logo: '/images/clients/optikaJovovic.avif',
+    //   product: 'retail'
+    // },
+    {
+      name: 'Turistička organizacija Žabljak',
+      logo: '/images/clients/turistickaOrganizacijaZabljak.avif',
       product: 'retail'
     }
   ],
