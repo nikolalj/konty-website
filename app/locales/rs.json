@@ -443,7 +443,7 @@
           },
           "feat5": {
             "title": "Dostupno svugde",
-            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
+            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
             "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
@@ -475,7 +475,7 @@
           },
           "feat5": {
             "title": "Dostupno svugde",
-            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
+            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
             "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
@@ -503,7 +503,7 @@
         "hero": {
           "title": "Gde god ti treba!",
           "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-          "description": "Dostupan na svim platformama - veb, Windows, Android i MacOS. Koristi Konty gde god ti je potreban.",
+          "description": "Dostupan na svim platformama - web, Windows, Android i MacOS. Koristi Konty gde god ti je potreban.",
           "docsLink": "Za detaljne instrukcije i dokumentaciju",
           "docsLinkText": "kliknite ovde",
           "docsTitle": "Kompletna dokumentacija i vodiči",
@@ -588,7 +588,7 @@
           },
           "feat5": {
             "title": "Dostupno svugde",
-            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
           },
           "feat6": {
             "title": "Vrhunska korisnička podrška",
@@ -745,7 +745,7 @@
           },
           "feat5": {
             "title": "Dostupno svugde",
-            "description": "Konty radi na Veb-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
           },
           "feat6": {
             "title": "Vrhunska korisnička podrška",
