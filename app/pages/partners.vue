@@ -10,7 +10,7 @@
     <LazySharedStatistics class="dark !pt-0" hydrate-on-visible />
 
     <!-- Partner testimonials -->
-    <LazySharedPartnerTestimonials hydrate-on-visible />
+    <LazyAboutPartnersTestimonials hydrate-on-visible />
 
     <!-- Segmented solutions - Retail/Hospitality -->
     <LazySharedProductFeatures hydrate-on-visible />

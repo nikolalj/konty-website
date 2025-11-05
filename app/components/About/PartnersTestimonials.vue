@@ -11,7 +11,21 @@
         :key="index"
         class="flex flex-col bg-[var(--ui-bg-elevated)] rounded-lg p-6 h-full"
       >
-        <!-- Title at the top -->
+        <!-- Partner logo -->
+        <div class="mb-4 h-12 flex items-center">
+          <NuxtImg
+            :src="testimonial.logo"
+            :alt="testimonial.user.company"
+            format="avif"
+            loading="lazy"
+            height="48"
+            quality="80"
+            fit="contain"
+            class="h-12 w-auto object-contain"
+          />
+        </div>
+
+        <!-- Title -->
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           {{ testimonial.title }}
         </h3>
@@ -47,14 +61,17 @@ const { t } = useI18n()
 
 const testimonials = computed(() => {
   const testimonialKeys = ['t1', 't2']
-  return testimonialKeys.map((key) => {
+  const logos = ['/images/partners/sekas.avif', '/images/partners/digitronIst.avif']
+
+  return testimonialKeys.map((key, index) => {
     return {
       user: {
         name: t(`pages.partners.testimonials.items.${key}.name`),
         company: t(`pages.partners.testimonials.items.${key}.company`),
       },
       title: t(`pages.partners.testimonials.items.${key}.title`),
-      quote: t(`pages.partners.testimonials.items.${key}.quote`)
+      quote: t(`pages.partners.testimonials.items.${key}.quote`),
+      logo: logos[index]
     }
   })
 })
