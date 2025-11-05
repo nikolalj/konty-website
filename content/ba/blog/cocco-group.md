@@ -21,7 +21,7 @@ Kada je krenuo proces fiskalizacije, svi smo znali koliko to može biti izazovno
 
 ## Knjigovođa koji uvijek ima alate pri ruci
 
-Za knjigovođu, vrijeme je najvrjednija valuta. Upravo zato Naida cijeni to što u softveru postoje alati koji su joj potrebni na dnevnom nivou:
+Za knjigovođu, vrijeme je najvrijednija valuta. Upravo zato Naida cijeni to što u softveru postoje alati koji su joj potrebni na dnevnom nivou:
 
 - Izuzetno lak export/import izvještaja – sve što treba za klijente dostupno je na par klikova.
 - Uvoz i izvoz artikala bez komplikacija.
@@ -58,4 +58,4 @@ Za nas, najveća nagrada je povjerenje. A povjerenje se gradi upravo kroz ovakve
 
 ---
 
-*Trebate pouzdan POS sistem koji olakšava vođenje knjiga? Saznajte više o [Konty POS rješenju](/products/hospitality).*
+*Trebate pouzdan POS sistem koji olakšava vođenje knjiga? Saznajte više o [Konty POS rješenju](/ba/products/hospitality).*

@@ -70,4 +70,6 @@ Kroz naš razgovor s Markom / La Paz jasno je da softver sam po sebi nije dovolj
 
 Za one koji razmišljaju o prelasku na Konty POS ili žele unaprijediti svoj postojeći sistem, priča La Paz-a može poslužiti kao konkretan primjer: brz prelazak, stabilnost, podrška, sigurnost i kontrola u realnom vremenu.
 
-*Pridružite se 9.000+ biznisa koji vjeruju Konty POS-u za njihovo svakodnevno poslovanje.*
+---
+
+*Upravljajte svojim lokalom sa potpunom sigurnošću - pročitajte više o [Konty POS sistemu](/products/hospitality).*

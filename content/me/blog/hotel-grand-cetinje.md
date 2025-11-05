@@ -61,4 +61,6 @@ Na kraju razgovora, menadžer nam je rekao:
 
 Grand Hotel Cetinje je savršen primjer da tradicija i tehnologija mogu ići ruku pod ruku - kada se izaberu pravi partneri.
 
-*Pridružite se 9.000+ biznisa koji vjeruju Konty POS-u za njihovo svakodnevno poslovanje.*
+---
+
+*Spojite recepciju i restoran bez papira i grešaka - otkrijte [Konty za hotele](/products/hospitality).*
