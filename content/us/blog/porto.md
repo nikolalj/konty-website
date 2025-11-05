@@ -2,10 +2,10 @@
 title: How Porto Restaurant in Budva Overcame Peak Season Chaos with Konty
 description: A popular beachfront restaurant in Montenegro transformed their summer operations by eliminating POS crashes and streamlining their terraces and beach service.
 date: 2025-01-17
-author: Marko Petrović
+author: Konty Team
 image: /images/features/hospitality.avif
 category: clientStories
-featured: true
+featured: false
 readTime: 6
 ---
 

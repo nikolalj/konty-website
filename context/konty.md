@@ -16,7 +16,7 @@ Konty is the **next-generation Point of Sale (POS) solution** for **retail and h
 ## 2. Brand Strategy
 
 ### Brand Positioning
-For owners and managers of small and medium-sized businesses in retail and hospitality, **Konty is the POS solution that delivers unmatched reliability, intuitive design, and advanced cloud technology**. Unlike other providers who try to do everything, Konty focuses on being **the best at POS** — perfected through decades of expertise and continuous improvement.
+For owners and managers of small and medium-sized businesses in retail and hospitality, **Konty is the POS solution that delivers unmatched reliability, intuitive design, and advanced cloud technology**. Unlike other providers who try to do everything, Konty focuses on being **the best at POS** - perfected through decades of expertise and continuous improvement.
 
 - **Current perception**: A solid regional provider, but not yet widely recognized for reliability, innovation, and simplicity.
 - **Desired perception**: The **most reliable, go-to POS solution** for SMEs in the Balkan region and beyond, combining 26 years of expertise with intuitive, innovative technology that simplifies operations and integrates seamlessly with other systems.
@@ -24,7 +24,7 @@ For owners and managers of small and medium-sized businesses in retail and hospi
 ### Value Proposition
 > **“Reliability in the background for success in the foreground.”**
 
-Konty promises that the POS system will always “just work” — enabling businesses to focus on growth, customers, and experience, while Konty handles stability, security, and efficiency.
+Konty promises that the POS system will always “just work” - enabling businesses to focus on growth, customers, and experience, while Konty handles stability, security, and efficiency.
 
 ### Slogan
 **“Count on us.”**
@@ -35,10 +35,10 @@ Konty promises that the POS system will always “just work” — enabling busi
 - A dynamic call-to-action that reinforces trust and dependability.
 
 ### Brand Story
-Running a retail shop or a hospitality business is tough. Owners and managers face countless daily challenges — their POS shouldn’t be one of them.
+Running a retail shop or a hospitality business is tough. Owners and managers face countless daily challenges - their POS shouldn’t be one of them.
 For decades, Konty has been developing POS solutions that simply work. The technology is **intuitive, reliable, and always available**, staying invisible in the background while keeping the focus on what matters most: **business growth and customer satisfaction**.
 
-Konty believes technology should simplify life, not complicate it. That’s why the product is designed to be **reliable, secure, and easy to use** — a true partner to every business.
+Konty believes technology should simplify life, not complicate it. That’s why the product is designed to be **reliable, secure, and easy to use** - a true partner to every business.
 With full confidence, Konty tells its users: **“Count on us.”**
 
 ---

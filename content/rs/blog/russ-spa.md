@@ -1,77 +1,64 @@
 ---
-title: Kako je Russ Spa iz Mladenovca povezao recepciju i restoran uz Konty i Otasync
-description: U Russ Spa hotelu iz Mladenovca, recepcija i restoran konačno rade kao jedno. Saznajte kako je Konty, u kombinaciji sa Otasync sistemom, omogućio potpunu sinhronizaciju bez papira, grešaka i čekanja.
+title: Russ Spa Mladenovac - recepcija i restoran spojeni uz Konty i Otasync
+description: Hotel sa spa centrom koji dnevno ugošćava veliki broj ljudi. Kako je Russ Spa spojio recepciju i ugostiteljski deo uz Konty i Otasync, eliminiše greške i podigao nivo usluge.
 date: 2025-11-04
-author: Konty Team
+author: Konty Tim
 image: /images/blog/russSpa.avif
 category: clientStories
 featured: false
 readTime: 5
 ---
 
-## Hotel u srcu Šumadije koji spaja relaks i organizaciju
+## Iskustvo iz prakse: Kako smo spojili recepciju i ugostiteljski deo
 
-U mirnom delu Mladenovca, **Russ Spa** nudi svojim gostima jedinstven spoj odmora i komfora — sa osam moderno opremljenih soba, spa centrom i restoranom koji je postao prepoznatljiv u ovom delu Srbije.
-Iza savršeno organizovane usluge stoji precizno uigran sistem — zahvaljujući spoju **Konty POS-a** i **Otasync recepcijskog softvera**.
+U mirnom delu Mladenovca, **Russ Spa** nudi svojim gostima jedinstven spoj odmora i komfora - sa osam moderno opremljenih apartmana, spa centrom i restoranom.
+Vlasnica hotela je Dragana, a iza savršeno organizovane usluge stoji precizno uigran sistem - zahvaljujući spoju **Konty POS-a** i **Otasync recepcijskog softvera**.
 
-Vlasnica hotela, Dragana, objašnjava da su pre Kontyja imali čest problem: recepcija i restoran radili su u različitim programima, što je otežavalo praćenje troškova i unos računa po sobama.
-„Gost poruči večeru ili piće, a osoblje mora ručno da prebaci podatke kako bi se sve knjižilo na sobu. To je unosilo greške i trošilo vreme“, kaže ona.
+„Kao menadžer hotela, uvek sam imala isti problem - recepcija je radila u jednom programu, restoran i bar u drugom, a povezivanje ta dva sistema bilo je komplikovano i često podložno greškama", priča Dragana.
 
-## Rešenje: Konty + Otasync u jednom sistemu
+„Gost naruči večeru, piće ili doručak, a onda osoblje mora ručno da prebacuje podatke i sabira potrošnju kako bi se sve uredno knjižilo na sobu.
+To je oduzimalo vreme, unosilo konfuziju i često stvaralo neprijatne situacije kod odjave, kada se računi nisu potpuno slagali."
 
-Sve se promenilo kada je Russ Spa odlučio da poveže **Konty sistem**, koji su već koristili u restoranu, sa **Otasync-om** koji vodi recepciju.
-Integracija je donela ono što im je najviše nedostajalo — **potpuno automatsku sinhronizaciju** između ugostiteljskog i smeštajnog dela.
+## Sve se promenilo kada smo uveli Konty i Otasync
 
-„Kada gost naruči obrok ili piće, konobar jednostavno izabere opciju *‘Prebaci račun na sobu’*. Račun se automatski pojavi u profilu gosta u Otasync-u. Nema papira, nema prepisivanja, nema grešaka.“
+„Sve se promenilo onog trenutka kada smo uveli Konty u kombinaciji sa Otasync programom za recepciju", kaže Dragana.
 
-## Račun direktno na sobu – bez papira i grešaka
+**Jedinstven sistem za ceo hotel**
 
-Sada svaki račun iz restorana ili bara automatski ulazi u sistem recepcije.
-Recepcioneri u svakom trenutku vide potrošnju po sobama, a gosti prilikom odjave dobijaju **pregledan i tačan zbirni račun** — od smeštaja, doručka, ručka, do pića iz bara.
+„Konty smo već koristili u restoranu, jer se pokazao kao izuzetno stabilan i jednostavan program za rad - posebno sa stolovima, artiklima, magacinom i analizom prometa.
+Kada smo saznali da se može integrisati sa Otasyncom, odlučili smo da to isprobamo."
 
-Sve je digitalno povezano, što je donelo sigurnost osoblju, a gostima profesionalan i moderan utisak.
-Bez papira, bez ručnog unosa, bez stresnih provera na kraju dana.
+Rezultat je bio - **potpuna sinhronizacija između recepcije i ugostiteljskog dela hotela**.
 
-## Efikasniji tim i bolja organizacija
+## Račun direktno na sobu - bez papira, bez grešaka
 
-Ova integracija olakšala je rad svim sektorima.
-Recepcija sada ima potpunu kontrolu nad potrošnjom, a konobari bez brige izdaju i prenose račune direktno u sistem.
+„Sada, kada gost naruči hranu ili piće u restoranu, konobar jednostavno u Konty programu prilikom kucanja računa izabere opciju 'Prebaci račun na sobu'.
+Račun se automatski prenosi u Otasync, gde se prikazuje u profilu gosta i sabira sa ostalim troškovima.
+Nema više prepisivanja, ručnog unosa ni čekanja - sve je digitalno povezano i potpuno precizno", objašnjava Dragana.
 
-Pri odjavi, gosti dobijaju kompletan pregled troškova bez potrebe za dodatnim proverama.
-„Sada je sve jasno i precizno. I recepcija i restoran rade kao jedno“, kaže Dragana.
+## Efikasnost i bolja organizacija tima
 
-## Potpuna kontrola i precizni izveštaji
+„Ova integracija je olakšala posao i konobarima i recepcionerima.
+Recepcija u svakom trenutku vidi sve troškove po sobama, dok konobari mogu bez brige da izdaju račune i prenesu ih u sistem.
+Pri odjavi, gost dobija jasan i pregledan račun sa svim stavkama - od smeštaja do svake narudžbine iz restorana ili bara", objašnjava Dragana.
 
-Pored jednostavnije komunikacije, Konty i Otasync su doneli i **detaljnije izveštaje o poslovanju**.
-Menadžment sada u realnom vremenu vidi:
+## Potpuna kontrola i tačni podaci
 
-- promet po odeljenjima (sobe, restoran, spa),
-- potrošnju repromaterijala,
-- analize troškova i mogućnosti za optimizaciju.
-
-Sve informacije dostupne su odmah, iz jednog sistema — bez duplih unosa i bez čekanja.
+„Osim lakše komunikacije između sektora, dobili smo i mnogo preciznije izveštaje.
+Konty i Otasync zajedno omogućavaju da se prati kompletan promet hotela - od soba, restorana i konferencijskih sala, do magacina i troškova repromaterijala.
+Sada tačno znamo koliki je promet po odeljenju, kolika je potrošnja i gde možemo dodatno optimizovati poslovanje", kaže Dragana.
 
 ## Pouzdan sistem koji štedi vreme
 
-Najvažnije od svega, sistem funkcioniše **stabilno i bez prekida**.
-Ažuriranja se puštaju automatski, podrška je uvek dostupna, a sve radi u realnom vremenu.
-
-„Za nas je ovo ogroman korak napred — uštedeli smo vreme, smanjili broj grešaka i poboljšali iskustvo naših gostiju“, zaključuje Dragana.
-Danas, Russ Spa u potpunosti kontroliše svoje poslovanje kroz jedinstven, povezan i moderan sistem rada.
-
-## Rezultati
-
-✅ &nbsp;&nbsp;Povezana recepcija i restoran u jednom sistemu
-✅ &nbsp;&nbsp;Računi automatski preneseni na sobe
-✅ &nbsp;&nbsp;Manje grešaka i brža obrada podataka
-✅ &nbsp;&nbsp;Tačni izveštaji o prometu i troškovima
-✅ &nbsp;&nbsp;Ušteda vremena i rasterećeno osoblje
+„Najvažnije od svega - sistem radi pouzdano i bez zastoja.
+Ažuriranja se puštaju automatski, podrška je uvek dostupna, a sve funkcioniše u realnom vremenu.
+Za nas je ovo ogroman korak napred - uštedeli smo vreme, smanjili broj grešaka i podigli nivo usluge gostima", zaključuje Dragana.
 
 ## Zaključak
 
-Kombinacija **Konty + Otasync** donela je Russ Spa hotelu potpunu sinhronizaciju bez papira, ručnih unosa i grešaka.
-Za njih, to nije samo tehnološko unapređenje — to je način da svaki gost oseti organizaciju, profesionalnost i pažnju koja se vidi u svakom detalju.
+„Danas mogu reći da kombinacija Konty + Otasync predstavlja idealno rešenje za hotele koji žele jedinstven, povezan i moderan sistem rada.
+Sve funkcioniše jednostavno, brzo i tačno - baš onako kako treba u savremenom hotelijerstvu", zaključuje Dragana.
 
 ---
 
-*Ako i vi želite da povežete recepciju i restoran u jedinstven sistem, saznajte više o [Konty hotel rešenju](/pricing).*
+*Ako i vi želite da povežete recepciju i restoran u jedinstven sistem, saznajte više o [Konty za hotele](/products/hospitality).*

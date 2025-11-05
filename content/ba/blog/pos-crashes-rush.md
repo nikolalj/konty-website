@@ -2,11 +2,11 @@
 title: "Kada POS padne u gužvi: 5 načina da održite biznis"
 description: "Saznajte kako da održite prodaju kada tehnologija zakaže tokom najveće gužve"
 date: "2024-01-15"
-author: "Marko Nikolić"
+author: Konty Tim
 readTime: "5 min"
 image: "/images/features/hospitality.avif"
 category: "Operacije"
-featured: true
+featured: false
 ---
 
 Petak veče. Restoran je pun. Red se proteže do vrata. I onda – vaš POS sistem padne.

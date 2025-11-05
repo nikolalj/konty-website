@@ -537,7 +537,7 @@
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
           "title": "POS na koji možete da računate u najvećoj gužvi",
-          "subtitle": "Sveobuhvatan POS sistem za ugostiteljstvo — od rada po stolovima i praćenja porudžbina do potpune koordinacije kuhinje. Stvoren za lokale svih veličina."
+          "subtitle": "Sveobuhvatan POS sistem za ugostiteljstvo - od rada po stolovima i praćenja porudžbina do potpune koordinacije kuhinje. Stvoren za lokale svih veličina."
         },
         "benefits": {
           "title": "Zašto izabrati Konty za vaš lokal",
@@ -692,7 +692,7 @@
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
           "cta": "Počni 30 dana besplatno",
           "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
-          "subtitle": "POS za maloprodaju i uslužne delatnosti koji radi brzo, sigurno i bez prekida — od brze kase i evidencije zaliha do jasnih izveštaja za donošenje odluka.",
+          "subtitle": "POS za maloprodaju i uslužne delatnosti koji radi brzo, sigurno i bez prekida - od brze kase i evidencije zaliha do jasnih izveštaja za donošenje odluka.",
           "title": "POS na koji možete da računate u najvećoj gužvi",
           "viewDemo": "2-minutni demo"
         },
@@ -1408,15 +1408,8 @@
       }
     },
     "clientStories": {
-      "hero": {
-        "title": "Iskustva korisnika",
-        "subtitle": "Pogledajte kako su biznisi poput vašeg transformisali svoje poslovanje sa Konty."
-      },
-      "badge": "Stvarni rezultati",
-      "empty": {
-        "title": "Još nema priča",
-        "description": "Uskoro proverite nove priče o uspehu klijenata."
-      }
+      "title": "Iskustva klijenata",
+      "subtitle": "Pogledajte kako su biznisi poput vašeg transformisali svoje poslovanje sa Konty."
     },
     "partners": {
       "hero": {

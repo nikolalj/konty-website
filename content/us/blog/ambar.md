@@ -2,7 +2,7 @@
 title: Ambar Belgrade Scaled from One to Four Locations Using Konty's Multi-Site Management
 description: How a craft brewery and restaurant chain in Serbia seamlessly expanded across Belgrade while maintaining consistency and control through cloud-based POS technology.
 date: 2025-01-16
-author: Ana Jovanović
+author: Konty Tim
 image: /images/features/hospitality.avif
 category: clientStories
 featured: false

@@ -2,7 +2,7 @@
 title: Ambar Beograd se proširio sa jedne na četiri lokacije koristeći Konty upravljanje sa više lokacija
 description: Kako je lanac kraft pivare i restorana u Srbiji bez problema proširio poslovanje širom Beograda održavajući konzistentnost i kontrolu kroz POS tehnologiju zasnovanu na oblaku.
 date: 2025-01-16
-author: Ana Jovanović
+author: Konty Tim
 image: /images/features/hospitality.avif
 category: clientStories
 featured: false

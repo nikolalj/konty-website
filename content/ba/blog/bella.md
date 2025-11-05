@@ -2,7 +2,7 @@
 title: Bella butik eliminirao haos inventara i udvostručio online prodaju sa Konty sistemom
 description: Trendi beogradski modni maloprodajni objekat riješio je noćnu moru inventara i bez problema povezao svoje fizičke i online prodavnice koristeći Konty jedinstvenu maloprodajnu platformu.
 date: 2025-01-15
-author: Milica Stojanović
+author: Konty Tim
 image: /images/features/retail.avif
 category: clientStories
 featured: false

@@ -2,7 +2,7 @@
 title: Bella Boutique Eliminated Inventory Chaos and Doubled Online Sales with Konty
 description: A trendy Belgrade fashion retailer solved their inventory nightmare and seamlessly connected their physical and online stores using Konty's unified retail platform.
 date: 2025-01-15
-author: Milica Stojanović
+author: Konty Team
 image: /images/features/retail.avif
 category: clientStories
 featured: false

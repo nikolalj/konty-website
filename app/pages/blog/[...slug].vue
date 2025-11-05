@@ -195,17 +195,11 @@ usePageSeo({
   description: currentPost.description
 })
 
-// Schema.org
-const schemas = useSchemas()
 // For now, only use Article schema. Review schema commented out until we have verified reviews
+const schemas = useSchemas()
 useSchemaOrg([schemas.article(currentPost)])
 // if (currentPost.category === 'clientStories') {
-//   useSchemaOrg([
-//     schemas.article(currentPost),
-//     schemas.clientStoryReview(currentPost)  // Disabled - fake ratings
-//   ])
-// } else {
-//   useSchemaOrg([schemas.article(currentPost)])
+//   schemas.clientStoryReview(currentPost)  // Disabled - fake ratings
 // }
 
 // OG Image

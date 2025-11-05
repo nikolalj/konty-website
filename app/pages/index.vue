@@ -13,7 +13,7 @@
     <LazySharedContactForm variant="alt" hydrate-on-visible />
 
     <!-- Far below fold - maximum delay -->
-    <LazyHomeBlogPosts class="mb-8" hydrate-on-idle />
+    <LazySharedBlogPosts class="mb-8" category="clientStories" hydrate-on-idle />
   </div>
 </template>
 

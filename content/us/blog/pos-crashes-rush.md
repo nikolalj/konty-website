@@ -5,7 +5,7 @@ date: 2025-01-10
 author: Konty Team
 image: /images/features/hospitality.avif
 category: technical
-featured: true
+featured: false
 readTime: 5
 ---
 

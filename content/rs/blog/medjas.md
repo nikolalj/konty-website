@@ -1,81 +1,83 @@
 ---
-title: Kako je Marko Marković povezao svih devet maloprodajnih radnji uz Konty
-description: Devet radnji, jedan sistem. Kako je vlasnik maloprodajnog lanca uz Konty prešao sa papira i Excela na potpunu kontrolu i mir u glavi.
+title: Fruti Međaš – potpuna kontrola nad lancem prodavnica uz Konty
+description: Veleprodaja pića sa 61 zaposlenim i lanac maloprodajnih objekata. Priča Fruti Međaša o potpunoj kontroli i miru u glavi uz Konty sistem.
 date: 2025-11-04
-author: Konty Team
-image: /images/blog/retail-chain.avif
+author: Konty Tim
+image: /images/blog/medjas.avif
 category: clientStories
 featured: false
 readTime: 5
 ---
 
-## Devet radnji — jedna priča o potpunoj kontroli
+## Veleprodaja i maloprodaja - jedna priča o potpunoj kontroli
 
-Marko Marković vodi lanac od **devet maloprodajnih radnji** raspoređenih po gradu i okolini.
-Pre Konty sistema, svaka je radila „za sebe“ — različiti programi, Excel tabele, papiri i ručne evidencije.
+**Fruti Međaš** iz Čačka je kompanija osnovana 2014. godine koja se bavi veleprodajom pića i upravlja lancem maloprodajnih objekata.
+Sa 61 zaposlenim i ukupnim prihodom od preko 622 miliona dinara godišnje, kompanija pod vođstvom Dušanke Trninić postala je prepoznatljiv brend u regionu.
 
-„Da saberemo promet, stanje magacina ili pošaljemo podatke knjigovodstvu — trebalo nam je satima“, priseća se Marko.
-Greške su bile česte, a vreme koje je trošio na administraciju oduzimalo mu je ono najvažnije — fokus na posao.
+Pre nego što su prešli na Konty, vođenje svih objekata je bilo poprilično naporno.
+Svaka radnja je imala svoj sistem - neki Excel, neki stari programi, papiri, ručne evidencije...
+
+„Kad treba da saberemo promet, stanje magacina, ili da pošaljemo podatke knjigovodstvu - to bi trajalo satima.
+Čekali bismo da svi pošalju izveštaje, pa da se sve ručno unosi i proverava", prisetili su se iz kompanije.
+Greške su bile česte, a vreme koje je tim trošio na administraciju oduzimalo je ono najvažnije - fokus na razvoj poslovanja.
 
 ## Kada je stigao Konty – sve se promenilo
 
-Prelazak na **Konty** doneo je potpuno novi ritam.
-Marko je odlučio da sistem prvo uvede u dve radnje, da proveri kako funkcioniše.
-„Već posle par dana bilo je jasno — to je to“, kaže on.
+Konty su uveli prvo u dve radnje, da vide kako radi.
+„Već posle par dana, bilo je jasno da je to to", kažu iz kompanije.
 
-Konty je **brz, jednostavan i pregledan**, ali najvažnije — **online**.
-Podaci se ažuriraju u realnom vremenu, pa vlasnik sada svako jutro, iz jedne tabele, vidi:
+Program je **brz, jednostavan i pregledan**, a ono što im se najviše dopalo jeste što je **online sistem** - sve se vidi u realnom vremenu.
+Sada, kad ujutru otvore računar, vide tačno:
 
-- koliki je promet svake radnje,
+- koliko je koja radnja prodala,
 - koliko robe ima na stanju,
-- koji artikli se najviše prodaju.
+- koji artikli najbolje idu.
 
-Bez poziva, bez čekanja izveštaja, bez ručnih sabiranja. Sve — odmah i precizno.
+Više ne moraju da zovu menadžere po radnjama i da čekaju da im pošalju izveštaje - sve je tu, odmah.
 
 ## Brzi rad i magacin koji konačno ima smisla
 
-Na kasi sve funkcioniše brzo i pouzdano: **računi, avansi, prijemnice, otpremnice, težinski bar kodovi**.
-Zaposleni koriste **brze tastere** za najčešće artikle, što ubrzava rad u periodima gužve.
+Na kasi sve ide brzo - **kucanje računa, izdavanje avansa, prijemnice, otpremnice, težinski bar kodovi**, sve radi bez greške.
+Konty ima i **brze tastere**, što prodavcima olakšava posao - naročito u gužvi.
 
-Magacin je sada uvek ažuran — Konty automatski prikazuje prijemnice, potrošnju i analize prometa.
-Ako postoji odstupanje u stanju, sistem sam upozori.
-Nema više iznenađenja tek na inventuri — sve se vidi na vreme.
+Magacin sada konačno ima smisla - vide prijemnice, potrošnju, analizu prometa i stanje u svakom trenutku.
+Ranije bi otkrili manjak tek kad naprave inventuru, a sada ih program sam upozori ako nešto odstupa.
 
-## Finansije i e-fakture bez papira
+## Finansije i e-fakture - bez papirologije
 
-Ranije su fakture slali ručno.
-Danas, kroz Konty, **e-fakture se automatski šalju i knjiže**, a sve se povezuje sa karticama kupaca i dobavljača.
-Bankovni izvodi se učitavaju direktno u sistem — što knjigovodstvu štedi sate rada.
+Ranije su fakture slali ručno, a sada sve ide automatski kroz **e-fakture**.
+Konty vodi i **kartice komitenata**, pa tačno znaju ko je uplatio, ko duguje, i kako stoje njihove obaveze prema dobavljačima.
+Bankovni izvodi se učitavaju direktno u sistem - što tim i knjigovodstvu štedi neverovatno mnogo vremena.
 
-„Konty ima integraciju sa računovodstvenim programima — nema duplog unosa, nema grešaka. To je ogromna razlika“, ističe Marko.
+„Ono što nam posebno znači je što Konty ima integraciju sa računovodstvenim programima, tako da se podaci automatski prenose i nema dvostrukog unosa", ističu iz Fruti Međaša.
 
-## Sistem koji jednostavno radi — i podrška koja uvek odgovori
+## Sistem koji jednostavno radi - i podrška koja uvek odgovori
 
-Za Marka, najveća vrednost Kontyja je pouzdanost.
-„Nema padanja sistema, nema čekanja da se ‘osveži’. Sve funkcioniše glatko.“
+„Iskreno, najviše cenimo to što Konty jednostavno radi.
+Nema padanja sistema, nema čekanja da se 'osveži' - sve funkcioniše glatko", kažu iz kompanije.
 
-Ažuriranja se uvode u pozadini, automatski — tim samo primeti da se pojavila nova, korisna opcija.
-Kada zatreba pomoć, **tehnička podrška reaguje odmah**, ljubazno i strpljivo, čak i u sezoni kada je poziva mnogo.
+Ažuriranja se puštaju neprimetno, u pozadini - ni ne primete da se program osvežio, samo vide da ima neku novu korisnu opciju.
 
-## Rezultati: više vremena, manje grešaka, potpuna kontrola
+Iza Kontyja stoji ozbiljan tim programera i podrške.
+„Kada god nam je trebala pomoć - bilo da je nešto tehnički, ili samo pitanje 'gde se šta nalazi' - tehnička podrška je bila tu.
+Uvek dostupni, ljubazni i strpljivi, čak i kada zovemo u sezoni", ističu iz Fruti Međaša.
 
-Povezivanjem svih devet radnji, Marko je dobio ono što mu je najviše nedostajalo — **mir u glavi**.
-Sada zna tačno koji objekat radi najbolje, gde ima manjak robe, i gde treba reagovati.
+## Rezultati - bolja organizacija, manje grešaka i više vremena za posao
 
-✅ &nbsp;&nbsp;Ušteda vremena – administracija svedena na minimum
-✅ &nbsp;&nbsp;Precizan magacin i automatske analize prometa
-✅ &nbsp;&nbsp;E-fakture i bankovni izvodi bez ručnog rada
-✅ &nbsp;&nbsp;Pouzdan sistem i stalna podrška
+Od kad su sve radnje povezali kroz Konty, imaju potpunu kontrolu nad poslovanjem.
+Znaju tačno koji objekat radi najbolje, gde ima manjak robe, i gde treba reagovati.
 
-„Da mi je neko ranije rekao da može sve ovako jednostavno da funkcioniše, ne bih verovao.
-Konty mi je omogućio da svih devet radnji povežem u jedan sistem — i da napokon imam pravi pregled i mir u glavi.“
+Grešaka gotovo da više nema, a tim radi sigurnije i brže.
+Ušteda vremena je ogromna - ono što su ranije radili do kasno u noć, sad završe za pet minuta.
+Mogu da se bave razvojem biznisa, a ne administracijom.
+
+„Da nam je neko ranije rekao da može sve ovako jednostavno da funkcioniše, ne bismo verovali.
+Konty nam je omogućio da sve prodajne objekte povežemo u jedan sistem - i da napokon imamo pravi pregled i mir u glavi."
 
 ## Zaključak
 
-Konty nije samo kasa.
-To je **kompletan sistem za upravljanje lancem maloprodajnih objekata** — brz, siguran i uvek ažuran.
-Uz Konty, poslovanje postaje jednostavno, a vlasnici imaju više vremena da se bave razvojem, a ne administracijom.
+Konty maloprodaja nije samo kasa - to je **kompletan sistem za upravljanje maloprodajnim lancem**, sa pouzdanim radom, automatskim ažuriranjima i podrškom koja je uvek tu kada zatreba.
 
 ---
 
-*Ako i vi želite da povežete više radnji i imate potpunu kontrolu nad poslovanjem — saznajte više o [Konty maloprodaji](/pricing).*
+*Ako i vi želite da povežete više radnji i imate potpunu kontrolu nad poslovanjem - saznajte više o [Konty za trgovinu](/products/retail).*

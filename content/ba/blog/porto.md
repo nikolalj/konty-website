@@ -2,10 +2,10 @@
 title: Kako je restoran Porto u Budvi savladao haos špice sezone sa Konty sistemom
 description: Popularni restoran na plaži u Crnoj Gori transformirao je ljetno poslovanje eliminirajući padove sistema i unapređujući uslugu na terasama i plaži.
 date: 2025-01-17
-author: Marko Petrović
+author: Konty Tim
 image: /images/features/hospitality.avif
 category: clientStories
-featured: true
+featured: false
 readTime: 6
 ---
 

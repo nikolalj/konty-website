@@ -8,7 +8,12 @@
     <LazySharedStatistics variant="alt" class="dark !pt-0" hydrate-on-idle />
 
     <LazySharedTestimonials hydrate-on-idle />
-    <LazyAboutClientStoriesList hydrate-on-visible />
+    <LazySharedBlogPosts
+      category="clientStories"
+      :title="t('pages.clientStories.title')"
+      :description="t('pages.clientStories.subtitle')"
+      hydrate-on-idle
+    />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedContactForm variant="alt" hydrate-on-visible />

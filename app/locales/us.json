@@ -225,7 +225,7 @@
     "home": {
       "hero": {
         "title": "Focus on your business. Konty takes care of the rest.",
-        "subtitle": "A stable, reliable Point of Sale system you can count on — day after day.",
+        "subtitle": "A stable, reliable Point of Sale system you can count on - day after day.",
         "tagline": "Trusted by 9,000+ businesses and growing"
       },
       "statistics": {
@@ -686,7 +686,7 @@
           "tagline": "Trusted by 9,000+ businesses and growing",
           "cta": "Start 30-Day Free Trial",
           "features": "Inventory tracking • Fast checkout • Sales reporting",
-          "subtitle": "Retail and service POS that runs fast, secure, and without interruption — from quick checkout and inventory tracking to clear reports for decision making.",
+          "subtitle": "Retail and service POS that runs fast, secure, and without interruption - from quick checkout and inventory tracking to clear reports for decision making.",
           "title": "POS system you can count on during peak hours",
           "viewDemo": "Watch 2-Min Demo"
         },
@@ -1408,15 +1408,8 @@
       }
     },
     "clientStories": {
-      "hero": {
-        "title": "Success Stories",
-        "subtitle": "See how businesses like yours transformed their operations with Konty."
-      },
-      "badge": "Real Results",
-      "empty": {
-        "title": "No stories yet",
-        "description": "Check back soon for client success stories."
-      }
+      "title": "Success Stories",
+      "subtitle": "See how businesses like yours transformed their operations with Konty."
     },
     "partners": {
       "hero": {

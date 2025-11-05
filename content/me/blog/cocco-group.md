@@ -1,15 +1,15 @@
 ---
-title: Konty POS u saradnji sa Cocco Group — kada knjigovodstvo i tehnologija dišu zajedno
+title: Konty POS u saradnji sa Cocco Group - kada knjigovodstvo i tehnologija dišu zajedno
 description: Kako knjigovodstveni biro sa preko 40 klijenata koristi Konty POS za jednostavniju fiskalizaciju, brži rad i zadovoljnije klijente.
 date: 2024-12-26
 author: Konty Tim
 image: /images/blog/coccogroup.avif
-category: success-story
-featured: true
+category: clientStories
+featured: false
 readTime: 5
 ---
 
-U poslovnom svijetu, pravi partneri su oni koji vam olakšavaju svakodnevnicu i čine da složeni procesi izgledaju jednostavno. Upravo takvu saradnju imamo sa Naidom Bibezić i njenom firmom Cocco Group, knjigovodstvenim biroom koji danas uspješno vodi preko 40 klijenata sa našim softverskim rješenjima — Konty retail i Konty hospitality.
+U poslovnom svijetu, pravi partneri su oni koji vam olakšavaju svakodnevnicu i čine da složeni procesi izgledaju jednostavno. Upravo takvu saradnju imamo sa Naidom Bibezić i njenom firmom Cocco Group, knjigovodstvenim biroom koji danas uspješno vodi preko 40 klijenata sa našim softverskim rješenjima - Konty retail i Konty hospitality.
 
 Naida nas često podsjeti da, kada se spoje pouzdana tehnologija i posvećen knjigovođa, rezultat je smirenost i zadovoljstvo kod svakog krajnjeg klijenta.
 
@@ -17,7 +17,7 @@ Naida nas često podsjeti da, kada se spoje pouzdana tehnologija i posvećen knj
 
 Kada je krenuo proces fiskalizacije, svi smo znali koliko to može biti izazovno za klijente. Ali uz Naidu i Cocco Group, taj put je bio znatno jednostavniji.
 
-„Brzo pravljenje naloga i preuzimanje digitalnog sertifikata u ime klijenta nam je u startu olakšalo posao. Klijent praktično nije morao da brine o procedurama — sve smo rješavali zajedno sa timom Konty-a," kaže Naida.
+„Brzo pravljenje naloga i preuzimanje digitalnog sertifikata u ime klijenta nam je u startu olakšalo posao. Klijent praktično nije morao da brine o procedurama - sve smo rješavali zajedno sa timom Konty-a," kaže Naida.
 
 ## Knjigovođa koji uvijek ima alate pri ruci
 
@@ -52,8 +52,8 @@ Jedna od opcija koju Cocco Group posebno izdvaja jeste Back Office.
 
 ## Zaključak: Partnerstvo koje traje
 
-Naša saradnja sa Naidom Bibezić i Cocco Group je pravi primjer koliko je važno imati pouzdanog partnera. Mi donosimo softver, ona donosi iskustvo i posvećenost klijentima — zajedno gradimo sistem u kojem je i knjigovođama i preduzetnicima lakše da posluju.
+Naša saradnja sa Naidom Bibezić i Cocco Group je pravi primjer koliko je važno imati pouzdanog partnera. Mi donosimo softver, ona donosi iskustvo i posvećenost klijentima - zajedno gradimo sistem u kojem je i knjigovođama i preduzetnicima lakše da posluju.
 
-Za nas, najveća nagrada je povjerenje. A povjerenje se gradi upravo kroz ovakve odnose — iskrene, srdačne i dugoročne.
+Za nas, najveća nagrada je povjerenje. A povjerenje se gradi upravo kroz ovakve odnose - iskrene, srdačne i dugoročne.
 
 *Pridružite se 9.000+ biznisa koji vjeruju Konty POS-u za njihovo svakodnevno poslovanje.*
