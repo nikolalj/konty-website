@@ -1509,6 +1509,24 @@
           }
         }
       },
+      "testimonials": {
+        "title": "Šta kažu naši partneri",
+        "description": "Naši partneri širom regiona svakodnevno pomažu svojim klijentima da transformišu poslovanje",
+        "items": {
+          "t1": {
+            "name": "Miloš Marković",
+            "company": "Sekas",
+            "title": "Konty nam omogućava da našim klijentima ponudimo najbolje",
+            "quote": "Partnerstvo sa Konty timom donelo je našem poslovanju novu dimenziju. Kvalitet proizvoda i podrška koju dobijamo omogućavaju nam da se fokusiramo na ono što je najvažnije - zadovoljne klijente."
+          },
+          "t2": {
+            "name": "Vladimir Adžić",
+            "company": "Digitron Ist",
+            "title": "Stabilno i pouzdano rešenje za naše klijente",
+            "quote": "Konty se pokazao kao izuzetno stabilno i pouzdano rešenje. Tehnička podrška je uvek tu kada nam treba, a klijenti su zadovoljni funkcionalnostima sistema. To je osnova dobrog partnerstva."
+          }
+        }
+      },
       "faq": {
         "title": "Partner FAQ",
         "subtitle": "Najčešća pitanja o tome kako postati Konty partner",

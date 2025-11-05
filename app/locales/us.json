@@ -1509,6 +1509,24 @@
           }
         }
       },
+      "testimonials": {
+        "title": "What our partners say",
+        "description": "Our partners across the region help their clients transform their business every day",
+        "items": {
+          "t1": {
+            "name": "Miloš Marković",
+            "company": "Sekas",
+            "title": "Konty enables us to offer the best to our clients",
+            "quote": "Partnership with the Konty team has brought a new dimension to our business. The product quality and support we receive allow us to focus on what matters most - satisfied clients."
+          },
+          "t2": {
+            "name": "Vladimir Adžić",
+            "company": "Digitron Ist",
+            "title": "A stable and reliable solution for our clients",
+            "quote": "Konty has proven to be an extremely stable and reliable solution. Technical support is always there when we need it, and clients are satisfied with the system's functionality. That's the foundation of a good partnership."
+          }
+        }
+      },
       "faq": {
         "title": "Partner FAQ",
         "subtitle": "Common questions about becoming a Konty partner",
