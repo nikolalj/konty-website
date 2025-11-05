@@ -250,24 +250,28 @@
         "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
-            "name": "Miloš Petrović",
-            "quote": "Prije Konty sistema imali smo problem sa praćenjem stolova i narudžbi. Sada konobari rade brže, kuhinja je uvijek sinhronizovana, a gosti primjete koliko je usluga efikasnija.",
-            "role": "Vlasnik restorana \"Dolina Ukusa\""
+            "name": "Marko Marković",
+            "title": "Sale i kuhinja funkcionišu u potpunoj sinhronizaciji.",
+            "quote": "Konobar unese narudžbu na tablet, kuhinja je vidi odmah. Kad je jelo spremno, konobar dobija obavještenje – nema čekanja, nema grešaka. Sve ide brzo i precizno, baš kako treba.",
+            "role": "Vlasnik restorana \"Dunavska Terasa\""
           },
           "t2": {
-            "name": "Jelena Marković",
-            "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno vidim koji proizvodi idu najbolje, a izvještaji mi pomažu da donosim brže odluke.",
-            "role": "Vlasnica butika \"Moda J\""
+            "name": "Marko Marković",
+            "title": "Internet je pao, ali kasa je radila kao da ništa nije bilo.",
+            "quote": "Kad nam je internet nestao usred špica, pomislio sam da je katastrofa. Ali Konty je nastavio da radi normalno – računi, kartice, sve funkcioniše. Kad se veza vratila, sve se automatski sinhronizovalo. To je pravi test pouzdanosti.",
+            "role": "Vlasnik kafića \"Bašča Café\""
           },
           "t3": {
-            "name": "Nikola Jovanović",
-            "quote": "Uštedjeli smo sate administracije zahvaljujući Konty sistemu. Sve je pregledno – od smjena konobara do izvještaja o prometu na kraju dana.",
-            "role": "Menadžer kafića \"Urban Bar\""
+            "name": "Marko Marković",
+            "title": "Recepcija i restoran sada rade kao jedan.",
+            "quote": "Povezali smo hotelski sistem sa restoranom – kada gost naruči u restoranu, račun se automatski veže za sobu. Bez papira, bez grešaka. Integracija radi savršeno i olakšava komunikaciju cijelog tima.",
+            "role": "Menadžer hotela \"Aquastar Danube\""
           },
           "t4": {
-            "name": "Ana Lazić",
-            "quote": "Prelazak na Konty je bio pravo olakšanje. Nema više gubljenja računa ni nesporazuma sa mušterijama – blagajna radi savršeno i brza je kao što smo željeli.",
-            "role": "Vlasnica pekare \"Miris Kruha\""
+            "name": "Marko Marković",
+            "title": "Brzo, jednostavno i pouzdano.",
+            "quote": "Kako danas sve radimo putem aplikacija, bilo nam je važno da kasa radi bez greške. Konty se lako savladava i čini uslugu prema kupcima brzom i efikasnom. Preporuka za svakog ko želi da pojednostavi posao.",
+            "role": "Vlasnica butika \"Style Corner\""
           }
         }
       },

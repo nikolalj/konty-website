@@ -250,24 +250,28 @@
         "description": "Stability, simplicity, and support that help them run their business with peace of mind",
         "items": {
           "t1": {
-            "name": "Marko Petrović",
-            "quote": "We switched to Konty six months ago and it's made a real difference. Orders flow smoothly from front to kitchen, and my staff picked it up quickly. Much less stressful during busy periods.",
-            "role": "Owner of Taste Valley Restaurant"
+            "name": "Marko Marković",
+            "title": "Dining room and kitchen work in perfect sync.",
+            "quote": "Waiter enters an order on the tablet, kitchen sees it immediately. When the dish is ready, waiter gets a notification – no waiting, no mistakes. Everything runs fast and precise, exactly as it should.",
+            "role": "Owner of Riverside Bistro"
           },
           "t2": {
-            "name": "Ana Nikolić",
-            "quote": "Inventory management used to take me hours each week. Now I can see stock levels instantly and get alerts when items are running low. Saves me a lot of time.",
-            "role": "Owner of Fashion Forward Boutique"
+            "name": "Marko Marković",
+            "title": "Internet went down, but checkout kept working like nothing happened.",
+            "quote": "When our internet went out during rush hour, I thought it was a disaster. But Konty kept working normally – receipts, card payments, everything functioned. When the connection came back, everything synced automatically. That's a real reliability test.",
+            "role": "Owner of Harbor Café"
           },
           "t3": {
-            "name": "Stefan Jovanović",
-            "quote": "The interface is intuitive - new employees learn it quickly. Customer checkout is faster and we can track our daily sales easily. Good investment for our coffee shop.",
-            "role": "Manager of Urban Grounds Coffee"
+            "name": "Marko Marković",
+            "title": "Reception and restaurant now work as one.",
+            "quote": "We connected the hotel system with the restaurant – when a guest orders in the restaurant, the bill automatically links to their room. No paper, no errors. Integration works flawlessly and facilitates communication across the entire team.",
+            "role": "Manager of Aquastar Danube Hotel"
           },
           "t4": {
-            "name": "Milica Stojanović",
-            "quote": "Clean, simple system that does what we need. Processing payments is straightforward and the daily reports help me understand our sales patterns better.",
-            "role": "Owner of Fresh Start Bakery"
+            "name": "Marko Marković",
+            "title": "Fast, simple, and reliable.",
+            "quote": "Since we do everything through apps these days, it was important that our checkout works flawlessly. Konty has made our daily operations so much easier. Highly recommend to anyone who wants to simplify their business.",
+            "role": "Owner of Style Corner Boutique"
           }
         }
       },

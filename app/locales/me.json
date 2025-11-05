@@ -250,24 +250,28 @@
         "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
-            "name": "Miloš Petrović",
-            "quote": "Prije Konty sistema imali smo problem sa praćenjem stolova i porudžbina. Sada konobari rade brže, kuhinja je uvijek sinhronizovana, a gosti primjete koliko je usluga efikasnija.",
-            "role": "Vlasnik restorana \"Dolina Ukusa\""
+            "name": "Marko Tripković",
+            "title": "U ugostiteljstvu nema pauze - zato koristimo Konty.",
+            "quote": "Gosti očekuju brzu i kvalitetnu uslugu, a uz Konty smo sve interne procese pojednostavili i ubrzali. Sve radi besprekorno, bez improvizacija i bez grešaka. Naša usluga je sada brža, a tim rasterećen.",
+            "role": "Vlasnik lokala \"La Paz\""
           },
           "t2": {
-            "name": "Jelena Marković",
-            "quote": "Konty POS mi je olakšao vođenje zaliha i izdavanje računa. Konačno vidim koji proizvodi idu najbolje, a izvještaji mi pomažu da donosim brže odluke.",
-            "role": "Vlasnica butika \"Moda J\""
+            "name": "Žarko Rafailović",
+            "title": "Internet je pao, ali kasa je radila kao da ništa nije bilo.",
+            "quote": "Kad nam je internet nestao usred špica, pomislio sam da je katastrofa. Ali Konty je nastavio da radi normalno – računi, kartice, sve funkcioniše. Kad se veza vratila, sve se automatski sinhronizovalo. To je pravi test pouzdanosti.",
+            "role": "Vlasnik restorana \"Tri ribara\""
           },
           "t3": {
-            "name": "Nikola Jovanović",
-            "quote": "Uštedjeli smo sate administracije zahvaljujući Konty sistemu. Sve je pregledno – od smjena konobara do izvještaja o prometu na kraju dana.",
-            "role": "Menadžer kafića \"Urban Bar\""
+            "name": "Jakov Bulajić",
+            "title": "Kontrola, brzina i besprekorna usluga.",
+            "quote": "Kao hotel koji vodi računa o svakom detalju, tražili smo sistem koji povezuje recepciju, restoran i bar. Sa Konty-jem sve radi besprekorno – porudžbine stižu odmah, računi se automatski povezuju sa sobom, a osoblje je fokusirano na goste. Konty nam je zaista podigao nivo usluge.",
+            "role": "Menadžer \"Adiya Signature Hotela\""
           },
           "t4": {
-            "name": "Ana Lazić",
-            "quote": "Prelazak na Konty je bio pravo olakšanje. Nema više gubljenja računa ni nesporazuma sa mušterijama – blagajna radi savršeno i brza je kao što smo željeli.",
-            "role": "Vlasnica pekare \"Miris Hljeba\""
+            "name": "Marko Marković",
+            "title": "Sve što nam je potrebno – na jednom mjestu.",
+            "quote": "Rado preporučujemo Konty kolegama iz branše. Sistem sadrži sve što je potrebno za efikasno poslovanje, a tehnička podrška je uvijek tu – ljubazni, brzi i pouzdani. Reakcija u rekordnom roku!",
+            "role": "Menadžer prodavnice \"Tech Point\""
           }
         }
       },
@@ -1275,20 +1279,20 @@
         "subtitle": "Naši klijenti su počeli da koriste Konty za svega nekoliko dana",
         "testimonial1": {
           "quote": "Demo je bio tačno ono što smo tražili. Za 3 dana smo bili potpuno operativni sa novim sistemom.",
-          "author": "Marko Petrović",
-          "role": "Vlasnik restorana 'Taste Valley'",
+          "author": "Marko Tripković",
+          "role": "Vlasnik lokala \"La Paz\"",
           "timeline": "3 dana do implementacije"
         },
         "testimonial2": {
           "quote": "Od prvog razgovora do prvog računa prošlo je samo 48 sati. Brzo, efikasno, bez komplikacija.",
-          "author": "Ana Nikolić",
-          "role": "Vlasnica butika 'Fashion Forward'",
+          "author": "Žarko Rafailović",
+          "role": "Vlasnik restorana \"Tri ribara\"",
           "timeline": "2 dana do implementacije"
         },
         "testimonial3": {
           "quote": "Demo nam je pokazao tačno ono što nam je trebalo. Implementacija je bila brža nego što smo očekivali.",
-          "author": "Stefan Jovanović",
-          "role": "Menadžer kafića 'Urban Grounds'",
+          "author": "Rajko Dobrosavljević",
+          "role": "Vlasnik restorana 'Marinada'",
           "timeline": "4 dana do implementacije"
         }
       },

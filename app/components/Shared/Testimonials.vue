@@ -11,14 +11,19 @@
         :key="index"
         class="flex flex-col bg-[var(--ui-bg-elevated)] rounded-lg p-6 h-full"
       >
-        <!-- Quote at the top, flex-grow to push author to bottom -->
+        <!-- Title at the top -->
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          {{ testimonial.title }}
+        </h3>
+
+        <!-- Quote, flex-grow to push author to bottom -->
         <blockquote class="text-gray-600 dark:text-gray-300 flex-grow mb-4">
           "{{ testimonial.quote }}"
         </blockquote>
 
         <!-- Author details at the bottom, always aligned -->
         <div class="flex items-center gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
-          <NuxtImg
+          <!-- <NuxtImg
             :src="testimonial.user.avatar.src"
             :alt="testimonial.user.name"
             format="avif"
@@ -28,7 +33,7 @@
             quality="80"
             fit="cover"
             class="rounded-full flex-shrink-0"
-          />
+          /> -->
           <div class="min-w-0">
             <p class="font-medium text-gray-900 dark:text-white truncate">{{ testimonial.user.name }}</p>
             <p class="text-sm text-gray-500 dark:text-gray-400 truncate">{{ testimonial.user.description }}</p>
@@ -52,7 +57,7 @@ const props = defineProps({
 const { t } = useI18n()
 
 const testimonials = computed(() => {
-  // Only use first 4 testimonials
+  // Use first 4 out of 5 testimonials
   const testimonialKeys = ['t1', 't2', 't3', 't4']
   return testimonialKeys.map((key, index) => {
     return {
@@ -64,6 +69,7 @@ const testimonials = computed(() => {
           loading: 'lazy'
         }
       },
+      title: t(`pages.home.testimonials.items.${key}.title`),
       quote: t(`pages.home.testimonials.items.${key}.quote`)
     }
   })
