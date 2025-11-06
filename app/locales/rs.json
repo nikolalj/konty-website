@@ -1279,20 +1279,20 @@
         "subtitle": "Naši klijenti su počeli da koriste Konty za svega nekoliko dana",
         "testimonial1": {
           "quote": "Demo je bio tačno ono što smo tražili. Za 3 dana smo bili potpuno operativni sa novim sistemom.",
-          "author": "Marko Petrović",
-          "role": "Vlasnik restorana 'Taste Valley'",
+          "author": "Marko Tripković",
+          "role": "Vlasnik lokala \"La Paz\"",
           "timeline": "3 dana do implementacije"
         },
         "testimonial2": {
           "quote": "Od prvog razgovora do prvog računa prošlo je samo 48 sati. Brzo, efikasno, bez komplikacija.",
-          "author": "Ana Nikolić",
-          "role": "Vlasnica butika 'Fashion Forward'",
+          "author": "Žarko Rafailović",
+          "role": "Vlasnik restorana \"Tri ribara\"",
           "timeline": "2 dana do implementacije"
         },
         "testimonial3": {
           "quote": "Demo nam je pokazao tačno ono što nam je trebalo. Implementacija je bila brža nego što smo očekivali.",
-          "author": "Stefan Jovanović",
-          "role": "Menadžer kafića 'Urban Grounds'",
+          "author": "Rajko Dobrosavljević",
+          "role": "Vlasnik restorana 'Marinada'",
           "timeline": "4 dana do implementacije"
         }
       },
