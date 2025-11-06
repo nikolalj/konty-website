@@ -146,7 +146,7 @@ export const clients = {
     {
       name: 'Black George',
       logo: '/images/clients/blackGeorge.avif',
-      product: 'retail'
+      product: 'hospitality'
     },
     {
       name: 'Petroland',
