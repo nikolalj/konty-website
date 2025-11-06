@@ -1,8 +1,6 @@
 <template>
   <section class="pt-44 pb-16">
-    <UContainer
-      class="flex flex-col lg:grid gap-y-16 gap-12 lg:grid-cols-2 lg:items-center"
-    >
+    <UContainer class="flex flex-col lg:grid gap-y-16 gap-12 lg:grid-cols-2">
       <!-- Left column: Text content -->
       <div>
         <h1
@@ -90,31 +88,6 @@
           </div>
         </div>
 
-        <!-- LPRF Downloads (Only for Serbian locale) -->
-        <div v-if="!isLoading && 'lprf' in items">
-          <h3 class="text-lg font-semibold mb-4 text-highlighted">
-            {{ (items as any).lprf.title }}
-          </h3>
-          <div class="grid grid-cols-4 gap-3">
-            <a
-              v-for="option in (items as any).lprf.options"
-              :key="option.title"
-              :href="option.link"
-              target="_blank"
-              :class="[
-                'flex flex-col items-center justify-center p-6 rounded-lg bg-white dark:bg-[var(--bg-300)] ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 group',
-                option.link
-                  ? 'hover:bg-gray-100 dark:hover:bg-[var(--bg-400)] hover:shadow-lg cursor-pointer'
-                  : 'opacity-50 cursor-not-allowed'
-              ]"
-              @click="option.link && handleDownload('LPRF', option.platform)"
-            >
-              <UIcon :name="option.icon" class="w-12 h-12 text-primary mb-3" />
-              <span class="text-sm font-medium">{{ option.title }}</span>
-            </a>
-          </div>
-        </div>
-
         <!-- Demo Downloads -->
         <div v-if="!isLoading">
           <h3 class="text-lg font-semibold mb-4 text-highlighted">
@@ -135,6 +108,31 @@
               @click="option.link && handleDownload('Demo', option.platform)"
             >
               <UIcon :name="option.icon" class="w-12 h-12 text-gray-500 mb-3" />
+              <span class="text-sm font-medium">{{ option.title }}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- LPRF Downloads (Only for Serbian locale) -->
+        <div v-if="!isLoading && 'lprf' in items">
+          <h3 class="text-lg font-semibold mb-4 text-highlighted">
+            {{ (items as any).lprf.title }}
+          </h3>
+          <div class="grid grid-cols-4 gap-3">
+            <a
+              v-for="option in (items as any).lprf.options"
+              :key="option.title"
+              :href="option.link"
+              target="_blank"
+              :class="[
+                'flex flex-col items-center justify-center p-6 rounded-lg bg-white dark:bg-[var(--bg-300)] ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 group',
+                option.link
+                  ? 'hover:bg-gray-100 dark:hover:bg-[var(--bg-400)] hover:shadow-lg cursor-pointer'
+                  : 'opacity-50 cursor-not-allowed'
+              ]"
+              @click="option.link && handleDownload('LPRF', option.platform)"
+            >
+              <UIcon :name="option.icon" class="w-12 h-12 text-primary mb-3" />
               <span class="text-sm font-medium">{{ option.title }}</span>
             </a>
           </div>
