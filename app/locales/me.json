@@ -268,10 +268,10 @@
             "role": "Menadžer \"Adiya Signature Hotela\""
           },
           "t4": {
-            "name": "Marko Marković",
-            "title": "Sve što nam je potrebno – na jednom mjestu.",
-            "quote": "Rado preporučujemo Konty kolegama iz branše. Sistem sadrži sve što je potrebno za efikasno poslovanje, a tehnička podrška je uvijek tu – ljubazni, brzi i pouzdani. Reakcija u rekordnom roku!",
-            "role": "Menadžer prodavnice \"Tech Point\""
+            "name": "Zoran Vukčević",
+            "title": "Konty prosto radi bez greške.",
+            "quote": "Rado preporučujemo Konty kolegama iz branše. Sistem je vrlo pouzdan, a tehnička podrška je uvijek tu. Reaguju u rekordnom roku!",
+            "role": "Vlasnik \"Modnog Studija Zoran\""
           }
         }
       },
@@ -1409,6 +1409,11 @@
       "hero": {
         "title": "Kontaktirajte nas",
         "subtitle": "Tu smo da vam pomognemo da izaberete savršeno POS rješenje za vaš biznis."
+      },
+      "team": {
+        "label": "Naš tim",
+        "title": "Upoznajte ljude iza Konty-ja",
+        "description": "Naš posvećeni tim stručnjaka je tu da vam pomogne da uspijete. Sa decenijama kombinovanog iskustva u POS sistemima i tehnologiji, pružamo stručnu podršku i rješenja prilagođena vašim potrebama."
       }
     },
     "clientStories": {

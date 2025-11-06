@@ -61,7 +61,7 @@ import { LOCALES } from '~/config/locale.config.mjs'
 const nuxtApp = useNuxtApp()
 const switchLocalePath = useSwitchLocalePath()
 const { t, locale, locales } = useI18n()
-const currentLocale = LOCALES.find(l => l.code === locale.value)
+const currentLocale = computed(() => LOCALES.find(l => l.code === locale.value))
 
 const suggestedLocale: Ref<ValidLocale | undefined> = ref()
 

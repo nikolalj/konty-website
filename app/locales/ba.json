@@ -250,28 +250,28 @@
         "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
         "items": {
           "t1": {
-            "name": "Marko Marković",
+            "name": "Dragan Milčić",
             "title": "Sale i kuhinja funkcionišu u potpunoj sinhronizaciji.",
-            "quote": "Konobar unese narudžbu na tablet, kuhinja je vidi odmah. Kad je jelo spremno, konobar dobija obavještenje – nema čekanja, nema grešaka. Sve ide brzo i precizno, baš kako treba.",
-            "role": "Vlasnik restorana \"Dunavska Terasa\""
+            "quote": "Konobar unese porudžbinu na tablet, kuhinja je vidi odmah. Kad je jelo spremno, konobar dobija obavještenje – nema čekanja, nema grešaka. Sve ide brzo i precizno, baš kako treba.",
+            "role": "Vlasnik restorana \"Black George\""
           },
           "t2": {
-            "name": "Marko Marković",
-            "title": "Internet je pao, ali kasa je radila kao da ništa nije bilo.",
-            "quote": "Kad nam je internet nestao usred špica, pomislio sam da je katastrofa. Ali Konty je nastavio da radi normalno – računi, kartice, sve funkcioniše. Kad se veza vratila, sve se automatski sinhronizovalo. To je pravi test pouzdanosti.",
-            "role": "Vlasnik kafića \"Bašča Café\""
+            "name": "Rajko Dobrosavljević",
+            "title": "Novi konobari nauče sistem za manje od sat vremena.",
+            "quote": "Konty je izuzetno intuitivan – nema zbunjujućih dugmića ni komplikacija. Time štedimo vrijeme i novac na obukama, a greške su svedene na minimum. Idealno rješenje za lokale sa većom rotacijom osoblja.",
+            "role": "Vlasnik restorana \"Marinada\""
           },
           "t3": {
-            "name": "Marko Marković",
+            "name": "Vladimir Adžić",
             "title": "Recepcija i restoran sada rade kao jedan.",
             "quote": "Povezali smo hotelski sistem sa restoranom – kada gost naruči u restoranu, račun se automatski veže za sobu. Bez papira, bez grešaka. Integracija radi savršeno i olakšava komunikaciju cijelog tima.",
-            "role": "Menadžer hotela \"Aquastar Danube\""
+            "role": "Vlasnik hotela \"Aquastar Danube\""
           },
           "t4": {
-            "name": "Marko Marković",
+            "name": "Vinko Milić",
             "title": "Brzo, jednostavno i pouzdano.",
             "quote": "Kako danas sve radimo putem aplikacija, bilo nam je važno da kasa radi bez greške. Konty se lako savladava i čini uslugu prema kupcima brzom i efikasnom. Preporuka za svakog ko želi da pojednostavi posao.",
-            "role": "Vlasnica butika \"Style Corner\""
+            "role": "Vlasnik marketa \"MV market\""
           }
         }
       },
@@ -1409,6 +1409,11 @@
       "hero": {
         "title": "Kontaktirajte nas",
         "subtitle": "Tu smo da vam pomognemo da izaberete savršeno POS rješenje za vaš biznis."
+      },
+      "team": {
+        "label": "Naš tim",
+        "title": "Upoznajte ljude iza Konty-ja",
+        "description": "Naš posvećeni tim stručnjaka je tu da vam pomogne da uspijete. Sa decenijama kombinovanog iskustva u POS sistemima i tehnologiji, pružamo stručnu podršku i rješenja prilagođena vašim potrebama."
       }
     },
     "clientStories": {

@@ -7,6 +7,9 @@
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
 
+    <!-- Team section - builds trust and humanizes the brand -->
+    <LazyAboutTeamSection hydrate-on-visible />
+
     <!-- Interactive components - hydrate on visibility for better UX -->
     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
