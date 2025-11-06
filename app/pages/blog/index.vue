@@ -1,17 +1,31 @@
 <template>
   <div class="mt-24">
     <!-- Hero Section -->
-    <section class="relative py-16 sm:pt-24 sm:pb-16">
-      <UContainer>
+    <section
+      class="relative isolate overflow-hidden bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-950 dark:to-primary-900 py-16 sm:pt-24 sm:pb-16"
+    >
+      <!-- Wave Background Pattern -->
+      <UIWaveBackground />
+
+      <UContainer class="relative z-10">
         <div class="text-center max-w-3xl mx-auto">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl text-pretty tracking-tight font-bold text-highlighted">
-            {{ t('pages.blog.hero.title') }}
-          </h1>
-          <p class="text-xl font-semibold text-primary mt-4">
-            {{ t('pages.blog.hero.subtitle') }}
-          </p>
+          <UIAppear>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl text-pretty tracking-tight font-bold text-highlighted"
+            >
+              {{ t('pages.blog.hero.title') }}
+            </h1>
+          </UIAppear>
+          <UIAppear direction="up" :delay="100">
+            <p class="text-xl font-semibold text-primary mt-4">
+              {{ t('pages.blog.hero.subtitle') }}
+            </p>
+          </UIAppear>
         </div>
       </UContainer>
+
+      <!-- Bottom Wave Shape -->
+      <UIWaveBottomShape />
     </section>
 
     <!-- Featured Post -->
