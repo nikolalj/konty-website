@@ -7,7 +7,7 @@
     <LazySharedClientList class="dark" product="retail" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedBenefits variant="alt" category="retail" hydrate-on-visible />
-    <LazySharedProductFeatures product="retail" hydrate-on-visible />
+    <LazySharedProductFeatures product="retail" reverse hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility -->
     <LazySharedPricing product="retail" hydrate-on-visible />

@@ -150,27 +150,27 @@ const features = {
   hospitality: [
     {
       key: 'feat1',
-      icon: 'i-lucide-layout-grid',
+      icon: 'i-lucide-shield-check',
       image: '/images/features/hospitality/prodFeat1.avif'
     },
     {
       key: 'feat2',
-      icon: 'i-lucide-receipt-text',
+      icon: 'i-lucide-zap',
       image: '/images/features/hospitality/prodFeat2.avif'
     },
     {
       key: 'feat3',
-      icon: 'i-lucide-settings',
+      icon: 'i-lucide-trending-up',
       image: '/images/features/hospitality/prodFeat3.avif'
     },
     {
       key: 'feat4',
-      icon: 'i-lucide-chart-bar',
+      icon: 'i-lucide-layout-grid',
       image: '/images/features/hospitality/prodFeat4.avif'
     },
     {
       key: 'feat5',
-      icon: 'i-lucide-globe',
+      icon: 'i-lucide-credit-card',
       image: '/images/features/hospitality/prodFeat5.avif'
     },
     {
@@ -182,22 +182,22 @@ const features = {
   retail: [
     {
       key: 'feat1',
-      icon: 'i-lucide-shopping-cart',
+      icon: 'i-lucide-shield-check',
       image: '/images/features/retail/prodFeat1.avif'
     },
     {
       key: 'feat2',
-      icon: 'i-lucide-barcode',
+      icon: 'i-lucide-zap',
       image: '/images/features/retail/prodFeat2.avif'
     },
     {
       key: 'feat3',
-      icon: 'i-lucide-settings',
+      icon: 'i-lucide-trending-up',
       image: '/images/features/retail/prodFeat3.avif'
     },
     {
       key: 'feat4',
-      icon: 'i-lucide-chart-pie',
+      icon: 'i-lucide-shopping-cart',
       image: '/images/features/retail/prodFeat4.avif'
     },
     {

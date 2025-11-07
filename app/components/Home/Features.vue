@@ -112,14 +112,14 @@ const productKey = computed(() =>
 // Feature configuration with translation keys
 const features = {
   hospitality: [
-    { key: 'feat1', icon: 'i-lucide-layout-grid' },
-    { key: 'feat2', icon: 'i-lucide-receipt-text' },
-    { key: 'feat3', icon: 'i-lucide-settings' }
+    { key: 'feat1', icon: 'i-lucide-shield-check' },
+    { key: 'feat2', icon: 'i-lucide-zap' },
+    { key: 'feat3', icon: 'i-lucide-trending-up' }
   ],
   retail: [
-    { key: 'feat1', icon: 'i-lucide-shopping-cart' },
-    { key: 'feat2', icon: 'i-lucide-settings' },
-    { key: 'feat3', icon: 'i-lucide-chart-pie' }
+    { key: 'feat1', icon: 'i-lucide-shield-check' },
+    { key: 'feat2', icon: 'i-lucide-zap' },
+    { key: 'feat3', icon: 'i-lucide-trending-up' }
   ]
 }
 </script>

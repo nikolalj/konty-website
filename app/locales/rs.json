@@ -426,65 +426,65 @@
         "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
         "hospitality": {
           "feat1": {
-            "title": "Sektori i stolovi",
-            "description": "Rad po stolovima podeljenim u više sektora. Detaljan pregled računa, aktivnosti konobara, stanja naplatnog uređaja, izveštaja, itd.",
+            "title": "Sistem na koji uvek možete računati",
+            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
-            "title": "Brza i efikasna prodaja",
-            "description": "Brz odabir artikala kroz intuitivan korisnički interfejs. Efikasno izdavanje računa i porudžbina uz različite metode gotovinskog i bezgotovinskog plaćanja, štampanje porudžbina na kuhinjskom ili šank printeru, itd.",
+            "title": "Vaš tim će ga savladati za manje od sat vremena",
+            "description": "Intuitivan dizajn koji zahteva minimalnu obuku. Novo osoblje počinje da radi za sat vremena, a ne danima. Manje vremena za obuku, više vremena za goste.",
             "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
-            "title": "Administracija",
-            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe, itd. Precizni izveštaji i detaljan uvid u sve segmente vašeg poslovanja.",
+            "title": "Kontrolišite brojke, rastite sigurnije",
+            "description": "Analitika u realnom vremenu koja pokazuje šta funkcioniše. Donosite prave odluke na osnovu podataka, ne pretpostavki. Pratite prodaju, zalihe i trendove—bilo kada, bilo gde.",
             "icon": "i-heroicons-shield-check"
           },
           "feat4": {
-            "title": "Napredni izveštaji",
-            "description": "Sveobuhvatni i precizni izveštaji koji su vam potrebni za vođenje poslovanja. Omogućava tačno praćenje zaliha, prodaje, prihoda i rashoda.",
+            "title": "Jednostavno upravljanje salom i stolovima",
+            "description": "Vizuelni planovi sale, status stolova u realnom vremenu, besprekorna koordinacija konobara. Od porudžbine do kuhinje za sekunde sa trenutnim prikazom na kuhinjskom ekranu.",
             "icon": "i-heroicons-chart-bar"
           },
           "feat5": {
-            "title": "Dostupno svugde",
-            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
+            "title": "Prihvatite sve načine plaćanja",
+            "description": "Kreditne i debitne kartice, gotovina, beskontaktna plaćanja, deljenje računa i upravljanje napojnicama. Brza i fleksibilna naplata za svakog gosta.",
             "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
-            "title": "Vrhunska korisnička podrška",
-            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja.",
+            "title": "Uvek dostupan, uvek tu za vas",
+            "description": "Cloud sistem (Web, Windows, Android) sa offline režimom. Podrška 24/7 sa prosečnim vremenom odgovora od 30 sekundi. Tu smo kada vam zatrebamo.",
             "icon": "i-heroicons-chat-bubble-left-right"
           }
         },
         "retail": {
           "feat1": {
-            "title": "Brza i efikasna prodaja",
-            "description": "Brza pretraga i odabir artikala po imenu, šifri, barkodu (običnom i težinskom). Detaljan pregled računa, aktivnosti zaposlenih, stanja naplatnog uređaja, izveštaja, itd.",
+            "title": "Sistem na koji uvek možete računati",
+            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
-            "title": "Administracija",
-            "description": "Omogućava napredno upravljanje zaposlenima, artiklima i magacinom, kao i dobavljačima, kupcima, prijemom i otpremom robe i ostalim poslovnim procesima.",
+            "title": "Vaš tim će ga savladati za manje od sat vremena",
+            "description": "Intuitivan dizajn koji zahteva minimalnu obuku. Novo osoblje počinje da radi za sat vremena, a ne danima. Manje vremena za obuku, više vremena za kupce.",
             "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
-            "title": "Izveštaji i statistike",
-            "description": "Precizni i temeljni izveštaji koji će vam omogućiti detaljan uvid u sve segmente vašeg poslovanja.",
+            "title": "Kontrolišite brojke, rastite sigurnije",
+            "description": "Analitika u realnom vremenu koja pokazuje šta funkcioniše. Donosite prave odluke na osnovu podataka, ne pretpostavki. Pratite prodaju, zalihe i trendove—bilo kada, bilo gde.",
             "icon": "i-heroicons-chart-bar"
           },
           "feat4": {
-            "title": "Upravljanje zalihama",
-            "description": "Praćenje stanja zaliha u realnom vremenu sa automatskim upozorenjima kada su artikli pri kraju. Upravljajte hiljade proizvoda s lakoćom i optimizujte svoje nivoe zaliha.",
+            "title": "Munjevito brza naplata",
+            "description": "Skeniranje barkoda, brza pretraga, težinski artikli, tasteri kategorija, tasteri artikala i prečice na tastaturi. Obradite transakcije za sekunde, uz sve načine plaćanja.",
             "icon": "i-heroicons-shield-check"
           },
           "feat5": {
-            "title": "Dostupno svugde",
-            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji.",
+            "title": "Kontrola zaliha bez muke",
+            "description": "Nivoi zaliha u realnom vremenu, praćenje niskih zaliha, upravljanje narudžbenicama i praćenje dobavljača. Potpuna kontrola bez ručnog unosa.",
             "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
-            "title": "Vrhunska korisnička podrška",
-            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja.",
+            "title": "Uvek dostupan, uvek tu za vas",
+            "description": "Cloud sistem (Web, Windows, Android) sa offline režimom. Podrška 24/7 sa prosečnim vremenom odgovora od 30 sekundi. Tu smo kada vam zatrebamo.",
             "icon": "i-heroicons-chat-bubble-left-right"
           }
         }
@@ -575,28 +575,34 @@
           "title": "Jednostavan. Pouzdan. Spreman za rad.",
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "feat1": {
-            "title": "Softver pravljen po vašoj meri",
-            "description": "Kompletno rešenje je napravljeno specijalno za ugostiteljstvo. Pokriva sve vaše poslovne procese na efikasan način bilo da vodite mali ili veliki ugostiteljski objekat sa velikom frekvencijom gostiju."
+            "title": "Sistem na koji uvek možete računati",
+            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
-            "title": "Neverovatno lak za upotrebu",
-            "description": "Dosadili su vam programi kod kojih treba značajno vreme samo da bi odradili jednostavnu stvar? Konty je napravljen da bude vrlo intuitivan, efikasan i da vam brzo završava posao."
+            "title": "Vaš tim će ga savladati za manje od sat vremena",
+            "description": "Intuitivan dizajn koji zahteva minimalnu obuku. Novo osoblje počinje da radi za sat vremena, a ne danima. Manje vremena za obuku, više vremena za goste.",
+            "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
-            "title": "Pouzdan",
-            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
+            "title": "Kontrolišite brojke, rastite sigurnije",
+            "description": "Analitika u realnom vremenu koja pokazuje šta funkcioniše. Donosite prave odluke na osnovu podataka, ne pretpostavki. Pratite prodaju, zalihe i trendove—bilo kada, bilo gde.",
+            "icon": "i-heroicons-shield-check"
           },
           "feat4": {
-            "title": "Napredni izveštaji",
-            "description": "Temeljni i precizni izveštaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
+            "title": "Jednostavno upravljanje salom i stolovima",
+            "description": "Vizuelni planovi sale, status stolova u realnom vremenu, besprekorna koordinacija konobara. Od porudžbine do kuhinje za sekunde sa trenutnim prikazom na kuhinjskom ekranu.",
+            "icon": "i-heroicons-chart-bar"
           },
           "feat5": {
-            "title": "Dostupno svugde",
-            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+            "title": "Prihvatite sve načine plaćanja",
+            "description": "Kreditne i debitne kartice, gotovina, beskontaktna plaćanja, deljenje računa i upravljanje napojnicama. Brza i fleksibilna naplata za svakog gosta.",
+            "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
-            "title": "Vrhunska korisnička podrška",
-            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
+            "title": "Uvek dostupan, uvek tu za vas",
+            "description": "Cloud sistem (Web, Windows, Android) sa offline režimom. Podrška 24/7 sa prosečnim vremenom odgovora od 30 sekundi. Tu smo kada vam zatrebamo.",
+            "icon": "i-heroicons-chat-bubble-left-right"
           },
           "hero": {
             "title": "Sve funkcionalnosti za ugostiteljstvo",
@@ -614,66 +620,102 @@
             "title": "Sveobuhvatni alati za vaš restoran",
             "description": "Sve što vam treba da pružite izuzetno iskustvo i pojednostavite operacije.",
             "group1": {
-              "title": "Upravljanje stolovima i prostorom",
-              "description": "Pregledajte i upravljajte celom salom sa lakoćom.",
-              "imageAlt": "Interfejs za upravljanje stolovima",
+              "title": "Sve operacije u sali",
+              "description": "Upravljajte stolovima, porudžbinama i usluživanjem sa intuitivnim alatima dizajniranim za ugostiteljstvo.",
+              "imageAlt": "Interfejs za upravljanje stolovima i porudžbinama",
               "item1": {
                 "text": "Interaktivan plan prostora sa drag-and-drop stolovima",
                 "icon": "i-heroicons-table-cells"
               },
               "item2": {
-                "text": "Status i dostupnost stolova u realnom vremenu",
+                "text": "Status stolova u realnom vremenu (zauzet, dostupan, zahteva pažnju)",
                 "icon": "i-heroicons-clock"
               },
               "item3": {
-                "text": "Brz prenos i spajanje stolova",
-                "icon": "i-heroicons-arrows-right-left"
+                "text": "Dodela konobara i upravljanje rotacijom",
+                "icon": "i-heroicons-user-group"
               },
               "item4": {
+                "text": "Deljenje računa i prenos između stolova",
+                "icon": "i-heroicons-arrows-right-left"
+              },
+              "item5": {
                 "text": "Integracija upravljanja rezervacijama",
                 "icon": "i-heroicons-calendar-days"
+              },
+              "item6": {
+                "text": "Upravljanje modifikatorima (alergije, posebni zahtevi)",
+                "icon": "i-heroicons-adjustments-horizontal"
+              },
+              "item7": {
+                "text": "Usklađivanje vremena serviranja jela i koordinacija sa kuhinjom",
+                "icon": "i-heroicons-fire"
               }
             },
             "group2": {
-              "title": "Sistem kuhinjskog displeja",
-              "description": "Besprekorna komunikacija između šanka i kuhinje.",
-              "imageAlt": "Kuhinjski displeј sistem",
+              "title": "Upravljanje zalihama i nabavkom",
+              "description": "Moćni alati za upravljanje receptima, nabavkom i zalihama sa preciznošću.",
+              "imageAlt": "Upravljanje zalihama i nabavkom",
               "item1": {
-                "text": "Usmeravanje narudžbi na kuhinjske stanice u realnom vremenu",
-                "icon": "i-heroicons-arrow-path"
+                "text": "Upravljanje receptima sa kalkulacijom troškova sastojaka",
+                "icon": "i-heroicons-calculator"
               },
               "item2": {
-                "text": "Kontrola vremena serviranja i koordinacija jela",
-                "icon": "i-heroicons-fire"
+                "text": "Kreiranje i praćenje narudžbenica",
+                "icon": "i-heroicons-document-text"
               },
               "item3": {
-                "text": "Upozorenja za izmene narudžbe",
-                "icon": "i-heroicons-bell"
+                "text": "Upravljanje dobavljačima sa poređenjem cena",
+                "icon": "i-heroicons-truck"
               },
               "item4": {
-                "text": "Praćenje i analitika vremena pripreme",
-                "icon": "i-heroicons-chart-bar"
+                "text": "Prijem zaliha i korekcije",
+                "icon": "i-heroicons-cube"
+              },
+              "item5": {
+                "text": "Praćenje i analiza rasipanja",
+                "icon": "i-heroicons-trash"
+              },
+              "item6": {
+                "text": "Praćenje zaliha na više lokacija",
+                "icon": "i-heroicons-building-storefront"
+              },
+              "item7": {
+                "text": "Praćenje niskih zaliha",
+                "icon": "i-heroicons-exclamation-triangle"
               }
             },
             "group3": {
-              "title": "Kontrola menija i zaliha",
-              "description": "Kompletna kontrola nad stavkama menija i nivoima zaliha.",
-              "imageAlt": "Upravljanje menijem i zalihama",
+              "title": "Inteligencija i alati za rast",
+              "description": "Uvidi zasnovani na podacima za optimizaciju operacija i rast prihoda.",
+              "imageAlt": "Kontrolna tabla za analitiku i izveštaje",
               "item1": {
-                "text": "Fleksibilno kreiranje menija i cena",
-                "icon": "i-heroicons-document-text"
+                "text": "Analitika prodaje (po artiklu, konobaru, vremenu, delu dana)",
+                "icon": "i-heroicons-chart-bar"
               },
               "item2": {
-                "text": "Troškovi recepta i praćenje sastojaka",
-                "icon": "i-heroicons-calculator"
+                "text": "Praćenje i optimizacija troškova rada",
+                "icon": "i-heroicons-currency-dollar"
               },
               "item3": {
-                "text": "Automatska upozorenja za niske zalihe",
-                "icon": "i-heroicons-exclamation-triangle"
+                "text": "Uvidi u optimizaciju menija",
+                "icon": "i-heroicons-light-bulb"
               },
               "item4": {
-                "text": "Upravljanje dobavljačima i naručivanje",
-                "icon": "i-heroicons-truck"
+                "text": "Učestalost i preference kupaca",
+                "icon": "i-heroicons-user-circle"
+              },
+              "item5": {
+                "text": "Bilans stanja i analiza marže",
+                "icon": "i-heroicons-document-chart-bar"
+              },
+              "item6": {
+                "text": "Poreska usklađenost i fiskalna integracija",
+                "icon": "i-heroicons-document-check"
+              },
+              "item7": {
+                "text": "Pregled performansi zaposlenih",
+                "icon": "i-heroicons-users"
               }
             }
           }
@@ -732,28 +774,34 @@
           "title": "Jednostavan. Pouzdan. Spreman za rad.",
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "feat1": {
-            "title": "Softver pravljen po vašoj meri",
-            "description": "Kompletno rešenje je napravljeno specijalno za maloprodaju i uslužne delatnosti. Pokriva vaše poslovne procese na efikasan način."
+            "title": "Sistem na koji uvek možete računati",
+            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
-            "title": "Neverovatno lak za upotrebu",
-            "description": "Dosadili su vam programi kod kojih treba značajno vreme samo da bi promenili cenu jednog artikla? Konty je napravljen da bude intuitivan, efikasan i da vam brzo završava posao."
+            "title": "Vaš tim će ga savladati za manje od sat vremena",
+            "description": "Intuitivan dizajn koji zahteva minimalnu obuku. Novo osoblje počinje da radi za sat vremena, a ne danima. Manje vremena za obuku, više vremena za kupce.",
+            "icon": "i-heroicons-cursor-arrow-rays"
           },
           "feat3": {
-            "title": "Pouzdan",
-            "description": "Vaši podaci su uvek sigurni. Konty je cloud softver koji vam garantuje da nikada ne izgubite svoje podatke. Sve je centralizovano i uvek dostupno."
+            "title": "Kontrolišite brojke, rastite sigurnije",
+            "description": "Analitika u realnom vremenu koja pokazuje šta funkcioniše. Donosite prave odluke na osnovu podataka, ne pretpostavki. Pratite prodaju, zalihe i trendove—bilo kada, bilo gde.",
+            "icon": "i-heroicons-chart-bar"
           },
           "feat4": {
-            "title": "Napredni izveštaji",
-            "description": "Temeljni i precizni izveštaji koji su vam potrebni da bi vodili svoj posao. Omogućava vođenje precizne evidencije o zalihama, prometu robe, prihodima i rashodima."
+            "title": "Munjevito brza naplata",
+            "description": "Skeniranje barkoda, brza pretraga, težinski artikli, tasteri kategorija, tasteri artikala i prečice na tastaturi. Obradite transakcije za sekunde, uz sve načine plaćanja.",
+            "icon": "i-heroicons-shield-check"
           },
           "feat5": {
-            "title": "Dostupno svugde",
-            "description": "Konty radi na Web-u, Windows-u i Android-u. 24/7, bilo gde u svetu, imate besplatan daljinski pristup vašoj aplikaciji."
+            "title": "Kontrola zaliha bez muke",
+            "description": "Nivoi zaliha u realnom vremenu, praćenje niskih zaliha, upravljanje narudžbenicama i praćenje dobavljača. Potpuna kontrola bez ručnog unosa.",
+            "icon": "i-heroicons-globe-alt"
           },
           "feat6": {
-            "title": "Vrhunska korisnička podrška",
-            "description": "Naš tim je dostupan 24/7. Brza i efikasna korisnička podrška je temelj našeg poslovanja."
+            "title": "Uvek dostupan, uvek tu za vas",
+            "description": "Cloud sistem (Web, Windows, Android) sa offline režimom. Podrška 24/7 sa prosečnim vremenom odgovora od 30 sekundi. Tu smo kada vam zatrebamo.",
+            "icon": "i-heroicons-chat-bubble-left-right"
           },
           "hero": {
             "title": "Sve funkcionalnosti za maloprodaju",
@@ -771,66 +819,126 @@
             "title": "Moćne funkcionalnosti za vašu prodavnicu",
             "description": "Otkrijte kako Konty pojednostavljuje vaše maloprodajne operacije sa sveobuhvatnim alatima.",
             "group1": {
-              "title": "Pametno upravljanje zalihama",
-              "description": "Pratite zalihe u realnom vremenu na svim lokacijama.",
-              "imageAlt": "Panel za upravljanje zalihama",
+              "title": "Brza prodajna mesta",
+              "description": "Obrađujte transakcije brzo sa intuitivnim alatima za naplatu dizajniranim za maloprodaju.",
+              "imageAlt": "POS interfejs za naplatu",
               "item1": {
-                "text": "Praćenje zaliha u realnom vremenu na više lokacija",
-                "icon": "i-heroicons-cube"
-              },
-              "item2": {
-                "text": "Automatska upozorenja za niske zalihe i tačke ponovnog naručivanja",
-                "icon": "i-heroicons-bell-alert"
-              },
-              "item3": {
-                "text": "Skeniranje barkodova za brzo pretraživanje proizvoda",
+                "text": "Integracija skenera barkoda (standardni i težinski)",
                 "icon": "i-heroicons-qr-code"
               },
+              "item2": {
+                "text": "Konfiguracija tastera kategorija za brzi pristup",
+                "icon": "i-heroicons-squares-2x2"
+              },
+              "item3": {
+                "text": "Prečice tastera artikala za popularne proizvode",
+                "icon": "i-heroicons-star"
+              },
               "item4": {
-                "text": "Detaljni izveštaji i analitika zaliha",
-                "icon": "i-heroicons-chart-bar"
+                "text": "Prečice na tastaturi za napredne korisnike",
+                "icon": "i-heroicons-command-line"
+              },
+              "item5": {
+                "text": "Pretraga kupaca i istorija",
+                "icon": "i-heroicons-user-circle"
+              },
+              "item6": {
+                "text": "Integracija programa lojalnosti",
+                "icon": "i-heroicons-gift"
+              },
+              "item7": {
+                "text": "Upravljanje popustima i promocijama",
+                "icon": "i-heroicons-tag"
+              },
+              "item8": {
+                "text": "Više vrsta plaćanja: kreditne, debitne kartice, gotovina, beskontaktno",
+                "icon": "i-heroicons-credit-card"
+              },
+              "item9": {
+                "text": "Upozorenja za starosna ograničenja",
+                "icon": "i-heroicons-identification"
+              },
+              "item10": {
+                "text": "Prilagođavanje računa i slanje računa putem emaila",
+                "icon": "i-heroicons-document-text"
               }
             },
             "group2": {
-              "title": "Brza i sigurna naplata",
-              "description": "Procesuirajte transakcije brzo sa našim intuitivnim POS sistemom.",
-              "imageAlt": "POS interfejs za naplatu",
+              "title": "Napredno upravljanje zalihama",
+              "description": "Potpuna kontrola nad zalihama, proizvodima i nabavkom.",
+              "imageAlt": "Panel za upravljanje zalihama",
               "item1": {
-                "text": "Munjevito brzo procesiranje transakcija",
-                "icon": "i-heroicons-bolt"
+                "text": "Neograničen katalog proizvoda",
+                "icon": "i-heroicons-cube"
               },
               "item2": {
-                "text": "Podrška za više načina plaćanja",
-                "icon": "i-heroicons-credit-card"
+                "text": "Varijante proizvoda (veličina, boja, itd.)",
+                "icon": "i-heroicons-swatch"
               },
               "item3": {
-                "text": "Integracija programa lojalnosti kupaca",
-                "icon": "i-heroicons-gift"
+                "text": "Pretraga proizvoda pomoću barkoda",
+                "icon": "i-heroicons-magnifying-glass"
               },
               "item4": {
-                "text": "Sigurno i šifrovano procesiranje plaćanja",
-                "icon": "i-heroicons-lock-closed"
+                "text": "Upravljanje datumima isteka",
+                "icon": "i-heroicons-calendar"
+              },
+              "item5": {
+                "text": "Praćenje nivoa zaliha u realnom vremenu na svim lokacijama",
+                "icon": "i-heroicons-building-storefront"
+              },
+              "item6": {
+                "text": "Praćenje niskih zaliha",
+                "icon": "i-heroicons-bell-alert"
+              },
+              "item7": {
+                "text": "Upravljanje narudžbenicama",
+                "icon": "i-heroicons-document-text"
+              },
+              "item8": {
+                "text": "Poređenje cena dobavljača",
+                "icon": "i-heroicons-truck"
+              },
+              "item9": {
+                "text": "Sezonsko planiranje zaliha",
+                "icon": "i-heroicons-chart-bar"
               }
             },
             "group3": {
-              "title": "Poslovna inteligencija i izveštavanje",
-              "description": "Donosite odluke zasnovane na podacima uz sveobuhvatnu analitiku.",
-              "imageAlt": "Panel za analitiku i izveštavanje",
+              "title": "Više lokacija i analitika",
+              "description": "Centralizovana kontrola i uvidi u sve vaše prodavnice.",
+              "imageAlt": "Kontrolna tabla za više lokacija",
               "item1": {
-                "text": "Praćenje prodaje i prihoda u realnom vremenu",
-                "icon": "i-heroicons-chart-pie"
+                "text": "Centralizovana kontrolna tabla za izveštavanje po lokacijama",
+                "icon": "i-heroicons-squares-plus"
               },
               "item2": {
-                "text": "Analitika performansi zaposlenih",
-                "icon": "i-heroicons-users"
+                "text": "Jedinstvena vidljivost zaliha na svim lokacijama",
+                "icon": "i-heroicons-eye"
               },
               "item3": {
-                "text": "Uvid u performanse proizvoda",
-                "icon": "i-heroicons-shopping-bag"
+                "text": "Cene i promocije specifične za lokaciju",
+                "icon": "i-heroicons-tag"
               },
               "item4": {
-                "text": "Prilagodljivi izveštaji i eksporti",
+                "text": "Konsolidovano izveštavanje i analitika",
                 "icon": "i-heroicons-document-chart-bar"
+              },
+              "item5": {
+                "text": "Najbolje/najlošije performanse proizvoda po lokaciji",
+                "icon": "i-heroicons-chart-pie"
+              },
+              "item6": {
+                "text": "Performanse zaposlenih u svim prodavnicama",
+                "icon": "i-heroicons-users"
+              },
+              "item7": {
+                "text": "Obrasci ponašanja kupaca",
+                "icon": "i-heroicons-user-group"
+              },
+              "item8": {
+                "text": "Integrisano računovodstvo i poreska usklađenost",
+                "icon": "i-heroicons-document-check"
               }
             }
           }
