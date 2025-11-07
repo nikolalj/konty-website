@@ -247,7 +247,7 @@
       },
       "testimonials": {
         "title": "Šta kažu naši klijenti",
-        "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao",
+        "description": "Stabilnost, jednostavnost i podrška koji im pomažu da bez brige vode posao.",
         "items": {
           "t1": {
             "name": "Dragan Milčić",
@@ -277,7 +277,7 @@
       },
       "clients": {
         "title": "Naši klijenti",
-        "description": "Više od 9.000 preduzeća širom regiona svakodnevno koristi Konty"
+        "description": "Više od 9.000 biznisa širom regiona svakodnevno koristi Konty"
       },
       "getStarted": {
         "title": "Počni sa radom za 48h",
@@ -285,7 +285,7 @@
         "step1": {
           "tagline": "Prvi dan, ujutru",
           "title": "15-minutni poziv",
-          "description": "Kažite nam kakav vam je posao i šta vam treba. Mi vam spremimo sistem koji vam odgovara."
+          "description": "Kažite nam kakav vam je posao i šta vam treba. Mi spremimo sistem koji vam odgovara."
         },
         "step2": {
           "tagline": "Prvi dan, popodne",
@@ -1241,7 +1241,7 @@
           },
           "implementation": {
             "title": "Brza implementacija",
-            "description": "Ako se odlučite, možemo vas pokrenuti za 48 sati"
+            "description": "Ako se odlučite, možete startovati za 48 sati"
           },
           "trial": {
             "title": "30 dana besplatnog korišćenja",
@@ -1432,28 +1432,28 @@
         "title": "Zašto postati Konty partner",
         "description": "Pridružite se našoj mreži partnera i rastite zajedno sa nama",
         "benefit1": {
-          "title": "Atraktivna provizija",
-          "description": "Zaradite konkurentnu proviziju na svakoj prodaji i uživajte u predvidivom pasivnom prihodu kroz model mesečnih pretplata."
+          "title": "Odlične partnerske cene",
+          "description": "Atraktivna struktura cena sa podsticajima zasnovanim na obimu prodaje. Maksimizujte profitabilnost i rastite zajedno sa nama."
         },
         "benefit2": {
-          "title": "Ekskluzivna područja",
-          "description": "Dobijte ekskluzivna teritorijalna prava za vašu oblast i izgradite stabilnu klijentsku bazu bez direktne konkurencije."
+          "title": "Provereno rešenje",
+          "description": "Prodajte pouzdan cloud POS sistem kome veruje preko 9.000 biznisa u trgovini i ugostiteljstvu širom regiona."
         },
         "benefit3": {
-          "title": "Marketing podrška",
-          "description": "Pristup profesionalnim marketing materijalima, kampanjama i demo verzijama koje olakšavaju prodaju."
+          "title": "Obuka i tehnička podrška",
+          "description": "Kompletna obuka uz dediciranu tehničku liniju i pomoć stručnog tima za uspešnu implementaciju i održavanje klijentskih rešenja."
         },
         "benefit4": {
-          "title": "Obuke i sertifikacija",
-          "description": "Sveobuhvatni programi obuke za vas i vaš tim sa stalnim unapređenjem znanja i veština."
+          "title": "Partnerski portal i automatizacije",
+          "description": "Moderan partnerski portal sa automatizacijama koje pojednostavljuju implementaciju, održavanje i naplatu - fokusirajte se na rast biznisa."
         },
         "benefit5": {
-          "title": "Tehnička podrška",
-          "description": "24/7 tehnička pomoć i specijalističke usluge za vaše klijente direktno od našeg stručnog tima."
+          "title": "Marketing podrška",
+          "description": "Profesionalni marketing materijali, alati za prodaju i aktivna podrška u generisanju potencijalnih klijenata."
         },
         "benefit6": {
-          "title": "Rastite zajedno",
-          "description": "Pridružite se kompaniji koja raste, sa 26+ godina iskustva i hiljade zadovoljnih korisnika širom regiona."
+          "title": "Rastimo zajedno",
+          "description": "Pridružite se rastućoj kompaniji sa dugogodišnjim iskustvom i preko 9.000 zadovoljnih korisnika širom regiona."
         }
       },
       "flow": {
@@ -1461,8 +1461,8 @@
         "description": "Jednostavan proces od prijave do pokretanja",
         "steps": {
           "step1": {
-            "title": "Kontaktirajte nas",
-            "description": "Popunite formular za prijavu i predstavite se"
+            "title": "Kontakt i prezentacija",
+            "description": "Popunite formular i naš tim će vas kontaktirati u roku od 24 sata. Upoznajte Konty sistem i mogućnosti partnerstva."
           },
           "step2": {
             "title": "Dogovor",
@@ -1484,32 +1484,30 @@
         "types": {
           "technical": {
             "title": "Tehnička podrška",
-            "description": "Dobijte tehničku podršku koja vam je potrebna za sigurnu implementaciju i podršku Konty rešenja.",
+            "description": "Dobijate superiornu, uvijek dostpunu tehničku podršku i moderan sistem sa mnoštvom automatizacija koje Vam značajno olakšavaju posao.",
             "features": {
-              "feature1": "24/7 tehnička pomoć za vaše klijente",
-              "feature2": "Pristup internom timu za složene slučajeve",
+              "feature1": "Dedicirana linija za tehničku podršku",
+              "feature2": "Partnerski portal i automatizacije procesa",
               "feature3": "Redovne nadogradnje i nove funkcije",
-              "feature4": "Testno okruženje i demo računi"
+              "feature4": "Testno okruženje i demo nalozi"
             }
           },
-          "commercial": {
+         "commercial": {
             "title": "Komercijalna podrška",
-            "description": "Atraktivni komercijalni uslovi koji maksimizuju vašu profitabilnost.",
+            "description": "Atraktivni komercijalni uslovi koji maksimiziraju vašu profitabilnost, kreirani tako da rastemo zajedno.",
             "features": {
-              "feature1": "Specijalne cene za partnere",
-              "feature2": "Fleksibilni uslovi plaćanja",
-              "feature3": "Mesečne provizije i bonusi",
-              "feature4": "Ekskluzivne promocije za partnere"
+              "feature1": "Odlične partnerske cene",
+              "feature2": "Podsticaji zasnovani na obimu",
+              "feature3": "Automatizacija sistema naplate"
             }
           },
           "marketing": {
             "title": "Marketing podrška",
-            "description": "Marketing materijali i co-marketing prilike koje pomažu vašem uspehu.",
+            "description": "Marketing materijali i prilike koje pomažu vašem uspehu kroz dinamičan rast broja klijenata.",
             "features": {
               "feature1": "Prilagodljivi marketing materijali",
-              "feature2": "Co-marketing kampanje",
-              "feature3": "Podrška na društvenim mrežama",
-              "feature4": "Lead generation programi"
+              "feature2": "Podrška na društvenim mrežama",
+              "feature3": "Podrška u generisanju potencijalnih klijenata"
             }
           }
         }
@@ -1522,13 +1520,13 @@
             "name": "Miloš Marković",
             "company": "Sekas",
             "title": "Konty nam omogućava da našim klijentima ponudimo najbolje",
-            "quote": "Partnerstvo sa Konty timom donelo je našem poslovanju novu dimenziju. Kvalitet proizvoda i podrška koju dobijamo omogućavaju nam da se fokusiramo na ono što je najvažnije - zadovoljne klijente."
+            "quote": "Partnerstvo sa Konty timom donelo je našem poslovanju novu dimenziju. Kvalitet proizvoda, automatizacija procesa i podrška koju dobijamo omogućili su nam da operativno opterećenje našeg tima značajno smanjima i da se fokusiramo na ono što je najvažnije - zadovoljne klijente."
           },
           "t2": {
             "name": "Vladimir Adžić",
             "company": "Digitron Ist",
             "title": "Stabilno i pouzdano rešenje za naše klijente",
-            "quote": "Konty se pokazao kao izuzetno stabilno i pouzdano rešenje. Tehnička podrška je uvek tu kada nam treba, a klijenti su zadovoljni funkcionalnostima sistema. To je osnova dobrog partnerstva."
+            "quote": "Konty se pokazao kao izuzetno stabilno, pouzdano i napredno rešenje koje nam značajno štedi vreme i resurse potrebne za implementaciju i održavanje. Tehnička podrška je uvek tu kada nam treba, a klijenti su veoma zadovoljni funkcionalnostima sistema. To je osnova dobrog partnerstva."
           }
         }
       },

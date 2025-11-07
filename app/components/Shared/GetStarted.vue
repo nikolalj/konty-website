@@ -1,8 +1,8 @@
 <template>
   <SharedSection
     :variant="props.variant"
-    :title="t('pages.home.getStarted.title')"
-    :description="t('pages.home.getStarted.description')"
+    :title="sectionTitle"
+    :description="sectionDescription"
   >
     <UIAppear direction="down" :distance="32">
       <div class="w-full">
@@ -50,6 +50,7 @@
               <!-- Content -->
               <div class="flex flex-col flex-1 sm:pt-4">
                 <p
+                  v-if="step.tagline"
                   class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2"
                 >
                   {{ step.tagline }}
@@ -80,35 +81,82 @@ const props = defineProps({
   variant: {
     type: String as PropType<SectionVariantType>,
     default: undefined
+  },
+  category: {
+    type: String as PropType<'user' | 'partner'>,
+    default: 'user'
   }
 })
 
 const { t } = useI18n()
 
-const steps = [
-  {
-    tagline: t('pages.home.getStarted.step1.tagline'),
-    title: t('pages.home.getStarted.step1.title'),
-    description: t('pages.home.getStarted.step1.description'),
-    icon: 'i-lucide-phone-incoming'
-  },
-  {
-    tagline: t('pages.home.getStarted.step2.tagline'),
-    title: t('pages.home.getStarted.step2.title'),
-    description: t('pages.home.getStarted.step2.description'),
-    icon: 'i-lucide-folder-check'
-  },
-  {
-    tagline: t('pages.home.getStarted.step3.tagline'),
-    title: t('pages.home.getStarted.step3.title'),
-    description: t('pages.home.getStarted.step3.description'),
-    icon: 'i-lucide-monitor'
-  },
-  {
-    tagline: t('pages.home.getStarted.step4.tagline'),
-    title: t('pages.home.getStarted.step4.title'),
-    description: t('pages.home.getStarted.step4.description'),
-    icon: 'i-lucide-rocket'
+const sectionTitle = computed(() => {
+  return props.category === 'partner'
+    ? t('pages.partners.flow.title')
+    : t('pages.home.getStarted.title')
+})
+
+const sectionDescription = computed(() => {
+  return props.category === 'partner'
+    ? t('pages.partners.flow.description')
+    : t('pages.home.getStarted.description')
+})
+
+const steps = computed(() => {
+  if (props.category === 'partner') {
+    return [
+      {
+        tagline: t('pages.partners.flow.steps.step1.tagline', ''),
+        title: t('pages.partners.flow.steps.step1.title'),
+        description: t('pages.partners.flow.steps.step1.description'),
+        icon: 'i-lucide-mail'
+      },
+      {
+        tagline: t('pages.partners.flow.steps.step2.tagline', ''),
+        title: t('pages.partners.flow.steps.step2.title'),
+        description: t('pages.partners.flow.steps.step2.description'),
+        icon: 'i-lucide-handshake'
+      },
+      {
+        tagline: t('pages.partners.flow.steps.step3.tagline', ''),
+        title: t('pages.partners.flow.steps.step3.title'),
+        description: t('pages.partners.flow.steps.step3.description'),
+        icon: 'i-lucide-graduation-cap'
+      },
+      {
+        tagline: t('pages.partners.flow.steps.step4.tagline', ''),
+        title: t('pages.partners.flow.steps.step4.title'),
+        description: t('pages.partners.flow.steps.step4.description'),
+        icon: 'i-lucide-rocket'
+      }
+    ]
   }
-]
+
+  return [
+    {
+      tagline: t('pages.home.getStarted.step1.tagline'),
+      title: t('pages.home.getStarted.step1.title'),
+      description: t('pages.home.getStarted.step1.description'),
+      icon: 'i-lucide-phone-incoming'
+    },
+    {
+      tagline: t('pages.home.getStarted.step2.tagline'),
+      title: t('pages.home.getStarted.step2.title'),
+      description: t('pages.home.getStarted.step2.description'),
+      icon: 'i-lucide-folder-check'
+    },
+    {
+      tagline: t('pages.home.getStarted.step3.tagline'),
+      title: t('pages.home.getStarted.step3.title'),
+      description: t('pages.home.getStarted.step3.description'),
+      icon: 'i-lucide-monitor'
+    },
+    {
+      tagline: t('pages.home.getStarted.step4.tagline'),
+      title: t('pages.home.getStarted.step4.title'),
+      description: t('pages.home.getStarted.step4.description'),
+      icon: 'i-lucide-rocket'
+    }
+  ]
+})
 </script>

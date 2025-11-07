@@ -71,12 +71,12 @@ const supportTypes = [
   {
     key: 'commercial',
     icon: 'i-lucide-briefcase',
-    featureCount: 4
+    featureCount: 3
   },
   {
     key: 'marketing',
     icon: 'i-lucide-megaphone',
-    featureCount: 4
+    featureCount: 3
   }
 ]
 </script>

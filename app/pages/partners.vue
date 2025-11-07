@@ -19,7 +19,7 @@
     <LazySharedBenefits category="partners" variant="alt" hydrate-on-visible />
 
     <!-- Partnership process flow -->
-    <LazyAboutPartnersFlow hydrate-on-visible />
+    <LazySharedGetStarted category="partner" hydrate-on-visible />
 
     <!-- Partner support details -->
     <LazyAboutPartnersSupport variant="alt" hydrate-on-visible />
