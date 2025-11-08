@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Critical above-fold - hydrate immediately -->
-    <!-- <AboutClientStoriesHero /> -->
+    <AboutClientStoriesHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <LazySharedClientList variant="alt" class="dark !pt-42" hydrate-on-visible />

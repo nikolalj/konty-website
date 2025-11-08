@@ -1,8 +1,8 @@
 <template>
   <div class="mt-24">
     <SharedPricing heading-level="h1" />
-    <LazySharedGetStarted variant="alt" />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedFAQ category="pricing" hydrate-on-visible />
   </div>
 </template>
 
@@ -47,6 +47,9 @@ defineOgImageComponent('Pricing', {
   ]
 })
 
-// Use centralized schema
-useSchemaOrg([schemas.pricingProduct()])
+// Use centralized schemas
+useSchemaOrg([
+  schemas.pricingProduct(),
+  schemas.faqSchema(useFaqSchema('pages.pricing.faq'))
+])
 </script>

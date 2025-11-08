@@ -1,6 +1,6 @@
 <template>
   <div class="mt-24">
-    <LazySharedFAQ heading-level="h1" hydrate-on-visible />
+    <LazySharedFAQ category="faqdocs" heading-level="h1" hydrate-on-visible />
 
     <!-- Documentation Section -->
     <SharedSection variant="alt">
@@ -68,9 +68,15 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const schemas = useSchemas()
 
 usePageSeo({
   title: t('seo.products.faqdocs.title'),
   description: t('seo.products.faqdocs.description')
 })
+
+// Use FAQ schema
+useSchemaOrg([
+  schemas.faqSchema(useFaqSchema('pages.products.faqdocs.faq'))
+])
 </script>

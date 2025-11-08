@@ -1,5 +1,6 @@
 <template>
   <SharedSection
+    v-if="faqData"
     :variant="props.variant"
     :heading-level="props.headingLevel"
     :title="faqData.title"
@@ -71,7 +72,22 @@ const props = defineProps({
     default: undefined,
   },
   category: {
-    type: String as PropType<'retail' | 'hospitality' | 'partners' | undefined>,
+    type: String as PropType<
+      | 'retail-features'
+      | 'hospitality-features'
+      | 'partners'
+      | 'solutions'
+      | 'faqdocs'
+      | 'pricing'
+      | 'restaurants'
+      | 'bars-cafes'
+      | 'fast-food'
+      | 'grocery-supermarkets'
+      | 'clothing-boutiques'
+      | 'convenience-stores'
+      | 'b2b'
+      | undefined
+    >,
     default: undefined
   },
   headingLevel: {
@@ -83,12 +99,31 @@ const props = defineProps({
 const { tObject } = useUtils()
 
 const faqData = computed(() => {
+  // Handle special categories
   if (props.category === 'partners') return tObject('pages.partners.faq')
-  if (props.category) return tObject(`pages.products.${props.category}.faq`)
-  return tObject('pages.products.faq')
+  if (props.category === 'solutions') return tObject('pages.solutions.faq')
+  if (props.category === 'faqdocs') return tObject('pages.products.faqdocs.faq')
+  if (props.category === 'pricing') return tObject('pages.pricing.faq')
+
+  // Handle product pages product feature pages
+  if (props.category === 'retail-features') return tObject('pages.products.retail.features.faq')
+  if (props.category === 'hospitality-features') return tObject('pages.products.hospitality.features.faq')
+
+  // Handle solution categories
+  if (props.category === 'restaurants') return tObject('pages.solutions.restaurants.faq')
+  if (props.category === 'bars-cafes') return tObject('pages.solutions.barsCafes.faq')
+  if (props.category === 'fast-food') return tObject('pages.solutions.fastFood.faq')
+  if (props.category === 'grocery-supermarkets') return tObject('pages.solutions.grocerySupermarkets.faq')
+  if (props.category === 'clothing-boutiques') return tObject('pages.solutions.clothingBoutiques.faq')
+  if (props.category === 'convenience-stores') return tObject('pages.solutions.convenienceStores.faq')
+  if (props.category === 'b2b') return tObject('pages.solutions.b2b.faq')
+
+  return undefined
 })
 
 const faqItems = computed(() => {
+  if(!faqData.value) return []
+
   const items = []
   const faq = faqData.value
 

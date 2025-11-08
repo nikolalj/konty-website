@@ -50,5 +50,8 @@ defineOgImageComponent('Main', {
 })
 
 // Use centralized schema
-useSchemaOrg([schemas.partners()])
+useSchemaOrg([
+  schemas.partners(),
+  schemas.faqSchema(useFaqSchema('pages.partners.faq'))
+])
 </script>

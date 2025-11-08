@@ -12,7 +12,7 @@
 
     <!-- Bottom sections -->
     <LazySharedPricing hydrate-on-visible />
-    <LazySharedFAQ hydrate-on-visible />
+    <LazySharedFAQ category="solutions" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
@@ -28,7 +28,10 @@ usePageSeo({
 })
 
 // Schema.org - General service overview
-useSchemaOrg([schemas.solutionService('')])
+useSchemaOrg([
+  schemas.solutionService(''),
+  schemas.faqSchema(useFaqSchema('pages.solutions.faq'))
+])
 
 // OG Image
 defineOgImageComponent('Main', {

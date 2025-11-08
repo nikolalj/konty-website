@@ -12,7 +12,7 @@
 
     <!-- Reusable components -->
     <LazySharedPricing product="hospitality" hydrate-on-visible />
-    <LazySharedFAQ category="hospitality" hydrate-on-visible />
+    <LazySharedFAQ category="bars-cafes" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
@@ -28,7 +28,10 @@ usePageSeo({
 })
 
 // Schema.org
-useSchemaOrg([schemas.solutionService('bars-cafes')])
+useSchemaOrg([
+  schemas.solutionService('bars-cafes'),
+  schemas.faqSchema(useFaqSchema('pages.solutions.barsCafes.faq'))
+])
 
 // OG Image
 defineOgImageComponent('Main', {

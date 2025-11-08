@@ -15,7 +15,7 @@
 
     <!-- Reusable components -->
     <LazySharedPricing product="retail" hydrate-on-visible />
-    <LazySharedFAQ category="retail" hydrate-on-visible />
+    <LazySharedFAQ category="grocery-supermarkets" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />
   </div>
 </template>
@@ -31,7 +31,10 @@ usePageSeo({
 })
 
 // Schema.org
-useSchemaOrg([schemas.solutionService('grocery-supermarkets')])
+useSchemaOrg([
+  schemas.solutionService('grocery-supermarkets'),
+  schemas.faqSchema(useFaqSchema('pages.solutions.grocerySupermarkets.faq'))
+])
 
 // OG Image
 defineOgImageComponent('Main', {

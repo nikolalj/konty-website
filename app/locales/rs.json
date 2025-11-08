@@ -47,8 +47,7 @@
         "email": "Email",
         "businessHours": "Radno vreme",
         "weekdays": "Ponedeljak - Petak"
-      },
-      "loading": {}
+      }
     },
     "contactForm": {
       "title": "Imate pitanja? Kontaktirajte nas.",
@@ -237,7 +236,7 @@
         "stat2": {
           "description": "Godina iskustva u POS sistemima",
           "suffix": "+",
-          "value": "26"
+          "value": "14"
         },
         "stat3": {
           "description": "Prosečno vreme odgovora podrške",
@@ -412,12 +411,22 @@
         }
       },
       "faq": {
-        "pricing": {
-          "a1": "Imamo tri paketa: Start (2.990 RSD), Standard (4.990 RSD) i Premium (9.990 RSD) mesečno. Svaki paket uključuje različite funkcionalnosti.",
-          "a2": "Ne, nema skrivenih troškova. Cena paketa uključuje sve - ažuriranja, podršku i hosting. Plaćate samo mesečnu pretplatu.",
-          "q1": "Koliko košta Konty?",
-          "q2": "Da li postoje skriveni troškovi?"
-        }
+        "title": "Često postavljana pitanja",
+        "subtitle": "Odgovori na najčešća pitanja o cenama i planovima",
+        "q1": "Postoje li skriveni troškovi ili naknade?",
+        "a1": "Ne, nikada. Nema troškova podešavanja, skrivenih naknada ili iznenađenja. Platite samo mesečnu pretplatu koja uključuje sve funkcije, podršku, ažuriranja i cloud hosting. Potpuna transparentnost—šta vidite to i dobijate.",
+        "q2": "Mogu li kasnije da promenim plan?",
+        "a2": "Apsolutno. Nadogradite ili pređite na niži plan bilo kada—nema zaključavanja ugovora. Ako vaš posao raste, prelazite na viši plan. Ako vam treba manje, pređite na niži. Promena stupa na snagu odmah i naplaćujemo samo za ono što koristite.",
+        "q3": "Šta obuhvata besplatno probanje od 30 dana?",
+        "a3": "Puni pristup svim funkcijama vašeg izabranog plana—bez ograničenja. Testirajte upravljanje zalihama, izveštavanje, offline režim, sve. Nije potrebna kreditna kartica za početak. Ako vam ne odgovara u roku od 30 dana, jednostavno odustanite. Bez pritiska.",
+        "q4": "Da li se naplaćuje po uređaju ili po lokaciji?",
+        "a4": "Naplaćujemo po lokaciji, ne po uređaju. Jedna mesečna naknada pokriva neograničen broj uređaja u toj prodavnici—koristite koliko god POS terminala, tableta i telefona želite. Više lokacija? Svaka se naplaćuje odvojeno, ali sa popustima za više lokacija.",
+        "q5": "Šta se dešava ako prekoračim limite plana?",
+        "a5": "Nikada nećete biti blokirani. Ako prekoračite limite, bićete obavešteni i možete nadograditi u bilo kom trenutku. Tokom prelaznog perioda, vaš sistem i dalje radi normalno—nikada ne prekidamo uslugu zbog prelaska limita. Vaš posao je važniji.",
+        "q6": "Nudite li popuste za više lokacija?",
+        "a6": "Da! Specijalne cene za lance sa više lokacija. Što više lokacija koristite Konty, to su niži troškovi po lokaciji. Kontaktirajte naš tim za prilagođene cene za 3+ lokacije ili korporativne planove sa dodatnim funkcijama.",
+        "q7": "Mogu li da otkažem bilo kada?",
+        "a7": "Da, bez penala. Nema dugoročnih ugovora ili naknada za otkazivanje. Ako Konty ne funkcioniše za vaš posao, jednostavno otkažite—vaši podaci ostaju dostupni za izvoz. Verujemo u zadržavanje kupaca kroz vrednost, a ne kroz ugovorne obaveze."
       }
     },
     "products": {
@@ -427,7 +436,7 @@
         "hospitality": {
           "feat1": {
             "title": "Sistem na koji uvek možete računati",
-            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
@@ -459,7 +468,7 @@
         "retail": {
           "feat1": {
             "title": "Sistem na koji uvek možete računati",
-            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
@@ -489,54 +498,6 @@
           }
         }
       },
-      "faq": {
-        "title": "Često postavljana pitanja",
-        "subtitle": "Pronađite odgovore na uobičajena pitanja o Konty POS sistemu",
-        "a1": "Konty je moderan sistem za upravljanje prodajom koji pomaže preduzećima da digitalizuju svoje poslovanje. Omogućava praćenje prodaje, zaliha, izveštaja i fiskalizaciju, sve u jednom rešenju.",
-        "a2": "Da, Konty radi i bez internet konekcije. Svi podaci se čuvaju lokalno, a sinhronizuju se automatski kada se povezujete na internet.",
-        "a3": "Možete početi za samo 5 minuta! Registrujte se, dodajte proizvode i počnite sa prodajom. Ne zahteva instalaciju ili poseban hardver.",
-        "a4": "Da, Konty je potpuno usklađen sa zakonima o fiskalizaciji u Srbiji, Crnoj Gori i BiH. Automatski izdaje fiskalne račune.",
-        "a5": "Dobijate 30 dana besplatnog korišćenja sa svim funkcionalnostima. Ne zahteva kreditnu karticu. Nakon isteka, možete izabrati plan koji vam odgovara.",
-        "q1": "Šta je Konty POS sistem?",
-        "q2": "Da li mogu koristiti Konty bez interneta?",
-        "q3": "Koliko brzo mogu početi sa korišćenjem?",
-        "q4": "Da li Konty podržava fiskalizaciju?",
-        "q5": "Kako funkcioniše besplatni probni period?"
-      },
-      "download": {
-        "hero": {
-          "title": "Gde god ti treba!",
-          "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-          "description": "Dostupan na svim platformama - web, Windows, Android i MacOS. Koristi Konty gde god ti je potreban.",
-          "docsLink": "Za detaljne instrukcije i dokumentaciju",
-          "docsLinkText": "kliknite ovde",
-          "docsTitle": "Kompletna dokumentacija i vodiči",
-          "docsDescription": "Sve što ti treba da savladaš Konty POS - od brzih vodiča do napredne konfiguracije i rešavanja problema.",
-          "docsBadge": "Dokumentacija"
-        },
-        "sections": {
-          "production": {
-            "title": "Preuzmi Konty",
-            "web": "Web",
-            "windows": "Windows",
-            "android": "Android",
-            "macos": "macOS"
-          },
-          "demo": {
-            "title": "Preuzmi Konty Demo",
-            "web": "Web",
-            "windows": "Windows",
-            "android": "Android",
-            "macos": "macOS"
-          },
-          "lprf": {
-            "title": "Preuzmi LPRF",
-            "windows": "Windows",
-            "macos": "macOS"
-          }
-        }
-      },
-      "partners": {},
       "hospitality": {
         "hero": {
           "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
@@ -576,7 +537,7 @@
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "feat1": {
             "title": "Sistem na koji uvek možete računati",
-            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
@@ -718,19 +679,27 @@
                 "icon": "i-heroicons-users"
               }
             }
+          },
+          "faq": {
+            "title": "Često postavljana pitanja",
+            "subtitle": "Najčešća pitanja o funkcionalnostima Konty ugostiteljstva",
+            "q1": "Mogu li da upravljam sa više lokacija?",
+            "a1": "Da, Konty podržava upravljanje sa više lokacija uz centralizovane izveštaje, jedinstvene jelovnike i podatke u realnom vremenu. Pratite performanse, kontrolišite zalihe i upravljajte osobljem sa jedne kontrolne table—savršeno za grupe restorana i lance.",
+            "q2": "Da li sistem radi bez interneta?",
+            "a2": "Da, Konty radi besprekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaš restoran nikada ne prestaje da prima narudžbine, čak ni tokom prekida interneta—potpuna offline funkcionalnost ugrađena u sistem.",
+            "q3": "Koliko traje proces podešavanja?",
+            "a3": "Većina restorana je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
+            "q4": "Mogu li da zadržim postojeću opremu?",
+            "a4": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kitchen display sisteme. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
+            "q5": "Šta je sa obukom osoblja?",
+            "a5": "Naš intuitivan interfejs zahteva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Pružamo obuku na licu mesta tokom podešavanja i materijale za kontinuiranu podršku. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
+            "q6": "Da li se integriše sa platformama za dostavu?",
+            "a6": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbine sa delivery aplikacija dolaze direktno u vaš POS i kitchen display sistem—bez ručnog unosa i propuštenih narudžbina. Jedan sistem za sve: jelo u lokalu, poneti i dostavu.",
+            "q7": "Mogu li da prilagodim modifikatore za stavke u meniju?",
+            "a7": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahteve—kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbinom, što osigurava tačnost i zadovoljstvo gostiju.",
+            "q8": "Da li podržava deljenje računa i odvojene naplate?",
+            "a8": "Da, deljenje računa po artiklima, po osobi, po procentu ili podjednako. Podržava više metoda plaćanja na jednom računu—kartica, gotovina, poklon kartice. Rešavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim."
           }
-        },
-        "faq": {
-          "q1": "Mogu li da upravljam sa više lokacija?",
-          "a1": "Da, Konty podržava upravljanje sa više lokacija uz centralizovane izveštaje.",
-          "q2": "Da li radi bez interneta?",
-          "a2": "Da, sve transakcije se automatski sinhronizuju kad se veza ponovo uspostavi.",
-          "q3": "Koliko dugo traje podešavanje?",
-          "a3": "Većina restorana je spremna za rad u roku od 48 sati.",
-          "q4": "Mogu li zadržati postojeću opremu?",
-          "a4": "Da, Konty radi sa većinom postojeće POS opreme.",
-          "q5": "Šta je sa obukom osoblja?",
-          "a5": "Naš intuitivan interfejs zahteva minimalnu obuku. Većina osoblja nauči za manje od 30 minuta."
         }
       },
       "retail": {
@@ -775,7 +744,7 @@
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "feat1": {
             "title": "Sistem na koji uvek možete računati",
-            "description": "Preko 26 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi—dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
             "icon": "i-heroicons-shopping-cart"
           },
           "feat2": {
@@ -941,19 +910,76 @@
                 "icon": "i-heroicons-document-check"
               }
             }
+          },
+          "faq": {
+            "title": "Često postavljana pitanja",
+            "subtitle": "Najčešća pitanja o funkcionalnostima Konty trgovine",
+            "q1": "Mogu li da upravljam zalihama u više prodavnica?",
+            "a1": "Da, Konty omogućava sinhronizaciju zaliha u realnom vremenu na svim lokacijama. Pregledajte nivoe zaliha, prebacujte proizvode između prodavnica i dobijajte konsolidovane izveštaje—sve sa jedne centralizovane kontrolne table. Savršeno za lance i poslovanja sa više lokacija.",
+            "q2": "Da li podržava skeniranje barkodova?",
+            "a2": "Da, Konty radi sa svim standardnim skenerima barkodova uključujući USB, Bluetooth i mobilne uređaje. Podržava i obične barkodove i težinske barkodove za vage. Brza i precizna naplata pri svakom skeniranju.",
+            "q3": "Šta je sa programima lojalnosti?",
+            "a3": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca. Nagradite redovne kupce, pratite istoriju kupovine, šaljite ciljane promocije i gradite dugoročne odnose—sve uključeno u vaš plan bez dodatnih troškova.",
+            "q4": "Mogu li da uvezem postojeće zalihe?",
+            "a4": "Da, obezbeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema. Naš tim vam pomaže da uvezete proizvode, kupce i podatke o zalihama—bez ručnog unosa. Većina migracija se završava za 24 sata.",
+            "q5": "Kako se obrađuju povraćaji?",
+            "a5": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha. Obradite refundacije, zamene i kreditne zapise odmah. Svi podaci o povraćajima se beleže za izveštavanje i upravljanje zalihama.",
+            "q6": "Da li radi sa mojim postojećim hardverom?",
+            "a6": "Da, Konty je kompatibilan sa većinom postojećeg POS hardvera uključujući fiskalne štampače, skenere barkodova, fioke za novac, displeje za kupce i tablete. Koristite ono što već imate ili možemo preporučiti pristupačne kompatibilne opcije.",
+            "q7": "Mogu li da pratim zalihe u realnom vremenu na više lokacija?",
+            "a7": "Naravno. Svaka prodaja, povraćaj i podešavanje zaliha ažurira inventar u realnom vremenu na svim lokacijama. Postavite upozorenja za niske zalihe, automatizirajte tačke ponovnog naručivanja i nikada ne ostanite bez najprodavanijih artikala. Potpuna vidljivost.",
+            "q8": "Da li podržava različite cene za različite tipove kupaca?",
+            "a8": "Da, kreirajte više cenovnika za veleprodajne kupce, VIP kupce ili kupce na veliko. Dodelite specifične cenovne nivoe različitim grupama kupaca i Konty automatski primenjuje tačne cene pri naplati."
           }
+        }
+      },
+      "download": {
+        "hero": {
+          "title": "Gde god ti treba!",
+          "subtitle": "Preuzmi Konty za bilo koji uređaj ili platformu.",
+          "description": "Dostupan na svim platformama - web, Windows, Android i MacOS. Koristi Konty gde god ti je potreban.",
+          "docsLink": "Za detaljne instrukcije i dokumentaciju",
+          "docsLinkText": "kliknite ovde",
+          "docsTitle": "Kompletna dokumentacija i vodiči",
+          "docsDescription": "Sve što ti treba da savladaš Konty POS - od brzih vodiča do napredne konfiguracije i rešavanja problema.",
+          "docsBadge": "Dokumentacija"
         },
+        "sections": {
+          "production": {
+            "title": "Preuzmi Konty",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          },
+          "demo": {
+            "title": "Preuzmi Konty Demo",
+            "web": "Web",
+            "windows": "Windows",
+            "android": "Android",
+            "macos": "macOS"
+          },
+          "lprf": {
+            "title": "Preuzmi LPRF",
+            "windows": "Windows",
+            "macos": "macOS"
+          }
+        }
+      },
+      "faqdocs": {
         "faq": {
-          "q1": "Mogu li da upravljam zalihama u više prodavnica?",
-          "a1": "Da, sinhronizacija zaliha u realnom vremenu na svim vašim lokacijama.",
-          "q2": "Da li podržava skeniranje barkodova?",
-          "a2": "Da, radi sa svim standardnim skenerima barkodova i mobilnim uređajima.",
-          "q3": "Šta je sa programima lojalnosti?",
-          "a3": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca.",
-          "q4": "Mogu li da uvezem postojeće zalihe?",
-          "a4": "Da, obezbeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema.",
-          "q5": "Kako se obrađuju povraćaji?",
-          "a5": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha."
+          "title": "Često postavljana pitanja",
+          "subtitle": "Odgovori na najčešća pitanja o dokumentaciji i preuzimanju",
+          "q1": "Gde mogu da preuzmem Konty aplikaciju?",
+          "a1": "Konty je dostupan za preuzimanje na svim glavnim platformama - Windows, Android i web aplikacija. Posetite našu stranicu za preuzimanje ili kliknite na dugme iznad za pristup kompletnoj dokumentaciji sa linkovima za vašu platformu.",
+          "q2": "Da li moram da instaliram aplikaciju ili mogu koristiti web verziju?",
+          "a2": "Konty radi na oba načina! Možete koristiti našu web aplikaciju direktno iz pretraživača bez instalacije, ili preuzeti desktop/mobilnu aplikaciju za offline pristup i bolje performanse. Svi podaci se automatski sinhronizuju na svim uređajima.",
+          "q3": "Gde mogu naći priručnike i dokumentaciju?",
+          "a3": "Kompletna dokumentacija je dostupna na docs.konty.com. Tu ćete naći brze vodiče za početak rada, detaljne priručnike za sve funkcije, video tutorijale, rešavanje problema i najbolje prakse. Sva dokumentacija je besplatna i redovno se ažurira.",
+          "q4": "Da li postoje video tutorijali?",
+          "a4": "Da, imamo opsežnu biblioteku video tutorijala koja pokriva sve aspekte Konty POS-a - od osnovnog podešavanja do naprednih funkcija. Svi video vodiči su dostupni u dokumentaciji i organizovani po temama za lako pronalaženje.",
+          "q5": "Koliko često se dokumentacija ažurira?",
+          "a5": "Dokumentaciju ažuriramo sa svakim novim izdanjem proizvoda. Takođe redovno dodajemo nove vodiče, FAQ odgovore i primere na osnovu povratnih informacija od korisnika. Uvek ćete naći najnovije informacije u našem centru za dokumentaciju."
         }
       }
     },
@@ -1019,6 +1045,20 @@
             "description": "Praćenje prodaje konobara, napojnica i učinka sa detaljnom analitikom i izveštajima",
             "icon": "i-heroicons-user-group"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za restorane",
+          "q1": "Da li Konty omogućava upravljanje stolovima i narudžbinama?",
+          "a1": "Da, Konty pruža kompletno upravljanje stolovima sa vizuelnim planovima sale, statusom stolova u realnom vremenu, dodeljivanjem konobara i besprekorno usmeravanje narudžbina na kuhinjski displej. Od smeštaja gostiju do naplate, sve je povezano u jednom sistemu.",
+          "q2": "Mogu li konobari da uzimaju narudžbine na mobilnim uređajima?",
+          "a2": "Naravno. Konobari koriste tablete ili telefone za uzimanje narudžbina pored stola sa sinhronizacijom u realnom vremenu ka kuhinji i baru. Bez ručno pisanih narudžbina ili šetnje do terminala—narudžbine idu direktno u kuhinju odmah, što smanjuje greške i poboljšava brzinu.",
+          "q3": "Kako radi tokom špica bez interneta?",
+          "a3": "Konty radi besprekorno offline sa punom funkcionalnošću. Tokom gužve ili prekida interneta, sve narudžbine se obrađuju lokalno bez zastoja. Kada se veza ponovo uspostavi, sve se automatski sinhronizuje—nikada ne prestajete da služite goste.",
+          "q4": "Šta je sa integracijom platformi za dostavu?",
+          "a4": "Da, besprekorna integracija sa glavnim platformama za dostavu. Narudžbine sa aplikacija kao što su Glovo, Wolt i drugih dolaze direktno u vaš POS i kuhinjski displej—bez ručnog unosa, bez propuštenih narudžbina. Jedan sistem za sve kanale.",
+          "q5": "Koliko košta Konty za restoran?",
+          "a5": "Planovi počinju od 29€/mesečno po lokaciji bez troškova podešavanja ili ugovora. Svi planovi uključuju upravljanje stolovima, kuhinjski displej, offline režim i podršku 24/7. Probajte besplatno 30 dana tokom redovnog rada."
         }
       },
       "barsCafes": {
@@ -1067,6 +1107,20 @@
             "description": "Pregled prodaje po satima, najprodavaniji artikli i marže za svaki proizvod",
             "icon": "i-heroicons-chart-bar"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za barove i kafiće",
+          "q1": "Kako Konty upravlja velikim obimom rada tokom špica?",
+          "a1": "Konty je optimizovan za brzinu sa prilagodljivim prečicama, brzim unosom narudžbina i trenutnom obradom. Tokom špica, šankeri i konobari mogu uzimati više narudžbina istovremeno sa sinhronizacijom u realnom vremenu. Sistem obrađuje stotine transakcija na sat bez usporavanja.",
+          "q2": "Mogu li da postavim vremenski zasnovane cene za happy hour?",
+          "a2": "Da, automatske promene cena po vremenskim periodima i danima u nedelji. Postavite happy hour cene, vikend tarife ili specijalne cene koje se aktiviraju automatski—bez potrebe za ručnim ažuriranjem. Sistem menja cene prema vašem rasporedu.",
+          "q3": "Da li prati zalihe pića kao što su bačve i flaše?",
+          "a3": "Naravno. Praćenje bačvi, flaša, sastojaka i šank zaliha u realnom vremenu sa automatskim upozorenjima o niskim zalihama. Pratite troškove točenja, pratite rasipanje i optimizujte naručivanje—potpuna kontrola nad šank zalihama.",
+          "q4": "Kako funkcioniše upravljanje otvorenim računima?",
+          "a4": "Jednostavan sistem otvorenih računa sa pretragom po imenu ili kartici, automatskim podsetnicima i fleksibilnim opcijama plaćanja. Gosti mogu dodavati na račune tokom cele večeri i platiti kada su spremni—nema više izgubljenih računa ili zabune oko plaćanja.",
+          "q5": "Koliko košta Konty za bar ili kafić?",
+          "a5": "Planovi počinju od 29€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju brz unos narudžbina, praćenje zaliha, programe lojalnosti i offline režim. Probajte besplatno 30 dana tokom najfrekventnijih smena."
         }
       },
       "fastFood": {
@@ -1115,6 +1169,20 @@
             "description": "Posebne cene i prilagođavanja menija za doručak, ručak i večeru",
             "icon": "i-heroicons-sun"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za brzu hranu",
+          "q1": "Da li Konty upravlja narudžbinama preko drive-thru-a, šaltera i dostave zajedno?",
+          "a1": "Da, jedinstveni sistem za sve kanale—drive-thru, šalter, dostava i mobilne narudžbine sve dolaze u jedan kuhinjski displej sistem. Prioritizujte narudžbine po kanalu, pratite vreme izvršenja i upravljajte svim tipovima usluge istovremeno bez zabune.",
+          "q2": "Mogu li da pratim brzinu usluge i vreme pripreme?",
+          "a2": "Naravno. Merite vreme pripreme i izvršenja za svaku narudžbinu sa upozorenjima u realnom vremenu kada se premaše ciljevi. Pratite učinak po delu dana, kanalu i članu osoblja—optimizujte brzinu usluge na osnovu podataka.",
+          "q3": "Kako se odnosi prema kombinovanim obrocima i dodatnoj prodaji?",
+          "a3": "Kreirajte meni obroke sa fiksnim cenama i opcionalnim dodacima. Sistem automatski predlaže dodatnu prodaju pri naplati—\"Napraviti meni?\" ili \"Dodati pomfrit?\"—što povećava prosečan račun uz minimalan napor osoblja.",
+          "q4": "Da li se integriše sa platformama za dostavu?",
+          "a4": "Da, besprekorna integracija sa glavnim platformama za dostavu. Narudžbine dolaze direktno u vaš kuhinjski displej sistem sa oznakama kanala—bez žongliranja više tableta, bez ručnog unosa. Jedinstveno izvršavanje preko svih kanala.",
+          "q5": "Koliko košta Konty za restoran brze hrane?",
+          "a5": "Planovi počinju od 29€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju više kanala naručivanja, kuhinjski displej, praćenje brzine i offline režim. Probajte besplatno 30 dana tokom najfrekventnijih delova dana."
         }
       },
       "grocerySupermarkets": {
@@ -1163,6 +1231,20 @@
             "description": "Praćenje dobavljača, nabavki i rasporeda isporuka u jednom sistemu",
             "icon": "i-heroicons-truck"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice hrane i supermarkete",
+          "q1": "Može li Konty da upravlja sa hiljadama proizvoda efikasno?",
+          "a1": "Naravno. Konty upravlja neograničenim brojem proizvoda sa naprednim praćenjem zaliha, automatizovanim tačkama ponovnog naručivanja i nivoima zaliha u realnom vremenu na više lokacija. Napravljen za maloprodaju velikog obima sa brzom pretragom i upravljanjem proizvodima u paketima.",
+          "q2": "Da li podržava skeniranje barkodova i vage?",
+          "a2": "Da, puna podrška za skenere barkodova (USB, Bluetooth, mobilni) i vage. Podržava i standardne barkodove i težinske barkodove za sveže proizvode, delikatesne proizvode i rasuto—brza i precizna naplata svaki put.",
+          "q3": "Kako funkcioniše sistem za akcije?",
+          "a3": "Fleksibilne promocije uključujući 2+1 ponude, paket cene (kupi 3 dobij 1 gratis), procentualne popuste, sezonske rasprodaje i nagrade lojalnosti. Postavite datume početka/kraja, ograničite količine i kombinujte više promocija—sve se automatski primenjuje pri naplati.",
+          "q4": "Mogu li da pratim datume isteka za sveže proizvode?",
+          "a4": "Da, kompletno upravljanje svežim proizvodima sa praćenjem datuma isteka, brojeva serija i automatskom FIFO (first-in-first-out) rotacijom zaliha. Dobijajte upozorenja za proizvode koji se približavaju isteku kako biste minimizovali rasipanje i optimizovali akcije.",
+          "q5": "Koliko košta Konty za prodavnicu hrane?",
+          "a5": "Planovi počinju od 15€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju neograničen broj proizvoda, skeniranje barkodova, promocije, praćenje zaliha i offline režim. Probajte besplatno 30 dana sa vašim punim katalogom proizvoda."
         }
       },
       "clothingBoutiques": {
@@ -1211,6 +1293,20 @@
             "description": "Program nagrađivanja sa nivoima, ekskluzivnim ponudama i rođendanskim nagradama",
             "icon": "i-heroicons-star"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za butike odeće",
+          "q1": "Može li Konty da prati zalihe po veličinama i bojama?",
+          "a1": "Da, sveobuhvatno praćenje varijanti proizvoda po veličini, boji, stilu i bilo kojem drugom atributu koji definišete. Svaka varijanta ima svoj broj zaliha, barkod i cenu—savršeno za modnu maloprodaju sa potpunom vidljivošću šta se prodaje a šta ne.",
+          "q2": "Kako se bavi sezonskim kolekcijama i sniženjima?",
+          "a2": "Organizujte proizvode po kolekcijama, sezonama i kategorijama. Zakažite automatska sniženja (\"20% popusta na zimsku kolekciju od 1. decembra\"), pratite sezonski promet zaliha i identifikujte sporo prodajne artikle za rasprodaju—optimizujte profitabilnost kroz životni ciklus proizvoda.",
+          "q3": "Mogu li da pratim preferencije kupaca i istoriju kupovine?",
+          "a3": "Naravno. Izgradite detaljne profile kupaca sa istorijom kupovine, preferencama veličina, omiljenim stilovima i obrascima kupovine. Šaljite personalizovane promocije, zapamtite veličine kupaca i pružajte VIP uslugu koja gradi lojalnost i ponovne kupovine.",
+          "q4": "Da li podržava odloženo plaćanje i rezervacije?",
+          "a4": "Da, kompletno upravljanje odloženim plaćanjima sa praćenjem uplata, zahtevima za rezervaciju sa datumima isteka i obaveštenjima kupaca. Pratite delimične uplate, upravljajte depozitima i obezbedite da artikli budu pravilno rezervisani—sve ugrađeno u sistem.",
+          "q5": "Koliko košta Konty za butik odeće?",
+          "a5": "Planovi počinju od 15€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju neograničen broj varijanti, profile kupaca, programe lojalnosti i upravljanje sezonskim kolekcijama. Probajte besplatno 30 dana sa vašim punim inventarom."
         }
       },
       "convenienceStores": {
@@ -1259,6 +1355,20 @@
             "description": "Praćenje smanjenja zaliha, sumnjive transakcije i aktivnost zaposlenih",
             "icon": "i-heroicons-shield-check"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice mešovite robe",
+          "q1": "Može li Konty da upravlja 24/7 radom sa više smena?",
+          "a1": "Naravno. Laka promena smena sa upravljanjem kasom, praćenjem radnog vremena zaposlenih i izveštavanjem po smenama. Svaki kasir se prijavljuje/odjavljuje sa svojim kredencijalima, prateći prodaju i stanje kase—savršeno za non-stop rad.",
+          "q2": "Da li podržava upozorenja za proizvode sa starosnim ograničenjem?",
+          "a2": "Da, automatski zahtevi za verifikaciju uzrasta pri skeniranju duvana, alkohola ili drugih proizvoda sa ograničenjem. Sprečava prodaju maloletnicima, obezbeđuje usklađenost sa propisima i kreira revizorski trag—štiti vaše poslovanje od regulatornih problema.",
+          "q3": "Mogu li da prodajem dopune za telefone i obrađujem uplatnice?",
+          "a3": "Da, ugrađena podrška za dopune mobilnih telefona, uplate računa i druge dodatne usluge. Integrišite se sa obrađivačima plaćanja da ponudite ove usluge sa visokom maržom koje privlače promet i lojalnost kupaca.",
+          "q4": "Kako se bavi raznovrsnim kategorijama proizvoda sa različitim PDV stopama?",
+          "a4": "Sveobuhvatno upravljanje porezima koje podržava više poreskih stopa i kategorija. Automatski primenjuje tačne poreze na hranu, duvan, alkohol, hemiju i druge kategorije—obezbeđuje usklađenost sa propisima i tačne račune svaki put.",
+          "q5": "Koliko košta Konty za prodavnicu mešovite robe?",
+          "a5": "Planovi počinju od 15€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju podršku za više smena, upozorenja za starosna ograničenja, upravljanje raznovrsnim proizvodima i 24/7 offline režim. Probajte besplatno 30 dana tokom svih smena."
         }
       },
       "b2b": {
@@ -1307,11 +1417,43 @@
             "description": "Napredni izveštaji o učinku partnera, trendovima i predviđanju prihoda",
             "icon": "i-heroicons-chart-bar-square"
           }
+        },
+        "faq": {
+          "title": "Često postavljana pitanja",
+          "subtitle": "Najčešća pitanja o Konty-ju za veleprodaju i B2B",
+          "q1": "Da li Konty podržava automatizovano e-fakturisanje?",
+          "a1": "Da, potpuno automatizovano generisanje i isporuka e-faktura u skladu sa lokalnim propisima. Kreirajte fakture automatski iz prodajnih naloga, šaljite elektronski partnerima, pratite status isporuke i održavajte potpune revizorske tragove—pojednostavite B2B fakturisanje i smanjite ručni rad.",
+          "q2": "Mogu li da postavim različite cene za svakog B2B kupca?",
+          "a2": "Naravno. Kreirajte neograničen broj cenovnika specifičnih za kupce, količinske popuste i uslove plaćanja za svakog B2B partnera. Sistem automatski primenjuje tačne cene pri naplati na osnovu kupca—bez ručne pretrage cena, manje grešaka i održavanje profitabilnosti.",
+          "q3": "Kako funkcioniše praćenje odloženih plaćanja?",
+          "a3": "Kompletno upravljanje kreditima sa praćenjem otvorenih faktura, rokova plaćanja, automatskim podsetnicima za dospele račune i kontrolom kreditnog limita. Vidite neuplaćena stanja po kupcu, izveštaje starosti potraživanja i istoriju plaćanja—održavajte zdrav novčani tok i smanjite loša potraživanja.",
+          "q4": "Mogu li partneri da pristupe svojoj istoriji narudžbina i fakturama?",
+          "a4": "Da, namenjeni portal za partnere gde se B2B kupci prijavljuju da vide istoriju narudžbina, preuzmu fakture, provere izvode računa i podnesu ponovne narudžbine. Smanjuje pozive podršci, omogućava partnerima samoposluživanje i pojednostavljuje ponovno naručivanje.",
+          "q5": "Koliko košta Konty za B2B prodaju?",
+          "a5": "Planovi počinju od 15€/mesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju e-fakturisanje, cene specifične za kupce, praćenje odloženih plaćanja i portale za partnere. Probajte besplatno 30 dana za upravljanje vašim B2B operacijama."
         }
       },
       "cta": {
         "learnMore": "Saznajte više",
         "seeAll": "Pogledajte sva rešenja"
+      },
+      "faq": {
+        "title": "Često postavljana pitanja",
+        "subtitle": "Najčešća pitanja o industrijskim rešenjima",
+        "q1": "Čime se industrijsko rešenje razlikuje od osnovnih proizvoda?",
+        "a1": "Industrijsko rešenje je unapred konfigurisana verzija Konty Retail ili Konty Hospitality prilagođena specifičnim tipovima poslovanja. Uključuje specifične radne tokove, terminologiju i najbolje prakse za vašu delatnost—tako da dobijate POS sistem koji izgleda kao napravljen po meri, odmah po instalaciji.",
+        "q2": "Da li mi treba industrijsko rešenje ili mogu da koristim osnovni proizvod?",
+        "a2": "Možete koristiti bilo šta! Industrijsko rešenje pruža brže podešavanje sa unapred konfiguriranim funkcijama za vaš tip poslovanja. Osnovni Retail ili Hospitality proizvodi su potpuno prilagodljivi i rade za bilo koji posao. Izaberite na osnovu toga koliko brzo želite da počnete.",
+        "q3": "Mogu li da prilagodim industrijsko rešenje?",
+        "a3": "Naravno. Industrijsko rešenje je početna tačka, ne ograničenje. Prilagodite menije, radne tokove, funkcije i podešavanja tako da odgovaraju vašim potrebama. Dobijate najbolje od oba sveta—brzo podešavanje plus potpunu fleksibilnost.",
+        "q4": "Da li su cene različite za svaku industriju?",
+        "a4": "Ne, cene su iste bez obzira da li izaberete industrijsko rešenje ili osnovni proizvod. Trgovinska rešenja koriste Retail cene (15-25€/mesečno), ugostiteljska rešenja koriste Hospitality cene (29-59€/mesečno). Svi uključuju 30-dnevno besplatno probanje.",
+        "q5": "Šta ako moj posao ne odgovara jednoj industriji?",
+        "a5": "Nema problema! Mnogi poslovi su hibridni (npr. kafić + prodavnica). Konfigurišemo Konty da obuhvati vaše specifične potrebe, kombinujući funkcije iz više rešenja. Zakažite demo i osmislićemo savršeno podešavanje za vaš jedinstveni posao.",
+        "q6": "Mogu li da vidim demo za moju industriju?",
+        "a6": "Da! Kada zakažete demo, izaberite vašu industriju i pokazaćemo vam funkcije specifične za vaš tip poslovanja. Videćete tačno kako Konty radi za poslove kao što je vaš—sa relevantnim primerima i radnim tokovima.",
+        "q7": "Da li sva industrijaska rešenja rade offline?",
+        "a7": "Da, svako Konty rešenje—bez obzira na industriju—radi besprekorno offline sa punom funkcionalnošću. Vaš posao nastavlja normalno tokom prekida interneta, sa automatskom sinhronizacijom kada se veza ponovo uspostavi."
       }
     },
     "demo": {
@@ -1600,7 +1742,7 @@
               "feature4": "Testno okruženje i demo nalozi"
             }
           },
-         "commercial": {
+          "commercial": {
             "title": "Komercijalna podrška",
             "description": "Atraktivni komercijalni uslovi koji maksimiziraju vašu profitabilnost, kreirani tako da rastemo zajedno.",
             "features": {
@@ -1639,18 +1781,22 @@
         }
       },
       "faq": {
-        "title": "Često postavljana pitanja o partnerstvu",
-        "subtitle": "Sve što treba da znate o Konty partnerskom programu",
-        "q1": "Koje su prednosti Konty partnerskog programa?",
-        "a1": "Naši partneri dobijaju atraktivne provizije, ekskluzivna područja, marketing podršku, obuke, tehničku pomoć 24/7 i mogućnost rasta sa kompanijom koja ima 26+ godina iskustva.",
-        "q2": "Da li je potrebno prethodno iskustvo?",
-        "a2": "Nije neophodno. Pružamo sveobuhvatne obuke za sve partnere. Ipak, iskustvo u prodaji softvera ili radu sa malim i srednjim preduzećima je od pomoći.",
-        "q3": "Kako izgleda struktura provizija?",
-        "a3": "Nudimo konkurentne provizije na inicijalne prodaje, kao i pasivni prihod kroz mesečne pretplate. Tačni uslovi se dogovaraju individualno na osnovu teritorije i obima poslovanja.",
-        "q4": "Koliko dugo traje proces obuke?",
-        "a4": "Osnovna obuka traje 2-3 dana. Nakon toga, dobijate pristup trajnim edukativnim resursima i podršci našeg tima. Redovno održavamo dodatne obuke o novim funkcijama.",
-        "q5": "Koju podršku dobijam za svoje klijente?",
-        "a5": "Vaši klijenti dobijaju direktnu 24/7 tehničku podršku od našeg tima, a vi imate pristup specijalističkim uslugama za složenije slučajeve. Fokusirajte se na prodaju dok mi brinemo o podršci."
+        "title": "Partner FAQ",
+        "subtitle": "Najčešća pitanja o partnerstvu sa Konty-jem",
+        "q1": "Kako mogu da postanem Konty partner?",
+        "a1": "Jednostavno popunite kontakt formular na ovoj stranici i naš tim će vam se javiti u roku od 24 sata. Provešćemo vas kroz detalje partnerskog programa, komercijalne uslove i odgovoriti na sva vaša pitanja kako biste doneli informisanu odluku.",
+        "q2": "Koji su uslovi za postajanje partnerom?",
+        "a2": "Tražimo partnere sa iskustvom u prodaji tehnologije za maloprodaju ili ugostiteljstvo, dokazanim rezultatima u prodaji i mogućnošću da pruže lokalnu podršku klijentima. Tehnička ekspertiza je dobrodošla ali nije obavezna—obezbeđujemo sveobuhvatnu obuku.",
+        "q3": "Kakvu podršku dobijaju partneri?",
+        "a3": "Partneri dobijaju sveobuhvatnu tehničku, komercijalnu i marketinšku podršku koja uključuje kompletne programe obuke, tehničku dokumentaciju, ko-brendirane marketinške materijale, namenske linije za partnersku podršku, demo sisteme i redovna ažuriranja. Nikada niste prepušteni sami sebi.",
+        "q4": "Kako izgleda proces od prijave do prve prodaje?",
+        "a4": "Nakon što potpišemo partnerski ugovor i završite obuku, dobijate pristup našem partnerskom portalu, demo sistemima i svim prodajnim materijalima. Naš tim vam pruža podršku tokom celog procesa—od demo prezentacije do implementacije i puštanja u rad sistema.",
+        "q5": "Kakvi su komercijalni uslovi?",
+        "a5": "Nudimo konkurentne partnerske cene sa podsticajima zasnovanim na obimu i atraktivnim maržama. Specifični cenovni nivoi i uslovi se utvrđuju tokom procesa evaluacije i prilagođavaju vašem tržištu, mogućnostima i potencijalu rasta.",
+        "q6": "Koliko traje onboarding proces?",
+        "a6": "Obično 1-2 nedelje od prijave do vaše prve prodaje. Ovo uključuje pregled ugovora, obuku o Konty proizvodima, podešavanje pristupa portalu i konfiguraciju demo sistema. Radimo brzo da biste mogli da počnete sa prodajom što pre.",
+        "q7": "Da li pružate ko-marketing podršku?",
+        "a7": "Da, partneri dobijaju ko-brendirane marketinške materijale, studije slučaja, sadržaj za društvene mreže i pristup fondovima za razvoj marketinga. Podržavamo i zajedničke događaje, vebinare i lokalne kampanje kako bismo vam pomogli da privučete potencijalne klijente i zatvorite poslove."
       }
     },
     "blog": {
@@ -1772,7 +1918,7 @@
   "data": {
     "company": {
       "tradeName": "Codeux",
-      "description": "26+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
+      "description": "14+ godina iskustva u razvoju POS sistema. Podrška lokalnih biznisa sa pouzdanom tehnologijom.",
       "vatID": "112821082",
       "foundingDate": "2021-12-22",
       "founder": "Nikola Ljumovic",
@@ -1798,7 +1944,13 @@
         "phone": "+38267607670",
         "email": "contact"
       },
-      "areaServed": ["US", "RS", "ME", "BA", "HR"],
+      "areaServed": [
+        "US",
+        "RS",
+        "ME",
+        "BA",
+        "HR"
+      ],
       "knowsAbout": [
         "POS sistemi",
         "Softver za upravljanje restoranima",

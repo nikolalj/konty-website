@@ -39,6 +39,5 @@ defineOgImageComponent('Product', {
   icon: '🛍️'
 })
 
-// Use centralized schema
 useSchemaOrg([schemas.retail()])
 </script>

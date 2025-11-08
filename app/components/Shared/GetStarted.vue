@@ -106,25 +106,25 @@ const steps = computed(() => {
   if (props.category === 'partner') {
     return [
       {
-        tagline: t('pages.partners.flow.steps.step1.tagline', ''),
+        tagline: '',
         title: t('pages.partners.flow.steps.step1.title'),
         description: t('pages.partners.flow.steps.step1.description'),
         icon: 'i-lucide-mail'
       },
       {
-        tagline: t('pages.partners.flow.steps.step2.tagline', ''),
+        tagline: '',
         title: t('pages.partners.flow.steps.step2.title'),
         description: t('pages.partners.flow.steps.step2.description'),
         icon: 'i-lucide-handshake'
       },
       {
-        tagline: t('pages.partners.flow.steps.step3.tagline', ''),
+        tagline: '',
         title: t('pages.partners.flow.steps.step3.title'),
         description: t('pages.partners.flow.steps.step3.description'),
         icon: 'i-lucide-graduation-cap'
       },
       {
-        tagline: t('pages.partners.flow.steps.step4.tagline', ''),
+        tagline: '',
         title: t('pages.partners.flow.steps.step4.title'),
         description: t('pages.partners.flow.steps.step4.description'),
         icon: 'i-lucide-rocket'

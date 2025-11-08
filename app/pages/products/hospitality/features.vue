@@ -8,7 +8,7 @@
 
     <!-- Below-fold components - delay hydration, keep SSR -->
     <!-- <LazyProductsHospitalityFeaturesList hydrate-on-visible /> -->
-    <LazySharedFAQ category="hospitality" hydrate-on-visible />
+    <LazySharedFAQ category="hospitality-features" hydrate-on-visible />
     <LazySharedTestimonials product="hospitality" hydrate-on-idle />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
@@ -35,5 +35,8 @@ defineOgImageComponent('Main', {
 })
 
 // Use centralized schema
-useSchemaOrg([schemas.hospitalityFeatures()])
+useSchemaOrg([
+  schemas.hospitalityFeatures(),
+  schemas.faqSchema(useFaqSchema('pages.products.hospitality.features.faq'))
+])
 </script>
