@@ -4,8 +4,8 @@
     <AboutClientStoriesHero />
 
     <!-- Below-fold components - delay hydration, keep SSR -->
-    <LazySharedClientList variant="alt" class="dark !pt-42" hydrate-on-visible />
-    <LazySharedStatistics variant="alt" class="dark !pt-0" hydrate-on-idle />
+    <LazySharedClientList class="dark !pt-42" hydrate-on-visible />
+    <LazySharedStatistics class="dark !pt-0" hydrate-on-idle />
 
     <LazySharedTestimonials hydrate-on-idle />
     <LazySharedBlogPosts
