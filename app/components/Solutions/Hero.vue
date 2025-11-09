@@ -41,15 +41,15 @@
               v-for="solution in allSolutions"
               :key="solution.id"
               :to="solution.href"
-              class="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:-translate-y-1 flex items-center gap-4"
+              class="group relative rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 transition-all duration-300 hover:bg-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/20 flex items-center gap-4"
             >
               <!-- Icon -->
-              <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-white/10">
-                <UIcon :name="solution.icon" class="w-6 h-6 text-white" />
+              <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 transition-all duration-300 group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6">
+                <UIcon :name="solution.icon" class="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-120" />
               </div>
 
               <!-- Title -->
-              <h3 class="text-white text-lg font-semibold text-left">
+              <h3 class="text-white text-lg font-semibold text-left transition-all duration-200 group-hover:translate-x-1">
                 {{ solution.title }}
               </h3>
             </NuxtLink>
