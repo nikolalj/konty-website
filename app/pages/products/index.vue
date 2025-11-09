@@ -5,7 +5,7 @@
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
     <LazySharedProductFeatures product="hospitality" reverse />
-    <LazySharedProductFeatures product="retail" reverse style="padding-top: 0" />
+    <LazySharedProductFeatures product="retail" style="padding-top: 0" />
     <LazySharedTestimonials hydrate-on-idle style="padding-top: 0" />
     <LazySharedGetStarted variant="alt" hydrate-on-visible />
     <LazySharedPricing hydrate-on-visible />

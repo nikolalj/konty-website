@@ -13,7 +13,7 @@
     <LazyAboutPartnersTestimonials hydrate-on-visible />
 
     <!-- Segmented solutions - Retail/Hospitality -->
-    <LazySharedProductFeatures hydrate-on-visible />
+    <LazySharedProductFeatures reverse hydrate-on-visible />
 
     <!-- Why become a partner - benefits -->
     <LazySharedBenefits category="partners" variant="alt" hydrate-on-visible />

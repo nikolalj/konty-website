@@ -142,6 +142,7 @@ function isRouteWithTransparentHeader(path: string) {
     '/products',
     '/products/hospitality',
     '/products/retail',
+    '/solutions',
     '/demo',
   ]
 

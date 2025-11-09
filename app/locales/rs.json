@@ -1589,7 +1589,8 @@
       "hero": {
         "cta": "Pronađi svoje rešenje",
         "subtitle": "Konty se prilagođava vašem poslovanju - od restorana do prodavnica",
-        "title": "Rešenja po delatnosti"
+        "title": "Rešenja po delatnosti",
+        "tagline": "Konty pokreće 9.000+ biznisa širom regiona"
       },
       "restaurants": {
         "faq": {
@@ -1763,7 +1764,7 @@
       "switchTo": "Vidi lokalnu verziju"
     },
     "breadcrumb": {
-      "b2b": "B2B prodaja i E fakture",
+      "b2b": "B2B prodaja i E-fakture",
       "bars-cafes": "Barovi i kafići",
       "blog": "Blog",
       "client-stories": "Iskustva klijenata",
@@ -1944,7 +1945,7 @@
         "partners": "Partneri"
       },
       "categories": {
-        "b2b": "B2B prodaja i E fakture",
+        "b2b": "B2B prodaja i E-fakture",
         "b2bDesc": "Profesionalna rešenja za veleprodaju i B2B saradnju.",
         "barsCafes": "Barovi i kafići",
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mesta sa velikim prometom.",

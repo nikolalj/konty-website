@@ -1,14 +1,11 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <SolutionsHero />
+    <!-- Hero Section with Solutions Grid Embedded -->
+    <SolutionsHero class="dark" />
 
-    <!-- Reusable components -->
+    <!-- Social proof and statistics -->
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
-
-    <!-- Solutions Grid -->
-    <LazySolutionsGrid hydrate-on-visible />
 
     <!-- Bottom sections -->
     <LazySharedPricing hydrate-on-visible />
