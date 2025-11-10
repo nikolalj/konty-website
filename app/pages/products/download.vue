@@ -26,7 +26,7 @@
             <p class="text-base text-gray-700 dark:text-gray-300">
               {{ t('pages.products.download.hero.docsLink') }}
               <a
-                href="https://docs.konty.com"
+                href="https://https://docs.konty.com"
                 target="_blank"
                 class="text-primary underline font-semibold cursor-pointer"
               >
@@ -148,7 +148,7 @@
           <p class="text-base text-gray-700 dark:text-gray-300">
             {{ t('pages.products.download.hero.docsLink') }}
             <a
-              href="https://docs.konty.com"
+              href="https://https://docs.konty.com"
               target="_blank"
               class="text-primary underline font-semibold cursor-pointer"
             >

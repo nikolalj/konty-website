@@ -404,19 +404,17 @@
       "cta": "Become a Partner",
       "faq": {
         "a1": "Simply fill out the contact form on this page and our team will get back to you within 24 hours. We'll walk you through the partner program details, commercial terms, and answer all your questions so you can make an informed decision.",
-        "a2": "We're looking for partners with experience in selling technology for retail or hospitality, proven sales track record, and the ability to provide local support to clients. Technical expertise is welcome but not required—we provide comprehensive training.",
-        "a3": "Partners receive comprehensive technical, commercial, and marketing support including complete training programs, technical documentation, co-branded marketing materials, dedicated partner support lines, demo systems, and regular updates. You're never on your own.",
-        "a4": "After we sign the partner agreement and you complete training, you get access to our partner portal, demo systems, and all sales materials. Our team provides support throughout the entire process—from demo presentations to implementation and system launch.",
+        "a2": "We're looking for partners with experience in selling technology for retail or hospitality, proven sales track record, and the ability to provide local support to clients. Technical expertise is welcome but not required-we provide comprehensive training.",
+        "a3": "Partners receive comprehensive technical, commercial, and marketing support including complete training programs, technical documentation, marketing materials, dedicated partner support lines, demo systems, and regular updates. You're never on your own.",
+        "a4": "Start and Standard packages include one payment device - POS terminal. If you need multiple terminals, you choose the Premium package. Depending on the number of terminals and special requirements you have, the Premium package price can be adjusted by agreement.",
         "a5": "We offer competitive partner pricing with volume-based incentives and attractive margins. Specific pricing tiers and terms are determined during the evaluation process and tailored to your market, capabilities, and growth potential.",
         "a6": "Typically 1-2 weeks from application to your first sale. This includes contract review, Konty product training, portal access setup, and demo system configuration. We move quickly so you can start selling as soon as possible.",
-        "a7": "Yes, partners receive co-branded marketing materials, case studies, social media content, and access to marketing development funds. We also support joint events, webinars, and local campaigns to help you attract potential clients and close deals.",
         "q1": "How can I become a Konty partner?",
         "q2": "What are the requirements to become a partner?",
         "q3": "What support do partners receive?",
-        "q4": "What does the process from application to first sale look like?",
+        "q4": "How does billing work with multiple POS terminals?",
         "q5": "What are the commercial terms?",
         "q6": "How long does the onboarding process take?",
-        "q7": "Do you provide co-marketing support?",
         "subtitle": "Most common questions about partnering with Konty",
         "title": "Partner FAQ"
       },
@@ -462,9 +460,9 @@
             "title": "Commercial Support"
           },
           "marketing": {
-            "description": "Marketing materials and co-marketing opportunities to help you succeed.",
+            "description": "Marketing materials and marketing opportunities to help you succeed.",
             "features": {
-              "feature1": "Co-branded marketing materials",
+              "feature1": "Marketing materials",
               "feature2": "Lead generation support",
               "feature3": "Partner portal access"
             },
@@ -504,19 +502,15 @@
     "pricing": {
       "description": "Choose the plan that fits your needs. Cancel whenever you want.",
       "faq": {
-        "a1": "No, never. No setup costs, hidden fees, or surprises. Pay only the monthly subscription which includes all features, support, updates, and cloud hosting. Complete transparency—what you see is what you get.",
-        "a2": "Absolutely. Upgrade or downgrade anytime—no contract lock-in. If your business grows, move to a higher plan. If you need less, switch to a lower one. Changes take effect immediately and we only charge for what you use.",
-        "a3": "Full access to all features of your chosen plan—no limitations. Test inventory management, reporting, offline mode, everything. No credit card required to start. If it doesn't fit your business within 30 days, simply cancel. No pressure.",
-        "a4": "We bill per location, not per device. One monthly fee covers unlimited devices at that store—use as many POS terminals, tablets, and phones as you want. Multiple locations? Each is billed separately, but with multi-location discounts.",
-        "a5": "You'll never be blocked. If you exceed limits, you'll be notified and can upgrade anytime. During the transition period, your system continues working normally—we never interrupt service for exceeding limits. Your business is more important.",
-        "a6": "Yes! Special pricing for multi-location chains. The more locations using Konty, the lower your cost per location. Contact our team for custom pricing for 3+ locations or corporate plans with additional features.",
-        "a7": "Yes, without penalties. No long-term contracts or cancellation fees. If Konty doesn't work for your business, simply cancel—your data remains available for export. We believe in keeping customers through value, not through contractual obligations.",
+        "a1": "No, never. No setup costs, hidden fees, or surprises. Pay only the monthly subscription which includes all features, support, updates, and cloud hosting. Complete transparency-what you see is what you get.",
+        "a2": "Absolutely. Upgrade or downgrade anytime-no contract lock-in. If your business grows, move to a higher plan. If you need less, switch to a lower one. Changes take effect immediately and we only charge for what you use.",
+        "a3": "Full access to all features of your chosen plan-no limitations. Test inventory management, reporting, offline mode, everything. No credit card required to start. If it doesn't fit your business within 30 days, simply cancel. No pressure.",
+        "a4": "Start and Standard packages include one payment device - POS terminal. If you need multiple terminals, you choose the Premium package. Depending on the number of terminals and special requirements you have, the Premium package price can be adjusted by agreement.",
+        "a7": "Yes, without penalties. No long-term contracts or cancellation fees. If Konty doesn't work for your business, simply cancel-your data remains available for export. We believe in keeping customers through value, not through contractual obligations.",
         "q1": "Are there hidden costs or fees?",
         "q2": "Can I change my plan later?",
         "q3": "What does the 30-day free trial include?",
-        "q4": "Is billing per device or per location?",
-        "q5": "What happens if I exceed plan limits?",
-        "q6": "Do you offer discounts for multiple locations?",
+        "q4": "How does billing work with multiple POS terminals?",
         "q7": "Can I cancel anytime?",
         "subtitle": "Answers to the most common questions about pricing and plans",
         "title": "Frequently Asked Questions"
@@ -528,8 +522,8 @@
           "button": "Sign Up",
           "description": "For larger operations needing advanced features.",
           "features": [
-            "Multiple registers",
             "Everything in Standard plus",
+            "Multiple registers",
             "Network capabilities",
             "Mobile ordering",
             "Kitchen display system",
@@ -664,15 +658,11 @@
       "faqdocs": {
         "faq": {
           "a1": "Konty is available for download on all major platforms - Windows, Android, and web app. Visit our downloads page or click the button above to access complete documentation with links for your platform.",
-          "a2": "Konty works both ways! You can use our web app directly from your browser without installation, or download the desktop/mobile app for offline access and better performance. All data automatically syncs across all devices.",
-          "a3": "Complete documentation is available at docs.konty.com. You'll find quick start guides, detailed manuals for all features, video tutorials, troubleshooting, and best practices. All documentation is free and regularly updated.",
-          "a4": "Yes, we have an extensive library of video tutorials covering all aspects of Konty POS - from basic setup to advanced features. All video guides are available in the documentation and organized by topic for easy navigation.",
-          "a5": "We update documentation with every new product release. We also regularly add new guides, FAQ answers, and examples based on user feedback. You'll always find the latest information in our documentation center.",
+          "a2": "If you exclusively use cashless payments, the web version is sufficient. If you conduct sales directly at the location, you need to install the application on the POS terminal to have full functionality. In any case, the web version of the application can always be used for administration and business monitoring from any device.",
+          "a3": "Complete documentation is available at https://docs.konty.com. You'll find quick start guides, detailed manuals for all features, video tutorials, troubleshooting, and best practices. All documentation is free and regularly updated.",
           "q1": "Where can I download the Konty app?",
           "q2": "Do I need to install the app or can I use the web version?",
           "q3": "Where can I find guides and documentation?",
-          "q4": "Are there video tutorials?",
-          "q5": "How often is the documentation updated?",
           "subtitle": "Answers to the most common questions about documentation and downloads",
           "title": "Frequently Asked Questions"
         }
@@ -681,7 +671,7 @@
         "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
         "hospitality": {
           "feat1": {
-            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works—day after day, transaction after transaction. Trusted by 9,000+ businesses.",
+            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works-day after day, transaction after transaction. Trusted by 9,000+ businesses.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Built to Never Fail You"
           },
@@ -691,7 +681,7 @@
             "title": "Your Team Learns It in Under an Hour"
           },
           "feat3": {
-            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends—anytime, anywhere.",
+            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends-anytime, anywhere.",
             "icon": "i-heroicons-shield-check",
             "title": "Know Your Numbers, Grow Your Business"
           },
@@ -713,7 +703,7 @@
         },
         "retail": {
           "feat1": {
-            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works—day after day, transaction after transaction. Trusted by 9,000+ businesses.",
+            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works-day after day, transaction after transaction. Trusted by 9,000+ businesses.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Built to Never Fail You"
           },
@@ -723,7 +713,7 @@
             "title": "Your Team Learns It in Under an Hour"
           },
           "feat3": {
-            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends—anytime, anywhere.",
+            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends-anytime, anywhere.",
             "icon": "i-heroicons-chart-bar",
             "title": "Know Your Numbers, Grow Your Business"
           },
@@ -777,15 +767,13 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a1": "Yes, Konty supports multi-location management with centralized reporting, unified menus, and real-time data. Track performance, control inventory, and manage staff from one dashboard—perfect for restaurant groups and chains.",
-            "a2": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your restaurant never stops taking orders, even during internet outages—complete offline functionality built into the system.",
-            "a3": "Most restaurants are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
+            "a2": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your business never stops, even during internet outages-complete offline functionality built into the system.",
+            "a3": "Most businesses are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
             "a4": "Yes, Konty works with most existing POS equipment including fiscal printers, kitchen printers, cash drawers, tablets, and kitchen display systems. We help you leverage existing equipment or recommend compatible and cost-effective upgrades if needed.",
-            "a5": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. We provide on-site training during setup and materials for ongoing support. New employees get up to speed faster, reducing training costs.",
-            "a6": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system—no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
-            "a7": "Of course. Create unlimited modifiers for allergies, preferences, and special requests—like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
-            "a8": "Yes, split checks by items, by person, by percentage, or equally. Supports multiple payment methods on one check—card, cash, gift cards. Handle any payment scenario with ease, keeping guests happy.",
-            "q1": "Can I manage multiple locations?",
+            "a5": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. New employees get up to speed faster, reducing training costs.",
+            "a6": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system-no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
+            "a7": "Of course. Create unlimited modifiers for allergies, preferences, and special requests-like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
+            "a8": "Yes, Konty supports splitting checks and separate payments. Supports multiple payment methods on one check-card, cash, etc. Handle any payment scenario with ease, keeping guests happy.",
             "q2": "Does the system work without internet?",
             "q3": "How long does the setup process take?",
             "q4": "Can I keep my existing equipment?",
@@ -797,7 +785,7 @@
             "title": "Frequently Asked Questions"
           },
           "feat1": {
-            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works—day after day, transaction after transaction. Trusted by 9,000+ businesses.",
+            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works-day after day, transaction after transaction. Trusted by 9,000+ businesses.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Built to Never Fail You"
           },
@@ -807,7 +795,7 @@
             "title": "Your Team Learns It in Under an Hour"
           },
           "feat3": {
-            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends—anytime, anywhere.",
+            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends-anytime, anywhere.",
             "icon": "i-heroicons-shield-check",
             "title": "Know Your Numbers, Grow Your Business"
           },
@@ -981,15 +969,13 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a1": "Yes, Konty enables real-time inventory synchronization across all locations. View stock levels, transfer products between stores, and get consolidated reports—all from one centralized dashboard. Perfect for chains and multi-location businesses.",
             "a2": "Yes, Konty works with all standard barcode scanners including USB, Bluetooth, and mobile devices. Supports both regular barcodes and weighted barcodes for scales. Fast and accurate checkout every time.",
-            "a3": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships—all included in your plan at no extra cost.",
-            "a4": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data—no manual entry. Most migrations complete within 24 hours.",
+            "a3": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships-all included in your plan at no extra cost.",
+            "a4": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data-no manual entry. Most migrations complete within 24 hours.",
             "a5": "Simple one-click returns with automatic inventory adjustment. Process refunds, exchanges, and credit memos immediately. All return data is recorded for reporting and inventory management.",
             "a6": "Yes, Konty is compatible with most existing POS hardware including fiscal printers, barcode scanners, cash drawers, customer displays, and tablets. Use what you already have or we can recommend affordable compatible options.",
-            "a7": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Set low stock alerts, automate reorder points, and never run out of best-sellers. Complete visibility.",
+            "a7": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Complete visibility.",
             "a8": "Yes, create multiple price lists for wholesale customers, VIP customers, or bulk buyers. Assign specific price tiers to different customer groups and Konty automatically applies the correct prices at checkout.",
-            "q1": "Can I manage inventory across multiple stores?",
             "q2": "Does it support barcode scanning?",
             "q3": "What about loyalty programs?",
             "q4": "Can I import existing inventory?",
@@ -1001,7 +987,7 @@
             "title": "Frequently Asked Questions"
           },
           "feat1": {
-            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works—day after day, transaction after transaction. Trusted by 9,000+ businesses.",
+            "description": "14+ years of proven stability. While others crash during your busiest hours, Konty just works-day after day, transaction after transaction. Trusted by 9,000+ businesses.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Built to Never Fail You"
           },
@@ -1011,7 +997,7 @@
             "title": "Your Team Learns It in Under an Hour"
           },
           "feat3": {
-            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends—anytime, anywhere.",
+            "description": "Real-time analytics that show exactly what's working. Make confident decisions backed by data, not guesswork. See sales, inventory, and trends-anytime, anywhere.",
             "icon": "i-heroicons-chart-bar",
             "title": "Know Your Numbers, Grow Your Business"
           },
@@ -1184,9 +1170,9 @@
     "solutions": {
       "b2b": {
         "faq": {
-          "a1": "Yes, fully automated e-invoice generation and delivery in compliance with local regulations. Create invoices automatically from sales orders, send electronically to partners, track delivery status, and maintain complete audit trails—simplify B2B invoicing and reduce manual work.",
-          "a2": "Absolutely. Create unlimited customer-specific price lists, volume discounts, and payment terms for each B2B partner. System automatically applies correct prices at checkout based on customer—no manual price lookups, fewer errors, and maintained profitability.",
-          "a3": "Complete credit management with outstanding invoice tracking, payment due dates, automatic reminders for overdue accounts, and credit limit control. See outstanding balances by customer, aging reports, and payment history—maintain healthy cash flow and reduce bad debt.",
+          "a1": "Yes, fully automated e-invoice generation and delivery in compliance with local regulations. Create invoices automatically from sales orders, send electronically to partners, track delivery status, and maintain complete audit trails-simplify B2B invoicing and reduce manual work.",
+          "a2": "Absolutely. Create unlimited customer-specific price lists, volume discounts, and payment terms for each B2B partner. System automatically applies correct prices at checkout based on customer-no manual price lookups, fewer errors, and maintained profitability.",
+          "a3": "Complete credit management with outstanding invoice tracking, payment due dates, automatic reminders for overdue accounts, and credit limit control. See outstanding balances by customer, aging reports, and payment history-maintain healthy cash flow and reduce bad debt.",
           "a4": "Yes, dedicated partner portal where B2B customers log in to view order history, download invoices, check account statements, and submit reorders. Reduces support calls, empowers partners with self-service, and simplifies reordering.",
           "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include e-invoicing, customer-specific pricing, accounts receivable tracking, and partner portals. Try free for 30 days to manage your B2B operations.",
           "q1": "Does Konty support automated e-invoicing?",
@@ -1247,9 +1233,9 @@
       "barsCafes": {
         "faq": {
           "a1": "Konty is optimized for speed with customizable shortcuts, quick order entry, and instant processing. During rush, bartenders and servers can take multiple orders simultaneously with real-time sync. System handles hundreds of transactions per hour without slowdown.",
-          "a2": "Yes, automatic price changes by time period and day of week. Set happy hour prices, weekend rates, or special prices that activate automatically—no manual updates needed. System changes prices according to your schedule.",
-          "a3": "Absolutely. Real-time tracking of kegs, bottles, ingredients, and bar stock with automatic low-stock alerts. Track pour costs, monitor waste, and optimize ordering—complete control over bar inventory.",
-          "a4": "Simple open tab system with search by name or card, automatic reminders, and flexible payment options. Guests can add to tabs throughout the evening and pay when ready—no more lost tabs or payment confusion.",
+          "a2": "Yes, automatic price changes by time period and day of week. Set happy hour prices, weekend rates, or special prices that activate automatically-no manual updates needed. System changes prices according to your schedule.",
+          "a3": "Absolutely. Real-time tracking of kegs, bottles, ingredients, and bar stock with automatic low-stock alerts. Track pour costs, monitor waste, and optimize ordering-complete control over bar inventory.",
+          "a4": "Simple open tab system with search by name or card, automatic reminders, and flexible payment options. Guests can add to tabs throughout the evening and pay when ready-no more lost tabs or payment confusion.",
           "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include quick order entry, inventory tracking, loyalty programs, and offline mode. Try free for 30 days during your busiest shifts.",
           "q1": "How does Konty handle high volume during rush hours?",
           "q2": "Can I set time-based pricing for happy hour?",
@@ -1318,10 +1304,10 @@
       },
       "clothingBoutiques": {
         "faq": {
-          "a1": "Yes, comprehensive product variant tracking by size, color, style, and any other attribute you define. Each variant has its own stock count, barcode, and price—perfect for fashion retail with complete visibility into what's selling and what's not.",
-          "a2": "Organize products by collections, seasons, and categories. Schedule automatic markdowns (\"20% off winter collection starting Dec 1\"), track seasonal inventory turnover, and identify slow-moving items for clearance—optimize profitability through product lifecycle.",
+          "a1": "Yes, comprehensive product variant tracking by size, color, style, and any other attribute you define. Each variant has its own stock count, barcode, and price-perfect for fashion retail with complete visibility into what's selling and what's not.",
+          "a2": "Organize products by collections, seasons, and categories. Schedule automatic markdowns (\"20% off winter collection starting Dec 1\"), track seasonal inventory turnover, and identify slow-moving items for clearance-optimize profitability through product lifecycle.",
           "a3": "Absolutely. Build detailed customer profiles with purchase history, size preferences, favorite styles, and buying patterns. Send personalized promotions, remember customer sizes, and provide VIP service that builds loyalty and repeat purchases.",
-          "a4": "Yes, complete layaway management with payment tracking, reservation requests with expiration dates, and customer notifications. Track partial payments, manage deposits, and ensure items are properly reserved—all built into the system.",
+          "a4": "Yes, complete layaway management with payment tracking, reservation requests with expiration dates, and customer notifications. Track partial payments, manage deposits, and ensure items are properly reserved-all built into the system.",
           "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited variants, customer profiles, loyalty programs, and seasonal collection management. Try free for 30 days with your full inventory.",
           "q1": "Can Konty track inventory by sizes and colors?",
           "q2": "How does it handle seasonal collections and markdowns?",
@@ -1380,10 +1366,10 @@
       },
       "convenienceStores": {
         "faq": {
-          "a1": "Absolutely. Easy shift changes with cash drawer management, employee time tracking, and shift-based reporting. Each cashier logs in/out with their credentials, tracking sales and drawer balance—perfect for round-the-clock operations.",
-          "a2": "Yes, automatic age verification prompts when scanning tobacco, alcohol, or other restricted products. Prevents sales to minors, ensures regulatory compliance, and creates audit trail—protects your business from regulatory issues.",
+          "a1": "Absolutely. Easy shift changes with cash drawer management, employee time tracking, and shift-based reporting. Each cashier logs in/out with their credentials, tracking sales and drawer balance-perfect for round-the-clock operations.",
+          "a2": "Yes, automatic age verification prompts when scanning tobacco, alcohol, or other restricted products. Prevents sales to minors, ensures regulatory compliance, and creates audit trail-protects your business from regulatory issues.",
           "a3": "Yes, built-in support for mobile phone top-ups, bill payments, and other ancillary services. Integrate with payment processors to offer these high-margin services that drive traffic and customer loyalty.",
-          "a4": "Comprehensive tax management supporting multiple tax rates and categories. Automatically applies correct taxes to food, tobacco, alcohol, household items, and other categories—ensures regulatory compliance and accurate receipts every time.",
+          "a4": "Comprehensive tax management supporting multiple tax rates and categories. Automatically applies correct taxes to food, tobacco, alcohol, household items, and other categories-ensures regulatory compliance and accurate receipts every time.",
           "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include multi-shift support, age restriction alerts, diverse product management, and 24/7 offline mode. Try free for 30 days across all shifts.",
           "q1": "Can Konty manage 24/7 operations with multiple shifts?",
           "q2": "Does it support age-restricted product alerts?",
@@ -1445,30 +1431,26 @@
         "seeAll": "View All Solutions"
       },
       "faq": {
-        "a1": "An industry solution is a pre-configured version of Konty Retail or Konty Hospitality tailored for specific business types. It includes specific workflows, terminology, and best practices for your industry—so you get a POS system that looks custom-made, right out of the box.",
-        "a2": "You can use either! Industry solution provides faster setup with pre-configured features for your business type. Core Retail or Hospitality products are fully customizable and work for any business. Choose based on how quickly you want to start.",
-        "a3": "Of course. Industry solution is a starting point, not a limitation. Customize menus, workflows, features, and settings to match your needs. You get the best of both worlds—quick setup plus complete flexibility.",
-        "a4": "No, prices are the same regardless of whether you choose an industry solution or core product. Retail solutions use Retail pricing (15-25€/month), hospitality solutions use Hospitality pricing (29-59€/month). All include 30-day free trial.",
+        "a1": "An industry solution is a pre-configured version of Konty tailored for specific business types. It includes specific workflows, terminology, and best practices for your industry-so you get a POS system that looks custom-made, right out of the box.",
+        "a2": "You can use either! Industry solution provides faster setup with pre-configured features for your business type. Core product is fully customizable and work for any business. Choose based on how quickly you want to start.",
+        "a3": "Of course. Industry solution is a starting point, not a limitation. Customize menus, workflows, features, and settings to match your needs. You get the best of both worlds-quick setup plus complete flexibility.",
+        "a4": "No, prices are the same regardless of whether you choose an industry solution or core product. Retail solutions use Retail pricing ($15-$29 / month), hospitality solutions use Hospitality pricing (29-59€/month). All include 30-day free trial.",
         "a5": "No problem! Many businesses are hybrid (e.g., cafe + shop). We configure Konty to cover your specific needs, combining features from multiple solutions. Schedule a demo and we'll design the perfect setup for your unique business.",
-        "a6": "Yes! When you schedule a demo, choose your industry and we'll show you features specific to your business type. You'll see exactly how Konty works for businesses like yours—with relevant examples and workflows.",
-        "a7": "Yes, every Konty solution—regardless of industry—works flawlessly offline with full functionality. Your business continues normally during internet outages, with automatic sync when connection is restored.",
         "q1": "How does an industry solution differ from core products?",
         "q2": "Do I need an industry solution or can I use the core product?",
         "q3": "Can I customize the industry solution?",
         "q4": "Are prices different for each industry?",
         "q5": "What if my business doesn't fit one industry?",
-        "q6": "Can I see a demo for my industry?",
-        "q7": "Do all industry solutions work offline?",
         "subtitle": "Most common questions about industry solutions",
         "title": "Frequently Asked Questions"
       },
       "fastFood": {
         "faq": {
-          "a1": "Yes, unified system for all ordering channels—drive-thru, counter, delivery, and mobile orders all come into one kitchen display system. Prioritize orders by channel, track fulfillment time, and manage all service types simultaneously without confusion.",
-          "a2": "Absolutely. Measure prep and fulfillment time for each order with real-time alerts when targets are exceeded. Track performance by time of day, channel, and staff member—optimize service speed based on data.",
-          "a3": "Create meal combos with fixed prices and optional add-ons. System automatically suggests upsells at checkout—\"Make it a combo?\" or \"Add fries?\"—increasing average ticket with minimal staff effort.",
-          "a4": "Yes, seamless integration with major delivery platforms. Orders come directly into your kitchen display system with channel tags—no juggling multiple tablets, no manual entry. Unified fulfillment across all channels.",
-          "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include multiple ordering channels, kitchen display, speed tracking, and offline mode. Try free for 30 days during your busiest dayparts.",
+          "a1": "Yes, unified system for all ordering channels-drive-thru, counter, delivery, and mobile orders all come into one kitchen display system. Prioritize orders by channel, track fulfillment time, and manage all service types simultaneously without confusion.",
+          "a2": "Absolutely. Measure prep and fulfillment time for each order with real-time alerts when targets are exceeded. Track performance by time of day, channel, and staff member-optimize service speed based on data.",
+          "a3": "Create meal combos with fixed prices and optional add-ons. System automatically suggests upsells at checkout-\"Make it a combo?\" or \"Add fries?\"-increasing average ticket with minimal staff effort.",
+          "a4": "Yes, seamless integration with major delivery platforms. Orders come directly into your kitchen display system with channel tags-no juggling multiple tablets, no manual entry. Unified fulfillment across all channels.",
+          "a5": "Plans start at $29 / month with no setup costs or contracts. All plans include multiple ordering channels, kitchen display, speed tracking, and offline mode. Try free for 30 days during your busiest dayparts.",
           "q1": "Does Konty manage orders through drive-thru, counter, and delivery together?",
           "q2": "Can I track service speed and prep time?",
           "q3": "How does it handle combo meals and upselling?",
@@ -1527,8 +1509,8 @@
       "grocerySupermarkets": {
         "faq": {
           "a1": "Absolutely. Konty manages unlimited products with advanced inventory tracking, automated reorder points, and real-time stock levels across multiple locations. Built for high-volume retail with fast search and bulk product management.",
-          "a2": "Yes, full support for barcode scanners (USB, Bluetooth, mobile) and scales. Supports both standard barcodes and weighted barcodes for fresh produce, deli items, and bulk—fast and accurate checkout every time.",
-          "a3": "Flexible promotions including 2+1 deals, bundle pricing (buy 3 get 1 free), percentage discounts, seasonal sales, and loyalty rewards. Set start/end dates, limit quantities, and combine multiple promotions—all automatically applied at checkout.",
+          "a2": "Yes, full support for barcode scanners (USB, Bluetooth, mobile) and scales. Supports both standard barcodes and weighted barcodes for fresh produce, deli items, and bulk-fast and accurate checkout every time.",
+          "a3": "Flexible promotions including 2+1 deals, bundle pricing (buy 3 get 1 free), percentage discounts, seasonal sales, and loyalty rewards. Set start/end dates, limit quantities, and combine multiple promotions-all automatically applied at checkout.",
           "a4": "Yes, complete fresh product management with expiration date tracking, batch numbers, and automatic FIFO (first-in-first-out) inventory rotation. Get alerts for products approaching expiration to minimize waste and optimize markdowns.",
           "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited products, barcode scanning, promotions, inventory tracking, and offline mode. Try free for 30 days with your full product catalog.",
           "q1": "Can Konty efficiently manage thousands of products?",
@@ -1595,10 +1577,10 @@
       "restaurants": {
         "faq": {
           "a1": "Yes, Konty provides complete table management with visual floor plans, real-time table status, server assignment, and seamless order routing to kitchen displays. From seating to payment, everything is connected in one system.",
-          "a2": "Absolutely. Servers use tablets or phones to take orders tableside with real-time sync to kitchen and bar. No handwritten orders or walking to terminals—orders go directly to kitchen immediately, reducing errors and improving speed.",
-          "a3": "Konty works flawlessly offline with full functionality. During busy times or internet outages, all orders process locally without interruption. When connection is restored, everything automatically syncs—you never stop serving guests.",
-          "a4": "Yes, seamless integration with major delivery platforms. Orders from apps like Glovo, Wolt, and others come directly into your POS and kitchen display—no manual entry, no missed orders. One system for all channels.",
-          "a5": "Plans start at 29€/month per location with no setup costs or contracts. All plans include table management, kitchen display, offline mode, and 24/7 support. Try free for 30 days during regular service.",
+          "a2": "Absolutely. Servers use tablets or phones to take orders tableside with real-time sync to kitchen and bar. No handwritten orders or walking to terminals-orders go directly to kitchen immediately, reducing errors and improving speed.",
+          "a3": "Konty works flawlessly offline with full functionality. During busy times or internet outages, all orders process locally without interruption. When connection is restored, everything automatically syncs-you never stop serving guests.",
+          "a4": "Yes, seamless integration with major delivery platforms. Orders from apps like Glovo, Wolt, and others come directly into your POS and kitchen display-no manual entry, no missed orders. One system for all channels.",
+          "a5": "Plans start at $29 / month per location with no setup costs or contracts. All plans include table management, kitchen display, offline mode, and 24/7 support. Try free for 30 days during regular service.",
           "q1": "Does Konty enable table and order management?",
           "q2": "Can servers take orders on mobile devices?",
           "q3": "How does it work during rush without internet?",
