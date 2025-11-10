@@ -360,10 +360,10 @@ const items = computed<MenuGroup[]>(() => [
         to: localePath('/solutions/clothing-boutiques')
       },
       {
-        label: t('ui.navigation.categories.convenienceStores'),
-        description: t('ui.navigation.categories.convenienceStoresDesc'),
+        label: t('ui.navigation.categories.generalStores'),
+        description: t('ui.navigation.categories.generalStoresDesc'),
         icon: 'i-lucide-store',
-        to: localePath('/solutions/convenience-stores')
+        to: localePath('/solutions/general-stores')
       },
       {
         label: t('ui.navigation.categories.b2b'),

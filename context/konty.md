@@ -74,6 +74,9 @@ With full confidence, Konty tells its users: **“Count on us.”**
 
 ---
 
+## 6. Documentation
+Comperhensive docummentation can be found in another repository found here: ~/projects/konty-docs in its docs directory (~/projects/konty-docs/docs). Docummentation is written in .md files inside that directory. Whenever you need to analyze anything related to the Konty POS application itself, you must read all files in this directory!
+
 # Final Summary
 Konty is a **modern, cloud-first POS system** for retail and hospitality, combining **decades of expertise with intuitive design and proven stability**. Its brand promise is simple:
 

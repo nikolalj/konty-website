@@ -84,7 +84,7 @@ const props = defineProps({
       | 'fast-food'
       | 'grocery-supermarkets'
       | 'clothing-boutiques'
-      | 'convenience-stores'
+      | 'general-stores'
       | 'b2b'
       | undefined
     >,
@@ -115,7 +115,7 @@ const faqData = computed(() => {
   if (props.category === 'fast-food') return tObject('pages.solutions.fastFood.faq')
   if (props.category === 'grocery-supermarkets') return tObject('pages.solutions.grocerySupermarkets.faq')
   if (props.category === 'clothing-boutiques') return tObject('pages.solutions.clothingBoutiques.faq')
-  if (props.category === 'convenience-stores') return tObject('pages.solutions.convenienceStores.faq')
+  if (props.category === 'general-stores') return tObject('pages.solutions.generalStores.faq')
   if (props.category === 'b2b') return tObject('pages.solutions.b2b.faq')
 
   return undefined

@@ -444,10 +444,10 @@ export const useSchemas = () => {
         category: 'Retail Management Software',
         description: t('seo.solutions.clothingBoutiques.description')
       },
-      'convenience-stores': {
-        name: 'Convenience Store POS System',
+      'general-stores': {
+        name: 'General Store POS System',
         category: 'Retail Management Software',
-        description: t('seo.solutions.convenienceStores.description')
+        description: t('seo.solutions.generalStores.description')
       },
       b2b: {
         name: 'B2B Sales & Invoicing System',

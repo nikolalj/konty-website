@@ -84,10 +84,10 @@ const solutionsList = [
     "href": "/solutions/clothing-boutiques"
   },
   {
-    "id": "convenienceStores",
+    "id": "generalStores",
     "category": "retail",
     "icon": "🏪",
-    "href": "/solutions/convenience-stores"
+    "href": "/solutions/general-stores"
   },
   {
     "id": "b2b",

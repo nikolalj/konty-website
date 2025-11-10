@@ -118,15 +118,6 @@
         "title": "What to expect from the demo"
       },
       "categorySelector": {
-        "demoFeatures": "In the demo we'll focus on:",
-        "examples": {
-          "barsCafes": "Cafes, bars, clubs, cafeterias",
-          "clothing": "Boutiques, clothing stores, shoe stores",
-          "convenience": "Tobacco shops, gas stations, 24/7 stores",
-          "fastFood": "Fast food, kiosks, food trucks",
-          "grocery": "Supermarkets, grocery stores, mini markets",
-          "restaurants": "Fine dining, family restaurants, pizzerias"
-        },
         "features": {
           "analytics": "Advanced analytics",
           "barcodeScanning": "Barcode scanning",
@@ -1170,15 +1161,15 @@
     "solutions": {
       "b2b": {
         "faq": {
-          "a1": "Yes, fully automated e-invoice generation and delivery in compliance with local regulations. Create invoices automatically from sales orders, send electronically to partners, track delivery status, and maintain complete audit trails-simplify B2B invoicing and reduce manual work.",
-          "a2": "Absolutely. Create unlimited customer-specific price lists, volume discounts, and payment terms for each B2B partner. System automatically applies correct prices at checkout based on customer-no manual price lookups, fewer errors, and maintained profitability.",
-          "a3": "Complete credit management with outstanding invoice tracking, payment due dates, automatic reminders for overdue accounts, and credit limit control. See outstanding balances by customer, aging reports, and payment history-maintain healthy cash flow and reduce bad debt.",
-          "a4": "Yes, dedicated partner portal where B2B customers log in to view order history, download invoices, check account statements, and submit reorders. Reduces support calls, empowers partners with self-service, and simplifies reordering.",
-          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include e-invoicing, customer-specific pricing, accounts receivable tracking, and partner portals. Try free for 30 days to manage your B2B operations.",
-          "q1": "Does Konty support automated e-invoicing?",
-          "q2": "Can I set different prices for each B2B customer?",
-          "q3": "How does accounts receivable tracking work?",
-          "q4": "Can partners access their order history and invoices?",
+          "a1": "Yes, complete client management with detailed profiles including company name, TIN, address, contact details, and bank account information. Import clients from files or add them manually. Track all client information in one centralized system for easy access and compliance.",
+          "a2": "Absolutely. Generate proforma invoices, advance payment receipts, and sales receipts with full buyer details. System supports fiscal receipt printing with complete buyer information including TIN for regulatory compliance. Export receipts to PDF and A4 format for professional documentation.",
+          "a3": "Complete client transaction tracking with automatic balance calculation. View all transactions per client including sales receipts, manual transactions, and bank statements. Track receivables, add manual payments (FROM/TO client), and print detailed transaction reports with date filtering.",
+          "a4": "Comprehensive sales reports by buyer, including total sales, transaction history, and detailed item breakdown. Advanced search and filtering by date range, payment method, and buyer. Export all reports to Excel for further analysis and forecasting.",
+          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include client management, proforma invoicing, transaction tracking, and comprehensive reporting. Try free for 30 days to manage your B2B operations.",
+          "q1": "Can Konty manage detailed client profiles for B2B partners?",
+          "q2": "Does it support proforma invoices and advance payments?",
+          "q3": "How does client transaction tracking work?",
+          "q4": "What B2B reports are available?",
           "q5": "How much does Konty cost for B2B sales?",
           "subtitle": "Most common questions about Konty for wholesale and B2B",
           "title": "Frequently Asked Questions"
@@ -1187,60 +1178,59 @@
           "cta": "Explore B2B Features",
           "description": "Complete solution for wholesale and business partnerships",
           "feat1": {
-            "description": "Automated e-invoice generation and sending compliant with local regulations",
-            "icon": "i-heroicons-document-check",
-            "title": "E-Invoicing System"
+            "description": "Detailed client profiles with TIN, bank accounts, and contact information. Import/export client lists",
+            "icon": "i-heroicons-user-group",
+            "title": "Client Management"
           },
           "feat2": {
-            "description": "Set different price lists, discounts, and payment terms for each B2B partner",
-            "icon": "i-heroicons-currency-dollar",
-            "title": "Customer-Specific Pricing"
+            "description": "Generate proforma invoices and advance payment receipts with complete buyer details",
+            "icon": "i-heroicons-document-check",
+            "title": "Professional Invoicing"
           },
           "feat3": {
-            "description": "Track open invoices, payment deadlines, and automatic notifications for due obligations",
+            "description": "Track all client transactions, balances, and payment history in one place with manual transaction support",
             "icon": "i-heroicons-banknotes",
-            "title": "Deferred Payment"
+            "title": "Transaction Tracking"
           },
           "feat4": {
-            "description": "Quick entry for large wholesale orders with item lookup and quantity management",
-            "icon": "i-heroicons-shopping-cart",
-            "title": "Bulk Orders"
+            "description": "Multiple payment methods including wire transfer, check, and account payments for B2B flexibility",
+            "icon": "i-heroicons-credit-card",
+            "title": "Flexible Payments"
           },
           "feat5": {
-            "description": "Give partners access to order history, invoices, and account statements",
-            "icon": "i-heroicons-user-group",
-            "title": "Partner Portal"
+            "description": "Manage delivery in/out notes, track stock movements, and maintain complete inventory records",
+            "icon": "i-heroicons-truck",
+            "title": "Delivery Documentation"
           },
           "feat6": {
-            "description": "Advanced reports on partner performance, trends, and revenue forecasting",
+            "description": "Sales by buyer, client transactions, price calculations, and comprehensive B2B analytics",
             "icon": "i-heroicons-chart-bar-square",
-            "title": "Analytics & Forecasting"
+            "title": "B2B Reports"
           },
           "title": "Professional B2B Tools"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "E-Invoicing • Wholesale • Partners • Reports",
-          "subtitle": "Professional solutions for wholesale and B2B partnerships",
-          "title": "Konty for B2B Sales & E-Invoicing"
+          "subtitle": "Reliable client management, professional invoicing, and complete transaction tracking. Everything you need for wholesale operations—nothing you don't.",
+          "title": "B2B Sales That Simply Work"
         },
         "overview": {
-          "description": "Complete solution for B2B sales and e-invoicing",
+          "description": "Complete solution for B2B sales and client management",
           "image": "/images/solutions/b2b.avif",
-          "title": "B2B Digitalization"
+          "title": "B2B Made Simple"
         }
       },
       "barsCafes": {
         "faq": {
-          "a1": "Konty is optimized for speed with customizable shortcuts, quick order entry, and instant processing. During rush, bartenders and servers can take multiple orders simultaneously with real-time sync. System handles hundreds of transactions per hour without slowdown.",
-          "a2": "Yes, automatic price changes by time period and day of week. Set happy hour prices, weekend rates, or special prices that activate automatically-no manual updates needed. System changes prices according to your schedule.",
-          "a3": "Absolutely. Real-time tracking of kegs, bottles, ingredients, and bar stock with automatic low-stock alerts. Track pour costs, monitor waste, and optimize ordering-complete control over bar inventory.",
-          "a4": "Simple open tab system with search by name or card, automatic reminders, and flexible payment options. Guests can add to tabs throughout the evening and pay when ready-no more lost tabs or payment confusion.",
-          "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include quick order entry, inventory tracking, loyalty programs, and offline mode. Try free for 30 days during your busiest shifts.",
+          "a1": "Konty handles high volume with fast order entry via customizable button grid, item groups, and quick-add functionality. Multiple payment methods process instantly. System is optimized for speed with keyboard shortcuts and favorites for your most popular drinks. Perfect for busy shifts and rush hours.",
+          "a2": "Yes, comprehensive inventory tracking for all items including beverages, ingredients, and bar stock. Track stock levels in real-time, monitor inventory movements with delivery in/out notes, write-offs for waste tracking, and get complete stock reports. Full visibility into your inventory.",
+          "a3": "Complete shift management with open/close shift functionality, cash register management, deposit and withdrawal tracking, and detailed shift reports. Each bartender/server logs in with their PIN, and all transactions are tracked by user. Easy shift handover with full accountability.",
+          "a4": "Konty works completely offline with full functionality. Process orders, manage tables, accept payments, and track inventory without internet. When connection returns, everything automatically syncs to the cloud. Your bar never stops operating during internet issues.",
+          "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include quick order entry, inventory tracking, shift management, table management, and offline mode. Try free for 30 days during your busiest shifts.",
           "q1": "How does Konty handle high volume during rush hours?",
-          "q2": "Can I set time-based pricing for happy hour?",
-          "q3": "Does it track beverage inventory like kegs and bottles?",
-          "q4": "How does open tab management work?",
+          "q2": "Does it track beverage and bar inventory?",
+          "q3": "How does shift management work for multiple bartenders?",
+          "q4": "Does it work offline during internet issues?",
           "q5": "How much does Konty cost for a bar or cafe?",
           "subtitle": "Most common questions about Konty for bars and cafes",
           "title": "Frequently Asked Questions"
@@ -1249,42 +1239,41 @@
           "cta": "Explore Bar & Cafe Features",
           "description": "Fast, efficient tools designed for bars and cafes",
           "feat1": {
-            "description": "Customizable shortcuts and favorites for lightning-fast order entry during rush hours",
+            "description": "Customizable button grid with item groups and favorites for lightning-fast order entry",
             "icon": "i-heroicons-bolt",
             "title": "Quick Order Entry"
           },
           "feat2": {
-            "description": "Automatic price changes by time periods and days of the week",
-            "icon": "i-heroicons-clock",
-            "title": "Time-Based Pricing"
+            "description": "Real-time tracking of beverages, ingredients, and stock with delivery documentation and write-offs",
+            "icon": "i-heroicons-cube",
+            "title": "Inventory Management"
           },
           "feat3": {
-            "description": "Real-time tracking of kegs, bottles, and ingredients with automatic alerts",
-            "icon": "i-heroicons-beaker",
-            "title": "Beverage Inventory"
+            "description": "Open/close shifts, cash drawer management, deposits, withdrawals, and user time tracking",
+            "icon": "i-heroicons-clock",
+            "title": "Shift Management"
           },
           "feat4": {
-            "description": "Easy open tab system with name or card lookup and automatic tab reminders",
-            "icon": "i-heroicons-credit-card",
-            "title": "Tab Management"
+            "description": "Visual table plan with real-time status for table service cafes and bars with seating",
+            "icon": "i-heroicons-table-cells",
+            "title": "Table Management"
           },
           "feat5": {
-            "description": "Point-based system with automatic rewards and discounts for repeat customers",
-            "icon": "i-heroicons-gift",
-            "title": "Loyalty Program"
+            "description": "Track sales by staff, item, time period, and sector with detailed performance reports",
+            "icon": "i-heroicons-chart-bar",
+            "title": "Sales Analytics"
           },
           "feat6": {
-            "description": "Hourly sales overview, best-selling items, and profit margins per product",
-            "icon": "i-heroicons-chart-bar",
-            "title": "Sales Reports"
+            "description": "Full functionality offline - orders and payments work without internet connection",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline Mode"
           },
           "title": "Optimized for High-Volume Service"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Quick Pay • Inventory • Discounts • Analytics",
-          "subtitle": "Fast checkout and inventory management for high-volume venues",
-          "title": "Konty for Bars & Cafes"
+          "subtitle": "Fast order entry, complete inventory control, and seamless shift changes. Built for high-volume service when reliability matters most.",
+          "title": "Serve More, Stress Less"
         },
         "overview": {
           "description": "System designed for fast service and high traffic",
@@ -1304,14 +1293,14 @@
       },
       "clothingBoutiques": {
         "faq": {
-          "a1": "Yes, comprehensive product variant tracking by size, color, style, and any other attribute you define. Each variant has its own stock count, barcode, and price-perfect for fashion retail with complete visibility into what's selling and what's not.",
-          "a2": "Organize products by collections, seasons, and categories. Schedule automatic markdowns (\"20% off winter collection starting Dec 1\"), track seasonal inventory turnover, and identify slow-moving items for clearance-optimize profitability through product lifecycle.",
-          "a3": "Absolutely. Build detailed customer profiles with purchase history, size preferences, favorite styles, and buying patterns. Send personalized promotions, remember customer sizes, and provide VIP service that builds loyalty and repeat purchases.",
-          "a4": "Yes, complete layaway management with payment tracking, reservation requests with expiration dates, and customer notifications. Track partial payments, manage deposits, and ensure items are properly reserved-all built into the system.",
-          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited variants, customer profiles, loyalty programs, and seasonal collection management. Try free for 30 days with your full inventory.",
+          "a1": "Yes, manage inventory by creating separate items for each size/color variant. Each variant gets its own SKU, barcode, stock count, and price. Organize variants using item categories and naming conventions (e.g., \"Dress-Red-M\", \"Dress-Red-L\"). Import/export variants in bulk via Excel for efficient management.",
+          "a2": "Organize products using item categories for collections and seasons. Track inventory turnover with stock reports, identify slow-moving items, and use price levelings to manage seasonal markdowns. Category-based organization makes it easy to manage seasonal collections.",
+          "a3": "Absolutely. Complete client profiles with purchase history tracking through sales by buyer reports. View every transaction per customer, track their spending patterns, and build detailed customer profiles for personalized service and targeted promotions.",
+          "a4": "Yes, proforma invoice functionality allows creating quotes and reservations. Track advance payments for layaway plans and use the advance payment chain to manage partial payments until final purchase. Complete layaway management with payment tracking.",
+          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited items/variants, client management, purchase history tracking, proforma invoices, and inventory management. Try free for 30 days with your full inventory.",
           "q1": "Can Konty track inventory by sizes and colors?",
           "q2": "How does it handle seasonal collections and markdowns?",
-          "q3": "Can I track customer preferences and purchase history?",
+          "q3": "Can I track customer purchase history and preferences?",
           "q4": "Does it support layaway and reservations?",
           "q5": "How much does Konty cost for a clothing boutique?",
           "subtitle": "Most common questions about Konty for clothing boutiques",
@@ -1321,109 +1310,46 @@
           "cta": "Discover Fashion Retail Features",
           "description": "Specialized tools for clothing stores and boutiques",
           "feat1": {
-            "description": "Track inventory by sizes and colors for each item separately",
+            "description": "Create separate items for each size/color variant with individual SKUs, barcodes, and stock counts",
             "icon": "i-heroicons-swatch",
-            "title": "Product Variants"
+            "title": "Variant Management"
           },
           "feat2": {
-            "description": "Organize products by collections, seasons, and categories for easier management",
-            "icon": "i-heroicons-sparkles",
-            "title": "Categories & Collections"
+            "description": "Organize products by categories for collections and seasons with flexible category system",
+            "icon": "i-heroicons-folder",
+            "title": "Collections & Categories"
           },
           "feat3": {
-            "description": "Track purchase history, preferences, and sizes for personalized service",
+            "description": "Detailed client profiles with complete purchase history and transaction tracking",
             "icon": "i-heroicons-user-circle",
             "title": "Customer Profiles"
           },
           "feat4": {
-            "description": "Manage layaway plans and hold items for customers with payment tracking",
-            "icon": "i-heroicons-archive-box",
-            "title": "Layaway & Hold"
+            "description": "Proforma invoices and advance payment tracking for layaway and reservation management",
+            "icon": "i-heroicons-document-text",
+            "title": "Layaway & Reservations"
           },
           "feat5": {
-            "description": "Track each customer's purchases for personalized recommendations and better experience",
-            "icon": "i-heroicons-light-bulb",
-            "title": "Purchase History"
+            "description": "Price leveling tools to manage seasonal markdowns and promotional pricing changes",
+            "icon": "i-heroicons-tag",
+            "title": "Price Management"
           },
           "feat6": {
-            "description": "Reward program with tiers, exclusive offers, and birthday rewards",
-            "icon": "i-heroicons-star",
-            "title": "Loyalty & VIP"
+            "description": "Receipt corrections, refunds, and credit notes for returns and exchanges",
+            "icon": "i-heroicons-arrow-path",
+            "title": "Returns & Exchanges"
           },
           "title": "Perfect for Fashion Retail"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Variants • Inventory • Discounts • Analytics",
-          "subtitle": "Complete sales and inventory management for clothing",
-          "title": "Konty for Clothing & Boutiques"
+          "subtitle": "Track every variant, know your customers, manage layaway. Intuitive tools that let you focus on fashion, not technology.",
+          "title": "Boutique Management Made Simple"
         },
         "overview": {
           "description": "Specialized for boutiques and clothing stores",
           "image": "/images/solutions/clothing-boutiques.avif",
           "title": "Perfect for Fashion Retail"
-        }
-      },
-      "convenienceStores": {
-        "faq": {
-          "a1": "Absolutely. Easy shift changes with cash drawer management, employee time tracking, and shift-based reporting. Each cashier logs in/out with their credentials, tracking sales and drawer balance-perfect for round-the-clock operations.",
-          "a2": "Yes, automatic age verification prompts when scanning tobacco, alcohol, or other restricted products. Prevents sales to minors, ensures regulatory compliance, and creates audit trail-protects your business from regulatory issues.",
-          "a3": "Yes, built-in support for mobile phone top-ups, bill payments, and other ancillary services. Integrate with payment processors to offer these high-margin services that drive traffic and customer loyalty.",
-          "a4": "Comprehensive tax management supporting multiple tax rates and categories. Automatically applies correct taxes to food, tobacco, alcohol, household items, and other categories-ensures regulatory compliance and accurate receipts every time.",
-          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include multi-shift support, age restriction alerts, diverse product management, and 24/7 offline mode. Try free for 30 days across all shifts.",
-          "q1": "Can Konty manage 24/7 operations with multiple shifts?",
-          "q2": "Does it support age-restricted product alerts?",
-          "q3": "Can I sell phone top-ups and process bill payments?",
-          "q4": "How does it handle diverse product categories with different tax rates?",
-          "q5": "How much does Konty cost for a convenience store?",
-          "subtitle": "Most common questions about Konty for convenience stores",
-          "title": "Frequently Asked Questions"
-        },
-        "features": {
-          "cta": "See Convenience Store Features",
-          "description": "Simple, fast system for around-the-clock operation",
-          "feat1": {
-            "description": "Lightning-fast scanning and payment processing for high customer turnover",
-            "icon": "i-heroicons-bolt",
-            "title": "Quick Checkout"
-          },
-          "feat2": {
-            "description": "Automatic alerts when selling age-restricted products",
-            "icon": "i-heroicons-identification",
-            "title": "Age Restriction Alerts"
-          },
-          "feat3": {
-            "description": "Easy shift changes, cash drawer management, and employee time tracking",
-            "icon": "i-heroicons-clock",
-            "title": "Multi-Shift Control"
-          },
-          "feat4": {
-            "description": "Sell phone top-ups and process bill payments directly at checkout",
-            "icon": "i-heroicons-ticket",
-            "title": "Prepaid & Bill Payments"
-          },
-          "feat5": {
-            "description": "Manage diverse product mix from food to household items with different tax rates",
-            "icon": "i-heroicons-squares-plus",
-            "title": "Multiple Product Categories"
-          },
-          "feat6": {
-            "description": "Track inventory shrinkage, suspicious transactions, and employee activity",
-            "icon": "i-heroicons-shield-check",
-            "title": "Loss Prevention"
-          },
-          "title": "24/7 Reliability"
-        },
-        "hero": {
-          "cta": "Start 30-Day Free Trial",
-          "features": "Wide Range • Quick Checkout • 24/7 Operation • Inventory",
-          "subtitle": "Simple management of diverse product mix",
-          "title": "Konty for Convenience Stores"
-        },
-        "overview": {
-          "description": "Reliable system for 24/7 operation with diverse products",
-          "image": "/images/solutions/convenience-stores.avif",
-          "title": "For Stores That Never Sleep"
         }
       },
       "cta": {
@@ -1446,77 +1372,76 @@
       },
       "fastFood": {
         "faq": {
-          "a1": "Yes, unified system for all ordering channels-drive-thru, counter, delivery, and mobile orders all come into one kitchen display system. Prioritize orders by channel, track fulfillment time, and manage all service types simultaneously without confusion.",
-          "a2": "Absolutely. Measure prep and fulfillment time for each order with real-time alerts when targets are exceeded. Track performance by time of day, channel, and staff member-optimize service speed based on data.",
-          "a3": "Create meal combos with fixed prices and optional add-ons. System automatically suggests upsells at checkout-\"Make it a combo?\" or \"Add fries?\"-increasing average ticket with minimal staff effort.",
-          "a4": "Yes, seamless integration with major delivery platforms. Orders come directly into your kitchen display system with channel tags-no juggling multiple tablets, no manual entry. Unified fulfillment across all channels.",
-          "a5": "Plans start at $29 / month with no setup costs or contracts. All plans include multiple ordering channels, kitchen display, speed tracking, and offline mode. Try free for 30 days during your busiest dayparts.",
-          "q1": "Does Konty manage orders through drive-thru, counter, and delivery together?",
-          "q2": "Can I track service speed and prep time?",
-          "q3": "How does it handle combo meals and upselling?",
-          "q4": "Does it integrate with delivery platforms?",
+          "a1": "Yes, fast order creation with quick item entry via button grid, item groups, and favorites. Kitchen Display System shows all orders in real-time with order timers and priority management. Perfect for managing counter orders, takeout, and high-volume quick service.",
+          "a2": "Absolutely. Kitchen Display System shows orders in real-time with timer tracking, color-coded warnings (yellow/red based on time), and completion status. Track each order from entry to fulfillment with waiter/user name, order time, and detailed item breakdown. Customize alerts and viewing options.",
+          "a3": "Yes, flexible item management allows creating combos and meal sets. Use item categories and groups to organize menu items logically. Track sales by item and category to identify your best-selling combos and optimize menu performance.",
+          "a4": "Konty works completely offline with full POS functionality. Process all orders, manage kitchen display, and accept payments without internet. When connection returns, everything automatically syncs. Your quick service operation never stops, even during internet outages.",
+          "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include fast order entry, Kitchen Display System, order tracking, offline mode, and unlimited users. Try free for 30 days during your busiest dayparts.",
+          "q1": "How does Konty manage fast-paced orders?",
+          "q2": "Can I track order preparation time and speed?",
+          "q3": "Does it support combo meals and menu sets?",
+          "q4": "Does it work offline during internet outages?",
           "q5": "How much does Konty cost for a fast food restaurant?",
-          "subtitle": "Most common questions about Konty for fast food",
+          "subtitle": "Most common questions about Konty for fast food and quick service",
           "title": "Frequently Asked Questions"
         },
         "features": {
           "cta": "See Quick Service Features",
-          "description": "Maximum throughput for quick service restaurants",
+          "description": "Maximum speed and efficiency for quick service restaurants",
           "feat1": {
-            "description": "Unified system for drive-thru, counter, delivery, and mobile orders in one place",
-            "icon": "i-heroicons-queue-list",
-            "title": "Multi-Channel Orders"
+            "description": "Fast order creation with button grid, favorites, and quick-add for maximum throughput",
+            "icon": "i-heroicons-bolt",
+            "title": "Rapid Order Entry"
           },
           "feat2": {
-            "description": "Real-time order display with prep time tracking and priority management",
+            "description": "Real-time order display with prep time tracking, color-coded timers, and completion status",
             "icon": "i-heroicons-tv",
             "title": "Kitchen Display System"
           },
           "feat3": {
-            "description": "Create meal sets and combo deals with fixed pricing and optional add-ons",
+            "description": "Create combos and meal sets with item categories for organized menu management",
             "icon": "i-heroicons-squares-2x2",
-            "title": "Menu Combos"
+            "title": "Menu Organization"
           },
           "feat4": {
-            "description": "Measure preparation and fulfillment times with alerts and performance statistics",
+            "description": "Track orders by time period, staff member, and item for performance optimization",
             "icon": "i-heroicons-clock",
-            "title": "Service Speed Tracking"
+            "title": "Order Tracking"
           },
           "feat5": {
-            "description": "Seamless integration with delivery platforms and in-house delivery management",
-            "icon": "i-heroicons-truck",
-            "title": "Delivery Integration"
+            "description": "Multiple payment methods with instant processing for fast customer turnover",
+            "icon": "i-heroicons-credit-card",
+            "title": "Quick Checkout"
           },
           "feat6": {
-            "description": "Special pricing and menu adjustments for breakfast, lunch, and dinner rushes",
-            "icon": "i-heroicons-sun",
-            "title": "Peak Time Management"
+            "description": "Full functionality offline - orders, kitchen display, and payments work without internet",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline Mode"
           },
           "title": "Built for Speed & Efficiency"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Quick Orders • Drive-thru • Delivery • KDS",
-          "subtitle": "Optimized for speed and efficiency - perfect for fast food restaurants",
-          "title": "Konty for Quick Service"
+          "subtitle": "Real-time kitchen display and instant order processing that keeps pace with your busiest hours. Simple enough to train in minutes, reliable enough to count on all day.",
+          "title": "Speed Meets Reliability"
         },
         "overview": {
-          "description": "System designed for maximum efficiency and throughput",
+          "description": "System designed for maximum speed and throughput",
           "image": "/images/solutions/fast-food.avif",
           "title": "Speed is Everything"
         }
       },
       "grocerySupermarkets": {
         "faq": {
-          "a1": "Absolutely. Konty manages unlimited products with advanced inventory tracking, automated reorder points, and real-time stock levels across multiple locations. Built for high-volume retail with fast search and bulk product management.",
-          "a2": "Yes, full support for barcode scanners (USB, Bluetooth, mobile) and scales. Supports both standard barcodes and weighted barcodes for fresh produce, deli items, and bulk-fast and accurate checkout every time.",
-          "a3": "Flexible promotions including 2+1 deals, bundle pricing (buy 3 get 1 free), percentage discounts, seasonal sales, and loyalty rewards. Set start/end dates, limit quantities, and combine multiple promotions-all automatically applied at checkout.",
-          "a4": "Yes, complete fresh product management with expiration date tracking, batch numbers, and automatic FIFO (first-in-first-out) inventory rotation. Get alerts for products approaching expiration to minimize waste and optimize markdowns.",
-          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited products, barcode scanning, promotions, inventory tracking, and offline mode. Try free for 30 days with your full product catalog.",
+          "a1": "Absolutely. Konty manages unlimited products with import/export from Excel/CSV files for bulk management. Add items individually or in bulk, organize by categories, and use quick search by name or code. Built for high-volume retail with efficient product management.",
+          "a2": "Yes, full barcode scanning support and Export for Scale functionality specifically for grocery retail. Supports barcode input via code entry or scanning devices. Scale export feature enables integration with weighted product systems for fresh produce and deli items.",
+          "a3": "Comprehensive inventory tracking with real-time stock levels, delivery in/out notes, beginning inventories, price calculations, write-offs for waste management, and stock reports with advanced filtering. Complete visibility and control over your inventory.",
+          "a4": "Yes, support for multiple tax rates per item. System automatically applies correct tax rates based on item category. Manage different tax rates for food, household items, and other product categories with automatic calculation and regulatory compliance.",
+          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include unlimited products, barcode scanning, scale export, inventory tracking, multiple tax rates, and offline mode. Try free for 30 days with your full product catalog.",
           "q1": "Can Konty efficiently manage thousands of products?",
           "q2": "Does it support barcode scanning and scales?",
-          "q3": "How does the promotion system work?",
-          "q4": "Can I track expiration dates for fresh products?",
+          "q3": "How does inventory tracking work?",
+          "q4": "Can it handle different tax rates for product categories?",
           "q5": "How much does Konty cost for a grocery store?",
           "subtitle": "Most common questions about Konty for grocery stores and supermarkets",
           "title": "Frequently Asked Questions"
@@ -1525,42 +1450,41 @@
           "cta": "View Grocery Store Features",
           "description": "Powerful inventory and checkout system for grocery stores",
           "feat1": {
-            "description": "Real-time stock tracking across multiple locations with automatic reorder points",
+            "description": "Real-time stock tracking with delivery notes, beginning inventories, and comprehensive stock reports",
             "icon": "i-heroicons-cube",
             "title": "Advanced Inventory"
           },
           "feat2": {
-            "description": "Fast checkout with integrated barcode scanners and weight scale support",
+            "description": "Full barcode support with code entry and Export for Scale functionality for weighted products",
             "icon": "i-heroicons-qr-code",
-            "title": "Barcode Scanning"
+            "title": "Barcode & Scale Support"
           },
           "feat3": {
-            "description": "Flexible promotions, BOGO deals, bundle pricing, and seasonal discounts",
-            "icon": "i-heroicons-tag",
-            "title": "Promotions Engine"
+            "description": "Import/export thousands of items via Excel/CSV for efficient bulk product management",
+            "icon": "i-heroicons-document-arrow-up",
+            "title": "Bulk Product Management"
           },
           "feat4": {
-            "description": "Track expiration dates, batch numbers, and automatically rotate stock",
-            "icon": "i-heroicons-shopping-bag",
-            "title": "Fresh Product Management"
+            "description": "Organize products by categories with support for multiple tax rates per category",
+            "icon": "i-heroicons-tag",
+            "title": "Category Organization"
           },
           "feat5": {
-            "description": "Organize products by departments with specialized handling for each category",
-            "icon": "i-heroicons-building-storefront",
-            "title": "Multi-Department"
+            "description": "Price calculations, price levelings, and purchase vs sale price tracking for profitability",
+            "icon": "i-heroicons-currency-dollar",
+            "title": "Price Management"
           },
           "feat6": {
-            "description": "Track suppliers, purchase orders, and delivery schedules in one system",
-            "icon": "i-heroicons-truck",
-            "title": "Supplier Management"
+            "description": "Track write-offs, manage delivery in/out, and monitor stock movements with full audit trail",
+            "icon": "i-heroicons-clipboard-document-check",
+            "title": "Inventory Accounting"
           },
           "title": "Manage Thousands of Products"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Inventory • Barcodes • Promotions • Analytics",
-          "subtitle": "Manage thousands of products and high-volume transactions",
-          "title": "Konty for Grocery & Supermarkets"
+          "subtitle": "Barcode scanning, scale integration, and complete inventory tracking. Reliable grocery retail management that handles the complexity so you don't have to.",
+          "title": "Manage Thousands of Products with Confidence"
         },
         "overview": {
           "description": "Powerful system for managing large product catalogs",
@@ -1576,15 +1500,15 @@
       },
       "restaurants": {
         "faq": {
-          "a1": "Yes, Konty provides complete table management with visual floor plans, real-time table status, server assignment, and seamless order routing to kitchen displays. From seating to payment, everything is connected in one system.",
-          "a2": "Absolutely. Servers use tablets or phones to take orders tableside with real-time sync to kitchen and bar. No handwritten orders or walking to terminals-orders go directly to kitchen immediately, reducing errors and improving speed.",
-          "a3": "Konty works flawlessly offline with full functionality. During busy times or internet outages, all orders process locally without interruption. When connection is restored, everything automatically syncs-you never stop serving guests.",
-          "a4": "Yes, seamless integration with major delivery platforms. Orders from apps like Glovo, Wolt, and others come directly into your POS and kitchen display-no manual entry, no missed orders. One system for all channels.",
-          "a5": "Plans start at $29 / month per location with no setup costs or contracts. All plans include table management, kitchen display, offline mode, and 24/7 support. Try free for 30 days during regular service.",
-          "q1": "Does Konty enable table and order management?",
-          "q2": "Can servers take orders on mobile devices?",
-          "q3": "How does it work during rush without internet?",
-          "q4": "What about delivery platform integration?",
+          "a1": "Yes, complete table management with visual floor plan, drag-and-drop table positioning, and real-time status indicators. Create multiple sectors, customize table shapes and colors, add background images, and organize your entire dining area visually. Tables show occupied/free status in real-time.",
+          "a2": "Absolutely. Full-featured Kitchen Display System shows orders in real-time with waiter name, table number, order time, and item details. Color-coded timer warnings, order completion tracking (full or partial), recall functionality, and \"All Day\" view for complete kitchen visibility. Customizable tickets per page and font sizes.",
+          "a3": "Yes, flexible split bill functionality with G0-G3 sections allows splitting by seat, item, or custom amounts. Assign different items to different guests and process multiple payments for one table. Perfect for groups who want to pay separately.",
+          "a4": "Konty works fully offline with complete functionality. All table management, orders, and payments process locally without internet. When connection restores, everything automatically syncs. Your restaurant never stops operating, even during internet outages.",
+          "a5": "Plans start at 29€/month with no setup costs or contracts. All plans include table management, Kitchen Display System, split bills, offline mode, and unlimited users. Try free for 30 days during regular service.",
+          "q1": "Does Konty have table management with visual floor plans?",
+          "q2": "How does the Kitchen Display System work?",
+          "q3": "Can tables split bills for groups paying separately?",
+          "q4": "Does it work offline during internet outages?",
           "q5": "How much does Konty cost for a restaurant?",
           "subtitle": "Most common questions about Konty for restaurants",
           "title": "Frequently Asked Questions"
@@ -1593,47 +1517,107 @@
           "cta": "Learn More About Restaurant Features",
           "description": "Complete solution designed specifically for restaurant operations",
           "feat1": {
-            "description": "Visual floor plan with drag-and-drop tables, real-time status updates, and easy table transfers",
+            "description": "Visual floor plan with drag-and-drop tables, sectors, real-time status, and custom layouts",
             "icon": "i-heroicons-table-cells",
-            "title": "Table & Floor Management"
+            "title": "Table Management"
           },
           "feat2": {
-            "description": "Real-time order routing to kitchen stations, course timing, and order modification alerts",
+            "description": "Real-time order display with timers, waiter tracking, and completion status for kitchen efficiency",
             "icon": "i-heroicons-fire",
             "title": "Kitchen Display System"
           },
           "feat3": {
-            "description": "Flexible add-ons, dish modifications, and special kitchen notes per item",
-            "icon": "i-heroicons-adjustments-horizontal",
-            "title": "Modifiers & Special Requests"
+            "description": "Split bills by guest (G0-G3 sections), transfer tables, and handover between waiters seamlessly",
+            "icon": "i-heroicons-arrows-right-left",
+            "title": "Table Operations"
           },
           "feat4": {
-            "description": "Flexible bill splitting by items, seats, or percentage with multiple payment methods",
-            "icon": "i-heroicons-banknotes",
-            "title": "Split Bills & Payments"
+            "description": "Multiple payment methods including cash, card, check, voucher, and account for flexible checkout",
+            "icon": "i-heroicons-credit-card",
+            "title": "Flexible Payments"
           },
           "feat5": {
-            "description": "Easy menu management with modifiers, combos, and special pricing for different time periods",
-            "icon": "i-heroicons-document-text",
-            "title": "Menu Engineering"
+            "description": "Track sales by waiter, table, sector, and time period with detailed performance analytics",
+            "icon": "i-heroicons-chart-bar",
+            "title": "Staff Performance"
           },
           "feat6": {
-            "description": "Track server sales, tips, and performance with detailed analytics and reports",
-            "icon": "i-heroicons-user-group",
-            "title": "Staff Performance"
+            "description": "Full functionality offline - tables, orders, and payments work without internet connection",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline Mode"
           },
           "title": "Everything Your Restaurant Needs"
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "features": "Tables • Kitchen • Orders • Analytics",
-          "subtitle": "Complete restaurant management solution - from tables to payment",
-          "title": "Konty for Restaurants"
+          "subtitle": "Tables, kitchen display, split bills, and offline mode. Simple, reliable, and built to handle your busiest nights without missing a beat.",
+          "title": "Your Restaurant POS That Never Lets You Down"
         },
         "overview": {
           "description": "From table management to kitchen orders",
           "image": "/images/solutions/restaurants.avif",
-          "title": "Everything Your Restaurant Needs"
+          "title": "Built for Full-Service Restaurants"
+        }
+      },
+      "generalStores": {
+        "faq": {
+          "a1": "Absolutely. Complete shift management with open/close shift functionality, user PIN login, cash drawer management, deposits and withdrawals tracking, and detailed shift reports. Each employee logs in/out with their PIN. Track working hours, shift handovers, and maintain full accountability.",
+          "a2": "Yes, comprehensive inventory tracking for all items with real-time stock levels, delivery in/out notes, beginning inventories, write-offs for waste management, and complete stock reports. Full visibility and control over your diverse product range.",
+          "a3": "Yes, support for multiple tax rates per item. System automatically applies correct tax rates based on item category. Manage different tax rates for food, household items, tobacco, and other product categories with automatic calculation and regulatory compliance.",
+          "a4": "Konty works completely offline with full functionality. Process sales, manage shifts, accept payments, and track inventory without internet. When connection returns, everything automatically syncs. Your store keeps running smoothly regardless of connection issues.",
+          "a5": "Plans start at 15€/month with no setup costs or contracts. All plans include multi-shift support, user management, diverse product categories, multiple tax rates, and complete offline mode. Try free for 30 days.",
+          "q1": "Can Konty manage multiple shifts and employees?",
+          "q2": "Does it track diverse product inventory?",
+          "q3": "How does it handle different tax rates for product categories?",
+          "q4": "Does it work offline when internet goes down?",
+          "q5": "How much does Konty cost for a general store?",
+          "subtitle": "Most common questions about Konty for general stores",
+          "title": "Frequently Asked Questions"
+        },
+        "features": {
+          "cta": "See General Store Features",
+          "description": "Reliable system for diverse product retail",
+          "feat1": {
+            "description": "Lightning-fast checkout with barcode support, quick item lookup, and instant payment processing",
+            "icon": "i-heroicons-bolt",
+            "title": "Quick Checkout"
+          },
+          "feat2": {
+            "description": "Open/close shifts, cash drawer management, deposits, withdrawals, and employee time tracking",
+            "icon": "i-heroicons-clock",
+            "title": "Shift Management"
+          },
+          "feat3": {
+            "description": "PIN-based user login with shift reports, working hours tracking, and user deposits",
+            "icon": "i-heroicons-users",
+            "title": "Multi-User Support"
+          },
+          "feat4": {
+            "description": "Support for multiple tax rates across different product categories with automatic calculation",
+            "icon": "i-heroicons-calculator",
+            "title": "Tax Management"
+          },
+          "feat5": {
+            "description": "Organize diverse product mix with item categories and flexible inventory management",
+            "icon": "i-heroicons-squares-plus",
+            "title": "Product Categories"
+          },
+          "feat6": {
+            "description": "Full functionality offline - shifts, sales, and payments work without internet connection",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline Reliability"
+          },
+          "title": "Complete General Store Management"
+        },
+        "hero": {
+          "cta": "Start 30-Day Free Trial",
+          "subtitle": "Fast checkout, complete inventory control, and seamless shift management. Everything you need to run a general store—simple and reliable.",
+          "title": "General Store Management Made Simple"
+        },
+        "overview": {
+          "description": "Reliable system for general stores with diverse products",
+          "image": "/images/solutions/general-stores.avif",
+          "title": "Perfect for General Stores"
         }
       }
     }
@@ -1716,10 +1700,6 @@
         "description": "Specialized POS for fashion retail. Sizes, colors, seasons, and loyalty programs.",
         "title": "Clothing Store POS | Fashion Retail Management System"
       },
-      "convenienceStores": {
-        "description": "Reliable POS for round-the-clock operations. Simplified inventory and fast checkout.",
-        "title": "Convenience Store POS | 24/7 Retail Management System"
-      },
       "description": "Discover how Konty POS can transform your business. Specialized solutions for restaurants, cafes, retail stores, and B2B.",
       "fastFood": {
         "description": "Efficient POS for quick service restaurants. Drive-thru, delivery, and dine-in from one system.",
@@ -1733,7 +1713,11 @@
         "description": "Complete POS solution for restaurants. Table management, kitchen display, reservations, and analytics.",
         "title": "Restaurant POS System | Konty for Full-Service Dining"
       },
-      "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business"
+      "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business",
+      "generalStores": {
+        "description": "Complete POS management for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation.",
+        "title": "General Store POS System | Konty"
+      }
     },
     "terms": {
       "description": "Terms of service for Konty POS system and related services.",
@@ -1752,7 +1736,7 @@
       "client-stories": "Client stories",
       "clothing-boutiques": "Clothing & Boutiques",
       "contact": "Contact",
-      "convenience-stores": "Convenience Stores",
+      "general-stores": "General Stores",
       "demo": "Demo",
       "download": "Download",
       "faqdocs": "FAQ & Documentation",
@@ -1851,10 +1835,10 @@
       },
       "retailSolutions": {
         "clothing": "Clothing Stores",
-        "convenience": "Convenience Stores",
         "grocery": "Grocery Stores",
         "supermarkets": "Supermarkets",
-        "title": "Retail Solutions"
+        "title": "Retail Solutions",
+        "general": "General Stores"
       }
     },
     "forms": {
@@ -1933,14 +1917,14 @@
         "barsCafesDesc": "Fast checkout and inventory management for high-traffic venues.",
         "clothingBoutiques": "Clothing & Boutiques",
         "clothingBoutiquesDesc": "Complete sales and inventory management for clothing.",
-        "convenienceStores": "Convenience Stores",
-        "convenienceStoresDesc": "Simple management of diverse product mix.",
         "fastFood": "Quick Service / Fast Food",
         "fastFoodDesc": "Optimized for speed and efficiency - perfect for quick service restaurants and delivery.",
         "grocerySupermarkets": "Grocery & Supermarkets",
         "grocerySupermarketsDesc": "Manage thousands of products and high-volume transactions.",
         "restaurants": "Restaurants",
-        "restaurantsDesc": "Complete restaurant management solution - from tables to payment."
+        "restaurantsDesc": "Complete restaurant management solution - from tables to payment.",
+        "generalStores": "General Stores",
+        "generalStoresDesc": "Complete management for diverse product retail."
       },
       "main": {
         "about": "About",

@@ -118,15 +118,6 @@
         "title": "Šta očekivati od demo sastanka"
       },
       "categorySelector": {
-        "demoFeatures": "U demonstraciji ćemo fokusirati na:",
-        "examples": {
-          "barsCafes": "Kafići, barovi, klubovi, kafeterije",
-          "clothing": "Butici, prodavnice odeće, obuće",
-          "convenience": "Trafike, benzinske pumpe, 24/7 radnje",
-          "fastFood": "Brza hrana, kiosci, food truck",
-          "grocery": "Supermarketi, prodavnice hrane, mini marketi",
-          "restaurants": "Fine dining, porodični restorani, picerije"
-        },
         "features": {
           "analytics": "Napredna analitika",
           "barcodeScanning": "Barkod skeniranje",
@@ -1170,470 +1161,463 @@
     "solutions": {
       "b2b": {
         "faq": {
-          "a1": "Da, potpuno automatizovano generisanje i isporuka e-faktura u skladu sa lokalnim propisima. Kreirajte fakture automatski iz prodajnih naloga, šaljite elektronski partnerima, pratite status isporuke i održavajte potpune revizorske tragove-pojednostavite B2B fakturisanje i smanjite ručni rad.",
-          "a2": "Naravno. Kreirajte neograničen broj cjenovnika specifičnih za kupce, količinske popuste i uslove plaćanja za svakog B2B partnera. Sistem automatski primjenjuje tačne cijene pri naplati na osnovu kupca-bez ručne pretrage cijena, manje grešaka i održavanje profitabilnosti.",
-          "a3": "Kompletno upravljanje kreditima sa praćenjem otvorenih faktura, rokova plaćanja, automatskim podsjetnicima za dospjele račune i kontrolom kreditnog limita. Vidite neuplaćena stanja po kupcu, izvještaje starosti potraživanja i istoriju plaćanja-održavajte zdrav novčani tok i smanjite loša potraživanja.",
-          "a4": "Da, namjenjeni portal za partnere gdje se B2B kupci prijavljuju da vide istoriju narudžbina, preuzmu fakture, provjere izvode računa i podnesu ponovne narudžbe. Smanjuje pozive podršci, omogućava partnerima samoposluživanje i pojednostavljuje ponovno naručivanje.",
-          "a5": "Planovi počinju od 15€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju e-fakturisanje, cijene specifične za kupce, praćenje odloženih plaćanja i portale za partnere. Probajte besplatno 30 dana za upravljanje vašim B2B operacijama.",
-          "q1": "Da li Konty podržava automatizovano e-fakturisanje?",
-          "q2": "Mogu li da postavim različite cijene za svakog B2B kupca?",
-          "q3": "Kako funkcioniše praćenje odloženih plaćanja?",
-          "q4": "Mogu li partneri da pristupe svojoj istoriji narudžbina i fakturama?",
-          "q5": "Koliko košta Konty za B2B prodaju?",
-          "subtitle": "Najčešća pitanja o Konty-ju za veleprodaju i B2B",
+          "a1": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima - naziv firme, PIB, adresa, kontakt podaci i žiro račun. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
+          "a2": "Naravno. Kreirajte profakture, avansne račune i fiskalne račune sa kompletnim podacima kupca. Sistem podržava štampanje fiskalnih računa sa svim informacijama o kupcu uključujući PIB za usklađenost sa zakonskim zahtevima. Izvoz računa u PDF i A4 format.",
+          "a3": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte sve transakcije - fiskalne račune, ručne transakcije i bankovne izvode. Pratite potraživanja, dodajte ručna plaćanja (OD/ZA partnera) i štampajte detaljne izveštaje sa filterima po datumu.",
+          "a4": "Sveobuhvatni izveštaji prodaje po kupcu sa ukupnom prodajom, istorijom transakcija i detaljnim prikazom stavki. Napredna pretraga i filtriranje po periodu, načinu plaćanja i kupcu. Izvoz svih izveštaja u Excel za dalju analizu i planiranje.",
+          "a5": "Paketi počinju od 15€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje partnerima, profakture, praćenje transakcija i detaljan izveštaji. Probajte besplatno 30 dana.",
+          "q1": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
+          "q2": "Da li podržava profakture i avansna plaćanja?",
+          "q3": "Kako funkcioniše praćenje transakcija sa partnerima?",
+          "q4": "Koji B2B izveštaji su dostupni?",
+          "q5": "Koliko košta Konty za veleprodaju?",
+          "subtitle": "Najčešća pitanja o Konty-ju za veleprodaju i B2B poslovanje",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Istraži B2B funkcionalnosti",
-          "description": "Kompletno rješenje za veleprodaju i poslovne partnerstvo",
+          "cta": "Pogledaj B2B funkcionalnosti",
+          "description": "Kompletan sistem za veleprodaju i poslovne partnere",
           "feat1": {
-            "description": "Automatsko generisanje i slanje e-faktura u skladu sa lokalnim propisima",
-            "icon": "i-heroicons-document-check",
-            "title": "Sistem e-fakturisanja"
+            "description": "Detaljni profili partnera sa PIB-om, žiro računima i kontakt podacima. Uvoz i izvoz lista partnera",
+            "icon": "i-heroicons-user-group",
+            "title": "Upravljanje partnerima"
           },
           "feat2": {
-            "description": "Postavljanje različitih cjenovnika, popusta i uslova plaćanja za svakog B2B partnera",
-            "icon": "i-heroicons-currency-dollar",
-            "title": "Cijene specifične za kupca"
+            "description": "Kreiranje profaktura i avansnih računa sa kompletnim podacima kupca",
+            "icon": "i-heroicons-document-check",
+            "title": "Profesionalno fakturisanje"
           },
           "feat3": {
-            "description": "Praćenje otvorenih računa, rokova plaćanja i automatska obavještenja o dospjelim obavezama",
+            "description": "Praćenje svih transakcija sa partnerima, stanja i istorije plaćanja na jednom mestu",
             "icon": "i-heroicons-banknotes",
-            "title": "Odgođeno plaćanje"
+            "title": "Praćenje transakcija"
           },
           "feat4": {
-            "description": "Brz unos za velike veleprodajne porudžbine sa pretragom artikala i upravljanjem količinama",
-            "icon": "i-heroicons-shopping-cart",
-            "title": "Porudžbine na veliko"
+            "description": "Više načina plaćanja - virman, ček, račun i gotovina za B2B fleksibilnost",
+            "icon": "i-heroicons-credit-card",
+            "title": "Fleksibilna plaćanja"
           },
           "feat5": {
-            "description": "Omogućite partnerima pristup istoriji porudžbina, fakturama i izvodu računa",
-            "icon": "i-heroicons-user-group",
-            "title": "Portal za partnere"
+            "description": "Upravljanje otpremnicama i prijemnicama, praćenje kretanja robe i kompletna evidencija",
+            "icon": "i-heroicons-truck",
+            "title": "Otpremnice i prijemnice"
           },
           "feat6": {
-            "description": "Napredni izvještaji o učinku partnera, trendovima i predviđanju prihoda",
+            "description": "Prodaja po kupcu, transakcije partnera, kalkulacije cena i sveobuhvatna B2B analitika",
             "icon": "i-heroicons-chart-bar-square",
-            "title": "Analitika i prognoze"
+            "title": "B2B izveštaji"
           },
           "title": "Profesionalni B2B alati"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "E-fakture • Veleprodaja • Partneri • Izvještaji",
-          "subtitle": "Profesionalna rješenja za veleprodaju i B2B saradnju",
-          "title": "Konty za B2B prodaju i E-fakture"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za veleprodaju—ništa više, ništa manje.",
+          "title": "B2B prodaja koja jednostavno radi"
         },
         "overview": {
-          "description": "Kompletno rješenje za B2B prodaju i e-fakturisanje",
+          "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
           "image": "/images/solutions/b2b.avif",
-          "title": "B2B digitalizacija"
+          "title": "B2B na jednostavan način"
         }
       },
       "barsCafes": {
         "faq": {
-          "a1": "Konty je optimizovan za brzinu sa prilagodljivim prečicama, brzim unosom narudžbi i trenutnom obradom. Tokom špica, šankeri i konobari mogu uzimati više narudžbi istovremeno sa sinhronizacijom u realnom vremenu. Sistem obrađuje stotine transakcija na sat bez usporavanja.",
-          "a2": "Da, automatske promjene cijena po vremenskim periodima i danima u sedmici. Postavite happy hour cijene, vikend tarife ili specijalne cijene koje se aktiviraju automatski-bez potrebe za ručnim ažuriranjem. Sistem mijenja cijene prema vašem rasporedu.",
-          "a3": "Naravno. Praćenje bačvi, flaša, sastojaka i šank zaliha u realnom vremenu sa automatskim upozorenjima o niskim zalihama. Pratite troškove točenja, pratite rasipanje i optimizujte naručivanje-potpuna kontrola nad šank zalihama.",
-          "a4": "Jednostavan sistem otvorenih računa sa pretragom po imenu ili kartici, automatskim podsjetnicima i fleksibilnim opcijama plaćanja. Gosti mogu dodavati na račune tokom cijele večeri i platiti kada su spremni-nema više izgubljenih računa ili zabune oko plaćanja.",
-          "a5": "Planovi počinju od 25€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju brz unos narudžbi, praćenje zaliha, programe lojalnosti i offline režim. Probajte besplatno 30 dana tokom najfrekventnijih smjena.",
-          "q1": "Kako Konty upravlja velikim obimom rada tokom špica?",
-          "q2": "Mogu li da postavim vremenski zasnovane cijene za happy hour?",
-          "q3": "Da li prati zalihe pića kao što su bačve i flaše?",
-          "q4": "Kako funkcioniše upravljanje otvorenim računima?",
+          "a1": "Konty se nosi sa gužvom zahvaljujući brzom unosu preko prilagodljivih dugmića, grupa artikala i quick-add funkcije. Svi načini plaćanja se obrađuju trenutno. Sistem je optimizovan za brzinu sa prečicama na tastaturi i favoritima za najpopularnije napitke. Idealno za prometne smene i špic.",
+          "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle uključujući napitke, sastojke i barsku robu. Praćenje stanja uživo, kontrola kretanja robe sa prijemnicama i otpremnicama, otpisi za praćenje rastura i kompletni izveštaji o zalihama. Potpuna vidljivost nad vašim zalihama.",
+          "a3": "Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, upravljanje kasom, praćenje uplata i isplata i detaljan izveštaji po smeni. Svaki barmen/konobar se prijavljuje sa svojim PIN-om i sve transakcije se prate po korisniku. Laka predaja smene sa potpunom odgovornošću.",
+          "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte porudžbine, upravljajte stolovima, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš bar nikada ne prestaje sa radom tokom problema sa internetom.",
+          "a5": "Paketi počinju od 29€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, praćenje zaliha, upravljanje smenama, upravljanje stolovima i offline režim. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "q1": "Kako Konty radi sa velikim prometom tokom špica?",
+          "q2": "Da li prati zalihe napitaka i bara?",
+          "q3": "Kako funkcioniše upravljanje smenama za više barmena?",
+          "q4": "Da li radi offline tokom problema sa internetom?",
           "q5": "Koliko košta Konty za bar ili kafić?",
           "subtitle": "Najčešća pitanja o Konty-ju za barove i kafiće",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Istraži funkcionalnosti za barove",
-          "description": "Brzi, efikasni alati dizajnirani za barove i kafiće",
+          "cta": "Pogledaj funkcije za barove i kafiće",
+          "description": "Brzi i efikasni alati dizajnirani za barove i kafiće",
           "feat1": {
-            "description": "Prilagodljive prečice i favoriti za munjevit unos porudžbina tokom špica",
+            "description": "Prilagodljiva tastatura sa grupama artikala i favoritima za munjevit unos porudžbina",
             "icon": "i-heroicons-bolt",
             "title": "Brz unos porudžbina"
           },
           "feat2": {
-            "description": "Automatske promjene cijena po vremenskim periodima i danima u nedjelji",
-            "icon": "i-heroicons-clock",
-            "title": "Vremensko cjenovništvo"
+            "description": "Praćenje napitaka, sastojaka i zaliha uživo sa dokumentacijom i otpisima",
+            "icon": "i-heroicons-cube",
+            "title": "Upravljanje zalihama"
           },
           "feat3": {
-            "description": "Praćenje bačvi, flaša i sastojaka u realnom vremenu sa automatskim upozorenjima",
-            "icon": "i-heroicons-beaker",
-            "title": "Inventar pića"
+            "description": "Otvaranje/zatvaranje smena, upravljanje kasom, uplate, isplate i praćenje radnog vremena",
+            "icon": "i-heroicons-clock",
+            "title": "Upravljanje smenama"
           },
           "feat4": {
-            "description": "Jednostavan sistem otvorenih računa sa pretragom po imenu ili kartici i automatskim podsjećanjem",
-            "icon": "i-heroicons-credit-card",
-            "title": "Upravljanje računima"
+            "description": "Vizuelni plan stolova sa statusom uživo za kafiće i barove sa sedećim mestima",
+            "icon": "i-heroicons-table-cells",
+            "title": "Upravljanje stolovima"
           },
           "feat5": {
-            "description": "Bodovni sistem sa automatskim nagradama i popustima za stalne goste",
-            "icon": "i-heroicons-gift",
-            "title": "Program lojalnosti"
+            "description": "Pratite prodaju po osoblju, artiklu, vremenskom periodu i sektoru sa detaljnim izveštajima",
+            "icon": "i-heroicons-chart-bar",
+            "title": "Analitika prodaje"
           },
           "feat6": {
-            "description": "Pregled prodaje po satima, najprodavaniji artikli i marže za svaki proizvod",
-            "icon": "i-heroicons-chart-bar",
-            "title": "Izvještaji prodaje"
+            "description": "Puna funkcionalnost offline - porudžbine i plaćanja rade bez internet veze",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline režim"
           },
-          "title": "Optimizovano za uslugu velikog obima"
+          "title": "Optimizovano za veliku frekvenciju"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Brza naplata • Zalihe • Popusti • Analitika",
-          "subtitle": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom",
-          "title": "Konty za barove i kafiće"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Brz unos porudžbina, potpuna kontrola zaliha i glatka predaja smena. Napravljen za veliki promet kada je pouzdanost najbitnija.",
+          "title": "Više gostiju, manje stresa"
         },
         "overview": {
-          "description": "Sistem dizajniran za brzu uslugu i visok promet",
+          "description": "Sistem dizajniran za brzu uslugu i veliki promet",
           "image": "/images/solutions/bars-cafes.avif",
           "title": "Optimizovano za brzinu"
         }
       },
       "categories": {
         "hospitality": {
-          "description": "Rješenja za restorane, kafiće i brzu hranu",
+          "description": "Rešenja za restorane, kafiće i brzu hranu",
           "title": "Ugostiteljstvo"
         },
         "retail": {
-          "description": "Rješenja za sve tipove prodavnica",
+          "description": "Rešenja za sve tipove prodavnica",
           "title": "Trgovina"
         }
       },
       "clothingBoutiques": {
         "faq": {
-          "a1": "Da, sveobuhvatno praćenje varijanti proizvoda po veličini, boji, stilu i bilo kojem drugom atributu koji definišete. Svaka varijanta ima svoj broj zaliha, barkod i cijenu-savršeno za modnu maloprodaju sa potpunom vidljivošću šta se prodaje a šta ne.",
-          "a2": "Organizujte proizvode po kolekcijama, sezonama i kategorijama. Zakažite automatska sniženja (\"20% popusta na zimsku kolekciju od 1. decembra\"), pratite sezonski promet zaliha i identifikujte sporo prodajne artikle za rasprodaju-optimizujte profitabilnost kroz životni ciklus proizvoda.",
-          "a3": "Naravno. Izgradite detaljne profile kupaca sa istorijom kupovine, preferencama veličina, omiljenim stilovima i obrascima kupovine. Šaljite personalizovane promocije, zapamtite veličine kupaca i pružajte VIP uslugu koja gradi lojalnost i ponovne kupovine.",
-          "a4": "Da, kompletno upravljanje odloženim plaćanjima sa praćenjem uplata, zahtjevima za rezervaciju sa datumima isteka i obavještenjima kupaca. Pratite djelimične uplate, upravljajte depozitima i obezbijedite da artikli budu pravilno rezervisani-sve ugrađeno u sistem.",
-          "a5": "Planovi počinju od 15€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju neograničen broj varijanti, profile kupaca, programe lojalnosti i upravljanje sezonskim kolekcijama. Probajte besplatno 30 dana sa vašim punim inventarom.",
+          "a1": "Da, upravljajte zalihama kreiranjem zasebnih artikala za svaku varijantu veličine/boje. Svaka varijanta dobija svoj jedinstveni šifru, barkod, stanje zaliha i cenu. Organizujte varijante koristeći kategorije artikala i konvencije imenovanja (npr. \"Haljina-Crvena-M\", \"Haljina-Crvena-L\"). Uvezite/izvezite varijante masovno preko Excel-a za efikasno upravljanje.",
+          "a2": "Organizujte proizvode koristeći kategorije artikala za kolekcije i sezone. Pratite promet zaliha sa izveštajima o zalihama, identifikujte sporo pokretne artikle i koristite nivelacije cena za upravljanje sezonskim sniženjima. Organizacija po kategorijama olakšava upravljanje sezonskim kolekcijama.",
+          "a3": "Naravno. Kompletni profili kupaca sa praćenjem istorije kupovina kroz izveštaje prodaje po kupcu. Pregledajte svaku transakciju po kupcu, pratite njihove navike potrošnje i izgradite detaljne profile kupaca za personalizovanu uslugu i ciljane promocije.",
+          "a4": "Da, funkcija profakture omogućava kreiranje ponuda i rezervacija. Pratite avansna plaćanja za rate planove i koristite lanac avansnih plaćanja za upravljanje delimičnim uplatama do konačne kupovine. Kompletno upravljanje ratama sa praćenjem plaćanja.",
+          "a5": "Paketi počinju od 15€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala/varijanti, upravljanje kupcima, praćenje istorije kupovina, profakture i upravljanje zalihama. Probajte besplatno 30 dana sa vašim kompletnim inventarom.",
           "q1": "Može li Konty da prati zalihe po veličinama i bojama?",
           "q2": "Kako se bavi sezonskim kolekcijama i sniženjima?",
-          "q3": "Mogu li da pratim preferencije kupaca i istoriju kupovine?",
-          "q4": "Da li podržava odloženo plaćanje i rezervacije?",
+          "q3": "Mogu li da pratim istoriju kupovina i preferencije kupaca?",
+          "q4": "Da li podržava rate i rezervacije?",
           "q5": "Koliko košta Konty za butik odeće?",
           "subtitle": "Najčešća pitanja o Konty-ju za butike odeće",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Otkrij funkcionalnosti za modu",
-          "description": "Specijalizovani alati za prodavnice odjeće i butike",
+          "cta": "Otkrij funkcije za modnu trgovinu",
+          "description": "Specijalizovani alati za prodavnice i butike odeće",
           "feat1": {
-            "description": "Praćenje zaliha po veličinama i bojama za svaki artikal odvojeno",
+            "description": "Kreirajte zasebne artikle za svaku varijantu veličine/boje sa pojedinačnim šiframa i zalihama",
             "icon": "i-heroicons-swatch",
-            "title": "Varijante proizvoda"
+            "title": "Upravljanje varijantama"
           },
           "feat2": {
-            "description": "Organizacija proizvoda po kolekcijama, sezonama i kategorijama za lakše upravljanje",
-            "icon": "i-heroicons-sparkles",
-            "title": "Kategorije i kolekcije"
+            "description": "Organizujte proizvode po kategorijama za kolekcije i sezone sa fleksibilnim sistemom kategorija",
+            "icon": "i-heroicons-folder",
+            "title": "Kolekcije i kategorije"
           },
           "feat3": {
-            "description": "Praćenje istorije kupovina, preferencija i veličina za personalizovanu uslugu",
+            "description": "Detaljni profili kupaca sa kompletnom istorijom kupovina i praćenjem transakcija",
             "icon": "i-heroicons-user-circle",
             "title": "Profili kupaca"
           },
           "feat4": {
-            "description": "Upravljanje planovima odgođenog plaćanja i rezervacija artikala za kupce sa praćenjem uplata",
-            "icon": "i-heroicons-archive-box",
-            "title": "Odgođeno plaćanje i rezervacije"
+            "description": "Profakture i praćenje avansnih plaćanja za upravljanje ratama i rezervacijama",
+            "icon": "i-heroicons-document-text",
+            "title": "Rate i rezervacije"
           },
           "feat5": {
-            "description": "Praćenje kupovine svakog kupca za personalizovane preporuke i bolje iskustvo",
-            "icon": "i-heroicons-light-bulb",
-            "title": "Istorija kupovina"
+            "description": "Alati za nivelaciju cena za upravljanje sezonskim sniženjima i promenama promocionih cena",
+            "icon": "i-heroicons-tag",
+            "title": "Upravljanje cenama"
           },
           "feat6": {
-            "description": "Program nagrađivanja sa nivoima, ekskluzivnim ponudama i rođendanskim nagradama",
-            "icon": "i-heroicons-star",
-            "title": "Lojalnost i VIP"
+            "description": "Ispravke računa, povraćaji novca i knjižna odobrenja za povrate i zamene",
+            "icon": "i-heroicons-arrow-path",
+            "title": "Povrati i zamene"
           },
-          "title": "Savršeno za modnu industriju"
+          "title": "Savršeno za modnu trgovinu"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Varijante • Zalihe • Popusti • Analitika",
-          "subtitle": "Kompletno upravljanje prodajom i zalihama odjeće",
-          "title": "Konty za prodavnice odjeće"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Pratite svaku varijantu, poznajete svoje kupce, upravljajte ratama. Intuitivni alati koji vam omogućavaju da se fokusirate na modu, a ne na tehnologiju.",
+          "title": "Upravljanje butikom jednostavno kao nikad"
         },
         "overview": {
-          "description": "Specijalizovan za potrebe butika i prodavnica odjeće",
+          "description": "Specijalizovano za butike i prodavnice odeće",
           "image": "/images/solutions/clothing-boutiques.avif",
-          "title": "Savršeno za modnu industriju"
-        }
-      },
-      "convenienceStores": {
-        "faq": {
-          "a1": "Naravno. Laka promjena smjena sa upravljanjem kasom, praćenjem radnog vremena zaposlenih i izvještavanjem po smjenama. Svaki kasir se prijavljuje/odjavljuje sa svojim kredencijalima, prateći prodaju i stanje kase-savršeno za non-stop rad.",
-          "a2": "Da, automatski zahtjevi za verifikaciju uzrasta pri skeniranju duvana, alkohola ili drugih proizvoda sa ograničenjem. Sprječava prodaju maloljetnicima, obezbijeđuje usklađenost sa propisima i kreira revizorski trag-štiti vaše poslovanje od regulatornih problema.",
-          "a3": "Da, ugrađena podrška za dopune mobilnih telefona, uplate računa i druge dodatne usluge. Integrišite se sa obrađivačima plaćanja da ponudite ove usluge sa visokom maržom koje privlače promet i lojalnost kupaca.",
-          "a4": "Sveobuhvatno upravljanje porezima koje podržava više poreskih stopa i kategorija. Automatski primjenjuje tačne poreze na hranu, duvan, alkohol, hemiju i druge kategorije-obezbijeđuje usklađenost sa propisima i tačne račune svaki put.",
-          "a5": "Planovi počinju od 15€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju podršku za više smjena, upozorenja za starosna ograničenja, upravljanje raznovrsnim proizvodima i 24/7 offline režim. Probajte besplatno 30 dana tokom svih smjena.",
-          "q1": "Može li Konty da upravlja 24/7 radom sa više smjena?",
-          "q2": "Da li podržava upozorenja za proizvode sa starosnim ograničenjem?",
-          "q3": "Mogu li da prodajem dopune za telefone i obrađujem uplatnice?",
-          "q4": "Kako se bavi raznovrsnim kategorijama proizvoda sa različitim PDV stopama?",
-          "q5": "Koliko košta Konty za prodavnicu mješovite robe?",
-          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice mješovite robe",
-          "title": "Često postavljana pitanja"
-        },
-        "features": {
-          "cta": "Pogledaj funkcionalnosti za trgovine",
-          "description": "Jednostavan, brz sistem za rad non-stop",
-          "feat1": {
-            "description": "Munjevito skeniranje i obrada plaćanja za visoku fluktuaciju kupaca",
-            "icon": "i-heroicons-bolt",
-            "title": "Brza naplata"
-          },
-          "feat2": {
-            "description": "Automatska upozorenja pri prodaji proizvoda sa starosnim ograničenjem",
-            "icon": "i-heroicons-identification",
-            "title": "Upozorenja za starosnu granicu"
-          },
-          "feat3": {
-            "description": "Laka promjena smjena, upravljanje kasom i evidencija radnog vremena zaposlenih",
-            "icon": "i-heroicons-clock",
-            "title": "Kontrola više smjena"
-          },
-          "feat4": {
-            "description": "Prodaja dopune za telefone i obrada plaćanja računa direktno na kasi",
-            "icon": "i-heroicons-ticket",
-            "title": "Prepaid i uplatnice"
-          },
-          "feat5": {
-            "description": "Upravljanje raznovrsnim asortimanom od hrane do hemije sa različitim PDV stopama",
-            "icon": "i-heroicons-squares-plus",
-            "title": "Više kategorija proizvoda"
-          },
-          "feat6": {
-            "description": "Praćenje smanjenja zaliha, sumnjive transakcije i aktivnost zaposlenih",
-            "icon": "i-heroicons-shield-check",
-            "title": "Prevencija gubitaka"
-          },
-          "title": "Pouzdanost 24/7"
-        },
-        "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Širok asortiman • Brza kasa • 24/7 rad • Inventar",
-          "subtitle": "Jednostavno upravljanje raznovrsnim asortimanom",
-          "title": "Konty za prodavnice miješane robe"
-        },
-        "overview": {
-          "description": "Pouzdan sistem za 24/7 rad sa raznovrsnom robom",
-          "image": "/images/solutions/convenience-stores.avif",
-          "title": "Za prodavnice koje rade non-stop"
+          "title": "Savršeno za modnu trgovinu"
         }
       },
       "cta": {
         "learnMore": "Saznajte više",
-        "seeAll": "Pogledajte sva rješenja"
+        "seeAll": "Pogledajte sva rešenja"
       },
       "faq": {
-        "a1": "Rješenje za određenu djelatnost je unaprijed konfigurisana verzija Konty-ja prilagođena specifičnim tipovima poslovanja. Uključuje specifične radne procese, terminologiju i najbolje prakse za vašu djelatnost-tako da dobijate POS sistem koji izgleda kao napravljen po mjeri, odmah po instalaciji.",
-        "a2": "Možete koristiti bilo šta! Rješenje za određenu djelatnost pruža brže podešavanje sa unaprijed konfiguriranim funkcijama za vaš tip poslovanja. Osnovni proizvod je potpuno prilagodljiv i rade za bilo koji posao. Izaberite na osnovu toga koliko brzo želite da počnete.",
-        "a3": "Naravno. Rješenje za određenu djelatnost je početna tačka, ne ograničenje. Prilagodite menije, radne procese, funkcije i podešavanja tako da odgovaraju vašim potrebama. Dobijate najbolje od oba svijeta-brzo podešavanje plus potpunu fleksibilnost.",
-        "a4": "Ne, cijene su iste bez obzira da li izaberete rješenje za određenu djelatnost ili osnovni proizvod.",
-        "a5": "Nema problema! Mnogi poslovi su hibridni (npr. kafić + prodavnica). Konfigurišemo Konty da obuhvati vaše specifične potrebe, kombinujući funkcije iz više rješenja. Zakažite demo i osmislićemo savršeno podešavanje za vaš jedinstveni posao.",
-        "q1": "Čime se rješenje za određenu djelatnost razlikuje od osnovnih proizvoda?",
-        "q2": "Da li mi treba rješenje za određenu djelatnost ili mogu da koristim osnovni proizvod?",
-        "q3": "Mogu li da prilagodim rješenje za određenu djelatnost?",
-        "q4": "Da li su cijene različite za svaku industriju?",
+        "a1": "Rešenje za određenu delatnost je unapred konfigurisana verzija Konty-ja prilagođena specifičnim tipovima poslovanja. Uključuje specifične radne procese, terminologiju i najbolje prakse za vašu delatnost-tako da dobijate POS sistem koji izgleda kao napravljen po meri, odmah po instalaciji.",
+        "a2": "Možete koristiti bilo šta! Rešenje za određenu delatnost pruža brže podešavanje sa unapred konfiguriranim funkcijama za vaš tip poslovanja. Osnovni proizvod je potpuno prilagodljiv i rade za bilo koji posao. Izaberite na osnovu toga koliko brzo želite da počnete.",
+        "a3": "Naravno. Rešenje za određenu delatnost je početna tačka, ne ograničenje. Prilagodite menije, radne procese, funkcije i podešavanja tako da odgovaraju vašim potrebama. Dobijate najbolje od oba sveta-brzo podešavanje plus potpunu fleksibilnost.",
+        "a4": "Ne, cene su iste bez obzira da li izaberete rešenje za određenu delatnost ili osnovni proizvod.",
+        "a5": "Nema problema! Mnogi poslovi su hibridni (npr. kafić + prodavnica). Konfigurišemo Konty da obuhvati vaše specifične potrebe, kombinujući funkcije iz više rešenja. Zakažite demo i osmislićemo savršeno podešavanje za vaš jedinstveni posao.",
+        "q1": "Čime se rešenje za određenu delatnost razlikuje od osnovnih proizvoda?",
+        "q2": "Da li mi treba rešenje za određenu delatnost ili mogu da koristim osnovni proizvod?",
+        "q3": "Mogu li da prilagodim rešenje za određenu delatnost?",
+        "q4": "Da li su cene različite za svaku industriju?",
         "q5": "Šta ako moj posao ne odgovara jednoj industriji?",
-        "subtitle": "Najčešća pitanja o industrijskim rješenjima",
+        "subtitle": "Najčešća pitanja o industrijskim rešenjima",
         "title": "Često postavljana pitanja"
       },
       "fastFood": {
         "faq": {
-          "a1": "Da, jedinstveni sistem za sve kanale-drive-thru, šalter, dostava i mobilne narudžbe sve dolaze u jedan kuhinjski displej sistem. Prioritizujte narudžbe po kanalu, pratite vrijeme izvršenja i upravljajte svim tipovima usluge istovremeno bez zabune.",
-          "a2": "Naravno. Mjerite vrijeme pripreme i izvršenja za svaku narudžbu sa upozorenjima u realnom vremenu kada se premaše ciljevi. Pratite učinak po dijelu dana, kanalu i članu osoblja-optimizujte brzinu usluge na osnovu podataka.",
-          "a3": "Kreirajte meni obroke sa fiksnim cijenama i opcionalnim dodacima. Sistem automatski predlaže dodatnu prodaju pri naplati-\"Napraviti meni?\" ili \"Dodati pomfrit?\"-što povećava prosječan račun uz minimalan napor osoblja.",
-          "a4": "Da, besprijekorna integracija sa glavnim platformama za dostavu. Narudžbe dolaze direktno u vaš kuhinjski displej sistem sa oznakama kanala-bez žongliranja više tableta, bez ručnog unosa. Jedinstveno izvršavanje preko svih kanala.",
-          "a5": "Planovi počinju od 25€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju više kanala naručivanja, kuhinjski displej, praćenje brzine i offline režim. Probajte besplatno 30 dana tokom najfrekventnijih dijelova dana.",
-          "q1": "Da li Konty upravlja narudžbama preko drive-thru-a, šaltera i dostave zajedno?",
-          "q2": "Mogu li da pratim brzinu usluge i vrijeme pripreme?",
-          "q3": "Kako se odnosi prema kombinovanim obrocima i dodatnoj prodaji?",
-          "q4": "Da li se integriše sa platformama za dostavu?",
+          "a1": "Da, brzo kreiranje porudžbina sa brzim unosom artikala preko tastature, grupa i favorita. Kitchen Display sistem prikazuje sve porudžbine uživo sa tajmerima i upravljanjem prioritetima. Savršeno za šalter porudžbine, paketirano i veliku frekvenciju brze hrane.",
+          "a2": "Naravno. Kitchen Display sistem prikazuje porudžbine u realnom vremenu sa praćenjem tajmera, obojenim upozorenjima (žuto/crveno na osnovu vremena) i statusom završetka. Pratite svaku porudžbinu od unosa do izdavanja sa imenom korisnika, vremenom porudžbine i detaljnim prikazom stavki. Prilagodite alarme i opcije prikaza.",
+          "a3": "Da, fleksibilno upravljanje artiklima omogućava kreiranje kombinacija i setova. Koristite kategorije i grupe artikala za logičku organizaciju menija. Pratite prodaju po artiklu i kategoriji da identifikujete najbolje prodavane kombinacije i optimizujete učinak menija.",
+          "a4": "Konty radi kompletno offline sa punom POS funkcionalnošću. Obrađujte sve porudžbine, upravljajte kitchen display-em i prihvatajte plaćanja bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš objekat brze hrane nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
+          "a5": "Paketi počinju od 29€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, Kitchen Display sistem, praćenje porudžbina, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "q1": "Kako Konty upravlja brzim porudžbinama?",
+          "q2": "Mogu li da pratim vreme pripreme i brzinu usluge?",
+          "q3": "Da li podržava kombinovane obroke i setove?",
+          "q4": "Da li radi offline tokom nestanka interneta?",
           "q5": "Koliko košta Konty za restoran brze hrane?",
-          "subtitle": "Najčešća pitanja o Konty-ju za brzu hranu",
+          "subtitle": "Najčešća pitanja o Konty-ju za brzu hranu i quick service",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Vidi funkcionalnosti za brzu hranu",
-          "description": "Maksimalan protok za restorane brze hrane",
+          "cta": "Pogledaj funkcije za brzu hranu",
+          "description": "Maksimalna brzina i efikasnost za restorane brze hrane",
           "feat1": {
-            "description": "Jedinstven sistem za drive-thru, šalter, dostavu i mobilne porudžbine na jednom mjestu",
-            "icon": "i-heroicons-queue-list",
-            "title": "Porudžbine sa više kanala"
+            "description": "Brzo kreiranje porudžbina sa tastaturom, favoritima i quick-add za maksimalnu propusnost",
+            "icon": "i-heroicons-bolt",
+            "title": "Munjevit unos porudžbina"
           },
           "feat2": {
-            "description": "Prikaz porudžbina u realnom vremenu sa praćenjem vremena pripreme i upravljanjem prioritetima",
+            "description": "Prikaz porudžbina u realnom vremenu sa praćenjem vremena pripreme i obojenim tajmerima",
             "icon": "i-heroicons-tv",
-            "title": "Sistem kuhinjskog displeja"
+            "title": "Kitchen Display sistem"
           },
           "feat3": {
-            "description": "Kreiranje setova i meni kombinacija sa fiksnim cijenama i opcionalnim dodacima",
+            "description": "Kreirajte kombinacije i setove menija sa kategorijama artikala za organizovan meni",
             "icon": "i-heroicons-squares-2x2",
-            "title": "Meni kombinacije"
+            "title": "Organizacija menija"
           },
           "feat4": {
-            "description": "Mjerenje vremena pripreme i izdavanja porudžbina sa upozorenjima i statistikom",
+            "description": "Pratite porudžbine po vremenskom periodu, osoblju i artiklu za optimizaciju učinka",
             "icon": "i-heroicons-clock",
-            "title": "Praćenje brzine servisiranja"
+            "title": "Praćenje porudžbina"
           },
           "feat5": {
-            "description": "Besprijekorna integracija sa platformama za dostavu i upravljanje sopstvenom dostavom",
-            "icon": "i-heroicons-truck",
-            "title": "Integracija dostave"
+            "description": "Više načina plaćanja sa trenutnom obradom za brzu rotaciju kupaca",
+            "icon": "i-heroicons-credit-card",
+            "title": "Brza naplata"
           },
           "feat6": {
-            "description": "Posebne cijene i prilagođavanja menija za doručak, ručak i večeru",
-            "icon": "i-heroicons-sun",
-            "title": "Upravljanje špicevima"
+            "description": "Puna funkcionalnost offline - porudžbine, kitchen display i plaćanja rade bez interneta",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline režim"
           },
           "title": "Napravljeno za brzinu i efikasnost"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Brze porudžbine • Drive-thru • Dostava • KDS",
-          "subtitle": "Optimizovan za brzinu i efikasnost - savršen za restorane brze hrane",
-          "title": "Konty za brzu hranu"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Kitchen display u realnom vremenu i trenutna obrada porudžbina koje prate vaš najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, dovoljno pouzdan da traje ceo dan.",
+          "title": "Brzina plus pouzdanost"
         },
         "overview": {
-          "description": "Sistem dizajniran za maksimalnu efikasnost i protok",
+          "description": "Sistem dizajniran za maksimalnu brzinu i propusnost",
           "image": "/images/solutions/fast-food.avif",
           "title": "Brzina je sve"
         }
       },
       "grocerySupermarkets": {
         "faq": {
-          "a1": "Naravno. Konty upravlja neograničenim brojem proizvoda sa naprednim praćenjem zaliha, automatizovanim tačkama ponovnog naručivanja i nivoima zaliha u realnom vremenu na više lokacija. Napravljen za maloprodaju velikog obima sa brzom pretragom i upravljanjem proizvodima u paketima.",
-          "a2": "Da, puna podrška za skenere barkodova (USB, Bluetooth, mobilni) i vage. Podržava i standardne barkodove i težinske barkodove za sveže proizvode, delikatesne proizvode i rasuto-brza i precizna naplata svaki put.",
-          "a3": "Fleksibilne promocije uključujući 2+1 ponude, paket cijene (kupi 3 dobij 1 gratis), procentualne popuste, sezonske rasprodaje i nagrade lojalnosti. Postavite datume početka/kraja, ograničite količine i kombinujte više promocija-sve se automatski primjenjuje pri naplati.",
-          "a4": "Da, kompletno upravljanje svježim proizvodima sa praćenjem datuma isteka, brojeva serija i automatskom FIFO (first-in-first-out) rotacijom zaliha. Dobijajte upozorenja za proizvode koji se približavaju isteku kako biste minimizovali rasipanje i optimizovali akcije.",
-          "a5": "Planovi počinju od 15€/mjesečno bez troškova podešavanja ili ugovora. Svi planovi uključuju neograničen broj proizvoda, skeniranje barkodova, promocije, praćenje zaliha i offline režim. Probajte besplatno 30 dana sa vašim punim katalogom proizvoda.",
-          "q1": "Može li Konty da upravlja sa hiljadama proizvoda efikasno?",
-          "q2": "Da li podržava skeniranje barkodova i vage?",
-          "q3": "Kako funkcioniše sistem za akcije?",
-          "q4": "Mogu li da pratim datume isteka za sveže proizvode?",
-          "q5": "Koliko košta Konty za prodavnicu hrane?",
-          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice hrane i supermarkete",
+          "a1": "Naravno. Konty upravlja neograničenim brojem proizvoda sa uvozom/izvozom iz Excel/CSV fajlova za masovno upravljanje. Dodajte artikle pojedinačno ili masovno, organizujte po kategorijama i koristite brzu pretragu po nazivu ili šifri. Napravljeno za maloprodaju velikog obima sa efikasnim upravljanjem proizvodima.",
+          "a2": "Da, puna podrška za skeniranje barkoda i funkcija Izvoz za vagu specijalno za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih proizvoda i delikatesa.",
+          "a3": "Sveobuhvatno praćenje zaliha sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, kalkulacije cena, otpisi za upravljanje rasturom i izveštaji o zalihama sa naprednim filtriranjem. Potpuna vidljivost i kontrola nad vašim zalihama.",
+          "a4": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
+          "a5": "Paketi počinju od 15€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, izvoz za vagu, praćenje zaliha, više poreskih stopa i offline režim. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
+          "q1": "Može li Konty efikasno da upravlja hiljadama proizvoda?",
+          "q2": "Da li podržava skeniranje barkoda i vage?",
+          "q3": "Kako funkcioniše praćenje zaliha?",
+          "q4": "Može li da radi sa različitim poreskim stopama po kategorijama?",
+          "q5": "Koliko košta Konty za prodavnicu namirnica?",
+          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice namirnica i supermarkete",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Pogledaj funkcionalnosti za markete",
-          "description": "Moćan sistem inventara i naplate za markete",
+          "cta": "Pogledaj funkcije za prodavnice",
+          "description": "Moćan sistem za zalihe i naplatu u prodavnicama namirnica",
           "feat1": {
-            "description": "Praćenje zaliha u realnom vremenu na više lokacija sa automatskim tačkama ponovnog naručivanja",
+            "description": "Praćenje zaliha u realnom vremenu sa prijemnicama, početnim stanjima i detaljnim izveštajima",
             "icon": "i-heroicons-cube",
-            "title": "Napredni inventar"
+            "title": "Napredne zalihe"
           },
           "feat2": {
-            "description": "Brza naplata sa integrisanim barkod skenerima i podrškom za vage",
+            "description": "Puna podrška za barkodove sa unosom šifre i funkcijom Izvoz za vagu za proizvode na vagi",
             "icon": "i-heroicons-qr-code",
-            "title": "Skeniranje barkodova"
+            "title": "Barkod i vaga"
           },
           "feat3": {
-            "description": "Fleksibilne promocije, 2+1 ponude, paket cijene i sezonski popusti",
-            "icon": "i-heroicons-tag",
-            "title": "Motor za akcije"
+            "description": "Uvoz/izvoz hiljada artikala preko Excel/CSV za efikasno masovno upravljanje proizvodima",
+            "icon": "i-heroicons-document-arrow-up",
+            "title": "Masovno upravljanje proizvodima"
           },
           "feat4": {
-            "description": "Praćenje datuma isteka, brojeva serija i automatska rotacija zaliha",
-            "icon": "i-heroicons-shopping-bag",
-            "title": "Upravljanje svježim proizvodima"
+            "description": "Organizujte proizvode po kategorijama sa podrškom za više poreskih stopa po kategoriji",
+            "icon": "i-heroicons-tag",
+            "title": "Organizacija po kategorijama"
           },
           "feat5": {
-            "description": "Organizacija proizvoda po odjelima sa specijalizovanim rukovanjem za svaku kategoriju",
-            "icon": "i-heroicons-building-storefront",
-            "title": "Više odjela"
+            "description": "Kalkulacije cena, nivelacije cena i praćenje nabavnih i prodajnih cena za profitabilnost",
+            "icon": "i-heroicons-currency-dollar",
+            "title": "Upravljanje cenama"
           },
           "feat6": {
-            "description": "Praćenje dobavljača, nabavki i rasporeda isporuka u jednom sistemu",
-            "icon": "i-heroicons-truck",
-            "title": "Upravljanje dobavljačima"
+            "description": "Pratite otpise, upravljajte prijemnicama/otpremnicama i nadgledajte kretanje robe sa kompletnom evidencijom",
+            "icon": "i-heroicons-clipboard-document-check",
+            "title": "Magacinsko knjigovodstvo"
           },
-          "title": "Upravljanje hiljada proizvoda"
+          "title": "Upravljajte hiljadama proizvoda"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Inventar • Barkodovi • Akcije • Analitika",
-          "subtitle": "Upravljanje velikim brojem artikala i brzim prometom",
-          "title": "Konty za prodavnice hrane i supermarkete"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Skeniranje barkoda, integracija sa vagom i kompletno praćenje zaliha. Pouzdano upravljanje prodavnicom koje preuzima kompleksnost umesto vas.",
+          "title": "Upravljajte hiljadama proizvoda sa sigurnošću"
         },
         "overview": {
-          "description": "Moćan sistem za upravljanje velikim asortimanom",
+          "description": "Moćan sistem za upravljanje velikim katalozima proizvoda",
           "image": "/images/solutions/grocery-supermarkets.avif",
-          "title": "Kontrola hiljada artikala"
+          "title": "Kontrolišite hiljade artikala"
         }
       },
       "hero": {
-        "cta": "Pronađi svoje rješenje",
+        "cta": "Pronađi svoje rešenje",
         "subtitle": "Konty se prilagođava vašem poslovanju - od restorana do prodavnica",
-        "title": "Rješenja po djelatnostima",
+        "title": "Rešenja po delatnostima",
         "tagline": "Konty pokreće 9.000+ biznisa širom regiona"
       },
       "restaurants": {
         "faq": {
-          "a1": "Da, Konty pruža kompletno upravljanje stolovima sa vizuelnim planovima sale, statusom stolova u realnom vremenu, dodjeljivanjem konobara i besprijekorno usmjeravanje narudžbi na kuhinjski displej. Od smještaja gostiju do naplate, sve je povezano u jednom sistemu.",
-          "a2": "Naravno. Konobari koriste tablete ili telefone za uzimanje narudžbi pored stola sa sinhronizacijom u realnom vremenu ka kuhinji i baru. Bez ručno pisanih narudžbi ili šetnje do terminala-narudžbe idu direktno u kuhinju odmah, što smanjuje greške i poboljšava brzinu.",
-          "a3": "Konty radi besprijekorno offline sa punom funkcionalnošću. Tokom gužve ili prekida interneta, sve narudžbe se obrađuju lokalno bez zastoja. Kada se veza ponovo uspostavi, sve se automatski sinhronizuje-nikada ne prestajete da služite goste.",
-          "a4": "Da, besprijekorna integracija sa glavnim platformama za dostavu. Narudžbe sa aplikacija kao što su Glovo, Wolt i drugih dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa, bez propuštenih narudžbi. Jedan sistem za sve kanale.",
-          "a5": "Planovi počinju od 25€/mjesečno po lokaciji bez troškova podešavanja ili ugovora. Svi planovi uključuju upravljanje stolovima, kuhinjski displej, offline režim i podršku 24/7. Probajte besplatno 30 dana tokom redovnog rada.",
-          "q1": "Da li Konty omogućava upravljanje stolovima i narudžbama?",
-          "q2": "Mogu li konobari da uzimaju narudžbe na mobilnim uređajima?",
-          "q3": "Kako radi tokom špica bez interneta?",
-          "q4": "Šta je sa integracijom platformi za dostavu?",
+          "a1": "Da, kompletan sistem za upravljanje stolovima sa vizuelnim planom sale, drag-and-drop pozicioniranjem i statusom u realnom vremenu. Kreirajte više sektora, prilagodite oblik i boju stolova, dodajte pozadinske slike i organizujte celu blagovaonicu vizuelno. Stolovi pokazuju status zauzeto/slobodno uživo.",
+          "a2": "Naravno. Kitchen Display sistem prikazuje porudžbine uživo sa imenom konobara, brojem stola, vremenom izdavanja i detaljima stavki. Obojeni tajmeri upozorenja, praćenje završetka porudžbina (kompletno ili delimično), recall funkcija i \"All Day\" pregled za potpunu vidljivost u kuhinji. Prilagodljiv broj tiketa po stranici i veličina fonta.",
+          "a3": "Da, fleksibilna podela računa sa G0-G3 sekcijama omogućava deljenje po gostu, stavki ili prilagođenim iznosima. Rasporedite različite stavke različitim gostima i obradite više plaćanja za jedan sto. Savršeno za grupe koje žele da plaćaju odvojeno.",
+          "a4": "Konty radi potpuno offline sa punom funkcionalnošću. Sve upravljanje stolovima, porudžbine i plaćanja se obrađuju lokalno bez interneta. Kada se veza uspostavi, sve se automatski sinhronizuje. Vaš restoran nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
+          "a5": "Paketi počinju od 29€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, Kitchen Display sistem, deljenje računa, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom redovnog rada.",
+          "q1": "Da li Konty ima upravljanje stolovima sa vizuelnim planom sale?",
+          "q2": "Kako funkcioniše Kitchen Display sistem?",
+          "q3": "Mogu li stolovi da dele račune kada gosti plaćaju odvojeno?",
+          "q4": "Da li radi offline tokom prekida interneta?",
           "q5": "Koliko košta Konty za restoran?",
           "subtitle": "Najčešća pitanja o Konty-ju za restorane",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Saznaj više o funkcionalnostima",
-          "description": "Kompletno rješenje dizajnirano specifično za restorane",
+          "cta": "Saznaj više o funkcijama za restorane",
+          "description": "Kompletno rešenje kreirano specijalno za poslovanje restorana",
           "feat1": {
-            "description": "Vizuelni prikaz sale sa drag-and-drop stolovima, ažuriranje statusa u realnom vremenu i lak prijenos stolova",
+            "description": "Vizuelni plan sale sa drag-and-drop stolovima, sektorima, statusom uživo i prilagođenim izgledom",
             "icon": "i-heroicons-table-cells",
-            "title": "Upravljanje stolovima i salom"
+            "title": "Upravljanje stolovima"
           },
           "feat2": {
-            "description": "Usmjeravanje porudžbina na kuhinjske stanice u realnom vremenu, kontrola vremena serviranja i upozorenja za izmjene",
+            "description": "Prikaz porudžbina u realnom vremenu sa tajmerima, praćenjem konobara i statusom završetka",
             "icon": "i-heroicons-fire",
-            "title": "Sistem kuhinjskog displeja"
+            "title": "Kitchen Display sistem"
           },
           "feat3": {
-            "description": "Fleksibilni dodaci, izmjene jela i specijalne napomene za kuhinju po stavkama",
-            "icon": "i-heroicons-adjustments-horizontal",
-            "title": "Modifikatori i posebni zahtjevi"
+            "description": "Podela računa po gostu (G0-G3), prenos stolova i predaja između konobara bez problema",
+            "icon": "i-heroicons-arrows-right-left",
+            "title": "Operacije sa stolovima"
           },
           "feat4": {
-            "description": "Fleksibilna podjela računa po stavkama, mjestima ili procentualno sa više načina plaćanja",
-            "icon": "i-heroicons-banknotes",
-            "title": "Podjela računa i plaćanja"
+            "description": "Više načina plaćanja - gotovina, kartica, ček, vaučer i račun za fleksibilnu naplatu",
+            "icon": "i-heroicons-credit-card",
+            "title": "Fleksibilna plaćanja"
           },
           "feat5": {
-            "description": "Jednostavno upravljanje menijem sa dodacima, kombinacijama i posebnim cijenama za različita vremena",
-            "icon": "i-heroicons-document-text",
-            "title": "Upravljanje menijem"
+            "description": "Pratite prodaju po konobaru, stolu, sektoru i vremenskom periodu sa detaljnom analitikom",
+            "icon": "i-heroicons-chart-bar",
+            "title": "Učinak osoblja"
           },
           "feat6": {
-            "description": "Praćenje prodaje konobara, napojnica i učinka sa detaljnom analitikom i izvještajima",
-            "icon": "i-heroicons-user-group",
-            "title": "Praćenje osoblja"
+            "description": "Puna funkcionalnost offline - stolovi, porudžbine i plaćanja rade bez internet veze",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline režim"
           },
-          "title": "Sve što restoranu treba"
+          "title": "Sve što je potrebno vašem restoranu"
         },
         "hero": {
-          "cta": "Počni 30 dana besplatno",
-          "features": "Stolovi • Kuhinja • Narudžbe • Analitika",
-          "subtitle": "Kompletno rješenje za upravljanje restoranom - od stolova do naplate",
-          "title": "Konty za restorane"
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Stolovi, kitchen display, deljenje računa i offline režim. Jednostavan, pouzdan i spreman za najgušće večeri bez ikakvog problema.",
+          "title": "Restoranski POS na koji možete računati"
         },
         "overview": {
-          "description": "Od upravljanja stolovima do kuhinjskih narudžbina",
+          "description": "Od upravljanja stolovima do kuhinjskih porudžbina",
           "image": "/images/solutions/restaurants.avif",
-          "title": "Sve što restoranu treba"
+          "title": "Napravljeno za restorane sa punom uslugom"
+        }
+      },
+      "generalStores": {
+        "faq": {
+          "a1": "Naravno. Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, PIN prijavom korisnika, upravljanjem kasom, praćenjem uplata i isplata i detaljnim izveštajima po smeni. Svaki zaposleni se prijavljuje sa svojim PIN-om. Pratite radno vreme, predaju smena i održavajte potpunu odgovornost.",
+          "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izveštaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
+          "a3": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine, duvan i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
+          "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
+          "a5": "Paketi počinju od 15€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smena, upravljanje korisnicima, raznovrsne kategorije proizvoda, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
+          "q1": "Može li Konty da upravlja sa više smena i zaposlenih?",
+          "q2": "Da li prati zalihe raznovrsnih proizvoda?",
+          "q3": "Kako se bavi različitim poreskim stopama po kategorijama?",
+          "q4": "Da li radi offline kada nestane internet?",
+          "q5": "Koliko košta Konty za mešovitu trgovinu?",
+          "subtitle": "Najčešća pitanja o Konty-ju za mešovitu trgovinu",
+          "title": "Često postavljana pitanja"
+        },
+        "features": {
+          "cta": "Pogledaj funkcije za mešovitu trgovinu",
+          "description": "Pouzdan sistem za raznovrsnu trgovinu",
+          "feat1": {
+            "description": "Munjevita naplata sa podrškom za barkodove, brzim pronalaženjem artikala i trenutnom obradom plaćanja",
+            "icon": "i-heroicons-bolt",
+            "title": "Brza naplata"
+          },
+          "feat2": {
+            "description": "Otvaranje/zatvaranje smena, upravljanje kasom, uplate, isplate i praćenje radnog vremena zaposlenih",
+            "icon": "i-heroicons-clock",
+            "title": "Upravljanje smenama"
+          },
+          "feat3": {
+            "description": "PIN prijava korisnika sa izveštajima po smeni, praćenjem radnog vremena i depozitima korisnika",
+            "icon": "i-heroicons-users",
+            "title": "Višekorisnička podrška"
+          },
+          "feat4": {
+            "description": "Podrška za više poreskih stopa kroz različite kategorije proizvoda sa automatskom kalkulacijom",
+            "icon": "i-heroicons-calculator",
+            "title": "Upravljanje porezima"
+          },
+          "feat5": {
+            "description": "Organizujte raznovrstan asortiman sa kategorijama artikala i fleksibilnim upravljanjem zalihama",
+            "icon": "i-heroicons-squares-plus",
+            "title": "Kategorije proizvoda"
+          },
+          "feat6": {
+            "description": "Puna funkcionalnost offline - smene, prodaja i plaćanja rade bez internet veze",
+            "icon": "i-heroicons-signal-slash",
+            "title": "Offline pouzdanost"
+          },
+          "title": "Kompletno upravljanje mešovitom trgovinom"
+        },
+        "hero": {
+          "cta": "Počni 30-dnevnu probnu verziju",
+          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smenama. Sve što vam treba za mešovitu trgovinu—jednostavno i pouzdano.",
+          "title": "Upravljanje mešovitom trgovinom bez komplikacija"
+        },
+        "overview": {
+          "description": "Pouzdan sistem za mešovite trgovine sa raznovrsnim proizvodima",
+          "image": "/images/solutions/general-stores.avif",
+          "title": "Savršeno za mešovitu trgovinu"
         }
       }
     }
@@ -1716,10 +1700,6 @@
         "description": "Specijalizovan POS za modnu industriju. Veličine, boje, sezone i program lojalnosti.",
         "title": "Konty za prodavnice odjeće | POS za butike"
       },
-      "convenienceStores": {
-        "description": "Pouzdan POS za non-stop prodavnice. Uprošćen inventar i brza naplata.",
-        "title": "Konty za prodavnice miješane robe | 24/7 POS sistem"
-      },
       "description": "Otkrijte kako Konty POS može da unapredi vaše poslovanje. Specijalizovana rješenja za restorane, kafiće, prodavnice i B2B.",
       "fastFood": {
         "description": "Efikasan POS za restorane brze hrane. Drive-thru, dostava i sala iz jednog sistema.",
@@ -1733,7 +1713,11 @@
         "description": "Kompletno POS rješenje za restorane. Upravljanje stolovima, kuhinjski ekran, rezervacije i analitika.",
         "title": "Konty za restorane | POS sistem za ugostiteljstvo"
       },
-      "title": "Konty Rješenja po djelatnostimama | POS sistem prilagođen vašem poslovanju"
+      "title": "Konty Rješenja po djelatnostimama | POS sistem prilagođen vašem poslovanju",
+      "generalStores": {
+        "description": "Kompletno POS upravljanje za mešovite trgovine. Podrška za više smena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
+        "title": "POS sistem za mešovite trgovine | Konty"
+      }
     },
     "terms": {
       "description": "Uslovi korišćenja Konty POS sistema i povezanih usluga.",
@@ -1752,7 +1736,7 @@
       "client-stories": "Iskustva klijenata",
       "clothing-boutiques": "Prodavnice odjeće",
       "contact": "Kontakt",
-      "convenience-stores": "Prodavnice mješovite robe",
+      "general-stores": "Prodavnice mješovite robe",
       "demo": "Demo",
       "download": "Download",
       "faqdocs": "FAQ i dokumentacija",
@@ -1851,10 +1835,10 @@
       },
       "retailSolutions": {
         "clothing": "Prodavnice odjeće",
-        "convenience": "Prodavnice mješovite robe",
         "grocery": "Prodavnice hrane",
         "supermarkets": "Supermarketi",
-        "title": "Rješenja za trgovinu"
+        "title": "Rješenja za trgovinu",
+        "general": "Mešovite trgovine"
       }
     },
     "forms": {
@@ -1933,14 +1917,14 @@
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom.",
         "clothingBoutiques": "Prodavnice odjeće",
         "clothingBoutiquesDesc": "Kompletno upravljanje prodajom i zalihama odjeće.",
-        "convenienceStores": "Prodavnice miješane robe",
-        "convenienceStoresDesc": "Jednostavno upravljanje raznovrsnim asortimanom.",
         "fastFood": "Brza hrana / Fast food",
         "fastFoodDesc": "Optimizovan za brzinu i efikasnost - savršen za restorane brze hrane i dostavu.",
         "grocerySupermarkets": "Prodavnice hrane i supermarketi",
         "grocerySupermarketsDesc": "Upravljanje velikim brojem artikala i brzim prometom.",
         "restaurants": "Restorani",
-        "restaurantsDesc": "Kompletno rješenje za upravljanje restoranom - od stolova do naplate."
+        "restaurantsDesc": "Kompletno rješenje za upravljanje restoranom - od stolova do naplate.",
+        "generalStores": "Mešovite trgovine",
+        "generalStoresDesc": "Kompletno upravljanje raznovrsnom trgovinom."
       },
       "main": {
         "about": "O nama",

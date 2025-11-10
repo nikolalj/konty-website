@@ -23,24 +23,6 @@
             </p>
           </UIAppear>
 
-          <UIAppear direction="up" :delay="150">
-            <div class="mt-6 flex flex-wrap gap-3">
-              <div
-                v-for="(feature, index) in hero.features.split(' • ')"
-                :key="`feature-${index}`"
-                class="flex items-center gap-2 px-3 py-1.5 bg-primary-600 dark:bg-primary-700 rounded-full shadow-sm"
-              >
-                <UIcon
-                  name="i-lucide-check"
-                  class="w-3.5 h-3.5 text-white flex-shrink-0"
-                />
-                <span class="text-sm font-medium text-white">
-                  {{ feature.trim() }}
-                </span>
-              </div>
-            </div>
-          </UIAppear>
-
           <UIAppear direction="up" :delay="200">
             <div class="mt-10 flex flex-wrap gap-4">
               <AppCTAButton
@@ -89,7 +71,7 @@ const props = defineProps<{
     | 'fastFood'
     | 'grocerySupermarkets'
     | 'clothingBoutiques'
-    | 'convenienceStores'
+    | 'generalStores'
     | 'b2b'
 }>()
 
@@ -100,7 +82,6 @@ const localePath = useLocalePath()
 const hero = computed(() => ({
   title: t(`pages.solutions.${props.solution}.hero.title`),
   subtitle: t(`pages.solutions.${props.solution}.hero.subtitle`),
-  features: t(`pages.solutions.${props.solution}.hero.features`),
   cta: t(`pages.solutions.${props.solution}.hero.cta`)
 }))
 

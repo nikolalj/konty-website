@@ -269,8 +269,8 @@ const columns: FooterColumn[] = [
         to: localePath('/solutions/clothing-boutiques')
       },
       {
-        label: t('ui.footer.retailSolutions.convenience'),
-        to: localePath('/solutions/convenience-stores')
+        label: t('ui.footer.retailSolutions.general'),
+        to: localePath('/solutions/general-stores')
       }
     ]
   },

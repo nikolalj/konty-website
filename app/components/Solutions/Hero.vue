@@ -107,9 +107,9 @@ const solutionsList = [
     "href": "/solutions/clothing-boutiques"
   },
   {
-    "id": "convenienceStores",
+    "id": "generalStores",
     "icon": "i-lucide-store",
-    "href": "/solutions/convenience-stores"
+    "href": "/solutions/general-stores"
   },
   {
     "id": "b2b",

@@ -27,7 +27,7 @@ export default defineSitemapEventHandler(() => {
     '/solutions/fast-food': '2025-09-15',
     '/solutions/grocery-supermarkets': '2025-09-15',
     '/solutions/clothing-boutiques': '2025-09-15',
-    '/solutions/convenience-stores': '2025-09-15',
+    '/solutions/general-stores': '2025-09-15',
     '/solutions/b2b': '2025-09-15',
 
     // Company pages
