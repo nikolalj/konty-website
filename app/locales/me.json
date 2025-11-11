@@ -1561,36 +1561,36 @@
       },
       "generalStores": {
         "faq": {
-          "a1": "Naravno. Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, PIN prijavom korisnika, upravljanjem kasom, praćenjem uplata i isplata i detaljnim izveštajima po smeni. Svaki zaposleni se prijavljuje sa svojim PIN-om. Pratite radno vreme, predaju smena i održavajte potpunu odgovornost.",
-          "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izveštaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
-          "a3": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine, duvan i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
-          "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
-          "a5": "Paketi počinju od 15€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smena, upravljanje korisnicima, raznovrsne kategorije proizvoda, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
-          "q1": "Može li Konty da upravlja sa više smena i zaposlenih?",
+          "a1": "Naravno. Kompletno upravljanje smjenama sa funkcijama otvaranja/zatvaranja smjene, PIN prijavom korisnika, upravljanjem kasom, praćenjem uplata i isplata i detaljnim izvještajima po smjeni. Svaki zaposleni se prijavljuje sa svojim PIN-om. Pratite radno vrijeme, predaju smjena i održavajte potpunu odgovornost.",
+          "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izvještaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
+          "a3": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primjenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine, duvan i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
+          "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smjenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
+          "a5": "Paketi počinju od 15€ mjesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smjena, upravljanje korisnicima, raznovrsne kategorije proizvoda, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
+          "q1": "Može li Konty da upravlja sa više smjena i zaposlenih?",
           "q2": "Da li prati zalihe raznovrsnih proizvoda?",
           "q3": "Kako se bavi različitim poreskim stopama po kategorijama?",
           "q4": "Da li radi offline kada nestane internet?",
-          "q5": "Koliko košta Konty za mešovitu trgovinu?",
-          "subtitle": "Najčešća pitanja o Konty-ju za mešovitu trgovinu",
+          "q5": "Koliko košta Konty za prodavnicu mješovite robe?",
+          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice mješovite robe",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Pogledaj funkcije za mešovitu trgovinu",
-          "description": "Pouzdan sistem za raznovrsnu trgovinu",
+          "cta": "Pogledaj funkcije za prodavnice mješovite robe",
+          "description": "Pouzdan sistem za prodavnice mješovite robe",
           "feat1": {
             "description": "Munjevita naplata sa podrškom za barkodove, brzim pronalaženjem artikala i trenutnom obradom plaćanja",
             "icon": "i-heroicons-bolt",
             "title": "Brza naplata"
           },
           "feat2": {
-            "description": "Otvaranje/zatvaranje smena, upravljanje kasom, uplate, isplate i praćenje radnog vremena zaposlenih",
+            "description": "Otvaranje/zatvaranje smjena, upravljanje kasom, uplate, isplate i praćenje radnog vremena zaposlenih",
             "icon": "i-heroicons-clock",
-            "title": "Upravljanje smenama"
+            "title": "Upravljanje smjenama"
           },
           "feat3": {
-            "description": "PIN prijava korisnika sa izveštajima po smeni, praćenjem radnog vremena i depozitima korisnika",
+            "description": "Svaki zaposleni ima svoj PIN kod. Pratite ko radi, kada i koliko sa detaljnim izvještajima",
             "icon": "i-heroicons-users",
-            "title": "Višekorisnička podrška"
+            "title": "Kontrola pristupa"
           },
           "feat4": {
             "description": "Podrška za više poreskih stopa kroz različite kategorije proizvoda sa automatskom kalkulacijom",
@@ -1603,21 +1603,21 @@
             "title": "Kategorije proizvoda"
           },
           "feat6": {
-            "description": "Puna funkcionalnost offline - smene, prodaja i plaćanja rade bez internet veze",
+            "description": "Puna funkcionalnost offline - smjene, prodaja i plaćanja rade bez internet veze",
             "icon": "i-heroicons-signal-slash",
             "title": "Offline pouzdanost"
           },
-          "title": "Kompletno upravljanje mešovitom trgovinom"
+          "title": "Kompletno upravljanje prodavnicom mješovite robe"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smenama. Sve što vam treba za mešovitu trgovinu—jednostavno i pouzdano.",
-          "title": "Upravljanje mešovitom trgovinom bez komplikacija"
+          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smjenama. Sve što vam treba za prodavnicu mješovite robe—jednostavno i pouzdano.",
+          "title": "Upravljanje prodavnicom mješovite robe bez komplikacija"
         },
         "overview": {
-          "description": "Pouzdan sistem za mešovite trgovine sa raznovrsnim proizvodima",
-          "image": "/images/solutions/general-stores.avif",
-          "title": "Savršeno za mešovitu trgovinu"
+          "description": "Pouzdan sistem za prodavnice mješovite robe sa raznovrsnim proizvodima",
+          "image": "/images/solutions/convenience-stores.avif",
+          "title": "Savršeno za prodavnice mješovite robe"
         }
       }
     }
@@ -1715,8 +1715,8 @@
       },
       "title": "Konty Rješenja po djelatnostimama | POS sistem prilagođen vašem poslovanju",
       "generalStores": {
-        "description": "Kompletno POS upravljanje za mešovite trgovine. Podrška za više smena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
-        "title": "POS sistem za mešovite trgovine | Konty"
+        "description": "Kompletno POS upravljanje za prodavnice mješovite robe. Podrška za više smjena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
+        "title": "POS sistem za prodavnice mješovite robe | Konty"
       }
     },
     "terms": {
@@ -1838,7 +1838,7 @@
         "grocery": "Prodavnice hrane",
         "supermarkets": "Supermarketi",
         "title": "Rješenja za trgovinu",
-        "general": "Mešovite trgovine"
+        "general": "Prodavnice mješovite robe"
       }
     },
     "forms": {
@@ -1923,8 +1923,8 @@
         "grocerySupermarketsDesc": "Upravljanje velikim brojem artikala i brzim prometom.",
         "restaurants": "Restorani",
         "restaurantsDesc": "Kompletno rješenje za upravljanje restoranom - od stolova do naplate.",
-        "generalStores": "Mešovite trgovine",
-        "generalStoresDesc": "Kompletno upravljanje raznovrsnom trgovinom."
+        "generalStores": "Prodavnice mješovite robe",
+        "generalStoresDesc": "Kompletno upravljanje prodavnicom mješovite robe."
       },
       "main": {
         "about": "O nama",

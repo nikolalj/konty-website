@@ -165,7 +165,129 @@ export const clients = {
     }
   ],
 
-  ba: [],
+  ba: [
+    {
+      name: 'Adiya Hotel',
+      logo: '/images/clients/adiya.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Black George',
+      logo: '/images/clients/blackGeorge.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Marinada',
+      logo: '/images/clients/marinada.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Aquastar Danube',
+      logo: '/images/clients/aquastarDanube.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Baracuda Fish Restaurant',
+      logo: '/images/clients/baracuda.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Fishermans Pub',
+      logo: '/images/clients/fishermanspub.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Petroland',
+      logo: '/images/clients/petroland.avif',
+      product: 'retail'
+    },
+        {
+      name: 'Flex Decor',
+      logo: '/images/clients/flexDecor.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Roanda Comerc',
+      logo: '/images/clients/roandaKomerc.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Studio Zoran',
+      logo: '/images/clients/studioZoran.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Poslastičarnica Sonja',
+      logo: '/images/clients/sonjaPoslasticarnica.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Školijera',
+      logo: '/images/clients/skolijera.avif',
+      product: 'retail'
+    },
+  ],
 
-  us: []
+  us: [
+    {
+      name: 'Adiya Hotel',
+      logo: '/images/clients/adiya.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Black George',
+      logo: '/images/clients/blackGeorge.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Marinada',
+      logo: '/images/clients/marinada.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Aquastar Danube',
+      logo: '/images/clients/aquastarDanube.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Baracuda Fish Restaurant',
+      logo: '/images/clients/baracuda.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Fishermans Pub',
+      logo: '/images/clients/fishermanspub.avif',
+      product: 'hospitality'
+    },
+    {
+      name: 'Petroland',
+      logo: '/images/clients/petroland.avif',
+      product: 'retail'
+    },
+        {
+      name: 'Flex Decor',
+      logo: '/images/clients/flexDecor.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Roanda Comerc',
+      logo: '/images/clients/roandaKomerc.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Studio Zoran',
+      logo: '/images/clients/studioZoran.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Poslastičarnica Sonja',
+      logo: '/images/clients/sonjaPoslasticarnica.avif',
+      product: 'retail'
+    },
+    {
+      name: 'Školijera',
+      logo: '/images/clients/skolijera.avif',
+      product: 'retail'
+    },
+  ]
 }

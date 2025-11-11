@@ -6,7 +6,7 @@ Konty is the **next-generation Point of Sale (POS) solution** for **retail and h
 - **Mission**: Simplify daily operations of small and medium businesses with intuitive, reliable, and efficient POS solutions so they can focus on growth while Konty handles the technology.
 - **Vision**: Become the **go-to POS solution in the Balkan region**, expand globally (with a strong focus on the USA), and be recognized as a synonym for **simplicity, reliability, and innovation**.
 - **Core Values**:
-  - Reliability & Experience (26+ years in the industry)
+  - Reliability & Experience (14+ years in the industry)
   - Simplicity & Intuitiveness (user-friendly UI/UX)
   - Customer-Centricity (continuous feedback loop, fast support)
   - Technological Innovation (cloud-first, cross-platform, real-time access, integrations)

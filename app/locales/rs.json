@@ -1570,13 +1570,13 @@
           "q2": "Da li prati zalihe raznovrsnih proizvoda?",
           "q3": "Kako se bavi različitim poreskim stopama po kategorijama?",
           "q4": "Da li radi offline kada nestane internet?",
-          "q5": "Koliko košta Konty za mešovitu trgovinu?",
-          "subtitle": "Najčešća pitanja o Konty-ju za mešovitu trgovinu",
+          "q5": "Koliko košta Konty za prodavnicu mešovite robe?",
+          "subtitle": "Najčešća pitanja o Konty-ju za prodavnice mešovite robe",
           "title": "Često postavljana pitanja"
         },
         "features": {
-          "cta": "Pogledaj funkcije za mešovitu trgovinu",
-          "description": "Pouzdan sistem za raznovrsnu trgovinu",
+          "cta": "Pogledaj funkcije za prodavnice mešovite robe",
+          "description": "Pouzdan sistem za prodavnice mešovite robe",
           "feat1": {
             "description": "Munjevita naplata sa podrškom za barkodove, brzim pronalaženjem artikala i trenutnom obradom plaćanja",
             "icon": "i-heroicons-bolt",
@@ -1588,9 +1588,9 @@
             "title": "Upravljanje smenama"
           },
           "feat3": {
-            "description": "PIN prijava korisnika sa izveštajima po smeni, praćenjem radnog vremena i depozitima korisnika",
+            "description": "Svaki zaposleni ima svoj PIN kod. Pratite ko radi, kada i koliko sa detaljnim izveštajima",
             "icon": "i-heroicons-users",
-            "title": "Višekorisnička podrška"
+            "title": "Kontrola pristupa"
           },
           "feat4": {
             "description": "Podrška za više poreskih stopa kroz različite kategorije proizvoda sa automatskom kalkulacijom",
@@ -1607,17 +1607,17 @@
             "icon": "i-heroicons-signal-slash",
             "title": "Offline pouzdanost"
           },
-          "title": "Kompletno upravljanje mešovitom trgovinom"
+          "title": "Kompletno upravljanje prodavnicom mešovite robe"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smenama. Sve što vam treba za mešovitu trgovinu—jednostavno i pouzdano.",
-          "title": "Upravljanje mešovitom trgovinom bez komplikacija"
+          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smenama. Sve što vam treba za prodavnicu mešovite robe—jednostavno i pouzdano.",
+          "title": "Upravljanje prodavnicom mešovite robe bez komplikacija"
         },
         "overview": {
-          "description": "Pouzdan sistem za mešovite trgovine sa raznovrsnim proizvodima",
-          "image": "/images/solutions/general-stores.avif",
-          "title": "Savršeno za mešovitu trgovinu"
+          "description": "Pouzdan sistem za prodavnice mešovite robe sa raznovrsnim proizvodima",
+          "image": "/images/solutions/convenience-stores.avif",
+          "title": "Savršeno za prodavnice mešovite robe"
         }
       }
     }
@@ -1715,8 +1715,8 @@
       },
       "title": "Konty Rešenja po delatnostimama | POS sistem prilagođen vašem poslovanju",
       "generalStores": {
-        "description": "Kompletno POS upravljanje za mešovite trgovine. Podrška za više smena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
-        "title": "POS sistem za mešovite trgovine | Konty"
+        "description": "Kompletno POS upravljanje za prodavnice mešovite robe. Podrška za više smena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
+        "title": "POS sistem za prodavnice mešovite robe | Konty"
       }
     },
     "terms": {
@@ -1838,7 +1838,7 @@
         "grocery": "Prodavnice hrane",
         "supermarkets": "Supermarketi",
         "title": "Rešenja za trgovinu",
-        "general": "Mešovite trgovine"
+        "general": "Prodavnice mešovite robe"
       }
     },
     "forms": {
@@ -1923,8 +1923,8 @@
         "grocerySupermarketsDesc": "Upravljanje velikim brojem artikala i brzim prometom.",
         "restaurants": "Restorani",
         "restaurantsDesc": "Kompletno rešenje za upravljanje restoranom - od stolova do naplate.",
-        "generalStores": "Mešovite trgovine",
-        "generalStoresDesc": "Kompletno upravljanje raznovrsnom trgovinom."
+        "generalStores": "Prodavnice mešovite robe",
+        "generalStoresDesc": "Kompletno upravljanje prodavnicom mešovite robe."
       },
       "main": {
         "about": "O nama",

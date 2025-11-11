@@ -1588,9 +1588,9 @@
             "title": "Shift Management"
           },
           "feat3": {
-            "description": "PIN-based user login with shift reports, working hours tracking, and user deposits",
+            "description": "Each employee has their own PIN code. Track who works, when, and how much with detailed reports",
             "icon": "i-heroicons-users",
-            "title": "Multi-User Support"
+            "title": "Access Control"
           },
           "feat4": {
             "description": "Support for multiple tax rates across different product categories with automatic calculation",
