@@ -1193,7 +1193,7 @@
             "title": "Praćenje transakcija"
           },
           "feat4": {
-            "description": "Više načina plaćanja - virman, ček, račun i gotovina za B2B fleksibilnost",
+            "description": "Prihvatajte više vrsta plaćanja u jednoj transakciji. Kombinujte načine plaćanja za maksimalnu fleksibilnost.",
             "icon": "i-heroicons-credit-card",
             "title": "Fleksibilna plaćanja"
           },
@@ -1455,14 +1455,14 @@
             "title": "Napredne zalihe"
           },
           "feat2": {
-            "description": "Puna podrška za barkodove sa unosom šifre i funkcijom Izvoz za vagu za proizvode na vagi",
+            "description": "Puna podrška za barkodove sa unosom šifre i funkcijom Izvoz za vagu za artikle na vagi",
             "icon": "i-heroicons-qr-code",
             "title": "Barkod i vaga"
           },
           "feat3": {
-            "description": "Uvoz/izvoz hiljada artikala preko Excel/CSV za efikasno masovno upravljanje proizvodima",
+            "description": "Uvoz/izvoz hiljada artikala preko Excel/CSV za efikasno masovno upravljanje artiklima",
             "icon": "i-heroicons-document-arrow-up",
-            "title": "Masovno upravljanje proizvodima"
+            "title": "Masovno upravljanje artiklima"
           },
           "feat4": {
             "description": "Brzo kucanje artikala pomoću tastera organizovanih po kategorijama, liste, šifre ili barkoda",
@@ -1595,7 +1595,7 @@
           "feat4": {
             "description": "Prihvatajte više vrsta plaćanja u jednoj transakciji. Kombinujte načine plaćanja za maksimalnu fleksibilnost.",
             "icon": "i-heroicons-credit-card",
-            "title": "Fleksibilni načini plaćanja"
+            "title": "Fleksibilna plaćanja"
           },
           "feat5": {
             "description": "Organizujte raznovrstan asortiman sa kategorijama artikala i fleksibilnim upravljanjem zalihama",

@@ -40,6 +40,7 @@ export default defineSitemapEventHandler(() => {
     // Legal
     '/privacy': '2025-09-15',
     '/terms': '2025-09-15',
+    '/data-processing': '2025-09-15',
   }
 
   // Return URLs with lastmod dates

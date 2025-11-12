@@ -1193,7 +1193,7 @@
             "title": "Praćenje transakcija"
           },
           "feat4": {
-            "description": "Više načina plaćanja - virman, ček, račun i gotovina za B2B fleksibilnost",
+            "description": "Prihvatajte više vrsta plaćanja u jednoj transakciji. Kombinujte načine plaćanja za maksimalnu fleksibilnost.",
             "icon": "i-heroicons-credit-card",
             "title": "Fleksibilna plaćanja"
           },
@@ -1433,12 +1433,12 @@
       },
       "grocerySupermarkets": {
         "faq": {
-          "a1": "Naravno. Konty upravlja neograničenim brojem proizvoda sa uvozom/izvozom iz Excel/CSV fajlova za masovno upravljanje. Dodajte artikle pojedinačno ili masovno, organizujte po kategorijama i koristite brzu pretragu po nazivu ili šifri. Napravljeno za maloprodaju velikog obima sa efikasnim upravljanjem proizvodima.",
-          "a2": "Da, puna podrška za skeniranje barkoda i funkcija Izvoz za vagu specijalno za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih proizvoda i delikatesa.",
+          "a1": "Naravno. Konty upravlja neograničenim brojem artikala sa uvozom/izvozom iz Excel/CSV fajlova za masovno upravljanje. Dodajte artikle pojedinačno ili masovno, organizujte po kategorijama i koristite brzu pretragu po nazivu ili šifri. Napravljeno za maloprodaju velikog obima sa efikasnim upravljanjem artiklima.",
+          "a2": "Da, puna podrška za skeniranje barkoda i funkcija Izvoz za vagu specijalno za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih artikala i delikatesa.",
           "a3": "Sveobuhvatno praćenje zaliha sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, kalkulacije cena, otpisi za upravljanje rasturom i izveštaji o zalihama sa naprednim filtriranjem. Potpuna vidljivost i kontrola nad vašim zalihama.",
-          "a4": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
-          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, izvoz za vagu, praćenje zaliha, više poreskih stopa i offline režim. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
-          "q1": "Može li Konty efikasno da upravlja hiljadama proizvoda?",
+          "a4": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine i druge kategorije artikala sa automatskom kalkulacijom i usklađenošću sa propisima.",
+          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala, skeniranje barkoda, izvoz za vagu, praćenje zaliha, više poreskih stopa i offline režim. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
+          "q1": "Može li Konty efikasno da upravlja hiljadama artikala?",
           "q2": "Da li podržava skeniranje barkoda i vage?",
           "q3": "Kako funkcioniše praćenje zaliha?",
           "q4": "Može li da radi sa različitim poreskim stopama po kategorijama?",
@@ -1455,14 +1455,14 @@
             "title": "Napredne zalihe"
           },
           "feat2": {
-            "description": "Puna podrška za barkodove sa unosom šifre i funkcijom Izvoz za vagu za proizvode na vagi",
+            "description": "Puna podrška za barkodove sa unosom šifre i funkcijom Izvoz za vagu za artikle na vagi",
             "icon": "i-heroicons-qr-code",
             "title": "Barkod i vaga"
           },
           "feat3": {
-            "description": "Uvoz/izvoz hiljada artikala preko Excel/CSV za efikasno masovno upravljanje proizvodima",
+            "description": "Uvoz/izvoz hiljada artikala preko Excel/CSV za efikasno masovno upravljanje artiklima",
             "icon": "i-heroicons-document-arrow-up",
-            "title": "Masovno upravljanje proizvodima"
+            "title": "Masovno upravljanje artiklima"
           },
           "feat4": {
             "description": "Brzo kucanje artikala pomoću tastera organizovanih po kategorijama, liste, šifre ili barkoda",
@@ -1479,15 +1479,15 @@
             "icon": "i-heroicons-clipboard-document-check",
             "title": "Magacinsko knjigovodstvo"
           },
-          "title": "Upravljajte hiljadama proizvoda"
+          "title": "Upravljajte hiljadama artikala"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Skeniranje barkoda, integracija sa vagom i kompletno praćenje zaliha. Pouzdano upravljanje prodavnicom koje preuzima kompleksnost umesto vas.",
-          "title": "Upravljajte hiljadama proizvoda sa sigurnošću"
+          "title": "Upravljajte hiljadama artikala sa sigurnošću"
         },
         "overview": {
-          "description": "Moćan sistem za upravljanje velikim katalozima proizvoda",
+          "description": "Moćan sistem za upravljanje velikim katalozima artikala",
           "image": "/images/solutions/grocery-supermarkets.avif",
           "title": "Kontrolišite hiljade artikala"
         }
@@ -1565,9 +1565,9 @@
           "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izvještaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
           "a3": "Da! Konty podržava kombinovanje više načina plaćanja u jednoj transakciji. Kupci mogu kombinovati gotovinu, karticu, vaučere, čekove, bankovne transfere i druge vrste plaćanja. Sistem automatski izračunava preostali iznos i prikazuje detaljan raspored plaćanja na računu, pružajući vam i vašim kupcima potpunu fleksibilnost pri naplati.",
           "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smjenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
-          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smjena, upravljanje korisnicima, raznovrsne kategorije proizvoda, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
+          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smjena, upravljanje korisnicima, raznovrsne kategorije artikala, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
           "q1": "Može li Konty da upravlja sa više smjena i zaposlenih?",
-          "q2": "Da li prati zalihe raznovrsnih proizvoda?",
+          "q2": "Da li prati zalihe raznovrsnih artikala?",
           "q3": "Mogu li kupci platiti koristeći više načina plaćanja?",
           "q4": "Da li radi offline kada nestane internet?",
           "q5": "Koliko košta Konty za prodavnicu mješovite robe?",
@@ -1595,12 +1595,12 @@
           "feat4": {
             "description": "Prihvatajte više vrsta plaćanja u jednoj transakciji. Kombinujte načine plaćanja za maksimalnu fleksibilnost.",
             "icon": "i-heroicons-credit-card",
-            "title": "Fleksibilni načini plaćanja"
+            "title": "Fleksibilna plaćanja"
           },
           "feat5": {
             "description": "Organizujte raznovrstan asortiman sa kategorijama artikala i fleksibilnim upravljanjem zalihama",
             "icon": "i-heroicons-squares-plus",
-            "title": "Kategorije proizvoda"
+            "title": "Kategorije artikala"
           },
           "feat6": {
             "description": "Puna funkcionalnost offline - smjene, prodaja i plaćanja rade bez internet veze",
@@ -1615,7 +1615,7 @@
           "title": "Upravljanje prodavnicom mješovite robe bez komplikacija"
         },
         "overview": {
-          "description": "Pouzdan sistem za prodavnice mješovite robe sa raznovrsnim proizvodima",
+          "description": "Pouzdan sistem za prodavnice mješovite robe sa raznovrsnim artiklima",
           "image": "/images/solutions/general-stores.avif",
           "title": "Savršeno za prodavnice mješovite robe"
         }
