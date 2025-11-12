@@ -1,13 +1,8 @@
 <template>
   <div>
-    <!-- Hero Section with Solutions Grid Embedded -->
     <SolutionsHero class="dark" />
-
-    <!-- Social proof and statistics -->
     <LazySharedClientList class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
-
-    <!-- Bottom sections -->
     <LazySharedPricing hydrate-on-visible />
     <LazySharedFAQ category="solutions" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />

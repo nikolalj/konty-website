@@ -1310,7 +1310,7 @@
           "cta": "Discover Fashion Retail Features",
           "description": "Specialized tools for clothing stores and boutiques",
           "feat1": {
-            "description": "Create separate items for each size/color variant with individual SKUs, barcodes, and stock counts",
+            "description": "Create items for each size/color variant with individual codes and inventory tracking",
             "icon": "i-heroicons-swatch",
             "title": "Variant Management"
           },
@@ -1465,9 +1465,9 @@
             "title": "Bulk Product Management"
           },
           "feat4": {
-            "description": "Organize products by categories with support for multiple tax rates per category",
-            "icon": "i-heroicons-tag",
-            "title": "Category Organization"
+            "description": "Fast item input using buttons organized by categories, lists, codes or barcodes",
+            "icon": "i-heroicons-squares-2x2",
+            "title": "Quick item entry"
           },
           "feat5": {
             "description": "Price calculations, price levelings, and purchase vs sale price tracking for profitability",
@@ -1563,12 +1563,12 @@
         "faq": {
           "a1": "Absolutely. Complete shift management with open/close shift functionality, user PIN login, cash drawer management, deposits and withdrawals tracking, and detailed shift reports. Each employee logs in/out with their PIN. Track working hours, shift handovers, and maintain full accountability.",
           "a2": "Yes, comprehensive inventory tracking for all items with real-time stock levels, delivery in/out notes, beginning inventories, write-offs for waste management, and complete stock reports. Full visibility and control over your diverse product range.",
-          "a3": "Yes, support for multiple tax rates per item. System automatically applies correct tax rates based on item category. Manage different tax rates for food, household items, tobacco, and other product categories with automatic calculation and regulatory compliance.",
+          "a3": "Yes! Konty supports split payments across multiple methods in a single transaction. Customers can combine cash, card, vouchers, checks, bank transfers, and other payment types. The system automatically calculates remaining balances and provides detailed payment breakdowns on receipts, giving you and your customers complete flexibility at checkout.",
           "a4": "Konty works completely offline with full functionality. Process sales, manage shifts, accept payments, and track inventory without internet. When connection returns, everything automatically syncs. Your store keeps running smoothly regardless of connection issues.",
           "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include multi-shift support, user management, diverse product categories, multiple tax rates, and complete offline mode. Try free for 30 days.",
           "q1": "Can Konty manage multiple shifts and employees?",
           "q2": "Does it track diverse product inventory?",
-          "q3": "How does it handle different tax rates for product categories?",
+          "q3": "Can customers pay using multiple payment methods?",
           "q4": "Does it work offline when internet goes down?",
           "q5": "How much does Konty cost for a general store?",
           "subtitle": "Most common questions about Konty for general stores",
@@ -1593,9 +1593,9 @@
             "title": "Access Control"
           },
           "feat4": {
-            "description": "Support for multiple tax rates across different product categories with automatic calculation",
-            "icon": "i-heroicons-calculator",
-            "title": "Tax Management"
+            "description": "Accept multiple payment types in a single transaction - cash, cards, vouchers, checks, bank transfers, and more. Combine payment methods for maximum flexibility.",
+            "icon": "i-heroicons-credit-card",
+            "title": "Flexible Payment Methods"
           },
           "feat5": {
             "description": "Organize diverse product mix with item categories and flexible inventory management",

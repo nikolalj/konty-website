@@ -1,16 +1,9 @@
 <template>
   <div>
-    <!-- Solution-specific hero and overview -->
     <SolutionsOverview solution="fastFood" />
-
-    <!-- Client List -->
-    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedClientList product="hospitality" class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
-
-    <!-- Features List -->
     <LazySolutionsFeaturesList solution="fastFood" hydrate-on-visible />
-
-    <!-- Reusable components -->
     <LazySharedPricing product="hospitality" hydrate-on-visible />
     <LazySharedFAQ category="fast-food" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />

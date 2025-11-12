@@ -1,19 +1,9 @@
 <template>
   <div>
-    <!-- Solution-specific hero and overview -->
     <SolutionsOverview solution="clothingBoutiques" />
-
-    <!-- Client List -->
-    <LazySharedClientList class="dark" hydrate-on-visible />
+    <LazySharedClientList product="retail" class="dark" hydrate-on-visible />
     <LazySharedStatistics class="dark !pt-4" hydrate-on-visible />
-
-    <!-- Features List -->
-    <LazySolutionsFeaturesList
-      solution="clothingBoutiques"
-      hydrate-on-visible
-    />
-
-    <!-- Reusable components -->
+    <LazySolutionsFeaturesList solution="clothingBoutiques" hydrate-on-visible />
     <LazySharedPricing product="retail" hydrate-on-visible />
     <LazySharedFAQ category="clothing-boutiques" variant="alt" hydrate-on-visible />
     <LazySharedContactForm variant="alt" hydrate-on-visible />

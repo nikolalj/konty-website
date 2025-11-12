@@ -760,9 +760,9 @@
           "faq": {
             "a2": "Da, Konty radi besprijekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaše poslovanje nikada ne prestaje, čak ni tokom prekida interneta-potpuna offline funkcionalnost ugrađena u sistem.",
             "a3": "Većina lokala je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
-            "a4": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kitchen display sisteme. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
+            "a4": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kuhinjski displeje. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
             "a5": "Naš intuitivan interfejs zahtijeva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Pružamo obuku na licu mjesta tokom podešavanja i materijale za kontinuiranu podršku. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
-            "a6": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbe sa delivery aplikacija dolaze direktno u vaš POS i kitchen display sistem-bez ručnog unosa i propuštenih narudžbi. Jedan sistem za sve: jelo u lokalu, ponijeti i dostavu.",
+            "a6": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbe sa delivery aplikacija dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa i propuštenih narudžbi. Jedan sistem za sve: jelo u lokalu, ponijeti i dostavu.",
             "a7": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahtjeve-kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbom, što osigurava tačnost i zadovoljstvo gostiju.",
             "a8": "Da, Konty podržava dijeljenje računa i odvojene naplate. Podržava više metoda plaćanja na jednom računu-kartica, gotovina, itd. Rješavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim.",
             "q2": "Da li sistem radi bez interneta?",
@@ -1211,7 +1211,7 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za veleprodaju—ništa više, ništa manje.",
+          "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za veleprodaju - ništa više, ništa manje.",
           "title": "B2B prodaja koja jednostavno radi"
         },
         "overview": {
@@ -1268,7 +1268,7 @@
             "icon": "i-heroicons-signal-slash",
             "title": "Offline režim"
           },
-          "title": "Optimizovano za veliku frekvenciju"
+          "title": "Optimizovano za veliku frekvenciju gostiju"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
@@ -1310,9 +1310,9 @@
           "cta": "Otkrij funkcije za modnu trgovinu",
           "description": "Specijalizovani alati za prodavnice i butike odeće",
           "feat1": {
-            "description": "Kreirajte zasebne artikle za svaku varijantu veličine/boje sa pojedinačnim šiframa i zalihama",
+            "description": "Create items for each size/color variant with individual codes and inventory tracking",
             "icon": "i-heroicons-swatch",
-            "title": "Upravljanje varijantama"
+            "title": "Variant Management"
           },
           "feat2": {
             "description": "Organizujte proizvode po kategorijama za kolekcije i sezone sa fleksibilnim sistemom kategorija",
@@ -1372,11 +1372,11 @@
       },
       "fastFood": {
         "faq": {
-          "a1": "Da, brzo kreiranje porudžbina sa brzim unosom artikala preko tastature, grupa i favorita. Kitchen Display sistem prikazuje sve porudžbine uživo sa tajmerima i upravljanjem prioritetima. Savršeno za šalter porudžbine, paketirano i veliku frekvenciju brze hrane.",
-          "a2": "Naravno. Kitchen Display sistem prikazuje porudžbine u realnom vremenu sa praćenjem tajmera, obojenim upozorenjima (žuto/crveno na osnovu vremena) i statusom završetka. Pratite svaku porudžbinu od unosa do izdavanja sa imenom korisnika, vremenom porudžbine i detaljnim prikazom stavki. Prilagodite alarme i opcije prikaza.",
+          "a1": "Da, brzo kreiranje porudžbina sa brzim unosom artikala preko tastature, grupa i favorita. Kuhinjski displej prikazuje sve porudžbine uživo sa tajmerima i upravljanjem prioritetima. Savršeno za šalter porudžbine, paketirano i veliku frekvenciju brze hrane.",
+          "a2": "Naravno. Kuhinjski displej prikazuje porudžbine u realnom vremenu sa praćenjem tajmera, obojenim upozorenjima (žuto/crveno na osnovu vremena) i statusom završetka. Pratite svaku porudžbinu od unosa do izdavanja sa imenom korisnika, vremenom porudžbine i detaljnim prikazom stavki. Prilagodite alarme i opcije prikaza.",
           "a3": "Da, fleksibilno upravljanje artiklima omogućava kreiranje kombinacija i setova. Koristite kategorije i grupe artikala za logičku organizaciju menija. Pratite prodaju po artiklu i kategoriji da identifikujete najbolje prodavane kombinacije i optimizujete učinak menija.",
           "a4": "Konty radi kompletno offline sa punom POS funkcionalnošću. Obrađujte sve porudžbine, upravljajte kitchen display-em i prihvatajte plaćanja bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš objekat brze hrane nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mjesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, Kitchen Display sistem, praćenje porudžbina, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom najprometnije smjene.",
+          "a5": "Paketi počinju od 25€ i idu do 50€ mjesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, Kuhinjski displej, praćenje porudžbina, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom najprometnije smjene.",
           "q1": "Kako Konty upravlja brzim porudžbinama?",
           "q2": "Mogu li da pratim vreme pripreme i brzinu usluge?",
           "q3": "Da li podržava kombinovane obroke i setove?",
@@ -1389,22 +1389,22 @@
           "cta": "Pogledaj funkcije za brzu hranu",
           "description": "Maksimalna brzina i efikasnost za restorane brze hrane",
           "feat1": {
-            "description": "Brzo kreiranje porudžbina sa tastaturom, favoritima i quick-add za maksimalnu propusnost",
+            "description": "Brzo kreiranje porudžbina sa optimizovanim interfejsom za maksimalnu efikasnost",
             "icon": "i-heroicons-bolt",
             "title": "Munjevit unos porudžbina"
           },
           "feat2": {
-            "description": "Prikaz porudžbina u realnom vremenu sa praćenjem vremena pripreme i obojenim tajmerima",
+            "description": "Upravljanje porudžbinama u kuhinji u realnom vremenu sa praćenjem vremena pripreme, tajmerima, statusima i obavještenjima",
             "icon": "i-heroicons-tv",
-            "title": "Kitchen Display sistem"
+            "title": "Kuhinjski displej"
           },
           "feat3": {
-            "description": "Kreirajte kombinacije i setove menija sa kategorijama artikala za organizovan meni",
+            "description": "Kreirajte kategorizaciju i organizaciju artikala za organizovan meni",
             "icon": "i-heroicons-squares-2x2",
             "title": "Organizacija menija"
           },
           "feat4": {
-            "description": "Pratite porudžbine po vremenskom periodu, osoblju i artiklu za optimizaciju učinka",
+            "description": "Pratite porudžbine po vremenu pripreme, osoblju i artiklu za optimizaciju učinka",
             "icon": "i-heroicons-clock",
             "title": "Praćenje porudžbina"
           },
@@ -1422,7 +1422,7 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Kitchen display u realnom vremenu i trenutna obrada porudžbina koje prate vaš najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, dovoljno pouzdan da traje ceo dan.",
+          "subtitle": "Kuhinjski displej i trenutna obrada porudžbina koji prate vaš najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, uvijek pouzdan da vas nikad ne iznevjeri.",
           "title": "Brzina plus pouzdanost"
         },
         "overview": {
@@ -1465,9 +1465,9 @@
             "title": "Masovno upravljanje proizvodima"
           },
           "feat4": {
-            "description": "Organizujte proizvode po kategorijama sa podrškom za više poreskih stopa po kategoriji",
-            "icon": "i-heroicons-tag",
-            "title": "Organizacija po kategorijama"
+            "description": "Brzo kucanje artikala pomoću tastera organizovanih po kategorijama, liste, šifre ili barkoda",
+            "icon": "i-heroicons-squares-2x2",
+            "title": "Brzo kucanje artikala"
           },
           "feat5": {
             "description": "Kalkulacije cena, nivelacije cena i praćenje nabavnih i prodajnih cena za profitabilnost",
@@ -1501,12 +1501,12 @@
       "restaurants": {
         "faq": {
           "a1": "Da, kompletan sistem za upravljanje stolovima sa vizuelnim planom sale, drag-and-drop pozicioniranjem i statusom u realnom vremenu. Kreirajte više sektora, prilagodite oblik i boju stolova, dodajte pozadinske slike i organizujte celu blagovaonicu vizuelno. Stolovi pokazuju status zauzeto/slobodno uživo.",
-          "a2": "Naravno. Kitchen Display sistem prikazuje porudžbine uživo sa imenom konobara, brojem stola, vremenom izdavanja i detaljima stavki. Obojeni tajmeri upozorenja, praćenje završetka porudžbina (kompletno ili delimično), recall funkcija i \"All Day\" pregled za potpunu vidljivost u kuhinji. Prilagodljiv broj tiketa po stranici i veličina fonta.",
+          "a2": "Naravno. Kuhinjski displej prikazuje porudžbine uživo sa imenom konobara, brojem stola, vremenom izdavanja i detaljima stavki. Obojeni tajmeri upozorenja, praćenje završetka porudžbina (kompletno ili delimično), recall funkcija i \"All Day\" pregled za potpunu vidljivost u kuhinji. Prilagodljiv broj tiketa po stranici i veličina fonta.",
           "a3": "Da, fleksibilna podela računa sa G0-G3 sekcijama omogućava deljenje po gostu, stavki ili prilagođenim iznosima. Rasporedite različite stavke različitim gostima i obradite više plaćanja za jedan sto. Savršeno za grupe koje žele da plaćaju odvojeno.",
           "a4": "Konty radi potpuno offline sa punom funkcionalnošću. Sve upravljanje stolovima, porudžbine i plaćanja se obrađuju lokalno bez interneta. Kada se veza uspostavi, sve se automatski sinhronizuje. Vaš restoran nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mjesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, Kitchen Display sistem, dijeljenje računa, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom redovnog rada.",
+          "a5": "Paketi počinju od 25€ i idu do 50€ mjesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, Kuhinjski displej, dijeljenje računa, offline režim i neograničen broj korisnika. Probajte besplatno 30 dana tokom redovnog rada.",
           "q1": "Da li Konty ima upravljanje stolovima sa vizuelnim planom sale?",
-          "q2": "Kako funkcioniše Kitchen Display sistem?",
+          "q2": "Kako funkcioniše Kuhinjski displej?",
           "q3": "Mogu li stolovi da dele račune kada gosti plaćaju odvojeno?",
           "q4": "Da li radi offline tokom prekida interneta?",
           "q5": "Koliko košta Konty za restoran?",
@@ -1522,17 +1522,17 @@
             "title": "Upravljanje stolovima"
           },
           "feat2": {
-            "description": "Prikaz porudžbina u realnom vremenu sa tajmerima, praćenjem konobara i statusom završetka",
+            "description": "Prikaz i upravljanje porudžbinama u kuhinji u realnom vremenu sa tajmerima, statusima i obavještavanjem konobara",
             "icon": "i-heroicons-fire",
-            "title": "Kitchen Display sistem"
+            "title": "Kuhinjski displej"
           },
           "feat3": {
-            "description": "Podela računa po gostu (G0-G3), prenos stolova i predaja između konobara bez problema",
+            "description": "Podela računa po gostu, prenos stolova i predaja između konobara bez problema",
             "icon": "i-heroicons-arrows-right-left",
             "title": "Operacije sa stolovima"
           },
           "feat4": {
-            "description": "Više načina plaćanja - gotovina, kartica, ček, vaučer i račun za fleksibilnu naplatu",
+            "description": "Različiti načina plaćanja za naplatu po želji gosta",
             "icon": "i-heroicons-credit-card",
             "title": "Fleksibilna plaćanja"
           },
@@ -1550,7 +1550,7 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Stolovi, kitchen display, deljenje računa i offline režim. Jednostavan, pouzdan i spreman za najgušće večeri bez ikakvog problema.",
+          "subtitle": "Stolovi, kuhinjski displej, deljenje računa i offline režim. Jednostavan, pouzdan i spreman za najveće gužve.",
           "title": "Restoranski POS na koji možete računati"
         },
         "overview": {
@@ -1563,12 +1563,12 @@
         "faq": {
           "a1": "Naravno. Kompletno upravljanje smjenama sa funkcijama otvaranja/zatvaranja smjene, PIN prijavom korisnika, upravljanjem kasom, praćenjem uplata i isplata i detaljnim izvještajima po smjeni. Svaki zaposleni se prijavljuje sa svojim PIN-om. Pratite radno vrijeme, predaju smjena i održavajte potpunu odgovornost.",
           "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izvještaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
-          "a3": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primjenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine, duvan i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
+          "a3": "Da! Konty podržava kombinovanje više načina plaćanja u jednoj transakciji. Kupci mogu kombinovati gotovinu, karticu, vaučere, čekove, bankovne transfere i druge vrste plaćanja. Sistem automatski izračunava preostali iznos i prikazuje detaljan raspored plaćanja na računu, pružajući vam i vašim kupcima potpunu fleksibilnost pri naplati.",
           "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smjenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
           "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smjena, upravljanje korisnicima, raznovrsne kategorije proizvoda, više poreskih stopa i potpuni offline režim. Probajte besplatno 30 dana.",
           "q1": "Može li Konty da upravlja sa više smjena i zaposlenih?",
           "q2": "Da li prati zalihe raznovrsnih proizvoda?",
-          "q3": "Kako se bavi različitim poreskim stopama po kategorijama?",
+          "q3": "Mogu li kupci platiti koristeći više načina plaćanja?",
           "q4": "Da li radi offline kada nestane internet?",
           "q5": "Koliko košta Konty za prodavnicu mješovite robe?",
           "subtitle": "Najčešća pitanja o Konty-ju za prodavnice mješovite robe",
@@ -1593,9 +1593,9 @@
             "title": "Kontrola pristupa"
           },
           "feat4": {
-            "description": "Podrška za više poreskih stopa kroz različite kategorije proizvoda sa automatskom kalkulacijom",
-            "icon": "i-heroicons-calculator",
-            "title": "Upravljanje porezima"
+            "description": "Prihvatajte više vrsta plaćanja u jednoj transakciji. Kombinujte načine plaćanja za maksimalnu fleksibilnost.",
+            "icon": "i-heroicons-credit-card",
+            "title": "Fleksibilni načini plaćanja"
           },
           "feat5": {
             "description": "Organizujte raznovrstan asortiman sa kategorijama artikala i fleksibilnim upravljanjem zalihama",
@@ -1611,12 +1611,12 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smjenama. Sve što vam treba za prodavnicu mješovite robe—jednostavno i pouzdano.",
+          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smjenama. Sve što vam treba za prodavnicu mješovite robe - jednostavno i pouzdano.",
           "title": "Upravljanje prodavnicom mješovite robe bez komplikacija"
         },
         "overview": {
           "description": "Pouzdan sistem za prodavnice mješovite robe sa raznovrsnim proizvodima",
-          "image": "/images/solutions/convenience-stores.avif",
+          "image": "/images/solutions/general-stores.avif",
           "title": "Savršeno za prodavnice mješovite robe"
         }
       }
@@ -1912,7 +1912,7 @@
       },
       "categories": {
         "b2b": "B2B prodaja i E-fakture",
-        "b2bDesc": "Profesionalna rješenja za veleprodaju i B2B saradnju.",
+        "b2bDesc": "Profesionalna rješenja za veleprodaju i B2B poslovanje.",
         "barsCafes": "Barovi i kafići",
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mjesta sa velikim prometom.",
         "clothingBoutiques": "Prodavnice odjeće",
