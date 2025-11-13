@@ -1165,7 +1165,7 @@
           "a2": "Absolutely. Generate proforma invoices, advance payment receipts, and sales receipts with full buyer details. System supports fiscal receipt printing with complete buyer information including TIN for regulatory compliance. Export receipts to PDF and A4 format for professional documentation.",
           "a3": "Complete client transaction tracking with automatic balance calculation. View all transactions per client including sales receipts, manual transactions, and bank statements. Track receivables, add manual payments (FROM/TO client), and print detailed transaction reports with date filtering.",
           "a4": "Comprehensive sales reports by buyer, including total sales, transaction history, and detailed item breakdown. Advanced search and filtering by date range, payment method, and buyer. Export all reports to Excel for further analysis and forecasting.",
-          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include client management, proforma invoicing, transaction tracking, and comprehensive reporting. Try free for 30 days.",
+          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include proforma invoicing, transaction tracking, unlimited products, and offline mode. Higher tiers add advanced features like client management and detailed customer analytics. Try free for 30 days.",
           "q1": "Can Konty manage detailed client profiles for B2B partners?",
           "q2": "Does it support proforma invoices and advance payments?",
           "q3": "How does client transaction tracking work?",
@@ -1226,7 +1226,7 @@
           "a2": "Yes, comprehensive inventory tracking for all items including beverages, ingredients, and bar stock. Track stock levels in real-time, monitor inventory movements with delivery in/out notes, write-offs for waste tracking, and get complete stock reports. Full visibility into your inventory.",
           "a3": "Complete shift management with open/close shift functionality, cash register management, deposit and withdrawal tracking, and detailed shift reports. Each bartender/server logs in with their PIN, and all transactions are tracked by user. Easy shift handover with full accountability.",
           "a4": "Konty works completely offline with full functionality. Process orders, manage tables, accept payments, and track inventory without internet. When connection returns, everything automatically syncs to the cloud. Your bar never stops operating during internet issues.",
-          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include quick order entry, inventory tracking, shift management, table management, and offline mode. Try free for 30 days during your busiest shifts.",
+          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include quick order entry, inventory tracking, shift management, offline mode, and unlimited users. Higher tiers add advanced features like table management and Kitchen Display System. Try free for 30 days during your busiest shifts.",
           "q1": "How does Konty handle high volume during rush hours?",
           "q2": "Does it track beverage and bar inventory?",
           "q3": "How does shift management work for multiple bartenders?",
@@ -1297,7 +1297,7 @@
           "a2": "Organize products using item categories for collections and seasons. Track inventory turnover with stock reports, identify slow-moving items, and use price levelings to manage seasonal markdowns. Category-based organization makes it easy to manage seasonal collections.",
           "a3": "Absolutely. Complete client profiles with purchase history tracking through sales by buyer reports. View every transaction per customer, track their spending patterns, and build detailed customer profiles for personalized service and targeted promotions.",
           "a4": "Yes, proforma invoice functionality allows creating quotes and reservations. Track advance payments for layaway plans and use the advance payment chain to manage partial payments until final purchase. Complete layaway management with payment tracking.",
-          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include unlimited items/variants, client management, purchase history tracking, proforma invoices, and inventory management. Try free for 30 days with your full inventory.",
+          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include unlimited items/variants, inventory tracking, proforma invoices, and offline mode. Higher tiers add advanced features like client management, purchase history, and detailed analytics. Try free for 30 days with your full inventory.",
           "q1": "Can Konty track inventory by sizes and colors?",
           "q2": "How does it handle seasonal collections and markdowns?",
           "q3": "Can I track customer purchase history and preferences?",
@@ -1374,12 +1374,12 @@
         "faq": {
           "a1": "Yes, fast order creation with quick item entry via button grid, item groups, and favorites. Kitchen Display System shows all orders in real-time with order timers and priority management. Perfect for managing counter orders, takeout, and high-volume quick service.",
           "a2": "Absolutely. Kitchen Display System shows orders in real-time with timer tracking, color-coded warnings (yellow/red based on time), and completion status. Track each order from entry to fulfillment with waiter/user name, order time, and detailed item breakdown. Customize alerts and viewing options.",
-          "a3": "Yes, flexible item management allows creating combos and meal sets. Use item categories and groups to organize menu items logically. Track sales by item and category to identify your best-selling combos and optimize menu performance.",
+          "a3": "Yes. Item modifiers enable precise recording of all special requests - no tomato, extra sauce, well done, no cheese. Every note goes directly to the kitchen display and tickets. No communication errors, no food waste, no unhappy customers.",
           "a4": "Konty works completely offline with full POS functionality. Process all orders, manage kitchen display, and accept payments without internet. When connection returns, everything automatically syncs. Your quick service operation never stops, even during internet outages.",
-          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include fast order entry, Kitchen Display System, order tracking, offline mode, and unlimited users. Try free for 30 days during your busiest dayparts.",
+          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include fast order entry, item modifiers, offline mode, and unlimited users. Higher tiers add advanced features like Kitchen Display System and performance tracking. Try free for 30 days during your busiest dayparts.",
           "q1": "How does Konty manage fast-paced orders?",
           "q2": "Can I track order preparation time and speed?",
-          "q3": "Does it support combo meals and menu sets?",
+          "q3": "Can I add special customer requests to orders?",
           "q4": "Does it work offline during internet outages?",
           "q5": "How much does Konty cost for a fast food restaurant?",
           "subtitle": "Most common questions about Konty for fast food and quick service",
@@ -1404,9 +1404,9 @@
             "title": "Menu Organization"
           },
           "feat4": {
-            "description": "Track orders by time period, staff member, and item for performance optimization",
-            "icon": "i-heroicons-clock",
-            "title": "Order Tracking"
+            "description": "Add customer special requests - no onions, extra ketchup, well done. Clear notes to kitchen, happy guests",
+            "icon": "i-heroicons-adjustments-horizontal",
+            "title": "Item Modifiers"
           },
           "feat5": {
             "description": "Multiple payment methods with instant processing for fast customer turnover",
@@ -1437,7 +1437,7 @@
           "a2": "Yes, full barcode scanning support and Export for Scale functionality specifically for grocery retail. Supports barcode input via code entry or scanning devices. Scale export feature enables integration with weighted product systems for fresh produce and deli items.",
           "a3": "Comprehensive inventory tracking with real-time stock levels, delivery in/out notes, beginning inventories, price calculations, write-offs for waste management, and stock reports with advanced filtering. Complete visibility and control over your inventory.",
           "a4": "Yes, support for multiple tax rates per item. System automatically applies correct tax rates based on item category. Manage different tax rates for food, household items, and other product categories with automatic calculation and regulatory compliance.",
-          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include unlimited products, barcode scanning, scale export, inventory tracking, multiple tax rates, and offline mode. Try free for 30 days with your full product catalog.",
+          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include unlimited products, barcode scanning, inventory tracking, multiple tax rates, and offline mode. Higher tiers add advanced features like scale export and detailed analytics. Try free for 30 days with your full product catalog.",
           "q1": "Can Konty efficiently manage thousands of products?",
           "q2": "Does it support barcode scanning and scales?",
           "q3": "How does inventory tracking work?",
@@ -1504,7 +1504,7 @@
           "a2": "Absolutely. Full-featured Kitchen Display System shows orders in real-time with waiter name, table number, order time, and item details. Color-coded timer warnings, order completion tracking (full or partial), recall functionality, and \"All Day\" view for complete kitchen visibility. Customizable tickets per page and font sizes.",
           "a3": "Yes, flexible split bill functionality with G0-G3 sections allows splitting by seat, item, or custom amounts. Assign different items to different guests and process multiple payments for one table. Perfect for groups who want to pay separately.",
           "a4": "Konty works fully offline with complete functionality. All table management, orders, and payments process locally without internet. When connection restores, everything automatically syncs. Your restaurant never stops operating, even during internet outages.",
-          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include table management, Kitchen Display System, split bills, offline mode, and unlimited users. Try free for 30 days during regular service.",
+          "a5": "Plans start at $29/month and go up to $59/month with no setup costs or contracts. All plans include table management, split bills, offline mode, and unlimited users. Higher tiers add advanced features like Kitchen Display System and order segmentation. Try free for 30 days during regular service.",
           "q1": "Does Konty have table management with visual floor plans?",
           "q2": "How does the Kitchen Display System work?",
           "q3": "Can tables split bills for groups paying separately?",
@@ -1532,9 +1532,9 @@
             "title": "Table Operations"
           },
           "feat4": {
-            "description": "Multiple payment methods including cash, card, check, voucher, and account for flexible checkout",
-            "icon": "i-heroicons-credit-card",
-            "title": "Flexible Payments"
+            "description": "Organize meals by course - drinks, appetizers, mains, desserts. Kitchen prepares in sequence, guests enjoy professional service",
+            "icon": "i-heroicons-bars-3-bottom-left",
+            "title": "Order Segmentation"
           },
           "feat5": {
             "description": "Track sales by waiter, table, sector, and time period with detailed performance analytics",
@@ -1565,7 +1565,7 @@
           "a2": "Yes, comprehensive inventory tracking for all items with real-time stock levels, delivery in/out notes, beginning inventories, write-offs for waste management, and complete stock reports. Full visibility and control over your diverse product range.",
           "a3": "Yes! Konty supports split payments across multiple methods in a single transaction. Customers can combine cash, card, vouchers, checks, bank transfers, and other payment types. The system automatically calculates remaining balances and provides detailed payment breakdowns on receipts, giving you and your customers complete flexibility at checkout.",
           "a4": "Konty works completely offline with full functionality. Process sales, manage shifts, accept payments, and track inventory without internet. When connection returns, everything automatically syncs. Your store keeps running smoothly regardless of connection issues.",
-          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include multi-shift support, user management, diverse product categories, multiple tax rates, and complete offline mode. Try free for 30 days.",
+          "a5": "Plans start at $15/month and go up to $29/month. No setup costs or contracts. All plans include multi-shift support, inventory tracking, multiple tax rates, offline mode, and unlimited products. Higher tiers add advanced features like supplier management and detailed analytics. Try free for 30 days.",
           "q1": "Can Konty manage multiple shifts and employees?",
           "q2": "Does it track diverse product inventory?",
           "q3": "Can customers pay using multiple payment methods?",
@@ -1598,9 +1598,9 @@
             "title": "Flexible Payment Methods"
           },
           "feat5": {
-            "description": "Organize diverse product mix with item categories and flexible inventory management",
-            "icon": "i-heroicons-squares-plus",
-            "title": "Product Categories"
+            "description": "Track suppliers with contact details, incoming invoices, and purchases for organized supply management",
+            "icon": "i-heroicons-truck",
+            "title": "Supplier Management"
           },
           "feat6": {
             "description": "Full functionality offline - shifts, sales, and payments work without internet connection",
