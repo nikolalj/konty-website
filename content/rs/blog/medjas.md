@@ -43,9 +43,9 @@ Konty ima i **brze tastere**, što prodavcima olakšava posao - naročito u guž
 Magacin sada konačno ima smisla - vide prijemnice, potrošnju, analizu prometa i stanje u svakom trenutku.
 Ranije bi otkrili manjak tek kad naprave inventuru, a sada ih program sam upozori ako nešto odstupa.
 
-## Finansije i e-fakture - bez papirologije
+## Finansije i E-Fakture - bez papirologije
 
-Ranije su fakture slali ručno, a sada sve ide automatski kroz **e-fakture**.
+Ranije su fakture slali ručno, a sada sve ide automatski kroz **E-Fakture**.
 Konty vodi i **kartice komitenata**, pa tačno znaju ko je uplatio, ko duguje, i kako stoje njihove obaveze prema dobavljačima.
 Bankovni izvodi se učitavaju direktno u sistem - što tim i knjigovodstvu štedi neverovatno mnogo vremena.
 

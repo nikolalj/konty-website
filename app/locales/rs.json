@@ -1211,8 +1211,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Automatsko slanje E-faktura kroz SEF sistem, potpuna usklađenost sa propisima uz upravljanje partnerima i kompletno praćenje transakcija.",
-          "title": "Konty E-fakture, B2B i veleprodaja | Usklađeno sa SEF sistemom"
+          "subtitle": "Automatsko slanje E-Faktura kroz SEF sistem, potpuna usklađenost sa propisima uz upravljanje partnerima i kompletno praćenje transakcija.",
+          "title": "Konty E-Fakture, B2B i veleprodaja | Usklađeno sa SEF sistemom"
         },
         "overview": {
           "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
@@ -1644,7 +1644,7 @@
       "title": "Zakazivanje demo prezentacije - Konty POS"
     },
     "home": {
-      "description": "Pouzdane fiskalne kase sa E-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
+      "description": "Pouzdane fiskalne kase sa E-Fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
       "title": "Konty - POS za ugostiteljstvo i trgovinu"
     },
     "partners": {
@@ -1689,8 +1689,8 @@
     },
     "solutions": {
       "b2b": {
-        "description": "Profesionalno B2B rešenje sa E-fakturama. Različite cene po partneru i napredni izveštaji.",
-        "title": "Konty E-fakture za B2B i veleprodaju"
+        "description": "Profesionalno B2B rešenje sa E-Fakturama. Različite cene po partneru i napredni izveštaji.",
+        "title": "Konty E-Fakture za B2B i veleprodaju"
       },
       "barsCafes": {
         "description": "POS sistem optimizovan za brzinu. Idealan za barove i kafiće sa velikim prometom.",
@@ -1730,7 +1730,7 @@
       "switchTo": "Vidi lokalnu verziju"
     },
     "breadcrumb": {
-      "b2b": "B2B i veleprodaja (E-fakture)",
+      "b2b": "B2B i veleprodaja (E-Fakture)",
       "bars-cafes": "Barovi i kafići",
       "blog": "Blog",
       "client-stories": "Iskustva klijenata",
@@ -1911,8 +1911,8 @@
         "partners": "Partneri"
       },
       "categories": {
-        "b2b": "B2B i veleprodaja (E-fakture)",
-        "b2bDesc": "Profesionalna rešenja za veleprodaju i B2B poslovanje integrisana sa sistemom E-faktura.",
+        "b2b": "B2B i veleprodaja (E-Fakture)",
+        "b2bDesc": "Profesionalna rešenja za veleprodaju i B2B poslovanje integrisana sa sistemom E-Faktura.",
         "barsCafes": "Barovi i kafići",
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mesta sa velikim prometom.",
         "clothingBoutiques": "Prodavnice odeće",

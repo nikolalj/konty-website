@@ -1211,7 +1211,7 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Reliable client management, professional invoicing, and complete transaction tracking. Everything you need for wholesale operations—nothing you don't.",
+          "subtitle": "Reliable client management, professional invoicing, and complete transaction tracking. Everything you need for wholesale operations, nothing you don't.",
           "title": "B2B Sales That Simply Work"
         },
         "overview": {
@@ -1611,7 +1611,7 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Fast checkout, complete inventory control, and seamless shift management. Everything you need to run a general store—simple and reliable.",
+          "subtitle": "Fast checkout, complete inventory control, and seamless shift management. Everything you need to run a general store-simple and reliable.",
           "title": "General Store Management Made Simple"
         },
         "overview": {
@@ -1689,8 +1689,8 @@
     },
     "solutions": {
       "b2b": {
-        "description": "Professional B2B solution with e-invoicing. Different pricing per partner and advanced reports.",
-        "title": "B2B POS & E-Invoicing | Wholesale Management System"
+        "description": "Professional B2B solution. Different pricing per partner and advanced reports.",
+        "title": "B2B POS & Wholesale Management System"
       },
       "barsCafes": {
         "description": "Speed-optimized POS system. Perfect for bars and cafes with high-volume traffic.",
@@ -1730,7 +1730,7 @@
       "switchTo": "View local version"
     },
     "breadcrumb": {
-      "b2b": "B2B Sales & E-Invoicing",
+      "b2b": "B2B & Wholesale",
       "bars-cafes": "Bars & Cafes",
       "blog": "Blog",
       "client-stories": "Client stories",
@@ -1911,7 +1911,7 @@
         "partners": "Partners"
       },
       "categories": {
-        "b2b": "B2B Sales & E-Invoicing",
+        "b2b": "B2B & Wholesale",
         "b2bDesc": "Professional solutions for wholesale and B2B partnerships.",
         "barsCafes": "Bars & Cafes",
         "barsCafesDesc": "Fast checkout and inventory management for high-traffic venues.",
