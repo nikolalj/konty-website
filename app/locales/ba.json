@@ -1161,15 +1161,15 @@
     "solutions": {
       "b2b": {
         "faq": {
-          "a1": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima - naziv firme, PIB, adresa, kontakt podaci i žiro račun. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
-          "a2": "Naravno. Kreirajte profakture, avansne račune i fiskalne račune sa kompletnim podacima kupca. Sistem podržava štampanje fiskalnih računa sa svim informacijama o kupcu uključujući PIB za usklađenost sa zakonskim zahtevima. Izvoz računa u PDF i A4 format.",
-          "a3": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte sve transakcije - fiskalne račune, ručne transakcije i bankovne izvode. Pratite potraživanja, dodajte ručna plaćanja (OD/ZA partnera) i štampajte detaljne izveštaje sa filterima po datumu.",
-          "a4": "Sveobuhvatni izveštaji prodaje po kupcu sa ukupnom prodajom, istorijom transakcija i detaljnim prikazom stavki. Napredna pretraga i filtriranje po periodu, načinu plaćanja i kupcu. Izvoz svih izveštaja u Excel za dalju analizu i planiranje.",
-          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju profakture, praćenje transakcija, neograničen broj artikala i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
-          "q1": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
-          "q2": "Da li podržava profakture i avansna plaćanja?",
-          "q3": "Kako funkcioniše praćenje transakcija sa partnerima?",
-          "q4": "Koji B2B izveštaji su dostupni?",
+          "a1": "Da, potpuno. Konty je u potpunosti integrisan sa državnim Sistem E-Faktura (SEF) koji je obavezan za sve B2B transakcije od 1. januara 2023. godine. Sistem automatski generiše račune u propisanom UBL 2.1 XML formatu, uključuje PIB i sve potrebne podatke, i šalje ih direktno kroz SEF platformu. Potpuna usklađenost sa propisima bez dodatnog rada - izbegnite kazne do 2.000.000 RSD. Sistem čuva račune 10 godina kako zakon nalaže i automatski priprema podatke za PDV prijave.",
+          "a2": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima - naziv firme, PIB, adresa, kontakt podaci i žiro račun. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
+          "a3": "Naravno. Kreirajte profakture, avansne račune i fiskalne račune sa kompletnim podacima kupca. Sistem podržava štampanje fiskalnih računa sa svim informacijama o kupcu uključujući PIB za usklađenost sa zakonskim zahtevima. Izvoz računa u PDF i A4 format.",
+          "a4": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte sve transakcije - fiskalne račune, ručne transakcije i bankovne izvode. Pratite potraživanja, dodajte ručna plaćanja (OD/ZA partnera) i štampajte detaljne izveštaje sa filterima po datumu.",
+          "a5": "Paketi počinju od 12€ mjesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj artikala i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
+          "q1": "Da li je Konty usklađen sa obaveznim Sistem E-Faktura (SEF)?",
+          "q2": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
+          "q3": "Da li podržava profakture i avansna plaćanja?",
+          "q4": "Kako funkcioniše praćenje transakcija sa partnerima?",
           "q5": "Koliko košta Konty za veleprodaju?",
           "subtitle": "Najčešća pitanja o Konty-ju za veleprodaju i B2B poslovanje",
           "title": "Često postavljana pitanja"

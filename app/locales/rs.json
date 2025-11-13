@@ -1161,16 +1161,16 @@
     "solutions": {
       "b2b": {
         "faq": {
-          "a1": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima - naziv firme, PIB, adresa, kontakt podaci i žiro račun. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
-          "a2": "Naravno. Kreirajte profakture, avansne račune i fiskalne račune sa kompletnim podacima kupca. Sistem podržava štampanje fiskalnih računa sa svim informacijama o kupcu uključujući PIB za usklađenost sa zakonskim zahtevima. Izvoz računa u PDF i A4 format.",
-          "a3": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte sve transakcije - fiskalne račune, ručne transakcije i bankovne izvode. Pratite potraživanja, dodajte ručna plaćanja (OD/ZA partnera) i štampajte detaljne izveštaje sa filterima po datumu.",
-          "a4": "Sveobuhvatni izveštaji prodaje po kupcu sa ukupnom prodajom, istorijom transakcija i detaljnim prikazom stavki. Napredna pretraga i filtriranje po periodu, načinu plaćanja i kupcu. Izvoz svih izveštaja u Excel za dalju analizu i planiranje.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
-          "q1": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
-          "q2": "Da li podržava profakture i avansna plaćanja?",
-          "q3": "Kako funkcioniše praćenje transakcija sa partnerima?",
-          "q4": "Koji B2B izveštaji su dostupni?",
-          "q5": "Koliko košta Konty za veleprodaju?",
+          "a1": "Da, potpuno. Konty je u potpunosti integrisan sa državnim sistemom E-Faktura (SEF) koji je obavezan za sve B2B transakcije. Sistem automatski generiše račune u propisanom formatu, uključuje PIB i sve potrebne podatke, i šalje ih direktno kroz SEF platformu. Potpuna usklađenost sa propisima bez dodatnog rada sa vaše strane.",
+          "a2": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
+          "a3": "Naravno. Kreirajte profakture, avansne račune i E-Fakture sa kompletnim podacima kupca. Izvoz računa u PDF i slanje mejlom.",
+          "a4": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte karticu kupca, pratite sve fakture, uplate, isplate i bankovne izvode. Pratite potraživanja i štampajte detaljne izveštaje.",
+          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
+          "q1": "Da li je Konty usklađen sa obaveznim Sistem E-Faktura (SEF)?",
+          "q2": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
+          "q3": "Da li podržava profakture i avansna plaćanja?",
+          "q4": "Kako funkcioniše praćenje transakcija sa partnerima?",
+          "q5": "Koliko košta Konty za B2B i veleprodaju?",
           "subtitle": "Najčešća pitanja o Konty-ju za veleprodaju i B2B poslovanje",
           "title": "Često postavljana pitanja"
         },
@@ -1183,7 +1183,7 @@
             "title": "Upravljanje partnerima"
           },
           "feat2": {
-            "description": "Kreiranje profaktura i avansnih računa sa kompletnim podacima kupca",
+            "description": "Kreiranje E-Faktura, profaktura i avansnih računa sa kompletnim podacima kupca",
             "icon": "i-heroicons-document-check",
             "title": "Profesionalno fakturisanje"
           },
@@ -1207,12 +1207,12 @@
             "icon": "i-heroicons-chart-bar-square",
             "title": "B2B izveštaji"
           },
-          "title": "Profesionalni B2B alati"
+          "title": "E-Faktura + Profesionalni B2B alati"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za veleprodaju - ništa više, ništa manje.",
-          "title": "B2B prodaja koja jednostavno radi"
+          "subtitle": "Automatsko slanje E-faktura kroz SEF sistem, potpuna usklađenost sa propisima uz upravljanje partnerima i kompletno praćenje transakcija.",
+          "title": "Konty E-fakture, B2B i veleprodaja | Usklađeno sa SEF sistemom"
         },
         "overview": {
           "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
@@ -1644,7 +1644,7 @@
       "title": "Zakazivanje demo prezentacije - Konty POS"
     },
     "home": {
-      "description": "Pouzdane fiskalne kase sa e-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
+      "description": "Pouzdane fiskalne kase sa E-fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
       "title": "Konty - POS za ugostiteljstvo i trgovinu"
     },
     "partners": {
@@ -1689,8 +1689,8 @@
     },
     "solutions": {
       "b2b": {
-        "description": "Profesionalno B2B rešenje sa e-fakturisanjem. Različite cene po partneru i napredni izveštaji.",
-        "title": "Konty B2B i E-fakture | POS za veleprodaju"
+        "description": "Profesionalno B2B rešenje sa E-fakturama. Različite cene po partneru i napredni izveštaji.",
+        "title": "Konty E-fakture za B2B i veleprodaju"
       },
       "barsCafes": {
         "description": "POS sistem optimizovan za brzinu. Idealan za barove i kafiće sa velikim prometom.",
@@ -1730,7 +1730,7 @@
       "switchTo": "Vidi lokalnu verziju"
     },
     "breadcrumb": {
-      "b2b": "B2B prodaja i E-fakture",
+      "b2b": "B2B i veleprodaja (E-fakture)",
       "bars-cafes": "Barovi i kafići",
       "blog": "Blog",
       "client-stories": "Iskustva klijenata",
@@ -1911,8 +1911,8 @@
         "partners": "Partneri"
       },
       "categories": {
-        "b2b": "B2B prodaja i E-fakture",
-        "b2bDesc": "Profesionalna rešenja za veleprodaju i B2B poslovanje.",
+        "b2b": "B2B i veleprodaja (E-fakture)",
+        "b2bDesc": "Profesionalna rešenja za veleprodaju i B2B poslovanje integrisana sa sistemom E-faktura.",
         "barsCafes": "Barovi i kafići",
         "barsCafesDesc": "Brza naplata i upravljanje zalihama za mesta sa velikim prometom.",
         "clothingBoutiques": "Prodavnice odeće",
