@@ -1804,17 +1804,9 @@
     "footer": {
       "about": {
         "blog": "Blog",
-        "careers": "Karijere",
-        "clients": "Klijenti",
-        "contact": "Kontakt",
-        "partners": "Partneri",
         "title": "O nama"
       },
       "hospitalitySolutions": {
-        "bars": "Barovi",
-        "cafes": "Kafići",
-        "pizzerias": "Picerije",
-        "restaurants": "Restorani",
         "title": "Rešenja za ugostiteljstvo"
       },
       "links": {
@@ -1834,11 +1826,7 @@
         "title": "Prijavi se na newsletter"
       },
       "retailSolutions": {
-        "clothing": "Prodavnice odeće",
-        "grocery": "Prodavnice hrane",
-        "supermarkets": "Supermarketi",
-        "title": "Rešenja za trgovinu",
-        "general": "Prodavnice mešovite robe"
+        "title": "Rešenja za trgovinu"
       }
     },
     "forms": {

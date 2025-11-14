@@ -4,8 +4,18 @@
       <UContainer>
         <!-- Desktop: Grid Layout -->
         <div class="hidden md:grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div v-for="column in columns" :key="column.label" class="space-y-3">
-            <h3 class="font-semibold text-sm text-gray-900 dark:text-white">
+          <div v-for="(column, index) in columns" :key="column.label" class="space-y-3">
+            <!-- Logo for first column instead of label -->
+            <NuxtLink v-if="index === 0" :to="localePath('/')" class="inline-block mb-3 ml-3 sm:ml-0">
+              <UColorModeImage
+                light="/images/branding/logo-full-horizontal-light.svg"
+                dark="/images/branding/logo-full-horizontal-dark.svg"
+                width="140"
+                height="23"
+                alt="Konty logo"
+              />
+            </NuxtLink>
+            <h3 v-if="index !== 0" class="font-semibold text-sm text-gray-900 dark:text-white">
               {{ column.label }}
             </h3>
             <ul class="space-y-2">
@@ -22,7 +32,19 @@
         </div>
 
         <!-- Mobile: Accordion Layout -->
-        <div v-if="mobileLayout === 'accordion'" class="md:hidden space-y-2">
+        <div v-if="mobileLayout === 'accordion'" class="md:hidden space-y-4">
+          <!-- Logo for Mobile -->
+          <div class="mb-4 ml-3 md:ml-0 mt-3 md:mt-0">
+            <NuxtLink :to="localePath('/')" class="inline-block">
+              <UColorModeImage
+                light="/images/branding/logo-full-horizontal-light.svg"
+                dark="/images/branding/logo-full-horizontal-dark.svg"
+                width="140"
+                height="23"
+                alt="Konty logo"
+              />
+            </NuxtLink>
+          </div>
           <div
             v-for="(column, index) in columns"
             :key="column.label"
@@ -70,6 +92,18 @@
 
         <!-- Mobile: List Layout -->
         <div v-else class="md:hidden space-y-6">
+          <!-- Logo for Mobile -->
+          <div class="mb-4 ml-3 sm:ml-0">
+            <NuxtLink :to="localePath('/')" class="inline-block">
+              <UColorModeImage
+                light="/images/branding/logo-full-horizontal-light.svg"
+                dark="/images/branding/logo-full-horizontal-dark.svg"
+                width="140"
+                height="23"
+                alt="Konty logo"
+              />
+            </NuxtLink>
+          </div>
           <div v-for="column in columns" :key="column.label" class="space-y-3">
             <h3 class="font-semibold text-sm text-gray-900 dark:text-white">
               {{ column.label }}
@@ -236,20 +270,16 @@ const columns: FooterColumn[] = [
     label: t('ui.footer.hospitalitySolutions.title'),
     children: [
       {
-        label: t('ui.footer.hospitalitySolutions.restaurants'),
+        label: t('ui.navigation.categories.restaurants'),
         to: localePath('/solutions/restaurants')
       },
       {
-        label: t('ui.footer.hospitalitySolutions.cafes'),
+        label: t('ui.navigation.categories.barsCafes'),
         to: localePath('/solutions/bars-cafes')
       },
       {
-        label: t('ui.footer.hospitalitySolutions.bars'),
-        to: localePath('/solutions/bars-cafes')
-      },
-      {
-        label: t('ui.footer.hospitalitySolutions.pizzerias'),
-        to: localePath('/solutions/restaurants')
+        label: t('ui.navigation.categories.fastFood'),
+        to: localePath('/solutions/fast-food')
       }
     ]
   },
@@ -257,33 +287,32 @@ const columns: FooterColumn[] = [
     label: t('ui.footer.retailSolutions.title'),
     children: [
       {
-        label: t('ui.footer.retailSolutions.grocery'),
+        label: t('ui.navigation.categories.grocerySupermarkets'),
         to: localePath('/solutions/grocery-supermarkets')
       },
       {
-        label: t('ui.footer.retailSolutions.supermarkets'),
-        to: localePath('/solutions/grocery-supermarkets')
-      },
-      {
-        label: t('ui.footer.retailSolutions.clothing'),
+        label: t('ui.navigation.categories.clothingBoutiques'),
         to: localePath('/solutions/clothing-boutiques')
       },
       {
-        label: t('ui.footer.retailSolutions.general'),
+        label: t('ui.navigation.categories.generalStores'),
         to: localePath('/solutions/general-stores')
+      },
+      {
+        label: t('ui.navigation.categories.b2b'),
+        to: localePath('/solutions/b2b')
       }
     ]
   },
   {
     label: t('ui.footer.about.title'),
     children: [
-      { label: t('ui.footer.about.contact'), to: localePath('/contact') },
+      { label: t('ui.navigation.about.contact'), to: localePath('/contact') },
       {
-        label: t('ui.footer.about.clients'),
+        label: t('ui.navigation.about.clientStories'),
         to: localePath('/client-stories')
       },
-      { label: t('ui.footer.about.partners'), to: localePath('/partners') },
-      { label: t('ui.footer.about.careers'), to: localePath('/contact') },
+      { label: t('ui.navigation.about.partners'), to: localePath('/partners') },
       { label: t('ui.footer.about.blog'), to: localePath('/blog') }
     ]
   }

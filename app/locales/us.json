@@ -1804,17 +1804,9 @@
     "footer": {
       "about": {
         "blog": "Blog",
-        "careers": "Careers",
-        "clients": "Clients",
-        "contact": "Contact",
-        "partners": "Partners",
         "title": "About"
       },
       "hospitalitySolutions": {
-        "bars": "Bars",
-        "cafes": "Cafes",
-        "pizzerias": "Pizzerias",
-        "restaurants": "Restaurants",
         "title": "Hospitality Solutions"
       },
       "links": {
@@ -1834,11 +1826,7 @@
         "title": "Subscribe to our newsletter"
       },
       "retailSolutions": {
-        "clothing": "Clothing Stores",
-        "grocery": "Grocery Stores",
-        "supermarkets": "Supermarkets",
-        "title": "Retail Solutions",
-        "general": "General Stores"
+        "title": "Retail Solutions"
       }
     },
     "forms": {
