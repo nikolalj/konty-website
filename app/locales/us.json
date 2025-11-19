@@ -8,13 +8,7 @@
         "region": "Belgrade",
         "street": "Trnska 7"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
         "weekdays": {
           "closes": "17:00",
@@ -758,20 +752,20 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a2": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your business never stops, even during internet outages-complete offline functionality built into the system.",
-            "a3": "Most businesses are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
-            "a4": "Yes, Konty works with most existing POS equipment including fiscal printers, kitchen printers, cash drawers, tablets, and kitchen display systems. We help you leverage existing equipment or recommend compatible and cost-effective upgrades if needed.",
-            "a5": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. New employees get up to speed faster, reducing training costs.",
-            "a6": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system-no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
-            "a7": "Of course. Create unlimited modifiers for allergies, preferences, and special requests-like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
-            "a8": "Yes, Konty supports splitting checks and separate payments. Supports multiple payment methods on one check-card, cash, etc. Handle any payment scenario with ease, keeping guests happy.",
-            "q2": "Does the system work without internet?",
-            "q3": "How long does the setup process take?",
-            "q4": "Can I keep my existing equipment?",
-            "q5": "What about staff training?",
-            "q6": "Does it integrate with delivery platforms?",
-            "q7": "Can I customize modifiers for menu items?",
-            "q8": "Does it support split checks and separate payments?",
+            "a1": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your business never stops, even during internet outages-complete offline functionality built into the system.",
+            "a2": "Most businesses are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
+            "a3": "Yes, Konty works with most existing POS equipment including fiscal printers, kitchen printers, cash drawers, tablets, and kitchen display systems. We help you leverage existing equipment or recommend compatible and cost-effective upgrades if needed.",
+            "a4": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. New employees get up to speed faster, reducing training costs.",
+            "a5": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system-no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
+            "a6": "Of course. Create unlimited modifiers for allergies, preferences, and special requests-like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
+            "a7": "Yes, Konty supports splitting checks and separate payments. Supports multiple payment methods on one check-card, cash, etc. Handle any payment scenario with ease, keeping guests happy.",
+            "q1": "Does the system work without internet?",
+            "q2": "How long does the setup process take?",
+            "q3": "Can I keep my existing equipment?",
+            "q4": "What about staff training?",
+            "q5": "Does it integrate with delivery platforms?",
+            "q6": "Can I customize modifiers for menu items?",
+            "q7": "Does it support split checks and separate payments?",
             "subtitle": "Most common questions about Konty hospitality features",
             "title": "Frequently Asked Questions"
           },
@@ -827,84 +821,68 @@
                 "text": "Bill splitting and transfer between tables"
               },
               "item5": {
-                "icon": "i-heroicons-calendar-days",
-                "text": "Reservation management integration"
-              },
-              "item6": {
-                "icon": "i-heroicons-adjustments-horizontal",
-                "text": "Modifier management (allergies, special requests)"
-              },
-              "item7": {
                 "icon": "i-heroicons-fire",
                 "text": "Course timing and kitchen coordination"
               },
               "title": "Complete Front-of-House Operations"
             },
             "group2": {
-              "description": "Powerful tools to manage recipes, purchasing, and stock with precision.",
+              "description": "Powerful tools for managing purchasing and inventory with precision.",
               "imageAlt": "Inventory and purchasing management",
-              "item1": {
-                "icon": "i-heroicons-calculator",
-                "text": "Recipe management with ingredient costing"
-              },
-              "item2": {
-                "icon": "i-heroicons-document-text",
-                "text": "Purchase order creation and tracking"
-              },
-              "item3": {
-                "icon": "i-heroicons-truck",
-                "text": "Vendor management with price comparison"
-              },
-              "item4": {
-                "icon": "i-heroicons-cube",
-                "text": "Inventory receiving and adjustments"
-              },
-              "item5": {
-                "icon": "i-heroicons-trash",
-                "text": "Waste tracking and analysis"
-              },
-              "item6": {
-                "icon": "i-heroicons-building-storefront",
-                "text": "Multi-location stock tracking"
-              },
-              "item7": {
-                "icon": "i-heroicons-exclamation-triangle",
-                "text": "Low-stock monitoring and tracking"
-              },
-              "title": "Back Office & Inventory Control"
-            },
-            "group3": {
-              "description": "Data-driven insights to optimize operations and grow your revenue.",
-              "imageAlt": "Analytics and reporting dashboard",
               "item1": {
                 "icon": "i-heroicons-chart-bar",
                 "text": "Sales analytics (by item, server, time, daypart)"
               },
               "item2": {
-                "icon": "i-heroicons-currency-dollar",
-                "text": "Labor cost tracking and optimization"
+                "icon": "i-heroicons-calculator",
+                "text": "Item and ingredient management and calculations"
               },
               "item3": {
-                "icon": "i-heroicons-light-bulb",
-                "text": "Menu engineering insights"
+                "icon": "i-heroicons-truck",
+                "text": "Vendor management, stock receiving and adjustments"
               },
               "item4": {
-                "icon": "i-heroicons-user-circle",
-                "text": "Customer frequency and preferences"
+                "icon": "i-heroicons-users",
+                "text": "Employee performance overview"
               },
               "item5": {
-                "icon": "i-heroicons-document-chart-bar",
-                "text": "P&L statements and margin analysis"
+                "icon": "i-heroicons-exclamation-triangle",
+                "text": "Minimum stock level tracking"
+              },
+              "title": "Inventory & Purchasing Management"
+            },
+            "group3": {
+              "description": "Connected to kitchen devices for efficient preparation and real-time order tracking.",
+              "imageAlt": "Kitchen Display System interface",
+              "item1": {
+                "icon": "i-heroicons-computer-desktop",
+                "text": "Visual order display on kitchen screens"
+              },
+              "item2": {
+                "icon": "i-heroicons-signal",
+                "text": "Automatic order routing from POS to KDS"
+              },
+              "item3": {
+                "icon": "i-heroicons-clock",
+                "text": "Preparation time tracking for each dish"
+              },
+              "item4": {
+                "icon": "i-heroicons-queue-list",
+                "text": "Multiple statuses: Received, In Progress, Ready"
+              },
+              "item5": {
+                "icon": "i-heroicons-check-circle",
+                "text": "Easy marking of completed orders"
               },
               "item6": {
-                "icon": "i-heroicons-document-check",
-                "text": "Tax compliance and fiscal integration"
+                "icon": "i-heroicons-exclamation-circle",
+                "text": "Priority display for urgent orders"
               },
               "item7": {
-                "icon": "i-heroicons-users",
-                "text": "Employee performance dashboards"
+                "icon": "i-heroicons-arrows-right-left",
+                "text": "Synchronization across multiple screens and stations"
               },
-              "title": "Intelligence & Growth Tools"
+              "title": "Kitchen Display System (KDS)"
             },
             "title": "Comprehensive Tools for Your Restaurant"
           },
@@ -960,20 +938,20 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a2": "Yes, Konty works with all standard barcode scanners including USB, Bluetooth, and mobile devices. Supports both regular barcodes and weighted barcodes for scales. Fast and accurate checkout every time.",
-            "a3": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships-all included in your plan at no extra cost.",
-            "a4": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data-no manual entry. Most migrations complete within 24 hours.",
-            "a5": "Simple one-click returns with automatic inventory adjustment. Process refunds, exchanges, and credit memos immediately. All return data is recorded for reporting and inventory management.",
-            "a6": "Yes, Konty is compatible with most existing POS hardware including fiscal printers, barcode scanners, cash drawers, customer displays, and tablets. Use what you already have or we can recommend affordable compatible options.",
-            "a7": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Complete visibility.",
-            "a8": "Yes, create multiple price lists for wholesale customers, VIP customers, or bulk buyers. Assign specific price tiers to different customer groups and Konty automatically applies the correct prices at checkout.",
-            "q2": "Does it support barcode scanning?",
-            "q3": "What about loyalty programs?",
-            "q4": "Can I import existing inventory?",
-            "q5": "How are returns handled?",
-            "q6": "Does it work with my existing hardware?",
-            "q7": "Can I track inventory in real-time across multiple locations?",
-            "q8": "Does it support different prices for different customer types?",
+            "a1": "Yes, Konty works with all standard barcode scanners including USB, Bluetooth, and mobile devices. Supports both regular barcodes and weighted barcodes for scales. Fast and accurate checkout every time.",
+            "a2": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships-all included in your plan at no extra cost.",
+            "a3": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data-no manual entry. Most migrations complete within 24 hours.",
+            "a4": "Simple one-click returns with automatic inventory adjustment. Process refunds, exchanges, and credit memos immediately. All return data is recorded for reporting and inventory management.",
+            "a5": "Yes, Konty is compatible with most existing POS hardware including fiscal printers, barcode scanners, cash drawers, customer displays, and tablets. Use what you already have or we can recommend affordable compatible options.",
+            "a6": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Complete visibility.",
+            "a7": "Yes, create multiple price lists for wholesale customers, VIP customers, or bulk buyers. Assign specific price tiers to different customer groups and Konty automatically applies the correct prices at checkout.",
+            "q1": "Does it support barcode scanning?",
+            "q2": "What about loyalty programs?",
+            "q3": "Can I import existing inventory?",
+            "q4": "How are returns handled?",
+            "q5": "Does it work with my existing hardware?",
+            "q6": "Can I track inventory in real-time across multiple locations?",
+            "q7": "Does it support different prices for different customer types?",
             "subtitle": "Most common questions about Konty retail features",
             "title": "Frequently Asked Questions"
           },
@@ -1016,10 +994,7 @@
                 "icon": "i-heroicons-qr-code",
                 "text": "Barcode scanner integration (standard & weight-based)"
               },
-              "item10": {
-                "icon": "i-heroicons-document-text",
-                "text": "Receipt customization and email receipts"
-              },
+
               "item2": {
                 "icon": "i-heroicons-squares-2x2",
                 "text": "Category button configuration for fast access"
@@ -1034,23 +1009,19 @@
               },
               "item5": {
                 "icon": "i-heroicons-user-circle",
-                "text": "Customer search and history"
+                "text": "Customer search by name, email, or phone number"
               },
               "item6": {
-                "icon": "i-heroicons-gift",
-                "text": "Loyalty program integration"
-              },
-              "item7": {
                 "icon": "i-heroicons-tag",
                 "text": "Discount and promotion management"
               },
-              "item8": {
+              "item7": {
                 "icon": "i-heroicons-credit-card",
                 "text": "Multiple payment types: credit, debit, cash, contactless"
               },
-              "item9": {
-                "icon": "i-heroicons-identification",
-                "text": "Age restriction prompts"
+              "item8": {
+                "icon": "i-heroicons-document-text",
+                "text": "Receipt customization and invoice printing"
               },
               "title": "High-Speed Point of Sale"
             },
@@ -1063,7 +1034,7 @@
               },
               "item2": {
                 "icon": "i-heroicons-swatch",
-                "text": "Product variants (size, color, etc.)"
+                "text": "Product variants and categories"
               },
               "item3": {
                 "icon": "i-heroicons-magnifying-glass",
@@ -1085,50 +1056,38 @@
                 "icon": "i-heroicons-document-text",
                 "text": "Purchase order management"
               },
-              "item8": {
-                "icon": "i-heroicons-truck",
-                "text": "Vendor price comparison"
-              },
-              "item9": {
-                "icon": "i-heroicons-chart-bar",
-                "text": "Seasonal inventory planning"
-              },
               "title": "Advanced Inventory Management"
             },
             "group3": {
-              "description": "Centralized control and insights across all your stores.",
+              "description": "Complete insights and control for all your stores in one place.",
               "imageAlt": "Multi-location analytics dashboard",
               "item1": {
-                "icon": "i-heroicons-squares-plus",
-                "text": "Centralized dashboard for location reporting"
+                "icon": "i-heroicons-eye",
+                "text": "Inventory visibility across all locations"
               },
               "item2": {
-                "icon": "i-heroicons-eye",
-                "text": "Unified inventory visibility across locations"
-              },
-              "item3": {
                 "icon": "i-heroicons-tag",
                 "text": "Location-specific pricing and promotions"
               },
-              "item4": {
+              "item3": {
                 "icon": "i-heroicons-document-chart-bar",
                 "text": "Consolidated reporting and analytics"
               },
-              "item5": {
-                "icon": "i-heroicons-chart-pie",
-                "text": "Best/worst performing products by location"
-              },
-              "item6": {
-                "icon": "i-heroicons-users",
-                "text": "Employee performance across stores"
-              },
-              "item7": {
-                "icon": "i-heroicons-user-group",
-                "text": "Customer behavior patterns"
-              },
-              "item8": {
+              "item4": {
                 "icon": "i-heroicons-document-check",
                 "text": "Integrated accounting and tax compliance"
+              },
+              "item5": {
+                "icon": "i-heroicons-clock",
+                "text": "Real-time sales tracking"
+              },
+              "item6": {
+                "icon": "i-heroicons-chart-pie",
+                "text": "Detailed reports for each location"
+              },
+              "item7": {
+                "icon": "i-heroicons-cube-transparent",
+                "text": "Product and price management for all locations"
               },
               "title": "Multi-Location & Analytics"
             },
@@ -1212,7 +1171,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Reliable client management, professional invoicing, and complete transaction tracking. Everything you need for wholesale operations, nothing you don't.",
-          "title": "B2B Sales That Simply Work"
+          "title": "Konty for B2B and e-invoicing"
         },
         "overview": {
           "description": "Complete solution for B2B sales and client management",
@@ -1272,8 +1231,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Fast order entry, complete inventory control, and seamless shift changes. Built for high-volume service when reliability matters most.",
-          "title": "Serve More, Stress Less"
+          "subtitle": "Fast order entry, complete inventory control, and simple shift handover. Built for high traffic when reliability matters most.",
+          "title": "Konty for bars and cafes"
         },
         "overview": {
           "description": "System designed for fast service and high traffic",
@@ -1343,8 +1302,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Track every variant, know your customers, manage layaway. Intuitive tools that let you focus on fashion, not technology.",
-          "title": "Boutique Management Made Simple"
+          "subtitle": "Complete sales and inventory management for clothing. Track product variants, manage seasonal discounts, and get real-time insights into top-selling items.",
+          "title": "Konty for clothing boutiques"
         },
         "overview": {
           "description": "Specialized for boutiques and clothing stores",
@@ -1423,7 +1382,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Real-time kitchen display and instant order processing that keeps pace with your busiest hours. Simple enough to train in minutes, reliable enough to count on all day.",
-          "title": "Speed Meets Reliability"
+          "title": "Konty for fast food"
         },
         "overview": {
           "description": "System designed for maximum speed and throughput",
@@ -1484,7 +1443,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Barcode scanning, scale integration, and complete inventory tracking. Reliable grocery retail management that handles the complexity so you don't have to.",
-          "title": "Manage Thousands of Products with Confidence"
+          "title": "Konty for grocery stores and supermarkets"
         },
         "overview": {
           "description": "Powerful system for managing large product catalogs",
@@ -1551,7 +1510,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Tables, kitchen display, split bills, and offline mode. Simple, reliable, and built to handle your busiest nights without missing a beat.",
-          "title": "Your Restaurant POS That Never Lets You Down"
+          "title": "Konty for restaurants"
         },
         "overview": {
           "description": "From table management to kitchen orders",
@@ -1611,8 +1570,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Fast checkout, complete inventory control, and seamless shift management. Everything you need to run a general store-simple and reliable.",
-          "title": "General Store Management Made Simple"
+          "subtitle": "Simple management of diverse assortment. Everything you need for a general store - simple and reliable.",
+          "title": "Konty for general stores"
         },
         "overview": {
           "description": "Reliable system for general stores with diverse products",

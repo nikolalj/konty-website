@@ -7,7 +7,7 @@
       <UIAppear direction="up">
         <div class="max-w-4xl mx-auto">
           <ULink
-            to="https://https://docs.konty.com"
+            to="https://docs.konty.com"
             target="_blank"
             class="group block rounded-xl border border-primary/10 hover:border-primary/40 bg-primary/3 hover:bg-primary/8 transition-all duration-200"
           >
@@ -76,7 +76,5 @@ usePageSeo({
 })
 
 // Use FAQ schema
-useSchemaOrg([
-  schemas.faqSchema(useFaqSchema('pages.products.faqdocs.faq'))
-])
+useSchemaOrg([schemas.faqSchema(useFaqSchema('pages.products.faqdocs.faq'))])
 </script>
