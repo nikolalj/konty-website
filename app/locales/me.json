@@ -8,13 +8,7 @@
         "region": "Podgorica",
         "street": "Moskovska 153"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
         "weekdays": {
           "closes": "17:00",
@@ -758,20 +752,20 @@
         "features": {
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "faq": {
-            "a2": "Da, Konty radi besprijekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaše poslovanje nikada ne prestaje, čak ni tokom prekida interneta-potpuna offline funkcionalnost ugrađena u sistem.",
-            "a3": "Većina lokala je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
-            "a4": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kuhinjski displeje. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
-            "a5": "Naš intuitivan interfejs zahtijeva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Pružamo obuku na licu mjesta tokom podešavanja i materijale za kontinuiranu podršku. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
-            "a6": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbe sa delivery aplikacija dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa i propuštenih narudžbi. Jedan sistem za sve: jelo u lokalu, ponijeti i dostavu.",
-            "a7": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahtjeve-kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbom, što osigurava tačnost i zadovoljstvo gostiju.",
-            "a8": "Da, Konty podržava dijeljenje računa i odvojene naplate. Podržava više metoda plaćanja na jednom računu-kartica, gotovina, itd. Rješavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim.",
-            "q2": "Da li sistem radi bez interneta?",
-            "q3": "Koliko traje proces podešavanja?",
-            "q4": "Mogu li da zadržim postojeću opremu?",
-            "q5": "Šta je sa obukom osoblja?",
-            "q6": "Da li se integriše sa platformama za dostavu?",
-            "q7": "Mogu li da prilagodim modifikatore za stavke u meniju?",
-            "q8": "Da li podržava dijeljenje računa i odvojene naplate?",
+            "a1": "Da, Konty radi besprijekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaše poslovanje nikada ne prestaje, čak ni tokom prekida interneta-potpuna offline funkcionalnost ugrađena u sistem.",
+            "a2": "Većina lokala je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
+            "a3": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kuhinjski displeje. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
+            "a4": "Naš intuitivan interfejs zahtijeva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Pružamo obuku na licu mjesta tokom podešavanja i materijale za kontinuiranu podršku. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
+            "a5": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbe sa delivery aplikacija dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa i propuštenih narudžbi. Jedan sistem za sve: jelo u lokalu, ponijeti i dostavu.",
+            "a6": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahtjeve-kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbom, što osigurava tačnost i zadovoljstvo gostiju.",
+            "a7": "Da, Konty podržava dijeljenje računa i odvojene naplate. Podržava više metoda plaćanja na jednom računu-kartica, gotovina, itd. Rješavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim.",
+            "q1": "Da li sistem radi bez interneta?",
+            "q2": "Koliko traje proces podešavanja?",
+            "q3": "Mogu li da zadržim postojeću opremu?",
+            "q4": "Šta je sa obukom osoblja?",
+            "q5": "Da li se integriše sa platformama za dostavu?",
+            "q6": "Mogu li da prilagodim modifikatore za stavke u meniju?",
+            "q7": "Da li podržava dijeljenje računa i odvojene naplate?",
             "subtitle": "Najčešća pitanja o funkcionalnostima Konty ugostiteljstva",
             "title": "Često postavljana pitanja"
           },
@@ -827,84 +821,68 @@
                 "text": "Dijeljenje računa i prijenos između stolova"
               },
               "item5": {
-                "icon": "i-heroicons-calendar-days",
-                "text": "Integracija upravljanja rezervacijama"
-              },
-              "item6": {
-                "icon": "i-heroicons-adjustments-horizontal",
-                "text": "Upravljanje modifikatorima (alergije, posebni zahtjevi)"
-              },
-              "item7": {
                 "icon": "i-heroicons-fire",
                 "text": "Usklađivanje vremena serviranja jela i koordinacija sa kuhinjom"
               },
               "title": "Sve operacije u sali"
             },
             "group2": {
-              "description": "Moćni alati za upravljanje receptima, nabavkom i zalihama sa preciznošću.",
+              "description": "Moćni alati za upravljanje nabavkom i zalihama sa preciznošću.",
               "imageAlt": "Upravljanje zalihama i nabavkom",
-              "item1": {
-                "icon": "i-heroicons-calculator",
-                "text": "Upravljanje receptima sa kalkulacijom troškova sastojaka"
-              },
-              "item2": {
-                "icon": "i-heroicons-document-text",
-                "text": "Kreiranje i praćenje narudžbenica"
-              },
-              "item3": {
-                "icon": "i-heroicons-truck",
-                "text": "Upravljanje dobavljačima sa poređenjem cijena"
-              },
-              "item4": {
-                "icon": "i-heroicons-cube",
-                "text": "Prijem zaliha i korekcije"
-              },
-              "item5": {
-                "icon": "i-heroicons-trash",
-                "text": "Praćenje i analiza rasipanja"
-              },
-              "item6": {
-                "icon": "i-heroicons-building-storefront",
-                "text": "Praćenje zaliha na više lokacija"
-              },
-              "item7": {
-                "icon": "i-heroicons-exclamation-triangle",
-                "text": "Praćenje niskih zaliha"
-              },
-              "title": "Upravljanje zalihama i nabavkom"
-            },
-            "group3": {
-              "description": "Uvidi zasnovani na podacima za optimizaciju operacija i rast prihoda.",
-              "imageAlt": "Kontrolna tabla za analitiku i izvještaje",
               "item1": {
                 "icon": "i-heroicons-chart-bar",
                 "text": "Analitika prodaje (po artiklu, konobaru, vremenu, dijelu dana)"
               },
               "item2": {
-                "icon": "i-heroicons-currency-dollar",
-                "text": "Praćenje i optimizacija troškova rada"
+                "icon": "i-heroicons-calculator",
+                "text": "Upravljanje i kalkulacija nad aritklima i sastojcima"
               },
               "item3": {
-                "icon": "i-heroicons-light-bulb",
-                "text": "Uvidi u optimizaciju menija"
+                "icon": "i-heroicons-truck",
+                "text": "Upravljanje dobavljačima, prijem zaliha i korekcije"
               },
               "item4": {
-                "icon": "i-heroicons-user-circle",
-                "text": "Učestalost i preference kupaca"
-              },
-              "item5": {
-                "icon": "i-heroicons-document-chart-bar",
-                "text": "Bilans stanja i analiza marže"
-              },
-              "item6": {
-                "icon": "i-heroicons-document-check",
-                "text": "Poreska usklađenost i fiskalna integracija"
-              },
-              "item7": {
                 "icon": "i-heroicons-users",
                 "text": "Pregled performansi zaposlenih"
               },
-              "title": "Inteligencija i alati za rast"
+              "item5": {
+                "icon": "i-heroicons-exclamation-triangle",
+                "text": "Praćenje minimalnih zaliha"
+              },
+              "title": "Upravljanje zalihama i nabavkom"
+            },
+            "group3": {
+              "description": "Povezan sa uređajima u kuhinji za efikasnu pripremu i praćenje narudžbina u realnom vremenu.",
+              "imageAlt": "Kitchen Display System interfejs",
+              "item1": {
+                "icon": "i-heroicons-computer-desktop",
+                "text": "Vizuelni prikaz narudžbina na ekranima u kuhinji"
+              },
+              "item2": {
+                "icon": "i-heroicons-signal",
+                "text": "Automatsko slanje narudžbina sa POS-a na KDS"
+              },
+              "item3": {
+                "icon": "i-heroicons-clock",
+                "text": "Praćenje vremena pripreme za svako jelo"
+              },
+              "item4": {
+                "icon": "i-heroicons-queue-list",
+                "text": "Različiti statusi: Primljeno, U pripremi, Spremno"
+              },
+              "item5": {
+                "icon": "i-heroicons-check-circle",
+                "text": "Jednostavno označavanje završenih narudžbina"
+              },
+              "item6": {
+                "icon": "i-heroicons-exclamation-circle",
+                "text": "Prioritetno prikazivanje hitnih narudžbina"
+              },
+              "item7": {
+                "icon": "i-heroicons-arrows-right-left",
+                "text": "Sinhronizacija između više ekrana i stanica"
+              },
+              "title": "Kitchen Display System (KDS)"
             },
             "title": "Sveobuhvatni alati za vaš restoran"
           },
@@ -960,20 +938,20 @@
         "features": {
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "faq": {
-            "a2": "Da, Konty radi sa svim standardnim skenerima barkodova uključujući USB, Bluetooth i mobilne uređaje. Podržava i obične barkodove i težinske barkodove za vage. Brza i precizna naplata pri svakom skeniranju.",
-            "a3": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca. Nagradite redovne kupce, pratite istoriju kupovine, šaljite ciljane promocije i gradite dugoročne odnose-sve uključeno u vaš plan bez dodatnih troškova.",
-            "a4": "Da, obezbijeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema. Naš tim vam pomaže da uvezete proizvode, kupce i podatke o zalihama-bez ručnog unosa. Većina migracija se završava za 24 sata.",
-            "a5": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha. Obradite refundacije, zamjene i knjižna odobrenja odmah. Svi podaci o povraćajima se bilježe za izvještavanje i upravljanje zalihama.",
-            "a6": "Da, Konty je kompatibilan sa većinom postojećeg POS hardvera uključujući fiskalne štampače, skenere barkodova, fioke za novac, displeje za kupce i tablete. Koristite ono što već imate ili možemo preporučiti pristupačne kompatibilne opcije.",
-            "a7": "Naravno. Svaka prodaja, povraćaj i podešavanje zaliha ažurira inventar u realnom vremenu na svim lokacijama. Imate potpunu vidljivost.",
-            "a8": "Da, kreirajte više cjenovnika za veleprodajne kupce, VIP kupce ili kupce na veliko. Svakom kupcu možete dodijeliti cjenovnik po kome će se obračunavati cijene artikala.",
-            "q2": "Da li podržava skeniranje barkodova?",
-            "q3": "Šta je sa programima lojalnosti?",
-            "q4": "Mogu li da uvezem postojeće zalihe?",
-            "q5": "Kako se obrađuju povraćaji?",
-            "q6": "Da li radi sa mojim postojećim hardverom?",
-            "q7": "Mogu li da pratim zalihe u realnom vremenu na više lokacija?",
-            "q8": "Da li podržava različite cijene za različite tipove kupaca?",
+            "a1": "Da, Konty radi sa svim standardnim skenerima barkodova uključujući USB, Bluetooth i mobilne uređaje. Podržava i obične barkodove i težinske barkodove za vage. Brza i precizna naplata pri svakom skeniranju.",
+            "a2": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca. Nagradite redovne kupce, pratite istoriju kupovine, šaljite ciljane promocije i gradite dugoročne odnose-sve uključeno u vaš plan bez dodatnih troškova.",
+            "a3": "Da, obezbijeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema. Naš tim vam pomaže da uvezete proizvode, kupce i podatke o zalihama-bez ručnog unosa. Većina migracija se završava za 24 sata.",
+            "a4": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha. Obradite refundacije, zamjene i knjižna odobrenja odmah. Svi podaci o povraćajima se bilježe za izvještavanje i upravljanje zalihama.",
+            "a5": "Da, Konty je kompatibilan sa većinom postojećeg POS hardvera uključujući fiskalne štampače, skenere barkodova, fioke za novac, displeje za kupce i tablete. Koristite ono što već imate ili možemo preporučiti pristupačne kompatibilne opcije.",
+            "a6": "Naravno. Svaka prodaja, povraćaj i podešavanje zaliha ažurira inventar u realnom vremenu na svim lokacijama. Imate potpunu vidljivost.",
+            "a7": "Da, kreirajte više cjenovnika za veleprodajne kupce, VIP kupce ili kupce na veliko. Svakom kupcu možete dodijeliti cjenovnik po kome će se obračunavati cijene artikala.",
+            "q1": "Da li podržava skeniranje barkodova?",
+            "q2": "Šta je sa programima lojalnosti?",
+            "q3": "Mogu li da uvezem postojeće zalihe?",
+            "q4": "Kako se obrađuju povraćaji?",
+            "q5": "Da li radi sa mojim postojećim hardverom?",
+            "q6": "Mogu li da pratim zalihe u realnom vremenu na više lokacija?",
+            "q7": "Da li podržava različite cijene za različite tipove kupaca?",
             "subtitle": "Najčešća pitanja o funkcionalnostima Konty trgovine",
             "title": "Često postavljana pitanja"
           },
@@ -1016,10 +994,7 @@
                 "icon": "i-heroicons-qr-code",
                 "text": "Integracija skenera barkoda (standardni i težinski)"
               },
-              "item10": {
-                "icon": "i-heroicons-document-text",
-                "text": "Prilagođavanje računa i slanje računa putem emaila"
-              },
+
               "item2": {
                 "icon": "i-heroicons-squares-2x2",
                 "text": "Konfiguracija tastera kategorija za brzi pristup"
@@ -1034,23 +1009,19 @@
               },
               "item5": {
                 "icon": "i-heroicons-user-circle",
-                "text": "Pretraga kupaca i istorija"
+                "text": "Pretraga kupaca po imenu, emailu ili broju telefona"
               },
               "item6": {
-                "icon": "i-heroicons-gift",
-                "text": "Integracija programa lojalnosti"
-              },
-              "item7": {
                 "icon": "i-heroicons-tag",
                 "text": "Upravljanje popustima i promocijama"
               },
-              "item8": {
+              "item7": {
                 "icon": "i-heroicons-credit-card",
                 "text": "Više vrsta plaćanja: kreditne, debitne kartice, gotovina, beskontaktno"
               },
-              "item9": {
-                "icon": "i-heroicons-identification",
-                "text": "Upozorenja za starosna ograničenja"
+              "item8": {
+                "icon": "i-heroicons-document-text",
+                "text": "Prilagođavanje računa i štampanje faktura"
               },
               "title": "Brza prodajna mjesta"
             },
@@ -1063,7 +1034,7 @@
               },
               "item2": {
                 "icon": "i-heroicons-swatch",
-                "text": "Varijante proizvoda (veličina, boja, itd.)"
+                "text": "Varijante i kategorije proizvoda"
               },
               "item3": {
                 "icon": "i-heroicons-magnifying-glass",
@@ -1083,52 +1054,40 @@
               },
               "item7": {
                 "icon": "i-heroicons-document-text",
-                "text": "Upravljanje narudžbenicama"
-              },
-              "item8": {
-                "icon": "i-heroicons-truck",
-                "text": "Poređenje cijena dobavljača"
-              },
-              "item9": {
-                "icon": "i-heroicons-chart-bar",
-                "text": "Sezonsko planiranje zaliha"
+                "text": "Upravljanje porudžbinama"
               },
               "title": "Napredno upravljanje zalihama"
             },
             "group3": {
-              "description": "Centralizovana kontrola i uvidi u sve vaše prodavnice.",
+              "description": "Kompletni uvidi i kontrola za sve vaše prodavnice na jednom mjestu.",
               "imageAlt": "Kontrolna tabla za više lokacija",
               "item1": {
-                "icon": "i-heroicons-squares-plus",
-                "text": "Centralizovana kontrolna tabla za izvještavanje po lokacijama"
+                "icon": "i-heroicons-eye",
+                "text": "Vidljivost zaliha u svim objektima"
               },
               "item2": {
-                "icon": "i-heroicons-eye",
-                "text": "Jedinstvena vidljivost zaliha na svim lokacijama"
-              },
-              "item3": {
                 "icon": "i-heroicons-tag",
                 "text": "Cijene i promocije specifične za lokaciju"
               },
-              "item4": {
+              "item3": {
                 "icon": "i-heroicons-document-chart-bar",
                 "text": "Konsolidovano izvještavanje i analitika"
               },
-              "item5": {
-                "icon": "i-heroicons-chart-pie",
-                "text": "Najbolje/najlošije performanse proizvoda po lokaciji"
-              },
-              "item6": {
-                "icon": "i-heroicons-users",
-                "text": "Performanse zaposlenih u svim prodavnicama"
-              },
-              "item7": {
-                "icon": "i-heroicons-user-group",
-                "text": "Obrasci ponašanja kupaca"
-              },
-              "item8": {
+              "item4": {
                 "icon": "i-heroicons-document-check",
                 "text": "Integrisano računovodstvo i poreska usklađenost"
+              },
+              "item5": {
+                "icon": "i-heroicons-clock",
+                "text": "Praćenje prodaje u realnom vremenu"
+              },
+              "item6": {
+                "icon": "i-heroicons-chart-pie",
+                "text": "Detaljni izvještaji za svaki objekat"
+              },
+              "item7": {
+                "icon": "i-heroicons-cube-transparent",
+                "text": "Upravljanje artiklima i cijenama za sve objekte"
               },
               "title": "Više lokacija i analitika"
             },
@@ -1212,7 +1171,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za B2B & veleprodaju.",
-          "title": "Profesionalno rješenje za B2B i veleprodaju"
+          "title": "Konty za B2B i E-fakture"
         },
         "overview": {
           "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
@@ -1272,8 +1231,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brz unos porudžbina, potpuna kontrola zaliha i glatka predaja smena. Napravljen za veliki promet kada je pouzdanost najbitnija.",
-          "title": "Više gostiju, manje stresa"
+          "subtitle": "Brz unos porudžbina, potpuna kontrola zaliha i jednostavna predaja smjena. Napravljen za veliki promet kada je pouzdanost najbitnija.",
+          "title": "Konty za barove i kafiće"
         },
         "overview": {
           "description": "Sistem dizajniran za brzu uslugu i veliki promet",
@@ -1343,8 +1302,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Pratite svaku varijantu, poznajete svoje kupce, upravljajte ratama. Intuitivni alati koji vam omogućavaju da se fokusirate na modu, a ne na tehnologiju.",
-          "title": "Upravljanje butikom jednostavno kao nikad"
+          "subtitle": "Kompletno upravljanje prodajom i zalihama odjeće. Pratite varijante proizvoda, upravljajte sezonskim popustima i imajte uvid u najbolje prodavane artikle u realnom vremenu.",
+          "title": "Konty za prodavnice odjeće"
         },
         "overview": {
           "description": "Specijalizovano za butike i prodavnice odeće",
@@ -1423,7 +1382,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Kuhinjski displej i trenutna obrada porudžbina koji prate vaš najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, uvijek pouzdan da vas nikad ne iznevjeri.",
-          "title": "Brzina plus pouzdanost"
+          "title": "Konty za brzu hranu"
         },
         "overview": {
           "description": "Sistem dizajniran za maksimalnu brzinu i propusnost",
@@ -1484,7 +1443,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Skeniranje barkoda, integracija sa vagom i kompletno praćenje zaliha. Pouzdano upravljanje prodavnicom koje preuzima kompleksnost umesto vas.",
-          "title": "Upravljajte hiljadama proizvoda sa sigurnošću"
+          "title": "Konty za prodavnice hrane i supermarkete"
         },
         "overview": {
           "description": "Moćan sistem za upravljanje velikim katalozima proizvoda",
@@ -1550,8 +1509,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Stolovi, kuhinjski displej, deljenje računa i offline režim. Jednostavan, pouzdan i spreman za najveće gužve.",
-          "title": "Restoranski POS na koji možete računati"
+          "subtitle": "Stolovi, kuhinjski displej, dijeljenje računa i offline režim. Jednostavan, pouzdan i spreman za najveće gužve.",
+          "title": "Konty za restorane"
         },
         "overview": {
           "description": "Od upravljanja stolovima do kuhinjskih porudžbina",
@@ -1611,8 +1570,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smjenama. Sve što vam treba za prodavnicu mješovite robe - jednostavno i pouzdano.",
-          "title": "Upravljanje prodavnicom mješovite robe bez komplikacija"
+          "subtitle": "Jednostavno upravljanje raznovrsnim asortimanom. Sve što vam treba za prodavnicu mješovite robe - jednostavno i pouzdano.",
+          "title": "Konty za prodavnice mješovite robe"
         },
         "overview": {
           "description": "Pouzdan sistem za prodavnice mješovite robe sa raznovrsnim proizvodima",
