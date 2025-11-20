@@ -1805,9 +1805,6 @@
         "bookDemo": "Zakaži demo",
         "submit": "Pošalji"
       },
-      "calendlyScheduled": "Demo zakazan",
-      "calendlySuccess": "Demo je uspješno zakazan!",
-      "calendlySuccessDescription": "Uskoro ćete primiti email potvrdu.",
       "categoryOptions": {
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "other": "Ostalo",
@@ -1843,6 +1840,7 @@
         "success": "Poruka je uspješno poslata!",
         "successDescription": "Hvala vam što ste nas kontaktirali. Javićemo vam se u roku od 24 sata."
       },
+      "availabilityFallbackMessage": "Trenutno ne možemo da učitamo dostupne termine. Molimo izaberite bilo koji datum u našem radnom vremenu.",
       "noAvailableSlots": "Nema dostupnih termina za ovaj datum",
       "optional": "opciono",
       "placeholders": {

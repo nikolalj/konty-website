@@ -149,6 +149,12 @@
                   >
                     {{ t('ui.forms.noAvailableSlots') }}
                   </p>
+                  <p
+                    v-if="availabilityError"
+                    class="text-sm text-amber-600 dark:text-amber-400"
+                  >
+                    {{ availabilityError }}
+                  </p>
                 </div>
               </div>
             </template>
@@ -178,18 +184,19 @@ const { t } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
 
-// Use Calendly availability composable
 const {
   selectedDate,
   selectedTime,
   minDate,
   availableTimeSlots,
   displayDateTime,
+  availabilityError,
   fetchAvailability,
   isDateUnavailable,
   getPreferredDateTimeISO,
+  getSelectedSlotDetails,
   resetDateTime
-} = useCalendlyAvailability()
+} = useHubspotMeetings()
 
 const form = reactive({
   name: '',
@@ -290,8 +297,8 @@ const onSubmit = async () => {
 
   try {
     const preferredDateTime = getPreferredDateTimeISO()
+    const slotDetails = getSelectedSlotDetails()
 
-    // TODO: Replace with actual API endpoint for demo booking
     await $fetch('/api/contact', {
       method: 'POST',
       body: {
@@ -299,14 +306,20 @@ const onSubmit = async () => {
         email: form.email,
         phone: form.phone,
         industry: form.industry,
-        preferredDateTime
+        preferredDateTime,
+        startTime: slotDetails?.startTime,
+        endTime: slotDetails?.endTime,
+        meetingDurationMs: slotDetails?.durationMs,
+        meetingTimezone: slotDetails?.timezone,
+        likelyAvailableUserIds: slotDetails?.likelyAvailableUserIds
       }
     })
 
     // Track demo form submission
     track('book_a_demo_form', {
       industry: form.industry,
-      hasPreferredDateTime: !!preferredDateTime
+      hasPreferredDateTime: !!preferredDateTime,
+      meetingScheduled: !!slotDetails?.startTime
     })
 
     toast.add({

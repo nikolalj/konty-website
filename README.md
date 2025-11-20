@@ -28,23 +28,12 @@ Copy `.env.example` to `.env` and configure your environment variables:
 cp .env.example .env
 ```
 
-**Required variables:**
+**Key variables:**
 
-- `CALENDLY_API_TOKEN` - Your Calendly Personal Access Token for API integration
-
-**Getting your Calendly API Token:**
-
-1. Log in to your Calendly account
-2. Go to [Integrations & Apps](https://calendly.com/integrations/api_webhooks)
-3. Navigate to "API & Webhooks"
-4. Click "Generate New Token"
-5. Copy the token and add it to your `.env` file
-
-Example:
-
-```
-CALENDLY_API_TOKEN=your-personal-access-token-here
-```
+- `APP_ENV` / `NUXT_PUBLIC_SITE_URL` — control runtime environment and canonical URLs
+- `GTM_ID` / `LHCI_GITHUB_APP_TOKEN` — analytics + Lighthouse automation
+- `USE_CLOUDFLARE_DEV` — opt-in Cloudflare dev preset
+- `HUBSPOT_ACCESS_TOKEN`, `HUBSPOT_CLIENT_ID`, `HUBSPOT_MEETING_LINK_SLUG` — HubSpot CRM + scheduling integration
 
 ## Development Server
 
