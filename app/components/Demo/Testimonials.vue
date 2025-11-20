@@ -11,23 +11,33 @@
         direction="up"
         :delay="index * 100"
       >
-        <div class="bg-[var(--ui-bg-elevated)] rounded-xl p-6 shadow-lg h-full flex flex-col">
+        <div
+          class="bg-[var(--ui-bg-elevated)] rounded-xl p-6 shadow-lg h-full flex flex-col"
+        >
           <!-- Timeline Badge - Top -->
-          <div class="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 text-green-600 dark:text-green-400 rounded-lg text-sm font-semibold mb-4 w-fit">
+          <div
+            class="inline-flex items-center px-3 py-1.5 bg-primary-100 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-400 rounded-lg text-sm font-semibold mb-4 w-fit"
+          >
             <UIcon name="i-lucide-zap" class="w-4 h-4 mr-1.5" />
             {{ t(testimonial.timeline) }}
           </div>
 
           <!-- Quote -->
-          <blockquote class="text-gray-700 dark:text-gray-300 mb-6 flex-grow italic">
+          <blockquote
+            class="text-gray-700 dark:text-gray-300 mb-6 flex-grow italic"
+          >
             "{{ t(testimonial.quote) }}"
           </blockquote>
 
           <!-- Author -->
-          <div class="flex items-center pt-4 border-t border-gray-200 dark:border-gray-700">
-            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mr-3 flex items-center justify-center flex-shrink-0">
+          <div
+            class="flex items-center pt-4 border-t border-gray-200 dark:border-gray-700"
+          >
+            <!-- <div
+              class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mr-3 flex items-center justify-center flex-shrink-0"
+            >
               <UIcon name="i-lucide-user" class="w-6 h-6 text-white" />
-            </div>
+            </div> -->
             <div class="min-w-0">
               <div class="font-semibold text-gray-900 dark:text-white">
                 {{ t(testimonial.author) }}
