@@ -515,8 +515,8 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, hoteli, itd.)"
           ],
-          "price": "50 €",
-          "priceValue": "50",
+          "price": "5.500,00 RSD",
+          "priceValue": "5500",
           "title": "Premium"
         },
         "standard": {
@@ -532,8 +532,8 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "30 €",
-          "priceValue": "30",
+          "price": "4.000,00 RSD",
+          "priceValue": "4000",
           "title": "Standard"
         },
         "start": {
@@ -550,8 +550,8 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "25 €",
-          "priceValue": "25",
+          "price": "3.500,00 RSD",
+          "priceValue": "3500",
           "title": "Start"
         }
       },
@@ -566,8 +566,8 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, itd.)"
           ],
-          "price": "20 €",
-          "priceValue": "20",
+          "price": "2.400,00 RSD",
+          "priceValue": "2400",
           "title": "Premium"
         },
         "standard": {
@@ -582,8 +582,8 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "15 €",
-          "priceValue": "15",
+          "price": "2.000,00 RSD",
+          "priceValue": "2000",
           "title": "Standard"
         },
         "start": {
@@ -599,8 +599,8 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "12 €",
-          "priceValue": "12",
+          "price": "1.250,00 RSD",
+          "priceValue": "1250",
           "title": "Start"
         }
       },
@@ -1124,7 +1124,7 @@
           "a2": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
           "a3": "Naravno. Kreirajte profakture, avansne račune i E-Fakture sa kompletnim podacima kupca. Izvoz računa u PDF i slanje mejlom.",
           "a4": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte karticu kupca, pratite sve fakture, uplate, isplate i bankovne izvode. Pratite potraživanja i štampajte detaljne izveštaje.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
           "q1": "Da li je Konty usklađen sa obaveznim Sistem E-Faktura (SEF)?",
           "q2": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
           "q3": "Da li podržava profakture i avansna plaćanja?",
@@ -1185,7 +1185,7 @@
           "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle uključujući napitke, sastojke i barsku robu. Praćenje stanja uživo, kontrola kretanja robe sa prijemnicama i otpremnicama, otpisi za praćenje rastura i kompletni izveštaji o zalihama. Potpuna vidljivost nad vašim zalihama.",
           "a3": "Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, upravljanje kasom, praćenje uplata i isplata i detaljan izveštaji po smeni. Svaki barmen/konobar se prijavljuje sa svojim PIN-om i sve transakcije se prate po korisniku. Laka predaja smene sa potpunom odgovornošću.",
           "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte porudžbine, upravljajte stolovima, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš bar nikada ne prestaje sa radom tokom problema sa internetom.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, praćenje zaliha, upravljanje smenama, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su upravljanje stolovima i Kuhinjski displej. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, praćenje zaliha, upravljanje smenama, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su upravljanje stolovima i Kuhinjski displej. Probajte besplatno 30 dana tokom najprometnije smene.",
           "q1": "Kako Konty radi sa velikim prometom tokom špica?",
           "q2": "Da li prati zalihe napitaka i bara?",
           "q3": "Kako funkcioniše upravljanje smenama za više barmena?",
@@ -1256,7 +1256,7 @@
           "a2": "Organizujte proizvode koristeći kategorije artikala za kolekcije i sezone. Pratite promet zaliha sa izveštajima o zalihama, identifikujte sporo pokretne artikle i koristite nivelacije cena za upravljanje sezonskim sniženjima. Organizacija po kategorijama olakšava upravljanje sezonskim kolekcijama.",
           "a3": "Naravno. Kompletni profili kupaca sa praćenjem istorije kupovina kroz izveštaje prodaje po kupcu. Pregledajte svaku transakciju po kupcu, pratite njihove navike potrošnje i izgradite detaljne profile kupaca za personalizovanu uslugu i ciljane promocije.",
           "a4": "Da, funkcija profakture omogućava kreiranje ponuda i rezervacija. Pratite avansna plaćanja za rate planove i koristite lanac avansnih plaćanja za upravljanje delimičnim uplatama do konačne kupovine. Kompletno upravljanje ratama sa praćenjem plaćanja.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala/varijanti, praćenje zaliha, profakture i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje kupcima, istorija kupovina i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim inventarom.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala/varijanti, praćenje zaliha, profakture i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje kupcima, istorija kupovina i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim inventarom.",
           "q1": "Može li Konty da prati zalihe po veličinama i bojama?",
           "q2": "Kako se bavi sezonskim kolekcijama i sniženjima?",
           "q3": "Mogu li da pratim istoriju kupovina i preferencije kupaca?",
@@ -1335,7 +1335,7 @@
           "a2": "Naravno. Kuhinjski displej prikazuje porudžbine u realnom vremenu sa praćenjem tajmera, obojenim upozorenjima (žuto/crveno na osnovu vremena) i statusom završetka. Pratite svaku porudžbinu od unosa do izdavanja sa imenom korisnika, vremenom porudžbine i detaljnim prikazom stavki. Prilagodite alarme i opcije prikaza.",
           "a3": "Da. Modifikatori stavki omogućavaju precizno beleženje svih specijalnih zahteva - bez paradajza, ekstra sos, dobro pečeno, bez sira. Svaka napomena ide direktno u kuhinju na displeju i tiketu. Nema grešaka u komunikaciji, nema bacanja hrane, nema nezadovoljnih kupaca.",
           "a4": "Konty radi kompletno offline sa punom POS funkcionalnošću. Obrađujte sve porudžbine, upravljajte kitchen display-em i prihvatajte plaćanja bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš objekat brze hrane nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, modifikatore stavki, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i praćenje performansi. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, modifikatore stavki, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i praćenje performansi. Probajte besplatno 30 dana tokom najprometnije smene.",
           "q1": "Kako Konty upravlja brzim porudžbinama?",
           "q2": "Mogu li da pratim vreme pripreme i brzinu usluge?",
           "q3": "Mogu li dodati posebne zahteve kupaca na porudžbine?",
@@ -1396,7 +1396,7 @@
           "a2": "Da, puna podrška za skeniranje barkoda i funkcija Izvoz za vagu specijalno za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih proizvoda i delikatesa.",
           "a3": "Sveobuhvatno praćenje zaliha sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, kalkulacije cena, otpisi za upravljanje rasturom i izveštaji o zalihama sa naprednim filtriranjem. Potpuna vidljivost i kontrola nad vašim zalihama.",
           "a4": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, praćenje zaliha, više poreskih stopa i offline režim. Viši paketi dodaju napredne funkcije kao što su izvoz za vagu i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, praćenje zaliha, više poreskih stopa i offline režim. Viši paketi dodaju napredne funkcije kao što su izvoz za vagu i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
           "q1": "Može li Konty efikasno da upravlja hiljadama proizvoda?",
           "q2": "Da li podržava skeniranje barkoda i vage?",
           "q3": "Kako funkcioniše praćenje zaliha?",
@@ -1463,7 +1463,7 @@
           "a2": "Naravno. Kuhinjski displej prikazuje porudžbine uživo sa imenom konobara, brojem stola, vremenom izdavanja i detaljima stavki. Obojeni tajmeri upozorenja, praćenje završetka porudžbina (kompletno ili delimično), recall funkcija i \"All Day\" pregled za potpunu vidljivost u kuhinji. Prilagodljiv broj tiketa po stranici i veličina fonta.",
           "a3": "Da, fleksibilna podela računa sa G0-G3 sekcijama omogućava deljenje po gostu, stavki ili prilagođenim iznosima. Rasporedite različite stavke različitim gostima i obradite više plaćanja za jedan sto. Savršeno za grupe koje žele da plaćaju odvojeno.",
           "a4": "Konty radi potpuno offline sa punom funkcionalnošću. Sve upravljanje stolovima, porudžbine i plaćanja se obrađuju lokalno bez interneta. Kada se veza uspostavi, sve se automatski sinhronizuje. Vaš restoran nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, deljenje računa, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i segmentacija porudžbina. Probajte besplatno 30 dana tokom redovnog rada.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, deljenje računa, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i segmentacija porudžbina. Probajte besplatno 30 dana tokom redovnog rada.",
           "q1": "Da li Konty ima upravljanje stolovima sa vizuelnim planom sale?",
           "q2": "Kako funkcioniše Kuhinjski displej?",
           "q3": "Mogu li stolovi da dele račune kada gosti plaćaju odvojeno?",
