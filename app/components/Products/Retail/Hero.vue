@@ -6,17 +6,23 @@
     <UContainer class="relative z-10 mb-0 sm:mb-14">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Left Column: Content -->
-        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left"
+        >
           <!-- Tagline -->
           <UIAppear direction="up">
-            <div class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] bg-[length:100%_100%] transition-all duration-300 text-white rounded-lg">
+            <div
+              class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] bg-[length:100%_100%] transition-all duration-300 text-white rounded-lg"
+            >
               {{ t('pages.products.retail.hero.tagline') }}
             </div>
           </UIAppear>
 
           <!-- Main Headline -->
           <UIAppear direction="up">
-            <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
+            <h1
+              class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white"
+            >
               {{ t('pages.products.retail.hero.title') }}
             </h1>
           </UIAppear>
@@ -30,17 +36,32 @@
 
           <!-- CTA Buttons -->
           <UIAppear direction="up">
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <AppCTAButton variant="primary" section="hero" class="dark bg-white" size="xl" />
-              <AppCTAButton variant="secondary" section="hero" class="dark" size="xl" />
+            <div
+              class="flex flex-wrap items-center justify-center lg:justify-start gap-4"
+            >
+              <AppCTAButton
+                variant="primary"
+                section="hero"
+                class="dark bg-white"
+                size="xl"
+              />
+              <AppCTAButton
+                variant="secondary"
+                section="hero"
+                class="dark"
+                size="xl"
+              />
             </div>
           </UIAppear>
         </div>
 
         <!-- Right Column: Hero Image -->
-        <UIAppear direction="right" class="w-full flex justify-center lg:justify-end">
+        <UIAppear
+          direction="right"
+          class="w-full flex justify-center lg:justify-end"
+        >
           <NuxtImg
-            src="/images/hero/hero2.png"
+            src="/images/hero/retail.avif"
             format="avif"
             alt="Konty POS for retail - store management dashboard"
             sizes="100vw xs:600px sm:768px md:1024px lg:600px"
@@ -59,7 +80,9 @@
     </UContainer>
 
     <!-- Wave Shape -->
-    <div class="absolute left-0 right-0 -bottom-px w-full leading-[0] pointer-events-none">
+    <div
+      class="absolute left-0 right-0 -bottom-px w-full leading-[0] pointer-events-none"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 170"
