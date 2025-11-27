@@ -8,7 +8,7 @@ on:
     branches:
       - release
     types: [opened, synchronize, reopened]
-  workflow_dispatch:  # Allow manual deployment
+  workflow_dispatch: # Allow manual deployment
 
 jobs:
   deploy:
@@ -47,7 +47,6 @@ jobs:
           APP_ENV: ${{ vars.APP_ENV }}
           NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
           GTM_ID: ${{ secrets.GTM_ID }}
-          CALENDLY_API_TOKEN: ${{ secrets.CALENDLY_API_TOKEN }}
 
       - name: Deploy to Cloudflare Workers
         run: pnpm run deploy:staging
