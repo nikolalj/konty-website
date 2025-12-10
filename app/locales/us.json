@@ -1805,9 +1805,6 @@
         "bookDemo": "Book demo",
         "submit": "Submit"
       },
-      "calendlyScheduled": "Demo scheduled",
-      "calendlySuccess": "Demo scheduled successfully!",
-      "calendlySuccessDescription": "You will receive a confirmation email shortly.",
       "categoryOptions": {
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "other": "Other",
@@ -1843,6 +1840,7 @@
         "success": "Message sent successfully!",
         "successDescription": "Thank you for contacting us. We'll get back to you within 24 hours."
       },
+      "availabilityFallbackMessage": "Live availability is temporarily unavailable. Please select any date during our working hours.",
       "noAvailableSlots": "No available time slots for this date",
       "optional": "optional",
       "placeholders": {
