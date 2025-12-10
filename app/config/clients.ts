@@ -154,8 +154,8 @@ export const clients = {
       product: 'retail'
     },
     {
-      name: '187 Podrum',
-      logo: '/images/clients/187Podrum.avif',
+      name: 'Grand Residence',
+      logo: '/images/clients/grandResidence.avif',
       product: 'hospitality'
     },
     {

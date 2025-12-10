@@ -515,7 +515,7 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, hoteli, itd.)"
           ],
-          "price": "5.500,00 RSD",
+          "price": "5500 RSD",
           "priceValue": "5500",
           "title": "Premium"
         },
@@ -532,7 +532,7 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "4.000,00 RSD",
+          "price": "4000 RSD",
           "priceValue": "4000",
           "title": "Standard"
         },
@@ -550,7 +550,7 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "3.500,00 RSD",
+          "price": "3500 RSD",
           "priceValue": "3500",
           "title": "Start"
         }
@@ -566,7 +566,7 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, itd.)"
           ],
-          "price": "2.400,00 RSD",
+          "price": "2400 RSD",
           "priceValue": "2400",
           "title": "Premium"
         },
@@ -582,7 +582,7 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "2.000,00 RSD",
+          "price": "2000 RSD",
           "priceValue": "2000",
           "title": "Standard"
         },
@@ -599,7 +599,7 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "1.250,00 RSD",
+          "price": "1250 RSD",
           "priceValue": "1250",
           "title": "Start"
         }

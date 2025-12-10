@@ -23,7 +23,7 @@
             :scale="plan.scale"
             :button="plan.button"
             variant="subtle"
-            :ui="{ featureTitle: '!overflow-visible !whitespace-normal' }"
+            :ui="{ featureTitle: '!overflow-visible !whitespace-normal', price: 'text-2xl sm:text-4xl' }"
           />
         </UPricingPlans>
       </div>
