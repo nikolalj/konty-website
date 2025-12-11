@@ -1,5 +1,6 @@
 <template>
   <UHeader
+    v-model:open="isMenuOpen"
     mode="slideover"
     class="fixed top-0 w-full h-auto transition-[background-color,box-shadow,color] duration-1000 border-none"
     :class="!isHeaderSolid ? 'bg-transparent' : 'bg-[#201633]/90'"
@@ -19,13 +20,21 @@
       >
         <AppHeaderLocaleSuggestionBanner />
 
-        <UContainer class="h-full text-sm flex items-center transition-colors duration-500">
+        <UContainer
+          class="h-full text-sm flex items-center transition-colors duration-500"
+        >
           <div class="flex items-center gap-4 flex-1">
-            <a href="mailto:contact@konty.com" class="flex items-center gap-1 text-gray-300">
+            <a
+              href="mailto:contact@konty.com"
+              class="flex items-center gap-1 text-gray-300"
+            >
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact@konty.com</span>
             </a>
-            <a href="tel:+38267607670" class="flex items-center gap-1 text-gray-300">
+            <a
+              href="tel:+38267607670"
+              class="flex items-center gap-1 text-gray-300"
+            >
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>+38267607670</span>
             </a>
@@ -62,8 +71,14 @@
     </template>
 
     <template #content>
-      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
-        <ULink :to="localePath('/')" class="flex items-center gap-2 shrink-0">
+      <div
+        class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800"
+      >
+        <ULink
+          :to="localePath('/')"
+          class="flex items-center gap-2 shrink-0"
+          @click="closeMenu"
+        >
           <div class="sm:hidden">
             <UColorModeImage
               light="/images/branding/logo-light.svg"
@@ -84,18 +99,28 @@
           </div>
         </ULink>
         <div class="flex gap-2">
-          <AppCTAButton variant="secondary" section="header" no-icon />
-          <AppCTAButton variant="primary" section="header" no-icon />
+          <UButton
+            icon="i-lucide-x"
+            variant="ghost"
+            color="neutral"
+            aria-label="Zatvori meni"
+            @click="closeMenu"
+          />
         </div>
       </div>
       <div class="p-4">
-        <AppHeaderMenu orientation="vertical" />
+        <AppHeaderMenu orientation="vertical" @navigate="closeMenu" />
       </div>
     </template>
 
     <template #right>
       <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
-      <AppCTAButton variant="primary" section="header" class="dark bg-white" no-icon />
+      <AppCTAButton
+        variant="primary"
+        section="header"
+        class="dark bg-white"
+        no-icon
+      />
     </template>
   </UHeader>
 </template>
@@ -110,10 +135,18 @@ const EXIT_SOLID = 8
 
 const isHeaderSolid = ref(!isRouteWithTransparentHeader(route.path))
 const isTopBarCollapsed = ref(false)
+const isMenuOpen = ref(false)
 
-watch(() => route.path, (newPath) => {
-  isHeaderSolid.value = !isRouteWithTransparentHeader(newPath)
-})
+function closeMenu() {
+  isMenuOpen.value = false
+}
+
+watch(
+  () => route.path,
+  (newPath) => {
+    isHeaderSolid.value = !isRouteWithTransparentHeader(newPath)
+  }
+)
 
 watch(
   y,
@@ -122,7 +155,11 @@ watch(
 
     if (!isHeaderSolid.value && cur > ENTER_SOLID) {
       isHeaderSolid.value = true
-    } else if (isHeaderSolid.value && cur < EXIT_SOLID && isRouteWithTransparentHeader(route.path)) {
+    } else if (
+      isHeaderSolid.value &&
+      cur < EXIT_SOLID &&
+      isRouteWithTransparentHeader(route.path)
+    ) {
       isHeaderSolid.value = false
     }
 
@@ -143,9 +180,11 @@ function isRouteWithTransparentHeader(path: string) {
     '/products/hospitality',
     '/products/retail',
     '/solutions',
-    '/demo',
+    '/demo'
   ]
 
-  return routesWithTransparentHeader.some(p => removeTrailingSlash(localePath(p)) === removeTrailingSlash(path))
+  return routesWithTransparentHeader.some(
+    (p) => removeTrailingSlash(localePath(p)) === removeTrailingSlash(path)
+  )
 }
 </script>
