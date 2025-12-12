@@ -1622,11 +1622,11 @@
       "description": "Izaberite savršeno POS rješenje za vaš biznis. Specijalizovani sistemi za restorane, kafiće, prodavnice i lance.",
       "download": {
         "description": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-        "title": "Preuzmi Konty"
+        "title": "Preuzmi Konty "
       },
       "faqdocs": {
-        "description": "FAQ i dokumentacija za Konty",
-        "title": "FAQ i dokumentacija"
+        "description": "Najčešće postavljana pitanja i dokumentacija za Konty",
+        "title": "Najčešće postavljana pitanja i dokumentacija"
       },
       "hospitality": {
         "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mjestu.",
