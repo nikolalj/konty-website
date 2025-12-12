@@ -28,6 +28,7 @@ export default defineEventHandler(async (event) => {
   const accessToken = config.hubspotAccessToken
   const meetingLinkSlug = config.hubspotMeetingLinkSlug
   const timezone = body.timezone || 'UTC'
+  const encodedMeetingLinkSlug = encodeURIComponent(meetingLinkSlug)
 
   if (!accessToken || !meetingLinkSlug) {
     throw createError({
@@ -38,7 +39,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const response = await $fetch<HubSpotAvailabilityApiResponse>(
-      `https://api.hubapi.com/scheduler/v3/meetings/meeting-links/book/availability-page/${meetingLinkSlug}`,
+      `https://api.hubapi.com/scheduler/v3/meetings/meeting-links/book/availability-page/${encodedMeetingLinkSlug}`,
       {
         method: 'GET',
         headers: {
