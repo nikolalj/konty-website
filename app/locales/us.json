@@ -1583,104 +1583,104 @@
   },
   "seo": {
     "blog": {
-      "description": "Expert insights, tips, and best practices for modern POS management. Learn how to optimize your business operations.",
-      "title": "Blog - Konty POS Insights & Resources"
+      "description": "Expert insights, tips, and best practices for modern POS management. Learn how to optimize your business operations and boost sales.",
+      "title": "Blog & Resources - POS Tips and Insights"
     },
     "clientStories": {
-      "description": "Real stories from businesses that transformed their operations with Konty POS.",
-      "title": "Client Success Stories - Konty POS"
+      "description": "Discover real stories from businesses that transformed their operations with Konty POS. See how restaurants and stores achieve success.",
+      "title": "Client Success Stories - Real Business Results"
     },
     "contact": {
-      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution.",
-      "title": "Contact Us - Konty POS"
+      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution for your restaurant or retail store.",
+      "title": "Contact Us - Get Expert POS Help Today"
     },
     "dataProcessing": {
-      "description": "Data Processing Agreement between Konty and our customers. Learn how we process and protect your personal data.",
-      "title": "Data Processing Agreement - Konty"
+      "description": "Data Processing Agreement between Konty and our customers. Learn how we process and protect your personal data securely.",
+      "title": "Data Processing Agreement - GDPR Compliance"
     },
     "demo": {
-      "description": "See Konty in action. Free 15-minute demo tailored to your business. No obligations.",
-      "title": "Book a Demo - Konty POS"
+      "description": "See Konty in action with a free demo tailored to your business. No obligations, just solutions for your needs.",
+      "title": "Book a Free Demo - See Our POS in Action"
     },
     "home": {
-      "description": "Reliable cloud POS system trusted by 25,000+ businesses. 30-second support response. Switch in 48 hours. Keep your hardware.",
-      "title": "Konty - Professional POS System for Restaurants & Retail"
+      "description": "Discover reliable cloud POS trusted by 9,000+ businesses. Get 30-second support response. Switch in 48 hours. Start your free trial today.",
+      "title": "Professional POS for Restaurants & Retail"
     },
     "partners": {
-      "description": "Join our growing network of partners delivering Konty solutions.",
-      "title": "Partners Network - Konty POS"
+      "description": "Join our growing network of partners delivering Konty POS solutions. Get competitive pricing, training, and dedicated support.",
+      "title": "Become a Partner - Join Our Network"
     },
     "pricing": {
-      "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start free for 30 days.",
-      "title": "Pricing - Konty POS System"
+      "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start your free 30-day trial today.",
+      "title": "Pricing Plans - Start Free for 30 Days"
     },
     "privacy": {
-      "description": "How Konty protects your data and your customers' privacy.",
-      "title": "Privacy Policy - Konty"
+      "description": "Learn how Konty protects your business data and customer privacy. Discover our security practices and your data protection rights.",
+      "title": "Privacy Policy - Data Protection"
     },
     "products": {
       "description": "Choose the perfect POS solution for your business. Specialized systems for restaurants, cafes, retail stores, and chains.",
       "download": {
-        "description": "Download Konty for any device or platform",
-        "title": "Download Konty"
+        "description": "Get Konty POS for your device. Available on Windows, Android, and web. Download free and start your 30-day trial today.",
+        "title": "Download POS App - Windows, Android & Web"
       },
       "faqdocs": {
-        "description": "Frequently Asked Questions and Documentation for Konty",
-        "title": "Frequently Asked Questions and Documentation"
+        "description": "Find answers to common questions about Konty POS. Get setup guides, feature documentation, and troubleshooting tips.",
+        "title": "FAQ & Documentation - POS Help Center"
       },
       "hospitality": {
-        "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place.",
+        "description": "Discover specialized POS for restaurants, cafes, and bars. Manage reservations, orders, tables, and delivery - all in one place.",
         "features": {
-          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more.",
-          "title": "All Hospitality Features - Konty POS"
+          "description": "Explore the complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more.",
+          "title": "All Hospitality POS Features - Complete List"
         },
-        "title": "Restaurant POS System - Konty Hospitality"
+        "title": "Restaurant & Hospitality POS System"
       },
       "retail": {
-        "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains.",
+        "description": "Get fast checkout, automatic inventory management, and sales analytics. Perfect for stores, supermarkets, and retail chains.",
         "features": {
-          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more.",
-          "title": "All Retail Features - Konty POS"
+          "description": "Explore the complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more.",
+          "title": "All Retail POS Features - Complete Feature List"
         },
-        "title": "Retail POS System - Konty Retail"
+        "title": "Retail POS System for Stores & Chains"
       },
-      "title": "Products - Konty POS Solutions"
+      "title": "POS Products & Solutions for Every Business"
     },
     "solutions": {
       "b2b": {
-        "description": "Professional B2B solution. Different pricing per partner and advanced reports.",
-        "title": "B2B POS & Wholesale Management System"
+        "description": "Get professional B2B and wholesale POS solution. Manage partner pricing, invoicing, and advanced reports with ease.",
+        "title": "B2B & Wholesale POS System for Distributors"
       },
       "barsCafes": {
-        "description": "Speed-optimized POS system. Perfect for bars and cafes with high-volume traffic.",
-        "title": "Bar & Cafe POS | Fast Service Point of Sale System"
+        "description": "Get speed-optimized POS for high-volume bars and cafes. Fast checkout, inventory tracking, and shift management built-in.",
+        "title": "Bar & Cafe POS - Fast Service System"
       },
       "clothingBoutiques": {
-        "description": "Specialized POS for fashion retail. Sizes, colors, seasons, and loyalty programs.",
-        "title": "Clothing Store POS | Fashion Retail Management System"
+        "description": "Manage your fashion retail with specialized POS. Track sizes, colors, seasons, and customer loyalty programs effortlessly.",
+        "title": "Clothing & Boutique POS for Fashion"
       },
-      "description": "Discover how Konty POS can transform your business. Specialized solutions for restaurants, cafes, retail stores, and B2B.",
+      "description": "Discover how Konty POS can transform your business. Get specialized solutions for restaurants, cafes, retail stores, and B2B.",
       "fastFood": {
-        "description": "Efficient POS for quick service restaurants. Drive-thru, delivery, and dine-in from one system.",
-        "title": "Fast Food POS System | Quick Service Restaurant Solutions"
+        "description": "Get efficient POS for quick service restaurants. Manage drive-thru, delivery, and dine-in orders from one fast system.",
+        "title": "Fast Food & Quick Service Restaurant POS"
       },
       "grocerySupermarkets": {
-        "description": "Manage thousands of products with ease. Barcode scanning, promotions, and real-time inventory.",
-        "title": "Grocery Store POS | Supermarket Point of Sale System"
+        "description": "Manage thousands of products with ease. Get barcode scanning, promotions, and real-time inventory tracking for your store.",
+        "title": "Grocery & Supermarket POS - Inventory Made Easy"
       },
       "restaurants": {
-        "description": "Complete POS solution for restaurants. Table management, kitchen display, reservations, and analytics.",
-        "title": "Restaurant POS System | Konty for Full-Service Dining"
+        "description": "Get complete POS for full-service restaurants. Manage tables, kitchen display, reservations, and analytics in one system.",
+        "title": "Restaurant POS - Full Service Dining"
       },
-      "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business",
+      "title": "Industry-Specific POS Solutions for Your Business",
       "generalStores": {
-        "description": "Complete POS management for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation.",
-        "title": "General Store POS System | Konty"
+        "description": "Get complete POS for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation included.",
+        "title": "General Store POS System - All-in-One Solution"
       }
     },
     "terms": {
-      "description": "Terms of service for Konty POS system and related services.",
-      "title": "Terms of Service - Konty"
+      "description": "Read the terms of service for Konty POS system and related services. Learn about your rights and our commitments to you.",
+      "title": "Terms of Service - User Agreement"
     }
   },
   "ui": {

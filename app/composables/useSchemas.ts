@@ -519,7 +519,7 @@ export const useSchemas = () => {
         priceCurrency: currency.value,
         availability: 'https://schema.org/InStock',
         name: t('pages.pricing.freeTrial'),
-        description: '15-minute personalized demo',
+        description: 'Personalized Konty demo presentation',
         eligibleDuration: {
           '@type': 'QuantitativeValue',
           value: 15,

@@ -1171,7 +1171,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Pouzdano upravljanje partnerima, profesionalno fakturisanje i kompletno praćenje transakcija. Sve što vam treba za B2B & veleprodaju.",
-          "title": "Konty za B2B i E-fakture"
+          "title": "Konty za B2B i veleprodaju"
         },
         "overview": {
           "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
@@ -1583,104 +1583,104 @@
   },
   "seo": {
     "blog": {
-      "description": "Stručni uvidi, savjeti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako optimizovati vaše poslovanje.",
-      "title": "Blog - Konty POS uvidi i resursi"
+      "description": "Stručni uvidi, savjeti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako da optimizujete poslovanje i povećate prodaju.",
+      "title": "Blog - Savjeti za ugostiteljstvo i trgovinu"
     },
     "clientStories": {
-      "description": "Stvarne priče biznisa koji su transformisali svoje poslovanje sa Konty POS-om.",
-      "title": "Priče o uspjehu klijenata - Konty POS"
+      "description": "Otkrijte stvarne priče biznisa koji su transformisali svoje poslovanje sa Konty POS-om. Pogledajte kako restorani i prodavnice postižu uspjeh.",
+      "title": "Priče o uspjehu klijenata - Stvarni rezultati"
     },
     "contact": {
-      "description": "Kontaktirajte nas sa našim timom. Tu smo da vam pomognemo da izaberete savršeno POS rješenje.",
-      "title": "Kontaktirajte nas - Konty POS"
+      "description": "Kontaktirajte naš tim. Tu smo da vam pomognemo da izaberete savršeno POS rješenje za vaš restoran ili prodavnicu.",
+      "title": "Kontakt - Stručna podrška za kase"
     },
     "dataProcessing": {
-      "description": "Sporazum o obradi podataka između Konty i naših klijenata. Saznajte kako obrađujemo i štitimo vaše lične podatke.",
-      "title": "Obrada podataka - Konty"
+      "description": "Sporazum o obradi podataka između Konty i naših klijenata. Saznajte kako bezbedno obrađujemo i štitimo vaše lične podatke.",
+      "title": "Sporazum o obradi podataka - GDPR usklađenost"
     },
     "demo": {
-      "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
-      "title": "Zakazivanje demo prezentacije - Konty POS"
+      "description": "Pogledajte Konty u akciji uz besplatnu prezentaciju prilagođenu vašem biznisu. Bez obaveza, samo rješenja.",
+      "title": "Zakažite besplatnu demo prezentaciju"
     },
     "home": {
-      "description": "Pouzdane fiskalne kase. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
-      "title": "Konty - POS za ugostiteljstvo i trgovinu"
+      "description": "Otkrijte pouzdane fiskalne kase. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Počnite besplatno danas.",
+      "title": "Fiskalne kase za ugostiteljstvo i trgovinu"
     },
     "partners": {
-      "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rješenja.",
-      "title": "Partnerska mreža - Konty POS"
+      "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rješenja. Očekuju vas konkurentne cijene, obuka i podrška.",
+      "title": "Partnerski program - Postanite distributer"
     },
     "pricing": {
       "description": "Transparentne cijene bez skrivenih troškova. Mjesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana.",
-      "title": "Cijene - Konty POS sistema"
+      "title": "Cjenovnik - Probajte besplatno 30 dana"
     },
     "privacy": {
-      "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca.",
-      "title": "Politika privatnosti - Konty"
+      "description": "Saznajte kako Konty štiti vaše poslovne podatke i privatnost kupaca. Otkrijte naše bezbjednosne prakse i vaša prava.",
+      "title": "Politika privatnosti - Zaštita podataka"
     },
     "products": {
       "description": "Izaberite savršeno POS rješenje za vaš biznis. Specijalizovani sistemi za restorane, kafiće, prodavnice i lance.",
       "download": {
-        "description": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-        "title": "Preuzmi Konty"
+        "description": "Preuzmite Konty POS za vaš uređaj. Dostupno za Windows, Android i web. Besplatno preuzimanje i 30 dana probnog perioda.",
+        "title": "Preuzimanje - Windows, Android i Web"
       },
       "faqdocs": {
-        "description": "Najčešće postavljana pitanja i dokumentacija za Konty",
-        "title": "Najčešće postavljana pitanja i dokumentacija"
+        "description": "Pronađite odgovore na česta pitanja o Konty POS-u. Uputstva za podešavanje, dokumentacija i korisni savjeti na jednom mjestu.",
+        "title": "Česta pitanja i dokumentacija - Pomoć"
       },
       "hospitality": {
-        "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mjestu.",
+        "description": "Otkrijte specijalizovan POS za restorane, kafiće i barove. Upravljajte rezervacijama, porudžbinama, stolovima i dostavom na jednom mjestu.",
         "features": {
-          "description": "Kompletan spisak funkcionalnosti za restoranski POS: upravljanje stolovima, kuhinjski displej, raspored osoblja i još mnogo toga.",
-          "title": "Sve funkcionalnosti za ugostiteljstvo - Konty POS"
+          "description": "Istražite kompletan spisak funkcionalnosti za restoranski POS: upravljanje stolovima, kuhinjski displej, raspored osoblja i više.",
+          "title": "Sve funkcionalnosti za ugostiteljstvo"
         },
-        "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće"
+        "title": "POS sistem za restorane i ugostiteljstvo"
       },
       "retail": {
-        "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
+        "description": "Brza naplata, automatsko upravljanje zalihama i analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
         "features": {
-          "description": "Kompletan spisak funkcionalnosti za maloprodajni POS: upravljanje zalihama, skeniranje barkodova, programi lojalnosti i još mnogo toga.",
-          "title": "Sve funkcionalnosti za maloprodaju - Konty POS"
+          "description": "Istražite kompletan spisak funkcionalnosti za maloprodajni POS: upravljanje zalihama, skeniranje barkodova, programi lojalnosti i više.",
+          "title": "Sve funkcionalnosti za maloprodaju"
         },
-        "title": "Konty za trgovinu - POS terminal sa bar kod čitačem"
+        "title": "POS sistem za trgovinu i maloprodaju"
       },
-      "title": "Konty proizvodi - POS rješenja za sve tipove biznisa"
+      "title": "POS proizvodi i rješenja za svaki biznis"
     },
     "solutions": {
       "b2b": {
-        "description": "Profesionalno B2B rješenje. Različite cijene po partneru i napredni izvještaji.",
-        "title": "Konty za B2B i veleprodaju"
+        "description": "Profesionalno B2B rješenje za veleprodaju. Upravljajte cijenama po partneru, fakturisanjem i naprednim izvještajima.",
+        "title": "B2B i veleprodaja - POS za distributere"
       },
       "barsCafes": {
-        "description": "POS sistem optimizovan za brzinu. Idealan za barove i kafiće sa velikim prometom.",
-        "title": "Konty za barove i kafiće | Brz POS za visok promet"
+        "description": "POS optimizovan za brzinu u barovima i kafićima. Brza naplata, praćenje zaliha i upravljanje smjenama uključeno.",
+        "title": "Kase za barove i kafiće - Brza naplata"
       },
       "clothingBoutiques": {
-        "description": "Specijalizovan POS za modnu industriju. Veličine, boje, sezone i program lojalnosti.",
-        "title": "Konty za prodavnice odjeće | POS za butike"
+        "description": "Upravljajte modnom maloprodajom sa specijalizovanim POS-om. Pratite veličine, boje, sezone i programe lojalnosti.",
+        "title": "Kase za butike i prodavnice odjeće"
       },
-      "description": "Otkrijte kako Konty POS može da unapredi vaše poslovanje. Specijalizovana rješenja za restorane, kafiće, prodavnice i B2B.",
+      "description": "Otkrijte kako Konty POS može da transformiše vaše poslovanje. Specijalizovana rješenja za restorane, kafiće i prodavnice.",
       "fastFood": {
-        "description": "Efikasan POS za restorane brze hrane. Drive-thru, dostava i sala iz jednog sistema.",
-        "title": "Konty za brzu hranu | Fast food POS sistem"
+        "description": "Efikasan POS za restorane brze hrane. Upravljajte drive-thru, dostavom i salom iz jednog brzog sistema.",
+        "title": "Kase za brzu hranu i fast food restorane"
       },
       "grocerySupermarkets": {
-        "description": "Upravljanje hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i real-time inventar.",
-        "title": "Konty za prodavnice hrane | POS za supermarkete"
+        "description": "Upravljajte hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i praćenje zaliha u realnom vremenu.",
+        "title": "Kase za markete i supermarkete - Zalihe lako"
       },
       "restaurants": {
-        "description": "Kompletno POS rješenje za restorane. Upravljanje stolovima, kuhinjski ekran, rezervacije i analitika.",
-        "title": "Konty za restorane | POS sistem za ugostiteljstvo"
+        "description": "Kompletan POS za restorane sa punom uslugom. Upravljajte stolovima, kuhinjskim ekranom, rezervacijama i analitikom.",
+        "title": "Kase za restorane sa punom uslugom"
       },
-      "title": "Konty Rješenja po djelatnostimama | POS sistem prilagođen vašem poslovanju",
+      "title": "POS rješenja prilagođena vašoj djelatnosti",
       "generalStores": {
-        "description": "Kompletno POS upravljanje za prodavnice mješovite robe. Podrška za više smjena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
-        "title": "POS sistem za prodavnice mješovite robe | Konty"
+        "description": "Kompletan POS za prodavnice mješovite robe. Podrška za više smjena, praćenje zaliha i pouzdan offline rad uključen.",
+        "title": "Kase za prodavnice mješovite robe"
       }
     },
     "terms": {
-      "description": "Uslovi korištenja Konty POS sistema i povezanih usluga.",
-      "title": "Uslovi korištenja - Konty"
+      "description": "Pročitajte uslove korištenja Konty POS sistema i povezanih usluga. Saznajte o vašim pravima i našim obavezama.",
+      "title": "Uslovi korištenja - Korisnički ugovor"
     }
   },
   "ui": {
