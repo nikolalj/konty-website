@@ -2,10 +2,11 @@
   "data": {
     "company": {
       "address": {
-        "city": "Belgrade",
+        "city": "Beograd",
+        "country": "Srbija",
         "countryCode": "RS",
         "postalCode": "11000",
-        "region": "Belgrade",
+        "region": "Beograd",
         "street": "Trnska 7"
       },
       "areaServed": ["US", "RS", "ME", "BA", "HR"],
@@ -1681,6 +1682,10 @@
     "terms": {
       "description": "Pročitajte uslove korišćenja Konty POS sistema i povezanih usluga. Saznajte o vašim pravima i našim obavezama.",
       "title": "Uslovi korišćenja - Korisnički ugovor"
+    },
+    "accountDelete": {
+      "description": "Saznajte kako da obrišete svoj Konty nalog i šta se dešava sa vašim podacima. Jednostavan proces brisanja naloga sa jasnim pravilima o čuvanju podataka.",
+      "title": "Brisanje naloga - Obrišite svoj nalog"
     }
   },
   "ui": {

@@ -6,7 +6,7 @@
 
     <div class="prose prose-lg max-w-none">
       <p class="text-gray-600 mb-8">
-        <strong>Last updated:</strong> {{ new Date().toLocaleDateString() }}
+        <strong>Last updated:</strong> December 12, 2025
       </p>
 
       <section class="mb-8">
@@ -239,8 +239,8 @@
           10. International Data Transfers
         </h2>
         <p class="text-gray-700 mb-4">
-          If Konty transfers personal data outside the territory of the Republic
-          of Serbia, it will ensure appropriate safeguards in accordance with
+          If Konty transfers personal data outside the country where it was
+          collected, it will ensure appropriate safeguards in accordance with
           applicable laws, including:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4">
@@ -332,19 +332,13 @@
         <p class="text-gray-700 mb-4">
           For all questions related to data processing, you can contact us:
         </p>
-        <p class="text-gray-700 mb-4">
-          For all questions related to data processing, you can contact us:
-        </p>
-        <ul class="list-none text-gray-700 mb-4">
-          <strong>Email:</strong>
-          privacy@konty.com<br />
-          <strong>Address:</strong>
-          [Your Business Address]<br />
-          <strong>Phone:</strong>
-          [Your Phone Number]<br />
-          <strong>Data Protection Officer:</strong>
-          dpo@konty.com
-        </ul>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="text-gray-700">
+            <strong>Email:</strong> {{ t('data.company.contact.email') }}@konty.com<br>
+            <strong>Address:</strong> {{ t('data.company.address.street') }}, {{ t('data.company.address.postalCode') }} {{ t('data.company.address.city') }}, {{ t('data.company.address.country') }}<br>
+            <strong>Phone:</strong> {{ t('data.company.contact.phone') }}
+          </p>
+        </div>
       </section>
 
       <section class="mb-8">
@@ -352,9 +346,10 @@
           16. Governing Law
         </h2>
         <p class="text-gray-700 mb-4">
-          This Data Processing Agreement is governed by the laws of the Republic
-          of Serbia, including the Law on Personal Data Protection. Any disputes
-          will be subject to the jurisdiction of courts in Belgrade.
+          This Data Processing Agreement is governed by the laws of
+          {{ t('data.company.address.country') }}, including applicable data
+          protection legislation. Any disputes will be subject to the
+          jurisdiction of courts in {{ t('data.company.address.city') }}.
         </p>
       </section>
     </div>
@@ -364,7 +359,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// SEO meta tags
 usePageSeo({
   title: t('seo.dataProcessing.title'),
   description: t('seo.dataProcessing.description')

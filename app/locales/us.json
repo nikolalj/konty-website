@@ -2,11 +2,12 @@
   "data": {
     "company": {
       "address": {
-        "city": "Belgrade",
-        "countryCode": "RS",
-        "postalCode": "11000",
-        "region": "Belgrade",
-        "street": "Trnska 7"
+        "city": "Podgorica",
+        "country": "Montenegro",
+        "countryCode": "ME",
+        "postalCode": "81000",
+        "region": "Podgorica",
+        "street": "Moskovska 153"
       },
       "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
@@ -23,8 +24,8 @@
       "founder": "Nikola Ljumovic",
       "foundingDate": "2021-12-22",
       "geo": {
-        "latitude": "44.8125",
-        "longitude": "20.4612"
+        "latitude": "42.4469",
+        "longitude": "19.2499"
       },
       "knowsAbout": [
         "Point of Sale Systems",
@@ -40,8 +41,8 @@
         "instagram": "https://www.instagram.com/kontypos",
         "linkedin": "https://www.linkedin.com/company/kontypos"
       },
-      "tradeName": "Codeux",
-      "vatID": "112821082"
+      "tradeName": "OllieTech",
+      "vatID": "03554759"
     },
     "products": {
       "name": "Konty POS",
@@ -1681,6 +1682,10 @@
     "terms": {
       "description": "Read the terms of service for Konty POS system and related services. Learn about your rights and our commitments to you.",
       "title": "Terms of Service - User Agreement"
+    },
+    "accountDelete": {
+      "description": "Learn how to delete your Konty account and what happens to your data. Simple account deletion process with clear data retention policies.",
+      "title": "Account Deletion - Delete Your Account"
     }
   },
   "ui": {

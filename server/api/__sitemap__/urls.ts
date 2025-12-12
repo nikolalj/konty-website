@@ -41,6 +41,7 @@ export default defineSitemapEventHandler(() => {
     '/privacy': '2025-12-12',
     '/terms': '2025-12-12',
     '/data-processing': '2025-12-12',
+    '/account-delete': '2025-12-12',
   }
 
   // Return URLs with lastmod dates

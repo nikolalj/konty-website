@@ -3,6 +3,7 @@
     "company": {
       "address": {
         "city": "Podgorica",
+        "country": "Crna Gora",
         "countryCode": "ME",
         "postalCode": "81000",
         "region": "Podgorica",
@@ -1681,6 +1682,10 @@
     "terms": {
       "description": "Pročitajte uslove korištenja Konty POS sistema i povezanih usluga. Saznajte o vašim pravima i našim obavezama.",
       "title": "Uslovi korištenja - Korisnički ugovor"
+    },
+    "accountDelete": {
+      "description": "Saznajte kako da obrišete svoj Konty nalog i šta se dešava sa vašim podacima. Jednostavan proces brisanja naloga sa jasnim pravilima o čuvanju podataka.",
+      "title": "Brisanje naloga - Obrišite svoj nalog"
     }
   },
   "ui": {

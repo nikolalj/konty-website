@@ -4,7 +4,7 @@
 
     <div class="prose prose-lg max-w-none">
       <p class="text-gray-600 mb-8">
-        <strong>Last updated:</strong> {{ new Date().toLocaleDateString() }}
+        <strong>Last updated:</strong> December 12, 2025
       </p>
 
       <section class="mb-8">
@@ -94,7 +94,7 @@
       </section>
 
       <section class="mb-8">
-        <h2 class="text-2xl font-semibent text-gray-900 mb-4">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">
           6. Data and Privacy
         </h2>
         <p class="text-gray-700 mb-4">
@@ -179,9 +179,9 @@
         </p>
         <div class="bg-gray-50 p-4 rounded-lg">
           <p class="text-gray-700">
-            <strong>Email:</strong> legal@konty.com<br />
-            <strong>Address:</strong> [Your Business Address]<br />
-            <strong>Phone:</strong> [Your Phone Number]
+            <strong>Email:</strong> {{ t('data.company.contact.email') }}@konty.com<br>
+            <strong>Address:</strong> {{ t('data.company.address.street') }}, {{ t('data.company.address.postalCode') }} {{ t('data.company.address.city') }}, {{ t('data.company.address.country') }}<br>
+            <strong>Phone:</strong> {{ t('data.company.contact.phone') }}
           </p>
         </div>
       </section>
@@ -192,7 +192,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// SEO meta tags
 usePageSeo({
   title: t('seo.terms.title'),
   description: t('seo.terms.description')

@@ -4,7 +4,7 @@
 
     <div class="prose prose-lg max-w-none">
       <p class="text-gray-600 mb-8">
-        <strong>Last updated:</strong> {{ new Date().toLocaleDateString() }}
+        <strong>Last updated:</strong> December 12, 2025
       </p>
 
       <section class="mb-8">
@@ -274,10 +274,9 @@
         </p>
         <div class="bg-gray-50 p-4 rounded-lg">
           <p class="text-gray-700">
-            <strong>Email:</strong> privacy@konty.com<br />
-            <strong>Address:</strong> [Your Business Address]<br />
-            <strong>Phone:</strong> [Your Phone Number]<br />
-            <strong>Data Protection Officer:</strong> dpo@konty.com
+            <strong>Email:</strong> {{ t('data.company.contact.email') }}@konty.com<br>
+            <strong>Address:</strong> {{ t('data.company.address.street') }}, {{ t('data.company.address.postalCode') }} {{ t('data.company.address.city') }}, {{ t('data.company.address.country') }}<br>
+            <strong>Phone:</strong> {{ t('data.company.contact.phone') }}
           </p>
         </div>
       </section>
@@ -288,7 +287,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use the new simplified SEO composable
 usePageSeo({
   title: t('seo.privacy.title'),
   description: t('seo.privacy.description')

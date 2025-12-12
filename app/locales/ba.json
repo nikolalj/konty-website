@@ -2,11 +2,12 @@
   "data": {
     "company": {
       "address": {
-        "city": "Belgrade",
-        "countryCode": "RS",
-        "postalCode": "11000",
-        "region": "Belgrade",
-        "street": "Trnska 7"
+        "city": "Podgorica",
+        "country": "Crna Gora",
+        "countryCode": "ME",
+        "postalCode": "81000",
+        "region": "Podgorica",
+        "street": "Moskovska 153"
       },
       "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
@@ -23,8 +24,8 @@
       "founder": "Nikola Ljumovic",
       "foundingDate": "2021-12-22",
       "geo": {
-        "latitude": "44.8125",
-        "longitude": "20.4612"
+        "latitude": "42.4469",
+        "longitude": "19.2499"
       },
       "knowsAbout": [
         "POS sistemi",
@@ -40,8 +41,8 @@
         "instagram": "https://www.instagram.com/kontypos",
         "linkedin": "https://www.linkedin.com/company/kontypos"
       },
-      "tradeName": "Codeux",
-      "vatID": "112821082"
+      "tradeName": "OllieTech",
+      "vatID": "03554759"
     },
     "products": {
       "name": "Konty POS",
@@ -1681,6 +1682,10 @@
     "terms": {
       "description": "Pročitajte uslove korištenja Konty POS sistema i povezanih usluga. Saznajte o vašim pravima i našim obavezama.",
       "title": "Uslovi korištenja - Korisnički ugovor"
+    },
+    "accountDelete": {
+      "description": "Saznajte kako da obrišete svoj Konty nalog i šta se dešava sa vašim podacima. Jednostavan proces brisanja naloga sa jasnim pravilima o čuvanju podataka.",
+      "title": "Brisanje naloga - Obrišite svoj nalog"
     }
   },
   "ui": {
