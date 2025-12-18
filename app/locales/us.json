@@ -314,7 +314,7 @@
         "stat1": {
           "description": "Active business locations",
           "suffix": "+",
-          "value": "9000"
+          "value": "9600"
         },
         "stat2": {
           "description": "Years of POS experience",

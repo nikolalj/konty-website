@@ -314,7 +314,7 @@
         "stat1": {
           "description": "Aktivnih poslovnih lokacija",
           "suffix": "+",
-          "value": "9000"
+          "value": "9600"
         },
         "stat2": {
           "description": "Godina iskustva u POS sistemima",
