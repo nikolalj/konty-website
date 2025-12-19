@@ -1905,6 +1905,24 @@
         "forRetail": "Konty for Retail"
       }
     },
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "cookieConsent": {
+      "title": "Optimize Your Experience",
+      "description": "We use cookies to provide you with the best experience and remember your preferences.",
+      "essential": "Essential",
+      "essentialRequired": "(Required)",
+      "analytics": "Product Analytics",
+      "analyticsDescription": "(Improve Konty)",
+      "personalization": "Personalization",
+      "personalizationDescription": "(Relevant content)",
+      "performance": "Performance",
+      "performanceDescription": "(Site speed)",
+      "customize": "Customize",
+      "hide": "Hide",
+      "saveChoices": "Save Choices",
+      "essentialOnly": "Essential Only",
+      "acceptAll": "Accept All",
+      "cookieSettings": "Cookie Settings"
+    }
   }
 }

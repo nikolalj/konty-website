@@ -22,10 +22,10 @@
             <UIcon name="i-lucide-shield-check" class="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
             <div class="flex-1">
               <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
-                Optimize Your Experience
+                {{ t('ui.cookieConsent.title') }}
               </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                We use cookies to personalize your demo experience and understand how businesses use Konty POS.
+                {{ t('ui.cookieConsent.description') }}
               </p>
             </div>
           </div>
@@ -40,9 +40,9 @@
               />
               <div class="flex-1">
                 <span class="text-sm text-gray-700 dark:text-gray-300">
-                  Essential
+                  {{ t('ui.cookieConsent.essential') }}
                 </span>
-                <span class="text-xs text-gray-500 ml-1">(Required)</span>
+                <span class="text-xs text-gray-500 ml-1">{{ t('ui.cookieConsent.essentialRequired') }}</span>
               </div>
             </label>
 
@@ -50,9 +50,9 @@
               <USwitch v-model="preferences.analytics" size="sm" />
               <div class="flex-1">
                 <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                  Product Analytics
+                  {{ t('ui.cookieConsent.analytics') }}
                 </span>
-                <span class="text-xs text-gray-500 ml-1">(Improve Konty)</span>
+                <span class="text-xs text-gray-500 ml-1">{{ t('ui.cookieConsent.analyticsDescription') }}</span>
               </div>
             </label>
 
@@ -60,9 +60,9 @@
               <USwitch v-model="preferences.marketing" size="sm" />
               <div class="flex-1">
                 <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                  Personalization
+                  {{ t('ui.cookieConsent.personalization') }}
                 </span>
-                <span class="text-xs text-gray-500 ml-1">(Relevant content)</span>
+                <span class="text-xs text-gray-500 ml-1">{{ t('ui.cookieConsent.personalizationDescription') }}</span>
               </div>
             </label>
 
@@ -70,9 +70,9 @@
               <USwitch v-model="preferences.performance" size="sm" />
               <div class="flex-1">
                 <span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100">
-                  Performance
+                  {{ t('ui.cookieConsent.performance') }}
                 </span>
-                <span class="text-xs text-gray-500 ml-1">(Site speed)</span>
+                <span class="text-xs text-gray-500 ml-1">{{ t('ui.cookieConsent.performanceDescription') }}</span>
               </div>
             </label>
           </div>
@@ -84,7 +84,7 @@
               variant="ghost"
               @click="showDetails = !showDetails"
             >
-              {{ showDetails ? 'Hide' : 'Customize' }}
+              {{ showDetails ? t('ui.cookieConsent.hide') : t('ui.cookieConsent.customize') }}
             </UButton>
             <div class="flex-1" />
             <UButton
@@ -94,7 +94,7 @@
               variant="soft"
               @click="handleSaveCustom"
             >
-              Save Choices
+              {{ t('ui.cookieConsent.saveChoices') }}
             </UButton>
             <UButton
               size="xs"
@@ -102,7 +102,7 @@
               variant="soft"
               @click="handleEssentialOnly"
             >
-              Essential Only
+              {{ t('ui.cookieConsent.essentialOnly') }}
             </UButton>
             <UButton
               size="xs"
@@ -110,7 +110,7 @@
               class="font-semibold"
               @click="handleAcceptAll"
             >
-              Accept All
+              {{ t('ui.cookieConsent.acceptAll') }}
             </UButton>
           </div>
         </div>
@@ -131,13 +131,13 @@
       v-if="false && !showBanner && consentGiven"
       class="fixed bottom-4 left-4 z-[9998]"
     >
-      <UTooltip text="Cookie Settings">
+      <UTooltip :text="t('ui.cookieConsent.cookieSettings')">
         <UButton
           size="xs"
           color="primary"
           variant="soft"
           icon="i-lucide-settings"
-          aria-label="Cookie Settings"
+          :aria-label="t('ui.cookieConsent.cookieSettings')"
           @click="reopenSettings"
         />
       </UTooltip>
@@ -146,6 +146,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 interface Props {
   delay?: number
 }

@@ -1905,6 +1905,24 @@
         "forRetail": "Konty za trgovinu"
       }
     },
-    "readMore": "Pročitaj više"
+    "readMore": "Pročitaj više",
+    "cookieConsent": {
+      "title": "Optimizujte vaše iskustvo",
+      "description": "Koristimo kolačiće da vam pružimo najbolje iskustvo i zapamtimo vaše preference.",
+      "essential": "Osnovni",
+      "essentialRequired": "(Obavezni)",
+      "analytics": "Analitika proizvoda",
+      "analyticsDescription": "(Poboljšanje Konty-ja)",
+      "personalization": "Personalizacija",
+      "personalizationDescription": "(Relevantan sadržaj)",
+      "performance": "Performanse",
+      "performanceDescription": "(Brzina stranice)",
+      "customize": "Prilagodi",
+      "hide": "Sakrij",
+      "saveChoices": "Sačuvaj izbor",
+      "essentialOnly": "Samo osnovni",
+      "acceptAll": "Prihvati sve",
+      "cookieSettings": "Podešavanja kolačića"
+    }
   }
 }
