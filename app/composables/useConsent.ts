@@ -9,23 +9,31 @@ export const useConsent = () => {
   const COOKIE_OPTIONS = {
     httpOnly: false,
     sameSite: 'lax' as const,
-    maxAge: 31536000 // 1 year
+    maxAge: 31536000, // 1 year
+    path: '/'
   }
 
   // Read/write cookie (works on both server and client)
   const cookie = useCookie<ConsentState>(COOKIE_NAME, COOKIE_OPTIONS)
-  
-  // Initialize state from cookie if exists, ensuring consistency between server and client
-  const consent = useState<ConsentState>('consent.state', () => 
-    cookie.value || {
-      analytics: false,
-      marketing: false,
-      performance: false
-    }
-  )
 
-  // Whether user has made any consent choice
-  const consentGiven = useState<boolean>('consent.given', () => !!cookie.value)
+  // Initialize state - always start with defaults on server to avoid SSR cache issues
+  // The actual cookie value will be read on client mount
+  const consent = useState<ConsentState>('consent.state', () => ({
+    analytics: false,
+    marketing: false,
+    performance: false
+  }))
+
+  // Whether user has made any consent choice - always false on server for consistent SSR
+  const consentGiven = useState<boolean>('consent.given', () => false)
+
+  // Sync state from cookie on client side only
+  if (import.meta.client) {
+    if (cookie.value) {
+      consent.value = cookie.value
+      consentGiven.value = true
+    }
+  }
 
   /**
    * Update consent preferences and persist to cookie
