@@ -38,10 +38,10 @@ export default defineSitemapEventHandler(() => {
     '/blog': '2025-12-12',
 
     // Legal
-    '/privacy': '2025-12-12',
-    '/terms': '2025-12-12',
-    '/data-processing': '2025-12-12',
-    '/account-delete': '2025-12-12',
+    '/privacy': '2025-12-25',
+    '/terms': '2025-12-25',
+    '/data-processing': '2025-12-25',
+    '/account-delete': '2025-12-25',
   }
 
   // Return URLs with lastmod dates
