@@ -1580,6 +1580,583 @@
           "title": "Perfect for General Stores"
         }
       }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "paragraphs": [
+            "Konty (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our point-of-sale software and services.",
+            "By using our Service, you consent to the data practices described in this Privacy Policy. If you do not agree with the practices described in this policy, please do not use our Service."
+          ]
+        },
+        {
+          "title": "2. Information We Collect",
+          "subsections": [
+            {
+              "title": "Information You Provide",
+              "items": [
+                "Account registration information (name, email, business details)",
+                "Payment and billing information",
+                "Business data you input into the system (inventory, sales, customers)",
+                "Support communications and feedback",
+                "Marketing preferences and communication settings"
+              ]
+            },
+            {
+              "title": "Information We Collect Automatically",
+              "items": [
+                "Device information (IP address, browser type, operating system)",
+                "Usage data (features used, time spent, click patterns)",
+                "Log files and system activity",
+                "Cookies and similar tracking technologies",
+                "Location data (if permitted by your device)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. How We Use Your Information",
+          "paragraphs": [
+            "We use the information we collect for the following purposes:"
+          ],
+          "items": [
+            "Providing and maintaining our Service",
+            "Processing transactions and managing your account",
+            "Improving our Service and developing new features",
+            "Providing customer support and technical assistance",
+            "Sending service-related communications and updates",
+            "Marketing communications (with your consent)",
+            "Detecting and preventing fraud or security threats",
+            "Complying with legal obligations"
+          ]
+        },
+        {
+          "title": "4. Information Sharing and Disclosure",
+          "paragraphs": [
+            "We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:"
+          ],
+          "subsections": [
+            {
+              "title": "Service Providers",
+              "paragraphs": [
+                "We may share information with trusted third-party service providers who assist us in operating our Service, such as payment processors, cloud hosting providers, and customer support tools."
+              ]
+            },
+            {
+              "title": "Legal Requirements",
+              "paragraphs": [
+                "We may disclose information if required by law, court order, or government request, or to protect our rights, property, or safety."
+              ]
+            },
+            {
+              "title": "Business Transfers",
+              "paragraphs": [
+                "In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the business transaction."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Data Security",
+          "paragraphs": [
+            "We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction."
+          ],
+          "items": [
+            "Encryption of data in transit and at rest",
+            "Regular security assessments and updates",
+            "Access controls and authentication requirements",
+            "Employee training on data privacy and security",
+            "Regular data backups and disaster recovery procedures"
+          ],
+          "footerParagraphs": [
+            "However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security."
+          ]
+        },
+        {
+          "title": "6. Data Retention",
+          "paragraphs": [
+            "We retain your information for as long as necessary to provide our Service and fulfill the purposes outlined in this Privacy Policy. We may also retain information to comply with legal obligations, resolve disputes, and enforce our agreements."
+          ],
+          "items": [
+            "Account information: Retained while your account is active",
+            "Transaction data: Retained for tax and compliance purposes",
+            "Usage data: Typically retained for up to 2 years for analytics",
+            "Support communications: Retained for up to 3 years"
+          ]
+        },
+        {
+          "title": "7. Your Rights and Choices",
+          "paragraphs": [
+            "Depending on your location, you may have the following rights regarding your personal information:"
+          ],
+          "definitionItems": [
+            { "term": "Access", "definition": "Request a copy of the personal information we hold about you" },
+            { "term": "Correction", "definition": "Request correction of inaccurate or incomplete information" },
+            { "term": "Deletion", "definition": "Request deletion of your personal information" },
+            { "term": "Portability", "definition": "Request transfer of your data to another service" },
+            { "term": "Restriction", "definition": "Request limitation of how we process your information" },
+            { "term": "Objection", "definition": "Object to certain processing activities" },
+            { "term": "Withdraw Consent", "definition": "Withdraw consent for marketing communications" }
+          ],
+          "footerParagraphs": [
+            "To exercise these rights, please contact us using the information provided in the Contact section below."
+          ]
+        },
+        {
+          "title": "8. Cookies and Tracking Technologies",
+          "paragraphs": [
+            "We use cookies and similar tracking technologies to enhance your experience with our Service. You can control cookie settings through your browser preferences."
+          ],
+          "definitionItems": [
+            { "term": "Essential Cookies", "definition": "Required for basic Service functionality" },
+            { "term": "Analytics Cookies", "definition": "Help us understand how you use our Service" },
+            { "term": "Preference Cookies", "definition": "Remember your settings and preferences" },
+            { "term": "Marketing Cookies", "definition": "Used for targeted advertising (with consent)" }
+          ]
+        },
+        {
+          "title": "9. International Data Transfers",
+          "paragraphs": [
+            "Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with applicable data protection laws."
+          ]
+        },
+        {
+          "title": "10. Children's Privacy",
+          "paragraphs": [
+            "Our Service is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will delete it promptly."
+          ]
+        },
+        {
+          "title": "11. Changes to This Privacy Policy",
+          "paragraphs": [
+            "We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date. We encourage you to review this Privacy Policy periodically."
+          ]
+        },
+        {
+          "title": "12. Contact Us",
+          "paragraphs": [
+            "If you have any questions about this Privacy Policy or our privacy practices, please contact us:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Acceptance of Terms",
+          "paragraphs": [
+            "By accessing and using Konty's point-of-sale software and services (\"Service\"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+          ]
+        },
+        {
+          "title": "2. Description of Service",
+          "paragraphs": [
+            "Konty provides cloud-based point-of-sale software solutions for retail and hospitality businesses. Our Service includes inventory management, sales processing, customer management, and reporting tools accessible through web and mobile applications."
+          ]
+        },
+        {
+          "title": "3. User Accounts and Registration",
+          "paragraphs": [
+            "To use our Service, you must create an account and provide accurate, current, and complete information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+          ],
+          "items": [
+            "You must be at least 18 years old to create an account",
+            "You must provide accurate business and contact information",
+            "You are responsible for keeping your account information up to date",
+            "You must not share your account credentials with unauthorized persons"
+          ]
+        },
+        {
+          "title": "4. Acceptable Use",
+          "paragraphs": [
+            "You agree to use the Service only for lawful purposes and in accordance with these Terms. You agree not to:"
+          ],
+          "items": [
+            "Use the Service for any illegal or unauthorized purpose",
+            "Violate any applicable laws or regulations",
+            "Interfere with or disrupt the Service or servers",
+            "Attempt to gain unauthorized access to any part of the Service",
+            "Upload or transmit malicious code or content",
+            "Impersonate any person or entity"
+          ]
+        },
+        {
+          "title": "5. Payment and Billing",
+          "paragraphs": [
+            "Subscription fees are billed in advance on a monthly or annual basis. All fees are non-refundable except as required by law. We reserve the right to modify our pricing with 30 days' notice."
+          ],
+          "items": [
+            "Payment is due upon subscription activation",
+            "Late payments may result in service suspension",
+            "Price changes require 30 days' advance notice",
+            "Cancellation takes effect at the end of the current billing period"
+          ]
+        },
+        {
+          "title": "6. Data and Privacy",
+          "paragraphs": [
+            "We take the privacy and security of your data seriously. Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by reference."
+          ],
+          "items": [
+            "You retain ownership of your business data",
+            "We implement industry-standard security measures",
+            "We do not sell your personal information to third parties",
+            "Data backups are performed regularly for service continuity"
+          ]
+        },
+        {
+          "title": "7. Intellectual Property",
+          "paragraphs": [
+            "The Service and its original content, features, and functionality are owned by Konty and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws."
+          ]
+        },
+        {
+          "title": "8. Service Availability",
+          "paragraphs": [
+            "While we strive to maintain high service availability, we do not guarantee uninterrupted access to the Service. We may perform maintenance that temporarily affects service availability, and we will provide reasonable notice when possible."
+          ]
+        },
+        {
+          "title": "9. Limitation of Liability",
+          "paragraphs": [
+            "In no event shall Konty be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Service."
+          ]
+        },
+        {
+          "title": "10. Termination",
+          "paragraphs": [
+            "We may terminate or suspend your account and access to the Service immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties."
+          ]
+        },
+        {
+          "title": "11. Changes to Terms",
+          "paragraphs": [
+            "We reserve the right to modify these Terms at any time. We will notify users of any material changes via email or through the Service. Your continued use of the Service after such modifications constitutes acceptance of the updated Terms."
+          ]
+        },
+        {
+          "title": "12. Contact Information",
+          "paragraphs": [
+            "If you have any questions about these Terms of Service, please contact us at:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "dataProcessing": {
+      "title": "Data Processing Agreement",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "paragraphs": [
+            "This Data Processing Agreement (\"DPA\") forms part of the agreement between you (\"Customer\" or \"Controller\") and Konty (\"Processor\") and defines the responsibilities and obligations related to the processing of personal data in accordance with applicable data protection laws.",
+            "By using Konty's services, you accept the data processing terms described in this document."
+          ]
+        },
+        {
+          "title": "2. Definitions",
+          "definitionItems": [
+            { "term": "Personal Data", "definition": "any information relating to an identified or identifiable natural person" },
+            { "term": "Controller", "definition": "Customer who determines the purposes and means of processing personal data" },
+            { "term": "Processor", "definition": "Konty who processes personal data on behalf of the Controller" },
+            { "term": "Data Subject", "definition": "an identified or identifiable natural person to whom the personal data relates" },
+            { "term": "Processing", "definition": "any operation or set of operations performed on personal data" }
+          ]
+        },
+        {
+          "title": "3. Subject Matter and Duration of Processing",
+          "paragraphs": [
+            "Konty will process personal data on behalf of the Customer solely for the purposes of providing point-of-sale software services, which includes:"
+          ],
+          "items": [
+            "Sales and transaction management",
+            "Inventory and stock management",
+            "Customer data recording and management",
+            "Reporting and analytics generation",
+            "Technical support and system maintenance"
+          ],
+          "footerParagraphs": [
+            "This DPA remains in effect during the term of the Konty service agreement and terminates upon the termination of the agreement."
+          ]
+        },
+        {
+          "title": "4. Processor Obligations (Konty)",
+          "paragraphs": [
+            "Konty undertakes to:"
+          ],
+          "items": [
+            "Process personal data only in accordance with documented instructions from the Customer",
+            "Ensure that persons authorized to process personal data are committed to confidentiality",
+            "Implement appropriate technical and organizational measures to protect the data",
+            "Not engage other sub-processors without prior written consent from the Customer",
+            "Assist the Customer in fulfilling data subjects' requests to exercise their rights",
+            "Assist the Customer in ensuring compliance with data protection legal obligations",
+            "Delete or return all personal data to the Customer after the end of service provision",
+            "Make available to the Customer all information necessary to demonstrate compliance"
+          ]
+        },
+        {
+          "title": "5. Controller Obligations (Customer)",
+          "paragraphs": [
+            "The Customer undertakes to:"
+          ],
+          "items": [
+            "Be responsible for the lawfulness of personal data processing",
+            "Provide clear and documented instructions regarding data processing",
+            "Ensure that there is a legal basis for data processing",
+            "Inform data subjects about processing in accordance with the law",
+            "Respond to data subjects' requests related to their rights"
+          ]
+        },
+        {
+          "title": "6. Data Security",
+          "paragraphs": [
+            "Konty implements the following data protection measures:"
+          ],
+          "subsections": [
+            {
+              "title": "Technical Measures",
+              "items": [
+                "Encryption of data in transit and at rest",
+                "Regular backup procedures and disaster recovery plan",
+                "Protection against unauthorized system access",
+                "Monitoring and detection of security incidents",
+                "Regular updating and maintenance of security systems"
+              ]
+            },
+            {
+              "title": "Organizational Measures",
+              "items": [
+                "Access control and employee authorization",
+                "Employee training on data protection",
+                "Confidentiality agreements with all employees",
+                "Data security policies and procedures",
+                "Regular risk assessment and security audits"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "7. Sub-processors",
+          "paragraphs": [
+            "Konty may engage third parties (sub-processors) to perform certain processing activities. Current sub-processors include:"
+          ],
+          "items": [
+            "Cloud infrastructure and hosting providers",
+            "Payment and financial service providers",
+            "Analytics and monitoring service providers"
+          ],
+          "footerParagraphs": [
+            "Konty will inform the Customer of any planned change in sub-processors and provide an opportunity to object. All sub-processors will be contractually bound to the same data protection obligations as Konty."
+          ]
+        },
+        {
+          "title": "8. Data Breaches",
+          "paragraphs": [
+            "In the event of a personal data breach, Konty will:"
+          ],
+          "items": [
+            "Without undue delay, and no later than 72 hours after becoming aware, notify the Customer of the breach",
+            "Provide all relevant information about the nature and scope of the breach",
+            "Take appropriate measures to mitigate and remediate the consequences",
+            "Document all incidents and measures taken",
+            "Cooperate with the Customer in notifying competent authorities and data subjects, if necessary"
+          ]
+        },
+        {
+          "title": "9. Data Subject Rights",
+          "paragraphs": [
+            "Konty will assist the Customer in fulfilling data subjects' requests for:"
+          ],
+          "items": [
+            "Access to personal data",
+            "Rectification of inaccurate data",
+            "Erasure of data (\"right to be forgotten\")",
+            "Restriction of processing",
+            "Data portability",
+            "Objection to processing"
+          ],
+          "footerParagraphs": [
+            "Konty will respond to requests within a reasonable time, typically within 30 days, unless additional time is needed for complex requests."
+          ]
+        },
+        {
+          "title": "10. International Data Transfers",
+          "paragraphs": [
+            "If Konty transfers personal data outside the country where it was collected, it will ensure appropriate safeguards in accordance with applicable laws, including:"
+          ],
+          "items": [
+            "Standard contractual clauses approved by competent authorities",
+            "Transfer to countries with adequate level of data protection",
+            "Specific derogations provided by law"
+          ]
+        },
+        {
+          "title": "11. Audit and Inspection",
+          "paragraphs": [
+            "Konty will allow the Customer or their authorized auditor to conduct audits of data protection measures, subject to reasonable notice and respect for business confidentiality and security requirements of Konty's systems.",
+            "Konty will regularly conduct internal audits and provide relevant certificates and evidence of compliance upon Customer's request."
+          ]
+        },
+        {
+          "title": "12. Data Return and Deletion",
+          "paragraphs": [
+            "After the end of service provision, Konty will, at the Customer's choice:"
+          ],
+          "items": [
+            "Return all personal data to the Customer in a structured, standard, and machine-readable format",
+            "Securely delete all personal data from its systems, including all copies"
+          ],
+          "footerParagraphs": [
+            "Deletion will be performed within 90 days after the termination of the agreement, unless law requires retention of certain data."
+          ]
+        },
+        {
+          "title": "13. Liability and Limitations",
+          "paragraphs": [
+            "Konty is liable for damages caused by breach of this DPA in accordance with the general terms of service.",
+            "Konty will not be liable for breaches caused by:"
+          ],
+          "items": [
+            "Unlawful instructions from the Customer",
+            "Actions of the Customer or their employees",
+            "Force majeure or circumstances beyond Konty's control"
+          ]
+        },
+        {
+          "title": "14. Amendments",
+          "paragraphs": [
+            "Konty reserves the right to amend this DPA to comply with legal changes or changes in business operations. You will be notified of any significant changes at least 30 days in advance.",
+            "Continued use of the service after the changes take effect constitutes acceptance of the amended DPA."
+          ]
+        },
+        {
+          "title": "15. Contact Information",
+          "paragraphs": [
+            "For all questions related to data processing, you can contact us:"
+          ],
+          "showContactInfo": true
+        },
+        {
+          "title": "16. Governing Law",
+          "paragraphs": [
+            "This Data Processing Agreement is governed by the laws of the country of operation, including applicable data protection legislation. Any disputes will be subject to the jurisdiction of competent courts."
+          ]
+        }
+      ]
+    },
+    "accountDelete": {
+      "title": "Account Deletion",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. How to Delete Your Account",
+          "paragraphs": [
+            "If you wish to delete your Konty account and all associated data, you can do so through the following methods:"
+          ],
+          "subsections": [
+            {
+              "title": "Option 1: In-App Deletion",
+              "paragraphs": [
+                "You can delete your account directly from the Konty application:"
+              ],
+              "orderedItems": [
+                "Open the Konty app and log in to your account",
+                "Go to Settings",
+                "Select \"Account\"",
+                "Tap \"Delete Account\"",
+                "Confirm your decision when prompted"
+              ]
+            },
+            {
+              "title": "Option 2: Email Request",
+              "paragraphs": [
+                "You can request account deletion by sending an email to our support team:"
+              ],
+              "items": [
+                "Contact us via the email listed in the Contact section",
+                "Include \"Account Deletion Request\" in the subject line",
+                "Provide the email address associated with your Konty account",
+                "We will process your request within 30 days"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "2. What Data Will Be Deleted",
+          "paragraphs": [
+            "When you delete your account, the following data will be permanently removed:"
+          ],
+          "items": [
+            "Your account profile and login credentials",
+            "Business information and settings",
+            "Product catalog and inventory data",
+            "Customer records and contact information",
+            "Sales history and transaction records",
+            "Reports and analytics data",
+            "Any uploaded images or documents",
+            "User preferences and customizations"
+          ]
+        },
+        {
+          "title": "3. Data Retention After Deletion",
+          "paragraphs": [
+            "Please note that some data may be retained for a limited period after account deletion:"
+          ],
+          "definitionItems": [
+            { "term": "Legal compliance", "definition": "We may retain certain records as required by tax laws, fiscal regulations, or other legal obligations (typically for 5-10 years depending on jurisdiction)" },
+            { "term": "Backup systems", "definition": "Data in backup systems may take up to 90 days to be fully purged" },
+            { "term": "Anonymized data", "definition": "Aggregated, anonymized statistics that cannot identify you may be retained for analytics purposes" }
+          ]
+        },
+        {
+          "title": "4. Before You Delete",
+          "paragraphs": [
+            "We recommend taking the following steps before deleting your account:"
+          ],
+          "definitionItems": [
+            { "term": "Export your data", "definition": "Download any reports, sales history, or other data you may need for your records" },
+            { "term": "Cancel active subscriptions", "definition": "Ensure any active subscriptions are canceled to avoid future charges" },
+            { "term": "Settle outstanding balances", "definition": "Pay any outstanding invoices or fees" },
+            { "term": "Inform your team", "definition": "If you have multiple users, notify them before deletion" }
+          ]
+        },
+        {
+          "title": "5. Account Deletion Timeline",
+          "paragraphs": [
+            "Once you initiate account deletion:"
+          ],
+          "definitionItems": [
+            { "term": "Immediate", "definition": "Your account will be deactivated and you will be logged out" },
+            { "term": "Within 30 days", "definition": "All personal data will be deleted from our active systems" },
+            { "term": "Within 90 days", "definition": "Data will be removed from backup systems" }
+          ]
+        },
+        {
+          "title": "6. Reactivation",
+          "paragraphs": [
+            "Account deletion is permanent and cannot be undone. If you wish to use Konty again after deleting your account, you will need to create a new account. Your previous data cannot be recovered."
+          ]
+        },
+        {
+          "title": "7. Contact Us",
+          "paragraphs": [
+            "If you have any questions about account deletion or need assistance, please contact us:"
+          ],
+          "showContactInfo": true
+        }
+      ]
     }
   },
   "seo": {

@@ -1580,6 +1580,583 @@
           "title": "Savršeno za prodavnice mješovite robe"
         }
       }
+    },
+    "privacy": {
+      "title": "Politika privatnosti",
+      "lastUpdated": "Posljednja izmjena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Uvod",
+          "paragraphs": [
+            "Konty (\"mi\", \"naš\" ili \"nas\") posvećen je zaštiti vaše privatnosti. Ova Politika privatnosti objašnjava kako prikupljamo, koristimo, otkrivamo i štitimo vaše informacije kada koristite naš softver i usluge za prodajno mjesto.",
+            "Korišćenjem naše Usluge pristajete na prakse u vezi sa podacima opisane u ovoj Politici privatnosti. Ako se ne slažete sa praksama opisanim u ovoj politici, molimo vas da ne koristite našu Uslugu."
+          ]
+        },
+        {
+          "title": "2. Informacije koje prikupljamo",
+          "subsections": [
+            {
+              "title": "Informacije koje nam dostavljate",
+              "items": [
+                "Informacije o registraciji naloga (ime, email, poslovni podaci)",
+                "Informacije o plaćanju i fakturisanju",
+                "Poslovni podaci koje unosite u sistem (zalihe, prodaja, kupci)",
+                "Komunikacija sa podrškom i povratne informacije",
+                "Marketinške preferencije i podešavanja komunikacije"
+              ]
+            },
+            {
+              "title": "Informacije koje automatski prikupljamo",
+              "items": [
+                "Informacije o uređaju (IP adresa, tip pretraživača, operativni sistem)",
+                "Podaci o korišćenju (korišćene funkcije, utrošeno vrijeme, obrasci klikova)",
+                "Log datoteke i sistemska aktivnost",
+                "Kolačići i slične tehnologije praćenja",
+                "Podaci o lokaciji (ako to dozvoljava vaš uređaj)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. Kako koristimo vaše informacije",
+          "paragraphs": [
+            "Informacije koje prikupljamo koristimo u sljedeće svrhe:"
+          ],
+          "items": [
+            "Pružanje i održavanje naše Usluge",
+            "Obrada transakcija i upravljanje vašim nalogom",
+            "Poboljšanje naše Usluge i razvoj novih funkcija",
+            "Pružanje korisničke podrške i tehničke pomoći",
+            "Slanje komunikacija i ažuriranja vezanih za uslugu",
+            "Marketinške komunikacije (uz vašu saglasnost)",
+            "Otkrivanje i sprječavanje prevara ili bezbjednosnih prijetnji",
+            "Usklađenost sa zakonskim obavezama"
+          ]
+        },
+        {
+          "title": "4. Dijeljenje i otkrivanje informacija",
+          "paragraphs": [
+            "Ne prodajemo, ne trgujemo niti iznajmljujemo vaše lične podatke trećim stranama. Možemo podijeliti vaše informacije u sljedećim okolnostima:"
+          ],
+          "subsections": [
+            {
+              "title": "Pružaoci usluga",
+              "paragraphs": [
+                "Možemo dijeliti informacije sa pouzdanim pružaocima usluga treće strane koji nam pomažu u radu naše Usluge, kao što su procesori plaćanja, pružaoci cloud hostinga i alati za korisničku podršku."
+              ]
+            },
+            {
+              "title": "Zakonski zahtjevi",
+              "paragraphs": [
+                "Možemo otkriti informacije ako to zahtijeva zakon, sudski nalog ili zahtjev vlade, ili radi zaštite naših prava, imovine ili bezbjednosti."
+              ]
+            },
+            {
+              "title": "Poslovni transferi",
+              "paragraphs": [
+                "U slučaju spajanja, akvizicije ili prodaje imovine, vaše informacije mogu biti prenijete kao dio poslovne transakcije."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Bezbjednost podataka",
+          "paragraphs": [
+            "Primjenjujemo odgovarajuće tehničke i organizacione bezbjednosne mjere za zaštitu vaših informacija od neovlašćenog pristupa, izmjene, otkrivanja ili uništenja."
+          ],
+          "items": [
+            "Enkripcija podataka u prenosu i u mirovanju",
+            "Redovne bezbjednosne procjene i ažuriranja",
+            "Kontrole pristupa i zahtjevi za autentifikaciju",
+            "Obuka zaposlenih o privatnosti i bezbjednosti podataka",
+            "Redovne rezervne kopije podataka i procedure za oporavak od katastrofe"
+          ],
+          "footerParagraphs": [
+            "Međutim, nijedna metoda prenosa preko interneta ili elektronskog skladištenja nije 100% bezbjedna. Iako se trudimo da zaštitimo vaše informacije, ne možemo garantovati apsolutnu bezbjednost."
+          ]
+        },
+        {
+          "title": "6. Čuvanje podataka",
+          "paragraphs": [
+            "Čuvamo vaše informacije onoliko dugo koliko je potrebno za pružanje naše Usluge i ispunjenje svrha navedenih u ovoj Politici privatnosti. Takođe možemo zadržati informacije radi usklađenosti sa zakonskim obavezama, rješavanja sporova i sprovođenja naših ugovora."
+          ],
+          "items": [
+            "Informacije o nalogu: Čuvaju se dok je vaš nalog aktivan",
+            "Podaci o transakcijama: Čuvaju se za poreske i regulatorne svrhe",
+            "Podaci o korišćenju: Obično se čuvaju do 2 godine za analitiku",
+            "Komunikacija sa podrškom: Čuva se do 3 godine"
+          ]
+        },
+        {
+          "title": "7. Vaša prava i izbori",
+          "paragraphs": [
+            "U zavisnosti od vaše lokacije, možete imati sljedeća prava u vezi sa vašim ličnim informacijama:"
+          ],
+          "definitionItems": [
+            { "term": "Pristup", "definition": "Zatražite kopiju ličnih podataka koje čuvamo o vama" },
+            { "term": "Ispravka", "definition": "Zatražite ispravku netačnih ili nepotpunih informacija" },
+            { "term": "Brisanje", "definition": "Zatražite brisanje vaših ličnih podataka" },
+            { "term": "Prenosivost", "definition": "Zatražite prenos vaših podataka drugoj usluzi" },
+            { "term": "Ograničenje", "definition": "Zatražite ograničenje načina na koji obrađujemo vaše informacije" },
+            { "term": "Prigovor", "definition": "Prigovorite određenim aktivnostima obrade" },
+            { "term": "Povlačenje saglasnosti", "definition": "Povucite saglasnost za marketinške komunikacije" }
+          ],
+          "footerParagraphs": [
+            "Da biste ostvarili ova prava, kontaktirajte nas koristeći informacije navedene u odjeljku Kontakt ispod."
+          ]
+        },
+        {
+          "title": "8. Kolačići i tehnologije praćenja",
+          "paragraphs": [
+            "Koristimo kolačiće i slične tehnologije praćenja da bismo poboljšali vaše iskustvo sa našom Uslugom. Možete kontrolisati podešavanja kolačića putem preferencija vašeg pretraživača."
+          ],
+          "definitionItems": [
+            { "term": "Neophodni kolačići", "definition": "Potrebni za osnovnu funkcionalnost Usluge" },
+            { "term": "Analitički kolačići", "definition": "Pomažu nam da razumijemo kako koristite našu Uslugu" },
+            { "term": "Kolačići preferencija", "definition": "Pamte vaša podešavanja i preferencije" },
+            { "term": "Marketinški kolačići", "definition": "Koriste se za ciljano oglašavanje (uz saglasnost)" }
+          ]
+        },
+        {
+          "title": "9. Međunarodni prenos podataka",
+          "paragraphs": [
+            "Vaše informacije mogu biti prenijete i obrađene u zemljama koje nijesu zemlja vašeg prebivališta. Obezbjeđujemo odgovarajuće zaštitne mjere za zaštitu vaših informacija u skladu sa važećim zakonima o zaštiti podataka."
+          ]
+        },
+        {
+          "title": "10. Privatnost djece",
+          "paragraphs": [
+            "Naša Usluga nije namijenjena djeci mlađoj od 13 godina. Ne prikupljamo svjesno lične podatke djece mlađe od 13 godina. Ako saznamo da smo prikupili informacije od djeteta mlađeg od 13 godina, odmah ćemo ih izbrisati."
+          ]
+        },
+        {
+          "title": "11. Promjene ove Politike privatnosti",
+          "paragraphs": [
+            "Možemo povremeno ažurirati ovu Politiku privatnosti. Obavijestićemo vas o svim značajnim promjenama objavljivanjem nove Politike privatnosti na ovoj stranici i ažuriranjem datuma \"Posljednja izmjena\". Preporučujemo vam da povremeno pregledate ovu Politiku privatnosti."
+          ]
+        },
+        {
+          "title": "12. Kontaktirajte nas",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o ovoj Politici privatnosti ili našim praksama privatnosti, kontaktirajte nas:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "terms": {
+      "title": "Uslovi korišćenja",
+      "lastUpdated": "Posljednja izmjena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Prihvatanje uslova",
+          "paragraphs": [
+            "Pristupom i korišćenjem Konty softvera i usluga za prodajno mjesto (\"Usluga\"), prihvatate i slažete se da budete obavezani odredbama ovog ugovora. Ako se ne slažete da poštujete navedeno, molimo vas da ne koristite ovu uslugu."
+          ]
+        },
+        {
+          "title": "2. Opis usluge",
+          "paragraphs": [
+            "Konty pruža softverska rješenja za prodajna mjesta zasnovana na cloud tehnologiji za maloprodajne i ugostiteljske objekte. Naša Usluga uključuje upravljanje zalihama, obradu prodaje, upravljanje kupcima i alate za izvještavanje dostupne putem web i mobilnih aplikacija."
+          ]
+        },
+        {
+          "title": "3. Korisnički nalozi i registracija",
+          "paragraphs": [
+            "Da biste koristili našu Uslugu, morate kreirati nalog i pružiti tačne, aktuelne i potpune informacije. Vi ste odgovorni za održavanje povjerljivosti vaših akreditiva naloga i za sve aktivnosti koje se odvijaju pod vašim nalogom."
+          ],
+          "items": [
+            "Morate imati najmanje 18 godina da biste kreirali nalog",
+            "Morate pružiti tačne poslovne i kontakt informacije",
+            "Vi ste odgovorni za održavanje ažurnih informacija o nalogu",
+            "Ne smijete dijeliti akreditive naloga sa neovlašćenim osobama"
+          ]
+        },
+        {
+          "title": "4. Prihvatljivo korišćenje",
+          "paragraphs": [
+            "Slažete se da ćete koristiti Uslugu samo u zakonite svrhe i u skladu sa ovim Uslovima. Slažete se da nećete:"
+          ],
+          "items": [
+            "Koristiti Uslugu u bilo koju nezakonitu ili neovlašćenu svrhu",
+            "Kršiti bilo koje važeće zakone ili propise",
+            "Ometati ili remetiti Uslugu ili servere",
+            "Pokušavati da dobijete neovlašćen pristup bilo kom dijelu Usluge",
+            "Otpremati ili prenositi zlonamjerni kod ili sadržaj",
+            "Lažno se predstavljati kao bilo koja osoba ili entitet"
+          ]
+        },
+        {
+          "title": "5. Plaćanje i naplata",
+          "paragraphs": [
+            "Pretplatničke naknade se naplaćuju unaprijed na mjesečnoj ili godišnjoj osnovi. Sve naknade su nepovratne osim ako zakon nalaže drugačije. Zadržavamo pravo da izmijenimo cijene uz obavještenje 30 dana unaprijed."
+          ],
+          "items": [
+            "Plaćanje dospijeva po aktivaciji pretplate",
+            "Kašnjenje u plaćanju može dovesti do suspenzije usluge",
+            "Promjene cijena zahtijevaju obavještenje 30 dana unaprijed",
+            "Otkazivanje stupa na snagu na kraju tekućeg obračunskog perioda"
+          ]
+        },
+        {
+          "title": "6. Podaci i privatnost",
+          "paragraphs": [
+            "Ozbiljno shvatamo privatnost i bezbjednost vaših podataka. Vaše korišćenje Usluge takođe je regulisano našom Politikom privatnosti, koja je uključena u ove Uslove kao referenca."
+          ],
+          "items": [
+            "Vi zadržavate vlasništvo nad vašim poslovnim podacima",
+            "Primjenjujemo bezbjednosne mjere prema industrijskim standardima",
+            "Ne prodajemo vaše lične podatke trećim stranama",
+            "Rezervne kopije podataka se redovno prave za kontinuitet usluge"
+          ]
+        },
+        {
+          "title": "7. Intelektualna svojina",
+          "paragraphs": [
+            "Usluga i njen originalni sadržaj, funkcije i funkcionalnost u vlasništvu su Konty-ja i zaštićeni su međunarodnim zakonima o autorskim pravima, žigovima, patentima, poslovnim tajnama i drugim zakonima o intelektualnoj svojini."
+          ]
+        },
+        {
+          "title": "8. Dostupnost usluge",
+          "paragraphs": [
+            "Iako se trudimo da održimo visoku dostupnost usluge, ne garantujemo neprekinut pristup Usluzi. Možemo obavljati održavanje koje privremeno utiče na dostupnost usluge, i obavijestićemo vas unaprijed kada je to moguće."
+          ]
+        },
+        {
+          "title": "9. Ograničenje odgovornosti",
+          "paragraphs": [
+            "Ni u kom slučaju Konty neće biti odgovoran za bilo kakvu indirektnu, slučajnu, posebnu, posljedičnu ili kaznenu štetu, uključujući bez ograničenja, gubitak profita, podataka, upotrebe, dobre volje ili drugih nematerijalnih gubitaka, koji proizilaze iz vašeg korišćenja Usluge."
+          ]
+        },
+        {
+          "title": "10. Prestanak",
+          "paragraphs": [
+            "Možemo ukinuti ili suspendovati vaš nalog i pristup Usluzi odmah, bez prethodnog obavještenja, za ponašanje za koje vjerujemo da krši ove Uslove ili je štetno za druge korisnike, nas ili treće strane."
+          ]
+        },
+        {
+          "title": "11. Promjene uslova",
+          "paragraphs": [
+            "Zadržavamo pravo da izmijenimo ove Uslove u bilo kom trenutku. Obavijestićemo korisnike o svim značajnim promjenama putem emaila ili putem Usluge. Vaše nastavljeno korišćenje Usluge nakon takvih izmjena predstavlja prihvatanje ažuriranih Uslova."
+          ]
+        },
+        {
+          "title": "12. Kontakt informacije",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o ovim Uslovima korišćenja, kontaktirajte nas na:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "dataProcessing": {
+      "title": "Ugovor o obradi podataka",
+      "lastUpdated": "Posljednja izmjena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Uvod",
+          "paragraphs": [
+            "Ovaj Ugovor o obradi podataka (\"UOP\") čini dio ugovora između vas (\"Korisnik\" ili \"Rukovalac\") i Konty-ja (\"Obrađivač\") i definiše odgovornosti i obaveze vezane za obradu ličnih podataka u skladu sa važećim zakonima o zaštiti podataka.",
+            "Korišćenjem Konty usluga, prihvatate uslove obrade podataka opisane u ovom dokumentu."
+          ]
+        },
+        {
+          "title": "2. Definicije",
+          "definitionItems": [
+            { "term": "Lični podaci", "definition": "sve informacije koje se odnose na identifikovano ili identifikovano fizičko lice" },
+            { "term": "Rukovalac", "definition": "Korisnik koji određuje svrhe i sredstva obrade ličnih podataka" },
+            { "term": "Obrađivač", "definition": "Konty koji obrađuje lične podatke u ime Rukovaoca" },
+            { "term": "Lice na koje se podaci odnose", "definition": "identifikovano ili identifikovano fizičko lice na koje se lični podaci odnose" },
+            { "term": "Obrada", "definition": "bilo koja operacija ili skup operacija koje se vrše nad ličnim podacima" }
+          ]
+        },
+        {
+          "title": "3. Predmet i trajanje obrade",
+          "paragraphs": [
+            "Konty će obrađivati lične podatke u ime Korisnika isključivo u svrhu pružanja usluga softvera za prodajno mjesto, što uključuje:"
+          ],
+          "items": [
+            "Upravljanje prodajom i transakcijama",
+            "Upravljanje zalihama i robom",
+            "Evidentiranje i upravljanje podacima o kupcima",
+            "Generisanje izvještaja i analitike",
+            "Tehnička podrška i održavanje sistema"
+          ],
+          "footerParagraphs": [
+            "Ovaj UOP ostaje na snazi tokom trajanja ugovora o Konty usluzi i prestaje po prestanku ugovora."
+          ]
+        },
+        {
+          "title": "4. Obaveze obrađivača (Konty)",
+          "paragraphs": [
+            "Konty se obavezuje da:"
+          ],
+          "items": [
+            "Obrađuje lične podatke samo u skladu sa dokumentovanim uputstvima Korisnika",
+            "Osigura da su lica ovlašćena za obradu ličnih podataka obavezana povjerljivošću",
+            "Primijeni odgovarajuće tehničke i organizacione mjere za zaštitu podataka",
+            "Ne angažuje druge podobrađivače bez prethodne pisane saglasnosti Korisnika",
+            "Pomaže Korisniku u ispunjavanju zahtjeva lica na koja se podaci odnose za ostvarivanje njihovih prava",
+            "Pomaže Korisniku u obezbjeđivanju usklađenosti sa zakonskim obavezama zaštite podataka",
+            "Briše ili vraća sve lične podatke Korisniku nakon završetka pružanja usluge",
+            "Stavi na raspolaganje Korisniku sve informacije potrebne za dokazivanje usklađenosti"
+          ]
+        },
+        {
+          "title": "5. Obaveze rukovaoca (Korisnik)",
+          "paragraphs": [
+            "Korisnik se obavezuje da:"
+          ],
+          "items": [
+            "Bude odgovoran za zakonitost obrade ličnih podataka",
+            "Pruži jasna i dokumentovana uputstva u vezi sa obradom podataka",
+            "Osigura da postoji pravni osnov za obradu podataka",
+            "Informiše lica na koja se podaci odnose o obradi u skladu sa zakonom",
+            "Odgovori na zahtjeve lica na koja se podaci odnose u vezi sa njihovim pravima"
+          ]
+        },
+        {
+          "title": "6. Bezbjednost podataka",
+          "paragraphs": [
+            "Konty primjenjuje sljedeće mjere zaštite podataka:"
+          ],
+          "subsections": [
+            {
+              "title": "Tehničke mjere",
+              "items": [
+                "Enkripcija podataka u prenosu i u mirovanju",
+                "Redovne procedure pravljenja rezervnih kopija i plan oporavka od katastrofe",
+                "Zaštita od neovlašćenog pristupa sistemu",
+                "Nadgledanje i otkrivanje bezbjednosnih incidenata",
+                "Redovno ažuriranje i održavanje bezbjednosnih sistema"
+              ]
+            },
+            {
+              "title": "Organizacione mjere",
+              "items": [
+                "Kontrola pristupa i ovlašćenje zaposlenih",
+                "Obuka zaposlenih o zaštiti podataka",
+                "Ugovori o povjerljivosti sa svim zaposlenima",
+                "Politike i procedure bezbjednosti podataka",
+                "Redovna procjena rizika i bezbjednosne revizije"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "7. Podobrađivači",
+          "paragraphs": [
+            "Konty može angažovati treće strane (podobrađivače) za obavljanje određenih aktivnosti obrade. Trenutni podobrađivači uključuju:"
+          ],
+          "items": [
+            "Pružaoce cloud infrastrukture i hostinga",
+            "Pružaoce usluga plaćanja i finansijskih usluga",
+            "Pružaoce usluga analitike i nadgledanja"
+          ],
+          "footerParagraphs": [
+            "Konty će obavijestiti Korisnika o svakoj planiranoj promjeni podobrađivača i pružiti mogućnost prigovora. Svi podobrađivači će biti ugovorom obavezani istim obavezama zaštite podataka kao Konty."
+          ]
+        },
+        {
+          "title": "8. Povrede podataka",
+          "paragraphs": [
+            "U slučaju povrede ličnih podataka, Konty će:"
+          ],
+          "items": [
+            "Bez nepotrebnog odlaganja, a najkasnije 72 sata nakon saznanja, obavijestiti Korisnika o povredi",
+            "Pružiti sve relevantne informacije o prirodi i obimu povrede",
+            "Preduzeti odgovarajuće mjere za ublažavanje i otklanjanje posljedica",
+            "Dokumentovati sve incidente i preduzete mjere",
+            "Sarađivati sa Korisnikom u obavještavanju nadležnih organa i lica na koja se podaci odnose, ako je potrebno"
+          ]
+        },
+        {
+          "title": "9. Prava lica na koja se podaci odnose",
+          "paragraphs": [
+            "Konty će pomoći Korisniku u ispunjavanju zahtjeva lica na koja se podaci odnose za:"
+          ],
+          "items": [
+            "Pristup ličnim podacima",
+            "Ispravku netačnih podataka",
+            "Brisanje podataka (\"pravo na zaborav\")",
+            "Ograničenje obrade",
+            "Prenosivost podataka",
+            "Prigovor na obradu"
+          ],
+          "footerParagraphs": [
+            "Konty će odgovoriti na zahtjeve u razumnom roku, obično u roku od 30 dana, osim ako je potrebno dodatno vrijeme za složene zahtjeve."
+          ]
+        },
+        {
+          "title": "10. Međunarodni prenos podataka",
+          "paragraphs": [
+            "Ako Konty prenosi lične podatke izvan zemlje u kojoj su prikupljeni, osiguraće odgovarajuće zaštitne mjere u skladu sa važećim zakonima, uključujući:"
+          ],
+          "items": [
+            "Standardne ugovorne klauzule odobrene od strane nadležnih organa",
+            "Prenos u zemlje sa adekvatnim nivoom zaštite podataka",
+            "Specifična odstupanja predviđena zakonom"
+          ]
+        },
+        {
+          "title": "11. Revizija i inspekcija",
+          "paragraphs": [
+            "Konty će omogućiti Korisniku ili njegovom ovlašćenom revizoru da sprovede revizije mjera zaštite podataka, uz razumno obavještenje i poštovanje poslovne povjerljivosti i bezbjednosnih zahtjeva Konty sistema.",
+            "Konty će redovno sprovoditi interne revizije i pružati relevantne sertifikate i dokaze o usklađenosti na zahtjev Korisnika."
+          ]
+        },
+        {
+          "title": "12. Vraćanje i brisanje podataka",
+          "paragraphs": [
+            "Nakon završetka pružanja usluge, Konty će, po izboru Korisnika:"
+          ],
+          "items": [
+            "Vratiti sve lične podatke Korisniku u strukturiranom, standardnom i mašinski čitljivom formatu",
+            "Bezbedno izbrisati sve lične podatke iz svojih sistema, uključujući sve kopije"
+          ],
+          "footerParagraphs": [
+            "Brisanje će biti izvršeno u roku od 90 dana nakon prestanka ugovora, osim ako zakon zahtijeva čuvanje određenih podataka."
+          ]
+        },
+        {
+          "title": "13. Odgovornost i ograničenja",
+          "paragraphs": [
+            "Konty je odgovoran za štetu prouzrokovanu kršenjem ovog UOP-a u skladu sa opštim uslovima korišćenja.",
+            "Konty neće biti odgovoran za povrede prouzrokovane:"
+          ],
+          "items": [
+            "Nezakonitim uputstvima Korisnika",
+            "Radnjama Korisnika ili njegovih zaposlenih",
+            "Višom silom ili okolnostima van kontrole Konty-ja"
+          ]
+        },
+        {
+          "title": "14. Izmjene",
+          "paragraphs": [
+            "Konty zadržava pravo da izmijeni ovaj UOP radi usklađivanja sa zakonskim promjenama ili promjenama u poslovanju. Bićete obaviješteni o svim značajnim promjenama najmanje 30 dana unaprijed.",
+            "Nastavljeno korišćenje usluge nakon stupanja promjena na snagu predstavlja prihvatanje izmijenjenog UOP-a."
+          ]
+        },
+        {
+          "title": "15. Kontakt informacije",
+          "paragraphs": [
+            "Za sva pitanja vezana za obradu podataka, možete nas kontaktirati:"
+          ],
+          "showContactInfo": true
+        },
+        {
+          "title": "16. Mjerodavno pravo",
+          "paragraphs": [
+            "Ovaj Ugovor o obradi podataka regulisan je zakonima zemlje poslovanja, uključujući važeće zakonodavstvo o zaštiti podataka. Svi sporovi podliježu nadležnosti nadležnih sudova."
+          ]
+        }
+      ]
+    },
+    "accountDelete": {
+      "title": "Brisanje naloga",
+      "lastUpdated": "Posljednja izmjena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Kako obrisati nalog",
+          "paragraphs": [
+            "Ako želite da obrišete svoj Konty nalog i sve povezane podatke, to možete uraditi na sljedeće načine:"
+          ],
+          "subsections": [
+            {
+              "title": "Opcija 1: Brisanje u aplikaciji",
+              "paragraphs": [
+                "Možete obrisati nalog direktno iz Konty aplikacije:"
+              ],
+              "orderedItems": [
+                "Otvorite Konty aplikaciju i prijavite se na svoj nalog",
+                "Idite na Podešavanja",
+                "Izaberite \"Nalog\"",
+                "Dodirnite \"Obriši nalog\"",
+                "Potvrdite svoju odluku kada vas sistem zatraži"
+              ]
+            },
+            {
+              "title": "Opcija 2: Zahtjev putem emaila",
+              "paragraphs": [
+                "Možete zatražiti brisanje naloga slanjem emaila našem timu za podršku:"
+              ],
+              "items": [
+                "Kontaktirajte nas putem emaila navedenog u sekciji Kontakt",
+                "Uključite \"Zahtjev za brisanje naloga\" u predmet",
+                "Navedite email adresu povezanu sa vašim Konty nalogom",
+                "Obradićemo vaš zahtjev u roku od 30 dana"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "2. Koji podaci će biti obrisani",
+          "paragraphs": [
+            "Kada obrišete nalog, sljedeći podaci će biti trajno uklonjeni:"
+          ],
+          "items": [
+            "Profil vašeg naloga i akreditivi za prijavu",
+            "Poslovne informacije i podešavanja",
+            "Katalog proizvoda i podaci o zalihama",
+            "Evidencija kupaca i kontakt informacije",
+            "Istorija prodaje i evidencija transakcija",
+            "Izvještaji i analitički podaci",
+            "Sve otpremljene slike ili dokumenti",
+            "Korisničke preferencije i prilagođavanja"
+          ]
+        },
+        {
+          "title": "3. Čuvanje podataka nakon brisanja",
+          "paragraphs": [
+            "Imajte na umu da neki podaci mogu biti zadržani ograničen period nakon brisanja naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Zakonska usklađenost", "definition": "Možemo zadržati određene evidencije kako to zahtijevaju poreski zakoni, fiskalni propisi ili druge zakonske obaveze (obično 5-10 godina u zavisnosti od jurisdikcije)" },
+            { "term": "Rezervni sistemi", "definition": "Podaci u rezervnim sistemima mogu zahtijevati do 90 dana da budu potpuno uklonjeni" },
+            { "term": "Anonimizovani podaci", "definition": "Agregirane, anonimizovane statistike koje vas ne mogu identifikovati mogu biti zadržane u analitičke svrhe" }
+          ]
+        },
+        {
+          "title": "4. Prije nego što obrišete",
+          "paragraphs": [
+            "Preporučujemo da preduzmete sljedeće korake prije brisanja naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Izvezite svoje podatke", "definition": "Preuzmite sve izvještaje, istoriju prodaje ili druge podatke koji vam mogu biti potrebni za vašu evidenciju" },
+            { "term": "Otkažite aktivne pretplate", "definition": "Uvjerite se da su sve aktivne pretplate otkazane da biste izbjegli buduće naplate" },
+            { "term": "Izmirite dugovanja", "definition": "Platite sve neizmirene fakture ili naknade" },
+            { "term": "Obavijestite svoj tim", "definition": "Ako imate više korisnika, obavijestite ih prije brisanja" }
+          ]
+        },
+        {
+          "title": "5. Vremenski okvir brisanja naloga",
+          "paragraphs": [
+            "Kada pokrenete brisanje naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Odmah", "definition": "Vaš nalog će biti deaktiviran i bićete odjavljeni" },
+            { "term": "U roku od 30 dana", "definition": "Svi lični podaci će biti obrisani iz naših aktivnih sistema" },
+            { "term": "U roku od 90 dana", "definition": "Podaci će biti uklonjeni iz rezervnih sistema" }
+          ]
+        },
+        {
+          "title": "6. Reaktivacija",
+          "paragraphs": [
+            "Brisanje naloga je trajno i ne može se poništiti. Ako želite ponovo koristiti Konty nakon brisanja naloga, moraćete kreirati novi nalog. Vaši prethodni podaci ne mogu biti vraćeni."
+          ]
+        },
+        {
+          "title": "7. Kontaktirajte nas",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o brisanju naloga ili vam je potrebna pomoć, kontaktirajte nas:"
+          ],
+          "showContactInfo": true
+        }
+      ]
     }
   },
   "seo": {
