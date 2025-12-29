@@ -2291,7 +2291,11 @@
       "products": "Products",
       "restaurants": "Restaurants",
       "retail": "Retail",
-      "solutions": "Solutions"
+      "solutions": "Solutions",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "data-processing": "Data Processing Agreement",
+      "account-delete": "Account Deletion"
     },
     "common": {
       "buttons": {

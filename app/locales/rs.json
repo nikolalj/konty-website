@@ -2291,7 +2291,11 @@
       "products": "Proizvodi",
       "restaurants": "Restorani",
       "retail": "Trgovina",
-      "solutions": "Rješenja"
+      "solutions": "Rješenja",
+      "privacy": "Politika privatnosti",
+      "terms": "Uslovi korišćenja",
+      "data-processing": "Ugovor o obradi podataka",
+      "account-delete": "Brisanje naloga"
     },
     "common": {
       "buttons": {
