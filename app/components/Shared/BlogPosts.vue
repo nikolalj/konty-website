@@ -109,7 +109,7 @@
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from '~/types/content'
+import type { BlogPost, ContentCollectionType } from '~/types/content'
 import type { SectionVariantType } from '~/types/components'
 import { DEFAULT_LOCALE, LOCALES } from '~/config/locale.config.mjs'
 
@@ -144,7 +144,7 @@ const localePath = useLocalePath()
 const { data: posts } = await useAsyncData(
   () => `home-blog-${locale.value}`,
   async () => {
-    const collectionName = `content_${locale.value}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+    const collectionName = `content_${locale.value}` as ContentCollectionType
     let query = queryCollection(collectionName)
       .where('path', 'LIKE', '/blog/%')
 
@@ -158,7 +158,7 @@ const { data: posts } = await useAsyncData(
 
     // Fallback to default locale if no posts found
     if ((!items || items.length === 0) && locale.value !== DEFAULT_LOCALE.code) {
-      const defaultCollection = `content_${DEFAULT_LOCALE.code}` as 'content_rs'
+      const defaultCollection = `content_${DEFAULT_LOCALE.code}` as ContentCollectionType
       query = queryCollection(defaultCollection)
         .where('path', 'LIKE', '/blog/%')
 

@@ -99,11 +99,12 @@
 
 <script setup lang="ts">
 import { DEFAULT_LOCALE, LOCALES } from '~/config/locale.config.mjs'
-import type { BlogPost } from '~/types/content'
+import type { BlogPost, ContentCollectionType } from '~/types/content'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+const siteConfig = useSiteConfig()
 
 // Get the slug from the route
 const slug = computed(() => {
@@ -119,14 +120,14 @@ const { data: post } = await useAsyncData(
   () => `blog-post-${locale.value}-${slug.value}`, // Make key reactive to locale
   async () => {
     // Try to get post from current locale
-    const collectionName = `content_${locale.value}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+    const collectionName = `content_${locale.value}` as ContentCollectionType
     let content = await queryCollection(collectionName)
       .path(`/blog/${slug.value}`)
       .first()
 
     // Fallback to default locale (rs) if not found and current locale is not default
     if (!content && locale.value !== DEFAULT_LOCALE.code) {
-      const defaultCollection = `content_${DEFAULT_LOCALE.code}` as 'content_rs'
+      const defaultCollection = `content_${DEFAULT_LOCALE.code}` as ContentCollectionType
       content = await queryCollection(defaultCollection)
         .path(`/blog/${slug.value}`)
         .first()
@@ -153,7 +154,7 @@ const currentPost = post.value as BlogPost
 const { data: allPosts } = await useAsyncData(
   () => `related-${locale.value}-${slug.value}`, // Make key reactive to locale
   async () => {
-    const collectionName = `content_${locale.value}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+    const collectionName = `content_${locale.value}` as ContentCollectionType
     const items = await queryCollection(collectionName)
       .where('path', 'LIKE', '/blog/%')
       .where('path', '<>', `/blog/${slug.value}`)
@@ -189,6 +190,69 @@ const formatDate = (dateString: string) => {
   })
 }
 
+// Check which locales have this blog post (for hreflang filtering)
+const { data: availableLocales } = await useAsyncData(
+  `blog-locales-${slug.value}`,
+  async () => {
+    const localesWithPost: string[] = []
+
+    for (const loc of LOCALES) {
+      const collectionName = `content_${loc.code}` as ContentCollectionType
+      try {
+        const content = await queryCollection(collectionName)
+          .path(`/blog/${slug.value}`)
+          .first()
+        if (content) {
+          localesWithPost.push(loc.code)
+        }
+      } catch {
+        // Collection doesn't exist for this locale
+      }
+    }
+
+    return localesWithPost
+  }
+)
+
+// Override hreflang to only include locales where this post exists
+// The global app.vue sets hreflang for all locales, but for blog posts
+// we need to filter to only show locales where the content exists
+useHead(() => {
+  const locales = availableLocales.value || []
+  if (locales.length === 0) return {}
+
+  // Build hreflang links only for locales that have this post
+  const hreflangLinks: Array<{ id: string, rel: string, href: string, hreflang: string }> = []
+
+  // Determine x-default URL (prefer default locale, otherwise first available)
+  const defaultLocaleCode = locales.includes(DEFAULT_LOCALE.code) ? DEFAULT_LOCALE.code : locales[0]
+  const defaultPrefix = defaultLocaleCode === DEFAULT_LOCALE.code ? '' : `/${defaultLocaleCode}`
+
+  // Add x-default
+  hreflangLinks.push({
+    id: 'i18n-xd',
+    rel: 'alternate',
+    href: `${siteConfig.url}${defaultPrefix}/blog/${slug.value}`,
+    hreflang: 'x-default'
+  })
+
+  // Add hreflang for each locale that has this post
+  for (const localeCode of locales) {
+    const localeConfig = LOCALES.find(l => l.code === localeCode)
+    if (!localeConfig) continue
+
+    const prefix = localeCode === DEFAULT_LOCALE.code ? '' : `/${localeCode}`
+    hreflangLinks.push({
+      id: `i18n-alt-${localeConfig.iso}`,
+      rel: 'alternate',
+      href: `${siteConfig.url}${prefix}/blog/${slug.value}`,
+      hreflang: localeConfig.iso
+    })
+  }
+
+  return { link: hreflangLinks }
+})
+
 // SEO
 usePageSeo({
   title: currentPost.title,
@@ -199,7 +263,7 @@ usePageSeo({
 const schemas = useSchemas()
 useSchemaOrg([schemas.article(currentPost)])
 // if (currentPost.category === 'clientStories') {
-//   schemas.clientStoryReview(currentPost)  // Disabled - fake ratings
+//   schemas.clientStoryReview(currentPost)  // TODO Disabled - fake ratings
 // }
 
 // OG Image

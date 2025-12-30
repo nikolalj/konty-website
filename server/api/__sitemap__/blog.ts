@@ -6,7 +6,7 @@
  */
 
 import { LOCALES } from '~/config/locale.config.mjs'
-import type { BlogPost } from '~/types/content'
+import type { BlogPost, ContentCollectionType } from '~/types/content'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineSitemapEventHandler(async (event) => {
@@ -16,7 +16,7 @@ export default defineSitemapEventHandler(async (event) => {
 
     // Fetch blog posts from each locale collection
     for (const locale of LOCALES) {
-      const collectionName = `content_${locale.code}` as 'content_rs' | 'content_me' | 'content_ba' | 'content_us'
+      const collectionName = `content_${locale.code}` as ContentCollectionType
 
       try {
         const posts = await queryCollection(event, collectionName)
