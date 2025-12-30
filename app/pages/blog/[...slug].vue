@@ -214,43 +214,28 @@ const { data: availableLocales } = await useAsyncData(
   }
 )
 
-// Override hreflang to only include locales where this post exists
-// The global app.vue sets hreflang for all locales, but for blog posts
-// we need to filter to only show locales where the content exists
+// Set hreflang only for locales where this post exists
+// app.vue skips hreflang for blog posts, so we handle it here
 useHead(() => {
   const locales = availableLocales.value || []
   if (locales.length === 0) return {}
 
-  // Build hreflang links only for locales that have this post
-  const hreflangLinks: Array<{ id: string, rel: string, href: string, hreflang: string }> = []
-
-  // Determine x-default URL (prefer default locale, otherwise first available)
+  // Determine x-default (prefer default locale if available, otherwise first)
   const defaultLocaleCode = locales.includes(DEFAULT_LOCALE.code) ? DEFAULT_LOCALE.code : locales[0]
   const defaultPrefix = defaultLocaleCode === DEFAULT_LOCALE.code ? '' : `/${defaultLocaleCode}`
 
-  // Add x-default
-  hreflangLinks.push({
-    id: 'i18n-xd',
-    rel: 'alternate',
-    href: `${siteConfig.url}${defaultPrefix}/blog/${slug.value}`,
-    hreflang: 'x-default'
-  })
+  const links = [
+    { rel: 'alternate', href: `${siteConfig.url}${defaultPrefix}/blog/${slug.value}`, hreflang: 'x-default' }
+  ]
 
-  // Add hreflang for each locale that has this post
   for (const localeCode of locales) {
-    const localeConfig = LOCALES.find(l => l.code === localeCode)
-    if (!localeConfig) continue
-
+    const loc = LOCALES.find(l => l.code === localeCode)
+    if (!loc) continue
     const prefix = localeCode === DEFAULT_LOCALE.code ? '' : `/${localeCode}`
-    hreflangLinks.push({
-      id: `i18n-alt-${localeConfig.iso}`,
-      rel: 'alternate',
-      href: `${siteConfig.url}${prefix}/blog/${slug.value}`,
-      hreflang: localeConfig.iso
-    })
+    links.push({ rel: 'alternate', href: `${siteConfig.url}${prefix}/blog/${slug.value}`, hreflang: loc.iso })
   }
 
-  return { link: hreflangLinks }
+  return { link: links }
 })
 
 // SEO
