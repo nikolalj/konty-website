@@ -1,7 +1,7 @@
 <template>
   <div class="py-40">
     <UContainer>
-      <h1 class="text-2xl font-bold mb-6">SEO Debug Info</h1>
+      <h1 class="text-2xl font-bold mb-6">SEO Debug</h1>
 
       <!-- Navigation tabs -->
       <div class="mb-6">
