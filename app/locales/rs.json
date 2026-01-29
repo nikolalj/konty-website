@@ -2,19 +2,14 @@
   "data": {
     "company": {
       "address": {
-        "city": "Belgrade",
+        "city": "Beograd",
+        "country": "Srbija",
         "countryCode": "RS",
         "postalCode": "11000",
-        "region": "Belgrade",
+        "region": "Beograd",
         "street": "Trnska 7"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
         "weekdays": {
           "closes": "17:00",
@@ -283,7 +278,7 @@
     },
     "home": {
       "clients": {
-        "description": "Više od 9.000 biznisa širom regiona svakodnevno koristi Konty",
+        "description": "Više od 9.600 biznisa širom regiona svakodnevno koristi Konty",
         "title": "Naši klijenti"
       },
       "getStarted": {
@@ -312,14 +307,14 @@
       },
       "hero": {
         "subtitle": "Stabilan i pouzdan POS sistem na koji možete da se oslonite svakog dana.",
-        "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
+        "tagline": "Konty pokreće 9.600+ biznisa širom regiona",
         "title": "Posvetite se svom poslu. Konty brine o svemu ostalom."
       },
       "statistics": {
         "stat1": {
           "description": "Aktivnih poslovnih lokacija",
           "suffix": "+",
-          "value": "9000"
+          "value": "9600"
         },
         "stat2": {
           "description": "Godina iskustva u POS sistemima",
@@ -370,7 +365,7 @@
           "title": "Odlične partnerske cene"
         },
         "benefit2": {
-          "description": "Prodajte pouzdan cloud POS sistem kome veruje preko 9.000 biznisa u trgovini i ugostiteljstvu širom regiona.",
+          "description": "Prodajte pouzdan cloud POS sistem kome veruje preko 9.600 biznisa u trgovini i ugostiteljstvu širom regiona.",
           "title": "Provereno rešenje"
         },
         "benefit3": {
@@ -386,7 +381,7 @@
           "title": "Marketing podrška"
         },
         "benefit6": {
-          "description": "Pridružite se rastućoj kompaniji sa dugogodišnjim iskustvom i preko 9.000 zadovoljnih korisnika širom regiona.",
+          "description": "Pridružite se rastućoj kompaniji sa dugogodišnjim iskustvom i preko 9.600 zadovoljnih korisnika širom regiona.",
           "title": "Rastimo zajedno"
         },
         "description": "Pridružite se našoj mreži partnera i rastite zajedno sa nama",
@@ -521,8 +516,8 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, hoteli, itd.)"
           ],
-          "price": "50 €",
-          "priceValue": "50",
+          "price": "5500 RSD",
+          "priceValue": "5500",
           "title": "Premium"
         },
         "standard": {
@@ -538,8 +533,8 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "30 €",
-          "priceValue": "30",
+          "price": "4000 RSD",
+          "priceValue": "4000",
           "title": "Standard"
         },
         "start": {
@@ -556,8 +551,8 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "25 €",
-          "priceValue": "25",
+          "price": "3500 RSD",
+          "priceValue": "3500",
           "title": "Start"
         }
       },
@@ -572,8 +567,8 @@
             "Materijalno knjigovodstvo (opciono)",
             "Integracije sa drugim softverskim rešenjima (računovodstvo, itd.)"
           ],
-          "price": "20 €",
-          "priceValue": "20",
+          "price": "2400 RSD",
+          "priceValue": "2400",
           "title": "Premium"
         },
         "standard": {
@@ -588,8 +583,8 @@
             "Ulazne fakture",
             "Kartice komitenata (uplate, isplate, bankovni izvodi)"
           ],
-          "price": "15 €",
-          "priceValue": "15",
+          "price": "2000 RSD",
+          "priceValue": "2000",
           "title": "Standard"
         },
         "start": {
@@ -605,8 +600,8 @@
             "Kompletna analiza prometa i stanja magacina",
             "Uvek dostupan back office"
           ],
-          "price": "12 €",
-          "priceValue": "12",
+          "price": "1250 RSD",
+          "priceValue": "1250",
           "title": "Start"
         }
       },
@@ -662,7 +657,7 @@
         "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
         "hospitality": {
           "feat1": {
-            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.600+ firmi.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Sistem na koji uvek možete računati"
           },
@@ -694,7 +689,7 @@
         },
         "retail": {
           "feat1": {
-            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.600+ firmi.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Sistem na koji uvek možete računati"
           },
@@ -758,25 +753,25 @@
         "features": {
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "faq": {
-            "a2": "Da, Konty radi besprekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaše poslovanje nikada ne prestaje, čak ni tokom prekida interneta-potpuna offline funkcionalnost ugrađena u sistem.",
-            "a3": "Većina lokala je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
-            "a4": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kuhinjski displeje. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
-            "a5": "Naš intuitivan interfejs zahteva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
-            "a6": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbine sa delivery aplikacija dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa i propuštenih narudžbina. Jedan sistem za sve: jelo u lokalu, poneti i dostavu.",
-            "a7": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahteve-kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbinom, što osigurava tačnost i zadovoljstvo gostiju.",
-            "a8": "Da, Konty podržava deljenje računa. Podržava više metoda plaćanja na jednom računu-kartica, gotovina, itd. Rešavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim.",
-            "q2": "Da li sistem radi bez interneta?",
-            "q3": "Koliko traje proces podešavanja?",
-            "q4": "Mogu li da zadržim postojeću opremu?",
-            "q5": "Šta je sa obukom osoblja?",
-            "q6": "Da li se integriše sa platformama za dostavu?",
-            "q7": "Mogu li da prilagodim modifikatore za stavke u meniju?",
-            "q8": "Da li podržava deljenje računa i odvojene naplate?",
+            "a1": "Da, Konty radi besprekorno offline. Sve transakcije se obrađuju lokalno i automatski se sinhronizuju kada se veza vrati. Vaše poslovanje nikada ne prestaje, čak ni tokom prekida interneta-potpuna offline funkcionalnost ugrađena u sistem.",
+            "a2": "Većina lokala je potpuno operativna za 48 sati. Mi se bavimo podešavanjem menija, konfiguracijom uređaja i obukom osoblja. Naš tim radi prema vašem rasporedu kako bi osigurao minimalne smetnje u svakodnevnom radu.",
+            "a3": "Da, Konty radi sa većinom postojeće POS opreme uključujući fiskalne štampače, kuhinjske štampače, fioke za novac, tablete i kuhinjski displeje. Pomažemo vam da iskoristite postojeću opremu ili preporučujemo kompatibilna i isplativa unapređenja ako je potrebno.",
+            "a4": "Naš intuitivan interfejs zahteva minimalnu obuku. Većina konobara i šankera nauči osnove za manje od 30 minuta. Novi zaposleni se brže snalaze, što smanjuje troškove obuke.",
+            "a5": "Da, Konty se integriše sa glavnim platformama za dostavu. Narudžbine sa delivery aplikacija dolaze direktno u vaš POS i kuhinjski displej-bez ručnog unosa i propuštenih narudžbina. Jedan sistem za sve: jelo u lokalu, poneti i dostavu.",
+            "a6": "Naravno. Kreirajte neograničene modifikatore za alergije, preferencije i specijalne zahteve-kao što su \"bez luka\", \"dodatni sir\" ili \"bez glutena\". Modifikatori se šalju u kuhinju sa svakom narudžbinom, što osigurava tačnost i zadovoljstvo gostiju.",
+            "a7": "Da, Konty podržava deljenje računa. Podržava više metoda plaćanja na jednom računu-kartica, gotovina, itd. Rešavajte bilo koji scenario naplate sa lakoćom, držeći goste srećnim.",
+            "q1": "Da li sistem radi bez interneta?",
+            "q2": "Koliko traje proces podešavanja?",
+            "q3": "Mogu li da zadržim postojeću opremu?",
+            "q4": "Šta je sa obukom osoblja?",
+            "q5": "Da li se integriše sa platformama za dostavu?",
+            "q6": "Mogu li da prilagodim modifikatore za stavke u meniju?",
+            "q7": "Da li podržava deljenje računa i odvojene naplate?",
             "subtitle": "Najčešća pitanja o funkcionalnostima Konty ugostiteljstva",
             "title": "Često postavljana pitanja"
           },
           "feat1": {
-            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.600+ firmi.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Sistem na koji uvek možete računati"
           },
@@ -827,84 +822,68 @@
                 "text": "Deljenje računa i prenos između stolova"
               },
               "item5": {
-                "icon": "i-heroicons-calendar-days",
-                "text": "Integracija upravljanja rezervacijama"
-              },
-              "item6": {
-                "icon": "i-heroicons-adjustments-horizontal",
-                "text": "Upravljanje modifikatorima (alergije, posebni zahtevi)"
-              },
-              "item7": {
                 "icon": "i-heroicons-fire",
                 "text": "Usklađivanje vremena serviranja jela i koordinacija sa kuhinjom"
               },
               "title": "Sve operacije u sali"
             },
             "group2": {
-              "description": "Moćni alati za upravljanje receptima, nabavkom i zalihama sa preciznošću.",
+              "description": "Moćni alati za upravljanje nabavkom i zalihama sa preciznošću.",
               "imageAlt": "Upravljanje zalihama i nabavkom",
-              "item1": {
-                "icon": "i-heroicons-calculator",
-                "text": "Upravljanje receptima sa kalkulacijom troškova sastojaka"
-              },
-              "item2": {
-                "icon": "i-heroicons-document-text",
-                "text": "Kreiranje i praćenje narudžbenica"
-              },
-              "item3": {
-                "icon": "i-heroicons-truck",
-                "text": "Upravljanje dobavljačima sa poređenjem cena"
-              },
-              "item4": {
-                "icon": "i-heroicons-cube",
-                "text": "Prijem zaliha i korekcije"
-              },
-              "item5": {
-                "icon": "i-heroicons-trash",
-                "text": "Praćenje i analiza rasipanja"
-              },
-              "item6": {
-                "icon": "i-heroicons-building-storefront",
-                "text": "Praćenje zaliha na više lokacija"
-              },
-              "item7": {
-                "icon": "i-heroicons-exclamation-triangle",
-                "text": "Praćenje niskih zaliha"
-              },
-              "title": "Upravljanje zalihama i nabavkom"
-            },
-            "group3": {
-              "description": "Uvidi zasnovani na podacima za optimizaciju operacija i rast prihoda.",
-              "imageAlt": "Kontrolna tabla za analitiku i izveštaje",
               "item1": {
                 "icon": "i-heroicons-chart-bar",
                 "text": "Analitika prodaje (po artiklu, konobaru, vremenu, delu dana)"
               },
               "item2": {
-                "icon": "i-heroicons-currency-dollar",
-                "text": "Praćenje i optimizacija troškova rada"
+                "icon": "i-heroicons-calculator",
+                "text": "Upravljanje i kalkulacija nad aritklima i sastojcima"
               },
               "item3": {
-                "icon": "i-heroicons-light-bulb",
-                "text": "Uvidi u optimizaciju menija"
+                "icon": "i-heroicons-truck",
+                "text": "Upravljanje dobavljačima, prijem zaliha i korekcije"
               },
               "item4": {
-                "icon": "i-heroicons-user-circle",
-                "text": "Učestalost i preference kupaca"
-              },
-              "item5": {
-                "icon": "i-heroicons-document-chart-bar",
-                "text": "Bilans stanja i analiza marže"
-              },
-              "item6": {
-                "icon": "i-heroicons-document-check",
-                "text": "Poreska usklađenost i fiskalna integracija"
-              },
-              "item7": {
                 "icon": "i-heroicons-users",
                 "text": "Pregled performansi zaposlenih"
               },
-              "title": "Inteligencija i alati za rast"
+              "item5": {
+                "icon": "i-heroicons-exclamation-triangle",
+                "text": "Praćenje minimalnih zaliha"
+              },
+              "title": "Upravljanje zalihama i nabavkom"
+            },
+            "group3": {
+              "description": "Povezan sa uređajima u kuhinji za efikasnu pripremu i praćenje porudžbina u realnom vremenu.",
+              "imageAlt": "Kitchen Display System interfejs",
+              "item1": {
+                "icon": "i-heroicons-computer-desktop",
+                "text": "Vizuelni prikaz porudžbina na ekranima u kuhinji"
+              },
+              "item2": {
+                "icon": "i-heroicons-signal",
+                "text": "Automatsko slanje porudžbina sa POS-a na KDS"
+              },
+              "item3": {
+                "icon": "i-heroicons-clock",
+                "text": "Praćenje vremena pripreme za svako jelo"
+              },
+              "item4": {
+                "icon": "i-heroicons-queue-list",
+                "text": "Različiti statusi: Primljeno, U pripremi, Spremno"
+              },
+              "item5": {
+                "icon": "i-heroicons-check-circle",
+                "text": "Jednostavno označavanje završenih porudžbina"
+              },
+              "item6": {
+                "icon": "i-heroicons-exclamation-circle",
+                "text": "Prioritetno prikazivanje hitnih porudžbina"
+              },
+              "item7": {
+                "icon": "i-heroicons-arrows-right-left",
+                "text": "Sinhronizacija između više ekrana i stanica"
+              },
+              "title": "Kitchen Display System (KDS)"
             },
             "title": "Sveobuhvatni alati za vaš restoran"
           },
@@ -924,7 +903,7 @@
         },
         "hero": {
           "subtitle": "Sveobuhvatan POS sistem za ugostiteljstvo - od rada po stolovima i praćenja porudžbina do potpune koordinacije kuhinje. Stvoren za lokale svih veličina.",
-          "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
+          "tagline": "Konty pokreće 9.600+ biznisa širom regiona",
           "title": "POS na koji možete da računate u najvećoj gužvi"
         }
       },
@@ -960,25 +939,25 @@
         "features": {
           "description": "Sve što vam treba za stabilnu prodaju i sigurnu naplatu, uz intuitivan sistem koji svako može brzo da koristi.",
           "faq": {
-            "a2": "Da, Konty radi sa svim standardnim skenerima barkodova uključujući USB, Bluetooth i mobilne uređaje. Podržava i obične barkodove i težinske barkodove za vage. Brza i precizna naplata pri svakom skeniranju.",
-            "a3": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca. Nagradite redovne kupce, pratite istoriju kupovine, šaljite ciljane promocije i gradite dugoročne odnose-sve uključeno u vaš plan bez dodatnih troškova.",
-            "a4": "Da, obezbeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema. Naš tim vam pomaže da uvezete proizvode, kupce i podatke o zalihama-bez ručnog unosa. Većina migracija se završava za 24 sata.",
-            "a5": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha. Obradite refundacije, zamene i knjižna odobrenja odmah. Svi podaci o povraćajima se beleže za izveštavanje i upravljanje zalihama.",
-            "a6": "Da, Konty je kompatibilan sa većinom postojećeg POS hardvera uključujući fiskalne štampače, skenere barkodova, fioke za novac, displeje za kupce i tablete. Koristite ono što već imate ili možemo preporučiti pristupačne kompatibilne opcije.",
-            "a7": "Naravno. Svaka prodaja, povraćaj i podešavanje zaliha ažurira inventar u realnom vremenu na svim lokacijama. Imate potpunu vidljivost.",
-            "a8": "Da, kreirajte više cenovnika za veleprodajne kupce, VIP kupce ili kupce na veliko. Svakom kupcu možete dodeliti cenovnik po kome će se obračunavati cene artikala.",
-            "q2": "Da li podržava skeniranje barkodova?",
-            "q3": "Šta je sa programima lojalnosti?",
-            "q4": "Mogu li da uvezem postojeće zalihe?",
-            "q5": "Kako se obrađuju povraćaji?",
-            "q6": "Da li radi sa mojim postojećim hardverom?",
-            "q7": "Mogu li da pratim zalihe u realnom vremenu na više lokacija?",
-            "q8": "Da li podržava različite cene za različite tipove kupaca?",
+            "a1": "Da, Konty radi sa svim standardnim skenerima barkodova uključujući USB, Bluetooth i mobilne uređaje. Podržava i obične barkodove i težinske barkodove za vage. Brza i precizna naplata pri svakom skeniranju.",
+            "a2": "Ugrađen program lojalnosti sa bodovima, popustima i praćenjem kupaca. Nagradite redovne kupce, pratite istoriju kupovine, šaljite ciljane promocije i gradite dugoročne odnose-sve uključeno u vaš plan bez dodatnih troškova.",
+            "a3": "Da, obezbeđujemo besplatnu migraciju podataka iz vašeg trenutnog sistema. Naš tim vam pomaže da uvezete proizvode, kupce i podatke o zalihama-bez ručnog unosa. Većina migracija se završava za 24 sata.",
+            "a4": "Jednostavan povraćaj jednim klikom sa automatskim podešavanjem zaliha. Obradite refundacije, zamene i knjižna odobrenja odmah. Svi podaci o povraćajima se beleže za izveštavanje i upravljanje zalihama.",
+            "a5": "Da, Konty je kompatibilan sa većinom postojećeg POS hardvera uključujući fiskalne štampače, skenere barkodova, fioke za novac, displeje za kupce i tablete. Koristite ono što već imate ili možemo preporučiti pristupačne kompatibilne opcije.",
+            "a6": "Naravno. Svaka prodaja, povraćaj i podešavanje zaliha ažurira inventar u realnom vremenu na svim lokacijama. Imate potpunu vidljivost.",
+            "a7": "Da, kreirajte više cenovnika za veleprodajne kupce, VIP kupce ili kupce na veliko. Svakom kupcu možete dodeliti cenovnik po kome će se obračunavati cene artikala.",
+            "q1": "Da li podržava skeniranje barkodova?",
+            "q2": "Šta je sa programima lojalnosti?",
+            "q3": "Mogu li da uvezem postojeće zalihe?",
+            "q4": "Kako se obrađuju povraćaji?",
+            "q5": "Da li radi sa mojim postojećim hardverom?",
+            "q6": "Mogu li da pratim zalihe u realnom vremenu na više lokacija?",
+            "q7": "Da li podržava različite cene za različite tipove kupaca?",
             "subtitle": "Najčešća pitanja o funkcionalnostima Konty trgovine",
             "title": "Često postavljana pitanja"
           },
           "feat1": {
-            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.000+ firmi.",
+            "description": "Preko 14 godina dokazane stabilnosti. Dok drugi padaju tokom najfrekventnijih sati, Konty jednostavno radi-dan za danom, transakcija za transakcijom. Poverenje od 9.600+ firmi.",
             "icon": "i-heroicons-shopping-cart",
             "title": "Sistem na koji uvek možete računati"
           },
@@ -1016,10 +995,7 @@
                 "icon": "i-heroicons-qr-code",
                 "text": "Integracija skenera barkoda (standardni i težinski)"
               },
-              "item10": {
-                "icon": "i-heroicons-document-text",
-                "text": "Prilagođavanje računa i slanje računa putem emaila"
-              },
+
               "item2": {
                 "icon": "i-heroicons-squares-2x2",
                 "text": "Konfiguracija tastera kategorija za brzi pristup"
@@ -1034,23 +1010,19 @@
               },
               "item5": {
                 "icon": "i-heroicons-user-circle",
-                "text": "Pretraga kupaca i istorija"
+                "text": "Pretraga kupaca po imenu, emailu ili broju telefona"
               },
               "item6": {
-                "icon": "i-heroicons-gift",
-                "text": "Integracija programa lojalnosti"
-              },
-              "item7": {
                 "icon": "i-heroicons-tag",
                 "text": "Upravljanje popustima i promocijama"
               },
-              "item8": {
+              "item7": {
                 "icon": "i-heroicons-credit-card",
                 "text": "Više vrsta plaćanja: kreditne, debitne kartice, gotovina, beskontaktno"
               },
-              "item9": {
-                "icon": "i-heroicons-identification",
-                "text": "Upozorenja za starosna ograničenja"
+              "item8": {
+                "icon": "i-heroicons-document-text",
+                "text": "Prilagođavanje računa i štampanje faktura"
               },
               "title": "Brza prodajna mesta"
             },
@@ -1063,7 +1035,7 @@
               },
               "item2": {
                 "icon": "i-heroicons-swatch",
-                "text": "Varijante proizvoda (veličina, boja, itd.)"
+                "text": "Varijante i kategorije proizvoda"
               },
               "item3": {
                 "icon": "i-heroicons-magnifying-glass",
@@ -1071,7 +1043,7 @@
               },
               "item4": {
                 "icon": "i-heroicons-calendar",
-                "text": "Upravljanje datumima isteka"
+                "text": "Notikacije prilikom isticanja zaliha"
               },
               "item5": {
                 "icon": "i-heroicons-building-storefront",
@@ -1083,52 +1055,40 @@
               },
               "item7": {
                 "icon": "i-heroicons-document-text",
-                "text": "Upravljanje narudžbenicama"
-              },
-              "item8": {
-                "icon": "i-heroicons-truck",
-                "text": "Poređenje cena dobavljača"
-              },
-              "item9": {
-                "icon": "i-heroicons-chart-bar",
-                "text": "Sezonsko planiranje zaliha"
+                "text": "Upravljanje porudžbinama"
               },
               "title": "Napredno upravljanje zalihama"
             },
             "group3": {
-              "description": "Centralizovana kontrola i uvidi u sve vaše prodavnice.",
+              "description": "Kompletni uvidi i kontrola za sve vaše prodavnice na jednom mestu.",
               "imageAlt": "Kontrolna tabla za više lokacija",
               "item1": {
-                "icon": "i-heroicons-squares-plus",
-                "text": "Centralizovana kontrolna tabla za izveštavanje po lokacijama"
+                "icon": "i-heroicons-eye",
+                "text": "Vidljivost zaliha u svim objektima"
               },
               "item2": {
-                "icon": "i-heroicons-eye",
-                "text": "Jedinstvena vidljivost zaliha na svim lokacijama"
-              },
-              "item3": {
                 "icon": "i-heroicons-tag",
                 "text": "Cene i promocije specifične za lokaciju"
               },
-              "item4": {
+              "item3": {
                 "icon": "i-heroicons-document-chart-bar",
                 "text": "Konsolidovano izveštavanje i analitika"
               },
-              "item5": {
-                "icon": "i-heroicons-chart-pie",
-                "text": "Najbolje/najlošije performanse proizvoda po lokaciji"
-              },
-              "item6": {
-                "icon": "i-heroicons-users",
-                "text": "Performanse zaposlenih u svim prodavnicama"
-              },
-              "item7": {
-                "icon": "i-heroicons-user-group",
-                "text": "Obrasci ponašanja kupaca"
-              },
-              "item8": {
+              "item4": {
                 "icon": "i-heroicons-document-check",
                 "text": "Integrisano računovodstvo i poreska usklađenost"
+              },
+              "item5": {
+                "icon": "i-heroicons-clock",
+                "text": "Praćenje prodaje u realnom vremenu"
+              },
+              "item6": {
+                "icon": "i-heroicons-chart-pie",
+                "text": "Detaljni izveštaji za svaki objekat"
+              },
+              "item7": {
+                "icon": "i-heroicons-cube-transparent",
+                "text": "Upravljanje artiklima i cenama za sve objekte"
               },
               "title": "Više lokacija i analitika"
             },
@@ -1152,7 +1112,7 @@
           "cta": "Počni 30 dana besplatno",
           "features": "Nula padova • Auto-dopuna • Podrška za 30 sek",
           "subtitle": "POS za maloprodaju i uslužne delatnosti koji radi brzo, sigurno i bez prekida - od brze kase i evidencije zaliha do jasnih izveštaja za donošenje odluka.",
-          "tagline": "Konty pokreće 9.000+ biznisa širom regiona",
+          "tagline": "Konty pokreće 9.600+ biznisa širom regiona",
           "title": "POS na koji možete da računate u najvećoj gužvi",
           "viewDemo": "2-minutni demo"
         }
@@ -1165,7 +1125,7 @@
           "a2": "Da, kompletan sistem za upravljanje partnerima sa detaljnim profilima. Dodajte partnere ručno ili uvezite iz fajla. Sve informacije na jednom mestu za lak pristup i usklađenost sa propisima.",
           "a3": "Naravno. Kreirajte profakture, avansne račune i E-Fakture sa kompletnim podacima kupca. Izvoz računa u PDF i slanje mejlom.",
           "a4": "Kompletno praćenje transakcija po partneru sa automatskim obračunom salda. Pregledajte karticu kupca, pratite sve fakture, uplate, isplate i bankovne izvode. Pratite potraživanja i štampajte detaljne izveštaje.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju E-Faktura integraciju (SEF), profakture, praćenje transakcija, neograničen broj proizvoda i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje partnerima i detaljna analitika po kupcu. Probajte besplatno 30 dana.",
           "q1": "Da li je Konty usklađen sa obaveznim Sistem E-Faktura (SEF)?",
           "q2": "Da li Konty omogućava upravljanje detaljnim profilima B2B partnera?",
           "q3": "Da li podržava profakture i avansna plaćanja?",
@@ -1212,7 +1172,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Automatsko slanje E-Faktura kroz SEF sistem, potpuna usklađenost sa propisima uz upravljanje partnerima i kompletno praćenje transakcija.",
-          "title": "Konty E-Fakture, B2B i veleprodaja | Usklađeno sa SEF sistemom"
+          "title": "Konty za B2B i E-fakture"
         },
         "overview": {
           "description": "Kompletan sistem za B2B prodaju i upravljanje partnerima",
@@ -1226,7 +1186,7 @@
           "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle uključujući napitke, sastojke i barsku robu. Praćenje stanja uživo, kontrola kretanja robe sa prijemnicama i otpremnicama, otpisi za praćenje rastura i kompletni izveštaji o zalihama. Potpuna vidljivost nad vašim zalihama.",
           "a3": "Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, upravljanje kasom, praćenje uplata i isplata i detaljan izveštaji po smeni. Svaki barmen/konobar se prijavljuje sa svojim PIN-om i sve transakcije se prate po korisniku. Laka predaja smene sa potpunom odgovornošću.",
           "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte porudžbine, upravljajte stolovima, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš bar nikada ne prestaje sa radom tokom problema sa internetom.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, praćenje zaliha, upravljanje smenama, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su upravljanje stolovima i Kuhinjski displej. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, praćenje zaliha, upravljanje smenama, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su upravljanje stolovima i Kuhinjski displej. Probajte besplatno 30 dana tokom najprometnije smene.",
           "q1": "Kako Konty radi sa velikim prometom tokom špica?",
           "q2": "Da li prati zalihe napitaka i bara?",
           "q3": "Kako funkcioniše upravljanje smenama za više barmena?",
@@ -1272,8 +1232,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brz unos porudžbina, potpuna kontrola zaliha i glatka predaja smena. Napravljen za veliki promet kada je pouzdanost najbitnija.",
-          "title": "Više gostiju, manje stresa"
+          "subtitle": "Brz unos porudžbina, potpuna kontrola zaliha i jednostavna predaja smena. Napravljen za veliki promet kada je pouzdanost najbitnija.",
+          "title": "Konty za barove i kafiće"
         },
         "overview": {
           "description": "Sistem dizajniran za brzu uslugu i veliki promet",
@@ -1293,14 +1253,14 @@
       },
       "clothingBoutiques": {
         "faq": {
-          "a1": "Da, upravljajte zalihama kreiranjem zasebnih artikala za svaku varijantu veličine/boje. Svaka varijanta dobija svoj jedinstveni šifru, barkod, stanje zaliha i cenu. Organizujte varijante koristeći kategorije artikala i konvencije imenovanja (npr. \"Haljina-Crvena-M\", \"Haljina-Crvena-L\"). Uvezite/izvezite varijante masovno preko Excel-a za efikasno upravljanje.",
+          "a1": "Naravno. Svaka varijanta veličine i boje dobija svoj artikal sa barkodom, stanjem i cenom, pa tačno znate šta imate na zalihi. Koristite jasne šeme imenovanja i kategorije (npr. \"Haljina-Crvena-M\") i po potrebi uvezite ili izvezite sve varijante iz Excela u par klikova.",
           "a2": "Organizujte proizvode koristeći kategorije artikala za kolekcije i sezone. Pratite promet zaliha sa izveštajima o zalihama, identifikujte sporo pokretne artikle i koristite nivelacije cena za upravljanje sezonskim sniženjima. Organizacija po kategorijama olakšava upravljanje sezonskim kolekcijama.",
-          "a3": "Naravno. Kompletni profili kupaca sa praćenjem istorije kupovina kroz izveštaje prodaje po kupcu. Pregledajte svaku transakciju po kupcu, pratite njihove navike potrošnje i izgradite detaljne profile kupaca za personalizovanu uslugu i ciljane promocije.",
-          "a4": "Da, funkcija profakture omogućava kreiranje ponuda i rezervacija. Pratite avansna plaćanja za rate planove i koristite lanac avansnih plaćanja za upravljanje delimičnim uplatama do konačne kupovine. Kompletno upravljanje ratama sa praćenjem plaćanja.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala/varijanti, praćenje zaliha, profakture i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje kupcima, istorija kupovina i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim inventarom.",
+          "a3": "Naravno. Kompletni profili kupaca sa praćenjem istorije kupovina kroz izveštaje prodaje po kupcu. Pregledajte svaku transakciju po kupcu, pratite njihove kupovine i izgradite detaljne profile kupaca za personalizovanu uslugu i ciljane promocije.",
+          "a4": "Da, profakture pokrivaju ponude, rezervacije i rate. Zabilježite avans, pratite svaku djelimičnu uplatu i u svakom trenutku znate koliko je ostalo do konačne kupovine. Sve rate i transakcije su u jednom jasnom prikazu.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj artikala/varijanti, praćenje zaliha, profakture i offline režim. Viši paketi dodaju napredne funkcije kao što su upravljanje kupcima, istorija kupovina i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim inventarom.",
           "q1": "Može li Konty da prati zalihe po veličinama i bojama?",
-          "q2": "Kako se bavi sezonskim kolekcijama i sniženjima?",
-          "q3": "Mogu li da pratim istoriju kupovina i preferencije kupaca?",
+          "q2": "Kako Konty pomaže da organizujem sezonske kolekcije i rasprodaje?",
+          "q3": "Mogu li da pratim istoriju kupovina i navike kupaca?",
           "q4": "Da li podržava rate i rezervacije?",
           "q5": "Koliko košta Konty za butik odeće?",
           "subtitle": "Najčešća pitanja o Konty-ju za butike odeće",
@@ -1339,17 +1299,17 @@
             "icon": "i-heroicons-arrow-path",
             "title": "Povrati i zamene"
           },
-          "title": "Savršeno za modnu trgovinu"
+          "title": "Idealno rešenje za modne butike"
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Pratite svaku varijantu, poznajete svoje kupce, upravljajte ratama. Intuitivni alati koji vam omogućavaju da se fokusirate na modu, a ne na tehnologiju.",
-          "title": "Upravljanje butikom jednostavno kao nikad"
+          "subtitle": "Kompletno upravljanje prodajom i zalihama odeće. Pratite varijante proizvoda, upravljajte sezonskim popustima i imajte uvid u najbolje prodavane artikle u realnom vremenu.",
+          "title": "Konty za prodavnice odeće"
         },
         "overview": {
           "description": "Specijalizovano za butike i prodavnice odeće",
           "image": "/images/solutions/clothing-boutiques.avif",
-          "title": "Savršeno za modnu trgovinu"
+          "title": "Idealno rešenje za modne butike"
         }
       },
       "cta": {
@@ -1372,11 +1332,11 @@
       },
       "fastFood": {
         "faq": {
-          "a1": "Da, brzo kreiranje porudžbina sa brzim unosom artikala preko tastature, grupa i favorita. Kuhinjski displej prikazuje sve porudžbine uživo sa tajmerima i upravljanjem prioritetima. Savršeno za šalter porudžbine, paketirano i veliku frekvenciju brze hrane.",
+          "a1": "Da, brzo kreiranje porudžbina sa brzim unosom artikala preko tastature, grupa i favorita. Kuhinjski displej prikazuje sve porudžbine uživo sa tajmerima i upravljanjem prioritetima. Savršeno za šalter porudžbine, porudžbine za ponijeti i veliku frekvenciju brze hrane.",
           "a2": "Naravno. Kuhinjski displej prikazuje porudžbine u realnom vremenu sa praćenjem tajmera, obojenim upozorenjima (žuto/crveno na osnovu vremena) i statusom završetka. Pratite svaku porudžbinu od unosa do izdavanja sa imenom korisnika, vremenom porudžbine i detaljnim prikazom stavki. Prilagodite alarme i opcije prikaza.",
-          "a3": "Da. Modifikatori stavki omogućavaju precizno beleženje svih specijalnih zahteva - bez paradajza, ekstra sos, dobro pečeno, bez sira. Svaka napomena ide direktno u kuhinju na displeju i tiketu. Nema grešaka u komunikaciji, nema bacanja hrane, nema nezadovoljnih kupaca.",
+          "a3": "Da. Izmene stavki omogućavaju precizno beleženje svih specijalnih zahteva - bez paradajza, ekstra sos, dobro pečeno, bez sira. Svaka napomena ide direktno u kuhinju na displeju i tiketu. Nema grešaka u komunikaciji, nema bacanja hrane, nema nezadovoljnih kupaca.",
           "a4": "Konty radi kompletno offline sa punom POS funkcionalnošću. Obrađujte sve porudžbine, upravljajte kitchen display-em i prihvatajte plaćanja bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaš objekat brze hrane nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, modifikatore stavki, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i praćenje performansi. Probajte besplatno 30 dana tokom najprometnije smene.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju brz unos porudžbina, modifikatore stavki, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i praćenje performansi. Probajte besplatno 30 dana tokom najprometnije smene.",
           "q1": "Kako Konty upravlja brzim porudžbinama?",
           "q2": "Mogu li da pratim vreme pripreme i brzinu usluge?",
           "q3": "Mogu li dodati posebne zahteve kupaca na porudžbine?",
@@ -1406,7 +1366,7 @@
           "feat4": {
             "description": "Dodajte posebne zahteve kupaca - bez luka, extra kečap, dobro prženo. Jasne napomene za kuhinju, zadovoljni gosti",
             "icon": "i-heroicons-adjustments-horizontal",
-            "title": "Modifikatori stavki"
+            "title": "Stavke prilagođene kupcima"
           },
           "feat5": {
             "description": "Više načina plaćanja sa trenutnom obradom za brzu rotaciju kupaca",
@@ -1422,8 +1382,8 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Kuhinjski displej i trenutna obrada porudžbina koji prate vaš najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, uvek pouzdan da vas nikad ne izneveri.",
-          "title": "Brzina plus pouzdanost"
+          "subtitle": "Kuhinjski displej i trenutna obrada porudžbina koji prati vaše najprometnije sate. Dovoljno jednostavan da se nauči za par minuta, uvek pouzdan da vas nikad ne izneveri.",
+          "title": "Konty za brzu hranu"
         },
         "overview": {
           "description": "Sistem dizajniran za maksimalnu brzinu i propusnost",
@@ -1434,10 +1394,10 @@
       "grocerySupermarkets": {
         "faq": {
           "a1": "Naravno. Konty upravlja neograničenim brojem proizvoda sa uvozom/izvozom iz Excel/CSV fajlova za masovno upravljanje. Dodajte artikle pojedinačno ili masovno, organizujte po kategorijama i koristite brzu pretragu po nazivu ili šifri. Napravljeno za maloprodaju velikog obima sa efikasnim upravljanjem proizvodima.",
-          "a2": "Da, puna podrška za skeniranje barkoda i funkcija Izvoz za vagu specijalno za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih proizvoda i delikatesa.",
+          "a2": "Da, sistem u potpunosti podržava skeniranje barkoda i ima funkciju Izvoz za vagu posebno pravljenu za prodavnice namirnica. Podržava unos barkoda preko šifre ili skenera. Izvoz za vagu omogućava integraciju sa sistemima za vaganje svežih proizvoda i delikatesa.",
           "a3": "Sveobuhvatno praćenje zaliha sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, kalkulacije cena, otpisi za upravljanje rasturom i izveštaji o zalihama sa naprednim filtriranjem. Potpuna vidljivost i kontrola nad vašim zalihama.",
           "a4": "Da, podrška za više poreskih stopa po artiklu. Sistem automatski primenjuje tačne poreske stope na osnovu kategorije artikla. Upravljajte različitim poreskim stopama za hranu, kućne potrepštine i druge kategorije proizvoda sa automatskom kalkulacijom i usklađenošću sa propisima.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, praćenje zaliha, više poreskih stopa i offline režim. Viši paketi dodaju napredne funkcije kao što su izvoz za vagu i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
+          "a5": "Paketi počinju od 1.250 RSD mesečno, a idu do 2.400 RSD. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju neograničen broj proizvoda, skeniranje barkoda, praćenje zaliha, više poreskih stopa i offline režim. Viši paketi dodaju napredne funkcije kao što su izvoz za vagu i detaljna analitika. Probajte besplatno 30 dana sa vašim kompletnim katalogom.",
           "q1": "Može li Konty efikasno da upravlja hiljadama proizvoda?",
           "q2": "Da li podržava skeniranje barkoda i vage?",
           "q3": "Kako funkcioniše praćenje zaliha?",
@@ -1484,7 +1444,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Skeniranje barkoda, integracija sa vagom i kompletno praćenje zaliha. Pouzdano upravljanje prodavnicom koje preuzima kompleksnost umesto vas.",
-          "title": "Upravljajte hiljadama proizvoda sa sigurnošću"
+          "title": "Konty za prodavnice hrane i supermarkete"
         },
         "overview": {
           "description": "Moćan sistem za upravljanje velikim katalozima proizvoda",
@@ -1496,15 +1456,15 @@
         "cta": "Pronađi svoje rešenje",
         "subtitle": "Konty se prilagođava vašem poslovanju - od restorana do prodavnica",
         "title": "Rešenja po delatnostima",
-        "tagline": "Konty pokreće 9.000+ biznisa širom regiona"
+        "tagline": "Konty pokreće 9.600+ biznisa širom regiona"
       },
       "restaurants": {
         "faq": {
-          "a1": "Da, kompletan sistem za upravljanje stolovima sa vizuelnim planom sale, drag-and-drop pozicioniranjem i statusom u realnom vremenu. Kreirajte više sektora, prilagodite oblik i boju stolova, dodajte pozadinske slike i organizujte celu blagovaonicu vizuelno. Stolovi pokazuju status zauzeto/slobodno uživo.",
+          "a1": "Da, kompletan sistem za upravljanje stolovima sa vizuelnim planom sale, drag-and-drop pozicioniranjem i statusom u realnom vremenu. Kreirajte više sektora, prilagodite oblik i boju stolova, dodajte pozadinske slike i organizujte celi prostor vizuelno. Stolovi pokazuju status zauzeto/slobodno uživo.",
           "a2": "Naravno. Kuhinjski displej prikazuje porudžbine uživo sa imenom konobara, brojem stola, vremenom izdavanja i detaljima stavki. Obojeni tajmeri upozorenja, praćenje završetka porudžbina (kompletno ili delimično), recall funkcija i \"All Day\" pregled za potpunu vidljivost u kuhinji. Prilagodljiv broj tiketa po stranici i veličina fonta.",
           "a3": "Da, fleksibilna podela računa sa G0-G3 sekcijama omogućava deljenje po gostu, stavki ili prilagođenim iznosima. Rasporedite različite stavke različitim gostima i obradite više plaćanja za jedan sto. Savršeno za grupe koje žele da plaćaju odvojeno.",
           "a4": "Konty radi potpuno offline sa punom funkcionalnošću. Sve upravljanje stolovima, porudžbine i plaćanja se obrađuju lokalno bez interneta. Kada se veza uspostavi, sve se automatski sinhronizuje. Vaš restoran nikada ne prestaje sa radom, čak i tokom nestanka interneta.",
-          "a5": "Paketi počinju od 25€ i idu do 50€ mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, deljenje računa, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i segmentacija porudžbina. Probajte besplatno 30 dana tokom redovnog rada.",
+          "a5": "Paketi počinju od 3.500 RSD i idu do 5.500 RSD mesečno bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju upravljanje stolovima, deljenje računa, offline režim i neograničen broj korisnika. Viši paketi dodaju napredne funkcije kao što su Kuhinjski displej i segmentacija porudžbina. Probajte besplatno 30 dana tokom redovnog rada.",
           "q1": "Da li Konty ima upravljanje stolovima sa vizuelnim planom sale?",
           "q2": "Kako funkcioniše Kuhinjski displej?",
           "q3": "Mogu li stolovi da dele račune kada gosti plaćaju odvojeno?",
@@ -1551,7 +1511,7 @@
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
           "subtitle": "Stolovi, kuhinjski displej, deljenje računa i offline režim. Jednostavan, pouzdan i spreman za najveće gužve.",
-          "title": "Restoranski POS na koji možete računati"
+          "title": "Konty za restorane"
         },
         "overview": {
           "description": "Od upravljanja stolovima do kuhinjskih porudžbina",
@@ -1563,9 +1523,9 @@
         "faq": {
           "a1": "Naravno. Kompletno upravljanje smenama sa funkcijama otvaranja/zatvaranja smene, PIN prijavom korisnika, upravljanjem kasom, praćenjem uplata i isplata i detaljnim izveštajima po smeni. Svaki zaposleni se prijavljuje sa svojim PIN-om. Pratite radno vreme, predaju smena i održavajte potpunu odgovornost.",
           "a2": "Da, sveobuhvatno praćenje zaliha za sve artikle sa stanjem u realnom vremenu, prijemnice i otpremnice, početna stanja, otpisi za upravljanje rasturom i kompletni izveštaji o zalihama. Potpuna vidljivost i kontrola nad vašim raznovrsnim asortmanom.",
-          "a3": "Da! Konty podržava kombinovanje više načina plaćanja u jednoj transakciji. Kupci mogu kombinovati gotovinu, karticu, vaučere, čekove, bankovne transfere i druge vrste plaćanja. Sistem automatski izračunava preostali iznos i prikazuje detaljan raspored plaćanja na računu, pružajući vam i vašim kupcima potpunu fleksibilnost pri naplati.",
+          "a3": "Da! Konty podržava kombinovanje više načina plaćanja u jednoj transakciji. Kupci mogu kombinovati gotovinu, karticu, bankovne transfere i druge vrste plaćanja. Sistem automatski izračunava preostali iznos i prikazuje detaljan raspored plaćanja na računu, pružajući vama i vašim kupcima potpunu fleksibilnost pri naplati.",
           "a4": "Konty radi kompletno offline sa punom funkcionalnošću. Obrađujte prodaju, upravljajte smenama, prihvatajte plaćanja i pratite zalihe bez interneta. Kada se veza vrati, sve se automatski sinhronizuje. Vaša prodavnica nastavlja sa radom bez obzira na probleme sa vezom.",
-          "a5": "Paketi počinju od 12€ mesečno, a idu do 25€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smena, praćenje zaliha, više poreskih stopa, offline režim i neograničen broj proizvoda. Viši paketi dodaju napredne funkcije kao što su upravljanje dobavljačima i detaljna analitika. Probajte besplatno 30 dana.",
+          "a5": "Paketi počinju od 12€ mesečno, a idu do 50€. Bez troškova instalacije ili ugovorne obaveze. Svi paketi uključuju podršku za više smena, praćenje zaliha, više poreskih stopa, offline režim i neograničen broj proizvoda. Viši paketi dodaju napredne funkcije kao što su upravljanje dobavljačima i detaljna analitika. Probajte besplatno 30 dana.",
           "q1": "Može li Konty da upravlja sa više smena i zaposlenih?",
           "q2": "Da li prati zalihe raznovrsnih proizvoda?",
           "q3": "Mogu li kupci platiti koristeći više načina plaćanja?",
@@ -1611,117 +1571,698 @@
         },
         "hero": {
           "cta": "Počni 30-dnevnu probnu verziju",
-          "subtitle": "Brza naplata, potpuna kontrola zaliha i glatko upravljanje smenama. Sve što vam treba za prodavnicu mešovite robe - jednostavno i pouzdano.",
-          "title": "Upravljanje prodavnicom mešovite robe bez komplikacija"
+          "subtitle": "Jednostavno upravljanje raznovrsnim asortimanom. Sve što vam treba za prodavnicu mešovite robe - jednostavno i pouzdano.",
+          "title": "Konty za prodavnice mešovite robe"
         },
         "overview": {
           "description": "Pouzdan sistem za prodavnice mešovite robe sa raznovrsnim proizvodima",
-          "image": "/images/solutions/convenience-stores.avif",
+          "image": "/images/solutions/general-stores.avif",
           "title": "Savršeno za prodavnice mešovite robe"
         }
       }
+    },
+    "privacy": {
+      "title": "Politika privatnosti",
+      "lastUpdated": "Poslednja izmena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Uvod",
+          "paragraphs": [
+            "Konty (\"mi\", \"naš\" ili \"nas\") posvećen je zaštiti vaše privatnosti. Ova Politika privatnosti objašnjava kako prikupljamo, koristimo, otkrivamo i štitimo vaše informacije kada koristite naš softver i usluge za prodajno mesto.",
+            "Korišćenjem naše Usluge pristajete na prakse u vezi sa podacima opisane u ovoj Politici privatnosti. Ako se ne slažete sa praksama opisanim u ovoj politici, molimo vas da ne koristite našu Uslugu."
+          ]
+        },
+        {
+          "title": "2. Informacije koje prikupljamo",
+          "subsections": [
+            {
+              "title": "Informacije koje nam dostavljate",
+              "items": [
+                "Informacije o registraciji naloga (ime, email, poslovni podaci)",
+                "Informacije o plaćanju i fakturisanju",
+                "Poslovni podaci koje unosite u sistem (zalihe, prodaja, kupci)",
+                "Komunikacija sa podrškom i povratne informacije",
+                "Marketinške preferencije i podešavanja komunikacije"
+              ]
+            },
+            {
+              "title": "Informacije koje automatski prikupljamo",
+              "items": [
+                "Informacije o uređaju (IP adresa, tip pretraživača, operativni sistem)",
+                "Podaci o korišćenju (korišćene funkcije, utrošeno vreme, obrasci klikova)",
+                "Log datoteke i sistemska aktivnost",
+                "Kolačići i slične tehnologije praćenja",
+                "Podaci o lokaciji (ako to dozvoljava vaš uređaj)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. Kako koristimo vaše informacije",
+          "paragraphs": [
+            "Informacije koje prikupljamo koristimo u sledeće svrhe:"
+          ],
+          "items": [
+            "Pružanje i održavanje naše Usluge",
+            "Obrada transakcija i upravljanje vašim nalogom",
+            "Poboljšanje naše Usluge i razvoj novih funkcija",
+            "Pružanje korisničke podrške i tehničke pomoći",
+            "Slanje komunikacija i ažuriranja vezanih za uslugu",
+            "Marketinške komunikacije (uz vašu saglasnost)",
+            "Otkrivanje i sprečavanje prevara ili bezbednosnih pretnji",
+            "Usklađenost sa zakonskim obavezama"
+          ]
+        },
+        {
+          "title": "4. Deljenje i otkrivanje informacija",
+          "paragraphs": [
+            "Ne prodajemo, ne trgujemo niti iznajmljujemo vaše lične podatke trećim stranama. Možemo podeliti vaše informacije u sledećim okolnostima:"
+          ],
+          "subsections": [
+            {
+              "title": "Pružaoci usluga",
+              "paragraphs": [
+                "Možemo deliti informacije sa pouzdanim pružaocima usluga treće strane koji nam pomažu u radu naše Usluge, kao što su procesori plaćanja, pružaoci cloud hostinga i alati za korisničku podršku."
+              ]
+            },
+            {
+              "title": "Zakonski zahtevi",
+              "paragraphs": [
+                "Možemo otkriti informacije ako to zahteva zakon, sudski nalog ili zahtev vlade, ili radi zaštite naših prava, imovine ili bezbednosti."
+              ]
+            },
+            {
+              "title": "Poslovni transferi",
+              "paragraphs": [
+                "U slučaju spajanja, akvizicije ili prodaje imovine, vaše informacije mogu biti prenete kao deo poslovne transakcije."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Bezbednost podataka",
+          "paragraphs": [
+            "Primenjujemo odgovarajuće tehničke i organizacione bezbednosne mere za zaštitu vaših informacija od neovlašćenog pristupa, izmene, otkrivanja ili uništenja."
+          ],
+          "items": [
+            "Enkripcija podataka u prenosu i u mirovanju",
+            "Redovne bezbednosne procene i ažuriranja",
+            "Kontrole pristupa i zahtevi za autentifikaciju",
+            "Obuka zaposlenih o privatnosti i bezbednosti podataka",
+            "Redovne rezervne kopije podataka i procedure za oporavak od katastrofe"
+          ],
+          "footerParagraphs": [
+            "Međutim, nijedna metoda prenosa preko interneta ili elektronskog skladištenja nije 100% bezbedna. Iako se trudimo da zaštitimo vaše informacije, ne možemo garantovati apsolutnu bezbednost."
+          ]
+        },
+        {
+          "title": "6. Čuvanje podataka",
+          "paragraphs": [
+            "Čuvamo vaše informacije onoliko dugo koliko je potrebno za pružanje naše Usluge i ispunjenje svrha navedenih u ovoj Politici privatnosti. Takođe možemo zadržati informacije radi usklađenosti sa zakonskim obavezama, rešavanja sporova i sprovođenja naših ugovora."
+          ],
+          "items": [
+            "Informacije o nalogu: Čuvaju se dok je vaš nalog aktivan",
+            "Podaci o transakcijama: Čuvaju se za poreske i regulatorne svrhe",
+            "Podaci o korišćenju: Obično se čuvaju do 2 godine za analitiku",
+            "Komunikacija sa podrškom: Čuva se do 3 godine"
+          ]
+        },
+        {
+          "title": "7. Vaša prava i izbori",
+          "paragraphs": [
+            "U zavisnosti od vaše lokacije, možete imati sledeća prava u vezi sa vašim ličnim informacijama:"
+          ],
+          "definitionItems": [
+            { "term": "Pristup", "definition": "Zatražite kopiju ličnih podataka koje čuvamo o vama" },
+            { "term": "Ispravka", "definition": "Zatražite ispravku netačnih ili nepotpunih informacija" },
+            { "term": "Brisanje", "definition": "Zatražite brisanje vaših ličnih podataka" },
+            { "term": "Prenosivost", "definition": "Zatražite prenos vaših podataka drugoj usluzi" },
+            { "term": "Ograničenje", "definition": "Zatražite ograničenje načina na koji obrađujemo vaše informacije" },
+            { "term": "Prigovor", "definition": "Prigovorite određenim aktivnostima obrade" },
+            { "term": "Povlačenje saglasnosti", "definition": "Povucite saglasnost za marketinške komunikacije" }
+          ],
+          "footerParagraphs": [
+            "Da biste ostvarili ova prava, kontaktirajte nas koristeći informacije navedene u odeljku Kontakt ispod."
+          ]
+        },
+        {
+          "title": "8. Kolačići i tehnologije praćenja",
+          "paragraphs": [
+            "Koristimo kolačiće i slične tehnologije praćenja da bismo poboljšali vaše iskustvo sa našom Uslugom. Možete kontrolisati podešavanja kolačića putem preferencija vašeg pretraživača."
+          ],
+          "definitionItems": [
+            { "term": "Neophodni kolačići", "definition": "Potrebni za osnovnu funkcionalnost Usluge" },
+            { "term": "Analitički kolačići", "definition": "Pomažu nam da razumemo kako koristite našu Uslugu" },
+            { "term": "Kolačići preferencija", "definition": "Pamte vaša podešavanja i preferencije" },
+            { "term": "Marketinški kolačići", "definition": "Koriste se za ciljano oglašavanje (uz saglasnost)" }
+          ]
+        },
+        {
+          "title": "9. Međunarodni prenos podataka",
+          "paragraphs": [
+            "Vaše informacije mogu biti prenete i obrađene u zemljama koje nisu zemlja vašeg prebivališta. Obezbeđujemo odgovarajuće zaštitne mere za zaštitu vaših informacija u skladu sa važećim zakonima o zaštiti podataka."
+          ]
+        },
+        {
+          "title": "10. Privatnost dece",
+          "paragraphs": [
+            "Naša Usluga nije namenjena deci mlađoj od 13 godina. Ne prikupljamo svesno lične podatke dece mlađe od 13 godina. Ako saznamo da smo prikupili informacije od deteta mlađeg od 13 godina, odmah ćemo ih izbrisati."
+          ]
+        },
+        {
+          "title": "11. Promene ove Politike privatnosti",
+          "paragraphs": [
+            "Možemo povremeno ažurirati ovu Politiku privatnosti. Obavestićemo vas o svim značajnim promenama objavljivanjem nove Politike privatnosti na ovoj stranici i ažuriranjem datuma \"Poslednja izmena\". Preporučujemo vam da povremeno pregledate ovu Politiku privatnosti."
+          ]
+        },
+        {
+          "title": "12. Kontaktirajte nas",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o ovoj Politici privatnosti ili našim praksama privatnosti, kontaktirajte nas:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "terms": {
+      "title": "Uslovi korišćenja",
+      "lastUpdated": "Poslednja izmena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Prihvatanje uslova",
+          "paragraphs": [
+            "Pristupom i korišćenjem Konty softvera i usluga za prodajno mesto (\"Usluga\"), prihvatate i slažete se da budete obavezani odredbama ovog ugovora. Ako se ne slažete da poštujete navedeno, molimo vas da ne koristite ovu uslugu."
+          ]
+        },
+        {
+          "title": "2. Opis usluge",
+          "paragraphs": [
+            "Konty pruža softverska rešenja za prodajna mesta zasnovana na cloud tehnologiji za maloprodajne i ugostiteljske objekte. Naša Usluga uključuje upravljanje zalihama, obradu prodaje, upravljanje kupcima i alate za izveštavanje dostupne putem web i mobilnih aplikacija."
+          ]
+        },
+        {
+          "title": "3. Korisnički nalozi i registracija",
+          "paragraphs": [
+            "Da biste koristili našu Uslugu, morate kreirati nalog i pružiti tačne, aktuelne i potpune informacije. Vi ste odgovorni za održavanje poverljivosti vaših akreditiva naloga i za sve aktivnosti koje se odvijaju pod vašim nalogom."
+          ],
+          "items": [
+            "Morate imati najmanje 18 godina da biste kreirali nalog",
+            "Morate pružiti tačne poslovne i kontakt informacije",
+            "Vi ste odgovorni za održavanje ažurnih informacija o nalogu",
+            "Ne smete deliti akreditive naloga sa neovlašćenim osobama"
+          ]
+        },
+        {
+          "title": "4. Prihvatljivo korišćenje",
+          "paragraphs": [
+            "Slažete se da ćete koristiti Uslugu samo u zakonite svrhe i u skladu sa ovim Uslovima. Slažete se da nećete:"
+          ],
+          "items": [
+            "Koristiti Uslugu u bilo koju nezakonitu ili neovlašćenu svrhu",
+            "Kršiti bilo koje važeće zakone ili propise",
+            "Ometati ili remetiti Uslugu ili servere",
+            "Pokušavati da dobijete neovlašćen pristup bilo kom delu Usluge",
+            "Otpremati ili prenositi zlonamerni kod ili sadržaj",
+            "Lažno se predstavljati kao bilo koja osoba ili entitet"
+          ]
+        },
+        {
+          "title": "5. Plaćanje i naplata",
+          "paragraphs": [
+            "Pretplatničke naknade se naplaćuju unapred na mesečnoj ili godišnjoj osnovi. Sve naknade su nepovratne osim ako zakon nalaže drugačije. Zadržavamo pravo da izmenimo cene uz obaveštenje 30 dana unapred."
+          ],
+          "items": [
+            "Plaćanje dospeva po aktivaciji pretplate",
+            "Kašnjenje u plaćanju može dovesti do suspenzije usluge",
+            "Promene cena zahtevaju obaveštenje 30 dana unapred",
+            "Otkazivanje stupa na snagu na kraju tekućeg obračunskog perioda"
+          ]
+        },
+        {
+          "title": "6. Podaci i privatnost",
+          "paragraphs": [
+            "Ozbiljno shvatamo privatnost i bezbednost vaših podataka. Vaše korišćenje Usluge takođe je regulisano našom Politikom privatnosti, koja je uključena u ove Uslove kao referenca."
+          ],
+          "items": [
+            "Vi zadržavate vlasništvo nad vašim poslovnim podacima",
+            "Primenjujemo bezbednosne mere prema industrijskim standardima",
+            "Ne prodajemo vaše lične podatke trećim stranama",
+            "Rezervne kopije podataka se redovno prave za kontinuitet usluge"
+          ]
+        },
+        {
+          "title": "7. Intelektualna svojina",
+          "paragraphs": [
+            "Usluga i njen originalni sadržaj, funkcije i funkcionalnost u vlasništvu su Konty-ja i zaštićeni su međunarodnim zakonima o autorskim pravima, žigovima, patentima, poslovnim tajnama i drugim zakonima o intelektualnoj svojini."
+          ]
+        },
+        {
+          "title": "8. Dostupnost usluge",
+          "paragraphs": [
+            "Iako se trudimo da održimo visoku dostupnost usluge, ne garantujemo neprekinut pristup Usluzi. Možemo obavljati održavanje koje privremeno utiče na dostupnost usluge, i obavestićemo vas unapred kada je to moguće."
+          ]
+        },
+        {
+          "title": "9. Ograničenje odgovornosti",
+          "paragraphs": [
+            "Ni u kom slučaju Konty neće biti odgovoran za bilo kakvu indirektnu, slučajnu, posebnu, posledičnu ili kaznenu štetu, uključujući bez ograničenja, gubitak profita, podataka, upotrebe, dobre volje ili drugih nematerijalnih gubitaka, koji proizilaze iz vašeg korišćenja Usluge."
+          ]
+        },
+        {
+          "title": "10. Prestanak",
+          "paragraphs": [
+            "Možemo ukinuti ili suspendovati vaš nalog i pristup Usluzi odmah, bez prethodnog obaveštenja, za ponašanje za koje verujemo da krši ove Uslove ili je štetno za druge korisnike, nas ili treće strane."
+          ]
+        },
+        {
+          "title": "11. Promene uslova",
+          "paragraphs": [
+            "Zadržavamo pravo da izmenimo ove Uslove u bilo kom trenutku. Obavestićemo korisnike o svim značajnim promenama putem emaila ili putem Usluge. Vaše nastavljeno korišćenje Usluge nakon takvih izmena predstavlja prihvatanje ažuriranih Uslova."
+          ]
+        },
+        {
+          "title": "12. Kontakt informacije",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o ovim Uslovima korišćenja, kontaktirajte nas na:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "dataProcessing": {
+      "title": "Ugovor o obradi podataka",
+      "lastUpdated": "Poslednja izmena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Uvod",
+          "paragraphs": [
+            "Ovaj Ugovor o obradi podataka (\"UOP\") čini deo ugovora između vas (\"Korisnik\" ili \"Rukovalac\") i Konty-ja (\"Obrađivač\") i definiše odgovornosti i obaveze vezane za obradu ličnih podataka u skladu sa važećim zakonima o zaštiti podataka.",
+            "Korišćenjem Konty usluga, prihvatate uslove obrade podataka opisane u ovom dokumentu."
+          ]
+        },
+        {
+          "title": "2. Definicije",
+          "definitionItems": [
+            { "term": "Lični podaci", "definition": "sve informacije koje se odnose na identifikovano ili identifikovano fizičko lice" },
+            { "term": "Rukovalac", "definition": "Korisnik koji određuje svrhe i sredstva obrade ličnih podataka" },
+            { "term": "Obrađivač", "definition": "Konty koji obrađuje lične podatke u ime Rukovaoca" },
+            { "term": "Lice na koje se podaci odnose", "definition": "identifikovano ili identifikovano fizičko lice na koje se lični podaci odnose" },
+            { "term": "Obrada", "definition": "bilo koja operacija ili skup operacija koje se vrše nad ličnim podacima" }
+          ]
+        },
+        {
+          "title": "3. Predmet i trajanje obrade",
+          "paragraphs": [
+            "Konty će obrađivati lične podatke u ime Korisnika isključivo u svrhu pružanja usluga softvera za prodajno mesto, što uključuje:"
+          ],
+          "items": [
+            "Upravljanje prodajom i transakcijama",
+            "Upravljanje zalihama i robom",
+            "Evidentiranje i upravljanje podacima o kupcima",
+            "Generisanje izveštaja i analitike",
+            "Tehnička podrška i održavanje sistema"
+          ],
+          "footerParagraphs": [
+            "Ovaj UOP ostaje na snazi tokom trajanja ugovora o Konty usluzi i prestaje po prestanku ugovora."
+          ]
+        },
+        {
+          "title": "4. Obaveze obrađivača (Konty)",
+          "paragraphs": [
+            "Konty se obavezuje da:"
+          ],
+          "items": [
+            "Obrađuje lične podatke samo u skladu sa dokumentovanim uputstvima Korisnika",
+            "Osigura da su lica ovlašćena za obradu ličnih podataka obavezana poverljivošću",
+            "Primeni odgovarajuće tehničke i organizacione mere za zaštitu podataka",
+            "Ne angažuje druge podobrađivače bez prethodne pisane saglasnosti Korisnika",
+            "Pomaže Korisniku u ispunjavanju zahteva lica na koja se podaci odnose za ostvarivanje njihovih prava",
+            "Pomaže Korisniku u obezbeđivanju usklađenosti sa zakonskim obavezama zaštite podataka",
+            "Briše ili vraća sve lične podatke Korisniku nakon završetka pružanja usluge",
+            "Stavi na raspolaganje Korisniku sve informacije potrebne za dokazivanje usklađenosti"
+          ]
+        },
+        {
+          "title": "5. Obaveze rukovaoca (Korisnik)",
+          "paragraphs": [
+            "Korisnik se obavezuje da:"
+          ],
+          "items": [
+            "Bude odgovoran za zakonitost obrade ličnih podataka",
+            "Pruži jasna i dokumentovana uputstva u vezi sa obradom podataka",
+            "Osigura da postoji pravni osnov za obradu podataka",
+            "Informiše lica na koja se podaci odnose o obradi u skladu sa zakonom",
+            "Odgovori na zahteve lica na koja se podaci odnose u vezi sa njihovim pravima"
+          ]
+        },
+        {
+          "title": "6. Bezbednost podataka",
+          "paragraphs": [
+            "Konty primenjuje sledeće mere zaštite podataka:"
+          ],
+          "subsections": [
+            {
+              "title": "Tehničke mere",
+              "items": [
+                "Enkripcija podataka u prenosu i u mirovanju",
+                "Redovne procedure pravljenja rezervnih kopija i plan oporavka od katastrofe",
+                "Zaštita od neovlašćenog pristupa sistemu",
+                "Nadgledanje i otkrivanje bezbednosnih incidenata",
+                "Redovno ažuriranje i održavanje bezbednosnih sistema"
+              ]
+            },
+            {
+              "title": "Organizacione mere",
+              "items": [
+                "Kontrola pristupa i ovlašćenje zaposlenih",
+                "Obuka zaposlenih o zaštiti podataka",
+                "Ugovori o poverljivosti sa svim zaposlenima",
+                "Politike i procedure bezbednosti podataka",
+                "Redovna procena rizika i bezbednosne revizije"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "7. Podobrađivači",
+          "paragraphs": [
+            "Konty može angažovati treće strane (podobrađivače) za obavljanje određenih aktivnosti obrade. Trenutni podobrađivači uključuju:"
+          ],
+          "items": [
+            "Pružaoce cloud infrastrukture i hostinga",
+            "Pružaoce usluga plaćanja i finansijskih usluga",
+            "Pružaoce usluga analitike i nadgledanja"
+          ],
+          "footerParagraphs": [
+            "Konty će obavestiti Korisnika o svakoj planiranoj promeni podobrađivača i pružiti mogućnost prigovora. Svi podobrađivači će biti ugovorom obavezani istim obavezama zaštite podataka kao Konty."
+          ]
+        },
+        {
+          "title": "8. Povrede podataka",
+          "paragraphs": [
+            "U slučaju povrede ličnih podataka, Konty će:"
+          ],
+          "items": [
+            "Bez nepotrebnog odlaganja, a najkasnije 72 sata nakon saznanja, obavestiti Korisnika o povredi",
+            "Pružiti sve relevantne informacije o prirodi i obimu povrede",
+            "Preduzeti odgovarajuće mere za ublažavanje i otklanjanje posledica",
+            "Dokumentovati sve incidente i preduzete mere",
+            "Sarađivati sa Korisnikom u obaveštavanju nadležnih organa i lica na koja se podaci odnose, ako je potrebno"
+          ]
+        },
+        {
+          "title": "9. Prava lica na koja se podaci odnose",
+          "paragraphs": [
+            "Konty će pomoći Korisniku u ispunjavanju zahteva lica na koja se podaci odnose za:"
+          ],
+          "items": [
+            "Pristup ličnim podacima",
+            "Ispravku netačnih podataka",
+            "Brisanje podataka (\"pravo na zaborav\")",
+            "Ograničenje obrade",
+            "Prenosivost podataka",
+            "Prigovor na obradu"
+          ],
+          "footerParagraphs": [
+            "Konty će odgovoriti na zahteve u razumnom roku, obično u roku od 30 dana, osim ako je potrebno dodatno vreme za složene zahteve."
+          ]
+        },
+        {
+          "title": "10. Međunarodni prenos podataka",
+          "paragraphs": [
+            "Ako Konty prenosi lične podatke izvan zemlje u kojoj su prikupljeni, osiguraće odgovarajuće zaštitne mere u skladu sa važećim zakonima, uključujući:"
+          ],
+          "items": [
+            "Standardne ugovorne klauzule odobrene od strane nadležnih organa",
+            "Prenos u zemlje sa adekvatnim nivoom zaštite podataka",
+            "Specifična odstupanja predviđena zakonom"
+          ]
+        },
+        {
+          "title": "11. Revizija i inspekcija",
+          "paragraphs": [
+            "Konty će omogućiti Korisniku ili njegovom ovlašćenom revizoru da sprovede revizije mera zaštite podataka, uz razumno obaveštenje i poštovanje poslovne poverljivosti i bezbednosnih zahteva Konty sistema.",
+            "Konty će redovno sprovoditi interne revizije i pružati relevantne sertifikate i dokaze o usklađenosti na zahtev Korisnika."
+          ]
+        },
+        {
+          "title": "12. Vraćanje i brisanje podataka",
+          "paragraphs": [
+            "Nakon završetka pružanja usluge, Konty će, po izboru Korisnika:"
+          ],
+          "items": [
+            "Vratiti sve lične podatke Korisniku u strukturiranom, standardnom i mašinski čitljivom formatu",
+            "Bezbedno izbrisati sve lične podatke iz svojih sistema, uključujući sve kopije"
+          ],
+          "footerParagraphs": [
+            "Brisanje će biti izvršeno u roku od 90 dana nakon prestanka ugovora, osim ako zakon zahteva čuvanje određenih podataka."
+          ]
+        },
+        {
+          "title": "13. Odgovornost i ograničenja",
+          "paragraphs": [
+            "Konty je odgovoran za štetu prouzrokovanu kršenjem ovog UOP-a u skladu sa opštim uslovima korišćenja.",
+            "Konty neće biti odgovoran za povrede prouzrokovane:"
+          ],
+          "items": [
+            "Nezakonitim uputstvima Korisnika",
+            "Radnjama Korisnika ili njegovih zaposlenih",
+            "Višom silom ili okolnostima van kontrole Konty-ja"
+          ]
+        },
+        {
+          "title": "14. Izmene",
+          "paragraphs": [
+            "Konty zadržava pravo da izmeni ovaj UOP radi usklađivanja sa zakonskim promenama ili promenama u poslovanju. Bićete obavešteni o svim značajnim promenama najmanje 30 dana unapred.",
+            "Nastavljeno korišćenje usluge nakon stupanja promena na snagu predstavlja prihvatanje izmenjenog UOP-a."
+          ]
+        },
+        {
+          "title": "15. Kontakt informacije",
+          "paragraphs": [
+            "Za sva pitanja vezana za obradu podataka, možete nas kontaktirati:"
+          ],
+          "showContactInfo": true
+        },
+        {
+          "title": "16. Merodavno pravo",
+          "paragraphs": [
+            "Ovaj Ugovor o obradi podataka regulisan je zakonima zemlje poslovanja, uključujući važeće zakonodavstvo o zaštiti podataka. Svi sporovi podležu nadležnosti nadležnih sudova."
+          ]
+        }
+      ]
+    },
+    "accountDelete": {
+      "title": "Brisanje naloga",
+      "lastUpdated": "Poslednja izmena:",
+      "date": "12. decembar 2025.",
+      "sections": [
+        {
+          "title": "1. Kako obrisati nalog",
+          "paragraphs": [
+            "Ako želite da obrišete svoj Konty nalog i sve povezane podatke, to možete uraditi na sledeće načine:"
+          ],
+          "subsections": [
+            {
+              "title": "Opcija 1: Brisanje u aplikaciji",
+              "paragraphs": [
+                "Možete obrisati nalog direktno iz Konty aplikacije:"
+              ],
+              "orderedItems": [
+                "Otvorite Konty aplikaciju i prijavite se na svoj nalog",
+                "Idite na Podešavanja",
+                "Izaberite \"Nalog\"",
+                "Dodirnite \"Obriši nalog\"",
+                "Potvrdite svoju odluku kada vas sistem zatraži"
+              ]
+            },
+            {
+              "title": "Opcija 2: Zahtev putem emaila",
+              "paragraphs": [
+                "Možete zatražiti brisanje naloga slanjem emaila našem timu za podršku:"
+              ],
+              "items": [
+                "Kontaktirajte nas putem emaila navedenog u sekciji Kontakt",
+                "Uključite \"Zahtev za brisanje naloga\" u predmet",
+                "Navedite email adresu povezanu sa vašim Konty nalogom",
+                "Obradićemo vaš zahtev u roku od 30 dana"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "2. Koji podaci će biti obrisani",
+          "paragraphs": [
+            "Kada obrišete nalog, sledeći podaci će biti trajno uklonjeni:"
+          ],
+          "items": [
+            "Profil vašeg naloga i akreditivi za prijavu",
+            "Poslovne informacije i podešavanja",
+            "Katalog proizvoda i podaci o zalihama",
+            "Evidencija kupaca i kontakt informacije",
+            "Istorija prodaje i evidencija transakcija",
+            "Izveštaji i analitički podaci",
+            "Sve otpremljene slike ili dokumenti",
+            "Korisničke preferencije i prilagođavanja"
+          ]
+        },
+        {
+          "title": "3. Čuvanje podataka nakon brisanja",
+          "paragraphs": [
+            "Imajte na umu da neki podaci mogu biti zadržani ograničen period nakon brisanja naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Zakonska usklađenost", "definition": "Možemo zadržati određene evidencije kako to zahtevaju poreski zakoni, fiskalni propisi ili druge zakonske obaveze (obično 5-10 godina u zavisnosti od jurisdikcije)" },
+            { "term": "Rezervni sistemi", "definition": "Podaci u rezervnim sistemima mogu zahtevati do 90 dana da budu potpuno uklonjeni" },
+            { "term": "Anonimizovani podaci", "definition": "Agregirane, anonimizovane statistike koje vas ne mogu identifikovati mogu biti zadržane u analitičke svrhe" }
+          ]
+        },
+        {
+          "title": "4. Pre nego što obrišete",
+          "paragraphs": [
+            "Preporučujemo da preduzmete sledeće korake pre brisanja naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Izvezite svoje podatke", "definition": "Preuzmite sve izveštaje, istoriju prodaje ili druge podatke koji vam mogu biti potrebni za vašu evidenciju" },
+            { "term": "Otkažite aktivne pretplate", "definition": "Uverite se da su sve aktivne pretplate otkazane da biste izbegli buduće naplate" },
+            { "term": "Izmirte dugovanja", "definition": "Platite sve neizmirene fakture ili naknade" },
+            { "term": "Obavestite svoj tim", "definition": "Ako imate više korisnika, obavestite ih pre brisanja" }
+          ]
+        },
+        {
+          "title": "5. Vremenski okvir brisanja naloga",
+          "paragraphs": [
+            "Kada pokrenete brisanje naloga:"
+          ],
+          "definitionItems": [
+            { "term": "Odmah", "definition": "Vaš nalog će biti deaktiviran i bićete odjavljeni" },
+            { "term": "U roku od 30 dana", "definition": "Svi lični podaci će biti obrisani iz naših aktivnih sistema" },
+            { "term": "U roku od 90 dana", "definition": "Podaci će biti uklonjeni iz rezervnih sistema" }
+          ]
+        },
+        {
+          "title": "6. Reaktivacija",
+          "paragraphs": [
+            "Brisanje naloga je trajno i ne može se poništiti. Ako želite ponovo koristiti Konty nakon brisanja naloga, moraćete kreirati novi nalog. Vaši prethodni podaci ne mogu biti vraćeni."
+          ]
+        },
+        {
+          "title": "7. Kontaktirajte nas",
+          "paragraphs": [
+            "Ako imate bilo kakva pitanja o brisanju naloga ili vam je potrebna pomoć, kontaktirajte nas:"
+          ],
+          "showContactInfo": true
+        }
+      ]
     }
   },
   "seo": {
     "blog": {
-      "description": "Stručni uvidi, savjeti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako optimizovati vaše poslovanje.",
-      "title": "Blog - Konty POS uvidi i resursi"
+      "description": "Stručni uvidi, saveti i najbolje prakse za upravljanje modernim POS sistemima. Naučite kako da optimizujete poslovanje i povećate prodaju.",
+      "title": "Blog - Saveti za ugostiteljstvo i trgovinu"
     },
     "clientStories": {
-      "description": "Stvarne priče biznisa koji su transformisali svoje poslovanje sa Konty POS-om.",
-      "title": "Priče o uspehu klijenata - Konty POS"
+      "description": "Otkrijte stvarne priče biznisa koji su transformisali svoje poslovanje sa Konty POS-om. Pogledajte kako restorani i prodavnice postižu uspeh.",
+      "title": "Priče o uspehu klijenata - Stvarni rezultati"
     },
     "contact": {
-      "description": "Kontaktirajte nas sa našim timom. Tu smo da vam pomognemo da izaberete savršeno POS rešenje.",
-      "title": "Kontaktirajte nas - Konty POS"
+      "description": "Kontaktirajte naš tim. Tu smo da vam pomognemo da izaberete savršeno POS rešenje za vaš restoran ili prodavnicu.",
+      "title": "Kontakt - Stručna podrška za kase"
     },
     "dataProcessing": {
-      "description": "Sporazum o obradi podataka između Konty i naših klijenata. Saznajte kako obrađujemo i štitimo vaše lične podatke.",
-      "title": "Obrada podataka - Konty"
+      "description": "Sporazum o obradi podataka između Konty i naših klijenata. Saznajte kako bezbedno obrađujemo i štitimo vaše lične podatke.",
+      "title": "Sporazum o obradi podataka - GDPR usklađenost"
     },
     "demo": {
-      "description": "Vidite Konty u akciji. Besplatna 15-minutna prezentacija prilagođena vašem biznisu. Bez obaveza.",
-      "title": "Zakazivanje demo prezentacije - Konty POS"
+      "description": "Pogledajte Konty u akciji uz besplatnu prezentaciju prilagođenu vašem biznisu. Bez obaveza, samo rešenja.",
+      "title": "Zakažite besplatnu demo prezentaciju"
     },
     "home": {
-      "description": "Pouzdane fiskalne kase sa E-Fakturama. 9.000+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Prelazak za 48 sati.",
-      "title": "Konty - POS za ugostiteljstvo i trgovinu"
+      "description": "Otkrijte pouzdane fiskalne kase sa E-Fakturama. 9.600+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Počnite besplatno.",
+      "title": "Fiskalne kase za ugostiteljstvo i trgovinu"
     },
     "partners": {
-      "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rešenja.",
-      "title": "Partnerska mreža - Konty POS"
+      "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rešenja. Očekuju vas konkurentne cene, obuka i podrška.",
+      "title": "Partnerski program - Postanite distributer"
     },
     "pricing": {
       "description": "Transparentne cene bez skrivenih troškova. Mesečne pretplate prilagođene veličini vašeg biznisa. Počnite besplatno 30 dana.",
-      "title": "Cene - Konty POS sistema"
+      "title": "Cenovnik - Probajte besplatno 30 dana"
     },
     "privacy": {
-      "description": "Kako Konty štiti vaše podatke i privatnost vaših kupaca.",
-      "title": "Politika privatnosti - Konty"
+      "description": "Saznajte kako Konty štiti vaše poslovne podatke i privatnost kupaca. Otkrijte naše bezbednosne prakse i vaša prava.",
+      "title": "Politika privatnosti - Zaštita podataka"
     },
     "products": {
       "description": "Izaberite savršeno POS rešenje za vaš biznis. Specijalizovani sistemi za restorane, kafiće, prodavnice i lance.",
       "download": {
-        "description": "Preuzmi Konty za bilo koji uređaj ili platformu.",
-        "title": "Preuzmi Konty"
+        "description": "Preuzmite Konty POS za vaš uređaj. Dostupno za Windows, Android i web. Besplatno preuzimanje i 30 dana probnog perioda.",
+        "title": "Preuzimanje - Windows, Android i Web"
       },
       "faqdocs": {
-        "description": "FAQ i dokumentacija za Konty",
-        "title": "FAQ i dokumentacija"
+        "description": "Pronađite odgovore na česta pitanja o Konty POS-u. Uputstva za podešavanje, dokumentacija i korisni saveti na jednom mestu.",
+        "title": "Česta pitanja i dokumentacija - Pomoć"
       },
       "hospitality": {
-        "description": "Specijalizovan POS za restorane, kafiće i barove. Rezervacije, porudžbine, stolovi, dostava - sve na jednom mestu.",
+        "description": "Otkrijte specijalizovan POS za restorane, kafiće i barove. Upravljajte rezervacijama, porudžbinama, stolovima i dostavom na jednom mestu.",
         "features": {
-          "description": "Kompletan spisak funkcionalnosti za restoranski POS: upravljanje stolovima, kuhinjski displej, raspored osoblja i još mnogo toga.",
-          "title": "Sve funkcionalnosti za ugostiteljstvo - Konty POS"
+          "description": "Istražite kompletan spisak funkcionalnosti za restoranski POS: upravljanje stolovima, kuhinjski displej, raspored osoblja i više.",
+          "title": "Sve funkcionalnosti za ugostiteljstvo"
         },
-        "title": "Konty za ugostiteljstvo - POS sistem za restorane i kafiće"
+        "title": "POS sistem za restorane i ugostiteljstvo"
       },
       "retail": {
-        "description": "Brza naplata, automatsko upravljanje zalihama, analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
+        "description": "Brza naplata, automatsko upravljanje zalihama i analitika prodaje. Savršeno za prodavnice, supermarkete i lance.",
         "features": {
-          "description": "Kompletan spisak funkcionalnosti za maloprodajni POS: upravljanje zalihama, skeniranje barkodova, programi lojalnosti i još mnogo toga.",
-          "title": "Sve funkcionalnosti za maloprodaju - Konty POS"
+          "description": "Istražite kompletan spisak funkcionalnosti za maloprodajni POS: upravljanje zalihama, skeniranje barkodova, programi lojalnosti i više.",
+          "title": "Sve funkcionalnosti za maloprodaju"
         },
-        "title": "Konty za trgovinu - POS terminal sa bar kod čitačem"
+        "title": "POS sistem za trgovinu i maloprodaju"
       },
-      "title": "Konty proizvodi - POS rešenja za sve tipove biznisa"
+      "title": "POS proizvodi i rešenja za svaki biznis"
     },
     "solutions": {
       "b2b": {
-        "description": "Profesionalno B2B rešenje sa E-Fakturama. Različite cene po partneru i napredni izveštaji.",
-        "title": "Konty E-Fakture za B2B i veleprodaju"
+        "description": "Profesionalno B2B rešenje sa E-Fakturama. Upravljajte cenama po partneru, fakturisanjem i naprednim izveštajima.",
+        "title": "B2B i veleprodaja sa E-Fakturama"
       },
       "barsCafes": {
-        "description": "POS sistem optimizovan za brzinu. Idealan za barove i kafiće sa velikim prometom.",
-        "title": "Konty za barove i kafiće | Brz POS za visok promet"
+        "description": "POS optimizovan za brzinu u barovima i kafićima. Brza naplata, praćenje zaliha i upravljanje smenama uključeno.",
+        "title": "Kase za barove i kafiće - Brza naplata"
       },
       "clothingBoutiques": {
-        "description": "Specijalizovan POS za modnu industriju. Veličine, boje, sezone i program lojalnosti.",
-        "title": "Konty za prodavnice odeće | POS za butike"
+        "description": "Upravljajte modnom maloprodajom sa specijalizovanim POS-om. Pratite veličine, boje, sezone i programe lojalnosti.",
+        "title": "Kase za butike i prodavnice odeće"
       },
-      "description": "Otkrijte kako Konty POS može da unapredi vaše poslovanje. Specijalizovana rešenja za restorane, kafiće, prodavnice i B2B.",
+      "description": "Otkrijte kako Konty POS može da transformiše vaše poslovanje. Specijalizovana rešenja za restorane, kafiće i prodavnice.",
       "fastFood": {
-        "description": "Efikasan POS za restorane brze hrane. Drive-thru, dostava i sala iz jednog sistema.",
-        "title": "Konty za brzu hranu | Fast food POS sistem"
+        "description": "Efikasan POS za restorane brze hrane. Upravljajte drive-thru, dostavom i salom iz jednog brzog sistema.",
+        "title": "Kase za brzu hranu i fast food restorane"
       },
       "grocerySupermarkets": {
-        "description": "Upravljanje hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i real-time inventar.",
-        "title": "Konty za prodavnice hrane | POS za supermarkete"
+        "description": "Upravljajte hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i praćenje zaliha u realnom vremenu.",
+        "title": "Kase za markete i supermarkete - Zalihe lako"
       },
       "restaurants": {
-        "description": "Kompletno POS rešenje za restorane. Upravljanje stolovima, kuhinjski ekran, rezervacije i analitika.",
-        "title": "Konty za restorane | POS sistem za ugostiteljstvo"
+        "description": "Kompletan POS za restorane sa punom uslugom. Upravljajte stolovima, kuhinjskim ekranom, rezervacijama i analitikom.",
+        "title": "Kase za restorane sa punom uslugom"
       },
-      "title": "Konty Rešenja po delatnostimama | POS sistem prilagođen vašem poslovanju",
+      "title": "POS rešenja prilagođena vašoj delatnosti",
       "generalStores": {
-        "description": "Kompletno POS upravljanje za prodavnice mešovite robe. Podrška za više smena, praćenje raznovrsnih zaliha i pouzdano offline funkcionisanje.",
-        "title": "POS sistem za prodavnice mešovite robe | Konty"
+        "description": "Kompletan POS za prodavnice mešovite robe. Podrška za više smena, praćenje zaliha i pouzdan offline rad uključen.",
+        "title": "Kase za prodavnice mešovite robe"
       }
     },
     "terms": {
-      "description": "Uslovi korišćenja Konty POS sistema i povezanih usluga.",
-      "title": "Uslovi korišćenja - Konty"
+      "description": "Pročitajte uslove korišćenja Konty POS sistema i povezanih usluga. Saznajte o vašim pravima i našim obavezama.",
+      "title": "Uslovi korišćenja - Korisnički ugovor"
+    },
+    "accountDelete": {
+      "description": "Saznajte kako da obrišete svoj Konty nalog i šta se dešava sa vašim podacima. Jednostavan proces brisanja naloga sa jasnim pravilima o čuvanju podataka.",
+      "title": "Brisanje naloga - Obrišite svoj nalog"
     }
   },
   "ui": {
@@ -1750,7 +2291,11 @@
       "products": "Proizvodi",
       "restaurants": "Restorani",
       "retail": "Trgovina",
-      "solutions": "Rješenja"
+      "solutions": "Rješenja",
+      "privacy": "Politika privatnosti",
+      "terms": "Uslovi korišćenja",
+      "data-processing": "Ugovor o obradi podataka",
+      "account-delete": "Brisanje naloga"
     },
     "common": {
       "buttons": {
@@ -1834,9 +2379,6 @@
         "bookDemo": "Zakaži demo",
         "submit": "Pošalji"
       },
-      "calendlyScheduled": "Demo zakazan",
-      "calendlySuccess": "Demo je uspešno zakazan!",
-      "calendlySuccessDescription": "Uskoro ćete primiti email potvrdu.",
       "categoryOptions": {
         "hospitality": "Ugostiteljstvo (restoran, kafić, bar...)",
         "other": "Ostalo",
@@ -1872,6 +2414,7 @@
         "success": "Poruka je uspešno poslata!",
         "successDescription": "Hvala vam što ste nas kontaktirali. Javićemo vam se u roku od 24 sata."
       },
+      "availabilityFallbackMessage": "Trenutno ne možemo da učitamo dostupne termine. Molimo izaberite bilo koji datum u našem radnom vremenu.",
       "noAvailableSlots": "Nema dostupnih termina za ovaj datum",
       "optional": "opciono",
       "placeholders": {
@@ -1931,6 +2474,24 @@
         "forRetail": "Konty za trgovinu"
       }
     },
-    "readMore": "Pročitaj više"
+    "readMore": "Pročitaj više",
+    "cookieConsent": {
+      "title": "Optimizujte vaše iskustvo",
+      "description": "Koristimo kolačiće da vam pružimo najbolje iskustvo i zapamtimo vaše preference.",
+      "essential": "Osnovni",
+      "essentialRequired": "(Obavezni)",
+      "analytics": "Analitika proizvoda",
+      "analyticsDescription": "(Poboljšanje Konty-ja)",
+      "personalization": "Personalizacija",
+      "personalizationDescription": "(Relevantan sadržaj)",
+      "performance": "Performanse",
+      "performanceDescription": "(Brzina stranice)",
+      "customize": "Prilagodi",
+      "hide": "Sakrij",
+      "saveChoices": "Sačuvaj izbor",
+      "essentialOnly": "Samo osnovni",
+      "acceptAll": "Prihvati sve",
+      "cookieSettings": "Podešavanja kolačića"
+    }
   }
 }

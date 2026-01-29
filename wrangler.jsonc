@@ -20,7 +20,8 @@
 	"vars": {
 		"NODE_ENV": "development",
 		"APP_ENV": "development",
-		"NUXT_PUBLIC_SITE_URL": "http://localhost:3000"
+		"NUXT_PUBLIC_SITE_URL": "http://localhost:3000",
+		"HUBSPOT_MEETING_LINK_SLUG": "konty-team/konty-demo",
 	},
 	"env": {
 		"production": {
@@ -39,7 +40,8 @@
 			"vars": {
 				"NODE_ENV": "production",
 				"APP_ENV": "production",
-				"NUXT_PUBLIC_SITE_URL": "https://konty-website-production.codeusteam.workers.dev"
+				"NUXT_PUBLIC_SITE_URL": "https://konty.com",
+        "HUBSPOT_MEETING_LINK_SLUG": "konty-team/konty-demo",
 			}
 		},
 		"staging": {
@@ -58,7 +60,8 @@
 			"vars": {
 				"NODE_ENV": "production",
 				"APP_ENV": "staging",
-				"NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev"
+				"NUXT_PUBLIC_SITE_URL": "https://konty-website-staging.codeusteam.workers.dev",
+        "HUBSPOT_MEETING_LINK_SLUG": "konty-team/konty-demo",
 			}
 		}
 	}

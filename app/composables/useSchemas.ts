@@ -65,8 +65,7 @@ export const useSchemas = () => {
       ],
 
       // Screenshot for rich results
-      // TODO: Replace with real images
-      screenshot: '/images/screenshots/retail-dashboard.png',
+      screenshot: '/public/images/hero/retail.avif',
 
       // Aggregate ratings removed - only add with real, verified reviews
       // aggregateRating: { ... },
@@ -117,8 +116,7 @@ export const useSchemas = () => {
         t('pages.products.features.hospitality.feat3.title')
       ],
 
-      // TODO: Replace with real images
-      screenshot: '/images/screenshots/hospitality-dashboard.png',
+      screenshot: '/public/images/hero/hospitality.avif',
 
       // Aggregate ratings removed - only add with real, verified reviews
 
@@ -521,7 +519,7 @@ export const useSchemas = () => {
         priceCurrency: currency.value,
         availability: 'https://schema.org/InStock',
         name: t('pages.pricing.freeTrial'),
-        description: '15-minute personalized demo',
+        description: 'Personalized Konty demo presentation',
         eligibleDuration: {
           '@type': 'QuantitativeValue',
           value: 15,
@@ -546,8 +544,7 @@ export const useSchemas = () => {
         t('pages.demo.features.qaSession'),
         t('pages.demo.features.trialSetup')
       ],
-      // TODO: Replace with real images
-      screenshot: '/images/screenshots/demo-dashboard.png'
+      screenshot: '/public/images/hero/hospitality.avif',
     }
   }
 

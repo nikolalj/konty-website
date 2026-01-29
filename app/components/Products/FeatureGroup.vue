@@ -16,7 +16,7 @@
           height="500"
           quality="80"
           fit="inside"
-          class="w-full h-auto rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
+          class="w-full h-auto rounded-2xl transition-transform duration-300 hover:scale-105"
         />
       </div>
     </UIAppear>

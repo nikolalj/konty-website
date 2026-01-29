@@ -942,7 +942,7 @@ instalaciju, ali ona nije automatizirana niti se ikada dobio odgovor na ispunjen
 posloženi, uz maksimalno jednu formu bez automatizacije.
 Smjer u kojem treba ići je smjer kojim idu Toast i SpotOn, a to su forme na kojima je implementiran reCAPTCHA kako bi se
 smanjio broj spam upita, te automatski odgovor. Dodatno uz to je preporuka implementirati chatbot rješenje za rješavanje
-nedoumica posjetitelja weba. Opcija koja se još preporuča je povezivanje kalendara (Calendly) formom za ugovaranje
+nedoumica posjetitelja weba. Opcija koja se još preporuča je povezivanje HubSpot kalendara formom za ugovaranje
 termina sastanka za demo prezentaciju.
 
 EMAIL

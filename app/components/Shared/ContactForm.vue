@@ -188,6 +188,12 @@
                     >
                       {{ t('ui.forms.noAvailableSlots') }}
                     </p>
+                    <p
+                      v-if="availabilityError"
+                      class="text-sm text-amber-600 dark:text-amber-400"
+                    >
+                      {{ availabilityError }}
+                    </p>
                   </div>
                 </div>
               </template>
@@ -229,18 +235,20 @@ const { track } = useTracking()
 const toast = useToast()
 const { selectedSubscription } = usePricingContactForm()
 
-// Use Calendly availability composable
+// Use HubSpot meetings composable
 const {
   selectedDate,
   selectedTime,
   minDate,
   availableTimeSlots,
   displayDateTime,
+  availabilityError,
   fetchAvailability,
   isDateUnavailable,
   getPreferredDateTimeISO,
+  getSelectedSlotDetails,
   resetDateTime
-} = useCalendlyAvailability()
+} = useHubspotMeetings()
 
 const form = reactive({
   name: '',
@@ -407,6 +415,7 @@ const onSubmit = async () => {
   try {
     // Use composable method to get ISO datetime
     const preferredDateTime = getPreferredDateTimeISO()
+    const slotDetails = getSelectedSlotDetails()
 
     await $fetch('/api/contact', {
       method: 'POST',
@@ -417,14 +426,20 @@ const onSubmit = async () => {
         industry: form.industry,
         message: form.message,
         subscription: form.subscription,
-        preferredDateTime
+        preferredDateTime,
+        startTime: slotDetails?.startTime,
+        endTime: slotDetails?.endTime,
+        meetingDurationMs: slotDetails?.durationMs,
+        meetingTimezone: slotDetails?.timezone,
+        likelyAvailableUserIds: slotDetails?.likelyAvailableUserIds
       }
     })
 
     // Track successful form submission
     track('contact_form_submission', {
       industry: form.industry,
-      hasPreferredDateTime: !!preferredDateTime
+      hasPreferredDateTime: !!preferredDateTime,
+      meetingScheduled: !!slotDetails?.startTime
     })
 
     toast.add({

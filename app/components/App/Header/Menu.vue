@@ -222,6 +222,8 @@ const props = defineProps({
   }
 })
 
+const emit = defineEmits(['navigate'])
+
 interface BaseMenuItem {
   label: string
   to?: string
@@ -258,6 +260,7 @@ function closeAll() {
 
 function handleNavigate() {
   closeAll()
+  emit('navigate')
 }
 
 watch(

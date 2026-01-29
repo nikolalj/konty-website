@@ -44,8 +44,8 @@
       <!-- Help text -->
       <p class="mt-8 text-sm text-gray-500 dark:text-gray-400">
         {{ t('ui.errors.generic.helpText') }}
-        <a href="mailto:support@konty.com" class="text-primary-500 hover:underline">
-          support@konty.com
+        <a href="mailto:contact@konty.com" class="text-primary-500 hover:underline">
+          contact@konty.com
         </a>
       </p>
     </div>

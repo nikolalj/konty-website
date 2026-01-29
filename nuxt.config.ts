@@ -244,7 +244,7 @@ export default defineNuxtConfig({
           'Referrer-Policy': 'strict-origin-when-cross-origin',
           'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
           'Content-Security-Policy': process.env.NODE_ENV !== 'development'
-            ? "default-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://www.google.com; img-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com"
+            ? "default-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://www.google.com https://cloudflareinsights.com; img-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self' https://www.googletagmanager.com"
             : ''
         }
       },
@@ -284,7 +284,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
-    calendlyApiToken: process.env.CALENDLY_API_TOKEN,
+    hubspotAccessToken: process.env.HUBSPOT_ACCESS_TOKEN,
+    hubspotClientId: process.env.HUBSPOT_CLIENT_ID,
+    hubspotMeetingLinkSlug: process.env.HUBSPOT_MEETING_LINK_SLUG,
 
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL

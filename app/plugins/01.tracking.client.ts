@@ -18,7 +18,7 @@ export default defineNuxtPlugin(() => {
   if (typeof window !== 'undefined') {
     window.dataLayer = window.dataLayer || []
 
-    // TODO forces approving of cookies by default. Remove in the future.
+    // TODO forces approving of cookies by default. Remove in the future
     window.dataLayer.push({
       event: 'consent_default',
       'analytics_storage': 'granted',

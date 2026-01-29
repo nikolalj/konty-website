@@ -40,6 +40,7 @@
 import FeatureGroup from './FeatureGroup.vue'
 
 const { t } = useI18n()
+const { getLocalizedImagePath } = useLocalizedImages()
 
 interface FeatureItem {
   text: string
@@ -56,11 +57,12 @@ const props = defineProps({
 
 // Define feature groups with images based on product
 const featureGroups = computed(() => {
-  const basePath = `/images/features/${props.product}`
+  const basePath = `/images/features/${props.product}/features`
+
   return [
-    { image: `${basePath}/feat1.avif` },
-    { image: `${basePath}/feat2.avif` },
-    { image: `${basePath}/feat3.avif` }
+    { image: getLocalizedImagePath(basePath, 'feat1.avif') },
+    { image: getLocalizedImagePath(basePath, 'feat2.avif') },
+    { image: getLocalizedImagePath(basePath, 'feat3.avif') }
   ]
 })
 

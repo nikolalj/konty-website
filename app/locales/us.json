@@ -2,19 +2,14 @@
   "data": {
     "company": {
       "address": {
-        "city": "Belgrade",
-        "countryCode": "RS",
-        "postalCode": "11000",
-        "region": "Belgrade",
-        "street": "Trnska 7"
+        "city": "Podgorica",
+        "country": "Montenegro",
+        "countryCode": "ME",
+        "postalCode": "81000",
+        "region": "Podgorica",
+        "street": "Moskovska 153"
       },
-      "areaServed": [
-        "US",
-        "RS",
-        "ME",
-        "BA",
-        "HR"
-      ],
+      "areaServed": ["US", "RS", "ME", "BA", "HR"],
       "businessHours": {
         "weekdays": {
           "closes": "17:00",
@@ -29,8 +24,8 @@
       "founder": "Nikola Ljumovic",
       "foundingDate": "2021-12-22",
       "geo": {
-        "latitude": "44.8125",
-        "longitude": "20.4612"
+        "latitude": "42.4469",
+        "longitude": "19.2499"
       },
       "knowsAbout": [
         "Point of Sale Systems",
@@ -46,8 +41,8 @@
         "instagram": "https://www.instagram.com/kontypos",
         "linkedin": "https://www.linkedin.com/company/kontypos"
       },
-      "tradeName": "Codeux",
-      "vatID": "112821082"
+      "tradeName": "OllieTech",
+      "vatID": "03554759"
     },
     "products": {
       "name": "Konty POS",
@@ -319,7 +314,7 @@
         "stat1": {
           "description": "Active business locations",
           "suffix": "+",
-          "value": "9000"
+          "value": "9600"
         },
         "stat2": {
           "description": "Years of POS experience",
@@ -758,20 +753,20 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a2": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your business never stops, even during internet outages-complete offline functionality built into the system.",
-            "a3": "Most businesses are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
-            "a4": "Yes, Konty works with most existing POS equipment including fiscal printers, kitchen printers, cash drawers, tablets, and kitchen display systems. We help you leverage existing equipment or recommend compatible and cost-effective upgrades if needed.",
-            "a5": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. New employees get up to speed faster, reducing training costs.",
-            "a6": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system-no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
-            "a7": "Of course. Create unlimited modifiers for allergies, preferences, and special requests-like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
-            "a8": "Yes, Konty supports splitting checks and separate payments. Supports multiple payment methods on one check-card, cash, etc. Handle any payment scenario with ease, keeping guests happy.",
-            "q2": "Does the system work without internet?",
-            "q3": "How long does the setup process take?",
-            "q4": "Can I keep my existing equipment?",
-            "q5": "What about staff training?",
-            "q6": "Does it integrate with delivery platforms?",
-            "q7": "Can I customize modifiers for menu items?",
-            "q8": "Does it support split checks and separate payments?",
+            "a1": "Yes, Konty works flawlessly offline. All transactions are processed locally and automatically sync when connection returns. Your business never stops, even during internet outages-complete offline functionality built into the system.",
+            "a2": "Most businesses are fully operational within 48 hours. We handle menu setup, device configuration, and staff training. Our team works according to your schedule to ensure minimal disruption to daily operations.",
+            "a3": "Yes, Konty works with most existing POS equipment including fiscal printers, kitchen printers, cash drawers, tablets, and kitchen display systems. We help you leverage existing equipment or recommend compatible and cost-effective upgrades if needed.",
+            "a4": "Our intuitive interface requires minimal training. Most servers and bartenders learn the basics in less than 30 minutes. New employees get up to speed faster, reducing training costs.",
+            "a5": "Yes, Konty integrates with major delivery platforms. Orders from delivery apps come directly into your POS and kitchen display system-no manual entry, no missed orders. One system for everything: dine-in, takeout, and delivery.",
+            "a6": "Of course. Create unlimited modifiers for allergies, preferences, and special requests-like \"no onions\", \"extra cheese\", or \"gluten-free\". Modifiers are sent to the kitchen with each order, ensuring accuracy and guest satisfaction.",
+            "a7": "Yes, Konty supports splitting checks and separate payments. Supports multiple payment methods on one check-card, cash, etc. Handle any payment scenario with ease, keeping guests happy.",
+            "q1": "Does the system work without internet?",
+            "q2": "How long does the setup process take?",
+            "q3": "Can I keep my existing equipment?",
+            "q4": "What about staff training?",
+            "q5": "Does it integrate with delivery platforms?",
+            "q6": "Can I customize modifiers for menu items?",
+            "q7": "Does it support split checks and separate payments?",
             "subtitle": "Most common questions about Konty hospitality features",
             "title": "Frequently Asked Questions"
           },
@@ -827,84 +822,68 @@
                 "text": "Bill splitting and transfer between tables"
               },
               "item5": {
-                "icon": "i-heroicons-calendar-days",
-                "text": "Reservation management integration"
-              },
-              "item6": {
-                "icon": "i-heroicons-adjustments-horizontal",
-                "text": "Modifier management (allergies, special requests)"
-              },
-              "item7": {
                 "icon": "i-heroicons-fire",
                 "text": "Course timing and kitchen coordination"
               },
               "title": "Complete Front-of-House Operations"
             },
             "group2": {
-              "description": "Powerful tools to manage recipes, purchasing, and stock with precision.",
+              "description": "Powerful tools for managing purchasing and inventory with precision.",
               "imageAlt": "Inventory and purchasing management",
-              "item1": {
-                "icon": "i-heroicons-calculator",
-                "text": "Recipe management with ingredient costing"
-              },
-              "item2": {
-                "icon": "i-heroicons-document-text",
-                "text": "Purchase order creation and tracking"
-              },
-              "item3": {
-                "icon": "i-heroicons-truck",
-                "text": "Vendor management with price comparison"
-              },
-              "item4": {
-                "icon": "i-heroicons-cube",
-                "text": "Inventory receiving and adjustments"
-              },
-              "item5": {
-                "icon": "i-heroicons-trash",
-                "text": "Waste tracking and analysis"
-              },
-              "item6": {
-                "icon": "i-heroicons-building-storefront",
-                "text": "Multi-location stock tracking"
-              },
-              "item7": {
-                "icon": "i-heroicons-exclamation-triangle",
-                "text": "Low-stock monitoring and tracking"
-              },
-              "title": "Back Office & Inventory Control"
-            },
-            "group3": {
-              "description": "Data-driven insights to optimize operations and grow your revenue.",
-              "imageAlt": "Analytics and reporting dashboard",
               "item1": {
                 "icon": "i-heroicons-chart-bar",
                 "text": "Sales analytics (by item, server, time, daypart)"
               },
               "item2": {
-                "icon": "i-heroicons-currency-dollar",
-                "text": "Labor cost tracking and optimization"
+                "icon": "i-heroicons-calculator",
+                "text": "Item and ingredient management and calculations"
               },
               "item3": {
-                "icon": "i-heroicons-light-bulb",
-                "text": "Menu engineering insights"
+                "icon": "i-heroicons-truck",
+                "text": "Vendor management, stock receiving and adjustments"
               },
               "item4": {
-                "icon": "i-heroicons-user-circle",
-                "text": "Customer frequency and preferences"
+                "icon": "i-heroicons-users",
+                "text": "Employee performance overview"
               },
               "item5": {
-                "icon": "i-heroicons-document-chart-bar",
-                "text": "P&L statements and margin analysis"
+                "icon": "i-heroicons-exclamation-triangle",
+                "text": "Minimum stock level tracking"
+              },
+              "title": "Inventory & Purchasing Management"
+            },
+            "group3": {
+              "description": "Connected to kitchen devices for efficient preparation and real-time order tracking.",
+              "imageAlt": "Kitchen Display System interface",
+              "item1": {
+                "icon": "i-heroicons-computer-desktop",
+                "text": "Visual order display on kitchen screens"
+              },
+              "item2": {
+                "icon": "i-heroicons-signal",
+                "text": "Automatic order routing from POS to KDS"
+              },
+              "item3": {
+                "icon": "i-heroicons-clock",
+                "text": "Preparation time tracking for each dish"
+              },
+              "item4": {
+                "icon": "i-heroicons-queue-list",
+                "text": "Multiple statuses: Received, In Progress, Ready"
+              },
+              "item5": {
+                "icon": "i-heroicons-check-circle",
+                "text": "Easy marking of completed orders"
               },
               "item6": {
-                "icon": "i-heroicons-document-check",
-                "text": "Tax compliance and fiscal integration"
+                "icon": "i-heroicons-exclamation-circle",
+                "text": "Priority display for urgent orders"
               },
               "item7": {
-                "icon": "i-heroicons-users",
-                "text": "Employee performance dashboards"
+                "icon": "i-heroicons-arrows-right-left",
+                "text": "Synchronization across multiple screens and stations"
               },
-              "title": "Intelligence & Growth Tools"
+              "title": "Kitchen Display System (KDS)"
             },
             "title": "Comprehensive Tools for Your Restaurant"
           },
@@ -960,20 +939,20 @@
         "features": {
           "description": "Everything you need for stable sales and secure checkout, with an intuitive system anyone can start using quickly.",
           "faq": {
-            "a2": "Yes, Konty works with all standard barcode scanners including USB, Bluetooth, and mobile devices. Supports both regular barcodes and weighted barcodes for scales. Fast and accurate checkout every time.",
-            "a3": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships-all included in your plan at no extra cost.",
-            "a4": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data-no manual entry. Most migrations complete within 24 hours.",
-            "a5": "Simple one-click returns with automatic inventory adjustment. Process refunds, exchanges, and credit memos immediately. All return data is recorded for reporting and inventory management.",
-            "a6": "Yes, Konty is compatible with most existing POS hardware including fiscal printers, barcode scanners, cash drawers, customer displays, and tablets. Use what you already have or we can recommend affordable compatible options.",
-            "a7": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Complete visibility.",
-            "a8": "Yes, create multiple price lists for wholesale customers, VIP customers, or bulk buyers. Assign specific price tiers to different customer groups and Konty automatically applies the correct prices at checkout.",
-            "q2": "Does it support barcode scanning?",
-            "q3": "What about loyalty programs?",
-            "q4": "Can I import existing inventory?",
-            "q5": "How are returns handled?",
-            "q6": "Does it work with my existing hardware?",
-            "q7": "Can I track inventory in real-time across multiple locations?",
-            "q8": "Does it support different prices for different customer types?",
+            "a1": "Yes, Konty works with all standard barcode scanners including USB, Bluetooth, and mobile devices. Supports both regular barcodes and weighted barcodes for scales. Fast and accurate checkout every time.",
+            "a2": "Built-in loyalty program with points, discounts, and customer tracking. Reward regular customers, track purchase history, send targeted promotions, and build long-term relationships-all included in your plan at no extra cost.",
+            "a3": "Yes, we provide free data migration from your current system. Our team helps you import products, customers, and inventory data-no manual entry. Most migrations complete within 24 hours.",
+            "a4": "Simple one-click returns with automatic inventory adjustment. Process refunds, exchanges, and credit memos immediately. All return data is recorded for reporting and inventory management.",
+            "a5": "Yes, Konty is compatible with most existing POS hardware including fiscal printers, barcode scanners, cash drawers, customer displays, and tablets. Use what you already have or we can recommend affordable compatible options.",
+            "a6": "Absolutely. Every sale, return, and inventory adjustment updates inventory in real-time across all locations. Complete visibility.",
+            "a7": "Yes, create multiple price lists for wholesale customers, VIP customers, or bulk buyers. Assign specific price tiers to different customer groups and Konty automatically applies the correct prices at checkout.",
+            "q1": "Does it support barcode scanning?",
+            "q2": "What about loyalty programs?",
+            "q3": "Can I import existing inventory?",
+            "q4": "How are returns handled?",
+            "q5": "Does it work with my existing hardware?",
+            "q6": "Can I track inventory in real-time across multiple locations?",
+            "q7": "Does it support different prices for different customer types?",
             "subtitle": "Most common questions about Konty retail features",
             "title": "Frequently Asked Questions"
           },
@@ -1016,10 +995,7 @@
                 "icon": "i-heroicons-qr-code",
                 "text": "Barcode scanner integration (standard & weight-based)"
               },
-              "item10": {
-                "icon": "i-heroicons-document-text",
-                "text": "Receipt customization and email receipts"
-              },
+
               "item2": {
                 "icon": "i-heroicons-squares-2x2",
                 "text": "Category button configuration for fast access"
@@ -1034,23 +1010,19 @@
               },
               "item5": {
                 "icon": "i-heroicons-user-circle",
-                "text": "Customer search and history"
+                "text": "Customer search by name, email, or phone number"
               },
               "item6": {
-                "icon": "i-heroicons-gift",
-                "text": "Loyalty program integration"
-              },
-              "item7": {
                 "icon": "i-heroicons-tag",
                 "text": "Discount and promotion management"
               },
-              "item8": {
+              "item7": {
                 "icon": "i-heroicons-credit-card",
                 "text": "Multiple payment types: credit, debit, cash, contactless"
               },
-              "item9": {
-                "icon": "i-heroicons-identification",
-                "text": "Age restriction prompts"
+              "item8": {
+                "icon": "i-heroicons-document-text",
+                "text": "Receipt customization and invoice printing"
               },
               "title": "High-Speed Point of Sale"
             },
@@ -1063,7 +1035,7 @@
               },
               "item2": {
                 "icon": "i-heroicons-swatch",
-                "text": "Product variants (size, color, etc.)"
+                "text": "Product variants and categories"
               },
               "item3": {
                 "icon": "i-heroicons-magnifying-glass",
@@ -1085,50 +1057,38 @@
                 "icon": "i-heroicons-document-text",
                 "text": "Purchase order management"
               },
-              "item8": {
-                "icon": "i-heroicons-truck",
-                "text": "Vendor price comparison"
-              },
-              "item9": {
-                "icon": "i-heroicons-chart-bar",
-                "text": "Seasonal inventory planning"
-              },
               "title": "Advanced Inventory Management"
             },
             "group3": {
-              "description": "Centralized control and insights across all your stores.",
+              "description": "Complete insights and control for all your stores in one place.",
               "imageAlt": "Multi-location analytics dashboard",
               "item1": {
-                "icon": "i-heroicons-squares-plus",
-                "text": "Centralized dashboard for location reporting"
+                "icon": "i-heroicons-eye",
+                "text": "Inventory visibility across all locations"
               },
               "item2": {
-                "icon": "i-heroicons-eye",
-                "text": "Unified inventory visibility across locations"
-              },
-              "item3": {
                 "icon": "i-heroicons-tag",
                 "text": "Location-specific pricing and promotions"
               },
-              "item4": {
+              "item3": {
                 "icon": "i-heroicons-document-chart-bar",
                 "text": "Consolidated reporting and analytics"
               },
-              "item5": {
-                "icon": "i-heroicons-chart-pie",
-                "text": "Best/worst performing products by location"
-              },
-              "item6": {
-                "icon": "i-heroicons-users",
-                "text": "Employee performance across stores"
-              },
-              "item7": {
-                "icon": "i-heroicons-user-group",
-                "text": "Customer behavior patterns"
-              },
-              "item8": {
+              "item4": {
                 "icon": "i-heroicons-document-check",
                 "text": "Integrated accounting and tax compliance"
+              },
+              "item5": {
+                "icon": "i-heroicons-clock",
+                "text": "Real-time sales tracking"
+              },
+              "item6": {
+                "icon": "i-heroicons-chart-pie",
+                "text": "Detailed reports for each location"
+              },
+              "item7": {
+                "icon": "i-heroicons-cube-transparent",
+                "text": "Product and price management for all locations"
               },
               "title": "Multi-Location & Analytics"
             },
@@ -1212,7 +1172,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Reliable client management, professional invoicing, and complete transaction tracking. Everything you need for wholesale operations, nothing you don't.",
-          "title": "B2B Sales That Simply Work"
+          "title": "Konty for B2B and e-invoicing"
         },
         "overview": {
           "description": "Complete solution for B2B sales and client management",
@@ -1272,8 +1232,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Fast order entry, complete inventory control, and seamless shift changes. Built for high-volume service when reliability matters most.",
-          "title": "Serve More, Stress Less"
+          "subtitle": "Fast order entry, complete inventory control, and simple shift handover. Built for high traffic when reliability matters most.",
+          "title": "Konty for bars and cafes"
         },
         "overview": {
           "description": "System designed for fast service and high traffic",
@@ -1343,8 +1303,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Track every variant, know your customers, manage layaway. Intuitive tools that let you focus on fashion, not technology.",
-          "title": "Boutique Management Made Simple"
+          "subtitle": "Complete sales and inventory management for clothing. Track product variants, manage seasonal discounts, and get real-time insights into top-selling items.",
+          "title": "Konty for clothing boutiques"
         },
         "overview": {
           "description": "Specialized for boutiques and clothing stores",
@@ -1423,7 +1383,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Real-time kitchen display and instant order processing that keeps pace with your busiest hours. Simple enough to train in minutes, reliable enough to count on all day.",
-          "title": "Speed Meets Reliability"
+          "title": "Konty for fast food"
         },
         "overview": {
           "description": "System designed for maximum speed and throughput",
@@ -1484,7 +1444,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Barcode scanning, scale integration, and complete inventory tracking. Reliable grocery retail management that handles the complexity so you don't have to.",
-          "title": "Manage Thousands of Products with Confidence"
+          "title": "Konty for grocery stores and supermarkets"
         },
         "overview": {
           "description": "Powerful system for managing large product catalogs",
@@ -1551,7 +1511,7 @@
         "hero": {
           "cta": "Start 30-Day Free Trial",
           "subtitle": "Tables, kitchen display, split bills, and offline mode. Simple, reliable, and built to handle your busiest nights without missing a beat.",
-          "title": "Your Restaurant POS That Never Lets You Down"
+          "title": "Konty for restaurants"
         },
         "overview": {
           "description": "From table management to kitchen orders",
@@ -1611,8 +1571,8 @@
         },
         "hero": {
           "cta": "Start 30-Day Free Trial",
-          "subtitle": "Fast checkout, complete inventory control, and seamless shift management. Everything you need to run a general store-simple and reliable.",
-          "title": "General Store Management Made Simple"
+          "subtitle": "Simple management of diverse assortment. Everything you need for a general store - simple and reliable.",
+          "title": "Konty for general stores"
         },
         "overview": {
           "description": "Reliable system for general stores with diverse products",
@@ -1620,108 +1580,689 @@
           "title": "Perfect for General Stores"
         }
       }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "paragraphs": [
+            "Konty (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our point-of-sale software and services.",
+            "By using our Service, you consent to the data practices described in this Privacy Policy. If you do not agree with the practices described in this policy, please do not use our Service."
+          ]
+        },
+        {
+          "title": "2. Information We Collect",
+          "subsections": [
+            {
+              "title": "Information You Provide",
+              "items": [
+                "Account registration information (name, email, business details)",
+                "Payment and billing information",
+                "Business data you input into the system (inventory, sales, customers)",
+                "Support communications and feedback",
+                "Marketing preferences and communication settings"
+              ]
+            },
+            {
+              "title": "Information We Collect Automatically",
+              "items": [
+                "Device information (IP address, browser type, operating system)",
+                "Usage data (features used, time spent, click patterns)",
+                "Log files and system activity",
+                "Cookies and similar tracking technologies",
+                "Location data (if permitted by your device)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. How We Use Your Information",
+          "paragraphs": [
+            "We use the information we collect for the following purposes:"
+          ],
+          "items": [
+            "Providing and maintaining our Service",
+            "Processing transactions and managing your account",
+            "Improving our Service and developing new features",
+            "Providing customer support and technical assistance",
+            "Sending service-related communications and updates",
+            "Marketing communications (with your consent)",
+            "Detecting and preventing fraud or security threats",
+            "Complying with legal obligations"
+          ]
+        },
+        {
+          "title": "4. Information Sharing and Disclosure",
+          "paragraphs": [
+            "We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:"
+          ],
+          "subsections": [
+            {
+              "title": "Service Providers",
+              "paragraphs": [
+                "We may share information with trusted third-party service providers who assist us in operating our Service, such as payment processors, cloud hosting providers, and customer support tools."
+              ]
+            },
+            {
+              "title": "Legal Requirements",
+              "paragraphs": [
+                "We may disclose information if required by law, court order, or government request, or to protect our rights, property, or safety."
+              ]
+            },
+            {
+              "title": "Business Transfers",
+              "paragraphs": [
+                "In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the business transaction."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Data Security",
+          "paragraphs": [
+            "We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction."
+          ],
+          "items": [
+            "Encryption of data in transit and at rest",
+            "Regular security assessments and updates",
+            "Access controls and authentication requirements",
+            "Employee training on data privacy and security",
+            "Regular data backups and disaster recovery procedures"
+          ],
+          "footerParagraphs": [
+            "However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security."
+          ]
+        },
+        {
+          "title": "6. Data Retention",
+          "paragraphs": [
+            "We retain your information for as long as necessary to provide our Service and fulfill the purposes outlined in this Privacy Policy. We may also retain information to comply with legal obligations, resolve disputes, and enforce our agreements."
+          ],
+          "items": [
+            "Account information: Retained while your account is active",
+            "Transaction data: Retained for tax and compliance purposes",
+            "Usage data: Typically retained for up to 2 years for analytics",
+            "Support communications: Retained for up to 3 years"
+          ]
+        },
+        {
+          "title": "7. Your Rights and Choices",
+          "paragraphs": [
+            "Depending on your location, you may have the following rights regarding your personal information:"
+          ],
+          "definitionItems": [
+            { "term": "Access", "definition": "Request a copy of the personal information we hold about you" },
+            { "term": "Correction", "definition": "Request correction of inaccurate or incomplete information" },
+            { "term": "Deletion", "definition": "Request deletion of your personal information" },
+            { "term": "Portability", "definition": "Request transfer of your data to another service" },
+            { "term": "Restriction", "definition": "Request limitation of how we process your information" },
+            { "term": "Objection", "definition": "Object to certain processing activities" },
+            { "term": "Withdraw Consent", "definition": "Withdraw consent for marketing communications" }
+          ],
+          "footerParagraphs": [
+            "To exercise these rights, please contact us using the information provided in the Contact section below."
+          ]
+        },
+        {
+          "title": "8. Cookies and Tracking Technologies",
+          "paragraphs": [
+            "We use cookies and similar tracking technologies to enhance your experience with our Service. You can control cookie settings through your browser preferences."
+          ],
+          "definitionItems": [
+            { "term": "Essential Cookies", "definition": "Required for basic Service functionality" },
+            { "term": "Analytics Cookies", "definition": "Help us understand how you use our Service" },
+            { "term": "Preference Cookies", "definition": "Remember your settings and preferences" },
+            { "term": "Marketing Cookies", "definition": "Used for targeted advertising (with consent)" }
+          ]
+        },
+        {
+          "title": "9. International Data Transfers",
+          "paragraphs": [
+            "Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with applicable data protection laws."
+          ]
+        },
+        {
+          "title": "10. Children's Privacy",
+          "paragraphs": [
+            "Our Service is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will delete it promptly."
+          ]
+        },
+        {
+          "title": "11. Changes to This Privacy Policy",
+          "paragraphs": [
+            "We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date. We encourage you to review this Privacy Policy periodically."
+          ]
+        },
+        {
+          "title": "12. Contact Us",
+          "paragraphs": [
+            "If you have any questions about this Privacy Policy or our privacy practices, please contact us:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Acceptance of Terms",
+          "paragraphs": [
+            "By accessing and using Konty's point-of-sale software and services (\"Service\"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+          ]
+        },
+        {
+          "title": "2. Description of Service",
+          "paragraphs": [
+            "Konty provides cloud-based point-of-sale software solutions for retail and hospitality businesses. Our Service includes inventory management, sales processing, customer management, and reporting tools accessible through web and mobile applications."
+          ]
+        },
+        {
+          "title": "3. User Accounts and Registration",
+          "paragraphs": [
+            "To use our Service, you must create an account and provide accurate, current, and complete information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+          ],
+          "items": [
+            "You must be at least 18 years old to create an account",
+            "You must provide accurate business and contact information",
+            "You are responsible for keeping your account information up to date",
+            "You must not share your account credentials with unauthorized persons"
+          ]
+        },
+        {
+          "title": "4. Acceptable Use",
+          "paragraphs": [
+            "You agree to use the Service only for lawful purposes and in accordance with these Terms. You agree not to:"
+          ],
+          "items": [
+            "Use the Service for any illegal or unauthorized purpose",
+            "Violate any applicable laws or regulations",
+            "Interfere with or disrupt the Service or servers",
+            "Attempt to gain unauthorized access to any part of the Service",
+            "Upload or transmit malicious code or content",
+            "Impersonate any person or entity"
+          ]
+        },
+        {
+          "title": "5. Payment and Billing",
+          "paragraphs": [
+            "Subscription fees are billed in advance on a monthly or annual basis. All fees are non-refundable except as required by law. We reserve the right to modify our pricing with 30 days' notice."
+          ],
+          "items": [
+            "Payment is due upon subscription activation",
+            "Late payments may result in service suspension",
+            "Price changes require 30 days' advance notice",
+            "Cancellation takes effect at the end of the current billing period"
+          ]
+        },
+        {
+          "title": "6. Data and Privacy",
+          "paragraphs": [
+            "We take the privacy and security of your data seriously. Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by reference."
+          ],
+          "items": [
+            "You retain ownership of your business data",
+            "We implement industry-standard security measures",
+            "We do not sell your personal information to third parties",
+            "Data backups are performed regularly for service continuity"
+          ]
+        },
+        {
+          "title": "7. Intellectual Property",
+          "paragraphs": [
+            "The Service and its original content, features, and functionality are owned by Konty and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws."
+          ]
+        },
+        {
+          "title": "8. Service Availability",
+          "paragraphs": [
+            "While we strive to maintain high service availability, we do not guarantee uninterrupted access to the Service. We may perform maintenance that temporarily affects service availability, and we will provide reasonable notice when possible."
+          ]
+        },
+        {
+          "title": "9. Limitation of Liability",
+          "paragraphs": [
+            "In no event shall Konty be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Service."
+          ]
+        },
+        {
+          "title": "10. Termination",
+          "paragraphs": [
+            "We may terminate or suspend your account and access to the Service immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties."
+          ]
+        },
+        {
+          "title": "11. Changes to Terms",
+          "paragraphs": [
+            "We reserve the right to modify these Terms at any time. We will notify users of any material changes via email or through the Service. Your continued use of the Service after such modifications constitutes acceptance of the updated Terms."
+          ]
+        },
+        {
+          "title": "12. Contact Information",
+          "paragraphs": [
+            "If you have any questions about these Terms of Service, please contact us at:"
+          ],
+          "showContactInfo": true
+        }
+      ]
+    },
+    "dataProcessing": {
+      "title": "Data Processing Agreement",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "paragraphs": [
+            "This Data Processing Agreement (\"DPA\") forms part of the agreement between you (\"Customer\" or \"Controller\") and Konty (\"Processor\") and defines the responsibilities and obligations related to the processing of personal data in accordance with applicable data protection laws.",
+            "By using Konty's services, you accept the data processing terms described in this document."
+          ]
+        },
+        {
+          "title": "2. Definitions",
+          "definitionItems": [
+            { "term": "Personal Data", "definition": "any information relating to an identified or identifiable natural person" },
+            { "term": "Controller", "definition": "Customer who determines the purposes and means of processing personal data" },
+            { "term": "Processor", "definition": "Konty who processes personal data on behalf of the Controller" },
+            { "term": "Data Subject", "definition": "an identified or identifiable natural person to whom the personal data relates" },
+            { "term": "Processing", "definition": "any operation or set of operations performed on personal data" }
+          ]
+        },
+        {
+          "title": "3. Subject Matter and Duration of Processing",
+          "paragraphs": [
+            "Konty will process personal data on behalf of the Customer solely for the purposes of providing point-of-sale software services, which includes:"
+          ],
+          "items": [
+            "Sales and transaction management",
+            "Inventory and stock management",
+            "Customer data recording and management",
+            "Reporting and analytics generation",
+            "Technical support and system maintenance"
+          ],
+          "footerParagraphs": [
+            "This DPA remains in effect during the term of the Konty service agreement and terminates upon the termination of the agreement."
+          ]
+        },
+        {
+          "title": "4. Processor Obligations (Konty)",
+          "paragraphs": [
+            "Konty undertakes to:"
+          ],
+          "items": [
+            "Process personal data only in accordance with documented instructions from the Customer",
+            "Ensure that persons authorized to process personal data are committed to confidentiality",
+            "Implement appropriate technical and organizational measures to protect the data",
+            "Not engage other sub-processors without prior written consent from the Customer",
+            "Assist the Customer in fulfilling data subjects' requests to exercise their rights",
+            "Assist the Customer in ensuring compliance with data protection legal obligations",
+            "Delete or return all personal data to the Customer after the end of service provision",
+            "Make available to the Customer all information necessary to demonstrate compliance"
+          ]
+        },
+        {
+          "title": "5. Controller Obligations (Customer)",
+          "paragraphs": [
+            "The Customer undertakes to:"
+          ],
+          "items": [
+            "Be responsible for the lawfulness of personal data processing",
+            "Provide clear and documented instructions regarding data processing",
+            "Ensure that there is a legal basis for data processing",
+            "Inform data subjects about processing in accordance with the law",
+            "Respond to data subjects' requests related to their rights"
+          ]
+        },
+        {
+          "title": "6. Data Security",
+          "paragraphs": [
+            "Konty implements the following data protection measures:"
+          ],
+          "subsections": [
+            {
+              "title": "Technical Measures",
+              "items": [
+                "Encryption of data in transit and at rest",
+                "Regular backup procedures and disaster recovery plan",
+                "Protection against unauthorized system access",
+                "Monitoring and detection of security incidents",
+                "Regular updating and maintenance of security systems"
+              ]
+            },
+            {
+              "title": "Organizational Measures",
+              "items": [
+                "Access control and employee authorization",
+                "Employee training on data protection",
+                "Confidentiality agreements with all employees",
+                "Data security policies and procedures",
+                "Regular risk assessment and security audits"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "7. Sub-processors",
+          "paragraphs": [
+            "Konty may engage third parties (sub-processors) to perform certain processing activities. Current sub-processors include:"
+          ],
+          "items": [
+            "Cloud infrastructure and hosting providers",
+            "Payment and financial service providers",
+            "Analytics and monitoring service providers"
+          ],
+          "footerParagraphs": [
+            "Konty will inform the Customer of any planned change in sub-processors and provide an opportunity to object. All sub-processors will be contractually bound to the same data protection obligations as Konty."
+          ]
+        },
+        {
+          "title": "8. Data Breaches",
+          "paragraphs": [
+            "In the event of a personal data breach, Konty will:"
+          ],
+          "items": [
+            "Without undue delay, and no later than 72 hours after becoming aware, notify the Customer of the breach",
+            "Provide all relevant information about the nature and scope of the breach",
+            "Take appropriate measures to mitigate and remediate the consequences",
+            "Document all incidents and measures taken",
+            "Cooperate with the Customer in notifying competent authorities and data subjects, if necessary"
+          ]
+        },
+        {
+          "title": "9. Data Subject Rights",
+          "paragraphs": [
+            "Konty will assist the Customer in fulfilling data subjects' requests for:"
+          ],
+          "items": [
+            "Access to personal data",
+            "Rectification of inaccurate data",
+            "Erasure of data (\"right to be forgotten\")",
+            "Restriction of processing",
+            "Data portability",
+            "Objection to processing"
+          ],
+          "footerParagraphs": [
+            "Konty will respond to requests within a reasonable time, typically within 30 days, unless additional time is needed for complex requests."
+          ]
+        },
+        {
+          "title": "10. International Data Transfers",
+          "paragraphs": [
+            "If Konty transfers personal data outside the country where it was collected, it will ensure appropriate safeguards in accordance with applicable laws, including:"
+          ],
+          "items": [
+            "Standard contractual clauses approved by competent authorities",
+            "Transfer to countries with adequate level of data protection",
+            "Specific derogations provided by law"
+          ]
+        },
+        {
+          "title": "11. Audit and Inspection",
+          "paragraphs": [
+            "Konty will allow the Customer or their authorized auditor to conduct audits of data protection measures, subject to reasonable notice and respect for business confidentiality and security requirements of Konty's systems.",
+            "Konty will regularly conduct internal audits and provide relevant certificates and evidence of compliance upon Customer's request."
+          ]
+        },
+        {
+          "title": "12. Data Return and Deletion",
+          "paragraphs": [
+            "After the end of service provision, Konty will, at the Customer's choice:"
+          ],
+          "items": [
+            "Return all personal data to the Customer in a structured, standard, and machine-readable format",
+            "Securely delete all personal data from its systems, including all copies"
+          ],
+          "footerParagraphs": [
+            "Deletion will be performed within 90 days after the termination of the agreement, unless law requires retention of certain data."
+          ]
+        },
+        {
+          "title": "13. Liability and Limitations",
+          "paragraphs": [
+            "Konty is liable for damages caused by breach of this DPA in accordance with the general terms of service.",
+            "Konty will not be liable for breaches caused by:"
+          ],
+          "items": [
+            "Unlawful instructions from the Customer",
+            "Actions of the Customer or their employees",
+            "Force majeure or circumstances beyond Konty's control"
+          ]
+        },
+        {
+          "title": "14. Amendments",
+          "paragraphs": [
+            "Konty reserves the right to amend this DPA to comply with legal changes or changes in business operations. You will be notified of any significant changes at least 30 days in advance.",
+            "Continued use of the service after the changes take effect constitutes acceptance of the amended DPA."
+          ]
+        },
+        {
+          "title": "15. Contact Information",
+          "paragraphs": [
+            "For all questions related to data processing, you can contact us:"
+          ],
+          "showContactInfo": true
+        },
+        {
+          "title": "16. Governing Law",
+          "paragraphs": [
+            "This Data Processing Agreement is governed by the laws of the country of operation, including applicable data protection legislation. Any disputes will be subject to the jurisdiction of competent courts."
+          ]
+        }
+      ]
+    },
+    "accountDelete": {
+      "title": "Account Deletion",
+      "lastUpdated": "Last updated:",
+      "date": "December 12, 2025",
+      "sections": [
+        {
+          "title": "1. How to Delete Your Account",
+          "paragraphs": [
+            "If you wish to delete your Konty account and all associated data, you can do so through the following methods:"
+          ],
+          "subsections": [
+            {
+              "title": "Option 1: In-App Deletion",
+              "paragraphs": [
+                "You can delete your account directly from the Konty application:"
+              ],
+              "orderedItems": [
+                "Open the Konty app and log in to your account",
+                "Go to Settings",
+                "Select \"Account\"",
+                "Tap \"Delete Account\"",
+                "Confirm your decision when prompted"
+              ]
+            },
+            {
+              "title": "Option 2: Email Request",
+              "paragraphs": [
+                "You can request account deletion by sending an email to our support team:"
+              ],
+              "items": [
+                "Contact us via the email listed in the Contact section",
+                "Include \"Account Deletion Request\" in the subject line",
+                "Provide the email address associated with your Konty account",
+                "We will process your request within 30 days"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "2. What Data Will Be Deleted",
+          "paragraphs": [
+            "When you delete your account, the following data will be permanently removed:"
+          ],
+          "items": [
+            "Your account profile and login credentials",
+            "Business information and settings",
+            "Product catalog and inventory data",
+            "Customer records and contact information",
+            "Sales history and transaction records",
+            "Reports and analytics data",
+            "Any uploaded images or documents",
+            "User preferences and customizations"
+          ]
+        },
+        {
+          "title": "3. Data Retention After Deletion",
+          "paragraphs": [
+            "Please note that some data may be retained for a limited period after account deletion:"
+          ],
+          "definitionItems": [
+            { "term": "Legal compliance", "definition": "We may retain certain records as required by tax laws, fiscal regulations, or other legal obligations (typically for 5-10 years depending on jurisdiction)" },
+            { "term": "Backup systems", "definition": "Data in backup systems may take up to 90 days to be fully purged" },
+            { "term": "Anonymized data", "definition": "Aggregated, anonymized statistics that cannot identify you may be retained for analytics purposes" }
+          ]
+        },
+        {
+          "title": "4. Before You Delete",
+          "paragraphs": [
+            "We recommend taking the following steps before deleting your account:"
+          ],
+          "definitionItems": [
+            { "term": "Export your data", "definition": "Download any reports, sales history, or other data you may need for your records" },
+            { "term": "Cancel active subscriptions", "definition": "Ensure any active subscriptions are canceled to avoid future charges" },
+            { "term": "Settle outstanding balances", "definition": "Pay any outstanding invoices or fees" },
+            { "term": "Inform your team", "definition": "If you have multiple users, notify them before deletion" }
+          ]
+        },
+        {
+          "title": "5. Account Deletion Timeline",
+          "paragraphs": [
+            "Once you initiate account deletion:"
+          ],
+          "definitionItems": [
+            { "term": "Immediate", "definition": "Your account will be deactivated and you will be logged out" },
+            { "term": "Within 30 days", "definition": "All personal data will be deleted from our active systems" },
+            { "term": "Within 90 days", "definition": "Data will be removed from backup systems" }
+          ]
+        },
+        {
+          "title": "6. Reactivation",
+          "paragraphs": [
+            "Account deletion is permanent and cannot be undone. If you wish to use Konty again after deleting your account, you will need to create a new account. Your previous data cannot be recovered."
+          ]
+        },
+        {
+          "title": "7. Contact Us",
+          "paragraphs": [
+            "If you have any questions about account deletion or need assistance, please contact us:"
+          ],
+          "showContactInfo": true
+        }
+      ]
     }
   },
   "seo": {
     "blog": {
-      "description": "Expert insights, tips, and best practices for modern POS management. Learn how to optimize your business operations.",
-      "title": "Blog - Konty POS Insights & Resources"
+      "description": "Expert insights, tips, and best practices for modern POS management. Learn how to optimize your business operations and boost sales.",
+      "title": "Blog & Resources - POS Tips and Insights"
     },
     "clientStories": {
-      "description": "Real stories from businesses that transformed their operations with Konty POS.",
-      "title": "Client Success Stories - Konty POS"
+      "description": "Discover real stories from businesses that transformed their operations with Konty POS. See how restaurants and stores achieve success.",
+      "title": "Client Success Stories - Real Business Results"
     },
     "contact": {
-      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution.",
-      "title": "Contact Us - Konty POS"
+      "description": "Get in touch with our team. We're here to help you choose the perfect POS solution for your restaurant or retail store.",
+      "title": "Contact Us - Get Expert POS Help Today"
     },
     "dataProcessing": {
-      "description": "Data Processing Agreement between Konty and our customers. Learn how we process and protect your personal data.",
-      "title": "Data Processing Agreement - Konty"
+      "description": "Data Processing Agreement between Konty and our customers. Learn how we process and protect your personal data securely.",
+      "title": "Data Processing Agreement - GDPR Compliance"
     },
     "demo": {
-      "description": "See Konty in action. Free 15-minute demo tailored to your business. No obligations.",
-      "title": "Book a Demo - Konty POS"
+      "description": "See Konty in action with a free demo tailored to your business. No obligations, just solutions for your needs.",
+      "title": "Book a Free Demo - See Our POS in Action"
     },
     "home": {
-      "description": "Reliable cloud POS system trusted by 25,000+ businesses. 30-second support response. Switch in 48 hours. Keep your hardware.",
-      "title": "Konty - Professional POS System for Restaurants & Retail"
+      "description": "Discover reliable cloud POS trusted by 9,000+ businesses. Get 30-second support response. Switch in 48 hours. Start your free trial today.",
+      "title": "Professional POS for Restaurants & Retail"
     },
     "partners": {
-      "description": "Join our growing network of partners delivering Konty solutions.",
-      "title": "Partners Network - Konty POS"
+      "description": "Join our growing network of partners delivering Konty POS solutions. Get competitive pricing, training, and dedicated support.",
+      "title": "Become a Partner - Join Our Network"
     },
     "pricing": {
-      "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start free for 30 days.",
-      "title": "Pricing - Konty POS System"
+      "description": "Transparent pricing with no hidden fees. Monthly subscriptions tailored to your business size. Start your free 30-day trial today.",
+      "title": "Pricing Plans - Start Free for 30 Days"
     },
     "privacy": {
-      "description": "How Konty protects your data and your customers' privacy.",
-      "title": "Privacy Policy - Konty"
+      "description": "Learn how Konty protects your business data and customer privacy. Discover our security practices and your data protection rights.",
+      "title": "Privacy Policy - Data Protection"
     },
     "products": {
       "description": "Choose the perfect POS solution for your business. Specialized systems for restaurants, cafes, retail stores, and chains.",
       "download": {
-        "description": "Download Konty for any device or platform",
-        "title": "Download Konty"
+        "description": "Get Konty POS for your device. Available on Windows, Android, and web. Download free and start your 30-day trial today.",
+        "title": "Download POS App - Windows, Android & Web"
       },
       "faqdocs": {
-        "description": "FAQ and Documentation for Konty",
-        "title": "FAQ and Documentation"
+        "description": "Find answers to common questions about Konty POS. Get setup guides, feature documentation, and troubleshooting tips.",
+        "title": "FAQ & Documentation - POS Help Center"
       },
       "hospitality": {
-        "description": "Specialized POS for restaurants, cafes, and bars. Reservations, orders, tables, delivery - all in one place.",
+        "description": "Discover specialized POS for restaurants, cafes, and bars. Manage reservations, orders, tables, and delivery - all in one place.",
         "features": {
-          "description": "Complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more.",
-          "title": "All Hospitality Features - Konty POS"
+          "description": "Explore the complete feature list for restaurant POS: table management, kitchen display, staff scheduling, and more.",
+          "title": "All Hospitality POS Features - Complete List"
         },
-        "title": "Restaurant POS System - Konty Hospitality"
+        "title": "Restaurant & Hospitality POS System"
       },
       "retail": {
-        "description": "Fast checkout, automatic inventory management, sales analytics. Perfect for stores, supermarkets, and chains.",
+        "description": "Get fast checkout, automatic inventory management, and sales analytics. Perfect for stores, supermarkets, and retail chains.",
         "features": {
-          "description": "Complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more.",
-          "title": "All Retail Features - Konty POS"
+          "description": "Explore the complete feature list for retail POS: inventory management, barcode scanning, loyalty programs, and more.",
+          "title": "All Retail POS Features - Complete Feature List"
         },
-        "title": "Retail POS System - Konty Retail"
+        "title": "Retail POS System for Stores & Chains"
       },
-      "title": "Products - Konty POS Solutions"
+      "title": "POS Products & Solutions for Every Business"
     },
     "solutions": {
       "b2b": {
-        "description": "Professional B2B solution. Different pricing per partner and advanced reports.",
-        "title": "B2B POS & Wholesale Management System"
+        "description": "Get professional B2B and wholesale POS solution. Manage partner pricing, invoicing, and advanced reports with ease.",
+        "title": "B2B & Wholesale POS System for Distributors"
       },
       "barsCafes": {
-        "description": "Speed-optimized POS system. Perfect for bars and cafes with high-volume traffic.",
-        "title": "Bar & Cafe POS | Fast Service Point of Sale System"
+        "description": "Get speed-optimized POS for high-volume bars and cafes. Fast checkout, inventory tracking, and shift management built-in.",
+        "title": "Bar & Cafe POS - Fast Service System"
       },
       "clothingBoutiques": {
-        "description": "Specialized POS for fashion retail. Sizes, colors, seasons, and loyalty programs.",
-        "title": "Clothing Store POS | Fashion Retail Management System"
+        "description": "Manage your fashion retail with specialized POS. Track sizes, colors, seasons, and customer loyalty programs effortlessly.",
+        "title": "Clothing & Boutique POS for Fashion"
       },
-      "description": "Discover how Konty POS can transform your business. Specialized solutions for restaurants, cafes, retail stores, and B2B.",
+      "description": "Discover how Konty POS can transform your business. Get specialized solutions for restaurants, cafes, retail stores, and B2B.",
       "fastFood": {
-        "description": "Efficient POS for quick service restaurants. Drive-thru, delivery, and dine-in from one system.",
-        "title": "Fast Food POS System | Quick Service Restaurant Solutions"
+        "description": "Get efficient POS for quick service restaurants. Manage drive-thru, delivery, and dine-in orders from one fast system.",
+        "title": "Fast Food & Quick Service Restaurant POS"
       },
       "grocerySupermarkets": {
-        "description": "Manage thousands of products with ease. Barcode scanning, promotions, and real-time inventory.",
-        "title": "Grocery Store POS | Supermarket Point of Sale System"
+        "description": "Manage thousands of products with ease. Get barcode scanning, promotions, and real-time inventory tracking for your store.",
+        "title": "Grocery & Supermarket POS - Inventory Made Easy"
       },
       "restaurants": {
-        "description": "Complete POS solution for restaurants. Table management, kitchen display, reservations, and analytics.",
-        "title": "Restaurant POS System | Konty for Full-Service Dining"
+        "description": "Get complete POS for full-service restaurants. Manage tables, kitchen display, reservations, and analytics in one system.",
+        "title": "Restaurant POS - Full Service Dining"
       },
-      "title": "Industry-Specific POS Solutions | Konty POS Tailored to Your Business",
+      "title": "Industry-Specific POS Solutions for Your Business",
       "generalStores": {
-        "description": "Complete POS management for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation.",
-        "title": "General Store POS System | Konty"
+        "description": "Get complete POS for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation included.",
+        "title": "General Store POS System - All-in-One Solution"
       }
     },
     "terms": {
-      "description": "Terms of service for Konty POS system and related services.",
-      "title": "Terms of Service - Konty"
+      "description": "Read the terms of service for Konty POS system and related services. Learn about your rights and our commitments to you.",
+      "title": "Terms of Service - User Agreement"
+    },
+    "accountDelete": {
+      "description": "Learn how to delete your Konty account and what happens to your data. Simple account deletion process with clear data retention policies.",
+      "title": "Account Deletion - Delete Your Account"
     }
   },
   "ui": {
@@ -1750,7 +2291,11 @@
       "products": "Products",
       "restaurants": "Restaurants",
       "retail": "Retail",
-      "solutions": "Solutions"
+      "solutions": "Solutions",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "data-processing": "Data Processing Agreement",
+      "account-delete": "Account Deletion"
     },
     "common": {
       "buttons": {
@@ -1834,9 +2379,6 @@
         "bookDemo": "Book demo",
         "submit": "Submit"
       },
-      "calendlyScheduled": "Demo scheduled",
-      "calendlySuccess": "Demo scheduled successfully!",
-      "calendlySuccessDescription": "You will receive a confirmation email shortly.",
       "categoryOptions": {
         "hospitality": "Hospitality (restaurant, café, bar...)",
         "other": "Other",
@@ -1872,6 +2414,7 @@
         "success": "Message sent successfully!",
         "successDescription": "Thank you for contacting us. We'll get back to you within 24 hours."
       },
+      "availabilityFallbackMessage": "Live availability is temporarily unavailable. Please select any date during our working hours.",
       "noAvailableSlots": "No available time slots for this date",
       "optional": "optional",
       "placeholders": {
@@ -1931,6 +2474,24 @@
         "forRetail": "Konty for Retail"
       }
     },
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "cookieConsent": {
+      "title": "Optimize Your Experience",
+      "description": "We use cookies to provide you with the best experience and remember your preferences.",
+      "essential": "Essential",
+      "essentialRequired": "(Required)",
+      "analytics": "Product Analytics",
+      "analyticsDescription": "(Improve Konty)",
+      "personalization": "Personalization",
+      "personalizationDescription": "(Relevant content)",
+      "performance": "Performance",
+      "performanceDescription": "(Site speed)",
+      "customize": "Customize",
+      "hide": "Hide",
+      "saveChoices": "Save Choices",
+      "essentialOnly": "Essential Only",
+      "acceptAll": "Accept All",
+      "cookieSettings": "Cookie Settings"
+    }
   }
 }

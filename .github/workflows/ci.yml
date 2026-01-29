@@ -1,7 +1,7 @@
 name: CI/CD Pipeline
 
 on:
-  workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
+  workflow_dispatch: # Allows manual triggering from GitHub Actions tab
 
 jobs:
   quality:
@@ -39,7 +39,9 @@ jobs:
           APP_ENV: ${{ vars.APP_ENV }}
           NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
           GTM_ID: ${{ secrets.GTM_ID }}
-          CALENDLY_API_TOKEN: ${{ secrets.CALENDLY_API_TOKEN }}
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
+          HUBSPOT_CLIENT_ID: ${{ secrets.HUBSPOT_CLIENT_ID }}
+          HUBSPOT_MEETING_LINK_SLUG: ${{ vars.HUBSPOT_MEETING_LINK_SLUG }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -80,7 +82,9 @@ jobs:
           APP_ENV: ${{ vars.APP_ENV }}
           NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
           GTM_ID: ${{ secrets.GTM_ID }}
-          CALENDLY_API_TOKEN: ${{ secrets.CALENDLY_API_TOKEN }}
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
+          HUBSPOT_CLIENT_ID: ${{ secrets.HUBSPOT_CLIENT_ID }}
+          HUBSPOT_MEETING_LINK_SLUG: ${{ vars.HUBSPOT_MEETING_LINK_SLUG }}
 
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v11
