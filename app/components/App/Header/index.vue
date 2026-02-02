@@ -32,11 +32,11 @@
               <span class="hidden md:inline">contact@konty.com</span>
             </a>
             <a
-              href="tel:+38267607670"
+              :href="`tel:${t('data.company.contact.phone')}`"
               class="flex items-center gap-1 text-gray-300"
             >
               <Icon name="i-lucide-phone" class="w-4 h-4" />
-              <span>+38267607670</span>
+              <span>{{ t('data.company.contact.phone') }}</span>
             </a>
 
             <AppHeaderBreadcrumbs class="hidden lg:block" />
@@ -127,6 +127,7 @@
 
 <script setup lang="ts">
 const { y } = useWindowScroll()
+const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
