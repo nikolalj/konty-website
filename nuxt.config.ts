@@ -277,6 +277,10 @@ export default defineNuxtConfig({
         }
       },
 
+      '/go/**': {
+        headers: { 'cache-control': 'no-store' }
+      },
+
       '/api/**': {
         cors: true,
         headers: { 'cache-control': 'no-store' }

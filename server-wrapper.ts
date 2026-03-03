@@ -28,7 +28,7 @@ function parseLocaleCookie(cookieHeader: string | null): LocaleCookie | null {
 
 // Check if path should skip locale processing
 function shouldSkipPath(pathname: string): boolean {
-  const EXCLUDE_PATTERNS = ['/api/', '/_', '.xml', '.txt', '.json'];
+  const EXCLUDE_PATTERNS = ['/api/', '/_', '.xml', '.txt', '.json', '/go/'];
 
   // Check exclude patterns
   if (EXCLUDE_PATTERNS.some(p => pathname.includes(p))) {

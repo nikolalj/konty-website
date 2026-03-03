@@ -37,6 +37,9 @@ export default defineSitemapEventHandler(() => {
     // Blog (dynamic - handled by blog.ts)
     '/blog': '2025-12-12',
 
+    // Offers
+    '/offers/3m-free': '2026-03-03',
+
     // Legal
     '/privacy': '2025-12-25',
     '/terms': '2025-12-25',

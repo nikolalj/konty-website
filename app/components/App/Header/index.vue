@@ -181,7 +181,8 @@ function isRouteWithTransparentHeader(path: string) {
     '/products/hospitality',
     '/products/retail',
     '/solutions',
-    '/demo'
+    '/demo',
+    '/offers/3m-free',
   ]
 
   return routesWithTransparentHeader.some(
