@@ -48,6 +48,10 @@
                 </div>
               </div>
             </UIAppear>
+
+            <p class="text-xs text-white/60">
+              {{ t('pages.offers.3mFree.terms') }}
+            </p>
           </div>
 
           <!-- Right Column - Form Card -->
@@ -194,13 +198,6 @@
     <!-- Pricing -->
     <div class="bg-white dark:bg-[#1f1633]">
       <LazySharedPricing hydrate-on-visible />
-
-      <!-- Terms -->
-      <div class="pb-8 text-center">
-        <p class="text-xs text-[var(--ui-text-muted)]">
-          {{ t('pages.offers.3mFree.terms') }}
-        </p>
-      </div>
     </div>
   </div>
 </template>
