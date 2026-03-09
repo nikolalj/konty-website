@@ -83,11 +83,129 @@
       </UContainer>
     </section>
 
+    <!-- Contact Form -->
+    <section class="py-16">
+      <UContainer>
+        <div class="flex justify-center">
+          <div class="max-w-lg w-full">
+            <h2 class="text-3xl font-bold mb-2 text-center">
+              {{ t('pages.offers.3mFree.form.title') }}
+            </h2>
+            <p class="text-[var(--ui-text-muted)] mb-8 text-center">
+              {{ t('pages.offers.3mFree.form.description') }}
+            </p>
+
+            <form class="space-y-4" @submit.prevent="onSubmit">
+              <div>
+                <label
+                  for="promo-name"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+                >
+                  {{ t('ui.forms.fields.name') }}
+                </label>
+                <UInput
+                  id="promo-name"
+                  v-model="form.name"
+                  class="w-full"
+                  :placeholder="t('ui.forms.placeholders.name')"
+                  size="xl"
+                  :error="!!errors.name"
+                  @blur="validateName"
+                />
+                <p
+                  v-if="errors.name"
+                  class="mt-1 text-sm text-red-600 dark:text-red-400"
+                >
+                  {{ errors.name }}
+                </p>
+              </div>
+
+              <div>
+                <label
+                  for="promo-phone"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+                >
+                  {{ t('ui.forms.fields.phone') }}
+                </label>
+                <UInput
+                  id="promo-phone"
+                  v-model="form.phone"
+                  class="w-full"
+                  type="tel"
+                  :placeholder="t('ui.forms.placeholders.phone')"
+                  size="xl"
+                  :error="!!errors.phone"
+                  @blur="validatePhone"
+                />
+                <p
+                  v-if="errors.phone"
+                  class="mt-1 text-sm text-red-600 dark:text-red-400"
+                >
+                  {{ errors.phone }}
+                </p>
+              </div>
+
+              <div>
+                <label
+                  for="promo-email"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+                >
+                  {{ t('ui.forms.fields.email') }}
+                  <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+                </label>
+                <UInput
+                  id="promo-email"
+                  v-model="form.email"
+                  class="w-full"
+                  type="email"
+                  :placeholder="t('ui.forms.placeholders.email')"
+                  size="xl"
+                  :error="!!errors.email"
+                  @blur="validateEmail"
+                />
+                <p
+                  v-if="errors.email"
+                  class="mt-1 text-sm text-red-600 dark:text-red-400"
+                >
+                  {{ errors.email }}
+                </p>
+              </div>
+
+              <div>
+                <label
+                  for="promo-industry"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+                >
+                  {{ t('ui.forms.fields.industry') }}
+                  <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+                </label>
+                <USelect
+                  id="promo-industry"
+                  v-model="form.industry"
+                  :items="industryOptions"
+                  class="w-full"
+                  size="xl"
+                />
+              </div>
+
+              <UButton
+                type="submit"
+                color="primary"
+                class="text-center font-semibold"
+                size="xl"
+                block
+                :loading="loading"
+              >
+                {{ t('pages.offers.3mFree.form.button') }}
+              </UButton>
+            </form>
+          </div>
+        </div>
+      </UContainer>
+    </section>
+
     <!-- Pricing -->
     <LazySharedPricing variant="alt" hydrate-on-visible />
-
-    <!-- Contact Form -->
-    <LazySharedContactForm hydrate-on-visible />
 
     <!-- Terms -->
     <div class="pb-8 text-center">
@@ -100,6 +218,8 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const { track } = useTracking()
+const toast = useToast()
 
 usePageSeo({
   title: t('seo.offers.3mFree.title'),
@@ -118,6 +238,127 @@ const { tDeep } = useUtils()
 const steps = computed(() => {
   return tDeep<Array<{ title: string, description: string }>>('pages.offers.3mFree.howItWorks.steps')
 })
+
+const form = reactive({
+  name: '',
+  phone: '',
+  email: '',
+  industry: 'hospitality'
+})
+
+const errors = reactive({
+  name: '',
+  phone: '',
+  email: ''
+})
+
+const industryOptions = ref([
+  { label: t('ui.forms.industryOptions.hospitality'), value: 'hospitality' },
+  { label: t('ui.forms.industryOptions.retail'), value: 'retail' },
+  { label: t('ui.forms.industryOptions.other'), value: 'other' }
+])
+
+const loading = ref(false)
+
+const validateName = () => {
+  if (!form.name.trim()) {
+    errors.name = t('ui.forms.errors.nameRequired')
+    return false
+  }
+  errors.name = ''
+  return true
+}
+
+const validatePhone = () => {
+  if (!form.phone.trim()) {
+    errors.phone = t('ui.forms.errors.phoneRequired')
+    return false
+  }
+  const phoneRegex = /^[\d\s\-+()]{8,20}$/
+  const digitsOnly = form.phone.replace(/[\s\-+()]/g, '')
+  if (!phoneRegex.test(form.phone) || digitsOnly.length < 8) {
+    errors.phone = t('ui.forms.errors.phoneInvalid')
+    return false
+  }
+  errors.phone = ''
+  return true
+}
+
+const validateEmail = () => {
+  if (!form.email.trim()) {
+    errors.email = ''
+    return true
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(form.email)) {
+    errors.email = t('ui.forms.errors.emailInvalid')
+    return false
+  }
+  errors.email = ''
+  return true
+}
+
+const validateForm = () => {
+  const isNameValid = validateName()
+  const isPhoneValid = validatePhone()
+  const isEmailValid = validateEmail()
+  return isNameValid && isPhoneValid && isEmailValid
+}
+
+const onSubmit = async () => {
+  if (!validateForm()) {
+    return
+  }
+
+  loading.value = true
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: form.name,
+        phone: form.phone,
+        email: form.email || undefined,
+        industry: form.industry,
+        message: '3 mjeseca besplatno - sajam ugostiteljstva'
+      }
+    })
+
+    track('3m_free_form_submission', {
+      industry: form.industry,
+      hasEmail: !!form.email
+    })
+
+    toast.add({
+      title: t('ui.forms.messages.success'),
+      description: t('ui.forms.messages.successDescription'),
+      color: 'success',
+      icon: 'i-lucide-check-circle'
+    })
+
+    form.name = ''
+    form.phone = ''
+    form.email = ''
+    form.industry = 'hospitality'
+    errors.name = ''
+    errors.phone = ''
+    errors.email = ''
+  } catch (error) {
+    const errorMessage =
+      error && typeof error === 'object' && 'data' in error
+        ? (error.data as { statusMessage?: string })?.statusMessage
+        : undefined
+
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: errorMessage || t('ui.forms.messages.errorDescription'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
+  } finally {
+    loading.value = false
+  }
+}
 
 function scrollToForm() {
   document.querySelector('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })

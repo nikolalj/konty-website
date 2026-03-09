@@ -607,6 +607,39 @@
       },
       "title": "Simple, Fair Pricing. No hidden costs."
     },
+    "offers": {
+      "3mFree": {
+        "hero": {
+          "badge": "Exclusive Offer",
+          "title": "3 Months Free",
+          "subtitle": "Start your business with Konty POS - completely free for the first 3 months. No obligations, no contracts, no risk.",
+          "cta": "Claim Your Offer"
+        },
+        "howItWorks": {
+          "title": "How Does It Work?",
+          "steps": [
+            {
+              "title": "Sign Up",
+              "description": "Fill out the form below and our team will contact you within 24 hours."
+            },
+            {
+              "title": "Set Up Konty",
+              "description": "Our team will help you get the system up and running quickly and easily."
+            },
+            {
+              "title": "Use Free for 3 Months",
+              "description": "Full access to all features - no limitations. After 3 months, choose the plan that suits you."
+            }
+          ]
+        },
+        "terms": "* Offer valid for new customers. After the free period expires, you can choose any plan or cancel without penalty.",
+        "form": {
+          "title": "Leave Your Details",
+          "description": "Fill out the form and our team will contact you shortly.",
+          "button": "Submit"
+        }
+      }
+    },
     "products": {
       "download": {
         "hero": {
@@ -2184,6 +2217,12 @@
       "description": "Discover reliable cloud POS trusted by 9,000+ businesses. Get 30-second support response. Switch in 48 hours. Start your free trial today.",
       "title": "Professional POS for Restaurants & Retail"
     },
+    "offers": {
+      "3mFree": {
+        "description": "Start your business with Konty POS free for the first 3 months. No obligations, no contracts. Sign up today!",
+        "title": "3 Months Free - Konty POS"
+      }
+    },
     "partners": {
       "description": "Join our growing network of partners delivering Konty POS solutions. Get competitive pricing, training, and dedicated support.",
       "title": "Become a Partner - Join Our Network"
@@ -2285,7 +2324,9 @@
       "features": "Features",
       "grocery-supermarkets": "Grocery & Supermarkets",
       "hospitality": "Hospitality",
+      "3m-free": "3 Months Free",
       "index": "Home",
+      "offers": "Offers",
       "partners": "Partners",
       "pricing": "Pricing",
       "products": "Products",

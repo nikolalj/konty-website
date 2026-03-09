@@ -607,6 +607,39 @@
       },
       "title": "Poštene cene. Bez skrivenih troškova."
     },
+    "offers": {
+      "3mFree": {
+        "hero": {
+          "badge": "Ekskluzivna ponuda",
+          "title": "3 meseca besplatno",
+          "subtitle": "Pokreni svoj biznis sa Konty POS-om - potpuno besplatno prvih 3 meseca. Bez obaveza, bez ugovora, bez rizika.",
+          "cta": "Preuzmi ponudu"
+        },
+        "howItWorks": {
+          "title": "Kako funkcioniše?",
+          "steps": [
+            {
+              "title": "Prijavi se",
+              "description": "Popuni formu ispod i naš tim će te kontaktirati u roku od 24 sata."
+            },
+            {
+              "title": "Postavi Konty",
+              "description": "Naš tim će ti pomoći da pokreneš sistem brzo i jednostavno."
+            },
+            {
+              "title": "Koristi besplatno 3 meseca",
+              "description": "Pun pristup svim funkcijama - bez ograničenja. Nakon 3 meseca, odaberi paket koji ti odgovara."
+            }
+          ]
+        },
+        "terms": "* Ponuda važi za nove korisnike. Nakon isteka besplatnog perioda, možete odabrati bilo koji paket ili otkazati bez penala.",
+        "form": {
+          "title": "Ostavite vaše podatke",
+          "description": "Popunite formu i naš tim će vas kontaktirati u najkraćem roku.",
+          "button": "Pošalji"
+        }
+      }
+    },
     "products": {
       "download": {
         "hero": {
@@ -2184,6 +2217,12 @@
       "description": "Otkrijte pouzdane fiskalne kase sa E-Fakturama. 9.600+ restorana i prodavnica koristi Konty. Podrška za 30 sekundi. Počnite besplatno.",
       "title": "Fiskalne kase za ugostiteljstvo i trgovinu"
     },
+    "offers": {
+      "3mFree": {
+        "description": "Pokreni svoj biznis sa Konty POS-om besplatno prvih 3 meseca. Bez obaveza, bez ugovora. Prijavi se danas!",
+        "title": "3 meseca besplatno - Konty POS"
+      }
+    },
     "partners": {
       "description": "Pridružite se našoj rastućoj mreži partnera koji nude Konty rešenja. Očekuju vas konkurentne cene, obuka i podrška.",
       "title": "Partnerski program - Postanite distributer"
@@ -2285,7 +2324,9 @@
       "features": "Funcionalnosti",
       "grocery-supermarkets": "Prodavnice hrane i supermarketi",
       "hospitality": "Ugostiteljstvo",
+      "3m-free": "3 meseca besplatno",
       "index": "Početna",
+      "offers": "Ponude",
       "partners": "Partneri",
       "pricing": "Cene",
       "products": "Proizvodi",

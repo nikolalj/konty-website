@@ -612,7 +612,7 @@
         "hero": {
           "badge": "Ekskluzivna ponuda",
           "title": "3 mjeseca besplatno",
-          "subtitle": "Pokreni svoj biznis sa Konty POS-om — potpuno besplatno prvih 3 mjeseca. Bez obaveza, bez ugovora, bez rizika.",
+          "subtitle": "Pokreni svoj biznis sa Konty POS-om - potpuno besplatno prvih 3 mjeseca. Bez obaveza, bez ugovora, bez rizika.",
           "cta": "Preuzmi ponudu"
         },
         "howItWorks": {
@@ -628,11 +628,16 @@
             },
             {
               "title": "Koristi besplatno 3 mjeseca",
-              "description": "Puni pristup svim funkcijama — bez ograničenja. Nakon 3 mjeseca, odaberi paket koji ti odgovara."
+              "description": "Puni pristup svim funkcijama - bez ograničenja. Nakon 3 mjeseca, odaberi paket koji ti odgovara."
             }
           ]
         },
-        "terms": "* Ponuda važi za nove korisnike. Nakon isteka besplatnog perioda, možete odabrati bilo koji paket ili otkazati bez penala."
+        "terms": "* Ponuda važi za nove korisnike. Nakon isteka besplatnog perioda, možete odabrati bilo koji paket ili otkazati bez penala.",
+        "form": {
+          "title": "Ostavite vaše podatke",
+          "description": "Popunite formu i naš tim će vas kontaktirati u najkraćem roku.",
+          "button": "Pošalji"
+        }
       }
     },
     "products": {
