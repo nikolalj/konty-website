@@ -199,6 +199,10 @@
 </template>
 
 <script setup lang="ts">
+import { campaigns } from '~~/shared/config/campaigns'
+
+const campaign = campaigns['3m-free']!
+
 const { t } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
@@ -302,11 +306,11 @@ const onSubmit = async () => {
         phone: form.phone,
         email: form.email || undefined,
         industry: form.industry,
-        message: 'Sajam ugostiteljstva Knjaz 2026'
+        message: campaign.hubspotMessage
       }
     })
 
-    track('3m_free_form_submission', {
+    track(campaign.trackingEvent, {
       industry: form.industry,
       hasEmail: !!form.email
     })
