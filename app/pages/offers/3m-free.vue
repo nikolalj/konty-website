@@ -301,7 +301,8 @@ const onSubmit = async () => {
         name: form.name,
         phone: form.phone,
         email: form.email || undefined,
-        industry: `sajam 3m - ${form.industry}`
+        industry: form.industry,
+        message: 'Sajam ugostiteljstva Knjaz 2026'
       }
     })
 
