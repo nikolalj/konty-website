@@ -28,7 +28,7 @@
 
             <!-- How It Works Steps -->
             <UIAppear direction="up">
-              <div class="space-y-4">
+              <div class="space-y-4 text-left">
                 <div
                   v-for="(step, index) in steps"
                   :key="index"
