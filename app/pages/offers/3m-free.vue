@@ -7,7 +7,7 @@
       <UContainer class="relative z-10">
         <div class="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">
           <!-- Left Column - Text Content with Steps -->
-          <div class="text-white mt-6">
+          <div class="text-white mt-6 text-center lg:text-left">
             <UIAppear direction="up">
               <div class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] text-white rounded-lg inline-block">
                 {{ t('pages.offers.3mFree.hero.badge') }}
@@ -28,7 +28,7 @@
 
             <!-- How It Works Steps -->
             <UIAppear direction="up">
-              <div class="space-y-4 mb-8">
+              <div class="space-y-4">
                 <div
                   v-for="(step, index) in steps"
                   :key="index"
