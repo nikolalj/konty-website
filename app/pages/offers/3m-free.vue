@@ -48,10 +48,6 @@
                 </div>
               </div>
             </UIAppear>
-
-            <p class="text-xs text-white/60">
-              {{ t('pages.offers.3mFree.terms') }}
-            </p>
           </div>
 
           <!-- Right Column - Form Card -->
