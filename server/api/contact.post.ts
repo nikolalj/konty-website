@@ -23,21 +23,23 @@ export default defineEventHandler(async (event) => {
     likelyAvailableUserIds?: string[]
   }>(event)
 
-  // Required fields validation
-  if (!body.name || !body.email || !body.phone) {
+  // Required fields validation - need name and at least email or phone
+  if (!body.name || (!body.email && !body.phone)) {
     throw createError({
       statusCode: 400,
       statusMessage: 'Missing required fields'
     })
   }
 
-  // Email format validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(body.email)) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Invalid email format'
-    })
+  // Email format validation (only if provided)
+  if (body.email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(body.email)) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: 'Invalid email format'
+      })
+    }
   }
 
   const accessToken = config.hubspotAccessToken
@@ -56,10 +58,15 @@ export default defineEventHandler(async (event) => {
     const lastName = nameParts.slice(1).join(' ') || ''
 
     const contactProperties: Record<string, string> = {
-      email: body.email,
       firstname: firstName,
-      lastname: lastName,
-      phone: body.phone
+      lastname: lastName
+    }
+
+    if (body.email) {
+      contactProperties.email = body.email
+    }
+    if (body.phone) {
+      contactProperties.phone = body.phone
     }
 
     if (body.industry) {
@@ -99,7 +106,11 @@ export default defineEventHandler(async (event) => {
     ).catch(async (error) => {
       // If contact exists (409), try to find and update it
       if (error.statusCode === 409) {
-        // Search for existing contact by email
+        // Search for existing contact by email or phone
+        const searchFilter = body.email
+          ? { propertyName: 'email', operator: 'EQ', value: body.email }
+          : { propertyName: 'phone', operator: 'EQ', value: body.phone! }
+
         const searchResponse = await $fetch<{
           results?: Array<{ id: string }>
         }>(`https://api.hubapi.com/crm/v3/objects/contacts/search`, {
@@ -111,13 +122,7 @@ export default defineEventHandler(async (event) => {
           body: {
             filterGroups: [
               {
-                filters: [
-                  {
-                    propertyName: 'email',
-                    operator: 'EQ',
-                    value: body.email
-                  }
-                ]
+                filters: [searchFilter]
               }
             ]
           }
