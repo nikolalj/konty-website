@@ -192,13 +192,15 @@
     </section>
 
     <!-- Pricing -->
-    <LazySharedPricing variant="alt" hydrate-on-visible />
+    <div class="bg-white dark:bg-[#1f1633]">
+      <LazySharedPricing hydrate-on-visible />
 
-    <!-- Terms -->
-    <div class="pb-8 text-center">
-      <p class="text-xs text-[var(--ui-text-muted)]">
-        {{ t('pages.offers.3mFree.terms') }}
-      </p>
+      <!-- Terms -->
+      <div class="pb-8 text-center">
+        <p class="text-xs text-[var(--ui-text-muted)]">
+          {{ t('pages.offers.3mFree.terms') }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
