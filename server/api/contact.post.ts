@@ -191,15 +191,18 @@ export default defineEventHandler(async (event) => {
   } catch (error) {
     console.error('HubSpot Contact API Error:', error)
 
-    throw createError({
-      statusCode:
-        (error as { statusCode?: number })?.statusCode ||
+    // Determine if it's a validation error from HubSpot (e.g., invalid email)
+    const hubspotMessage = (error as { data?: { message?: string } })?.data?.message || ''
+    const isValidationError = hubspotMessage.includes('INVALID_EMAIL') || hubspotMessage.includes('Property values were not valid')
+    const statusCode = isValidationError
+      ? 400
+      : (error as { statusCode?: number })?.statusCode ||
         (error as { response?: { status?: number } })?.response?.status ||
-        500,
-      statusMessage:
-        (error as { data?: { message?: string } })?.data?.message ||
-        (error as Error)?.message ||
-        'Failed to submit contact form'
+        500
+
+    throw createError({
+      statusCode,
+      statusMessage: 'Failed to submit contact form'
     })
   }
 })
