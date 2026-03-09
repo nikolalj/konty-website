@@ -1,43 +1,176 @@
 <template>
   <div>
-    <!-- Campaign Hero -->
+    <!-- Hero with form above the fold -->
     <section
       class="pt-34 pb-20 relative isolate overflow-hidden flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_#8d5494_0%,_#563275_40%,_#1f1633_100%)]"
     >
       <UContainer class="relative z-10">
-        <div class="flex flex-col items-center text-center">
-          <!-- Badge -->
-          <UIAppear direction="up">
-            <div class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] text-white rounded-lg">
-              {{ t('pages.offers.3mFree.hero.badge') }}
+        <div class="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">
+          <!-- Left Column - Text Content with Steps -->
+          <div class="text-white mt-6">
+            <UIAppear direction="up">
+              <div class="mb-6 text-sm sm:text-base font-semibold px-3 py-2 bg-gradient-to-r from-[#C83852] via-[#B44092] to-[#6A5FC1] text-white rounded-lg inline-block">
+                {{ t('pages.offers.3mFree.hero.badge') }}
+              </div>
+            </UIAppear>
+
+            <UIAppear direction="up">
+              <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
+                {{ t('pages.offers.3mFree.hero.title') }}
+              </h1>
+            </UIAppear>
+
+            <UIAppear direction="up">
+              <p class="mb-8 text-xl text-balance text-white">
+                {{ t('pages.offers.3mFree.hero.subtitle') }}
+              </p>
+            </UIAppear>
+
+            <!-- How It Works Steps -->
+            <UIAppear direction="up">
+              <div class="space-y-4 mb-8">
+                <div
+                  v-for="(step, index) in steps"
+                  :key="index"
+                  class="flex items-start gap-3"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 rounded-full bg-white/80 flex items-center justify-center"
+                    >
+                      <span class="text-xs font-bold text-primary-800">{{ index + 1 }}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="font-semibold">{{ step.title }}</p>
+                    <p class="text-sm text-white/80">{{ step.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </UIAppear>
+          </div>
+
+          <!-- Right Column - Form Card -->
+          <UIAppear direction="left">
+            <div id="promo-form" class="light bg-white rounded-2xl shadow-2xl p-8 lg:mt-0">
+              <h3 class="text-black text-2xl font-bold mb-2">
+                {{ t('pages.offers.3mFree.form.title') }}
+              </h3>
+              <p class="text-black mb-6 text-sm">
+                {{ t('pages.offers.3mFree.form.description') }}
+              </p>
+
+              <form class="space-y-4" @submit.prevent="onSubmit">
+                <div>
+                  <label
+                    for="promo-name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    {{ t('ui.forms.fields.name') }}
+                  </label>
+                  <UInput
+                    id="promo-name"
+                    v-model="form.name"
+                    class="w-full"
+                    :placeholder="t('ui.forms.placeholders.name')"
+                    size="lg"
+                    :error="!!errors.name"
+                    @blur="validateName"
+                  />
+                  <p
+                    v-if="errors.name"
+                    class="mt-1 text-sm text-red-600 dark:text-red-400"
+                  >
+                    {{ errors.name }}
+                  </p>
+                </div>
+
+                <div>
+                  <label
+                    for="promo-phone"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    {{ t('ui.forms.fields.phone') }}
+                  </label>
+                  <UInput
+                    id="promo-phone"
+                    v-model="form.phone"
+                    class="w-full"
+                    type="tel"
+                    :placeholder="t('ui.forms.placeholders.phone')"
+                    size="lg"
+                    :error="!!errors.phone"
+                    @blur="validatePhone"
+                  />
+                  <p
+                    v-if="errors.phone"
+                    class="mt-1 text-sm text-red-600 dark:text-red-400"
+                  >
+                    {{ errors.phone }}
+                  </p>
+                </div>
+
+                <div>
+                  <label
+                    for="promo-email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    {{ t('ui.forms.fields.email') }}
+                    <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+                  </label>
+                  <UInput
+                    id="promo-email"
+                    v-model="form.email"
+                    class="w-full"
+                    type="email"
+                    :placeholder="t('ui.forms.placeholders.email')"
+                    size="lg"
+                    :error="!!errors.email"
+                    @blur="validateEmail"
+                  />
+                  <p
+                    v-if="errors.email"
+                    class="mt-1 text-sm text-red-600 dark:text-red-400"
+                  >
+                    {{ errors.email }}
+                  </p>
+                </div>
+
+                <div>
+                  <label
+                    for="promo-industry"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    {{ t('ui.forms.fields.industry') }}
+                    <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
+                  </label>
+                  <USelect
+                    id="promo-industry"
+                    v-model="form.industry"
+                    :items="industryOptions"
+                    :content="{
+                      bodyLock: false
+                    }"
+                    class="w-full"
+                    size="lg"
+                  />
+                </div>
+
+                <UButton
+                  type="submit"
+                  color="primary"
+                  :ui="{
+                    base: '!bg-[#4a2d67] !text-white hover:!bg-[#3b2453] dark:!bg-[#4a2d67] dark:hover:!bg-[#3b2453]'
+                  }"
+                  class="text-center font-semibold"
+                  size="lg"
+                  block
+                  :loading="loading"
+                >
+                  {{ t('pages.offers.3mFree.form.button') }}
+                </UButton>
+              </form>
             </div>
-          </UIAppear>
-
-          <!-- Main Headline -->
-          <UIAppear direction="up">
-            <h1 class="mb-6 text-4xl sm:text-6xl text-balance font-bold text-white">
-              {{ t('pages.offers.3mFree.hero.title') }}
-            </h1>
-          </UIAppear>
-
-          <!-- Subtitle -->
-          <UIAppear direction="up">
-            <p class="mb-8 text-xl text-balance max-w-3xl text-white/90">
-              {{ t('pages.offers.3mFree.hero.subtitle') }}
-            </p>
-          </UIAppear>
-
-          <!-- CTA -->
-          <UIAppear direction="up">
-            <UButton
-              size="xl"
-              variant="solid"
-              class="font-semibold dark bg-white hover:bg-secondary"
-              icon="i-lucide-arrow-down"
-              @click="scrollToForm"
-            >
-              {{ t('pages.offers.3mFree.hero.cta') }}
-            </UButton>
           </UIAppear>
         </div>
       </UContainer>
@@ -56,152 +189,6 @@
           />
         </svg>
       </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-16">
-      <UContainer>
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">
-            {{ t('pages.offers.3mFree.howItWorks.title') }}
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div
-            v-for="(step, index) in steps"
-            :key="index"
-            class="text-center"
-          >
-            <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mx-auto mb-4">
-              <span class="text-xl font-bold text-primary">{{ index + 1 }}</span>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">{{ step.title }}</h3>
-            <p class="text-sm text-[var(--ui-text-muted)]">{{ step.description }}</p>
-          </div>
-        </div>
-      </UContainer>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="py-16">
-      <UContainer>
-        <div class="flex justify-center">
-          <div class="max-w-lg w-full">
-            <h2 class="text-3xl font-bold mb-2 text-center">
-              {{ t('pages.offers.3mFree.form.title') }}
-            </h2>
-            <p class="text-[var(--ui-text-muted)] mb-8 text-center">
-              {{ t('pages.offers.3mFree.form.description') }}
-            </p>
-
-            <form class="space-y-4" @submit.prevent="onSubmit">
-              <div>
-                <label
-                  for="promo-name"
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
-                >
-                  {{ t('ui.forms.fields.name') }}
-                </label>
-                <UInput
-                  id="promo-name"
-                  v-model="form.name"
-                  class="w-full"
-                  :placeholder="t('ui.forms.placeholders.name')"
-                  size="xl"
-                  :error="!!errors.name"
-                  @blur="validateName"
-                />
-                <p
-                  v-if="errors.name"
-                  class="mt-1 text-sm text-red-600 dark:text-red-400"
-                >
-                  {{ errors.name }}
-                </p>
-              </div>
-
-              <div>
-                <label
-                  for="promo-phone"
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
-                >
-                  {{ t('ui.forms.fields.phone') }}
-                </label>
-                <UInput
-                  id="promo-phone"
-                  v-model="form.phone"
-                  class="w-full"
-                  type="tel"
-                  :placeholder="t('ui.forms.placeholders.phone')"
-                  size="xl"
-                  :error="!!errors.phone"
-                  @blur="validatePhone"
-                />
-                <p
-                  v-if="errors.phone"
-                  class="mt-1 text-sm text-red-600 dark:text-red-400"
-                >
-                  {{ errors.phone }}
-                </p>
-              </div>
-
-              <div>
-                <label
-                  for="promo-email"
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
-                >
-                  {{ t('ui.forms.fields.email') }}
-                  <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
-                </label>
-                <UInput
-                  id="promo-email"
-                  v-model="form.email"
-                  class="w-full"
-                  type="email"
-                  :placeholder="t('ui.forms.placeholders.email')"
-                  size="xl"
-                  :error="!!errors.email"
-                  @blur="validateEmail"
-                />
-                <p
-                  v-if="errors.email"
-                  class="mt-1 text-sm text-red-600 dark:text-red-400"
-                >
-                  {{ errors.email }}
-                </p>
-              </div>
-
-              <div>
-                <label
-                  for="promo-industry"
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
-                >
-                  {{ t('ui.forms.fields.industry') }}
-                  <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
-                </label>
-                <USelect
-                  id="promo-industry"
-                  v-model="form.industry"
-                  :items="industryOptions"
-                  class="w-full"
-                  size="xl"
-                />
-              </div>
-
-              <UButton
-                type="submit"
-                color="primary"
-                class="text-center font-semibold"
-                size="xl"
-                block
-                :loading="loading"
-              >
-                {{ t('pages.offers.3mFree.form.button') }}
-              </UButton>
-            </form>
-          </div>
-        </div>
-      </UContainer>
     </section>
 
     <!-- Pricing -->
@@ -358,9 +345,5 @@ const onSubmit = async () => {
   } finally {
     loading.value = false
   }
-}
-
-function scrollToForm() {
-  document.querySelector('form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 </script>
