@@ -154,7 +154,7 @@ export default defineNuxtConfig({
 
   // OG Image generation with Satori
   ogImage: {
-    zeroRuntime: false,
+    zeroRuntime: true,
 
     // Use Plus Jakarta Sans - supports Serbian/Bosnian
     fonts: [
@@ -217,11 +217,11 @@ export default defineNuxtConfig({
       treeshake: 'smallest'  // Most impactful optimization
     },
 
-    // Prerendering disabled - using SSR for dynamic locale detection
-    // All pages need server-side rendering for locale redirects to work
+    // Crawling enabled for OG image generation (zeroRuntime)
+    // Pages remain SSR - only OG images are prerendered as static assets
     prerender: {
-      crawlLinks: false,
-      routes: [],
+      crawlLinks: true,
+      routes: ['/'],
       ignore: ['/admin', '/api', '/__nuxt_error']
     },
 
