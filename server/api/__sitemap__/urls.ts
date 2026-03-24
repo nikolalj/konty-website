@@ -6,7 +6,7 @@
 export default defineSitemapEventHandler(() => {
   const contentUpdates = {
     // Main pages
-    '/': '2025-12-12',
+    '/': '2026-03-24',
     '/pricing': '2025-12-12',
     '/demo': '2025-12-12',
     '/contact': '2025-12-12',

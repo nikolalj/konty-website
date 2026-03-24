@@ -1,6 +1,6 @@
 ---
 title: "POS sistemi: kompletan vodič - šta su, kako funkcionišu i zašto su važni za poslovanje"
-description: Obična blagajna samo ispisuje račun. POS sistem prati prodaju, zalihe i generiše izvještaje. Objašnjavamo jednostavno.
+description: Obična kasa samo izdaje račun. POS sistem prati prodaju, zalihe i generiše izvještaje.
 date: 2026-03-24
 author: Konty Tim
 image: /images/blog/pos-systems.avif
@@ -289,3 +289,7 @@ Obuka obično traje:
 
 - oko **30 minuta** za backoffice dio
 - oko **20 minuta** za prodajni dio
+
+---
+
+*Želite da saznate više o tome kako POS sistem može unaprijediti vaše poslovanje? Pogledajte [Konty za ugostiteljstvo](/products/hospitality) ili [Konty za trgovinu](/products/retail).*

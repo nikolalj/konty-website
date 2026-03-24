@@ -36,7 +36,7 @@
         </UIAppear>
 
         <!-- Hero Image/Dashboard Preview -->
-        <UIAppear direction="down" class="mb-8 mt-12 w-full max-w-6xl flex justify-center">
+        <div class="mb-8 mt-12 w-full max-w-6xl flex justify-center">
           <NuxtImg
             src="/images/hero/hero.avif"
             format="avif"
@@ -52,7 +52,7 @@
             role="presentation"
             class="h-auto min-w-[120%] sm:min-w-auto"
           />
-        </UIAppear>
+        </div>
       </div>
     </UContainer>
 

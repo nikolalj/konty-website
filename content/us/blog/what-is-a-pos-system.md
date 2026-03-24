@@ -289,3 +289,7 @@ Training typically takes:
 
 - about **30 minutes** for the back-office
 - about **20 minutes** for the sales interface
+
+---
+
+*Want to learn more about how a POS system can improve your business? Check out [Konty for hospitality](/products/hospitality) or [Konty for retail](/products/retail).*
