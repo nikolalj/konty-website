@@ -6,7 +6,9 @@
     <!-- <AppAlertBar /> -->
 
     <UPageBody class="m-0 p-0">
-      <slot />
+      <main>
+        <slot />
+      </main>
     </UPageBody>
 
     <AppFooter />

@@ -37,7 +37,7 @@
               </span>
               <UIcon
                 name="i-heroicons-chevron-down"
-                class="w-5 h-5 transition-transform duration-200 text-gray-500"
+                class="w-5 h-5 transition-transform duration-200 text-gray-600"
                 :class="[
                   openAccordions.includes(index) && 'transform rotate-180'
                 ]"
@@ -137,7 +137,7 @@
 
           <!-- Legal Links -->
           <div
-            class="flex flex-wrap gap-2 text-sm text-gray-500 dark:text-gray-400 justify-center lg:justify-end"
+            class="flex flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-400 justify-center lg:justify-end"
           >
             <NuxtLink
               :to="localePath('/privacy')"

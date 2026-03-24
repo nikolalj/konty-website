@@ -51,7 +51,7 @@
               <div class="flex flex-col flex-1 sm:pt-4">
                 <p
                   v-if="step.tagline"
-                  class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2"
+                  class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-2"
                 >
                   {{ step.tagline }}
                 </p>

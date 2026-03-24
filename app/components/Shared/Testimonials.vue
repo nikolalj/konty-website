@@ -36,7 +36,7 @@
           /> -->
           <div class="min-w-0">
             <p class="font-medium text-gray-900 dark:text-white truncate">{{ testimonial.user.name }}</p>
-            <p class="text-sm text-gray-500 dark:text-gray-400 truncate">{{ testimonial.user.description }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 truncate">{{ testimonial.user.description }}</p>
           </div>
         </div>
       </article>
