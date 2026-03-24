@@ -169,7 +169,8 @@ export default defineNuxtConfig({
       width: 1200,
       height: 630,
       renderer: 'satori', // Fast, universal compatibility
-      cacheMaxAgeSeconds: 60 * 60 * 24 * 7 // 7 days cache
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 7, // 7 days cache
+      component: 'Main' // Default OG image component for all pages
     },
 
     // Component defaults
