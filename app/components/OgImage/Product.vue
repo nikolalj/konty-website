@@ -1,32 +1,30 @@
 <template>
-  <div style="position: relative; width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', sans-serif;">
-    <img
-      :src="`${config.public.siteUrl}/images/og/main.jpg`"
-      style="position: absolute; width: 100%; height: 100%; object-fit: cover;"
-    >
-
+  <div
+    style="
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #4a2d67 0%, #563275 50%, #1f1633 100%);
+    "
+  >
     <div style="width: 100%; height: 100%; padding: 48px;">
-      <img
-        :src="`${config.public.siteUrl}/images/branding/logo-full-horizontal-light.svg`"
-        style="width: 330px;"
-      >
-
       <div
         v-if="product"
-        style="position: absolute; top: 60px; left: 400px; padding: 6px 12px; background-color: #1F6FE2; color: white; border-radius: 8px; font-weight: 600; font-size: 16px;"
+        style="position: absolute; top: 60px; right: 48px; padding: 6px 12px; background-color: #1F6FE2; color: white; border-radius: 8px; font-weight: 600; font-size: 16px;"
       >
         {{ product }}
       </div>
 
       <div
         v-if="icon"
-        style="position: absolute; top: 48px; right: 48px; font-size: 72px; opacity: 0.3;"
+        style="position: absolute; top: 48px; right: 180px; font-size: 72px; opacity: 0.3;"
       >
         {{ icon }}
       </div>
 
       <div style="margin-top: 36px">
-        <h1 style="font-size: 56px; font-weight: 700; color: #111827; line-height: 1.1; margin: 0 0 32px 0; width: 70%;">
+        <h1 style="font-size: 56px; font-weight: 700; color: #ffffff; line-height: 1.1; margin: 0 0 32px 0; width: 70%;">
           {{ title }}
         </h1>
 
@@ -34,7 +32,7 @@
         <div style="margin: 0 0 40px 0;">
           <div v-for="(feature, index) in features.slice(0, 3)" :key="index" style="margin-bottom: 16px;">
             <span style="display: inline-block; width: 28px; height: 28px; border-radius: 50%; background-color: #1F6FE2; text-align: center; line-height: 28px; color: white; font-size: 16px; margin-right: 12px;">✓</span>
-            <span style="font-size: 22px; color: #4b5563;">{{ feature }}</span>
+            <span style="font-size: 22px; color: #d1d5db;">{{ feature }}</span>
           </div>
         </div>
 
@@ -46,6 +44,9 @@
         </div>
       </div>
 
+      <div style="position: absolute; bottom: 48px; left: 48px; font-size: 28px; font-weight: 700; color: #ffffff; opacity: 0.8;">
+        Konty
+      </div>
     </div>
   </div>
 </template>
@@ -64,6 +65,4 @@ withDefaults(defineProps<{
   cta: '',
   icon: ''
 })
-
-const config = useRuntimeConfig()
 </script>

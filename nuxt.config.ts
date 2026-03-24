@@ -1,4 +1,23 @@
+import { readdirSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { DEFAULT_LOCALE, LOCALE_STRATEGY, LOCALES } from './app/config/locale.config.mjs'
+
+// Build blog routes from content directory so prerender discovers all posts
+// (blog index only shows 3 posts, so the crawler can miss some)
+function getBlogRoutes(): string[] {
+  const routes: string[] = []
+  for (const locale of LOCALES) {
+    const blogDir = join('content', locale.code, 'blog')
+    if (!existsSync(blogDir)) continue
+    const prefix = locale.code === DEFAULT_LOCALE.code ? '' : `/${locale.code}`
+    for (const file of readdirSync(blogDir)) {
+      if (file.endsWith('.md')) {
+        routes.push(`${prefix}/blog/${file.replace('.md', '')}`)
+      }
+    }
+  }
+  return routes
+}
 
 export default defineNuxtConfig({
   ssr: true,
@@ -104,6 +123,8 @@ export default defineNuxtConfig({
       'mailto:*',     // Email links
       'tel:*',        // Phone links
       'sms:*',        // SMS links
+      '/offers',      // No /offers index page - only /offers/3m-free exists
+      '/*/offers',    // Same for locale-prefixed paths
     ],
 
     // Fail builds on broken links
@@ -222,8 +243,8 @@ export default defineNuxtConfig({
     // Pages remain SSR - only OG images are prerendered as static assets
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
-      ignore: ['/admin', '/api', '/__nuxt_error']
+      routes: ['/', ...getBlogRoutes()],
+      ignore: ['/admin', '/api', '/__nuxt_error', /\/offers$/]
     },
 
     // Compression

@@ -1,25 +1,23 @@
 <template>
-  <div style="position: relative; width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', sans-serif;">
-    <img
-      :src="`${config.public.siteUrl}/images/og/main.jpg`"
-      style="position: absolute; width: 100%; height: 100%; object-fit: cover;"
-    >
-
+  <div
+    style="
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #4a2d67 0%, #563275 50%, #1f1633 100%);
+    "
+  >
     <div style="width: 100%; height: 100%; padding: 48px;">
-      <img
-        :src="`${config.public.siteUrl}/images/branding/logo-full-horizontal-light.svg`"
-        style="width: 330px;"
-      >
-
       <div
         v-if="badge"
-        style="position: absolute; top: 60px; left: 400px; padding: 6px 12px; background-color: #10B981; color: white; border-radius: 8px; font-weight: 600; font-size: 16px;"
+        style="position: absolute; top: 60px; right: 48px; padding: 6px 12px; background-color: #10B981; color: white; border-radius: 8px; font-weight: 600; font-size: 16px;"
       >
         {{ badge }}
       </div>
 
       <div style="margin-top: 24px">
-        <h1 style="font-size: 56px; font-weight: 700; color: #111827; line-height: 1.1; margin: 0 0 40px 0; width: 75%;">
+        <h1 style="font-size: 56px; font-weight: 700; color: #ffffff; line-height: 1.1; margin: 0 0 40px 0; width: 75%;">
           {{ title }}
         </h1>
 
@@ -28,8 +26,8 @@
           <div
             v-for="(plan, index) in plans.slice(0, 3)"
             :key="index"
-            style="position: relative; margin-top: 18px; margin-right: 24px; display: inline-block; padding: 24px; border-radius: 12px; background-color: white; border: 4px solid white;"
-            :style="plan.popular ? 'border-color: #1F6FE2; box-shadow: 0 4px 20px rgba(31, 111, 226, 0.15);' : ''"
+            style="position: relative; margin-top: 18px; margin-right: 24px; display: inline-block; padding: 24px; border-radius: 12px; background-color: rgba(255,255,255,0.1); border: 4px solid rgba(255,255,255,0.1);"
+            :style="plan.popular ? 'border-color: #1F6FE2; background-color: rgba(31,111,226,0.15);' : ''"
           >
             <div
               v-if="plan.popular && plan.badge"
@@ -38,7 +36,7 @@
               {{ plan.badge }}
             </div>
 
-            <div style="font-size: 20px; font-weight: 600; color: #4b5563; margin-bottom: 8px;">
+            <div style="font-size: 20px; font-weight: 600; color: #d1d5db; margin-bottom: 8px;">
               {{ plan.name }}
             </div>
 
@@ -46,7 +44,7 @@
               <span style="font-size: 36px; font-weight: 700; color: #1F6FE2;">{{ plan.price }} {{ currency }}</span>
             </div>
 
-            <div v-if="period" style="font-size: 14px; color: #6b7280;">
+            <div v-if="period" style="font-size: 14px; color: #9ca3af;">
               {{ period }}
             </div>
           </div>
@@ -62,13 +60,16 @@
 
           <div
             v-if="ctaSubtext"
-            style="margin-left: 24px; font-size: 18px; color: #6b7280;"
+            style="margin-left: 24px; font-size: 18px; color: #9ca3af;"
           >
             {{ ctaSubtext }}
           </div>
         </div>
       </div>
 
+      <div style="position: absolute; bottom: 48px; left: 48px; font-size: 28px; font-weight: 700; color: #ffffff; opacity: 0.8;">
+        Konty
+      </div>
     </div>
   </div>
 </template>
@@ -91,6 +92,4 @@ withDefaults(defineProps<{
   cta: '',
   ctaSubtext: ''
 })
-
-const config = useRuntimeConfig()
 </script>
