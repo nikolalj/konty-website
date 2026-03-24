@@ -154,7 +154,7 @@ export default defineNuxtConfig({
 
   // OG Image generation with Satori
   ogImage: {
-    zeroRuntime: true,
+    zeroRuntime: false,
 
     // Use Plus Jakarta Sans - supports Serbian/Bosnian
     fonts: [
