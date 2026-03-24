@@ -1,6 +1,6 @@
 ---
-title: "POS sistemi: kompletan vodič - šta su, kako funkcionišu i zašto su važni za poslovanje"
-description: Obična kasa samo izdaje račun. POS sistem prati prodaju, zalihe i generiše izvještaje.
+title: "Šta je POS sistem? Kako funkcioniše i zašto je važan za poslovanje?"
+description:
 date: 2026-03-24
 author: Konty Tim
 image: /images/blog/pos-systems.avif
@@ -9,7 +9,7 @@ featured: false
 readTime: 8
 ---
 
-Svi koji su pokrenuli sopstveni posao znaju koliko je zahtjevno i opterećujuće pratiti svaki proces i koliko je teško imati jasnu informaciju gdje "škripi" u svakom trenutku.
+Svi koji su pokrenuli sopstveni posao znaju koliko je zahtjevno i opterećujuće pratiti svaki proces i koliko je teško imati jasnu informaciju gdje „škripi" u svakom trenutku.
 
 Stvari se ubrzano mijenjaju. Zahtjevi tržišta postaju sve složeniji kako ono raste. Krajnji korisnik sada jasno zna šta hoće i nema strpljenja za bilo kakve propuste sa naše strane.
 
@@ -32,7 +32,7 @@ U ovom tekstu ćemo objasniti:
 
 ## 1. Šta je POS sistem i od čega se sastoji
 
-Kada čujemo "POS", greškom pretpostavimo da je to onaj uređaj preko kojeg kasiri ili konobari provuku platnu karticu kako bi naplatili uslugu ili proizvod.
+Kada čujemo „POS", greškom pretpostavimo da je to onaj uređaj preko kojeg kasiri ili konobari provuku platnu karticu kako bi naplatili uslugu ili proizvod.
 
 Iako to jeste njegov mali dio, POS sistem je daleko više od toga. To je sistem koji spaja sve informacije iz različitih djelova poslovanja i od njih pravi jasan i upotrebljiv rezultat.
 
@@ -80,7 +80,7 @@ Backoffice dio je upravljački dio namijenjen poslovođama i kroz njega se obavl
 - vođenje zaliha robe (prijem i otprema robe, kalkulacije, materijalno knjigovodstvo)
 - upravljanje zaposlenima (radni časovi, smjene, obračun plata, privilegije)
 - dobijanje izvještaja i analitika (izvještaji o prometu po raznim kategorijama)
-- upravljanje kupcima (CRM)
+- CRM (upravljanje svim interakcijama i odnosima sa sadašnjim i potencijalnim klijentima, sa ciljem povećanja prodaje i rasta poslovanja)
 - integracija sa aplikacijama za dostavu, računovodstvenim sistemima itd.
 
 #### Prodajni dio
@@ -100,9 +100,9 @@ Tokom prodaje artikli se identifikuju skeniranjem barkodova, unosom posebnih ši
 
 U pozadini softverski dio prati sve te transakcije, zbog čega se u svakom trenutku mogu kreirati razni izvještaji i upravljati velikim brojem poslovnih procesa.
 
-POS sistemi se mogu integrisati sa ERP, računovodstvenim softverom, CRM-om, programima lojalnosti i e-commerce platformama.
+POS sistemi se mogu integrisati sa sistemima za planiranje resursa, računovodstvenim softverom, CRM-om, programima lojalnosti i e-commerce platformama.
 
-## 3. Prelazak sa fiskalnih kasa na POS sisteme - cloud kao spas
+## 3. Prelazak sa fiskalnih kasa na POS sisteme – cloud kao spas
 
 U posljednje vrijeme, posebno nakon elektronske fiskalizacije u regionu, došlo je do masovne upotrebe POS sistema i postepenog nestanka klasičnih fiskalnih kasa.
 
@@ -141,9 +141,9 @@ POS sistemi su često razvijeni specifično za određenu industriju.
 
 Na primjer:
 
-- frizerski salon - mali Android uređaj sa integrisanim printerom
-- kafe bar - računar sa ekranom osjetljivim na dodir otporan na vodu
-- veliki marketi - višelinijski barkod skeneri i brzi softver
+- frizerski salon – mali Android uređaj sa integrisanim printerom
+- kafe bar – računar sa ekranom osjetljivim na dodir otporan na vodu
+- veliki marketi – višelinijski barkod skeneri i brzi softver
 
 Zbog različitih potreba korisnika, POS sistemi su postali visoko personalizovani.
 
@@ -169,7 +169,7 @@ Hardver u ugostiteljstvu obično uključuje:
 - tablete za udaljene porudžbine
 - čitače konobarskih kartica
 
-Hardver za ugostiteljstvo je često otporan na vodu, prašinu i oštećenja zbog velike frekvencije korišćenja.
+Hardver za ugostiteljstvo je često otporan na vodu, prašinu i oštećenja zbog velike frekvencije korištenja.
 
 ### Softver u ugostiteljstvu
 
@@ -180,7 +180,7 @@ Prodajni dio softvera često ima:
 - grafički prikaz rasporeda stolova podijeljen u reone
 - velike dugmiće sa slikama proizvoda
 - podjelu proizvoda po kategorijama
-- jasno izdiferenciirana dugmad za najčešće akcije
+- jasno izdiferencirana dugmad za najčešće akcije
 
 Backoffice dio softvera obično uključuje:
 
@@ -261,13 +261,13 @@ Najčešće cijene su:
 
 Hardver:
 
-- najjeftiniji Android uređaji: oko **250 EUR**
+- najjeftiniji Android uređaji: oko **250 €**
 - napredniji sistemi: nekoliko hiljada eura
 
 Softver:
 
-- **12-20 EUR mjesečno** za trgovine
-- **25-50 EUR mjesečno** za ugostiteljstvo
+- **12–20 € mjesečno** za trgovine
+- **25–50 € mjesečno** za ugostiteljstvo
 
 ### O čemu treba voditi računa pri kupovini POS sistema?
 
@@ -283,7 +283,7 @@ Treba obratiti pažnju na:
 
 Rad na POS sistemu ne bi trebalo da bude zahtjevan.
 
-Cilj proizvođača je da softver bude intuitivan i lak za korišćenje.
+Cilj proizvođača je da softver bude intuitivan i lak za korištenje.
 
 Obuka obično traje:
 

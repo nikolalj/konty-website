@@ -1,6 +1,6 @@
 ---
-title: "POS sistemi: kompletan vodič - šta su, kako funkcionišu i zašto su važni za poslovanje"
-description: Obična kasa samo izdaje račun. POS sistem prati prodaju, zalihe i generiše izveštaje.
+title: "Šta je POS sistem? Kako funkcioniše i zašto je važan za poslovanje?"
+description:
 date: 2026-03-24
 author: Konty Tim
 image: /images/blog/pos-systems.avif
@@ -9,7 +9,7 @@ featured: false
 readTime: 8
 ---
 
-Svi koji su pokrenuli sopstveni posao znaju koliko je zahtevno i opterećujuće pratiti svaki proces i koliko je teško imati jasnu informaciju gde "škripi" u svakom trenutku.
+Svi koji su pokrenuli sopstveni posao znaju koliko je zahtevno i opterećujuće pratiti svaki proces i koliko je teško imati jasnu informaciju gde „škripi" u svakom trenutku.
 
 Stvari se ubrzano menjaju. Zahtevi tržišta postaju sve složeniji kako ono raste. Krajnji korisnik sada jasno zna šta hoće i nema strpljenja za bilo kakve propuste sa naše strane.
 
@@ -32,7 +32,7 @@ U ovom tekstu ćemo objasniti:
 
 ## 1. Šta je POS sistem i od čega se sastoji
 
-Kada čujemo "POS", greškom pretpostavimo da je to onaj uređaj preko kojeg kasiri ili konobari provuku platnu karticu kako bi naplatili uslugu ili proizvod.
+Kada čujemo „POS", greškom pretpostavimo da je to onaj uređaj preko kojeg kasiri ili konobari provuku platnu karticu kako bi naplatili uslugu ili proizvod.
 
 Iako to jeste njegov mali deo, POS sistem je daleko više od toga. To je sistem koji spaja sve informacije iz različitih delova poslovanja i od njih pravi jasan i upotrebljiv rezultat.
 
@@ -80,7 +80,7 @@ Backoffice deo je upravljački deo namenjen poslovođama i kroz njega se obavlja
 - vođenje zaliha robe (prijem i otprema robe, kalkulacije, materijalno knjigovodstvo)
 - upravljanje zaposlenima (radni časovi, smene, obračun plata, privilegije)
 - dobijanje izveštaja i analitika (izveštaji o prometu po raznim kategorijama)
-- upravljanje kupcima (CRM)
+- CRM (upravljanje svim interakcijama i odnosima sa sadašnjim i potencijalnim klijentima, sa ciljem povećanja prodaje i rasta poslovanja)
 - integracija sa aplikacijama za dostavu, računovodstvenim sistemima itd.
 
 #### Prodajni deo
@@ -100,9 +100,9 @@ Tokom prodaje artikli se identifikuju skeniranjem barkodova, unosom posebnih ši
 
 U pozadini softverski deo prati sve te transakcije, zbog čega se u svakom trenutku mogu kreirati razni izveštaji i upravljati velikim brojem poslovnih procesa.
 
-POS sistemi se mogu integrisati sa ERP, računovodstvenim softverom, CRM-om, programima lojalnosti i e-commerce platformama.
+POS sistemi se mogu integrisati sa sistemima za planiranje resursa, računovodstvenim softverom, CRM-om, programima lojalnosti i e-commerce platformama.
 
-## 3. Prelazak sa fiskalnih kasa na POS sisteme - cloud kao spas
+## 3. Prelazak sa fiskalnih kasa na POS sisteme – cloud kao spas
 
 U poslednje vreme, posebno nakon elektronske fiskalizacije u regionu, došlo je do masovne upotrebe POS sistema i postepenog nestanka klasičnih fiskalnih kasa.
 
@@ -141,9 +141,9 @@ POS sistemi su često razvijeni specifično za određenu industriju.
 
 Na primer:
 
-- frizerski salon - mali Android uređaj sa integrisanim printerom
-- kafe bar - računar sa ekranom osetljivim na dodir otporan na vodu
-- veliki marketi - višelinijski barkod skeneri i brzi softver
+- frizerski salon – mali Android uređaj sa integrisanim printerom
+- kafe bar – računar sa ekranom osetljivim na dodir otporan na vodu
+- veliki marketi – višelinijski barkod skeneri i brzi softver
 
 Zbog različitih potreba korisnika, POS sistemi su postali visoko personalizovani.
 
@@ -261,13 +261,13 @@ Najčešće cene su:
 
 Hardver:
 
-- najjeftiniji Android uređaji: oko **250 EUR**
+- najjeftiniji Android uređaji: oko **250 €**
 - napredniji sistemi: nekoliko hiljada eura
 
 Softver:
 
-- **12-20 EUR mesečno** za trgovine
-- **25-50 EUR mesečno** za ugostiteljstvo
+- **12–20 € mesečno** za trgovine
+- **25–50 € mesečno** za ugostiteljstvo
 
 ### O čemu treba voditi računa pri kupovini POS sistema?
 
