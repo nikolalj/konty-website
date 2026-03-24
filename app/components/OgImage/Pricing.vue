@@ -22,11 +22,11 @@
         </h1>
 
         <!-- Pricing cards -->
-        <div style="margin: 0 0 40px 0; width: 50%;">
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 18px; margin: 0 0 40px 0;">
           <div
             v-for="(plan, index) in plans.slice(0, 3)"
             :key="index"
-            style="position: relative; margin-top: 18px; margin-right: 24px; display: inline-block; padding: 24px; border-radius: 12px; background-color: rgba(255,255,255,0.1); border: 4px solid rgba(255,255,255,0.1);"
+            style="position: relative; padding: 24px; border-radius: 12px; background-color: rgba(255,255,255,0.1); border: 4px solid rgba(255,255,255,0.1);"
             :style="plan.popular ? 'border-color: #1F6FE2; background-color: rgba(31,111,226,0.15);' : ''"
           >
             <div

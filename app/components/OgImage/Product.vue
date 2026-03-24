@@ -29,9 +29,9 @@
         </h1>
 
         <!-- Features list -->
-        <div style="margin: 0 0 40px 0;">
-          <div v-for="(feature, index) in features.slice(0, 3)" :key="index" style="margin-bottom: 16px;">
-            <span style="display: inline-block; width: 28px; height: 28px; border-radius: 50%; background-color: #1F6FE2; text-align: center; line-height: 28px; color: white; font-size: 16px; margin-right: 12px;">✓</span>
+        <div style="display: flex; flex-direction: column; gap: 16px; margin: 0 0 40px 0;">
+          <div v-for="(feature, index) in features.slice(0, 3)" :key="index" style="display: flex; flex-direction: row; align-items: center;">
+            <div style="width: 28px; height: 28px; min-width: 28px; border-radius: 50%; background-color: #1F6FE2; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; margin-right: 12px;">✓</div>
             <span style="font-size: 22px; color: #d1d5db;">{{ feature }}</span>
           </div>
         </div>
