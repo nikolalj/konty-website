@@ -253,7 +253,7 @@ useSchemaOrg([schemas.article(currentPost)])
 
 // OG Image - use blog featured image directly if available
 if (currentPost.image) {
-  defineOgImageComponent(false)
+  defineOgImage(false)
   useHead({
     meta: [
       { property: 'og:image', content: `${siteConfig.url}${currentPost.image}` },
