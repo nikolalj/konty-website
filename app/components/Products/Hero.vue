@@ -38,7 +38,7 @@
         <UIAppear direction="down" class="mb-16 mt-12 w-full max-w-6xl">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Hospitality Card -->
-            <NuxtLink
+            <NuxtLinkLocale
               to="/products/hospitality"
               class="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:border-white/30"
             >
@@ -63,10 +63,10 @@
                   </p>
                 </div>
               </div>
-            </NuxtLink>
+            </NuxtLinkLocale>
 
             <!-- Retail Card -->
-            <NuxtLink
+            <NuxtLinkLocale
               to="/products/retail"
               class="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:border-white/30"
             >
@@ -91,7 +91,7 @@
                   </p>
                 </div>
               </div>
-            </NuxtLink>
+            </NuxtLinkLocale>
           </div>
         </UIAppear>
       </div>

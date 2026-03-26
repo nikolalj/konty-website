@@ -60,46 +60,48 @@ export default {
       : DEFAULT_LOCALE.code as ValidLocale;
 
     // Check if we should skip redirects
-    const shouldSkipRedirect = (request.method !== 'GET' && request.method !== 'HEAD')
-      || shouldSkipPath(pathname)
-      || hasLocalePrefix;
+    const shouldSkip = (request.method !== 'GET' && request.method !== 'HEAD')
+      || shouldSkipPath(pathname);
 
-    // Only check redirect logic if not skipping
-    if (!shouldSkipRedirect) {
-      // Get cookie preference only when needed for redirect logic
-      const cookie = parseLocaleCookie(request.headers.get('cookie'));
+    if (!shouldSkip && !hasLocalePrefix) {
+      // URL has no locale prefix — needs a redirect
 
-      // Determine target locale (explicit choice or detection)
-      // Validate cookie locale before using it
-      const cookieLocale = cookie?.locale && VALID_LOCALES.includes(cookie.locale) ? cookie.locale : null;
-      const targetLocale = (cookie?.explicit && cookieLocale) ? cookieLocale : detectedLocale;
+      if (pathname === '/' || pathname === '') {
+        // Root path: dynamic locale dispatcher (302)
+        // Determine target locale from explicit cookie or geo-detection
+        const cookie = parseLocaleCookie(request.headers.get('cookie'));
+        const cookieLocale = cookie?.locale && VALID_LOCALES.includes(cookie.locale) ? cookie.locale : null;
+        const targetLocale = (cookie?.explicit && cookieLocale) ? cookieLocale : detectedLocale;
 
-      // Redirect if target locale is not the default
-      if (targetLocale !== DEFAULT_LOCALE.code) {
-        // Build redirect URL
-        const targetUrl = new URL(`/${targetLocale}${pathname !== '/' ? pathname : '' }`, url.origin);
+        const targetUrl = new URL(`/${targetLocale}/`, url.origin);
         targetUrl.search = url.search;
 
-        // Create redirect with cookie if needed
         const headers = new Headers();
         headers.set('Location', targetUrl.toString());
 
+        // Set/update cookie if needed
         if (!cookie || cookie.locale !== targetLocale) {
           const cookieValue: LocaleCookie = {
             locale: targetLocale as ValidLocale,
             explicit: cookie?.explicit || false
           };
-
           headers.set('Set-Cookie',
             `konty-locale=${encodeURIComponent(JSON.stringify(cookieValue))}; ` +
             `Path=/; Max-Age=31536000; SameSite=Lax${env.APP_ENV === 'production' ? '; Secure' : ''}`
           );
         }
 
-        return new Response(null, {
-          status: 302,
-          headers
-        });
+        return new Response(null, { status: 302, headers });
+      } else {
+        // Legacy unprefixed content path (e.g., /pricing, /products/retail)
+        // Permanent redirect to /rs/ equivalent for SEO migration
+        const targetUrl = new URL(`/${DEFAULT_LOCALE.code}${pathname}`, url.origin);
+        targetUrl.search = url.search;
+
+        const headers = new Headers();
+        headers.set('Location', targetUrl.toString());
+
+        return new Response(null, { status: 301, headers });
       }
     }
 

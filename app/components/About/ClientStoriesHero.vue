@@ -29,7 +29,7 @@
               <AppCTAButton
                 variant="secondary"
                 :label="t('pages.clientStories.hero.secondaryCta')"
-                to="/contact"
+                :to="localePath('/contact')"
               />
             </div>
           </UIAppear>
@@ -63,4 +63,5 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 </script>

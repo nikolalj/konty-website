@@ -29,6 +29,7 @@ The system leverages Cloudflare's global edge network for instant country detect
 2. **Silent Redirects** - No "we redirected you" notifications
 3. **Respect User Choice** - Manual selections are permanent via `explicit` flag
 4. **Single Source of Truth** - Edge wrapper handles all redirect logic
+5. **Every locale gets a URL prefix** - Strategy is `prefix` (not `prefix_except_default`), so all content lives under `/{locale}/` paths. The root `/` is a locale dispatcher, not a content page.
 
 ## How It Works
 
@@ -36,12 +37,20 @@ The system leverages Cloudflare's global edge network for instant country detect
 Edge Wrapper (server-wrapper.ts on Cloudflare Workers)
 ├─ Detects country from request.cf.country
 ├─ Maps country to locale via COUNTRY_TO_LOCALE_MAP
-├─ Checks cookie for manual selection (explicit flag)
-├─ Determines redirect need
-├─ Redirects if needed (302) with cookie
-└─ Sets internal headers:
-    ├─ X-Detected-Locale (geolocation result)
-    └─ X-Current-Locale (URL-based locale)
+├─ Checks URL for locale prefix
+│
+├─ URL has locale prefix (/rs/, /me/, /ba/, /us/)?
+│   └─ Pass through to Nuxt with X-Detected-Locale and X-Current-Locale headers
+│
+├─ URL is root (/)?
+│   ├─ Check cookie for explicit choice
+│   ├─ Determine target locale (explicit cookie > geo-detection > default)
+│   └─ 302 redirect to /{targetLocale}/
+│
+├─ URL is unprefixed content path (/pricing, /products/retail)?
+│   └─ 301 redirect to /rs/{path} (SEO migration from old URL structure)
+│
+└─ Static files, API routes → pass through unchanged
     ↓
 Server Middleware (02.locale-context.ts)
 ├─ Reads X-Detected-Locale header
@@ -64,7 +73,7 @@ Application (Vue)
 
 | Country | URL | Currency | Language | Flag Icon |
 |---------|-----|----------|----------|-----------|
-| Serbia 🇷🇸 | konty.com | RSD (Din) | Serbian | i-circle-flags:rs |
+| Serbia 🇷🇸 | konty.com/rs | RSD (RSD) | Serbian | i-circle-flags:rs |
 | Montenegro 🇲🇪 | konty.com/me | EUR (€) | Montenegrin | i-circle-flags:me |
 | Bosnia 🇧🇦 | konty.com/ba | BAM (KM) | Bosnian | i-circle-flags:ba |
 | USA 🇺🇸 | konty.com/us | USD ($) | English | i-circle-flags:us |
@@ -79,9 +88,7 @@ Application (Vue)
 
 // Neighboring countries
 'HR' → 'ba'  // Croatia → Bosnia
-'SI' → 'rs'  // Slovenia → Serbia
 'MK' → 'rs'  // Macedonia → Serbia
-'AL' → 'me'  // Albania → Montenegro
 
 // English-speaking
 'GB', 'CA', 'AU', 'NZ', 'IE' → 'us'
@@ -89,24 +96,21 @@ Application (Vue)
 
 ## URL Structure
 
-Using `prefix_except_default` strategy:
+Using `prefix` strategy — **every locale gets its own URL prefix**:
 
-- **Serbia** (default): `konty.com`, `konty.com/pricing`
-- **Other locales**: `konty.com/me`, `konty.com/me/pricing`
+- **Serbia**: `konty.com/rs`, `konty.com/rs/pricing`
+- **Montenegro**: `konty.com/me`, `konty.com/me/pricing`
+- **Bosnia**: `konty.com/ba`, `konty.com/ba/pricing`
+- **USA**: `konty.com/us`, `konty.com/us/pricing`
+- **Root `/`**: Locale dispatcher — redirects to the appropriate locale
 
-### Pages with Automatic Locale Redirect
+### Why `prefix` (Not `prefix_except_default`)
 
-**All content pages are fully localized** and visitors are automatically redirected to their locale-specific URLs based on their location:
+The `prefix` strategy ensures that **every content URL is directly accessible by search engine crawlers** without being redirected. With `prefix_except_default`, the default locale (Serbia) shared URLs with the root path, and Googlebot (crawling from US IPs) was geo-redirected away from Serbian content, preventing it from being indexed. The `prefix` strategy eliminates this problem entirely.
 
-1. `/` - Homepage
-2. `/pricing` - Pricing page with local currency
-3. `/demo` - Demo request
-4. `/konty-retail` - Retail product page
-5. `/konty-hospitality` - Hospitality product page
-6. `/products` - Products overview
-7. `/about` - About page
-8. `/terms` - Terms of service
-9. `/privacy` - Privacy policy
+### Legacy URLs
+
+Old unprefixed URLs (`/pricing`, `/products/retail`, etc.) are permanently redirected (301) to their `/rs/` equivalents by the edge wrapper. This preserves SEO equity from existing backlinks.
 
 ### Excluded from Redirect (Technical Routes)
 
@@ -114,8 +118,8 @@ These are never redirected as they're not content pages:
 
 - `/api/*` - API routes
 - `/_nuxt/*` - Build assets
-- `/blog/*` - Blog posts (future)
 - Static files (`.css`, `.js`, `.xml`, `.txt`, images)
+- `/go/*` - Tracking redirects
 
 ## Cookie System
 
@@ -142,8 +146,10 @@ These are never redirected as they're not content pages:
 - Runs on Cloudflare Workers at the edge
 - Detects country via `request.cf.country`
 - Maps country to locale using `COUNTRY_TO_LOCALE_MAP`
-- Checks cookie for explicit choice
-- Redirects to locale URLs (302 redirect) with cookie
+- Three redirect paths:
+  - URLs with locale prefix → pass through (no redirect)
+  - Root `/` → 302 redirect to `/{targetLocale}/` (dynamic, cookie/geo-based)
+  - Unprefixed content paths → 301 redirect to `/rs/{path}` (SEO migration)
 - Sets internal headers for Nuxt:
   - `X-Detected-Locale`: Geolocation result
   - `X-Current-Locale`: Current URL locale
@@ -151,7 +157,6 @@ These are never redirected as they're not content pages:
   - Non-GET/HEAD requests
   - API routes (`/api/*`)
   - Static files (`.xml`, `.txt`, `.json`, etc.)
-  - Paths with existing locale prefix
 
 ### Server Middleware
 **`server/middleware/02.locale-context.ts`** - Context setter
@@ -180,7 +185,7 @@ const locale = (currentLocaleHeader || DEFAULT_LOCALE.code)
 **`config/locale.config.mjs`** - Central configuration (ES module for edge compatibility)
 - `DEFAULT_LOCALE`: { code: 'rs', ... }
 - `VALID_LOCALES`: ['me', 'rs', 'ba', 'us']
-- `LOCALE_STRATEGY`: 'prefix_except_default'
+- `LOCALE_STRATEGY`: 'prefix'
 - `COUNTRY_TO_LOCALE_MAP`: Country to locale mappings
 - Shared between edge wrapper and Nuxt application
 
@@ -238,9 +243,19 @@ shouldShow =
 ```
 1. Visits konty.com
 2. CF detects country: ME
-3. Redirects to konty.com/me
+3. 302 redirect to konty.com/me/
 4. Cookie: {locale: "me", explicit: false}
 5. Sees EUR prices, flag shows 🇲🇪
+```
+
+### New Visitor from Serbia
+
+```
+1. Visits konty.com
+2. CF detects country: RS
+3. 302 redirect to konty.com/rs/
+4. Cookie: {locale: "rs", explicit: false}
+5. Sees RSD prices, flag shows 🇷🇸
 ```
 
 ### Manual Country Switch
@@ -250,7 +265,7 @@ shouldShow =
 2. Sees dropdown with checkmark on current
 3. Chooses "Serbia"
 4. Cookie: {locale: "rs", explicit: true}
-5. Redirected to konty.com
+5. Redirected to konty.com/rs/
 6. Always sees Serbian version
 7. No more suggestions
 ```
@@ -259,20 +274,40 @@ shouldShow =
 
 ```
 1. Serbian user visits from Montenegro
-2. Fresh detection: ME
-3. Redirects to konty.com/me
-4. Flag shows 🇲🇪, no pulsing dot
-5. Returns to Serbia → redirects back to konty.com
+2. Fresh detection: ME (no explicit cookie)
+3. 302 redirect to konty.com/me/
+4. Returns to Serbia → visits konty.com → 302 redirect to konty.com/rs/
 ```
 
 ### Cross-Locale Browsing
 
 ```
 1. Serbian user directly visits konty.com/me/pricing
-2. Detection runs, finds RS
-3. Flag shows 🇲🇪 with pulsing dot
-4. Banner appears after page load
-5. Can switch (explicit), stay (explicit), or dismiss (4h)
+2. URL has locale prefix → no redirect, serves ME content
+3. Detection runs, finds RS
+4. Flag shows 🇲🇪 with pulsing dot
+5. Banner appears (detected RS ≠ current ME, cookie not explicit)
+6. Can switch (explicit), stay (explicit), or dismiss (4h)
+```
+
+### Legacy URL Visit
+
+```
+1. User visits konty.com/pricing (old unprefixed URL)
+2. Edge wrapper: no locale prefix, not root → 301 to konty.com/rs/pricing
+3. Google transfers SEO equity to the new URL
+```
+
+### Googlebot Crawling
+
+```
+1. Googlebot finds /rs/pricing in sitemap
+2. Edge: has locale prefix → pass through
+3. Nuxt serves Serbian content → Googlebot indexes it ✓
+4. Googlebot finds /me/pricing in sitemap
+5. Edge: has locale prefix → pass through
+6. Nuxt serves ME content → Googlebot indexes it ✓
+7. hreflang on /me/pricing references /rs/pricing → Googlebot can verify ✓
 ```
 
 ### Banner Dismissal Logic
@@ -310,111 +345,39 @@ START (server-wrapper.ts)
 ├─ Detect country from request.cf.country
 ├─ Map to locale or use DEFAULT_LOCALE
 │
-├─ Check if should skip redirect:
+├─ Check if should skip:
 │   ├─ Non-GET/HEAD requests → skip
 │   ├─ shouldSkipPath() checks:
 │   │   ├─ /api/* → skip
-│   │   ├─ /_* → skip  
+│   │   ├─ /_* → skip
 │   │   ├─ Static files (.xml, .txt, .json) → skip
 │   │   └─ Files with extensions → skip
-│   └─ Has locale prefix (/me/, /rs/, etc) → skip
 │
-├─ If not skipping redirect:
-│   ├─ Parse cookie (only when needed)
+├─ Has locale prefix (/rs/, /me/, /ba/, /us/)?
+│   ├─ Set X-Detected-Locale and X-Current-Locale headers
+│   └─ Pass through to Nuxt
+│
+├─ Root path (/)?
+│   ├─ Parse cookie (for explicit choice)
 │   ├─ Determine target locale:
 │   │   ├─ If cookie.explicit && valid → use cookie.locale
 │   │   └─ Else → use detected locale
-│   │
-│   └─ If target != DEFAULT_LOCALE:
-│       ├─ Build redirect URL with locale prefix
-│       ├─ Preserve query parameters
-│       ├─ Set/update cookie if needed
-│       └─ Return 302 redirect
+│   ├─ 302 redirect to /{targetLocale}/
+│   └─ Set/update cookie if needed
 │
-└─ No redirect needed:
-    ├─ Set X-Detected-Locale header
-    ├─ Set X-Current-Locale header
-    └─ Pass modified request to Nuxt
-```
-
-### Detailed Redirect Logic
-```
-                    ┌─────────────┐
-                    │ User visits │
-                    │ konty.com/* │
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │   Detect    │  ← Via request.cf.country
-                    │   country   │
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │ Read cookie │
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │Determine    │
-                    │target locale│
-                    └──────┬──────┘
-                           │
-                ┌──────────┴──────────┐
-                │                     │
-        cookie?.│                     │ !cookie?.explicit
-        explicit│                     │ or no cookie
-                │                     │
-         ┌──────▼──────┐       ┌──────▼──────┐
-         │Use cookie   │       │Use detected │
-         │locale       │       │locale       │
-         └──────┬──────┘       └──────┬──────┘
-                │                     │
-                └──────┬──────────────┘
-                       │
-                ┌──────▼───────┐
-                │Target locale │
-                │= DEFAULT?    │
-                │(Serbia)      │
-                └──────┬───────┘
-                       │
-        ┌──────────────┼──────────────┐
-        │                             │
-     Yes│                          No │
-        │                             │
- ┌──────▼──────┐              ┌──────▼──────┐
- │NO REDIRECT  │              │REDIRECT to  │
- │Stay on      │              │/locale/path │
- │konty.com    │              └───────┬─────┘
- └──────┬──────┘                      │
-        │                             │
-        ├─────────────┬───────────────┘
-        │             │
-        │      ┌──────▼──────┐
-        │      │Update cookie│
-        │      │if needed    │
-        │      └──────┬──────┘
-        │             │
-        └─────────────┤
-                      │
-               ┌──────▼──────┐
-               │Set header:  │
-               │Set headers: │
-               │X-Detected-  │     ← Geolocation result
-               │X-Current-   │     ← URL-based locale
-               └──────┬──────┘
-                      │
-               ┌──────▼──────┐
-               │   Return    │
-               │   response  │
-               └─────────────┘
+└─ Unprefixed content path (/pricing, /products/retail)?
+    └─ 301 redirect to /rs/{path} (permanent SEO migration)
 ```
 
 **Key Implementation Details**:
 1. Detection happens at edge via `request.cf.country`
-2. Cookie with `explicit: true` overrides geolocation
-3. DEFAULT_LOCALE (Serbia) uses root path without prefix
-4. Internal headers (X-Detected-Locale, X-Current-Locale) pass context to Nuxt
-5. Headers are internal only - not exposed in client responses
-6. Cookie parsing only happens when redirect logic needs it (performance)
+2. Cookie with `explicit: true` overrides geolocation (only checked for root `/`)
+3. Every locale has its own URL prefix — no locale uses the root path
+4. Root `/` is a dynamic dispatcher (302), not a content page
+5. Legacy unprefixed content URLs get 301 to `/rs/` equivalents
+6. Internal headers (X-Detected-Locale, X-Current-Locale) pass context to Nuxt
+7. Headers are internal only - not exposed in client responses
+8. Cookie parsing only happens when redirect logic needs it (performance)
 
 ## Deployment
 
@@ -443,7 +406,7 @@ The application uses a two-tier deployment:
 ## Testing
 
 ```bash
-# Test geolocation redirect (uses your actual IP location)
+# Test root dispatcher (302 to detected locale)
 curl -I https://konty.com
 # Shows: location: https://konty.com/[your-locale]/
 
@@ -451,22 +414,26 @@ curl -I https://konty.com
 curl -I -H 'Cookie: konty-locale={"locale":"us","explicit":true}' https://konty.com
 # Shows: location: https://konty.com/us/
 
-# Test that locale paths don't redirect
-curl -I https://konty.com/me/
-# Shows: HTTP/2 200 (or 301 to staging domain)
+# Test locale-prefixed paths pass through (no redirect)
+curl -I https://konty.com/me/pricing
+# Shows: HTTP/2 200
+
+curl -I https://konty.com/rs/pricing
+# Shows: HTTP/2 200
+
+# Test legacy URL migration (301 to /rs/)
+curl -I https://konty.com/pricing
+# Shows: 301, location: https://konty.com/rs/pricing
 
 # Test API bypass
 curl -I https://konty.com/api/ping
 # Shows: HTTP/2 404 (no redirect)
 
-# Test static file bypass  
+# Test static file bypass
 curl -I https://konty.com/robots.txt
 # Shows: HTTP/2 200 (no redirect)
 
-# Local testing with country simulation
-curl -I http://localhost:8787/  # Uses wrangler --cf country=XX
-
-# Note: Internal headers (X-Detected-Locale, X-Current-Locale) 
+# Note: Internal headers (X-Detected-Locale, X-Current-Locale)
 # are NOT visible in external responses - they're internal only
 ```
 
@@ -514,7 +481,7 @@ Located in `app/locales/`:
 
 ## Best Practices
 
-### Do's ✅
+### Do's
 - Always detect locale at edge wrapper
 - Respect explicit user choices permanently
 - Use silent redirects
@@ -522,14 +489,18 @@ Located in `app/locales/`:
 - Pass locale context via internal headers
 - Test with VPNs from different countries
 - Parse cookies only when needed (performance)
+- Use `prefix` strategy so every locale has its own URL prefix
+- Use `NuxtLinkLocale` or `localePath()` for all internal links
 
-### Don'ts ❌
+### Don'ts
 - Don't duplicate redirect logic in Nuxt
 - Don't show redirect notifications
 - Don't ignore explicit choices
 - Don't redirect API or static files
 - Don't expose internal headers to clients
 - Don't forget to validate cookie locales
+- Don't use `prefix_except_default` — it causes Googlebot indexing issues
+- Don't hardcode internal link paths without `localePath()` or `NuxtLinkLocale`
 
 ## Configuration Reference
 
@@ -537,7 +508,7 @@ Located in `app/locales/`:
 ```typescript
 i18n: {
   defaultLocale: 'rs',
-  strategy: 'prefix_except_default',
+  strategy: 'prefix',
   detectBrowserLanguage: false,  // We use IP detection
   locales: [
     {
@@ -547,7 +518,7 @@ i18n: {
       file: 'rs.json',
       flag: 'i-circle-flags:rs',
       currency: 'RSD',
-      currencySymbol: 'Din'
+      currencySymbol: 'RSD'
     },
     // ... other locales
   ]
@@ -559,14 +530,16 @@ i18n: {
 The localization system provides:
 
 1. **Edge-first** detection via Cloudflare Workers (~1ms overhead)
-2. **Silent** redirects without notifications
-3. **Manual** control via country selector with permanent preference
-4. **Smart banner** with session-based dismissal
-5. **Visual indicators** (pulsing dot for mismatch)
-6. **Cloudflare-optimized** architecture using `request.cf`
-7. **Clean separation** - edge handles redirects, Nuxt handles content
-8. **Type-safe** implementation with TypeScript
-9. **Performance optimized** - cookie parsing only when needed
-10. **Internal headers** for secure context passing
+2. **`prefix` strategy** — every locale has its own URL prefix for proper SEO indexing
+3. **Silent** redirects without notifications
+4. **Manual** control via country selector with permanent preference
+5. **Smart banner** with session-based dismissal
+6. **Visual indicators** (pulsing dot for mismatch)
+7. **Cloudflare-optimized** architecture using `request.cf`
+8. **Clean separation** - edge handles redirects, Nuxt handles content
+9. **Type-safe** implementation with TypeScript
+10. **Performance optimized** - cookie parsing only when needed
+11. **Internal headers** for secure context passing
+12. **Legacy URL support** - 301 redirects from old unprefixed URLs to `/rs/` equivalents
 
-Result: Users see content for their location automatically with ~1ms latency, have full control to switch if desired, and experience optimal performance through edge-first architecture.
+Result: Users see content for their location automatically with ~1ms latency, have full control to switch if desired, experience optimal performance through edge-first architecture, and search engines can properly crawl and index all locale variants.

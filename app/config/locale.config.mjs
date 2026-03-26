@@ -50,7 +50,7 @@ export const LOCALES = [
   }
 ];
 
-export const LOCALE_STRATEGY = 'prefix_except_default';
+export const LOCALE_STRATEGY = 'prefix';
 
 export const VALID_LOCALES = ['me', 'rs', 'ba', 'us'];
 

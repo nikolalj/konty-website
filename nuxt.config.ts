@@ -104,8 +104,7 @@ export default defineNuxtConfig({
       'mailto:*',     // Email links
       'tel:*',        // Phone links
       'sms:*',        // SMS links
-      '/offers',      // No /offers index page - only /offers/3m-free exists
-      '/*/offers',    // Same for locale-prefixed paths
+      '/*/offers',    // No /offers index page - only /offers/3m-free exists
     ],
 
     // Fail builds on broken links
@@ -234,12 +233,14 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-      '/allegra': { redirect: '/' },
-      '/aria': { redirect: '/' },
-      '/allegrapos': { redirect: '/' },
-      '/ariapos': { redirect: '/' },
-      '/product': { redirect: '/products' },
-      '/price': { redirect: '/pricing' },
+      // Legacy brand redirects — edge wrapper 301s unprefixed paths to /rs/,
+      // then these rules catch the /rs/ prefixed versions
+      '/rs/allegra': { redirect: '/rs' },
+      '/rs/aria': { redirect: '/rs' },
+      '/rs/allegrapos': { redirect: '/rs' },
+      '/rs/ariapos': { redirect: '/rs' },
+      '/rs/product': { redirect: '/rs/products' },
+      '/rs/price': { redirect: '/rs/pricing' },
 
       '/**': {
         headers: {
@@ -259,20 +260,76 @@ export default defineNuxtConfig({
       '/api/_nuxt_icon/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
 
-      '/': {
+      // Locale-prefixed homepage caching (all locales: /rs/, /me/, /ba/, /us/)
+      '/rs': {
         swr: process.env.APP_ENV !== 'development' ? 3600 : false,
         headers: {
-          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache',
-          'Vary': 'Accept-Language'
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache'
         }
       },
-      '/products': {
+      '/me': {
+        swr: process.env.APP_ENV !== 'development' ? 3600 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache'
+        }
+      },
+      '/ba': {
+        swr: process.env.APP_ENV !== 'development' ? 3600 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache'
+        }
+      },
+      '/us': {
+        swr: process.env.APP_ENV !== 'development' ? 3600 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=300, stale-while-revalidate=3600' : 'no-cache'
+        }
+      },
+      // Products pages (all locales)
+      '/rs/products': {
         swr: process.env.APP_ENV !== 'development' ? 7200 : false,
         headers: {
           'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=600, stale-while-revalidate=7200' : 'no-cache'
         }
       },
-      '/pricing': {
+      '/me/products': {
+        swr: process.env.APP_ENV !== 'development' ? 7200 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=600, stale-while-revalidate=7200' : 'no-cache'
+        }
+      },
+      '/ba/products': {
+        swr: process.env.APP_ENV !== 'development' ? 7200 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=600, stale-while-revalidate=7200' : 'no-cache'
+        }
+      },
+      '/us/products': {
+        swr: process.env.APP_ENV !== 'development' ? 7200 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=600, stale-while-revalidate=7200' : 'no-cache'
+        }
+      },
+      // Pricing pages (all locales)
+      '/rs/pricing': {
+        swr: process.env.APP_ENV !== 'development' ? 86400 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=3600, stale-while-revalidate=86400' : 'no-cache'
+        }
+      },
+      '/me/pricing': {
+        swr: process.env.APP_ENV !== 'development' ? 86400 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=3600, stale-while-revalidate=86400' : 'no-cache'
+        }
+      },
+      '/ba/pricing': {
+        swr: process.env.APP_ENV !== 'development' ? 86400 : false,
+        headers: {
+          'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=3600, stale-while-revalidate=86400' : 'no-cache'
+        }
+      },
+      '/us/pricing': {
         swr: process.env.APP_ENV !== 'development' ? 86400 : false,
         headers: {
           'cache-control': process.env.APP_ENV !== 'development' ? 's-maxage=3600, stale-while-revalidate=86400' : 'no-cache'

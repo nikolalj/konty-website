@@ -222,17 +222,14 @@ useHead(() => {
 
   // Determine x-default (prefer default locale if available, otherwise first)
   const defaultLocaleCode = locales.includes(DEFAULT_LOCALE.code) ? DEFAULT_LOCALE.code : locales[0]
-  const defaultPrefix = defaultLocaleCode === DEFAULT_LOCALE.code ? '' : `/${defaultLocaleCode}`
-
   const links = [
-    { rel: 'alternate', href: `${siteConfig.url}${defaultPrefix}/blog/${slug.value}`, hreflang: 'x-default' }
+    { rel: 'alternate', href: `${siteConfig.url}/${defaultLocaleCode}/blog/${slug.value}`, hreflang: 'x-default' }
   ]
 
   for (const localeCode of locales) {
     const loc = LOCALES.find(l => l.code === localeCode)
     if (!loc) continue
-    const prefix = localeCode === DEFAULT_LOCALE.code ? '' : `/${localeCode}`
-    links.push({ rel: 'alternate', href: `${siteConfig.url}${prefix}/blog/${slug.value}`, hreflang: loc.iso })
+    links.push({ rel: 'alternate', href: `${siteConfig.url}/${localeCode}/blog/${slug.value}`, hreflang: loc.iso })
   }
 
   return { link: links }

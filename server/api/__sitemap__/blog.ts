@@ -59,9 +59,7 @@ export default defineSitemapEventHandler(async (event) => {
 
     for (const post of postsBySlug.values()) {
       for (const localeCode of post.locales) {
-        // Find the locale config to get the proper URL prefix
-        const locale = LOCALES.find(l => l.code === localeCode)
-        const prefix = locale?.code === 'rs' ? '' : `/${locale?.code}`
+        const prefix = `/${localeCode}`
 
         entries.push({
           loc: `${prefix}/blog/${post.slug}`,
