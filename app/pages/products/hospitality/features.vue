@@ -29,9 +29,6 @@ usePageSeo({
 // OG Image generation
 defineOgImageComponent('Main', {
   title: t('pages.products.hospitality.features.hero.title'),
-  description: t('pages.products.hospitality.features.hero.subtitle'),
-  badge: t('pages.pricing.freeTrial'),
-  cta: t('ui.cta.primary')
 })
 
 // Use centralized schema

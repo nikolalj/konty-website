@@ -29,9 +29,6 @@ usePageSeo({
 // OG Image generation
 defineOgImageComponent('Main', {
   title: t('pages.home.hero.title'),
-  description: t('pages.home.hero.subtitle'),
-  badge: t('pages.pricing.freeTrial'),
-  cta: t('ui.cta.primary')
 })
 
 // Schema.org structured data using module composables

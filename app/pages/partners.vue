@@ -45,8 +45,6 @@ usePageSeo({
 // OG Image generation
 defineOgImageComponent('Main', {
   title: t('pages.partners.hero.title'),
-  description: t('pages.partners.hero.subtitle'),
-  cta: t('pages.partners.cta')
 })
 
 // Use centralized schema

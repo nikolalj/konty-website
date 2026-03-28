@@ -28,8 +28,6 @@ usePageSeo({
 // OG Image generation
 defineOgImageComponent('Main', {
   title: t('pages.contact.hero.title'),
-  description: t('pages.contact.hero.subtitle'),
-  cta: t('ui.forms.buttons.submit')
 })
 
 // Use centralized schema

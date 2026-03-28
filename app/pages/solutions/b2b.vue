@@ -29,8 +29,5 @@ useSchemaOrg([
 // OG Image
 defineOgImageComponent('Main', {
   title: t('pages.solutions.b2b.hero.title'),
-  description: t('pages.solutions.b2b.hero.subtitle'),
-  badge: t('pages.pricing.freeTrial'),
-  cta: t('pages.solutions.b2b.hero.cta')
 })
 </script>

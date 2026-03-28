@@ -248,23 +248,9 @@ useSchemaOrg([schemas.article(currentPost)])
 //   schemas.clientStoryReview(currentPost)  // TODO Disabled - fake ratings
 // }
 
-// OG Image - use blog featured image directly if available
-if (currentPost.image) {
-  defineOgImage(false)
-  useHead({
-    meta: [
-      { property: 'og:image', content: `${siteConfig.url}${currentPost.image}` },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: currentPost.title },
-      { name: 'twitter:image', content: `${siteConfig.url}${currentPost.image}` },
-      { name: 'twitter:card', content: 'summary_large_image' }
-    ]
-  })
-} else {
-  defineOgImageComponent('Main', {
-    title: currentPost.title,
-    description: currentPost.description
-  })
-}
+// OG Image - always use Blog template with cover image as background
+defineOgImageComponent('Blog', {
+  title: currentPost.title,
+  image: currentPost.image || '/images/og-workspace.jpg',
+})
 </script>

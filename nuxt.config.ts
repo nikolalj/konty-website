@@ -157,11 +157,11 @@ export default defineNuxtConfig({
   ogImage: {
     zeroRuntime: false,
 
-    // Use Plus Jakarta Sans - supports Serbian/Bosnian
+    // Local TTF font — Satori silently drops woff2, breaking Serbian characters
     fonts: [
-      'Plus+Jakarta+Sans:400',
-      'Plus+Jakarta+Sans:600',
-      'Plus+Jakarta+Sans:700'
+      { name: 'Plus Jakarta Sans', weight: 400, path: '/fonts/PlusJakartaSans-Variable.ttf' },
+      { name: 'Plus Jakarta Sans', weight: 600, path: '/fonts/PlusJakartaSans-Variable.ttf' },
+      { name: 'Plus Jakarta Sans', weight: 700, path: '/fonts/PlusJakartaSans-Variable.ttf' }
     ],
 
     // Default settings for all OG images

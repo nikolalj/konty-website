@@ -33,9 +33,6 @@ usePageSeo({
 // OG Image generation
 defineOgImageComponent('Main', {
   title: t('pages.clientStories.hero.title'),
-  description: t('pages.clientStories.hero.subtitle'),
-  badge: t('pages.clientStories.badge'),
-  cta: t('ui.cta.primary')
 })
 
 // Use centralized schema - returns array of schemas

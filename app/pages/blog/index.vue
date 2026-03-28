@@ -52,6 +52,5 @@ useSchemaOrg([schemas.blogCollection()])
 // OG Image
 defineOgImageComponent('Main', {
   title: t('pages.blog.hero.title'),
-  description: t('pages.blog.hero.subtitle')
 })
 </script>

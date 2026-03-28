@@ -27,8 +27,5 @@ useSchemaOrg([schemas.demoWebApplication()])
 // OG Image generation for Demo page
 defineOgImageComponent('Main', {
   title: t('pages.demo.hero.title'),
-  description: t('pages.demo.hero.subtitle'),
-  badge: t('pages.pricing.freeTrial'),
-  cta: t('ui.cta.primary')
 })
 </script>

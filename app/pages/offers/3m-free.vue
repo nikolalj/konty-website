@@ -214,9 +214,6 @@ usePageSeo({
 
 defineOgImageComponent('Main', {
   title: t('pages.offers.3mFree.hero.title'),
-  description: t('pages.offers.3mFree.hero.subtitle'),
-  badge: t('pages.offers.3mFree.hero.badge'),
-  cta: t('pages.offers.3mFree.hero.cta')
 })
 
 const { tDeep } = useUtils()
