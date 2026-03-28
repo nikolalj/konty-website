@@ -6,7 +6,9 @@ export default withNuxt(
     ignores: [
       '.wrangler/**',
       '.wrangler',
-      'wrangler/**'
+      'wrangler/**',
+      '**/*.md',
+      '**/*.satori.vue', // Satori OG image components use XHTML-style self-closing tags
     ]
   }
 )
