@@ -36,7 +36,6 @@ defineOgImage('Product', {
     t('pages.products.features.retail.feat3.title')
   ],
   cta: t('ui.cta.primary'),
-  icon: '🛍️'
 })
 
 useSchemaOrg([schemas.retail()])
