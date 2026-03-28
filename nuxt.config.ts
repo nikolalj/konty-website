@@ -166,14 +166,6 @@ export default defineNuxtConfig({
       width: 1200,
       height: 630,
       cacheMaxAgeSeconds: 60 * 60 * 24 * 7, // 7 days cache
-
-      // Local TTF font — bypasses v6 fontless pipeline which only downloads weight 400.
-      // Satori needs TTF (silently drops woff2) and our components use weights 600/700.
-      fonts: [
-        { name: 'Plus Jakarta Sans', weight: 400, path: '/fonts/PlusJakartaSans-Variable.ttf' },
-        { name: 'Plus Jakarta Sans', weight: 600, path: '/fonts/PlusJakartaSans-Variable.ttf' },
-        { name: 'Plus Jakarta Sans', weight: 700, path: '/fonts/PlusJakartaSans-Variable.ttf' },
-      ],
     },
   },
 
