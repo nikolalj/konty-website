@@ -26,7 +26,7 @@ usePageSeo({
 })
 
 // OG Image generation
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.contact.hero.title'),
 })
 

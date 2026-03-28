@@ -50,7 +50,7 @@ const schemas = useSchemas()
 useSchemaOrg([schemas.blogCollection()])
 
 // OG Image
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.blog.hero.title'),
 })
 </script>

@@ -25,7 +25,7 @@ usePageSeo({
 useSchemaOrg([schemas.demoWebApplication()])
 
 // OG Image generation for Demo page
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.demo.hero.title'),
 })
 </script>

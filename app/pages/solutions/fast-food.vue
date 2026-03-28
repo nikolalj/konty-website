@@ -27,7 +27,7 @@ useSchemaOrg([
 ])
 
 // OG Image
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.solutions.fastFood.hero.title'),
 })
 </script>

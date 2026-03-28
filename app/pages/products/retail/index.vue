@@ -27,7 +27,7 @@ usePageSeo({
 })
 
 // OG Image generation for Retail product
-defineOgImageComponent('Product', {
+defineOgImage('Product', {
   product: 'Konty Retail',
   title: t('pages.products.retail.hero.title'),
   features: [
@@ -36,7 +36,6 @@ defineOgImageComponent('Product', {
     t('pages.products.features.retail.feat3.title')
   ],
   cta: t('ui.cta.primary'),
-  icon: '🛍️'
 })
 
 useSchemaOrg([schemas.retail()])

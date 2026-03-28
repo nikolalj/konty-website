@@ -27,7 +27,7 @@ usePageSeo({
 })
 
 // OG Image generation for Hospitality product
-defineOgImageComponent('Product', {
+defineOgImage('Product', {
   product: 'Konty Hospitality',
   title: t('pages.products.hospitality.hero.title'),
   features: [
@@ -36,7 +36,6 @@ defineOgImageComponent('Product', {
     t('pages.products.features.hospitality.feat3.title')
   ],
   cta: t('ui.cta.primary'),
-  icon: '🍽️'
 })
 
 useSchemaOrg([schemas.hospitality()])

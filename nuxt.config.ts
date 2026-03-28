@@ -49,7 +49,10 @@ export default defineNuxtConfig({
     families: [
       {
         name: 'Plus Jakarta Sans',
-        src: '/fonts/PlusJakartaSans-Variable.woff2',
+        src: [
+          '/fonts/PlusJakartaSans-Variable.woff2',
+          '/fonts/PlusJakartaSans-Variable.ttf',
+        ],
         weights: ['200 800'],
         styles: ['normal'],
         global: true
@@ -157,27 +160,21 @@ export default defineNuxtConfig({
   ogImage: {
     zeroRuntime: false,
 
-    // Local TTF font — Satori silently drops woff2, breaking Serbian characters
-    fonts: [
-      { name: 'Plus Jakarta Sans', weight: 400, path: '/fonts/PlusJakartaSans-Variable.ttf' },
-      { name: 'Plus Jakarta Sans', weight: 600, path: '/fonts/PlusJakartaSans-Variable.ttf' },
-      { name: 'Plus Jakarta Sans', weight: 700, path: '/fonts/PlusJakartaSans-Variable.ttf' }
-    ],
-
     // Default settings for all OG images
     defaults: {
       extension: 'png',
       width: 1200,
       height: 630,
-      renderer: 'satori', // Fast, universal compatibility
       cacheMaxAgeSeconds: 60 * 60 * 24 * 7, // 7 days cache
-      component: 'Main' // Default OG image component for all pages
-    },
 
-    // Component defaults
-    componentOptions: {
-      global: true // Make OG image components globally available
-    }
+      // Local TTF font — bypasses v6 fontless pipeline which only downloads weight 400.
+      // Satori needs TTF (silently drops woff2) and our components use weights 600/700.
+      fonts: [
+        { name: 'Plus Jakarta Sans', weight: 400, path: '/fonts/PlusJakartaSans-Variable.ttf' },
+        { name: 'Plus Jakarta Sans', weight: 600, path: '/fonts/PlusJakartaSans-Variable.ttf' },
+        { name: 'Plus Jakarta Sans', weight: 700, path: '/fonts/PlusJakartaSans-Variable.ttf' },
+      ],
+    },
   },
 
   i18n: {

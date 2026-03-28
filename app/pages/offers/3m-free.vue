@@ -212,7 +212,7 @@ usePageSeo({
   description: t('seo.offers.3mFree.description')
 })
 
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.offers.3mFree.hero.title'),
 })
 
