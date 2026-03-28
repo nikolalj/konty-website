@@ -248,9 +248,12 @@ useSchemaOrg([schemas.article(currentPost)])
 //   schemas.clientStoryReview(currentPost)  // TODO Disabled - fake ratings
 // }
 
-// OG Image - always use Blog template with cover image as background
+// OG Image - convert blog cover image to JPEG for Satori (can't render AVIF)
+const ogImage = currentPost.image
+  ? `/_ipx/f_jpeg&q_80&w_1200/${currentPost.image}`
+  : '/images/og-workspace.jpg'
 defineOgImage('Blog', {
   title: currentPost.title,
-  image: currentPost.image || '/images/og-workspace.jpg',
+  image: ogImage,
 })
 </script>
