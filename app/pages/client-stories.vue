@@ -31,7 +31,7 @@ usePageSeo({
 })
 
 // OG Image generation
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.clientStories.hero.title'),
 })
 

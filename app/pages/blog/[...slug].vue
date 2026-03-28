@@ -249,7 +249,7 @@ useSchemaOrg([schemas.article(currentPost)])
 // }
 
 // OG Image - always use Blog template with cover image as background
-defineOgImageComponent('Blog', {
+defineOgImage('Blog', {
   title: currentPost.title,
   image: currentPost.image || '/images/og-workspace.jpg',
 })

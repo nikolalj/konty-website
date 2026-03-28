@@ -43,7 +43,7 @@ usePageSeo({
 })
 
 // OG Image generation
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.partners.hero.title'),
 })
 

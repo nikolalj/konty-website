@@ -27,7 +27,7 @@ usePageSeo({
 })
 
 // OG Image generation for Retail product
-defineOgImageComponent('Product', {
+defineOgImage('Product', {
   product: 'Konty Retail',
   title: t('pages.products.retail.hero.title'),
   features: [

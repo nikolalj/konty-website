@@ -27,7 +27,7 @@ usePageSeo({
 })
 
 // OG Image generation for Hospitality product
-defineOgImageComponent('Product', {
+defineOgImage('Product', {
   product: 'Konty Hospitality',
   title: t('pages.products.hospitality.hero.title'),
   features: [

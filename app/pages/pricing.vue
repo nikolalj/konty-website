@@ -21,7 +21,7 @@ usePageSeo({
 })
 
 // OG Image generation with localized pricing
-defineOgImageComponent('Pricing', {
+defineOgImage('Pricing', {
   title: t('pages.pricing.title'),
   currency: currentLocale?.currencySymbol,
   period: t('pages.pricing.retail.start.billingCycle'),

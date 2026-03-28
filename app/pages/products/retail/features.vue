@@ -27,7 +27,7 @@ usePageSeo({
 })
 
 // OG Image generation
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('pages.products.retail.features.hero.title'),
 })
 

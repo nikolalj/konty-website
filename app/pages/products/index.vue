@@ -24,7 +24,7 @@ usePageSeo({
 })
 
 // OG Image generation for Products overview
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('ui.navigation.main.products'),
 })
 

@@ -377,7 +377,7 @@ usePageSeo({
   description: t('seo.products.download.description')
 })
 
-defineOgImageComponent('Main', {
+defineOgImage('Main', {
   title: t('seo.products.download.title'),
 })
 </script>
