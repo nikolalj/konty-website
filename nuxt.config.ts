@@ -144,7 +144,7 @@ export default defineNuxtConfig({
   // Sitemap with automatic i18n multi-sitemap generation
   sitemap: {
     cacheMaxAgeSeconds: process.env.APP_ENV !== 'development' ? 3600 : 0,
-    experimentalCompression: true,
+    experimentalCompression: false,
     excludeAppSources: true, // Only use custom sources specified in sources array
     defaults: {
       changefreq: 'weekly',
