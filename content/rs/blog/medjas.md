@@ -80,4 +80,4 @@ Konty maloprodaja nije samo kasa - to je **kompletan sistem za upravljanje malop
 
 ---
 
-*Ako i vi želite da povežete više radnji i imate potpunu kontrolu nad poslovanjem - saznajte više o [Konty za trgovinu](/products/retail).*
+*Ako i vi želite da povežete više radnji i imate potpunu kontrolu nad poslovanjem - saznajte više o [Konty za trgovinu](/rs/products/retail).*

@@ -292,4 +292,4 @@ Obuka obično traje:
 
 ---
 
-*Želite da saznate više o tome kako POS sistem može unaprijediti vaše poslovanje? Pogledajte [Konty za ugostiteljstvo](/products/hospitality) ili [Konty za trgovinu](/products/retail).*
+*Želite da saznate više o tome kako POS sistem može unaprijediti vaše poslovanje? Pogledajte [Konty za ugostiteljstvo](/me/products/hospitality) ili [Konty za trgovinu](/me/products/retail).*

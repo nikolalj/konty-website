@@ -22,6 +22,9 @@ const items = useBreadcrumbItems({
   schemaOrg: false // Disabled - we'll handle it manually
 })
 
+// Segments that are not real pages — render as text, not links
+const NON_PAGE_SEGMENTS = ['offers']
+
 const localizedItems = computed(() => {
   return items.value.map((item, index) => {
     // First item is always home - use icon instead of label
@@ -38,24 +41,28 @@ const localizedItems = computed(() => {
     const segmentKey = segments[segments.length - 1] || 'index'
     const translationKey = `ui.breadcrumb.${segmentKey}`
     const translation = t(translationKey)
+    const isNonPage = NON_PAGE_SEGMENTS.includes(segmentKey)
 
     return {
       ...item,
+      ...(isNonPage ? { to: undefined } : {}),
       label: translation !== translationKey ? translation : item.label
     }
   })
 })
 
 // Manually generate BreadcrumbList schema with localized labels
+// Filter out non-page segments (no `to`) from structured data
 useSchemaOrg([
   defineBreadcrumb({
-    itemListElement: localizedItems.value.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      // For schema, use the aria label for home (index 0) or regular label
-      name: index === 0 ? t('ui.breadcrumb.index') : item.label,
-      item: `${siteUrl}${item.to}`
-    }))
+    itemListElement: localizedItems.value
+      .filter(item => item.to)
+      .map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: index === 0 ? t('ui.breadcrumb.index') : item.label,
+        item: `${siteUrl}${item.to}`
+      }))
   })
 ])
 </script>

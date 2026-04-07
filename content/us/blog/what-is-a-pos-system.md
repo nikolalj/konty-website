@@ -292,4 +292,4 @@ Training typically takes:
 
 ---
 
-*Want to learn more about how a POS system can improve your business? Check out [Konty for hospitality](/products/hospitality) or [Konty for retail](/products/retail).*
+*Want to learn more about how a POS system can improve your business? Check out [Konty for hospitality](/us/products/hospitality) or [Konty for retail](/us/products/retail).*

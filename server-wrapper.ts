@@ -73,7 +73,7 @@ export default {
         const cookieLocale = cookie?.locale && VALID_LOCALES.includes(cookie.locale) ? cookie.locale : null;
         const targetLocale = (cookie?.explicit && cookieLocale) ? cookieLocale : detectedLocale;
 
-        const targetUrl = new URL(`/${targetLocale}/`, url.origin);
+        const targetUrl = new URL(`/${targetLocale}`, url.origin);
         targetUrl.search = url.search;
 
         const headers = new Headers();

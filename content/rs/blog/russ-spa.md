@@ -61,4 +61,4 @@ Sve funkcioniše jednostavno, brzo i tačno - baš onako kako treba u savremenom
 
 ---
 
-*Povežite recepciju i restoran bez komplikacija - saznajte više o [Konty za hotele](/products/hospitality).*
+*Povežite recepciju i restoran bez komplikacija - saznajte više o [Konty za hotele](/rs/products/hospitality).*

@@ -58,4 +58,4 @@ Za nas, najveća nagrada je povjerenje. A povjerenje se gradi upravo kroz ovakve
 
 ---
 
-*Trebate pouzdan POS sistem koji olakšava vođenje knjiga? Saznajte više o [Konty POS rješenju](/products/hospitality).*
+*Trebate pouzdan POS sistem koji olakšava vođenje knjiga? Saznajte više o [Konty POS rješenju](/me/products/hospitality).*

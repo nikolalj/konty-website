@@ -80,4 +80,4 @@ Konty retail isn't just a cash register - it's a **complete system for managing 
 
 ---
 
-*Looking to connect multiple stores and have complete control over operations - learn more about [Konty for retail](/products/retail).*
+*Looking to connect multiple stores and have complete control over operations - learn more about [Konty for retail](/us/products/retail).*

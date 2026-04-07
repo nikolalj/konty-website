@@ -63,4 +63,4 @@ Grand Hotel Cetinje je savršen primjer da tradicija i tehnologija mogu ići ruk
 
 ---
 
-*Spojite recepciju i restoran bez papira i grešaka - otkrijte [Konty za hotele](/products/hospitality).*
+*Spojite recepciju i restoran bez papira i grešaka - otkrijte [Konty za hotele](/me/products/hospitality).*

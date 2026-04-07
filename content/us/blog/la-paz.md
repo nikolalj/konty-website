@@ -72,4 +72,4 @@ For those considering switching to Konty POS or wanting to improve their existin
 
 ---
 
-*Run your establishment with complete confidence - learn more about [Konty POS system](/products/hospitality).*
+*Run your establishment with complete confidence - learn more about [Konty POS system](/us/products/hospitality).*

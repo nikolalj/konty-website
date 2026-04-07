@@ -65,4 +65,4 @@ For this hotel's team, Konty is not just a POS system, but a partner that gives 
 
 ---
 
-*Connect all segments of your hotel into one system - discover [Konty's hotel solution](/products/hospitality).*
+*Connect all segments of your hotel into one system - discover [Konty's hotel solution](/us/products/hospitality).*

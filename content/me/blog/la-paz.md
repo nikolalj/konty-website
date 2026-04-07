@@ -72,4 +72,4 @@ Za one koji razmišljaju o prelasku na Konty POS ili žele unaprijediti svoj pos
 
 ---
 
-*Upravljajte svojim lokalom sa potpunom sigurnošću - pročitajte više o [Konty POS sistemu](/products/hospitality).*
+*Upravljajte svojim lokalom sa potpunom sigurnošću - pročitajte više o [Konty POS sistemu](/me/products/hospitality).*

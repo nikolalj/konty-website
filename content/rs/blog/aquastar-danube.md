@@ -65,4 +65,4 @@ Za tim ovog hotela, Konty nije samo POS sistem, već partner koji im daje sigurn
 
 ---
 
-*Povežite sve segmente vašeg hotela u jedan sistem - otkrijte [Konty rešenje za hotele](/products/hospitality).*
+*Povežite sve segmente vašeg hotela u jedan sistem - otkrijte [Konty rešenje za hotele](/rs/products/hospitality).*
