@@ -1612,6 +1612,223 @@
           "image": "/images/solutions/general-stores.avif",
           "title": "Perfect for General Stores"
         }
+      },
+      "beachBar": {
+        "hero": {
+          "badge": "New for the 2026 season",
+          "title": "Your beach.\nTotal control.\nEvery sunbed.",
+          "subtitle": "The only POS system built for beaches — sunbed management, QR ordering, and online reservations in one solution.",
+          "cta": {
+            "viber": "Message us on Viber",
+            "demo": "Schedule a demo"
+          }
+        },
+        "trustStrip": {
+          "years": "14+",
+          "yearsLabel": "years of experience",
+          "users": "500+",
+          "usersLabel": "active users",
+          "countries": "3",
+          "countriesLabel": "countries in the region"
+        },
+        "painPoints": {
+          "title": "Sound familiar?",
+          "subtitle": "Beach owners across the Montenegrin coast face the same problems every day",
+          "items": {
+            "paper": {
+              "title": "Paper, pen, and chaos",
+              "description": "Paper records get lost, soaked, and unreadable. Nobody knows which sunbed is free, who paid, and who didn't."
+            },
+            "theft": {
+              "title": "Money that never reaches the register",
+              "description": "A guest leaves, another sits down. The waiter charges — but doesn't issue a receipt. You have no idea the guest was ever there."
+            },
+            "online": {
+              "title": "Tourists can't find you online",
+              "description": "While competitors accept online bookings, your sunbeds wait for guests who may never come."
+            },
+            "understaffed": {
+              "title": "Waiters can't cover the whole beach",
+              "description": "A guest waits 20 minutes to order a drink. Frustrated, they won't order again. You lose revenue."
+            }
+          }
+        },
+        "solution": {
+          "title": "One solution. Three powerful capabilities.",
+          "subtitle": "Start with just beach management, or activate all three — you choose",
+          "tiers": {
+            "beach": {
+              "badge": "Step 1",
+              "title": "Beach Management",
+              "description": "A digital floor plan of your beach with zones, rows, and real-time status for every sunbed. Check-in, check-out, walk-in, no-show — all on one screen.",
+              "features": [
+                "Zones & pricing",
+                "Walk-in tracking",
+                "Future date preview",
+                "No-show management"
+              ]
+            },
+            "qr": {
+              "badge": "Step 2",
+              "title": "QR Ordering from the sunbed",
+              "description": "Guests scan a QR code on the parasol, browse the menu on their phone, and order food and drinks — no waiting for a waiter. No app, no registration.",
+              "features": [
+                "Menu with photos",
+                "Multiple orders",
+                "Direct to kitchen",
+                "PIN protection"
+              ]
+            },
+            "booking": {
+              "badge": "Step 3",
+              "title": "Online reservations — free for you",
+              "description": "Your sunbeds get their own page on plazni.bar. Tourists pick a sunbed on the interactive map, reserve and pay online. You get your full price — the guest pays the commission.",
+              "features": [
+                "Interactive map",
+                "0 EUR for you",
+                "Email confirmation",
+                "Calendar sync"
+              ],
+              "checklist": {
+                "map": {
+                  "title": "Interactive beach map",
+                  "description": "The guest sees exactly which sunbed they're reserving"
+                },
+                "email": {
+                  "title": "Automatic email confirmation",
+                  "description": "The guest gets confirmation, you get the reservation on your POS"
+                },
+                "pricing": {
+                  "title": "Seasonal and weekend pricing",
+                  "description": "Automatically adjusted prices by date"
+                },
+                "language": {
+                  "title": "Serbian and English",
+                  "description": "Local and foreign tourists — everyone in their own language"
+                }
+              }
+            }
+          },
+          "howItWorks": {
+            "step1": {
+              "title": "Set up your beach",
+              "description": "Define zones, rows, and prices in the admin panel. We'll help you."
+            },
+            "step2": {
+              "title": "Print QR codes",
+              "description": "One QR code per sunbed — laminate and place on the parasol. Done."
+            },
+            "step3": {
+              "title": "Open the season",
+              "description": "Check in guests, receive orders, and track every sunbed in real time."
+            },
+            "step4": {
+              "title": "Grow with data",
+              "description": "Reports, analytics, and online bookings bring you more guests every season."
+            }
+          }
+        },
+        "control": {
+          "title": "Know exactly what's happening on your beach",
+          "subtitle": "Digital tracking of every change — who sat down, who paid, who left",
+          "features": {
+            "name": {
+              "title": "Guest name on check-in",
+              "description": "Every walk-in is recorded with a name. Random spot checks reveal mismatches."
+            },
+            "receipt": {
+              "title": "Receipt = menu access",
+              "description": "The QR ordering PIN is on the fiscal receipt. Guests demand receipts because they need them to order."
+            },
+            "report": {
+              "title": "Daily reconciliation report",
+              "description": "Check-in count vs. receipts issued vs. revenue. Any gap = red flag."
+            }
+          },
+          "callout": {
+            "quote": "Beaches using digital check-in and QR ordering report 15-30% higher revenue — partly from eliminated leakage.",
+            "attribution": "Industry data — RFID and QR systems at beaches in Europe and Asia"
+          }
+        },
+        "aria": {
+          "title": "Using Aria POS? Your upgrade is ready.",
+          "description": "Aria is now Konty — same reliability, same data, completely new interface with powerful beach features. Just install the new app and log in. All your data is already there.",
+          "cards": {
+            "api": {
+              "title": "Same API",
+              "description": "Your data, products, and reports are preserved"
+            },
+            "transition": {
+              "title": "5-minute transition",
+              "description": "Install the app, log in — done"
+            },
+            "features": {
+              "title": "New beach features",
+              "description": "Beach management, QR ordering, and online reservations"
+            }
+          },
+          "cta": "Contact us for free migration"
+        },
+        "pricing": {
+          "title": "Transparent pricing, no surprises",
+          "subtitle": "Choose what you need — you only pay for what you use",
+          "plans": {
+            "beach": {
+              "badge": "Foundation",
+              "title": "Beach Management",
+              "description": "Digital floor plan, zones, check-in/out, reports",
+              "price": "Included",
+              "priceNote": "in your Konty plan",
+              "footnote": "Available to all users"
+            },
+            "qr": {
+              "badge": "Most popular",
+              "title": "QR Ordering",
+              "description": "Guests order from their phone, direct to kitchen",
+              "price": "Monthly per sunbed",
+              "priceNote": "You only pay for active sunbeds",
+              "footnote": "Contact us for exact pricing"
+            },
+            "booking": {
+              "badge": "Free for you",
+              "title": "Online Reservations",
+              "description": "plazni.bar portal with interactive map",
+              "price": "0 EUR",
+              "priceNote": "The guest pays the commission, not you",
+              "footnote": "You receive the full sunbed price"
+            }
+          },
+          "cta": {
+            "prompt": "Want exact pricing for your beach?"
+          }
+        },
+        "faq": {
+          "title": "Frequently asked questions",
+          "q1": "Do I need special hardware for beach features?",
+          "a1": "No. Konty works on devices you already have — tablet, phone, or computer. QR codes are printed on paper and laminated. No additional equipment is needed.",
+          "q2": "I use Aria POS — what happens to my data?",
+          "a2": "Aria is now Konty. Same API, same server, same data. Install the new app, log in with the same credentials, and all your products, reports, and settings are there. The transition takes less than 5 minutes.",
+          "q3": "How do online reservations work? How much do they cost?",
+          "a3": "Your beach gets a page on plazni.bar. Tourists reserve and pay online. You get your full sunbed price — a small markup is paid by the guest, not you. It's free for you.",
+          "q4": "Do guests need to install an app for QR orders?",
+          "a4": "No. The guest scans the QR code with their phone camera and the menu opens in the browser. No installation, no registration, no upfront payment. Order and the waiter delivers.",
+          "q5": "What if I don't have good WiFi at the beach?",
+          "a5": "Konty POS works offline — it continues working even when the internet goes down and syncs data when the connection returns. QR ordering requires internet but works on the guest's mobile data.",
+          "q6": "Can I start with just beach management, without QR and reservations?",
+          "a6": "Absolutely. Beach management works completely standalone. QR ordering and online reservations are optional add-ons that can be activated at any time during the season."
+        },
+        "final": {
+          "title": "Ready for this season?",
+          "description": "Contact us today and we'll set up your beach system before the season opens. Free consultation, no obligations.",
+          "cta": {
+            "viber": "Message us on Viber",
+            "demo": "Schedule a demo",
+            "phone": "Or call us"
+          }
+        },
+        "sticky": {
+          "text": "The only POS for beaches"
+        }
       }
     },
     "privacy": {
@@ -2321,6 +2538,10 @@
           "category": "Retail Management Software"
         },
         "title": "General Store POS System - All-in-One Solution"
+      },
+      "beachBar": {
+        "description": "The only POS system built for beaches. Sunbed management, QR ordering from the sunbed, and online reservations on plazni.bar — all in one solution.",
+        "title": "Konty for Beach Bars — POS System for Beach Management"
       }
     },
     "terms": {
@@ -2536,7 +2757,8 @@
         "restaurants": "Restaurants",
         "restaurantsDesc": "Complete restaurant management solution - from tables to payment.",
         "generalStores": "General Stores",
-        "generalStoresDesc": "Complete management for diverse product retail."
+        "generalStoresDesc": "Complete management for diverse product retail.",
+        "beachBar": "Beach Bars & Clubs"
       },
       "main": {
         "about": "About",
