@@ -6,7 +6,7 @@
     :ui="{
       link: 'text-white hover:text-white/80',
       linkLeadingIcon: 'text-white',
-      separator: 'text-white/50'
+      separator: 'text-white/70'
     }"
   />
 </template>
