@@ -119,7 +119,7 @@
           variant="custom"
           :custom-label="t('pages.solutions.beachBar.hero.cta.demo')"
           custom-to="/demo"
-          custom-class="dark bg-transparent !text-white hover:bg-primary-200 dark:hover:bg-[#61356c] ring-2 ring-secondary"
+          custom-class="dark bg-transparent !text-white hover:bg-white/10 ring-inset ring-2 ring-white/70"
           no-icon
           section="header"
         />
