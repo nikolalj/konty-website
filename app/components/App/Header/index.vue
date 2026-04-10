@@ -114,17 +114,16 @@
     </template>
 
     <template #right>
-      <UButton
+      <AppCTAButton
         v-if="isBeachBarPage"
-        :to="viberLink"
+        variant="custom"
+        :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
+        :custom-to="viberLink"
+        custom-icon="i-simple-icons-viber"
+        custom-class="dark rounded-full bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
         external
-        size="lg"
-        class="dark rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2]"
-        no-icon
-      >
-        <Icon name="i-simple-icons-viber" class="h-4 w-4" />
-        {{ t('pages.solutions.beachBar.hero.cta.viber') }}
-      </UButton>
+        section="header"
+      />
       <AppCTAButton v-else variant="secondary" section="header" class="dark" no-icon />
       <AppCTAButton
         variant="primary"

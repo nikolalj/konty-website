@@ -53,14 +53,15 @@
         <!-- CTA -->
         <UIAppear :delay-ms="300">
           <div class="mt-8 text-center">
-            <UButton
-              :to="viberLink"
+            <AppCTAButton
+              variant="custom"
+              :custom-label="t('pages.solutions.beachBar.aria.cta')"
+              :custom-to="viberLink"
+              custom-icon="i-simple-icons-viber"
+              custom-class="rounded-full bg-primary-600 !text-white hover:bg-primary-700 !ring-0"
               external
-              size="lg"
-              class="rounded-full bg-primary-600 font-semibold text-white hover:bg-primary-700"
-            >
-              {{ t('pages.solutions.beachBar.aria.cta') }}
-            </UButton>
+              section="beach-bar-aria"
+            />
           </div>
         </UIAppear>
       </div>

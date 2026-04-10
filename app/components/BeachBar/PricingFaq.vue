@@ -56,15 +56,15 @@
           <p class="mb-4 text-base text-gray-500">
             {{ t('pages.solutions.beachBar.pricing.cta.prompt') }}
           </p>
-          <UButton
-            :to="viberLink"
+          <AppCTAButton
+            variant="custom"
+            :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
+            :custom-to="viberLink"
+            custom-icon="i-simple-icons-viber"
+            custom-class="rounded-full bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
             external
-            size="lg"
-            class="rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2]"
-          >
-            <Icon name="i-simple-icons-viber" class="h-5 w-5" />
-            {{ t('pages.solutions.beachBar.hero.cta.viber') }}
-          </UButton>
+            section="beach-bar-pricing"
+          />
         </div>
       </UIAppear>
 

@@ -19,23 +19,23 @@
 
         <UIAppear :delay-ms="200">
           <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <UButton
-              :to="viberLink"
+            <AppCTAButton
+              variant="custom"
+              :custom-label="t('pages.solutions.beachBar.final.cta.viber')"
+              :custom-to="viberLink"
+              custom-icon="i-simple-icons-viber"
+              custom-class="w-full sm:w-auto justify-center rounded-full bg-[#7360f2] !text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] !ring-0"
               external
-              size="lg"
-              class="w-full justify-center rounded-full bg-[#7360f2] font-semibold text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] sm:w-auto"
-            >
-              <Icon name="i-simple-icons-viber" class="h-5 w-5" />
-              {{ t('pages.solutions.beachBar.final.cta.viber') }}
-            </UButton>
-            <UButton
-              :to="localePath('/demo')"
-              size="lg"
-              variant="outline"
-              class="w-full justify-center rounded-full border-2 border-white/40 font-semibold text-white hover:bg-white/10 sm:w-auto"
-            >
-              {{ t('pages.solutions.beachBar.final.cta.demo') }}
-            </UButton>
+              section="beach-bar-final"
+            />
+            <AppCTAButton
+              variant="custom"
+              :custom-label="t('pages.solutions.beachBar.final.cta.demo')"
+              custom-to="/demo"
+              custom-class="w-full sm:w-auto justify-center rounded-full border-2 border-white/40 !text-white hover:bg-white/10 !ring-0 bg-transparent"
+              no-icon
+              section="beach-bar-final"
+            />
           </div>
 
           <div class="mt-6 flex items-center justify-center gap-2 text-sm text-white/60">

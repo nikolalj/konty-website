@@ -33,23 +33,23 @@
 
           <UIAppear :delay-ms="300">
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <UButton
-                :to="viberLink"
+              <AppCTAButton
+                variant="custom"
+                :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
+                :custom-to="viberLink"
+                custom-icon="i-simple-icons-viber"
+                custom-class="justify-center rounded-full bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
                 external
-                size="lg"
-                class="justify-center rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2]"
-              >
-                <Icon name="i-simple-icons-viber" class="h-5 w-5" />
-                {{ t('pages.solutions.beachBar.hero.cta.viber') }}
-              </UButton>
-              <UButton
-                :to="localePath('/demo')"
-                size="lg"
-                variant="outline"
-                class="justify-center rounded-full border-2 border-white/50 font-semibold text-white hover:bg-white/10"
-              >
-                {{ t('pages.solutions.beachBar.hero.cta.demo') }}
-              </UButton>
+                section="beach-bar-hero"
+              />
+              <AppCTAButton
+                variant="custom"
+                :custom-label="t('pages.solutions.beachBar.hero.cta.demo')"
+                custom-to="/demo"
+                custom-class="justify-center rounded-full border-2 border-white/50 !text-white hover:bg-white/10 !ring-0 bg-transparent"
+                no-icon
+                section="beach-bar-hero"
+              />
             </div>
           </UIAppear>
         </div>

@@ -9,15 +9,16 @@
           <span class="hidden text-sm font-semibold text-gray-700 lg:block">
             {{ t('pages.solutions.beachBar.sticky.text') }}
           </span>
-          <UButton
-            :to="viberLink"
-            external
+          <AppCTAButton
+            variant="custom"
             size="sm"
-            class="ml-auto rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2] lg:ml-0"
-          >
-            <Icon name="i-simple-icons-viber" class="h-4 w-4" />
-            {{ t('pages.solutions.beachBar.hero.cta.viber') }}
-          </UButton>
+            :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
+            :custom-to="viberLink"
+            custom-icon="i-simple-icons-viber"
+            custom-class="ml-auto lg:ml-0 rounded-full bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
+            external
+            section="beach-bar-sticky"
+          />
         </div>
       </UContainer>
     </div>

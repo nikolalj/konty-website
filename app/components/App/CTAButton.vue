@@ -1,6 +1,7 @@
 <template>
   <UButton
     :to="buttonTo"
+    :external="isExternal"
     :size="size"
     :variant="variant === 'primary' ? 'solid' : 'outline'"
     :color="variant === 'primary' ? 'primary' : 'neutral'"
@@ -57,12 +58,22 @@ const props = defineProps({
   customClass: {
     type: String,
     default: ''
+  },
+  customIcon: {
+    type: String,
+    default: undefined
+  },
+  external: {
+    type: Boolean,
+    default: false
   }
 })
 
+const isExternal = computed(() => props.external)
+
 const buttonTo = computed(() => {
   if (props.variant === 'custom' && props.customTo)
-    return localePath(props.customTo)
+    return props.external ? props.customTo : localePath(props.customTo)
   if (props.variant === 'primary') return localePath('/demo')
   return localePath('/contact')
 })
@@ -74,6 +85,7 @@ const buttonLabel = computed(() => {
 })
 
 const getIcon = computed(() => {
+  if (props.customIcon) return props.customIcon
   if (props.variant === 'primary') return 'i-lucide-calendar'
   if (props.variant === 'custom') return 'i-lucide-arrow-right'
   return 'i-lucide-mail'
