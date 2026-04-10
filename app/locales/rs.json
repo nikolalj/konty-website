@@ -2541,7 +2541,7 @@
       },
       "beachBar": {
         "description": "Jedini POS sistem dizajniran za plaže. Upravljanje ležajevima, QR naručivanje sa ležaja i online rezervacije na plazni.bar — sve u jednom rešenju.",
-        "title": "Konty za beach barove — POS sistem za upravljanje plažom"
+        "title": "Konty za plažne barove — POS sistem za upravljanje plažom"
       }
     },
     "terms": {
@@ -2758,7 +2758,7 @@
         "restaurantsDesc": "Kompletno rešenje za upravljanje restoranom - od stolova do naplate.",
         "generalStores": "Prodavnice mešovite robe",
         "generalStoresDesc": "Kompletno upravljanje prodavnicom mešovite robe.",
-        "beachBar": "Beach barovi",
+        "beachBar": "Plažni barovi",
         "beachBarDesc": "Upravljanje ležajevima, QR naručivanje sa plaže i online rezervacije."
       },
       "main": {
