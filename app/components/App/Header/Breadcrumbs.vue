@@ -3,6 +3,11 @@
     v-if="!isHomepage"
     :items="localizedItems"
     class="dark"
+    :ui="{
+      link: 'text-gray-300 hover:text-white',
+      linkActive: 'text-white',
+      separator: 'text-gray-500'
+    }"
   />
 </template>
 
