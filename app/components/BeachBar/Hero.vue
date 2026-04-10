@@ -41,7 +41,7 @@
 
         <!-- Beach floor plan screenshot -->
         <UIAppear direction="right" :delay-ms="400">
-          <div class="relative mt-10 lg:mt-0 lg:w-[90%] lg:ml-auto">
+          <div class="relative mt-10 lg:mt-0 lg:w-[80%] lg:ml-auto">
             <NuxtImg
               src="/images/solutions/beach-bar/floor-plan.png"
               alt="Konty POS beach floor plan"
