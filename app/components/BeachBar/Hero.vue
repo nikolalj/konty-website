@@ -39,25 +39,20 @@
           </UIAppear>
         </div>
 
-        <!-- Screenshot placeholder -->
+        <!-- Beach floor plan screenshot -->
         <UIAppear direction="right" :delay-ms="400">
           <div class="relative mt-10 lg:mt-0">
-            <div class="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
-              <div class="flex aspect-[4/3] items-center justify-center rounded-xl bg-white/5 text-center text-sm text-white/50">
-                <div>
-                  <Icon name="i-lucide-layout-dashboard" class="mx-auto mb-2 h-12 w-12 opacity-50" />
-                  <p>Beach Floor Plan Screenshot</p>
-                </div>
-              </div>
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm">
+              <NuxtImg
+                src="/images/solutions/beach-bar/floor-plan.png"
+                alt="Konty POS beach floor plan"
+                class="w-full rounded-xl"
+                loading="lazy"
+              />
             </div>
-            <!-- Floating phone mockup -->
-            <div class="absolute -bottom-4 -right-4 w-[120px] rounded-2xl border border-white/15 bg-white/10 p-2 backdrop-blur-sm lg:w-[140px]">
-              <div class="flex aspect-[9/16] max-h-[180px] items-center justify-center rounded-xl bg-white/5 text-center text-xs text-white/50">
-                <div>
-                  <Icon name="i-lucide-smartphone" class="mx-auto mb-1 h-6 w-6 opacity-50" />
-                  <p>QR Menu</p>
-                </div>
-              </div>
+            <!-- Floating QR menu phone mockup -->
+            <div class="absolute -bottom-6 -right-4 w-[130px] rounded-2xl border border-white/15 bg-white/10 p-1.5 backdrop-blur-sm shadow-xl lg:w-[150px]">
+              <BeachBarQrMenuMockup />
             </div>
           </div>
         </UIAppear>

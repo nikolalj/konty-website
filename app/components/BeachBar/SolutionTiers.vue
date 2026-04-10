@@ -39,12 +39,12 @@
               </div>
             </div>
             <div class="mt-8 lg:mt-0">
-              <div class="flex aspect-[16/10] items-center justify-center rounded-xl bg-gray-200 text-sm text-gray-500">
-                <div class="text-center">
-                  <Icon name="i-lucide-layout-dashboard" class="mx-auto mb-2 h-10 w-10 opacity-40" />
-                  <p>Beach Floor Plan Screenshot</p>
-                </div>
-              </div>
+              <NuxtImg
+                src="/images/solutions/beach-bar/floor-plan.png"
+                alt="Konty POS beach floor plan"
+                class="w-full rounded-xl shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
         </UIAppear>
@@ -53,11 +53,8 @@
         <UIAppear>
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div class="order-2 lg:order-1">
-              <div class="mx-auto flex aspect-[9/16] max-h-[360px] max-w-[200px] items-center justify-center rounded-xl bg-gray-200 text-sm text-gray-500">
-                <div class="text-center">
-                  <Icon name="i-lucide-smartphone" class="mx-auto mb-2 h-10 w-10 opacity-40" />
-                  <p>QR Menu Screenshot</p>
-                </div>
+              <div class="mx-auto max-w-[220px]">
+                <BeachBarQrMenuMockup class="rounded-2xl shadow-xl border border-gray-200" />
               </div>
             </div>
             <div class="order-1 mb-8 lg:order-2 lg:mb-0">
