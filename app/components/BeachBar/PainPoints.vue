@@ -57,15 +57,6 @@ const painItems = [
     iconClass: 'text-red-700'
   },
   {
-    key: 'online',
-    icon: 'i-lucide-globe',
-    classes: 'border-indigo-200 bg-gradient-to-br from-indigo-50 to-indigo-100',
-    titleClass: 'text-indigo-900',
-    textClass: 'text-indigo-800',
-    iconBgClass: 'bg-indigo-200',
-    iconClass: 'text-indigo-700'
-  },
-  {
     key: 'understaffed',
     icon: 'i-lucide-users',
     classes: 'border-green-200 bg-gradient-to-br from-green-50 to-green-100',
@@ -73,6 +64,15 @@ const painItems = [
     textClass: 'text-green-800',
     iconBgClass: 'bg-green-200',
     iconClass: 'text-green-700'
+  },
+  {
+    key: 'online',
+    icon: 'i-lucide-globe',
+    classes: 'border-indigo-200 bg-gradient-to-br from-indigo-50 to-indigo-100',
+    titleClass: 'text-indigo-900',
+    textClass: 'text-indigo-800',
+    iconBgClass: 'bg-indigo-200',
+    iconClass: 'text-indigo-700'
   }
 ]
 </script>
