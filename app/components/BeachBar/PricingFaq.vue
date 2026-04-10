@@ -62,9 +62,12 @@
         </div>
       </UIAppear>
 
-      <!-- FAQ — uses the shared site-wide FAQ component -->
-      <SharedFAQ category="beach-bar" variant="alt" />
     </UContainer>
+
+    <!-- FAQ — uses the shared site-wide FAQ component, full width -->
+    <div class="mt-16 lg:mt-24">
+      <SharedFAQ category="beach-bar" variant="alt" />
+    </div>
   </section>
 </template>
 

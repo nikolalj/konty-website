@@ -8,8 +8,8 @@
     <UContainer class="relative z-10">
       <div class="mx-auto max-w-xl text-center text-white">
         <UIAppear>
-          <div class="text-4xl">☀️</div>
-          <h2 class="mt-4 text-3xl font-extrabold sm:text-4xl">
+          <Icon name="i-lucide-sun" class="mx-auto h-14 w-14 text-amber-300" />
+          <h2 class="mt-6 text-3xl font-extrabold sm:text-4xl">
             {{ t('pages.solutions.beachBar.final.title') }}
           </h2>
           <p class="mt-4 text-lg leading-relaxed text-white/85">
