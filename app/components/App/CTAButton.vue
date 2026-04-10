@@ -10,6 +10,7 @@
       !noIcon && iconPosition === 'trailing' ? getIcon : undefined
     "
     :class="[
+      'rounded-full',
       variant === 'primary'
         ? 'font-semibold hover:bg-secondary'
         : 'font-semibold bg-transparent hover:bg-primary-200 dark:hover:bg-[#61356c] ring-2 ring-secondary',

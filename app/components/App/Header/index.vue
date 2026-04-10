@@ -128,7 +128,7 @@
       <AppCTAButton
         variant="primary"
         section="header"
-        :class="isBeachBarPage ? 'dark bg-white rounded-full' : 'dark bg-white'"
+        class="dark bg-white"
         no-icon
       />
     </template>
