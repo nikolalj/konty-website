@@ -346,7 +346,7 @@ const items = computed<MenuGroup[]>(() => [
       {
         label: t('ui.navigation.categories.beachBar'),
         description: t('ui.navigation.categories.beachBarDesc'),
-        icon: 'i-lucide-umbrella',
+        icon: 'i-lucide-palm-tree',
         to: localePath('/solutions/beach-bar')
       }
     ]

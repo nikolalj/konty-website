@@ -118,7 +118,7 @@ const solutionsList = [
   },
   {
     "id": "beachBar",
-    "icon": "i-lucide-umbrella",
+    "icon": "i-lucide-palm-tree",
     "href": "/solutions/beach-bar"
   }
 ]
