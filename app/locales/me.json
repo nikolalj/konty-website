@@ -1617,7 +1617,7 @@
         "hero": {
           "badge": "Novo za sezonu 2026",
           "title": "Vaša plaža.\nPotpuna kontrola.\nSvaki ležaj.",
-          "subtitle": "Jedini POS sistem dizajniran za plaže — upravljanje ležajevima, QR naručivanje i online rezervacije u jednom rješenju.",
+          "subtitle": "Jedini POS sistem dizajniran za plaže - upravljanje ležajevima, QR naručivanje i online rezervacije u jednom rješenju.",
           "cta": {
             "viber": "Pišite nam na Viber",
             "demo": "Zakažite demo"
@@ -1641,7 +1641,7 @@
             },
             "theft": {
               "title": "Novac koji nikad ne stigne do kase",
-              "description": "Gost ode, drugi sjedne na ležaj. Konobar naplati — ali ne izda račun. Vi nemate pojma da je gost uopšte bio tu."
+              "description": "Gost ode, drugi sjedne na ležaj. Konobar naplati - ali ne izda račun. Vi nemate pojma da je gost uopšte bio tu."
             },
             "online": {
               "title": "Turisti vas ne mogu naći online",
@@ -1649,72 +1649,72 @@
             },
             "understaffed": {
               "title": "Konobari ne stižu da pokriju plažu",
-              "description": "Gost čeka 20 minuta da naruči piće. Umoran je, nervozan — i možda neće naručiti ponovo. Vi gubite promet."
+              "description": "Gost čeka 20 minuta da naruči piće. Umoran je, nervozan - i možda neće naručiti ponovo. Vi gubite promet."
             }
           }
         },
         "solution": {
           "title": "Jedno rješenje. Tri moćne mogućnosti.",
-          "subtitle": "Počnite samo sa upravljanjem plažom, ili aktivirajte sve tri mogućnosti — vi birate",
+          "subtitle": "Počnite samo sa upravljanjem plažom, ili aktivirajte sve tri mogućnosti - vi birate",
           "tiers": {
             "beach": {
               "badge": "Korak 1",
               "title": "Upravljanje plažom",
-              "description": "Digitalni plan vaše plaže sa zonama, redovima i statusom svakog ležaja u realnom vremenu. Check-in, check-out, walk-in, no-show — sve na jednom ekranu.",
+              "description": "Digitalni plan vaše plaže sa zonama, redovima i statusom svakog ležaja u realnom vremenu. Check-in, check-out, walk-in, no-show - sve na jednom ekranu.",
               "features": ["Zone i cijene", "Walk-in praćenje", "Pregled budućih dana", "No-show upravljanje"]
             },
             "qr": {
               "badge": "Korak 2",
               "title": "QR naručivanje sa ležaja",
-              "description": "Gost skenira QR kod na suncobranu, pregleda meni na telefonu i naruči hranu i piće — bez čekanja konobara. Bez aplikacije, bez registracije.",
+              "description": "Gost skenira QR kod na suncobranu, pregleda meni na telefonu i naruči hranu i piće - bez čekanja konobara. Bez aplikacije, bez registracije.",
               "features": ["Meni sa slikama", "Ponovna narudžba", "Direktno u kuhinju", "PIN zaštita"]
             },
             "booking": {
               "badge": "Korak 3",
-              "title": "Online rezervacije — besplatno za vas",
-              "description": "Vaši ležajevi dobijaju sopstveni sajt na plazni.bar. Turisti biraju ležaj na interaktivnoj mapi, rezervišu i plaćaju online. Vi dobijate svoju punu cijenu — proviziju plaća gost.",
+              "title": "Online rezervacije - besplatno za vas",
+              "description": "Vaši ležajevi dobijaju sopstveni sajt na plazni.bar. Turisti biraju ležaj na interaktivnoj mapi, rezervišu i plaćaju online. Vi dobijate svoju punu cijenu - proviziju plaća gost.",
               "features": ["Interaktivna mapa", "0 EUR za vas", "Potvrda emailom", "Kalendar"],
               "checklist": {
                 "map": { "title": "Interaktivna mapa plaže", "description": "Gost vidi tačno koji ležaj rezerviše" },
                 "email": { "title": "Automatska potvrda emailom", "description": "Gost dobija potvrdu, vi dobijate rezervaciju na POS-u" },
                 "pricing": { "title": "Sezonske i vikend cijene", "description": "Automatski prilagođene cijene po datumu" },
-                "language": { "title": "Srpski i engleski", "description": "Domaći i strani turisti — svi na svom jeziku" }
+                "language": { "title": "Srpski i engleski", "description": "Domaći i strani turisti - svi na svom jeziku" }
               }
             }
           },
           "howItWorks": {
-            "step1": { "title": "Postavite plažu", "description": "Definišite zone, redove i cijene u admin panelu. Mi vam pomažemo." },
-            "step2": { "title": "Odštampajte QR kodove", "description": "Jedan QR kod po ležaju — plastificirajte i postavite na suncobran. Gotovo." },
+            "step1": { "title": "Postavite plažu", "description": "Zajedno definišemo zone, redove suncobrana i ležaljki i cijene." },
+            "step2": { "title": "Odštampajte QR kodove", "description": "Jedan QR kod po ležaju - plastificirajte i postavite na suncobran. Gotovo." },
             "step3": { "title": "Otvorite sezonu", "description": "Check-in goste, primajte narudžbe i pratite svaki ležaj u realnom vremenu." },
-            "step4": { "title": "Rastite sa podacima", "description": "Izvještaji, analitika i online rezervacije vam donose sve više gostiju svake sezone." }
+            "step4": { "title": "Pratite rezultate", "description": "Izvještaji, analitika i online rezervacije vam donose sve više gostiju svake sezone." }
           }
         },
         "control": {
           "title": "Znate tačno šta se dešava na vašoj plaži",
-          "subtitle": "Digitalno praćenje svake promjene — ko je sjeo, ko je platio, ko je otišao",
+          "subtitle": "Digitalno praćenje svake promjene - ko je sjeo, ko je platio, ko je otišao",
           "features": {
             "name": { "title": "Ime gosta na check-in", "description": "Svaki walk-in se evidentira sa imenom gosta. Možete provjeriti da li se ime poklapa sa gostom na ležaju." },
             "receipt": { "title": "Račun = pristup meniju", "description": "PIN za QR naručivanje je na fiskalnom računu. Gost traži račun jer mu treba za narudžbe." },
             "report": { "title": "Dnevni pregled prometa", "description": "Uporedite broj check-ina sa izdatim računima i prihodom. Svaka razlika je znak za uzbunu." }
           },
           "callout": {
-            "quote": "Plaže koje koriste digitalni check-in i QR naručivanje bilježe 15-30% veći prihod — djelimično zbog smanjenog gubitka prihoda.",
-            "attribution": "Podaci iz industrije — RFID i QR sistemi na plažama u Evropi i Aziji"
+            "quote": "Plaže koje koriste digitalni check-in i QR naručivanje bilježe 15-30% veći prihod - djelimično zbog smanjenog gubitka prihoda.",
+            "attribution": "Podaci iz industrije - RFID i QR sistemi na plažama u Evropi i Aziji"
           }
         },
         "aria": {
           "title": "Koristite Aria POS? Vaš upgrade je spreman.",
-          "description": "Aria je sada Konty — ista pouzdanost, isti podaci, potpuno novi interfejs sa moćnim funkcijama za plažu. Samo instalirajte novu aplikaciju i prijavite se. Svi vaši podaci su već tu.",
+          "description": "Aria je sada Konty - ista pouzdanost, isti podaci, potpuno novi interfejs sa moćnim funkcijama za plažu. Samo instalirajte novu aplikaciju i prijavite se. Svi vaši podaci su već tu.",
           "cards": {
             "api": { "title": "Isti podaci", "description": "Svi vaši podaci, proizvodi i izvještaji su sačuvani" },
-            "transition": { "title": "5 minuta tranzicije", "description": "Instalirajte aplikaciju, prijavite se — gotovo" },
+            "transition": { "title": "5 minuta tranzicije", "description": "Instalirajte aplikaciju, prijavite se - gotovo" },
             "features": { "title": "Nove funkcije za plažu", "description": "Upravljanje plažom, QR naručivanje i online rezervacije" }
           },
           "cta": "Kontaktirajte nas za besplatnu migraciju"
         },
         "pricing": {
           "title": "Transparentne cijene, bez iznenađenja",
-          "subtitle": "Izaberite šta vam treba — plaćate samo ono što koristite",
+          "subtitle": "Izaberite šta vam treba - plaćate samo ono što koristite",
           "plans": {
             "beach": {
               "badge": "Osnova",
@@ -1748,15 +1748,15 @@
         "faq": {
           "title": "Često postavljana pitanja",
           "q1": "Treba li mi poseban hardver za funkcije za plažu?",
-          "a1": "Ne. Konty radi na uređajima koje već imate — tablet, telefon ili računar. QR kodovi se štampaju na papiru i plastificiraju. Nije potrebna nikakva dodatna oprema.",
-          "q2": "Koristim Aria POS — šta se dešava sa mojim podacima?",
+          "a1": "Ne. Konty radi na uređajima koje već imate - tablet, telefon ili računar. QR kodovi se štampaju na papiru i plastificiraju. Nije potrebna nikakva dodatna oprema.",
+          "q2": "Koristim Aria POS - šta se dešava sa mojim podacima?",
           "a2": "Aria je sada Konty. Isti API, isti server, isti podaci. Instalirate novu aplikaciju, prijavite se istim kredencijalima, i svi vaši proizvodi, izvještaji i podešavanja su tu. Tranzicija traje manje od 5 minuta.",
           "q3": "Kako funkcionišu online rezervacije? Koliko koštaju?",
-          "a3": "Vaša plaža dobija stranicu na plazni.bar. Turisti rezervišu i plaćaju online. Vi dobijate svoju punu cijenu ležaja — mali dodatak na cijenu plaća gost, ne vi. Za vas je besplatno.",
+          "a3": "Vaša plaža dobija stranicu na plazni.bar. Turisti rezervišu i plaćaju online. Vi dobijate svoju punu cijenu ležaja - mali dodatak na cijenu plaća gost, ne vi. Za vas je besplatno.",
           "q4": "Da li gosti moraju da instaliraju aplikaciju za QR narudžbe?",
           "a4": "Ne. Gost skenira QR kod kamerom telefona i meni se otvara u pregledaču. Nema instalacije, nema registracije, nema plaćanja unaprijed. Naruči i konobar donese.",
           "q5": "Šta ako nemam dobar WiFi na plaži?",
-          "a5": "Konty POS radi i offline — nastavlja rad čak i kad internet nestane, i sinhronizuje podatke kad se veza vrati. QR naručivanje zahtijeva internet, ali funkcioniše i na mobilnim podacima gosta.",
+          "a5": "Konty POS radi i offline - nastavlja rad čak i kad internet nestane, i sinhronizuje podatke kad se veza vrati. QR naručivanje zahtijeva internet, ali funkcioniše i na mobilnim podacima gosta.",
           "q6": "Mogu li da počnem samo sa upravljanjem plažom, bez QR i rezervacija?",
           "a6": "Apsolutno. Upravljanje plažom radi potpuno samostalno. QR naručivanje i online rezervacije su opcioni dodaci koje možete aktivirati bilo kad tokom sezone."
         },
@@ -2483,8 +2483,8 @@
         "title": "Kase za prodavnice mješovite robe"
       },
       "beachBar": {
-        "title": "Konty za plaž barove — POS sistem za upravljanje plažom",
-        "description": "Jedini POS sistem dizajniran za plaže. Upravljanje ležajevima, QR naručivanje sa ležaja i online rezervacije na plazni.bar — sve u jednom rješenju."
+        "title": "Konty za plaž barove - POS sistem za upravljanje plažom",
+        "description": "Jedini POS sistem dizajniran za plaže. Upravljanje ležajevima, QR naručivanje sa ležaja i online rezervacije na plazni.bar - sve u jednom rješenju."
       }
     },
     "terms": {
