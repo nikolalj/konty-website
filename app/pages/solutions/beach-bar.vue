@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BeachBarHero ref="heroSection" />
+    <BeachBarHero />
     <LazyBeachBarTrustStrip hydrate-on-visible />
     <LazyBeachBarPainPoints hydrate-on-visible />
     <LazyBeachBarSolutionTiers hydrate-on-visible />
@@ -8,16 +8,12 @@
     <LazyBeachBarAriaBridge hydrate-on-visible />
     <LazyBeachBarPricingFaq hydrate-on-visible />
     <LazyBeachBarFinalCta hydrate-on-visible />
-    <BeachBarStickyCta :hero-ref="heroEl" />
   </div>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
 const schemas = useSchemas()
-
-const heroSection = ref<{ $el: HTMLElement } | null>(null)
-const heroEl = computed(() => heroSection.value?.$el ?? null)
 
 // SEO
 usePageSeo({
