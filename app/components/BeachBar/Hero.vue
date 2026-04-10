@@ -50,9 +50,11 @@
                 loading="lazy"
               />
             </div>
-            <!-- Floating QR menu phone mockup -->
-            <div class="absolute -bottom-6 -right-4 w-[130px] rounded-2xl border border-white/15 bg-white/10 p-1.5 backdrop-blur-sm shadow-xl lg:w-[150px]">
-              <BeachBarQrMenuMockup />
+            <!-- Floating QR menu phone mockup (scaled down screenshot) -->
+            <div class="absolute -bottom-6 -right-4 w-[130px] overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-1.5 backdrop-blur-sm shadow-xl lg:w-[150px]">
+              <div class="origin-top-left scale-[0.38] lg:scale-[0.44]" style="width: 340px;">
+                <BeachBarQrMenuMockup />
+              </div>
             </div>
           </div>
         </UIAppear>
