@@ -70,11 +70,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-
-const phoneNumber = computed(() =>
-  t('data.company.contact.phone').replace(/[\s()-]/g, '')
-)
-const viberLink = computed(() => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`)
+const { viberLink } = useViberLink()
 
 const cardKeys = ['api', 'transition', 'features'] as const
 const cardIcons: Record<string, string> = {

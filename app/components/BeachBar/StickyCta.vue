@@ -2,8 +2,7 @@
   <Transition name="sticky-bar">
     <div
       v-show="visible"
-      class="fixed left-0 right-0 z-40 border-b border-gray-200/50 bg-white/95 shadow-sm backdrop-blur-md"
-      style="top: 0"
+      class="fixed left-0 right-0 z-40 top-16 border-b border-gray-200/50 bg-white/95 shadow-sm backdrop-blur-md"
     >
       <UContainer>
         <div class="flex h-14 items-center justify-between">
@@ -16,7 +15,7 @@
             size="sm"
             class="ml-auto rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2] lg:ml-0"
           >
-            <Icon name="i-lucide-message-circle" class="h-4 w-4" />
+            <Icon name="i-simple-icons-viber" class="h-4 w-4" />
             {{ t('pages.solutions.beachBar.hero.cta.viber') }}
           </UButton>
         </div>
@@ -27,31 +26,34 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const { viberLink } = useViberLink()
 
 const props = defineProps<{
   heroRef: HTMLElement | null
 }>()
 
-const phoneNumber = computed(() =>
-  t('data.company.contact.phone').replace(/[\s()-]/g, '')
-)
-const viberLink = computed(() => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`)
-
 const visible = ref(false)
+let observer: IntersectionObserver | null = null
 
-onMounted(() => {
-  if (!props.heroRef) return
+watch(() => props.heroRef, (el) => {
+  if (observer) {
+    observer.disconnect()
+    observer = null
+  }
+  if (!el) return
 
-  const observer = new IntersectionObserver(
+  observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0]
       if (entry) visible.value = !entry.isIntersecting
     },
     { threshold: 0 }
   )
-  observer.observe(props.heroRef)
+  observer.observe(el)
+}, { immediate: true })
 
-  onUnmounted(() => observer.disconnect())
+onUnmounted(() => {
+  if (observer) observer.disconnect()
 })
 </script>
 

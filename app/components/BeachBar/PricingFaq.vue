@@ -62,7 +62,7 @@
             size="lg"
             class="rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2]"
           >
-            <Icon name="i-lucide-message-circle" class="h-5 w-5" />
+            <Icon name="i-simple-icons-viber" class="h-5 w-5" />
             {{ t('pages.solutions.beachBar.hero.cta.viber') }}
           </UButton>
         </div>
@@ -82,6 +82,9 @@
               :class="openFaq.includes(index) ? 'border-primary-200 bg-primary-50/50' : 'border-gray-200 hover:border-gray-300'"
             >
               <button
+                :id="`beach-faq-trigger-${index}`"
+                :aria-expanded="openFaq.includes(index)"
+                :aria-controls="`beach-faq-panel-${index}`"
                 class="flex w-full items-center justify-between gap-4 p-5 text-left"
                 @click="toggleFaq(index)"
               >
@@ -93,6 +96,9 @@
                 />
               </button>
               <div
+                :id="`beach-faq-panel-${index}`"
+                role="region"
+                :aria-labelledby="`beach-faq-trigger-${index}`"
                 class="grid transition-all duration-200"
                 :style="{ gridTemplateRows: openFaq.includes(index) ? '1fr' : '0fr' }"
               >
@@ -112,11 +118,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-
-const phoneNumber = computed(() =>
-  t('data.company.contact.phone').replace(/[\s()-]/g, '')
-)
-const viberLink = computed(() => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`)
+const { viberLink } = useViberLink()
 
 const plans = [
   { key: 'beach', icon: '🏖️', badgeClass: 'bg-blue-100 text-blue-800', priceClass: 'bg-blue-50', priceTextClass: 'text-gray-900' },

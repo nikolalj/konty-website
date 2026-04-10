@@ -323,7 +323,7 @@ Middle card visually highlighted with `border: 2px solid #4a2d67` and `box-shado
 
 **Mobile:** Full-width Viber button, no text.
 
-**Z-index:** The site header uses `z-50`. The sticky CTA bar should use `z-40` — below the header so it doesn't overlap navigation, but above page content. On mobile, when the header menu is open, the sticky bar is hidden behind it naturally.
+**Z-index:** `z-40` (below the site header's `z-50`). Positioned at `top: 4rem` (below the header's nav bar). Uses `watch` on `heroRef` prop with `IntersectionObserver` to handle timing — the hero ref may not be available at mount time due to `UIAppear` animations.
 
 ---
 
@@ -349,12 +349,17 @@ All new components live under `app/components/BeachBar/`:
 | `FinalCta.vue` | Purple gradient close with dual CTA |
 | `StickyCta.vue` | Scroll-triggered sticky Viber bar |
 
+### Shared Composables
+
+| Composable | File | Purpose |
+|------------|------|---------|
+| `useViberLink()` | `app/composables/useViberLink.ts` | Constructs Viber deep link from `data.company.contact.phone`. Used by Hero, AriaBridge, PricingFaq, FinalCta, StickyCta. |
+
 ### Reused Components
 
 | Component | Where Used |
 |-----------|-----------|
-| `AppCTAButton` | All CTA buttons (Viber, Demo) — extended with Viber variant |
-| `UAccordion` (NuxtUI) | FAQ section |
+| `UButton` (NuxtUI) | All CTA buttons (Viber with `i-simple-icons-viber` icon, Demo as outline) |
 | `UIAppear` | Scroll-triggered fade-in animations on all sections |
 
 ### Translations
@@ -367,7 +372,7 @@ pages.solutions.beachBar.hero.title
 pages.solutions.beachBar.hero.subtitle
 pages.solutions.beachBar.hero.cta.viber
 pages.solutions.beachBar.hero.cta.demo
-pages.solutions.beachBar.trustStrip.stats
+pages.solutions.beachBar.trustStrip.years/yearsLabel/users/usersLabel/countries/countriesLabel
 pages.solutions.beachBar.painPoints.title
 pages.solutions.beachBar.painPoints.subtitle
 pages.solutions.beachBar.painPoints.items[0-3].title
@@ -403,8 +408,8 @@ pages.solutions.beachBar.pricing.plans[0-2].priceNote
 pages.solutions.beachBar.pricing.plans[0-2].footnote
 pages.solutions.beachBar.pricing.cta.prompt
 pages.solutions.beachBar.faq.title
-pages.solutions.beachBar.faq.items[0-5].question
-pages.solutions.beachBar.faq.items[0-5].answer
+pages.solutions.beachBar.faq.q1-q6
+pages.solutions.beachBar.faq.a1-a6
 pages.solutions.beachBar.final.title
 pages.solutions.beachBar.final.description
 pages.solutions.beachBar.final.cta.viber
@@ -423,7 +428,9 @@ seo.solutions.beachBar.description
 
 ### Navigation
 
-Add "Beach Bar" to the solutions grid in `Solutions/Hero.vue` component (the solutions index page card list).
+Added "Beach Bar" to:
+- Solutions grid in `Solutions/Hero.vue` (solutions index page card list)
+- Header navigation dropdown in `App/Header/Menu.vue` under the Hospitality section
 
 ### Images
 
@@ -439,9 +446,9 @@ Images stored in `/public/images/solutions/beach-bar/` as AVIF with WebP fallbac
 
 ### Viber Deep Link
 
-Format: `viber://chat?number={phoneNumber}` where `phoneNumber` is from `t('data.contact.phone')` with the `+` prefix and spaces removed.
+Centralized in `useViberLink()` composable. Format: `viber://chat?number={phoneNumber}` where `phoneNumber` is from `t('data.company.contact.phone')` with spaces, parentheses, and hyphens removed.
 
-Fallback for desktop/non-Viber: link to `viber://` with graceful degradation (the phone number is also shown as plain text).
+The phone number is also shown as plain text in the Final CTA section for users without Viber.
 
 ### Responsive Breakpoints
 
@@ -455,7 +462,7 @@ Following existing site patterns:
 - All sections below the hero use `<Lazy>` prefix + `hydrate-on-visible`
 - Hero renders immediately (critical above-fold)
 - Screenshot images use `@nuxt/image` with responsive sizes and lazy loading
-- Aria logo loaded from external URL — consider caching locally in `/public/images/`
+- Aria logo cached locally at `/public/images/solutions/beach-bar/aria-logo.svg` (downloaded from external URL during build)
 
 ---
 

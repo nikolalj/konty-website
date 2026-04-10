@@ -25,7 +25,7 @@
               size="lg"
               class="w-full justify-center rounded-full bg-[#7360f2] font-semibold text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] sm:w-auto"
             >
-              <Icon name="i-lucide-message-circle" class="h-5 w-5" />
+              <Icon name="i-simple-icons-viber" class="h-5 w-5" />
               {{ t('pages.solutions.beachBar.final.cta.viber') }}
             </UButton>
             <UButton
@@ -51,9 +51,5 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-
-const phoneNumber = computed(() =>
-  t('data.company.contact.phone').replace(/[\s()-]/g, '')
-)
-const viberLink = computed(() => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`)
+const { viberLink } = useViberLink()
 </script>

@@ -25,3 +25,4 @@ logs
 .prettierignore
 
 .wrangler
+.superpowers/
