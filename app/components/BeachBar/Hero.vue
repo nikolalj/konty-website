@@ -42,16 +42,14 @@
         <!-- Beach floor plan screenshot -->
         <UIAppear direction="right" :delay-ms="400">
           <div class="relative mt-10 lg:mt-0">
-            <div class="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm">
-              <NuxtImg
-                src="/images/solutions/beach-bar/floor-plan.png"
-                alt="Konty POS beach floor plan"
-                class="w-full rounded-xl"
-                loading="lazy"
-              />
-            </div>
+            <NuxtImg
+              src="/images/solutions/beach-bar/floor-plan.png"
+              alt="Konty POS beach floor plan"
+              class="w-full rounded-2xl shadow-2xl"
+              loading="lazy"
+            />
             <!-- Floating QR menu phone mockup -->
-            <div class="absolute -bottom-6 -right-4 w-[130px] rounded-2xl border border-white/15 bg-white/10 p-1.5 backdrop-blur-sm shadow-xl lg:w-[150px]">
+            <div class="absolute -bottom-6 -right-4 w-[100px] rounded-xl shadow-2xl lg:w-[120px]">
               <BeachBarQrMenuMockup />
             </div>
           </div>
