@@ -114,7 +114,18 @@
     </template>
 
     <template #right>
-      <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
+      <UButton
+        v-if="isBeachBarPage"
+        :to="viberLink"
+        external
+        size="lg"
+        class="dark rounded-full bg-[#7360f2] font-semibold text-white hover:bg-[#6350e2]"
+        no-icon
+      >
+        <Icon name="i-simple-icons-viber" class="h-4 w-4" />
+        {{ t('pages.solutions.beachBar.hero.cta.viber') }}
+      </UButton>
+      <AppCTAButton v-else variant="secondary" section="header" class="dark" no-icon />
       <AppCTAButton
         variant="primary"
         section="header"
@@ -130,6 +141,13 @@ const { y } = useWindowScroll()
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+
+const { viberLink } = useViberLink()
+
+const isBeachBarPage = computed(() => {
+  const removeTrailingSlash = (str: string) => str.replace(/\/$/, '')
+  return removeTrailingSlash(route.path) === removeTrailingSlash(localePath('/solutions/beach-bar'))
+})
 
 const ENTER_SOLID = 56
 const EXIT_SOLID = 8
