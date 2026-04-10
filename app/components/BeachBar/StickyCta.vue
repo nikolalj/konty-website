@@ -12,7 +12,7 @@
             :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
             :custom-to="viberLink"
             custom-icon="i-simple-icons-viber"
-            custom-class="rounded-full bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
+            custom-class="bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
             external
             section="beach-bar-sticky"
           />

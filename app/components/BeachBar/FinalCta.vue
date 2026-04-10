@@ -24,7 +24,7 @@
               :custom-label="t('pages.solutions.beachBar.final.cta.viber')"
               :custom-to="viberLink"
               custom-icon="i-simple-icons-viber"
-              custom-class="w-full sm:w-auto justify-center rounded-full bg-[#7360f2] !text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] !ring-0"
+              custom-class="w-full sm:w-auto justify-center bg-[#7360f2] !text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] !ring-0"
               external
               section="beach-bar-final"
             />
@@ -32,7 +32,7 @@
               variant="custom"
               :custom-label="t('pages.solutions.beachBar.final.cta.demo')"
               custom-to="/demo"
-              custom-class="w-full sm:w-auto justify-center rounded-full border-2 border-white/40 !text-white hover:bg-white/10 !ring-0 bg-transparent"
+              custom-class="w-full sm:w-auto justify-center border-2 border-white/40 !text-white hover:bg-white/10 !ring-0 bg-transparent"
               no-icon
               section="beach-bar-final"
             />
