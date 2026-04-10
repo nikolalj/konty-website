@@ -26,14 +26,14 @@
           <div class="flex items-center gap-4 flex-1">
             <a
               href="mailto:contact@konty.com"
-              class="flex items-center gap-1 text-gray-300"
+              class="flex items-center gap-1 text-white"
             >
               <Icon name="i-lucide-mail" class="w-4 h-4" />
               <span class="hidden md:inline">contact@konty.com</span>
             </a>
             <a
               :href="`tel:${t('data.company.contact.phone')}`"
-              class="flex items-center gap-1 text-gray-300"
+              class="flex items-center gap-1 text-white"
             >
               <Icon name="i-lucide-phone" class="w-4 h-4" />
               <span>{{ t('data.company.contact.phone') }}</span>

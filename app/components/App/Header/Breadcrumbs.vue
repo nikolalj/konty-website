@@ -4,9 +4,9 @@
     :items="localizedItems"
     class="dark"
     :ui="{
-      link: 'text-gray-300 hover:text-white',
+      link: 'text-white hover:text-white/80',
       linkActive: 'text-white',
-      separator: 'text-gray-500'
+      separator: 'text-white/50'
     }"
   />
 </template>
