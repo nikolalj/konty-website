@@ -20,7 +20,7 @@
           </UIAppear>
 
           <UIAppear :delay-ms="100">
-            <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl whitespace-pre-line">
+            <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl whitespace-pre-line">
               {{ t('pages.solutions.beachBar.hero.title') }}
             </h1>
           </UIAppear>
