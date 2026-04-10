@@ -3,7 +3,7 @@
     <UContainer>
       <UIAppear>
         <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             {{ t('pages.solutions.beachBar.control.title') }}
           </h2>
           <p class="mt-4 text-lg text-gray-500">
@@ -15,8 +15,8 @@
       <div class="mt-12 grid gap-6 sm:grid-cols-3">
         <UIAppear v-for="(item, index) in controlItems" :key="item.key" :delay-ms="index * 100">
           <div class="rounded-2xl border border-gray-200 p-6 text-center">
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-2xl" :class="item.bgClass">
-              {{ item.icon }}
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl" :class="item.bgClass">
+              <Icon :name="item.icon" class="h-6 w-6" :class="item.iconClass" />
             </div>
             <h3 class="text-base font-bold text-gray-900">
               {{ t(`pages.solutions.beachBar.control.features.${item.key}.title`) }}
@@ -47,8 +47,8 @@
 const { t } = useI18n()
 
 const controlItems = [
-  { key: 'name', icon: '👤', bgClass: 'bg-green-50' },
-  { key: 'receipt', icon: '🧾', bgClass: 'bg-blue-50' },
-  { key: 'report', icon: '📊', bgClass: 'bg-amber-50' }
+  { key: 'name', icon: 'i-lucide-user-check', bgClass: 'bg-green-50', iconClass: 'text-green-600' },
+  { key: 'receipt', icon: 'i-lucide-receipt', bgClass: 'bg-blue-50', iconClass: 'text-blue-600' },
+  { key: 'report', icon: 'i-lucide-bar-chart-3', bgClass: 'bg-amber-50', iconClass: 'text-amber-600' }
 ]
 </script>

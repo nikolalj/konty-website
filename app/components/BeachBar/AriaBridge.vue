@@ -26,7 +26,7 @@
         <!-- Copy -->
         <UIAppear :delay-ms="100">
           <div class="text-center">
-            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               {{ t('pages.solutions.beachBar.aria.title') }}
             </h2>
             <p class="mt-4 text-base leading-relaxed text-gray-600">
@@ -39,7 +39,7 @@
         <UIAppear :delay-ms="200">
           <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div v-for="card in cardKeys" :key="card" class="rounded-xl border border-gray-200 bg-white p-5 text-center">
-              <span class="text-2xl">{{ cardIcons[card] }}</span>
+              <Icon :name="cardIcons[card] ?? ''" class="h-6 w-6 text-primary-600" />
               <div class="mt-2 text-sm font-semibold text-gray-900">
                 {{ t(`pages.solutions.beachBar.aria.cards.${card}.title`) }}
               </div>
@@ -66,8 +66,8 @@ const { t } = useI18n()
 
 const cardKeys = ['api', 'transition', 'features'] as const
 const cardIcons: Record<string, string> = {
-  api: '🔄',
-  transition: '⚡',
-  features: '🏖️'
+  api: 'i-lucide-refresh-cw',
+  transition: 'i-lucide-zap',
+  features: 'i-lucide-tree-palm'
 }
 </script>

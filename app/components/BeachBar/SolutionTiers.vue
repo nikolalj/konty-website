@@ -4,7 +4,7 @@
       <!-- Header -->
       <UIAppear>
         <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             {{ t('pages.solutions.beachBar.solution.title') }}
           </h2>
           <p class="mt-4 text-lg text-gray-500">
@@ -108,7 +108,9 @@
               <!-- Checklist -->
               <div class="mt-6 space-y-3">
                 <div v-for="item in ['map', 'email', 'pricing', 'language']" :key="item" class="flex items-start gap-3">
-                  <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-green-100 text-xs text-green-700">✓</div>
+                  <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-green-100">
+                    <Icon name="i-lucide-check" class="h-4 w-4 text-green-700" />
+                  </div>
                   <div>
                     <div class="text-sm font-semibold text-gray-900">{{ t(`pages.solutions.beachBar.solution.tiers.booking.checklist.${item}.title`) }}</div>
                     <div class="text-sm text-gray-500">{{ t(`pages.solutions.beachBar.solution.tiers.booking.checklist.${item}.description`) }}</div>
@@ -125,7 +127,9 @@
               </div>
               <!-- Floating zero-cost badge -->
               <div class="absolute -bottom-3 right-6 flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-md">
-                <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-green-50 text-lg">💰</div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-green-50">
+                  <Icon name="i-lucide-circle-check" class="h-5 w-5 text-green-600" />
+                </div>
                 <div>
                   <div class="text-sm font-bold text-green-700">0 EUR</div>
                   <div class="text-xs text-gray-500">{{ t('pages.solutions.beachBar.pricing.plans.booking.priceNote') }}</div>
@@ -148,7 +152,7 @@
                 class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-[3px] border-white shadow-md"
                 :class="step.bgClass"
               >
-                <span class="text-2xl">{{ step.icon }}</span>
+                <Icon :name="step.icon" class="h-7 w-7" :class="step.iconClass" />
               </div>
               <div class="mb-1 text-[11px] font-bold uppercase tracking-widest" :class="step.labelClass">
                 {{ i + 1 }}
@@ -172,9 +176,9 @@ const { t } = useI18n()
 const { tArray } = useUtils()
 
 const steps = [
-  { key: 'step1', icon: '⚙️', bgClass: 'bg-gradient-to-br from-blue-100 to-blue-200', labelClass: 'text-blue-500' },
-  { key: 'step2', icon: '📱', bgClass: 'bg-gradient-to-br from-indigo-100 to-indigo-200', labelClass: 'text-indigo-500' },
-  { key: 'step3', icon: '☀️', bgClass: 'bg-gradient-to-br from-purple-100 to-purple-200', labelClass: 'text-purple-500' },
-  { key: 'step4', icon: '📈', bgClass: 'bg-gradient-to-br from-pink-100 to-pink-200', labelClass: 'text-pink-500' }
+  { key: 'step1', icon: 'i-lucide-settings', bgClass: 'bg-gradient-to-br from-blue-100 to-blue-200', labelClass: 'text-blue-500', iconClass: 'text-blue-600' },
+  { key: 'step2', icon: 'i-lucide-qr-code', bgClass: 'bg-gradient-to-br from-indigo-100 to-indigo-200', labelClass: 'text-indigo-500', iconClass: 'text-indigo-600' },
+  { key: 'step3', icon: 'i-lucide-sun', bgClass: 'bg-gradient-to-br from-purple-100 to-purple-200', labelClass: 'text-purple-500', iconClass: 'text-purple-600' },
+  { key: 'step4', icon: 'i-lucide-trending-up', bgClass: 'bg-gradient-to-br from-pink-100 to-pink-200', labelClass: 'text-pink-500', iconClass: 'text-pink-600' }
 ]
 </script>
