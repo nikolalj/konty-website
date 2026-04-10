@@ -53,10 +53,8 @@
         <UIAppear>
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div class="order-2 lg:order-1">
-              <div class="mx-auto max-w-[220px] overflow-hidden rounded-2xl border border-gray-200 shadow-xl">
-                <div class="origin-top-left scale-[0.58]" style="width: 380px;">
-                  <BeachBarQrMenuMockup />
-                </div>
+              <div class="mx-auto max-w-[220px] rounded-2xl border border-gray-200 shadow-xl">
+                <BeachBarQrMenuMockup />
               </div>
             </div>
             <div class="order-1 mb-8 lg:order-2 lg:mb-0">
