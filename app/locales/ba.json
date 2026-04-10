@@ -1674,7 +1674,7 @@
               "description": "Gost skenira QR kod na suncobranu, pregleda meni na telefonu i naruči hranu i piće — bez čekanja konobara. Bez aplikacije, bez registracije.",
               "features": [
                 "Meni sa slikama",
-                "Višestruke narudžbe",
+                "Ponovna narudžba",
                 "Direktno u kuhinju",
                 "PIN zaštita"
               ]
@@ -1686,8 +1686,8 @@
               "features": [
                 "Interaktivna mapa",
                 "0 EUR za vas",
-                "Email potvrda",
-                "Kalendar sync"
+                "Potvrda emailom",
+                "Kalendar"
               ],
               "checklist": {
                 "map": {
@@ -1734,36 +1734,36 @@
           "features": {
             "name": {
               "title": "Ime gosta na check-in",
-              "description": "Svaki walk-in se evidentira sa imenom. Nasumične provjere otkrivaju nepoklapanja."
+              "description": "Svaki walk-in se evidentira sa imenom gosta. Možete provjeriti da li se ime poklapa sa gostom na ležaju."
             },
             "receipt": {
               "title": "Račun = pristup meniju",
               "description": "PIN za QR naručivanje je na fiskalnom računu. Gost traži račun jer mu treba za narudžbe."
             },
             "report": {
-              "title": "Dnevni izvještaj poravnanja",
-              "description": "Broj check-ina vs. izdati računi vs. prihod. Razlika = crvena zastava."
+              "title": "Dnevni pregled prometa",
+              "description": "Uporedite broj check-ina sa izdatim računima i prihodom. Svaka razlika je znak za uzbunu."
             }
           },
           "callout": {
-            "quote": "Plaže koje koriste digitalni check-in i QR naručivanje bilježe 15-30% veći prihod — djelimično zbog eliminisanog gubitka.",
+            "quote": "Plaže koje koriste digitalni check-in i QR naručivanje bilježe 15-30% veći prihod — djelimično zbog smanjenog gubitka prihoda.",
             "attribution": "Podaci iz industrije — RFID i QR sistemi na plažama u Evropi i Aziji"
           }
         },
         "aria": {
           "title": "Koristite Aria POS? Vaš upgrade je spreman.",
-          "description": "Aria je sada Konty — ista pouzdanost, isti podaci, potpuno novi interfejs sa moćnim beach funkcijama. Samo instalirajte novu aplikaciju i prijavite se. Svi vaši podaci su već tu.",
+          "description": "Aria je sada Konty — ista pouzdanost, isti podaci, potpuno novi interfejs sa moćnim funkcijama za plažu. Samo instalirajte novu aplikaciju i prijavite se. Svi vaši podaci su već tu.",
           "cards": {
             "api": {
-              "title": "Isti API",
-              "description": "Vaši podaci, proizvodi i izvještaji su sačuvani"
+              "title": "Isti podaci",
+              "description": "Svi vaši podaci, proizvodi i izvještaji su sačuvani"
             },
             "transition": {
               "title": "5 minuta tranzicije",
               "description": "Instalirajte aplikaciju, prijavite se — gotovo"
             },
             "features": {
-              "title": "Nove beach funkcije",
+              "title": "Nove funkcije za plažu",
               "description": "Upravljanje plažom, QR naručivanje i online rezervacije"
             }
           },
@@ -1804,7 +1804,7 @@
         },
         "faq": {
           "title": "Često postavljana pitanja",
-          "q1": "Treba li mi poseban hardver za beach funkcije?",
+          "q1": "Treba li mi poseban hardver za funkcije za plažu?",
           "a1": "Ne. Konty radi na uređajima koje već imate — tablet, telefon ili računar. QR kodovi se štampaju na papiru i plastificiraju. Nije potrebna nikakva dodatna oprema.",
           "q2": "Koristim Aria POS — šta se dešava sa mojim podacima?",
           "a2": "Aria je sada Konty. Isti API, isti server, isti podaci. Instalirate novu aplikaciju, prijavite se istim kredencijalima, i svi vaši proizvodi, izvještaji i podešavanja su tu. Tranzicija traje manje od 5 minuta.",
@@ -1819,7 +1819,7 @@
         },
         "final": {
           "title": "Spremni za ovu sezonu?",
-          "description": "Javite nam se danas i postavićemo vaš beach sistem prije otvaranja sezone. Besplatna konsultacija, bez obaveza.",
+          "description": "Javite nam se danas i postavićemo vaš sistem za plažu prije otvaranja sezone. Besplatna konsultacija, bez obaveza.",
           "cta": {
             "viber": "Pišite nam na Viber",
             "demo": "Zakažite demo",
@@ -2758,7 +2758,7 @@
         "restaurantsDesc": "Kompletno rješenje za upravljanje restoranom - od stolova do naplate.",
         "generalStores": "Prodavnice mješovite robe",
         "generalStoresDesc": "Kompletno upravljanje prodavnicom mješovite robe.",
-        "beachBar": "Plaž barovi i klubovi"
+        "beachBar": "Beach barovi"
       },
       "main": {
         "about": "O nama",
