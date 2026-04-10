@@ -114,23 +114,34 @@
     </template>
 
     <template #right>
-      <AppCTAButton
-        v-if="isBeachBarPage"
-        variant="custom"
-        :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
-        :custom-to="viberLink"
-        custom-icon="i-simple-icons-viber"
-        custom-class="dark bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
-        external
-        section="header"
-      />
-      <AppCTAButton v-else variant="secondary" section="header" class="dark" no-icon />
-      <AppCTAButton
-        variant="primary"
-        section="header"
-        class="dark bg-white"
-        no-icon
-      />
+      <template v-if="isBeachBarPage">
+        <AppCTAButton
+          variant="custom"
+          :custom-label="t('pages.solutions.beachBar.hero.cta.demo')"
+          custom-to="/demo"
+          custom-class="dark bg-transparent !text-white hover:bg-primary-200 dark:hover:bg-[#61356c] ring-2 ring-secondary"
+          no-icon
+          section="header"
+        />
+        <AppCTAButton
+          variant="custom"
+          :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
+          :custom-to="viberLink"
+          custom-icon="i-simple-icons-viber"
+          custom-class="dark bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
+          external
+          section="header"
+        />
+      </template>
+      <template v-else>
+        <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
+        <AppCTAButton
+          variant="primary"
+          section="header"
+          class="dark bg-white"
+          no-icon
+        />
+      </template>
     </template>
   </UHeader>
 </template>
