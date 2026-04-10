@@ -3,8 +3,8 @@
     :to="buttonTo"
     :external="isExternal"
     :size="size"
-    :variant="variant === 'primary' ? 'solid' : 'outline'"
-    :color="variant === 'primary' ? 'primary' : 'neutral'"
+    :variant="variant === 'primary' ? 'solid' : variant === 'custom' ? 'solid' : 'outline'"
+    :color="variant === 'primary' ? 'primary' : variant === 'custom' ? 'neutral' : 'neutral'"
     :icon="!noIcon && iconPosition === 'leading' ? getIcon : undefined"
     :trailing-icon="
       !noIcon && iconPosition === 'trailing' ? getIcon : undefined
@@ -12,7 +12,9 @@
     :class="[
       variant === 'primary'
         ? 'font-semibold hover:bg-secondary'
-        : 'font-semibold bg-transparent hover:bg-primary-200 dark:hover:bg-[#61356c] ring-2 ring-secondary',
+        : variant === 'custom'
+          ? 'font-semibold'
+          : 'font-semibold bg-transparent hover:bg-primary-200 dark:hover:bg-[#61356c] ring-2 ring-secondary',
       customClass
     ]"
     @click="handleClick"
