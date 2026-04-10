@@ -1,1 +1,37 @@
-A 15-second cinematic ad on a sunny Adriatic beach in Montenegro. Opens with a close-up of a hand frantically scribbling on a crumpled paper ledger at a beach bar counter, harsh midday sun, handheld camera, slightly shaky and tense. Quick cut to a confused staff member standing among half-occupied sunbeds holding a receipt book, then a close-up of cash being slipped into a waist apron. Desaturated, uneasy mood. A bright white flash fills the frame — the turning point. The mood shifts completely. A confident beach manager holds a tablet showing a colorful digital beach floor plan with blue, green, and amber sunbed zones. The camera slowly pulls back to reveal the turquoise Adriatic Sea behind them. Golden hour light, warm saturated colors, smooth controlled camera movement. A tourist scans a QR code on a parasol with their phone while the order appears on a screen at the bar. Wide aerial drone shot ascending over a Montenegrin beach — organized rows of parasols and sunbeds, turquoise water, coastal mountains, golden light. Gently dissolves into a warm sunset-to-sky gradient. White Konty logo appears center frame. Clean, aspirational, resolved.
+KONTY BEACH BAR — 15s VIDEO AD PROMPT
+Target: Montenegro beach bar operators (B2B). 9:16 vertical.
+Narrative: Pain (paper chaos) → white flash pivot → Solution (digital beach management)
+Mood: Frustration/chaos → clarity → confidence/warmth
+
+SHOT-BY-SHOT TIMELINE
+
+SHOT 1 (00:00–00:02) — Paper Chaos
+Handheld camera shake, shallow depth-of-field. Extreme close-up of a hand scribbling on a crumpled paper ledger on a beach bar counter. Wind catches the page corner. Harsh midday Adriatic sun, overexposed. Unstable energy. Exits with whip pan right carrying motion blur into Shot 2.
+
+SHOT 2 (00:02–00:04) — Problem Montage
+Speed ramp acceleration + jump cuts + desaturation. Three rapid cuts in 2 seconds: (a) wide shot of half-occupied sunbeds, confused staff holding receipt book, (b) close-up of cash slipped into waist apron instead of register, (c) empty sunbed with crumpled towel, guest gone, no record. Handheld, desaturated, each cut faster than the last.
+
+SHOT 3 (00:04–00:05) — White Flash Pivot
+Full-frame white bloom flash, 0.4 seconds. Faint sunbed row silhouettes visible through the overexposure. This is the narrative pivot — everything after is clean, warm, controlled.
+
+SHOT 4 (00:05–00:08) — Digital Beach Floor Plan (SIGNATURE SHOT)
+Digital zoom scale-out + slow-motion at 70% + warm colour shift. Starts tight on a tablet showing Konty POS beach floor plan with coloured zones (blue VIP, green standard, amber economy) and status badges. Pulls back over 2 seconds to reveal a confident beach manager at the bar counter, turquoise Adriatic Sea behind them. Saturation increases, golden hour tones bloom. Smooth, controlled, expansive.
+
+SHOT 5 (00:08–00:10) — QR Ordering Split
+Diagonal split-screen composite at 30°. Left: tourist hand scanning QR code on parasol with phone. Right: order appearing on POS screen in bar. Speed ramp decelerates from fast scan to normal. Golden light on beach side, cooler interior on POS side. Static composition.
+
+SHOT 6 (00:10–00:12) — Aerial Beach Wide
+Slow ascending drone shot with gentle scale-out. Montenegrin beach from above — organized parasol and sunbed rows, turquoise water, coastal mountains. Speed at 80%. Peak golden hour warmth. The organized rows echo the digital floor plan from Shot 4.
+
+SHOT 7 (00:12–00:15) — Logo Resolve
+0.5s dissolve from aerial into warm gradient background (sunset amber to sky blue). Konty logo center-frame, white, subtle scale-in 98%→100%. Faint light dust particles drift across frame. Hold 1.5 seconds.
+
+EFFECTS DENSITY MAP
+00:00–00:05 = HIGH (shake, whip pan, speed ramp, jump cuts, desaturation, bloom — 7 effects)
+00:05–00:10 = MEDIUM (digital zoom, slow-mo, split-screen, speed ramp, colour shift — 5 effects)
+00:10–00:15 = LOW (drone, gentle zoom, dissolve, particles — 4 effects)
+
+ENERGY ARC
+Act 1 CHAOS (0–5s): Maximum instability. Handheld, harsh light, desaturated, rapid cuts. Frustration peaks at the white flash.
+Act 2 CLARITY (5–10s): Energy inverts. Smooth camera, warm saturation, confident pull-back reveal of the product, split-screen QR demo.
+Act 3 CONFIDENCE (10–15s): Majestic aerial resolves into warm brand card. Aspiration and a clear next step.
