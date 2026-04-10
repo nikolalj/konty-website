@@ -2758,7 +2758,8 @@
         "restaurantsDesc": "Complete restaurant management solution - from tables to payment.",
         "generalStores": "General Stores",
         "generalStoresDesc": "Complete management for diverse product retail.",
-        "beachBar": "Beach Bars & Clubs"
+        "beachBar": "Beach Bars & Clubs",
+        "beachBarDesc": "Sunbed management, QR ordering from the beach, and online reservations."
       },
       "main": {
         "about": "About",

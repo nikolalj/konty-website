@@ -342,6 +342,12 @@ const items = computed<MenuGroup[]>(() => [
         description: t('ui.navigation.categories.fastFoodDesc'),
         icon: 'ion:fast-food-outline',
         to: localePath('/solutions/fast-food')
+      },
+      {
+        label: t('ui.navigation.categories.beachBar'),
+        description: t('ui.navigation.categories.beachBarDesc'),
+        icon: 'i-lucide-umbrella',
+        to: localePath('/solutions/beach-bar')
       }
     ]
   },

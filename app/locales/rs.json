@@ -2758,7 +2758,8 @@
         "restaurantsDesc": "Kompletno rešenje za upravljanje restoranom - od stolova do naplate.",
         "generalStores": "Prodavnice mešovite robe",
         "generalStoresDesc": "Kompletno upravljanje prodavnicom mešovite robe.",
-        "beachBar": "Beach barovi"
+        "beachBar": "Beach barovi",
+        "beachBarDesc": "Upravljanje ležajevima, QR naručivanje sa plaže i online rezervacije."
       },
       "main": {
         "about": "O nama",
