@@ -423,7 +423,8 @@ export const useSchemas = () => {
       'grocery-supermarkets': 'grocerySupermarkets',
       'clothing-boutiques': 'clothingBoutiques',
       'general-stores': 'generalStores',
-      b2b: 'b2b'
+      b2b: 'b2b',
+      'beach-bar': 'beachBar'
     }
 
     const key = solutionKeyMap[solutionType] || solutionType

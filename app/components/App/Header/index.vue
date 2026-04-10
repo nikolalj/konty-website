@@ -183,6 +183,7 @@ function isRouteWithTransparentHeader(path: string) {
     '/solutions',
     '/demo',
     '/offers/3m-free',
+    '/solutions/beach-bar',
   ]
 
   return routesWithTransparentHeader.some(

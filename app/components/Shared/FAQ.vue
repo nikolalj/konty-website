@@ -86,6 +86,7 @@ const props = defineProps({
       | 'clothing-boutiques'
       | 'general-stores'
       | 'b2b'
+      | 'beach-bar'
       | undefined
     >,
     default: undefined
@@ -117,6 +118,7 @@ const faqData = computed(() => {
   if (props.category === 'clothing-boutiques') return tObject('pages.solutions.clothingBoutiques.faq')
   if (props.category === 'general-stores') return tObject('pages.solutions.generalStores.faq')
   if (props.category === 'b2b') return tObject('pages.solutions.b2b.faq')
+  if (props.category === 'beach-bar') return tObject('pages.solutions.beachBar.faq')
 
   return undefined
 })

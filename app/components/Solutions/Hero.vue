@@ -115,6 +115,11 @@ const solutionsList = [
     "id": "b2b",
     "icon": "i-lucide-briefcase",
     "href": "/solutions/b2b"
+  },
+  {
+    "id": "beachBar",
+    "icon": "i-lucide-umbrella",
+    "href": "/solutions/beach-bar"
   }
 ]
 
