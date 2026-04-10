@@ -5,7 +5,7 @@
     class="dark"
     :ui="{
       link: 'text-white hover:text-white/80',
-      linkActive: 'text-white',
+      linkLeadingIcon: 'text-white',
       separator: 'text-white/50'
     }"
   />
