@@ -39,19 +39,15 @@
           </UIAppear>
         </div>
 
-        <!-- Beach floor plan screenshot -->
+        <!-- POS + Phone devices hero image -->
         <UIAppear direction="right" :delay-ms="400">
-          <div class="relative mt-10 lg:mt-0 lg:w-[80%] lg:ml-auto">
+          <div class="mt-10 lg:mt-0">
             <NuxtImg
-              src="/images/solutions/beach-bar/floor-plan.png"
-              alt="Konty POS beach floor plan"
-              class="w-full rounded-2xl shadow-2xl"
+              src="/images/solutions/beach-bar/devices-hero.png"
+              alt="Konty POS terminal and mobile QR ordering app"
+              class="w-full"
               loading="lazy"
             />
-            <!-- Floating QR menu phone mockup -->
-            <div class="absolute -bottom-6 -right-4 w-[100px] rounded-xl bg-gray-900 p-[3px] shadow-2xl ring-1 ring-gray-700 lg:w-[120px]">
-              <BeachBarQrMenuMockup />
-            </div>
           </div>
         </UIAppear>
       </div>
