@@ -890,6 +890,7 @@ konty/
 | File | Path (in Konty monorepo) | Content |
 |------|-------------------------|---------|
 | Beach Management | `context/BeachManagement.md` | Full POS beach module documentation |
+| Anti-Theft Solutions | `context/BeachAntiTheftSolutions.md` | Revenue control research, layered defense system, implementation specs |
 | Beach Booking Portal | `context/BeachBookingPortal.md` | Full booking portal documentation |
 | QR Ordering | `context/QROrderingBusinessRequirements.md` | QR ordering feature spec |
 | Guest Menu App | `context/GuestMenuAppTechSpec.md` | Guest menu app architecture |
@@ -985,70 +986,141 @@ Montenegro's beach bars operate **seasonally** — typically May/June through Se
 
 ### The Problem (Communicated by Operators)
 
-Beach bar owners and managers have explicitly reported a recurring theft pattern by dishonest staff:
+Beach bar owners and managers have explicitly reported a recurring theft pattern by dishonest staff. This is the #1 cash control problem at beach operations — documented globally from Montenegro to Greece to Italy.
 
-**The scheme:**
-1. A walk-in guest takes a sunbed
-2. Staff member approaches, takes payment, and issues a **fiscal receipt** (everything proper)
-3. That guest leaves mid-day
-4. A **new guest** takes the same sunbed
-5. Staff member approaches, takes payment, but **does NOT issue a receipt**
-6. Staff pockets the money — the transaction is never recorded
-7. The owner/manager has no way to know a second guest ever existed
+**How Montenegro beach bars currently operate:**
+1. Walk-in guest takes a sunbed
+2. Staff approaches, collects payment, and issues a fiscal receipt
+3. Guest may order food/drinks throughout the day — each round is paid immediately upon delivery (no open tabs)
+4. The pay-per-round model exists because guests could leave without paying if tabs were open — staff can't maintain visual control of the entire beach
+
+**The theft scheme:**
+1. Guest A takes a sunbed, pays, gets a fiscal receipt (everything proper)
+2. Guest A leaves mid-day
+3. Guest B takes the same sunbed
+4. Staff collects payment from Guest B but **does NOT issue a receipt** (or provides an old receipt from Guest A)
+5. Staff pockets the money — the transaction is never recorded
+6. The owner/manager has no way to know Guest B ever existed
+
+**The core constraint:** The waiter is the only bridge between the physical world (who's sitting at the sunbed) and the digital world (what the system records). If the waiter is dishonest, they simply don't update the system when a guest changes. Because there's no open tab — everything is pay-per-interaction — the system has no ongoing transaction that would "break" when a guest leaves.
 
 **Why it's hard to detect today:**
 - Paper-based tracking (if any) is easily manipulated
 - The owner can't be physically present at every sunbed all day
 - No audit trail of sunbed occupancy changes
 - Staff controls the information flow entirely
+- Sunbed is a reusable, non-consumable asset — unlike food, there's no inventory to cross-check against sales
 
 **Scale of impact:** On a busy beach day, this can happen at multiple sunbeds, multiple times. A dishonest employee covering 50 sunbeds could steal from 10-20 replacement walk-ins per day — potentially hundreds of euros daily.
 
-### How Beach Management Helps (Current State)
+**Global context:** This is not unique to Montenegro. Italy's Revenue Agency data shows 2 out of 3 beach concession managers don't declare full earnings. Greece deploys 40,000+ annual inspections, drones, undercover tourist-agents, and citizen reporting apps specifically because beach theft/evasion is endemic. The Greek tax authority (AADE) found that 69% of fined businesses in 2025 were in food service and beach sunbed/umbrella rentals.
 
-Even without a perfect anti-theft solution, digitizing beach operations creates **friction and visibility** that paper cannot:
+### Research-Backed Solutions (Prioritized)
 
-| Mechanism | How It Helps |
-|-----------|-------------|
-| **Digital occupancy tracking** | Every sunbed has a status (available, walk-in, checked-in, checked-out). Manager can view the floor plan remotely and compare system state vs. physical reality. |
-| **Walk-in registration** | When staff taps "Walk-In Check-In," the system records who did it and when. If a sunbed shows "available" in the system but is physically occupied, that's a red flag. |
-| **Check-out timestamps** | The system records when each guest left. If a sunbed shows "checked out at 11:00" but the next walk-in appears at 14:00, the 3-hour gap is suspicious if the sunbed was physically occupied. |
-| **Reporting & analytics** | Daily reports show total walk-ins, check-in/out times, and occupancy patterns. Anomalies become visible over time (e.g., one employee consistently has fewer walk-ins than others in the same zone). |
-| **Multi-terminal visibility** | Manager's terminal shows the same floor plan — no information asymmetry between staff and management. |
+Comprehensive research across 25+ countries, 40+ software platforms, and multiple academic studies produced this layered defense system. No single solution is bulletproof, but layered together they create a net that's very hard to escape.
 
-### How QR Ordering Creates an Unintentional Audit Trail
+#### TIER 1: V1 Launch (High Impact, Low Effort)
 
-If QR Ordering is enabled alongside Beach Management, a powerful secondary control emerges:
+**Solution 1: Receipt-as-QR-Access ("The Golden Receipt")**
 
-- A "non-existent" guest (one the staff never checked in) might still **scan the QR code and try to order**
-- The system would show an order attempt or active session on a sunbed that's supposedly "available"
-- This creates **proof** that someone was sitting there even though the staff never registered them
+The single highest-impact innovation. When staff checks in a walk-in, the POS issues a fiscal receipt as normal. The receipt has a **4-digit code** printed on it — this IS the QR ordering session PIN. The guest scans the sunbed QR code → enters the code from their receipt → menu opens for ordering food/drinks all day.
 
-This is not a designed anti-theft feature — but it's a natural byproduct of QR ordering that strengthens management oversight.
+**Why it's the strongest solution:**
+- Turns every guest into an involuntary auditor — they WANT the receipt because it gives them menu access
+- Brazil's Nota Fiscal Paulista proved: when customers demand receipts, reported revenue increases 22-23% (Naritomi, LSE, 4-year study)
+- Taiwan's receipt lottery (1951-present) increased tax revenue 75% in year one by making receipts valuable
+- The dishonest employee who skips the receipt faces a guest asking "How do I order food?" — uncomfortable, attention-drawing
+- Zero behavioral change for honest staff — they already issue receipts
+- Uses existing infrastructure (fiscal receipt + QR code + session PIN)
+- Implementation: receipt template change + minor flow adjustment
 
-### Potential Product Solutions (To Be Explored)
+**What it doesn't solve:** Guests who don't care about QR ordering. But on beach bars that serve food/drinks (most of them), the incentive is strong.
 
-These are ideas for future product development that could directly address the theft problem:
+**Solution 2: Guest Name on Walk-In + Randomized Spot Checks**
 
-| Idea | Mechanism | Complexity |
-|------|-----------|-----------|
-| **Occupancy snapshot alerts** | Manager receives periodic push notifications: "Sunbed A3 has been 'available' for 3 hours during peak time — verify." System flags statistically unusual availability. | Medium |
-| **Guest self-check-in via QR** | The sunbed QR code (already there for ordering) could also serve as a guest check-in mechanism. Guest scans → system registers occupancy independently of staff. Staff skipping the POS becomes detectable. | Medium |
-| **Mandatory receipt-per-session** | System requires a fiscal receipt to be issued for every walk-in before the session can be opened. If the session isn't opened, the sunbed shows as "available" — creating discrepancy with physical reality. | Low |
-| **Reconciliation report** | End-of-day report comparing: sunbed-hours occupied (from check-in/out data) vs. revenue collected. If 100 sunbed-hours were used but only 70 were invoiced, ~30% of revenue may be leaking. | Low |
-| **Physical spot-check workflow** | System randomly selects 5-10 sunbeds per hour and asks a supervisor to verify their status matches the system. Discrepancies are logged. | Medium |
-| **Camera/IoT integration** | Occupancy sensors or camera-based people counting — compares physical presence with system records. High-tech but high-cost. | High |
+Walk-In Check-In requires entering the guest's first name (3-second step: "Marco", "Ana", "Hans"). The POS has a "Spot Check" mode that randomly selects 5-8 occupied sunbeds and shows their registered names. Manager walks to a sunbed, asks "Marco?" — if the person says "No, I'm Stefan," the waiter failed to register a guest change.
 
-**Decision needed:** Which of these (if any) to prioritize for the initial beach management release, and which to position as future roadmap items. Even without a perfect solution, the **visibility and audit trail** that digital tracking provides is a massive improvement over paper — and this should be the primary marketing angle.
+**Why it works:**
+- Newcastle University research: "watching eyes" effect reduced theft by 62% over two years — the deterrent is the *possibility* of being caught, not the frequency of actual checks
+- If the waiter enters the correct new name (to avoid detection), they've created the audit trail — two sessions = two payments expected
+- Mismatches are logged with timestamp, sunbed, and assigned staff member
+- Low implementation effort — `guest_name` already exists on BeachBooking
+
+**Solution 3: Reconciliation Dashboard**
+
+Three daily metrics that reveal the story:
+
+| Metric | Source | What It Reveals |
+|--------|--------|----------------|
+| Walk-in sessions opened | Beach Management | How many guests were registered |
+| Sunbed rental receipts issued | Fiscal system | How many guests paid through the POS |
+| Expected vs. actual revenue | Sessions × zone price vs. receipt totals | Revenue gap = potential theft |
+
+Per-employee breakdown over a week exposes patterns: if Employee A consistently has fewer walk-ins per shift than Employee B in the same zone, Employee A is suspect. End-of-day close-out: any session still open at closing time is flagged.
+
+Validated by: industry-standard exception-based reporting, blind cash count practices, and Benford's Law analysis used in forensic accounting.
+
+#### TIER 2: Soon After Launch (High Impact, Medium Effort)
+
+**Solution 4: QR Scan Device Tracking (Passive Occupancy Proof)**
+
+Every QR code scan logs a lightweight timestamp + device fingerprint (cookie). If Device A scanned at 09:20 and Device B scans the same sunbed at 14:30, the system flags: "Possible guest change at sunbed B3 — no new check-in recorded." Alert goes to manager.
+
+- Completely passive — no one does anything extra
+- The waiter can't prevent the guest from scanning
+- The waiter doesn't know this tracking exists
+- Validated by: GonnaOrder's per-sunbed QR model, Hoteligy's GPS geolocation, and Loungeron's occupancy-counting approach
+
+**Solution 5: Session Duration Anomaly Detection**
+
+After 2-3 weeks of data, the system knows average session duration per zone. Flags sessions exceeding 1.5× average: "Sunbed A1 active for 7 hours (avg: 4.2h) — verify." Tracks which employee is associated with anomalous sessions. Manager gets push notifications.
+
+Validated by: Hoteligy's auto-release after idle time, and exception-based reporting as hospitality industry standard.
+
+**Solution 6: "No Receipt? Tell Us" Signage Program**
+
+Physical signage on each sunbed/parasol: "Didn't receive a receipt? Let us know — [phone/WhatsApp]." Optionally stronger: "No receipt? Your sunbed rental is free" (used in Italy and Greece).
+
+- Greece's "Apodixi Please!" campaign at airports instructs tourists to demand receipts
+- Brazil's consumer complaint mechanism: firms report 7% more receipts after first consumer complaint
+- Near-zero cost — just printed signs
+- Even if no guest ever complains, the sign changes staff behavior
+
+#### TIER 3: Future Roadmap (Transformative, Higher Effort)
+
+**Solution 7: Customer Self-Check-In via QR**
+
+The sunbed QR code also serves as a self-check-in. Walk-in guest scans QR → taps "I'm here" → system records occupancy independently of staff. Manager compares: "15 self-check-ins today vs. 12 payments recorded — 3 guests were never billed." Roadmap because adoption rate uncertain without strong incentive; Solution #1 handles V1 better.
+
+**Solution 8: Cashless Pre-Payment**
+
+Online bookings via plazni.bar = prepaid (no cash to steal). Walk-in option: guest scans sunbed QR → pays via phone → receives digital receipt with session PIN. Roadmap because it requires payment integration (currently placeholder) and Montenegro's cash culture means optional-only for now. But every prepaid booking through plazni.bar is a transaction staff can't steal from — another reason to push Campaign 2.
+
+### Research Evidence Summary
+
+| Source | Finding | Relevance |
+|--------|---------|-----------|
+| **Naritomi (LSE)** — Brazil Nota Fiscal Paulista | Revenue increased 22-23% when receipts became valuable to customers | Validates Solution #1 (receipt-as-QR-access) |
+| **Taiwan Uniform Invoice Lottery** (1951-present) | 75% revenue increase in year 1; 70% participation rate by 2019 | Making receipts valuable works at scale |
+| **Brazil instant scratch-card variant** (Tonetto, 2025) | 227% more effective than monthly lottery | Instant value > deferred value for receipt incentives |
+| **Newcastle University "Watching Eyes"** | Theft reduced 62% from just images of eyes watching | Validates Solution #2 (spot checks as deterrent) |
+| **Finns Beach Club Bali** (Tappit RFID) | 443% ROI, 30% revenue growth with cashless wristbands | Eliminating cash eliminates cash theft |
+| **RFID wristband studies** (multiple venues) | 15-30% higher spend; partly from eliminated revenue leakage | Validates cashless as long-term goal |
+| **Greece AADE 2025** | 69% of fined businesses were beach/food service; 40,000+ inspections | The problem is endemic; enforcement alone doesn't solve it |
+| **Italy beach concessions** | 2/3 of managers underreport despite telematic cash registers | Fiscal devices alone are insufficient; behavioral mechanisms needed |
+| **Hoteligy** (hotel pool) | Auto-release + access control validation as anti-fraud | Software-based occupancy detection works without IoT hardware |
+| **GonnaOrder / Jamezz** | QR ordering where customer pays directly = staff removed from chain | Validates QR self-service as strongest structural defense |
 
 ### Marketing Angle
 
-The theft problem should be positioned carefully in marketing — operators feel this pain deeply but may not want to publicly acknowledge it. Suggested framing:
+The theft problem should be positioned carefully — operators feel this pain deeply but may not want to publicly acknowledge it. Recommended framing:
 
 - **Direct (for sales conversations):** "Are you 100% sure every sunbed payment reaches your register?"
 - **Indirect (for public ads):** "Know exactly what's happening on your beach — every sunbed, every guest, in real time"
 - **Feature-focused:** "Digital floor plan with real-time occupancy tracking — see your entire beach from anywhere"
+- **Data-backed:** "Beach clubs using digital check-in and QR ordering report 15-30% higher revenue — partly from eliminated leakage"
 - **Trust-building:** "Your beach, your data, your control"
+- **Competitive:** "The same controls premium clubs in Ibiza and Bali use — built into your POS"
 
 ---
 
