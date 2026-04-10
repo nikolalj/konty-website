@@ -415,46 +415,23 @@ export const useSchemas = () => {
     const localePath = useLocalePath()
     const siteUrl = config.public.siteUrl || 'https://konty.com'
 
-    // Map solution types to service details
-    const serviceDetails: Record<string, { name: string; category: string; description: string }> = {
-      restaurants: {
-        name: 'Restaurant POS System',
-        category: 'Restaurant Management Software',
-        description: t('seo.solutions.restaurants.description')
-      },
-      'bars-cafes': {
-        name: 'Bar & Cafe POS System',
-        category: 'Bar Management Software',
-        description: t('seo.solutions.barsCafes.description')
-      },
-      'fast-food': {
-        name: 'Fast Food POS System',
-        category: 'Quick Service Restaurant Software',
-        description: t('seo.solutions.fastFood.description')
-      },
-      'grocery-supermarkets': {
-        name: 'Grocery & Supermarket POS System',
-        category: 'Retail Management Software',
-        description: t('seo.solutions.grocerySupermarkets.description')
-      },
-      'clothing-boutiques': {
-        name: 'Fashion Retail POS System',
-        category: 'Retail Management Software',
-        description: t('seo.solutions.clothingBoutiques.description')
-      },
-      'general-stores': {
-        name: 'General Store POS System',
-        category: 'Retail Management Software',
-        description: t('seo.solutions.generalStores.description')
-      },
-      b2b: {
-        name: 'B2B Sales & Invoicing System',
-        category: 'Business Management Software',
-        description: t('seo.solutions.b2b.description')
-      }
+    // Map solution slugs to translation key prefixes
+    const solutionKeyMap: Record<string, string> = {
+      restaurants: 'restaurants',
+      'bars-cafes': 'barsCafes',
+      'fast-food': 'fastFood',
+      'grocery-supermarkets': 'grocerySupermarkets',
+      'clothing-boutiques': 'clothingBoutiques',
+      'general-stores': 'generalStores',
+      b2b: 'b2b'
     }
 
-    const service = serviceDetails[solutionType] || {
+    const key = solutionKeyMap[solutionType] || solutionType
+    const service = key ? {
+      name: t(`seo.solutions.${key}.schema.name`, t(`seo.solutions.${key}.title`)),
+      category: t(`seo.solutions.${key}.schema.category`, ''),
+      description: t(`seo.solutions.${key}.description`)
+    } : {
       name: 'POS System',
       category: 'Business Management Software',
       description: t('seo.solutions.description')

@@ -2266,32 +2266,60 @@
     "solutions": {
       "b2b": {
         "description": "Profesionalno B2B rješenje za veleprodaju. Upravljajte cijenama po partneru, fakturisanjem i naprednim izvještajima.",
+        "schema": {
+          "name": "B2B sistem za prodaju i fakturisanje",
+          "category": "Softver za upravljanje poslovanjem"
+        },
         "title": "B2B i veleprodaja - POS za distributere"
       },
       "barsCafes": {
         "description": "POS optimizovan za brzinu u barovima i kafićima. Brza naplata, praćenje zaliha i upravljanje smjenama uključeno.",
+        "schema": {
+          "name": "POS sistem za barove i kafiće",
+          "category": "Softver za upravljanje barovima"
+        },
         "title": "Kase za barove i kafiće - Brza naplata"
       },
       "clothingBoutiques": {
         "description": "Upravljajte modnom maloprodajom sa specijalizovanim POS-om. Pratite veličine, boje, sezone i programe lojalnosti.",
+        "schema": {
+          "name": "POS sistem za butike i prodavnice odjeće",
+          "category": "Softver za upravljanje maloprodajom"
+        },
         "title": "Kase za butike i prodavnice odjeće"
       },
       "description": "Otkrijte kako Konty POS može da transformiše vaše poslovanje. Specijalizovana rješenja za restorane, kafiće i prodavnice.",
       "fastFood": {
         "description": "Efikasan POS za restorane brze hrane. Upravljajte drive-thru, dostavom i salom iz jednog brzog sistema.",
+        "schema": {
+          "name": "POS sistem za brzu hranu",
+          "category": "Softver za restorane brze hrane"
+        },
         "title": "Kase za brzu hranu i fast food restorane"
       },
       "grocerySupermarkets": {
         "description": "Upravljajte hiljadama artikala sa lakoćom. Barkod skeniranje, akcije i praćenje zaliha u realnom vremenu.",
+        "schema": {
+          "name": "POS sistem za markete i supermarkete",
+          "category": "Softver za upravljanje maloprodajom"
+        },
         "title": "Kase za markete i supermarkete - Zalihe lako"
       },
       "restaurants": {
         "description": "Kompletan POS za restorane sa punom uslugom. Upravljajte stolovima, kuhinjskim ekranom, rezervacijama i analitikom.",
+        "schema": {
+          "name": "POS sistem za restorane",
+          "category": "Softver za upravljanje restoranima"
+        },
         "title": "Kase za restorane sa punom uslugom"
       },
       "title": "POS rješenja prilagođena vašoj djelatnosti",
       "generalStores": {
         "description": "Kompletan POS za prodavnice mješovite robe. Podrška za više smjena, praćenje zaliha i pouzdan offline rad uključen.",
+        "schema": {
+          "name": "POS sistem za prodavnice mješovite robe",
+          "category": "Softver za upravljanje maloprodajom"
+        },
         "title": "Kase za prodavnice mješovite robe"
       }
     },

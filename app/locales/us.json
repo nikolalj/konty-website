@@ -2266,32 +2266,60 @@
     "solutions": {
       "b2b": {
         "description": "Get professional B2B and wholesale POS solution. Manage partner pricing, invoicing, and advanced reports with ease.",
+        "schema": {
+          "name": "B2B Sales & Invoicing System",
+          "category": "Business Management Software"
+        },
         "title": "B2B & Wholesale POS System for Distributors"
       },
       "barsCafes": {
         "description": "Get speed-optimized POS for high-volume bars and cafes. Fast checkout, inventory tracking, and shift management built-in.",
+        "schema": {
+          "name": "Bar & Cafe POS System",
+          "category": "Bar Management Software"
+        },
         "title": "Bar & Cafe POS - Fast Service System"
       },
       "clothingBoutiques": {
         "description": "Manage your fashion retail with specialized POS. Track sizes, colors, seasons, and customer loyalty programs effortlessly.",
+        "schema": {
+          "name": "Fashion Retail POS System",
+          "category": "Retail Management Software"
+        },
         "title": "Clothing & Boutique POS for Fashion"
       },
       "description": "Discover how Konty POS can transform your business. Get specialized solutions for restaurants, cafes, retail stores, and B2B.",
       "fastFood": {
         "description": "Get efficient POS for quick service restaurants. Manage drive-thru, delivery, and dine-in orders from one fast system.",
+        "schema": {
+          "name": "Fast Food POS System",
+          "category": "Quick Service Restaurant Software"
+        },
         "title": "Fast Food & Quick Service Restaurant POS"
       },
       "grocerySupermarkets": {
         "description": "Manage thousands of products with ease. Get barcode scanning, promotions, and real-time inventory tracking for your store.",
+        "schema": {
+          "name": "Grocery & Supermarket POS System",
+          "category": "Retail Management Software"
+        },
         "title": "Grocery & Supermarket POS - Inventory Made Easy"
       },
       "restaurants": {
         "description": "Get complete POS for full-service restaurants. Manage tables, kitchen display, reservations, and analytics in one system.",
+        "schema": {
+          "name": "Restaurant POS System",
+          "category": "Restaurant Management Software"
+        },
         "title": "Restaurant POS - Full Service Dining"
       },
       "title": "Industry-Specific POS Solutions for Your Business",
       "generalStores": {
         "description": "Get complete POS for general stores. Multi-shift support, diverse inventory tracking, and reliable offline operation included.",
+        "schema": {
+          "name": "General Store POS System",
+          "category": "Retail Management Software"
+        },
         "title": "General Store POS System - All-in-One Solution"
       }
     },
