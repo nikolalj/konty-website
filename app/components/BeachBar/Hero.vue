@@ -11,7 +11,7 @@
     <UContainer class="relative z-10 pt-34 lg:pt-40 pb-16 lg:pb-20">
       <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
         <!-- Copy -->
-        <div>
+        <div class="text-center lg:text-left">
           <UIAppear>
             <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-1.5 text-sm text-white backdrop-blur-md">
               <span class="h-2 w-2 rounded-full bg-green-400" />
@@ -20,19 +20,19 @@
           </UIAppear>
 
           <UIAppear :delay-ms="100">
-            <h1 class="mt-6 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[3.25rem] lg:leading-[1.12] whitespace-pre-line">
+            <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl whitespace-pre-line">
               {{ t('pages.solutions.beachBar.hero.title') }}
             </h1>
           </UIAppear>
 
           <UIAppear :delay-ms="200">
-            <p class="mt-6 max-w-xl text-base text-white/90 lg:text-lg lg:leading-relaxed">
+            <p class="mt-6 text-lg text-white/90 lg:leading-relaxed mx-auto max-w-xl lg:mx-0">
               {{ t('pages.solutions.beachBar.hero.subtitle') }}
             </p>
           </UIAppear>
 
           <UIAppear :delay-ms="300">
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start sm:gap-4">
               <AppCTAButton variant="beach-primary" custom-class="justify-center" section="beach-bar-hero" />
               <AppCTAButton variant="beach-secondary" custom-class="justify-center" section="beach-bar-hero" no-icon />
             </div>
