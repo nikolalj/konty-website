@@ -7,6 +7,7 @@
     <LazyBeachBarControlFeatures hydrate-on-visible />
     <LazyBeachBarAriaBridge hydrate-on-visible />
     <LazyBeachBarPricingFaq hydrate-on-visible />
+    <LazySharedFAQ category="beach-bar" variant="alt" hydrate-on-visible />
     <LazyBeachBarFinalCta hydrate-on-visible />
   </div>
 </template>
