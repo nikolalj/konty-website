@@ -49,7 +49,7 @@
               loading="lazy"
             />
             <!-- Floating QR menu phone mockup -->
-            <div class="absolute -bottom-6 -right-4 w-[100px] rounded-xl shadow-2xl lg:w-[120px]">
+            <div class="absolute -bottom-6 -right-4 w-[100px] rounded-xl bg-gray-900 p-[3px] shadow-2xl ring-1 ring-gray-700 lg:w-[120px]">
               <BeachBarQrMenuMockup />
             </div>
           </div>
