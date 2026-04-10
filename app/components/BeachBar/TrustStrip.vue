@@ -39,12 +39,12 @@
 </template>
 
 <script setup lang="ts">
-import { CLIENTS } from '~/config/clients'
+import { clients as allClients } from '~/config/clients'
 
 const { t, locale } = useI18n()
 
 const clients = computed(() => {
-  const localeClients = CLIENTS[locale.value as keyof typeof CLIENTS] || CLIENTS.me
-  return localeClients.filter(c => c.product === 'hospitality').slice(0, 6)
+  const localeClients = allClients[locale.value as keyof typeof allClients] || allClients.me
+  return localeClients.filter((c: { product: string }) => c.product === 'hospitality').slice(0, 6)
 })
 </script>

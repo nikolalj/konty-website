@@ -43,8 +43,9 @@ onMounted(() => {
   if (!props.heroRef) return
 
   const observer = new IntersectionObserver(
-    ([entry]) => {
-      visible.value = !entry.isIntersecting
+    (entries) => {
+      const entry = entries[0]
+      if (entry) visible.value = !entry.isIntersecting
     },
     { threshold: 0 }
   )
