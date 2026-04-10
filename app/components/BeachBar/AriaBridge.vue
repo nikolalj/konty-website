@@ -53,15 +53,7 @@
         <!-- CTA -->
         <UIAppear :delay-ms="300">
           <div class="mt-8 text-center">
-            <AppCTAButton
-              variant="custom"
-              :custom-label="t('pages.solutions.beachBar.aria.cta')"
-              :custom-to="viberLink"
-              custom-icon="i-simple-icons-viber"
-              custom-class="bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
-              external
-              section="beach-bar-aria"
-            />
+            <AppCTAButton variant="beach-primary" :custom-label="t('pages.solutions.beachBar.aria.cta')" section="beach-bar-aria" />
           </div>
         </UIAppear>
       </div>
@@ -71,7 +63,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { viberLink } = useViberLink()
 
 const cardKeys = ['api', 'transition', 'features'] as const
 const cardIcons: Record<string, string> = {

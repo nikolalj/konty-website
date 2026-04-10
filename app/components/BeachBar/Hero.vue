@@ -33,23 +33,8 @@
 
           <UIAppear :delay-ms="300">
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <AppCTAButton
-                variant="custom"
-                :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
-                :custom-to="viberLink"
-                custom-icon="i-simple-icons-viber"
-                custom-class="justify-center bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
-                external
-                section="beach-bar-hero"
-              />
-              <AppCTAButton
-                variant="custom"
-                :custom-label="t('pages.solutions.beachBar.hero.cta.demo')"
-                custom-to="/demo"
-                custom-class="justify-center border-2 border-white/50 !text-white hover:bg-white/10 !ring-0 bg-transparent"
-                no-icon
-                section="beach-bar-hero"
-              />
+              <AppCTAButton variant="beach-primary" custom-class="justify-center" section="beach-bar-hero" />
+              <AppCTAButton variant="beach-secondary" custom-class="justify-center" section="beach-bar-hero" no-icon />
             </div>
           </UIAppear>
         </div>
@@ -92,6 +77,4 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
-const { viberLink } = useViberLink()
 </script>

@@ -56,15 +56,7 @@
           <p class="mb-4 text-base text-gray-500">
             {{ t('pages.solutions.beachBar.pricing.cta.prompt') }}
           </p>
-          <AppCTAButton
-            variant="custom"
-            :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
-            :custom-to="viberLink"
-            custom-icon="i-simple-icons-viber"
-            custom-class="bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
-            external
-            section="beach-bar-pricing"
-          />
+          <AppCTAButton variant="beach-primary" section="beach-bar-pricing" />
         </div>
       </UIAppear>
 
@@ -118,7 +110,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { viberLink } = useViberLink()
 
 const plans = [
   { key: 'beach', icon: '🏖️', badgeClass: 'bg-blue-100 text-blue-800', priceClass: 'bg-blue-50', priceTextClass: 'text-gray-900' },

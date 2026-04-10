@@ -19,23 +19,8 @@
 
         <UIAppear :delay-ms="200">
           <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <AppCTAButton
-              variant="custom"
-              :custom-label="t('pages.solutions.beachBar.final.cta.viber')"
-              :custom-to="viberLink"
-              custom-icon="i-simple-icons-viber"
-              custom-class="w-full sm:w-auto justify-center bg-[#7360f2] !text-white shadow-lg shadow-[#7360f2]/40 hover:bg-[#6350e2] !ring-0"
-              external
-              section="beach-bar-final"
-            />
-            <AppCTAButton
-              variant="custom"
-              :custom-label="t('pages.solutions.beachBar.final.cta.demo')"
-              custom-to="/demo"
-              custom-class="w-full sm:w-auto justify-center border-2 border-white/40 !text-white hover:bg-white/10 !ring-0 bg-transparent"
-              no-icon
-              section="beach-bar-final"
-            />
+            <AppCTAButton variant="beach-primary" custom-class="w-full sm:w-auto justify-center shadow-lg shadow-[#7360f2]/40" :custom-label="t('pages.solutions.beachBar.final.cta.viber')" section="beach-bar-final" />
+            <AppCTAButton variant="beach-secondary" custom-class="w-full sm:w-auto justify-center" :custom-label="t('pages.solutions.beachBar.final.cta.demo')" section="beach-bar-final" no-icon />
           </div>
 
           <div class="mt-6 flex items-center justify-center gap-2 text-sm text-white/60">
@@ -50,6 +35,4 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
-const { viberLink } = useViberLink()
 </script>

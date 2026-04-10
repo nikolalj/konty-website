@@ -115,23 +115,8 @@
 
     <template #right>
       <template v-if="isBeachBarPage">
-        <AppCTAButton
-          variant="custom"
-          :custom-label="t('pages.solutions.beachBar.hero.cta.demo')"
-          custom-to="/demo"
-          custom-class="dark bg-transparent !text-white hover:bg-white/10 ring-inset ring-2 ring-white/70"
-          no-icon
-          section="header"
-        />
-        <AppCTAButton
-          variant="custom"
-          :custom-label="t('pages.solutions.beachBar.hero.cta.viber')"
-          :custom-to="viberLink"
-          custom-icon="i-simple-icons-viber"
-          custom-class="dark bg-[#7360f2] !text-white hover:bg-[#6350e2] !ring-0"
-          external
-          section="header"
-        />
+        <AppCTAButton variant="beach-secondary" section="header" class="dark" no-icon />
+        <AppCTAButton variant="beach-primary" section="header" class="dark" />
       </template>
       <template v-else>
         <AppCTAButton variant="secondary" section="header" class="dark" no-icon />
@@ -151,8 +136,6 @@ const { y } = useWindowScroll()
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
-
-const { viberLink } = useViberLink()
 
 const isBeachBarPage = computed(() => {
   const removeTrailingSlash = (str: string) => str.replace(/\/$/, '')
