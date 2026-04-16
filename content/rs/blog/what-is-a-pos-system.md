@@ -1,6 +1,6 @@
 ---
 title: "Šta je POS sistem? Kako funkcioniše i zašto je važan za poslovanje?"
-description:
+description: "POS sistemi omogućavaju jednostavno vođenje poslovanja i bolju kontrolu nad prodajom. Upoznajte vrste sistema i njihovu primenu u praksi."
 date: 2026-03-24
 author: Konty Tim
 image: /images/blog/pos-systems.avif
@@ -45,14 +45,14 @@ Moderan POS sistem se sastoji iz **hardverskog i softverskog dela** koji su inte
 Hardverski deo POS sistema obično obuhvata:
 
 - neku vrstu računara
-- printer na kom se štampaju fiskalni računi i fakture
+- štampač na kom se štampaju fiskalni računi i fakture
 - dodatnu opremu
 
-Hardverski deo je jako raznolik i u potpunosti prilagodiv potrebama i obimu poslovanja.
+Hardverski deo je jako raznolik i u potpunosti prilagodljiv potrebama i obimu poslovanja.
 
-Na primer, veće kompanije koje izdaju veliki broj računa najčešće koriste **Windows ili Mac računare** i na njih spajaju printere. Manje kompanije sa ograničenim poslovnim prostorom ili sa prioritetom mobilnosti često koriste male prenosive uređaje.
+Na primer, veće kompanije koje izdaju veliki broj računa najčešće koriste **Windows ili Mac računare** i na njih spajaju štampače. Manje kompanije sa ograničenim poslovnim prostorom ili sa prioritetom mobilnosti često koriste male prenosive uređaje.
 
-Na tržištu su trenutno veoma prisutni **Android uređaji** koji izgledaju kao pametni telefoni sa integrisanim printerom.
+Na tržištu su trenutno veoma prisutni **Android uređaji** koji izgledaju kao pametni telefoni sa integrisanim štampačem.
 
 Specifičnost delatnosti donosi i specifičnu dodatnu opremu, pa često imamo:
 
@@ -126,7 +126,7 @@ U sledećoj tabeli su izlistani konkretni primeri za samo neke prednosti POS sis
 | **Precizno vođenje evidencije** | Automatski evidentira svaku prodaju i popust, smanjujući greške u obračunu. |
 | **Upravljanje zalihama** | Sistem upozorava kada je zaliha mleka niska i automatski predlaže narudžbu. |
 | **Finansijsko praćenje** | Izveštaji o dnevnoj prodaji dostupni su odmah, olakšavajući obračun poreza. |
-| **Poboljšano korisničko iskustvo** | Brže plaćanje karticom i lojalti program koji daje popust stalnim kupcima. |
+| **Poboljšano korisničko iskustvo** | Brže plaćanje karticom i program lojalnosti koji daje popust stalnim kupcima. |
 | **Integracija sa drugim sistemima** | Povezuje se sa online shopom, pa se prodaja u fizičkoj trgovini automatski odražava u e-commerce platformi. |
 | **Sigurnost i kontrola** | Zaposleni ne mogu vraćati proizvode bez odobrenja menadžera. |
 | **Analitika i poslovno odlučivanje** | Sistem pokazuje koji proizvodi se najbolje prodaju tokom vikenda, pomažući planiranje akcija i promocija. |
@@ -141,7 +141,7 @@ POS sistemi su često razvijeni specifično za određenu industriju.
 
 Na primer:
 
-- frizerski salon – mali Android uređaj sa integrisanim printerom
+- frizerski salon – mali Android uređaj sa integrisanim štampačem
 - kafe bar – računar sa ekranom osetljivim na dodir otporan na vodu
 - veliki marketi – višelinijski barkod skeneri i brzi softver
 
@@ -154,16 +154,16 @@ Najčešće se dele na:
 
 ## 6. POS sistemi za ugostiteljstvo
 
-POS sistemi za ugostiteljstvo su svojim hardverom i softverom optimizovani za što brže procesuiranje porudžbina i bolju komunikaciju između osoblja.
+[POS sistemi za ugostiteljstvo](/rs/products/hospitality) su svojim hardverom i softverom optimizovani za što brže procesuiranje porudžbina i bolju komunikaciju između osoblja.
 
 ### Hardver u ugostiteljstvu
 
 Hardver u ugostiteljstvu obično uključuje:
 
 - all-in-one računar sa ekranom osetljivim na dodir
-- printer za račune
-- kuhinjski printer
-- printer za šank
+- štampač za račune
+- kuhinjski štampač
+- štampač za šank
 - terminale za kartična plaćanja
 - kuhinjski ekran
 - tablete za udaljene porudžbine
@@ -192,7 +192,7 @@ Backoffice deo softvera obično uključuje:
 
 ## 7. POS sistemi za trgovine
 
-POS sistemi za trgovinu optimizovani su za:
+[POS sistemi za trgovinu](/rs/products/retail) optimizovani su za:
 
 - velike baze artikala
 - veliki protok kupaca
@@ -203,9 +203,9 @@ POS sistemi za trgovinu optimizovani su za:
 Najčešće uključuje:
 
 - računar
-- printer za račune
+- štampač za račune
 - barkod skener
-- A4 printer za veleprodajne fakture
+- A4 štampač za veleprodajne fakture
 - fioku za novac
 - vage
 - terminale za kartična plaćanja
@@ -262,7 +262,7 @@ Najčešće cene su:
 Hardver:
 
 - najjeftiniji Android uređaji: oko **250 €**
-- napredniji sistemi: nekoliko hiljada eura
+- napredniji sistemi: nekoliko hiljada evra
 
 Softver:
 

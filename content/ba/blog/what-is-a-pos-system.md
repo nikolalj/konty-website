@@ -34,7 +34,7 @@ U ovom tekstu ćemo objasniti:
 
 Kada čujemo „POS", greškom pretpostavimo da je to onaj uređaj preko kojeg kasiri ili konobari provuku platnu karticu kako bi naplatili uslugu ili proizvod.
 
-Iako to jeste njegov mali dio, POS sistem je daleko više od toga. To je sistem koji spaja sve informacije iz različitih djelova poslovanja i od njih pravi jasan i upotrebljiv rezultat.
+Iako to jeste njegov mali dio, POS sistem je daleko više od toga. To je sistem koji spaja sve informacije iz različitih dijelova poslovanja i od njih pravi jasan i upotrebljiv rezultat.
 
 POS sistem je veza između krajnjeg korisnika i vlasnika, poslovođe i prodavca.
 
@@ -48,7 +48,7 @@ Hardverski dio POS sistema obično obuhvata:
 - printer na kom se štampaju fiskalni računi i fakture
 - dodatnu opremu
 
-Hardverski dio je jako raznolik i u potpunosti prilagodiv potrebama i obimu poslovanja.
+Hardverski dio je jako raznolik i u potpunosti prilagodljiv potrebama i obimu poslovanja.
 
 Na primjer, veće kompanije koje izdaju veliki broj računa najčešće koriste **Windows ili Mac računare** i na njih spajaju printere. Manje kompanije sa ograničenim poslovnim prostorom ili sa prioritetom mobilnosti često koriste male prenosive uređaje.
 
@@ -126,7 +126,7 @@ U sljedećoj tabeli su izlistani konkretni primjeri za samo neke prednosti POS s
 | **Precizno vođenje evidencije** | Automatski evidentira svaku prodaju i popust, smanjujući greške u obračunu. |
 | **Upravljanje zalihama** | Sistem upozorava kada je zaliha mlijeka niska i automatski predlaže narudžbu. |
 | **Finansijsko praćenje** | Izvještaji o dnevnoj prodaji dostupni su odmah, olakšavajući obračun poreza. |
-| **Poboljšano korisničko iskustvo** | Brže plaćanje karticom i lojalti program koji daje popust stalnim kupcima. |
+| **Poboljšano korisničko iskustvo** | Brže plaćanje karticom i program lojalnosti koji daje popust stalnim kupcima. |
 | **Integracija sa drugim sistemima** | Povezuje se sa online shopom, pa se prodaja u fizičkoj trgovini automatski odražava u e-commerce platformi. |
 | **Sigurnost i kontrola** | Zaposleni ne mogu vraćati proizvode bez odobrenja menadžera. |
 | **Analitika i poslovno odlučivanje** | Sistem pokazuje koji proizvodi se najbolje prodaju tokom vikenda, pomažući planiranje akcija i promocija. |
@@ -154,7 +154,7 @@ Najčešće se dijele na:
 
 ## 6. POS sistemi za ugostiteljstvo
 
-[POS sistemi za ugostiteljstvo](/me/products/hospitality) su svojim hardverom i softverom optimizovani za što brže procesuiranje porudžbina i bolju komunikaciju između osoblja.
+[POS sistemi za ugostiteljstvo](/ba/products/hospitality) su svojim hardverom i softverom optimizovani za što brže procesuiranje porudžbina i bolju komunikaciju između osoblja.
 
 ### Hardver u ugostiteljstvu
 
@@ -192,7 +192,7 @@ Backoffice dio softvera obično uključuje:
 
 ## 7. POS sistemi za trgovine
 
-[POS sistemi za trgovinu](/me/products/retail) optimizovani su za:
+[POS sistemi za trgovinu](/ba/products/retail) optimizovani su za:
 
 - velike baze artikala
 - veliki protok kupaca
@@ -292,4 +292,4 @@ Obuka obično traje:
 
 ---
 
-*Želite da saznate više o tome kako POS sistem može unaprijediti vaše poslovanje? Pogledajte [Konty za ugostiteljstvo](/me/products/hospitality) ili [Konty za trgovinu](/me/products/retail).*
+*Želite da saznate više o tome kako POS sistem može unaprijediti vaše poslovanje? Pogledajte [Konty za ugostiteljstvo](/ba/products/hospitality) ili [Konty za trgovinu](/ba/products/retail).*
