@@ -47,9 +47,10 @@ jobs:
           APP_ENV: ${{ vars.APP_ENV }}
           NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
           GTM_ID: ${{ secrets.GTM_ID }}
-          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
-          HUBSPOT_CLIENT_ID: ${{ secrets.HUBSPOT_CLIENT_ID }}
-          HUBSPOT_MEETING_LINK_SLUG: ${{ vars.HUBSPOT_MEETING_LINK_SLUG }}
+          ACTIVECAMPAIGN_API_URL: ${{ secrets.ACTIVECAMPAIGN_API_URL }}
+          ACTIVECAMPAIGN_API_KEY: ${{ secrets.ACTIVECAMPAIGN_API_KEY }}
+          CALENDLY_ACCESS_TOKEN: ${{ secrets.CALENDLY_ACCESS_TOKEN }}
+          CALENDLY_EVENT_TYPE_URI: ${{ secrets.CALENDLY_EVENT_TYPE_URI }}
 
       - name: Deploy to Cloudflare Workers
         run: pnpm run deploy:staging
