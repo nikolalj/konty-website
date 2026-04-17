@@ -196,7 +196,7 @@ const {
   getPreferredDateTimeISO,
   getSelectedSlotDetails,
   resetDateTime
-} = useHubspotMeetings()
+} = useCalendlyMeetings()
 
 const form = reactive({
   name: '',
@@ -308,10 +308,9 @@ const onSubmit = async () => {
         industry: form.industry,
         preferredDateTime,
         startTime: slotDetails?.startTime,
-        endTime: slotDetails?.endTime,
         meetingDurationMs: slotDetails?.durationMs,
         meetingTimezone: slotDetails?.timezone,
-        likelyAvailableUserIds: slotDetails?.likelyAvailableUserIds
+        source: 'demo_lead'
       }
     })
 

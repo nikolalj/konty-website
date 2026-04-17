@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
   const accessToken = config.hubspotAccessToken
   const meetingLinkSlug = config.hubspotMeetingLinkSlug
   const timezone = body.timezone || 'UTC'
-  const encodedMeetingLinkSlug = encodeURIComponent(meetingLinkSlug)
+  const encodedMeetingLinkSlug = encodeURIComponent(meetingLinkSlug as string)
 
   if (!accessToken || !meetingLinkSlug) {
     throw createError({
