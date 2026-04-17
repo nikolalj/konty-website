@@ -303,7 +303,7 @@ const onSubmit = async () => {
         phone: form.phone,
         email: form.email || undefined,
         industry: form.industry,
-        message: campaign.hubspotMessage,
+        message: campaign.campaignMessage,
         source: 'website_lead',
         campaignTag: '3m_free_campaign'
       }
