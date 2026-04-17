@@ -22,7 +22,6 @@ export default defineEventHandler(async (event) => {
     subscription?: string
     preferredDateTime?: string
     startTime?: string
-    endTime?: string
     meetingDurationMs?: number
     meetingTimezone?: string
     source?: string
@@ -56,6 +55,10 @@ export default defineEventHandler(async (event) => {
       statusCode: 500,
       statusMessage: 'ActiveCampaign configuration is missing'
     })
+  }
+
+  if (AC_CONFIG.listId.masterContactList === 0) {
+    console.warn('ActiveCampaign config has placeholder IDs — update server/config/activecampaign.ts')
   }
 
   try {

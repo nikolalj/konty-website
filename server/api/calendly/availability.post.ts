@@ -51,22 +51,18 @@ export default defineEventHandler(async (event) => {
         }
       )
 
-    const [week1, week2] = await Promise.all([
+    const [week1, week2, eventType] = await Promise.all([
       fetchWeek(week1Start, week1End),
-      fetchWeek(week2Start, week2End)
+      fetchWeek(week2Start, week2End),
+      $fetch<{ resource: { duration: number } }>(eventTypeUri, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      })
     ])
 
     const allSlots = [...(week1.collection || []), ...(week2.collection || [])]
-
-    // Get event type details to determine duration
-    const eventType = await $fetch<{
-      resource: { duration: number }
-    }>(eventTypeUri, {
-      method: 'GET',
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
 
     const durationMinutes = eventType.resource.duration
     const durationMs = durationMinutes * 60 * 1000
