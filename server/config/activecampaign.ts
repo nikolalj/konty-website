@@ -4,19 +4,19 @@
 
 export const AC_CONFIG = {
   listId: {
-    masterContactList: 0 // TODO: Replace with actual Master Contact List ID from AC
+    masterContactList: 3
   },
   tags: {
-    website_lead: 0,       // TODO: Replace with actual tag ID
-    contact_form: 0,       // TODO: Replace with actual tag ID
-    demo_lead: 0,          // TODO: Replace with actual tag ID
-    '3m_free_campaign': 0  // TODO: Replace with actual tag ID
+    website_lead: 1,
+    contact_form: 2,
+    demo_lead: 3,
+    '3m_free_campaign': 4
   },
   fields: {
-    businessType: 0,      // TODO: Replace with actual custom field ID
-    pricingPackage: 0,    // TODO: Replace with actual custom field ID
-    contactMessage: 0,    // TODO: Replace with actual custom field ID
-    demoDatetime: 0       // TODO: Replace with actual custom field ID
+    businessType: 4,
+    pricingPackage: 5,
+    contactMessage: 6,
+    demoDatetime: 7
   }
 } as const
 

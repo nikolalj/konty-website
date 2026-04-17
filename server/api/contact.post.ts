@@ -57,10 +57,6 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  if (AC_CONFIG.listId.masterContactList === 0) {
-    console.warn('ActiveCampaign config has placeholder IDs — update server/config/activecampaign.ts')
-  }
-
   try {
     // Split name into first and last name
     const nameParts = body.name.trim().split(' ')
