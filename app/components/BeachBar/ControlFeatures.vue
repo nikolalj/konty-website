@@ -13,8 +13,8 @@
       </UIAppear>
 
       <div class="mt-12 grid gap-6 sm:grid-cols-3">
-        <UIAppear v-for="(item, index) in controlItems" :key="item.key" :delay-ms="index * 100">
-          <div class="rounded-2xl border border-gray-200 p-6 text-center">
+        <UIAppear v-for="(item, index) in controlItems" :key="item.key" :delay-ms="index * 100" class="h-full">
+          <div class="flex h-full flex-col rounded-2xl border border-gray-200 p-6 text-center">
             <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl" :class="item.bgClass">
               <Icon :name="item.icon" class="h-6 w-6" :class="item.iconClass" />
             </div>

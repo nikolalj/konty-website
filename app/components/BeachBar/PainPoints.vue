@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-16 lg:py-24">
+  <section class="bg-white pb-16 lg:pb-24">
     <UContainer>
       <UIAppear>
         <div class="mx-auto max-w-2xl text-center">

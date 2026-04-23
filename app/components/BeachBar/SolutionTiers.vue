@@ -40,9 +40,9 @@
             </div>
             <div class="mt-8 lg:mt-0">
               <NuxtImg
-                src="/images/solutions/beach-bar/floor-plan.png"
+                src="/images/solutions/beach-bar/floor-plan.avif"
                 alt="Konty POS beach floor plan"
-                class="w-full rounded-xl shadow-lg"
+                class="w-full"
                 loading="lazy"
               />
             </div>
@@ -53,8 +53,13 @@
         <UIAppear>
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div class="order-2 lg:order-1">
-              <div class="mx-auto max-w-[220px] rounded-2xl border border-gray-200 shadow-xl">
-                <BeachBarQrMenuMockup />
+              <div class="rounded-2xl border border-gray-200 bg-white p-3 shadow-xl sm:p-4">
+                <NuxtImg
+                  src="/images/solutions/beach-bar/qr-ordering.avif"
+                  alt="Guest scanning QR code on beach parasol to order from sunbed"
+                  class="w-full rounded-lg"
+                  loading="lazy"
+                />
               </div>
             </div>
             <div class="order-1 mb-8 lg:order-2 lg:mb-0">
@@ -116,11 +121,25 @@
               </div>
             </div>
             <div class="relative mt-8 lg:mt-0">
-              <div class="flex aspect-[16/10] items-center justify-center rounded-xl bg-gray-200 text-sm text-gray-500 shadow-lg">
-                <div class="text-center">
-                  <Icon name="i-lucide-globe" class="mx-auto mb-2 h-10 w-10 opacity-40" />
-                  <p>plazni.bar Screenshot</p>
+              <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
+                <!-- Browser chrome -->
+                <div class="flex items-center gap-3 border-b border-gray-200 bg-gray-50 px-4 py-2.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+                    <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+                    <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+                  </div>
+                  <div class="flex min-w-0 flex-1 items-center gap-2 rounded-md bg-white px-3 py-1 text-xs text-gray-600 ring-1 ring-inset ring-gray-200">
+                    <Icon name="i-lucide-lock" class="h-3 w-3 shrink-0 text-gray-400" />
+                    <span class="truncate">https://plazni.bar</span>
+                  </div>
                 </div>
+                <NuxtImg
+                  src="/images/solutions/beach-bar/booking-portal.avif"
+                  alt="plazni.bar online booking portal screenshot"
+                  class="block w-full"
+                  loading="lazy"
+                />
               </div>
               <!-- Floating zero-cost badge -->
               <div class="absolute -bottom-3 right-6 flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-md">

@@ -32,7 +32,27 @@
           </UIAppear>
 
           <UIAppear :delay-ms="300">
-            <div class="mt-10 flex flex-row justify-center gap-3 lg:justify-start sm:gap-4">
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-white/90 lg:justify-start">
+              <span>
+                <strong>{{ t('pages.solutions.beachBar.trustStrip.aria1') }}</strong>
+                <span class="mx-1">{{ t('pages.solutions.beachBar.trustStrip.aria2') }}</span>
+                <strong>{{ t('pages.solutions.beachBar.trustStrip.aria3') }}</strong>
+              </span>
+              <span class="h-1 w-1 rounded-full bg-white/40" />
+              <span>
+                <strong class="font-extrabold text-white">{{ t('pages.solutions.beachBar.trustStrip.users') }}</strong>
+                {{ t('pages.solutions.beachBar.trustStrip.usersLabel') }}
+              </span>
+              <span class="h-1 w-1 rounded-full bg-white/40" />
+              <span>
+                <strong class="font-extrabold text-white">{{ t('pages.solutions.beachBar.trustStrip.years') }}</strong>
+                {{ t('pages.solutions.beachBar.trustStrip.yearsLabel') }}
+              </span>
+            </div>
+          </UIAppear>
+
+          <UIAppear :delay-ms="400">
+            <div class="mt-8 flex flex-row justify-center gap-3 lg:justify-start sm:gap-4">
               <AppCTAButton variant="beach-primary" custom-class="justify-center" section="beach-bar-hero" />
               <AppCTAButton variant="beach-secondary" custom-class="justify-center" section="beach-bar-hero" no-icon />
             </div>
@@ -40,10 +60,10 @@
         </div>
 
         <!-- POS + Phone devices hero image -->
-        <UIAppear direction="right" :delay-ms="400">
+        <UIAppear direction="right" :delay-ms="500">
           <div class="mt-10 lg:mt-0">
             <NuxtImg
-              src="/images/solutions/beach-bar/devices-hero.png"
+              src="/images/solutions/beach-bar/devices-hero.avif"
               alt="Konty POS terminal and mobile QR ordering app"
               class="w-full"
               loading="lazy"

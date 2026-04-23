@@ -5,19 +5,19 @@
         <!-- Logo transition -->
         <UIAppear>
           <div class="mb-8 flex items-center justify-center gap-6">
-            <div class="rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
+            <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-[#4a2d67] shadow-sm">
               <NuxtImg
                 src="/images/solutions/beach-bar/aria-logo.svg"
                 alt="Aria POS"
-                class="h-8 w-auto"
+                class="h-20 w-auto"
               />
             </div>
-            <Icon name="i-lucide-arrow-right" class="h-7 w-7 text-primary-600" />
-            <div class="rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
+            <Icon name="i-lucide-arrow-right" class="h-10 w-10 text-primary-600" />
+            <div class="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-[#4a2d67] shadow-sm">
               <NuxtImg
-                src="/images/branding/logo-dark.svg"
+                src="/images/branding/logo-full-vertical-dark.svg"
                 alt="Konty POS"
-                class="h-8 w-auto"
+                class="h-16 w-auto"
               />
             </div>
           </div>
@@ -39,7 +39,7 @@
         <UIAppear :delay-ms="200">
           <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div v-for="card in cardKeys" :key="card" class="rounded-xl border border-gray-200 bg-white p-5 text-center">
-              <Icon :name="cardIcons[card] ?? ''" class="h-6 w-6 text-primary-600" />
+              <Icon :name="cardIcons[card] ?? ''" class="mx-auto block h-6 w-6 text-primary-600" />
               <div class="mt-2 text-sm font-semibold text-gray-900">
                 {{ t(`pages.solutions.beachBar.aria.cards.${card}.title`) }}
               </div>

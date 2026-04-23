@@ -1624,12 +1624,13 @@
           }
         },
         "trustStrip": {
-          "years": "14+",
-          "yearsLabel": "years of experience",
-          "users": "500+",
+          "aria1": "Aria POS",
+          "aria2": "is now",
+          "aria3": "Konty",
+          "users": "9600+",
           "usersLabel": "active users",
-          "countries": "3",
-          "countriesLabel": "countries in the region"
+          "years": "14+",
+          "yearsLabel": "years of experience"
         },
         "painPoints": {
           "title": "Sound familiar?",
@@ -1637,19 +1638,19 @@
           "items": {
             "paper": {
               "title": "Paper, pen, and chaos",
-              "description": "Paper records get lost, soaked, and unreadable. Nobody knows which sunbed is free, who paid, and who didn't."
+              "description": "Paper records aren't up to date or reliable, and sometimes can't even be read. You're never sure which sunbed is free, who paid, and who didn't."
             },
             "theft": {
               "title": "Money that never reaches the register",
-              "description": "A guest leaves, another sits down. The waiter charges - but doesn't issue a receipt. You have no idea the guest was ever there."
+              "description": "A guest leaves, another takes the sunbed. The waiter charges - but doesn't issue a receipt. You have no idea the guest was ever there."
             },
             "online": {
-              "title": "Tourists can't find you online",
-              "description": "While competitors accept online bookings, your sunbeds wait for guests who may never come."
+              "title": "Tourists can't book in advance",
+              "description": "Nobody in Montenegro accepts online beach reservations yet - but tourists book everything in advance."
             },
             "understaffed": {
               "title": "Waiters can't cover the whole beach",
-              "description": "A guest waits 20 minutes to order a drink. Frustrated, they won't order again. You lose revenue."
+              "description": "A guest waits 20 minutes to order a drink. They head into the water - and may not order again. You lose revenue."
             }
           }
         },
@@ -1662,10 +1663,10 @@
               "title": "Beach Management",
               "description": "A digital floor plan of your beach with zones, rows, and real-time status for every sunbed. Check-in, check-out, walk-in, no-show - all on one screen.",
               "features": [
-                "Zones & pricing",
-                "Walk-in tracking",
-                "Future date preview",
-                "No-show management"
+                "Pricing by zone",
+                "Reservations",
+                "Guest check-in and check-out",
+                "Live tracking"
               ]
             },
             "qr": {
@@ -1674,8 +1675,8 @@
               "description": "Guests scan a QR code on the parasol, browse the menu on their phone, and order food and drinks - no waiting for a waiter. No app, no registration.",
               "features": [
                 "Menu with photos",
-                "Multiple orders",
-                "Direct to kitchen",
+                "Direct to kitchen / bar",
+                "Reordering",
                 "PIN protection"
               ]
             },
@@ -1716,7 +1717,7 @@
             },
             "step2": {
               "title": "Print QR codes",
-              "description": "One QR code per sunbed - laminate and place on the parasol. Done."
+              "description": "One QR code per parasol - we print and install. All done."
             },
             "step3": {
               "title": "Open the season",
@@ -1742,11 +1743,11 @@
             },
             "report": {
               "title": "Daily reconciliation report",
-              "description": "Check-in count vs. receipts issued vs. revenue. Any gap = red flag."
+              "description": "Check-in count vs. receipts issued vs. revenue. Any mismatch is visible immediately."
             }
           },
           "callout": {
-            "quote": "Beaches using digital check-in and QR ordering report 15-30% higher revenue - partly from eliminated leakage.",
+            "quote": "Beaches that switch to digital check-in and QR ordering can see up to 20-30% higher revenue per guest - mostly from more frequent and faster orders, plus better collection and reduced leakage.",
             "attribution": "Industry data - RFID and QR systems at beaches in Europe and Asia"
           }
         },
@@ -1755,8 +1756,8 @@
           "description": "Aria is now Konty - same reliability, same data, completely new interface with powerful beach features. Just install the new app and log in. All your data is already there.",
           "cards": {
             "api": {
-              "title": "Same API",
-              "description": "Your data, products, and reports are preserved"
+              "title": "Same data",
+              "description": "Your data, items, and reports are preserved"
             },
             "transition": {
               "title": "5-minute transition",
@@ -1767,7 +1768,7 @@
               "description": "Beach management, QR ordering, and online reservations"
             }
           },
-          "cta": "Contact us for free migration"
+          "cta": "Contact us for a free transition"
         },
         "pricing": {
           "title": "Transparent pricing, no surprises",
@@ -1784,7 +1785,7 @@
             "qr": {
               "badge": "Most popular",
               "title": "QR Ordering",
-              "description": "Guests order from their phone, direct to kitchen",
+              "description": "Guests order from their phone, direct to kitchen / bar",
               "price": "Monthly per sunbed",
               "priceNote": "You only pay for active sunbeds",
               "footnote": "Contact us for exact pricing"
@@ -1807,13 +1808,13 @@
           "q1": "Do I need special hardware for beach features?",
           "a1": "No. Konty works on devices you already have - tablet, phone, or computer. QR codes are printed on paper and laminated. No additional equipment is needed.",
           "q2": "I use Aria POS - what happens to my data?",
-          "a2": "Aria is now Konty. Same API, same server, same data. Install the new app, log in with the same credentials, and all your products, reports, and settings are there. The transition takes less than 5 minutes.",
+          "a2": "Aria is now Konty. A new version of the program you love. Install it, log in the same way as on Aria, and all your items, reports, and settings are there. The transition takes less than 5 minutes.",
           "q3": "How do online reservations work? How much do they cost?",
           "a3": "Your beach gets a page on plazni.bar. Tourists reserve and pay online. You get your full sunbed price - a small markup is paid by the guest, not you. It's free for you.",
           "q4": "Do guests need to install an app for QR orders?",
           "a4": "No. The guest scans the QR code with their phone camera and the menu opens in the browser. No installation, no registration, no upfront payment. Order and the waiter delivers.",
           "q5": "What if I don't have good WiFi at the beach?",
-          "a5": "Konty POS works offline - it continues working even when the internet goes down and syncs data when the connection returns. QR ordering requires internet but works on the guest's mobile data.",
+          "a5": "Konty POS works offline - it continues working even when the internet goes down and syncs data when the connection returns.",
           "q6": "Can I start with just beach management, without QR and reservations?",
           "a6": "Absolutely. Beach management works completely standalone. QR ordering and online reservations are optional add-ons that can be activated at any time during the season."
         },
@@ -2561,6 +2562,7 @@
     "breadcrumb": {
       "b2b": "B2B & Wholesale",
       "bars-cafes": "Bars & Cafes",
+      "beach-bar": "Beach Bars",
       "blog": "Blog",
       "client-stories": "Client stories",
       "clothing-boutiques": "Clothing & Boutiques",
