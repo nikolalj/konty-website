@@ -1,7 +1,7 @@
 <template>
   <form class="space-y-4" @submit.prevent="onSubmit">
     <div>
-      <label for="bb-name" class="block text-sm font-medium text-gray-700 mb-1.5">
+      <label for="bb-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
         {{ t('pages.solutions.beachBar.final.form.fields.name') }}
       </label>
       <UInput
@@ -13,13 +13,13 @@
         :error="!!errors.name"
         @blur="validateName"
       />
-      <p v-if="errors.name" class="mt-1 text-sm text-red-600">
+      <p v-if="errors.name" class="mt-1 text-sm text-red-600 dark:text-red-400">
         {{ errors.name }}
       </p>
     </div>
 
     <div>
-      <label for="bb-phone" class="block text-sm font-medium text-gray-700 mb-1.5">
+      <label for="bb-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
         {{ t('pages.solutions.beachBar.final.form.fields.phone') }}
       </label>
       <UInput
@@ -32,13 +32,13 @@
         :error="!!errors.phone"
         @blur="validatePhone"
       />
-      <p v-if="errors.phone" class="mt-1 text-sm text-red-600">
+      <p v-if="errors.phone" class="mt-1 text-sm text-red-600 dark:text-red-400">
         {{ errors.phone }}
       </p>
     </div>
 
     <div>
-      <label for="bb-beach" class="block text-sm font-medium text-gray-700 mb-1.5">
+      <label for="bb-beach" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
         {{ t('pages.solutions.beachBar.final.form.fields.beachName') }}
       </label>
       <UInput
@@ -50,7 +50,7 @@
         :error="!!errors.beachName"
         @blur="validateBeachName"
       />
-      <p v-if="errors.beachName" class="mt-1 text-sm text-red-600">
+      <p v-if="errors.beachName" class="mt-1 text-sm text-red-600 dark:text-red-400">
         {{ errors.beachName }}
       </p>
     </div>
