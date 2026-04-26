@@ -1,71 +1,92 @@
 <template>
-  <form class="space-y-4" @submit.prevent="onSubmit">
-    <div>
-      <label for="bb-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
-        {{ t('pages.solutions.beachBar.final.form.fields.name') }}
-      </label>
-      <UInput
-        id="bb-name"
-        v-model="form.name"
-        class="w-full"
-        :placeholder="t('pages.solutions.beachBar.final.form.placeholders.name')"
-        size="lg"
-        :error="!!errors.name"
-        @blur="validateName"
-      />
-      <p v-if="errors.name" class="mt-1 text-sm text-red-600 dark:text-red-400">
-        {{ errors.name }}
-      </p>
-    </div>
+  <div>
+    <form v-if="!submitted" class="space-y-4" @submit.prevent="onSubmit">
+      <div>
+        <label for="bb-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+          {{ t('pages.solutions.beachBar.final.form.fields.name') }}
+        </label>
+        <UInput
+          id="bb-name"
+          v-model="form.name"
+          class="w-full"
+          :placeholder="t('pages.solutions.beachBar.final.form.placeholders.name')"
+          size="lg"
+          :error="!!errors.name"
+          @blur="validateName"
+        />
+        <p v-if="errors.name" class="mt-1 text-sm text-red-600 dark:text-red-400">
+          {{ errors.name }}
+        </p>
+      </div>
 
-    <div>
-      <label for="bb-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
-        {{ t('pages.solutions.beachBar.final.form.fields.phone') }}
-      </label>
-      <UInput
-        id="bb-phone"
-        v-model="form.phone"
-        class="w-full"
-        type="tel"
-        :placeholder="t('pages.solutions.beachBar.final.form.placeholders.phone')"
-        size="lg"
-        :error="!!errors.phone"
-        @blur="validatePhone"
-      />
-      <p v-if="errors.phone" class="mt-1 text-sm text-red-600 dark:text-red-400">
-        {{ errors.phone }}
-      </p>
-    </div>
+      <div>
+        <label for="bb-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+          {{ t('pages.solutions.beachBar.final.form.fields.phone') }}
+        </label>
+        <UInput
+          id="bb-phone"
+          v-model="form.phone"
+          class="w-full"
+          type="tel"
+          :placeholder="t('pages.solutions.beachBar.final.form.placeholders.phone')"
+          size="lg"
+          :error="!!errors.phone"
+          @blur="validatePhone"
+        />
+        <p v-if="errors.phone" class="mt-1 text-sm text-red-600 dark:text-red-400">
+          {{ errors.phone }}
+        </p>
+      </div>
 
-    <div>
-      <label for="bb-beach" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
-        {{ t('pages.solutions.beachBar.final.form.fields.beachName') }}
-      </label>
-      <UInput
-        id="bb-beach"
-        v-model="form.beachName"
-        class="w-full"
-        :placeholder="t('pages.solutions.beachBar.final.form.placeholders.beachName')"
-        size="lg"
-        :error="!!errors.beachName"
-        @blur="validateBeachName"
-      />
-      <p v-if="errors.beachName" class="mt-1 text-sm text-red-600 dark:text-red-400">
-        {{ errors.beachName }}
-      </p>
-    </div>
+      <div>
+        <label for="bb-beach" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+          {{ t('pages.solutions.beachBar.final.form.fields.beachName') }}
+        </label>
+        <UInput
+          id="bb-beach"
+          v-model="form.beachName"
+          class="w-full"
+          :placeholder="t('pages.solutions.beachBar.final.form.placeholders.beachName')"
+          size="lg"
+          :error="!!errors.beachName"
+          @blur="validateBeachName"
+        />
+        <p v-if="errors.beachName" class="mt-1 text-sm text-red-600 dark:text-red-400">
+          {{ errors.beachName }}
+        </p>
+      </div>
 
-    <UButton
-      type="submit"
-      color="primary"
-      class="font-semibold"
-      size="lg"
-      block
-      :loading="loading"
-    >
-      {{ t('pages.solutions.beachBar.final.form.submit') }}
-    </UButton>
-  </form>
+      <UButton
+        type="submit"
+        color="primary"
+        class="font-semibold"
+        size="lg"
+        block
+        :loading="loading"
+      >
+        {{ t('pages.solutions.beachBar.final.form.submit') }}
+      </UButton>
+    </form>
+
+    <div v-else class="py-6 text-center">
+      <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
+        <Icon name="i-lucide-check" class="h-7 w-7 text-green-600" />
+      </div>
+      <h4 class="mt-4 text-lg font-bold text-gray-900">
+        {{ t('pages.solutions.beachBar.final.form.success.title') }}
+      </h4>
+      <p class="mt-2 text-sm text-gray-600">
+        {{ t('pages.solutions.beachBar.final.form.success.message') }}
+      </p>
+      <div class="mt-6">
+        <AppCTAButton
+          variant="beach-primary"
+          custom-class="w-full justify-center shadow-lg shadow-[#7360f2]/40"
+          :custom-label="t('pages.solutions.beachBar.final.form.success.viberCta')"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -86,6 +107,7 @@ const errors = reactive({
 })
 
 const loading = ref(false)
+const submitted = ref(false)
 
 const validateName = () => {
   if (!form.name.trim()) {
@@ -144,16 +166,7 @@ const onSubmit = async () => {
 
     track('beach_bar_contact_submission')
 
-    // TODO(Task 4): switch to inline success state instead of toast+reset
-    toast.add({
-      title: t('ui.forms.messages.success'),
-      description: t('ui.forms.messages.successDescription'),
-      color: 'success',
-      icon: 'i-lucide-check-circle'
-    })
-    form.name = ''
-    form.phone = ''
-    form.beachName = ''
+    submitted.value = true
   } catch (error) {
     const errorMessage =
       error && typeof error === 'object' && 'data' in error
