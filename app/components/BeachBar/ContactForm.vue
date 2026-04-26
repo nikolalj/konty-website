@@ -72,10 +72,10 @@
       <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
         <Icon name="i-lucide-check" class="h-7 w-7 text-green-600" />
       </div>
-      <h4 class="mt-4 text-lg font-bold text-gray-900">
+      <h4 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">
         {{ t('pages.solutions.beachBar.final.form.success.title') }}
       </h4>
-      <p class="mt-2 text-sm text-gray-600">
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
         {{ t('pages.solutions.beachBar.final.form.success.message') }}
       </p>
       <div class="mt-6">
