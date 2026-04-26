@@ -79,7 +79,7 @@ const props = defineProps({
   }
 })
 
-const isExternal = computed(() => props.external || props.variant === 'beach-primary')
+const isExternal = computed(() => !props.scrollTarget && (props.external || props.variant === 'beach-primary'))
 
 const { viberLink } = useViberLink()
 
@@ -120,7 +120,7 @@ function handleClick() {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
     // Skip auto-focus on touch devices to avoid mobile keyboard popping up
-    const isTouch = window.matchMedia('(hover: none)').matches
+    const isTouch = window.matchMedia('(pointer: coarse)').matches
     if (!isTouch) {
       setTimeout(() => {
         const firstField = el.querySelector<HTMLElement>('input, textarea, select')
