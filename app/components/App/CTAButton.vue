@@ -72,6 +72,10 @@ const props = defineProps({
   external: {
     type: Boolean,
     default: false
+  },
+  scrollTarget: {
+    type: String,
+    default: undefined
   }
 })
 
@@ -80,6 +84,7 @@ const isExternal = computed(() => props.external || props.variant === 'beach-pri
 const { viberLink } = useViberLink()
 
 const buttonTo = computed(() => {
+  if (props.scrollTarget) return undefined
   if (props.variant === 'beach-primary') return viberLink.value
   if (props.variant === 'beach-secondary') return localePath('/demo')
   if ((props.variant === 'custom') && props.customTo)
@@ -107,6 +112,21 @@ const getIcon = computed(() => {
 function handleClick() {
   if (props.section && props.variant === 'primary') {
     track('get_a_demo_cta', { location: props.section })
+  }
+
+  if (props.scrollTarget && typeof window !== 'undefined') {
+    const el = document.querySelector(props.scrollTarget)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+    // Skip auto-focus on touch devices to avoid mobile keyboard popping up
+    const isTouch = window.matchMedia('(hover: none)').matches
+    if (!isTouch) {
+      setTimeout(() => {
+        const firstField = el.querySelector<HTMLElement>('input, textarea, select')
+        firstField?.focus({ preventScroll: true })
+      }, 500)
+    }
   }
 }
 </script>
