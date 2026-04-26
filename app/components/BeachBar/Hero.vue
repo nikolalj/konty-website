@@ -54,7 +54,7 @@
           <UIAppear :delay-ms="400">
             <div class="mt-8 flex flex-row justify-center gap-3 lg:justify-start sm:gap-4">
               <AppCTAButton variant="beach-primary" custom-class="justify-center" section="beach-bar-hero" />
-              <AppCTAButton variant="beach-secondary" custom-class="justify-center" section="beach-bar-hero" no-icon />
+              <AppCTAButton variant="beach-secondary" scroll-target="#beach-contact" custom-class="justify-center" section="beach-bar-hero" no-icon />
             </div>
           </UIAppear>
         </div>
