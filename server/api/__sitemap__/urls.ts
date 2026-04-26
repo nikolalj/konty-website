@@ -29,7 +29,7 @@ export default defineSitemapEventHandler(() => {
     '/solutions/clothing-boutiques': '2025-12-12',
     '/solutions/general-stores': '2025-12-12',
     '/solutions/b2b': '2025-12-12',
-    '/solutions/beach-bar': '2026-04-23',
+    '/solutions/beach-bar': '2026-04-26',
 
     // Company pages
     '/client-stories': '2025-12-12',

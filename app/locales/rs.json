@@ -1825,6 +1825,33 @@
             "viber": "Pišite nam na Viber",
             "demo": "Zakažite demo",
             "phone": "Ili pozovite"
+          },
+          "form": {
+            "title": "Pošaljite zahtev — pozvaćemo vas",
+            "subtitle": "Ostavite kontakt i javljamo se u roku od 24h.",
+            "viberSide": {
+              "title": "Najbrži način — odgovor odmah",
+              "subtitle": "Pišite nam na Viber za trenutni odgovor."
+            },
+            "fields": {
+              "name": "Vaše ime",
+              "phone": "Telefon",
+              "beachName": "Naziv plaže"
+            },
+            "placeholders": {
+              "name": "Marko Marković",
+              "phone": "+381 60 123 4567",
+              "beachName": "npr. Plaža Ada"
+            },
+            "errors": {
+              "beachNameRequired": "Unesite naziv plaže"
+            },
+            "submit": "Pošaljite zahtev",
+            "success": {
+              "title": "Hvala — javljamo se u roku od 24h",
+              "message": "Vaš zahtev je primljen. Tim Konty će vas uskoro kontaktirati.",
+              "viberCta": "Ili nas kontaktirajte odmah preko Vibera"
+            }
           }
         },
         "sticky": {

@@ -1825,6 +1825,33 @@
             "viber": "Message us on Viber",
             "demo": "Schedule a demo",
             "phone": "Or call us"
+          },
+          "form": {
+            "title": "Send a request — we'll call you back",
+            "subtitle": "Leave your details and we'll be in touch within 24h.",
+            "viberSide": {
+              "title": "Fastest way — instant reply",
+              "subtitle": "Message us on Viber for an immediate response."
+            },
+            "fields": {
+              "name": "Your name",
+              "phone": "Phone",
+              "beachName": "Beach name"
+            },
+            "placeholders": {
+              "name": "John Smith",
+              "phone": "+382 67 123 456",
+              "beachName": "e.g. Jaz Beach"
+            },
+            "errors": {
+              "beachNameRequired": "Please enter your beach name"
+            },
+            "submit": "Send request",
+            "success": {
+              "title": "Thank you — we'll be in touch within 24h",
+              "message": "Your request has been received. The Konty team will contact you shortly.",
+              "viberCta": "Or contact us right away on Viber"
+            }
           }
         },
         "sticky": {
