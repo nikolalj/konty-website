@@ -59,7 +59,10 @@
       <UButton
         type="submit"
         color="primary"
-        class="font-semibold"
+        :ui="{
+          base: '!bg-[#4a2d67] !text-white hover:!bg-[#3b2453] dark:!bg-[#4a2d67] dark:hover:!bg-[#3b2453]'
+        }"
+        class="text-center font-semibold"
         size="lg"
         block
         :loading="loading"
