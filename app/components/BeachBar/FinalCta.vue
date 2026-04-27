@@ -44,8 +44,8 @@
             </div>
           </div>
 
-          <!-- Right: Form track -->
-          <div class="rounded-2xl bg-white p-6 shadow-xl sm:p-8">
+          <!-- Right: Form track — `light` locks the subtree to light mode regardless of theme, matching /demo form behavior -->
+          <div class="light rounded-2xl bg-white p-6 shadow-xl sm:p-8">
             <h3 class="text-xl font-bold text-gray-900">
               {{ t('pages.solutions.beachBar.final.form.title') }}
             </h3>
