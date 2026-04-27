@@ -2,7 +2,7 @@
   <div>
     <form v-if="!submitted" class="space-y-4" @submit.prevent="onSubmit">
       <div>
-        <label for="bb-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+        <label for="bb-name" class="block text-sm font-medium text-gray-700 mb-1.5">
           {{ t('pages.solutions.beachBar.final.form.fields.name') }}
         </label>
         <UInput
@@ -14,13 +14,13 @@
           :error="!!errors.name"
           @blur="validateName"
         />
-        <p v-if="errors.name" class="mt-1 text-sm text-red-600 dark:text-red-400">
+        <p v-if="errors.name" class="mt-1 text-sm text-red-600">
           {{ errors.name }}
         </p>
       </div>
 
       <div>
-        <label for="bb-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+        <label for="bb-phone" class="block text-sm font-medium text-gray-700 mb-1.5">
           {{ t('pages.solutions.beachBar.final.form.fields.phone') }}
         </label>
         <UInput
@@ -33,13 +33,13 @@
           :error="!!errors.phone"
           @blur="validatePhone"
         />
-        <p v-if="errors.phone" class="mt-1 text-sm text-red-600 dark:text-red-400">
+        <p v-if="errors.phone" class="mt-1 text-sm text-red-600">
           {{ errors.phone }}
         </p>
       </div>
 
       <div>
-        <label for="bb-beach" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+        <label for="bb-beach" class="block text-sm font-medium text-gray-700 mb-1.5">
           {{ t('pages.solutions.beachBar.final.form.fields.beachName') }}
         </label>
         <UInput
@@ -51,7 +51,7 @@
           :error="!!errors.beachName"
           @blur="validateBeachName"
         />
-        <p v-if="errors.beachName" class="mt-1 text-sm text-red-600 dark:text-red-400">
+        <p v-if="errors.beachName" class="mt-1 text-sm text-red-600">
           {{ errors.beachName }}
         </p>
       </div>
@@ -72,10 +72,10 @@
       <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
         <Icon name="i-lucide-check" class="h-7 w-7 text-green-600" />
       </div>
-      <h4 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">
+      <h4 class="mt-4 text-lg font-bold text-gray-900">
         {{ t('pages.solutions.beachBar.final.form.success.title') }}
       </h4>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      <p class="mt-2 text-sm text-gray-600">
         {{ t('pages.solutions.beachBar.final.form.success.message') }}
       </p>
       <div class="mt-6">
