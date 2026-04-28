@@ -1616,8 +1616,8 @@
       "beachBar": {
         "hero": {
           "badge": "New for the 2026 season",
-          "title": "Your beach.\nUnder your control.\nDown to the last sunbed.",
-          "subtitle": "The only POS system built for beaches - sunbed management, QR ordering, and online reservations in one solution.",
+          "title": "POS for beach bars that speeds up service and clears the queues",
+          "subtitle": "The only POS built for beaches — manage orders, sunbeds, and online reservations from one place. Works reliably even offline. No extra POS terminals, cables, or hardware — runs on your phone or tablet.",
           "cta": {
             "viber": "Message us on Viber",
             "demo": "Schedule a demo"
@@ -1633,7 +1633,7 @@
           "yearsLabel": "years of experience"
         },
         "painPoints": {
-          "title": "Sound familiar?",
+          "title": "Common problems beach bars run into every season",
           "subtitle": "Beach owners across the Montenegrin coast face the same problems every day",
           "items": {
             "paper": {
@@ -1655,7 +1655,7 @@
           }
         },
         "solution": {
-          "title": "One solution. Three powerful capabilities.",
+          "title": "Beach POS solution: 3 key capabilities",
           "subtitle": "Start with just beach management, or activate all three - you choose",
           "tiers": {
             "beach": {
@@ -1730,7 +1730,7 @@
           }
         },
         "control": {
-          "title": "Know exactly what's happening on your beach",
+          "title": "Real-time view of operations and revenue at your beach",
           "subtitle": "Digital tracking of every change - who sat down, who paid, who left",
           "features": {
             "name": {
@@ -2568,8 +2568,8 @@
         "title": "General Store POS System - All-in-One Solution"
       },
       "beachBar": {
-        "description": "The only POS system built for beaches. Sunbed management, QR ordering from the sunbed, and online reservations on plazni.bar - all in one solution.",
-        "title": "Konty for Beach Bars - POS System for Beach Management"
+        "description": "POS system for beach bars with QR ordering, sunbed management, and online reservations on plazni.bar. All in one solution.",
+        "title": "Beach POS System | QR Ordering and Sunbed Management"
       }
     },
     "terms": {

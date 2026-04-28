@@ -1616,8 +1616,8 @@
       "beachBar": {
         "hero": {
           "badge": "Novo za sezonu 2026",
-          "title": "Vaša plaža.\nPod vašom kontrolom.\nDo poslednje ležaljke.",
-          "subtitle": "Jedini POS sistem dizajniran za plaže - upravljanje ležaljkama, QR naručivanje i online rezervacije u jednom rešenju.",
+          "title": "POS za plažne barove koji ubrzava uslugu i smanjuje gužve",
+          "subtitle": "Jedini POS dizajniran za plaže — upravljajte porudžbinama, ležaljkama i online rezervacijama na jednom mestu. Radi stabilno čak i offline. Bez dodatnih POS kasa, kablova i opreme — sve radi na telefonu ili tabletu.",
           "cta": {
             "viber": "Pišite nam na Viber",
             "demo": "Zakažite demo"
@@ -1633,7 +1633,7 @@
           "yearsLabel": "godina iskustva"
         },
         "painPoints": {
-          "title": "Zvuči poznato?",
+          "title": "Najčešći problemi s kojima se suočavaju plažni barovi",
           "subtitle": "Vlasnici plaža se svaki dan susreću sa istim problemima",
           "items": {
             "paper": {
@@ -1655,7 +1655,7 @@
           }
         },
         "solution": {
-          "title": "Jedno rešenje. Tri moćne mogućnosti.",
+          "title": "POS rešenje za plaže: 3 ključne mogućnosti",
           "subtitle": "Počnite samo sa upravljanjem plažom, ili aktivirajte sve tri mogućnosti - vi birate",
           "tiers": {
             "beach": {
@@ -1730,7 +1730,7 @@
           }
         },
         "control": {
-          "title": "Znate tačno šta se dešava na vašoj plaži",
+          "title": "Pregled poslovanja i prometa na vašoj plaži u realnom vremenu",
           "subtitle": "Digitalno praćenje svake promene - ko je seo, ko je platio, ko je otišao",
           "features": {
             "name": {
@@ -2568,8 +2568,8 @@
         "title": "Kase za prodavnice mešovite robe"
       },
       "beachBar": {
-        "description": "Jedini POS sistem dizajniran za plaže. Upravljanje ležaljkama, QR naručivanje sa ležaljke i online rezervacije na plazni.bar - sve u jednom rešenju.",
-        "title": "Konty za plažne barove - POS sistem za upravljanje plažom"
+        "description": "POS sistem za plažne barove sa QR naručivanjem, upravljanjem ležaljkama i online rezervacijama na plazni.bar. Sve u jednom rešenju.",
+        "title": "POS sistem za plažu | QR naručivanje i upravljanje ležaljkama"
       }
     },
     "terms": {
