@@ -1617,7 +1617,7 @@
         "hero": {
           "badge": "New for the 2026 season",
           "title": "POS for beach bars that speeds up service and clears the queues",
-          "subtitle": "The only POS built for beaches — manage orders, sunbeds, and online reservations from one place. Works reliably even offline. No extra POS terminals, cables, or hardware — runs on your phone or tablet.",
+          "subtitle": "The only POS built for beaches - manage orders, sunbeds, and online reservations from one place. Works reliably even offline. No extra POS terminals, cables, or hardware - runs on your phone or tablet.",
           "cta": {
             "viber": "Message us on Viber",
             "demo": "Schedule a demo"
@@ -1827,10 +1827,10 @@
             "phone": "Or call us"
           },
           "form": {
-            "title": "Send a request — we'll call you back",
+            "title": "Send a request - we'll call you back",
             "subtitle": "Leave your details and we'll be in touch within 24h.",
             "viberSide": {
-              "title": "Fastest way — instant reply",
+              "title": "Fastest way - instant reply",
               "subtitle": "Message us on Viber for an immediate response."
             },
             "fields": {
@@ -1848,7 +1848,7 @@
             },
             "submit": "Send request",
             "success": {
-              "title": "Thank you — we'll be in touch within 24h",
+              "title": "Thank you - we'll be in touch within 24h",
               "message": "Your request has been received. The Konty team will contact you shortly.",
               "viberCta": "Or contact us right away on Viber"
             }

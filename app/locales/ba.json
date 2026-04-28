@@ -1617,7 +1617,7 @@
         "hero": {
           "badge": "Novo za sezonu 2026",
           "title": "POS za plažne barove koji ubrzava uslugu i smanjuje gužve",
-          "subtitle": "Jedini POS dizajniran za plaže — upravljajte porudžbinama, ležaljkama i online rezervacijama na jednom mjestu. Radi stabilno čak i offline. Bez dodatnih POS kasa, kablova i opreme — sve radi na telefonu ili tabletu.",
+          "subtitle": "Jedini POS dizajniran za plaže - upravljajte porudžbinama, ležaljkama i online rezervacijama na jednom mjestu. Radi stabilno čak i offline. Bez dodatnih kasa, kablova i opreme, sve radi na telefonu ili tabletu.",
           "cta": {
             "viber": "Pišite nam na Viber",
             "demo": "Zakažite demo"
@@ -1827,10 +1827,10 @@
             "phone": "Ili pozovite"
           },
           "form": {
-            "title": "Pošaljite zahtjev — nazvat ćemo vas",
+            "title": "Pošaljite zahtjev - nazvat ćemo vas",
             "subtitle": "Ostavite kontakt i javljamo se u roku od 24h.",
             "viberSide": {
-              "title": "Najbrži način — odgovor odmah",
+              "title": "Najbrži način - odgovor odmah",
               "subtitle": "Pišite nam na Viber za trenutni odgovor."
             },
             "fields": {
@@ -1848,7 +1848,7 @@
             },
             "submit": "Pošaljite zahtjev",
             "success": {
-              "title": "Hvala — javljamo se u roku od 24h",
+              "title": "Hvala - javljamo se u roku od 24h",
               "message": "Vaš zahtjev je primljen. Tim Konty će vas uskoro kontaktirati.",
               "viberCta": "Ili nas kontaktirajte odmah preko Vibera"
             }
