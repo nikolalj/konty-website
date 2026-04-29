@@ -163,7 +163,8 @@ const onSubmit = async () => {
         name: form.name,
         phone: form.phone,
         email: '',
-        message: `Beach: ${form.beachName}`
+        message: `Beach: ${form.beachName}`,
+        source: 'beach_bar'
       }
     })
 
