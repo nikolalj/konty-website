@@ -46,15 +46,7 @@
 
           <!-- Right: Form track — `light` locks the subtree to light mode regardless of theme, matching /demo form behavior -->
           <div class="light rounded-2xl bg-white p-6 shadow-xl sm:p-8">
-            <h3 class="text-xl font-bold text-gray-900">
-              {{ t('pages.solutions.beachBar.final.form.title') }}
-            </h3>
-            <p class="mt-2 text-sm text-gray-600">
-              {{ t('pages.solutions.beachBar.final.form.subtitle') }}
-            </p>
-            <div class="mt-5">
-              <BeachBarContactForm />
-            </div>
+            <BeachBarContactForm />
           </div>
         </div>
       </UIAppear>

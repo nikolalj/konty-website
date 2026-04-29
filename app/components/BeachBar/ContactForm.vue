@@ -1,6 +1,13 @@
 <template>
   <div>
-    <form v-if="!submitted" class="space-y-4" @submit.prevent="onSubmit">
+    <div v-if="!submitted">
+      <h3 class="text-xl font-bold text-gray-900">
+        {{ t('pages.solutions.beachBar.final.form.title') }}
+      </h3>
+      <p class="mt-2 text-sm text-gray-600">
+        {{ t('pages.solutions.beachBar.final.form.subtitle') }}
+      </p>
+      <form class="mt-5 space-y-4" @submit.prevent="onSubmit">
       <div>
         <label for="bb-name" class="block text-sm font-medium text-gray-700 mb-1.5">
           {{ t('pages.solutions.beachBar.final.form.fields.name') }}
@@ -88,7 +95,8 @@
       >
         {{ t('pages.solutions.beachBar.final.form.submit') }}
       </UButton>
-    </form>
+      </form>
+    </div>
 
     <div v-else class="py-6 text-center">
       <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
