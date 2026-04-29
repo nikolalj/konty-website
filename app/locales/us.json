@@ -2695,7 +2695,10 @@
       "newsletter": {
         "emailPlaceholder": "Your email",
         "subscribe": "Subscribe",
-        "title": "Subscribe to our newsletter"
+        "title": "Subscribe to our newsletter",
+        "success": "Thanks for subscribing!",
+        "successDescription": "You're on the list. We'll keep you posted on Konty news and updates.",
+        "invalidEmail": "Please enter a valid email address."
       },
       "retailSolutions": {
         "clothing": "Clothing Stores",

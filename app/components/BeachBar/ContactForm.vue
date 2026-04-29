@@ -93,7 +93,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
 
@@ -164,7 +164,8 @@ const onSubmit = async () => {
         phone: form.phone,
         email: '',
         message: `Beach: ${form.beachName}`,
-        source: 'beach_bar'
+        source: 'beach_bar',
+        locale: locale.value
       }
     })
 

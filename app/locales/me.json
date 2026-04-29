@@ -2638,7 +2638,10 @@
       "newsletter": {
         "emailPlaceholder": "Tvoj email",
         "subscribe": "Prijavi se",
-        "title": "Prijavi se na newsletter"
+        "title": "Prijavi se na newsletter",
+        "success": "Hvala na prijavi!",
+        "successDescription": "Na listi ste. Obavještavaćemo vas o Konty novostima i ažuriranjima.",
+        "invalidEmail": "Unesite ispravnu email adresu."
       },
       "retailSolutions": {
         "clothing": "Prodavnice odjeće",

@@ -129,6 +129,8 @@
                   size="xs"
                   color="neutral"
                   :label="t('ui.footer.newsletter.subscribe')"
+                  :loading="newsletterLoading"
+                  :disabled="newsletterLoading"
                   @click="handleNewsletterSubmit"
                 />
               </template>
@@ -185,18 +187,61 @@ withDefaults(defineProps<Props>(), {
   mobileLayout: 'accordion'
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { track } = useTracking()
+const toast = useToast()
 
 const newsletterEmail = ref('')
+const newsletterLoading = ref(false)
 const openAccordions = ref<number[]>([])
 
-const handleNewsletterSubmit = () => {
-  if (newsletterEmail.value) {
+const handleNewsletterSubmit = async () => {
+  const email = newsletterEmail.value.trim()
+  if (!email || newsletterLoading.value) return
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email)) {
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: t('ui.footer.newsletter.invalidEmail'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
+    return
+  }
+
+  newsletterLoading.value = true
+  try {
+    await $fetch('/api/newsletter', {
+      method: 'POST',
+      body: { email, locale: locale.value }
+    })
+
     track('newsletter_subscription')
-    // TODO: Implement actual newsletter subscription
+
+    toast.add({
+      title: t('ui.footer.newsletter.success'),
+      description: t('ui.footer.newsletter.successDescription'),
+      color: 'success',
+      icon: 'i-lucide-check-circle'
+    })
+
     newsletterEmail.value = ''
+  } catch (error) {
+    const errorMessage =
+      error && typeof error === 'object' && 'data' in error
+        ? (error.data as { statusMessage?: string })?.statusMessage
+        : undefined
+
+    toast.add({
+      title: t('ui.forms.messages.error'),
+      description: errorMessage || t('ui.forms.messages.errorDescription'),
+      color: 'error',
+      icon: 'i-lucide-alert-circle'
+    })
+  } finally {
+    newsletterLoading.value = false
   }
 }
 

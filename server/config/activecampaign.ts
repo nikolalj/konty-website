@@ -4,22 +4,33 @@
 
 export const AC_CONFIG = {
   listId: {
-    masterContactList: 3
+    masterContactList: 3,
+    newsletter: 4
   },
   tags: {
     website_lead: 1,
     contact_form: 2,
     demo_lead: 3,
     '3m_free_campaign': 4,
-    beach_bar: 5 // Guessed — next sequential ID. Verify against AC once tag is created.
+    beach_bar: 5
   },
   fields: {
     businessType: 4,
     pricingPackage: 5,
     contactMessage: 6,
-    demoDatetime: 7
+    demoDatetime: 7,
+    newsletter: 8,
+    language: 9
   }
 } as const
+
+// Locale code (from i18n) → AC Language field option value
+export const LOCALE_TO_AC_LANGUAGE: Record<string, string> = {
+  rs: 'RS',
+  me: 'ME',
+  ba: 'BA',
+  us: 'US'
+}
 
 // Source-to-tag mapping
 export function getTagsForSource(source: string, campaignTag?: string): number[] {

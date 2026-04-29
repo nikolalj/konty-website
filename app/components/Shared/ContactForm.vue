@@ -227,10 +227,14 @@ const props = defineProps({
   product: {
     type: String as PropType<'retail' | 'hospitality' | undefined>,
     default: undefined
+  },
+  source: {
+    type: String,
+    default: 'website_lead'
   }
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
 const { selectedSubscription } = usePricingContactForm()
@@ -429,7 +433,8 @@ const onSubmit = async () => {
         startTime: slotDetails?.startTime,
         meetingDurationMs: slotDetails?.durationMs,
         meetingTimezone: slotDetails?.timezone,
-        source: 'contact_form'
+        source: props.source,
+        locale: locale.value
       }
     })
 

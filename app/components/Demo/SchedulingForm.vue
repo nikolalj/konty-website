@@ -180,7 +180,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
 
@@ -310,7 +310,8 @@ const onSubmit = async () => {
         startTime: slotDetails?.startTime,
         meetingDurationMs: slotDetails?.durationMs,
         meetingTimezone: slotDetails?.timezone,
-        source: 'demo_lead'
+        source: 'demo_lead',
+        locale: locale.value
       }
     })
 

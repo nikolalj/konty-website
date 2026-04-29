@@ -203,7 +203,7 @@ import { campaigns } from '~~/shared/config/campaigns'
 
 const campaign = campaigns['3m-free']!
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { track } = useTracking()
 const toast = useToast()
 
@@ -305,7 +305,8 @@ const onSubmit = async () => {
         industry: form.industry,
         message: campaign.campaignMessage,
         source: 'website_lead',
-        campaignTag: '3m_free_campaign'
+        campaignTag: '3m_free_campaign',
+        locale: locale.value
       }
     })
 

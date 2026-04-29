@@ -1,4 +1,4 @@
-import { AC_CONFIG, getTagsForSource } from '../config/activecampaign'
+import { AC_CONFIG, getTagsForSource, LOCALE_TO_AC_LANGUAGE } from '../config/activecampaign'
 
 interface ACContactSyncResponse {
   contact: {
@@ -26,6 +26,7 @@ export default defineEventHandler(async (event) => {
     meetingTimezone?: string
     source?: string
     campaignTag?: string
+    locale?: string
   }>(event)
 
   // Required fields validation - need name and at least email or phone
@@ -88,6 +89,13 @@ export default defineEventHandler(async (event) => {
       fieldValues.push({
         field: String(AC_CONFIG.fields.demoDatetime),
         value: body.preferredDateTime
+      })
+    }
+    const acLanguage = body.locale ? LOCALE_TO_AC_LANGUAGE[body.locale] : undefined
+    if (acLanguage) {
+      fieldValues.push({
+        field: String(AC_CONFIG.fields.language),
+        value: acLanguage
       })
     }
 

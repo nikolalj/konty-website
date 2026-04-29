@@ -11,7 +11,7 @@
     <LazyAboutTeamSection hydrate-on-visible />
 
     <!-- Interactive components - hydrate on visibility for better UX -->
-    <LazySharedContactForm variant="alt" hydrate-on-visible />
+    <LazySharedContactForm variant="alt" source="contact_form" hydrate-on-visible />
   </div>
 </template>
 
