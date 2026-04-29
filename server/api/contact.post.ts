@@ -29,23 +29,19 @@ export default defineEventHandler(async (event) => {
     locale?: string
   }>(event)
 
-  // Required fields validation - need name and at least email or phone
-  if (!body.name || (!body.email && !body.phone)) {
+  if (!body.name || !body.email) {
     throw createError({
       statusCode: 400,
       statusMessage: 'Missing required fields'
     })
   }
 
-  // Email format validation (only if provided)
-  if (body.email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(body.email)) {
-      throw createError({
-        statusCode: 400,
-        statusMessage: 'Invalid email format'
-      })
-    }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(body.email)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Invalid email format'
+    })
   }
 
   const apiUrl = config.activecampaignApiUrl as string

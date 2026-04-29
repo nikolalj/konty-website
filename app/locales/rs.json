@@ -1835,11 +1835,13 @@
             },
             "fields": {
               "name": "Vaše ime",
+              "email": "Email",
               "phone": "Telefon",
               "beachName": "Naziv plaže"
             },
             "placeholders": {
               "name": "Marko Marković",
+              "email": "vi@primer.com",
               "phone": "+381 60 123 4567",
               "beachName": "npr. Plaža Ada"
             },

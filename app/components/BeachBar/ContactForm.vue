@@ -20,6 +20,25 @@
       </div>
 
       <div>
+        <label for="bb-email" class="block text-sm font-medium text-gray-700 mb-1.5">
+          {{ t('pages.solutions.beachBar.final.form.fields.email') }}
+        </label>
+        <UInput
+          id="bb-email"
+          v-model="form.email"
+          class="w-full"
+          type="email"
+          :placeholder="t('pages.solutions.beachBar.final.form.placeholders.email')"
+          size="lg"
+          :error="!!errors.email"
+          @blur="validateEmail"
+        />
+        <p v-if="errors.email" class="mt-1 text-sm text-red-600">
+          {{ errors.email }}
+        </p>
+      </div>
+
+      <div>
         <label for="bb-phone" class="block text-sm font-medium text-gray-700 mb-1.5">
           {{ t('pages.solutions.beachBar.final.form.fields.phone') }}
         </label>
@@ -99,12 +118,14 @@ const toast = useToast()
 
 const form = reactive({
   name: '',
+  email: '',
   phone: '',
   beachName: ''
 })
 
 const errors = reactive({
   name: '',
+  email: '',
   phone: '',
   beachName: ''
 })
@@ -118,6 +139,20 @@ const validateName = () => {
     return false
   }
   errors.name = ''
+  return true
+}
+
+const validateEmail = () => {
+  if (!form.email.trim()) {
+    errors.email = t('ui.forms.errors.emailRequired')
+    return false
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(form.email)) {
+    errors.email = t('ui.forms.errors.emailInvalid')
+    return false
+  }
+  errors.email = ''
   return true
 }
 
@@ -147,9 +182,10 @@ const validateBeachName = () => {
 
 const validateForm = () => {
   const isNameValid = validateName()
+  const isEmailValid = validateEmail()
   const isPhoneValid = validatePhone()
   const isBeachValid = validateBeachName()
-  return isNameValid && isPhoneValid && isBeachValid
+  return isNameValid && isEmailValid && isPhoneValid && isBeachValid
 }
 
 const onSubmit = async () => {
@@ -161,8 +197,8 @@ const onSubmit = async () => {
       method: 'POST',
       body: {
         name: form.name,
+        email: form.email,
         phone: form.phone,
-        email: '',
         message: `Beach: ${form.beachName}`,
         source: 'beach_bar',
         locale: locale.value

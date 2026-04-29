@@ -1835,11 +1835,13 @@
             },
             "fields": {
               "name": "Vaše ime",
+              "email": "Email",
               "phone": "Telefon",
               "beachName": "Naziv plaže"
             },
             "placeholders": {
               "name": "Marko Marković",
+              "email": "vi@primjer.com",
               "phone": "+387 60 123 456",
               "beachName": "npr. Plaža Neum"
             },
