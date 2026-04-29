@@ -1851,8 +1851,7 @@
             "submit": "Send request",
             "success": {
               "title": "Thank you - we'll be in touch within 24h",
-              "message": "Your request has been received. The Konty team will contact you shortly.",
-              "viberCta": "Or contact us right away on Viber"
+              "message": "Your request has been received. The Konty team will contact you shortly."
             }
           }
         },

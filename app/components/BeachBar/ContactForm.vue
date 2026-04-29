@@ -108,13 +108,6 @@
       <p class="mt-2 text-sm text-gray-600">
         {{ t('pages.solutions.beachBar.final.form.success.message') }}
       </p>
-      <div class="mt-6">
-        <AppCTAButton
-          variant="beach-primary"
-          custom-class="w-full justify-center shadow-lg shadow-[#7360f2]/40"
-          :custom-label="t('pages.solutions.beachBar.final.form.success.viberCta')"
-        />
-      </div>
     </div>
   </div>
 </template>
