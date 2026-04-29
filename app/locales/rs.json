@@ -1841,7 +1841,7 @@
             },
             "placeholders": {
               "name": "Marko Marković",
-              "email": "vi@primer.com",
+              "email": "vi{'@'}primer.com",
               "phone": "+381 60 123 4567",
               "beachName": "npr. Plaža Ada"
             },

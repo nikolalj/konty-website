@@ -1841,7 +1841,7 @@
             },
             "placeholders": {
               "name": "Marko Marković",
-              "email": "vi@primjer.com",
+              "email": "vi{'@'}primjer.com",
               "phone": "+387 60 123 456",
               "beachName": "npr. Plaža Neum"
             },

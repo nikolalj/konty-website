@@ -1841,7 +1841,7 @@
             },
             "placeholders": {
               "name": "John Smith",
-              "email": "you@example.com",
+              "email": "you{'@'}example.com",
               "phone": "+382 67 123 456",
               "beachName": "e.g. Jaz Beach"
             },
