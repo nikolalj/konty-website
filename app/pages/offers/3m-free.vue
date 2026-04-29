@@ -116,7 +116,6 @@
                     class="block text-sm font-medium text-gray-700 mb-2"
                   >
                     {{ t('ui.forms.fields.email') }}
-                    <span class="text-gray-400">({{ t('ui.forms.optional') }})</span>
                   </label>
                   <UInput
                     id="promo-email"
@@ -269,8 +268,8 @@ const validatePhone = () => {
 
 const validateEmail = () => {
   if (!form.email.trim()) {
-    errors.email = ''
-    return true
+    errors.email = t('ui.forms.errors.emailRequired')
+    return false
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(form.email)) {
@@ -301,7 +300,7 @@ const onSubmit = async () => {
       body: {
         name: form.name,
         phone: form.phone,
-        email: form.email || undefined,
+        email: form.email,
         industry: form.industry,
         message: campaign.campaignMessage,
         source: 'website_lead',
