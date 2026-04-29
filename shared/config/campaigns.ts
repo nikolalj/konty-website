@@ -1,5 +1,5 @@
 // Campaign configuration
-// Each campaign has a unique ID, display name, HubSpot message identifier,
+// Each campaign has a unique ID, display name, campaign message,
 // tracking event name, and optional QR code redirects.
 //
 // To add a new campaign:
@@ -10,7 +10,7 @@
 export interface Campaign {
   id: string
   name: string
-  hubspotMessage: string
+  campaignMessage: string
   trackingEvent: string
   qrCodes?: Record<string, string>
 }
@@ -19,7 +19,7 @@ export const campaigns: Record<string, Campaign> = {
   '3m-free': {
     id: '3m-free',
     name: 'Sajam ugostiteljstva Knjaz 2026',
-    hubspotMessage: 'Sajam ugostiteljstva Knjaz 2026',
+    campaignMessage: 'Sajam ugostiteljstva Knjaz 2026',
     trackingEvent: '3m_free_form_submission',
     qrCodes: {
       special: '/me/offers/3m-free',

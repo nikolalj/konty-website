@@ -2,17 +2,16 @@ import type { DateValue } from '@internationalized/date'
 import { DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
 import { LOCALES } from '~/config/locale.config.mjs'
 
-interface HubSpotTimeSlot {
+interface CalendlyTimeSlot {
   startUtc: string
   endUtc: string
   durationMs: number
 }
 
-interface HubSpotAvailability {
-  slots?: HubSpotTimeSlot[]
+interface CalendlyAvailability {
+  slots?: CalendlyTimeSlot[]
   timezone?: string
   meetingDuration?: number | null
-  availableUserIds?: string[]
 }
 
 interface TimeOption {
@@ -23,20 +22,19 @@ interface TimeOption {
   durationMs?: number
 }
 
-export const useHubspotMeetings = () => {
+export const useCalendlyMeetings = () => {
   const { locale, t } = useI18n()
 
   const selectedDate = ref<DateValue>()
   const selectedTime = ref('')
   const minDate = today(getLocalTimeZone())
-  const availabilityData = ref<HubSpotAvailability | null>(null)
+  const availabilityData = ref<CalendlyAvailability | null>(null)
   const loadingAvailability = ref(false)
   const availabilityTimezone = ref<string>()
-  const availableUserIds = ref<string[]>([])
   const availabilityError = ref<string | null>(null)
 
-  // Map of available dates (YYYY-MM-DD -> HubSpotTimeSlot[])
-  const availableDatesMap = ref<Map<string, HubSpotTimeSlot[]>>(new Map())
+  // Map of available dates (YYYY-MM-DD -> CalendlyTimeSlot[])
+  const availableDatesMap = ref<Map<string, CalendlyTimeSlot[]>>(new Map())
 
   const hasLiveAvailability = computed(() => availableDatesMap.value.size > 0)
 
@@ -64,15 +62,15 @@ export const useHubspotMeetings = () => {
     })
   })
 
-  // Fetch HubSpot availability for next 14 days
+  // Fetch Calendly availability for next 14 days
   const fetchAvailability = async () => {
     loadingAvailability.value = true
     availabilityError.value = null
     try {
       availableDatesMap.value.clear()
 
-      const response = await $fetch<HubSpotAvailability>(
-        '/api/hubspot/availability',
+      const response = await $fetch<CalendlyAvailability>(
+        '/api/calendly/availability',
         {
           method: 'POST',
           body: {
@@ -83,7 +81,6 @@ export const useHubspotMeetings = () => {
 
       availabilityData.value = response
       availabilityTimezone.value = response.timezone
-      availableUserIds.value = response.availableUserIds || []
 
       const slots = response.slots || []
 
@@ -116,7 +113,7 @@ export const useHubspotMeetings = () => {
         }
       }
     } catch (error) {
-      console.error('Error fetching HubSpot availability:', error)
+      console.error('Error fetching Calendly availability:', error)
       // If error occurs, clear data to trigger fallback
       availabilityData.value = null
       availableDatesMap.value.clear()
@@ -126,11 +123,11 @@ export const useHubspotMeetings = () => {
     }
   }
 
-  // Check if date is unavailable based on HubSpot data
+  // Check if date is unavailable based on Calendly data
   const isDateUnavailable = (date: DateValue) => {
     // Disable past dates
-    const today = minDate
-    if (date.compare(today) < 0) {
+    const todayDate = minDate
+    if (date.compare(todayDate) < 0) {
       return true
     }
 
@@ -142,7 +139,7 @@ export const useHubspotMeetings = () => {
     return !dateKey || !availableDatesMap.value.has(dateKey)
   }
 
-  // Generate default time slots (9 AM to 5 PM, every hour) - fallback when no HubSpot data available
+  // Generate default time slots (9 AM to 5 PM, every hour) - fallback when no Calendly data available
   const generateDefaultTimeSlots = (): TimeOption[] => {
     const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
     const options: TimeOption[] = []
@@ -171,7 +168,7 @@ export const useHubspotMeetings = () => {
       return []
     }
 
-    // If no HubSpot data, generate default slots (9 AM - 5 PM, every hour)
+    // If no Calendly data, generate default slots (9 AM - 5 PM, every hour)
     if (!availabilityData.value || !hasLiveAvailability.value) {
       return generateDefaultTimeSlots()
     }
@@ -184,15 +181,15 @@ export const useHubspotMeetings = () => {
 
     const slotsForDate = availableDatesMap.value.get(dateStr)
 
-    // If no slots for this date, generate default
+    // If no slots for this date, return empty
     if (!slotsForDate || slotsForDate.length === 0) {
       return []
     }
 
-    // Map HubSpot available times to dropdown format
+    // Map Calendly available times to dropdown format
     const uses12Hour = currentLocale.value?.uses12HourFormat ?? false
 
-    return slotsForDate.map((slot: HubSpotTimeSlot) => {
+    return slotsForDate.map((slot: CalendlyTimeSlot) => {
       const isoTime = slot.startUtc
       const date = new Date(isoTime)
 
@@ -248,7 +245,7 @@ export const useHubspotMeetings = () => {
       return undefined
     }
 
-    // First, try to find the exact ISO time from HubSpot slot
+    // First, try to find the exact ISO time from Calendly slot
     const timeOption = availableTimeSlots.value.find(
       (opt) => opt.value === selectedTime.value
     )
@@ -290,25 +287,10 @@ export const useHubspotMeetings = () => {
       return undefined
     }
 
-    const endTime = option.endIso
-      ? option.endIso
-      : (() => {
-          const duration =
-            option.durationMs || availabilityData.value?.meetingDuration
-          if (!duration) {
-            return undefined
-          }
-          const endDate = new Date(startTime)
-          endDate.setTime(endDate.getTime() + duration)
-          return endDate.toISOString()
-        })()
-
     return {
       startTime,
-      endTime,
       durationMs: option.durationMs || availabilityData.value?.meetingDuration,
-      timezone: availabilityTimezone.value || getLocalTimeZone(),
-      likelyAvailableUserIds: availableUserIds.value
+      timezone: availabilityTimezone.value || getLocalTimeZone()
     }
   }
 
@@ -352,7 +334,6 @@ export const useHubspotMeetings = () => {
     resetDateTime,
 
     // Metadata
-    availabilityTimezone,
-    availableUserIds
+    availabilityTimezone
   }
 }

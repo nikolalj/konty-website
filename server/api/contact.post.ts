@@ -1,8 +1,13 @@
-interface HubSpotContactResponse {
-  id?: string
+import { AC_CONFIG, getTagsForSource } from '../config/activecampaign'
+
+interface ACContactSyncResponse {
+  contact: {
+    id: string
+  }
 }
 
-interface HubSpotScheduleResponse {
+interface CalendlyScheduleResponse {
+  success: boolean
   meetingId?: string
 }
 
@@ -17,10 +22,10 @@ export default defineEventHandler(async (event) => {
     subscription?: string
     preferredDateTime?: string
     startTime?: string
-    endTime?: string
     meetingDurationMs?: number
     meetingTimezone?: string
-    likelyAvailableUserIds?: string[]
+    source?: string
+    campaignTag?: string
   }>(event)
 
   // Required fields validation - need name and at least email or phone
@@ -42,12 +47,13 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  const accessToken = config.hubspotAccessToken
+  const apiUrl = config.activecampaignApiUrl as string
+  const apiKey = config.activecampaignApiKey as string
 
-  if (!accessToken) {
+  if (!apiUrl || !apiKey) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'HubSpot configuration is missing'
+      statusMessage: 'ActiveCampaign configuration is missing'
     })
   }
 
@@ -57,108 +63,100 @@ export default defineEventHandler(async (event) => {
     const firstName = nameParts[0] || body.name
     const lastName = nameParts.slice(1).join(' ') || ''
 
-    const contactProperties: Record<string, string> = {
-      firstname: firstName,
-      lastname: lastName
-    }
-
-    if (body.email) {
-      contactProperties.email = body.email
-    }
-    if (body.phone) {
-      contactProperties.phone = body.phone
-    }
+    // Build custom field values
+    const fieldValues: Array<{ field: string; value: string }> = []
 
     if (body.industry) {
-      contactProperties.industry = body.industry
-    }
-
-    const messageSections: string[] = []
-    if (body.message) {
-      messageSections.push(body.message)
-    }
-    if (body.preferredDateTime) {
-      messageSections.push(`Preferred meeting time: ${body.preferredDateTime}`)
+      fieldValues.push({
+        field: String(AC_CONFIG.fields.businessType),
+        value: body.industry
+      })
     }
     if (body.subscription) {
-      messageSections.push(`Selected subscription: ${body.subscription}`)
+      fieldValues.push({
+        field: String(AC_CONFIG.fields.pricingPackage),
+        value: body.subscription
+      })
+    }
+    if (body.message) {
+      fieldValues.push({
+        field: String(AC_CONFIG.fields.contactMessage),
+        value: body.message
+      })
+    }
+    if (body.preferredDateTime) {
+      fieldValues.push({
+        field: String(AC_CONFIG.fields.demoDatetime),
+        value: body.preferredDateTime
+      })
     }
 
-    if (messageSections.length > 0) {
-      contactProperties.message = messageSections.join('\n\n')
-    }
-
-    // Create or update contact in HubSpot
-    const contactPayload = {
-      properties: contactProperties
-    }
-
-    const contactResponse = await $fetch<HubSpotContactResponse>(
-      'https://api.hubapi.com/crm/v3/objects/contacts',
+    // Step 1: Upsert contact via ActiveCampaign sync endpoint
+    const contactResponse = await $fetch<ACContactSyncResponse>(
+      `${apiUrl}/api/3/contact/sync`,
       {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${accessToken}`,
+          'Api-Token': apiKey,
           'Content-Type': 'application/json'
         },
-        body: contactPayload
+        body: {
+          contact: {
+            email: body.email,
+            firstName,
+            lastName,
+            phone: body.phone,
+            fieldValues
+          }
+        }
       }
-    ).catch(async (error) => {
-      // If contact exists (409), try to find and update it
-      if (error.statusCode === 409) {
-        // Search for existing contact by email or phone
-        const searchFilter = body.email
-          ? { propertyName: 'email', operator: 'EQ', value: body.email }
-          : { propertyName: 'phone', operator: 'EQ', value: body.phone! }
+    )
 
-        const searchResponse = await $fetch<{
-          results?: Array<{ id: string }>
-        }>(`https://api.hubapi.com/crm/v3/objects/contacts/search`, {
+    const contactId = contactResponse.contact.id
+
+    // Step 2: Subscribe to Master Contact List
+    await $fetch(`${apiUrl}/api/3/contactLists`, {
+      method: 'POST',
+      headers: {
+        'Api-Token': apiKey,
+        'Content-Type': 'application/json'
+      },
+      body: {
+        contactList: {
+          list: AC_CONFIG.listId.masterContactList,
+          contact: contactId,
+          status: 1
+        }
+      }
+    })
+
+    // Step 3: Add tags based on source
+    const source = body.source || 'website_lead'
+    const tagIds = getTagsForSource(source, body.campaignTag)
+
+    await Promise.all(
+      tagIds.map((tagId: number) =>
+        $fetch(`${apiUrl}/api/3/contactTags`, {
           method: 'POST',
           headers: {
-            Authorization: `Bearer ${accessToken}`,
+            'Api-Token': apiKey,
             'Content-Type': 'application/json'
           },
           body: {
-            filterGroups: [
-              {
-                filters: [searchFilter]
-              }
-            ]
+            contactTag: {
+              contact: contactId,
+              tag: tagId
+            }
           }
         })
+      )
+    )
 
-        const contactId = searchResponse?.results?.[0]?.id
-
-        if (contactId) {
-          // Update existing contact
-          return await $fetch<HubSpotContactResponse>(
-            `https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`,
-            {
-              method: 'PATCH',
-              headers: {
-                Authorization: `Bearer ${accessToken}`,
-                'Content-Type': 'application/json'
-              },
-              body: contactPayload
-            }
-          )
-        }
-      }
-      throw error
-    })
-
-    // Schedule meeting if time slot was selected
-    let meetingResponse: HubSpotScheduleResponse | undefined
-    const hasSchedulingData =
-      body.startTime &&
-      (body.meetingDurationMs || body.endTime) &&
-      body.likelyAvailableUserIds &&
-      body.likelyAvailableUserIds.length > 0
-
-    if (hasSchedulingData) {
-      meetingResponse = await $fetch<HubSpotScheduleResponse>(
-        '/api/hubspot/schedule',
+    // Step 4: Schedule meeting if time slot was selected
+    let meetingResponse: CalendlyScheduleResponse | undefined
+    if (body.startTime && body.email) {
+      meetingResponse = await $fetch<CalendlyScheduleResponse>(
+        '/api/calendly/schedule',
         {
           method: 'POST',
           body: {
@@ -167,38 +165,33 @@ export default defineEventHandler(async (event) => {
             lastName,
             phone: body.phone,
             startTime: body.startTime,
-            endTime: body.endTime,
-            duration: body.meetingDurationMs,
-            timezone: body.meetingTimezone,
-            likelyAvailableUserIds: body.likelyAvailableUserIds
+            timezone: body.meetingTimezone
           }
         }
       )
     }
 
-    console.log('Contact form submission to HubSpot:', {
-      contactId: contactResponse?.id,
-      meetingId: meetingResponse?.meetingId,
+    console.log('Contact form submission to ActiveCampaign:', {
+      contactId,
+      source,
+      tags: tagIds,
+      meetingScheduled: !!meetingResponse?.success,
       timestamp: new Date().toISOString()
     })
 
     return {
       success: true,
       message: 'Contact form submitted successfully',
-      contactId: contactResponse?.id,
-      meetingScheduled: !!meetingResponse
+      contactId,
+      meetingScheduled: !!meetingResponse?.success
     }
   } catch (error) {
-    console.error('HubSpot Contact API Error:', error)
+    console.error('ActiveCampaign Contact API Error:', error)
 
-    // Determine if it's a validation error from HubSpot (e.g., invalid email)
-    const hubspotMessage = (error as { data?: { message?: string } })?.data?.message || ''
-    const isValidationError = hubspotMessage.includes('INVALID_EMAIL') || hubspotMessage.includes('Property values were not valid')
-    const statusCode = isValidationError
-      ? 400
-      : (error as { statusCode?: number })?.statusCode ||
-        (error as { response?: { status?: number } })?.response?.status ||
-        500
+    const statusCode =
+      (error as { statusCode?: number })?.statusCode ||
+      (error as { response?: { status?: number } })?.response?.status ||
+      500
 
     throw createError({
       statusCode,

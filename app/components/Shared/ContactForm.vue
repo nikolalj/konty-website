@@ -235,7 +235,6 @@ const { track } = useTracking()
 const toast = useToast()
 const { selectedSubscription } = usePricingContactForm()
 
-// Use HubSpot meetings composable
 const {
   selectedDate,
   selectedTime,
@@ -248,7 +247,7 @@ const {
   getPreferredDateTimeISO,
   getSelectedSlotDetails,
   resetDateTime
-} = useHubspotMeetings()
+} = useCalendlyMeetings()
 
 const form = reactive({
   name: '',
@@ -428,10 +427,9 @@ const onSubmit = async () => {
         subscription: form.subscription,
         preferredDateTime,
         startTime: slotDetails?.startTime,
-        endTime: slotDetails?.endTime,
         meetingDurationMs: slotDetails?.durationMs,
         meetingTimezone: slotDetails?.timezone,
-        likelyAvailableUserIds: slotDetails?.likelyAvailableUserIds
+        source: 'contact_form'
       }
     })
 

@@ -338,9 +338,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     env: process.env.APP_ENV,
-    hubspotAccessToken: process.env.HUBSPOT_ACCESS_TOKEN,
-    hubspotClientId: process.env.HUBSPOT_CLIENT_ID,
-    hubspotMeetingLinkSlug: process.env.HUBSPOT_MEETING_LINK_SLUG,
+    activecampaignApiUrl: process.env.ACTIVECAMPAIGN_API_URL,
+    activecampaignApiKey: process.env.ACTIVECAMPAIGN_API_KEY,
+    calendlyAccessToken: process.env.CALENDLY_ACCESS_TOKEN,
+    calendlyEventTypeUri: process.env.CALENDLY_EVENT_TYPE_URI,
 
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL

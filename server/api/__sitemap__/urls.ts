@@ -39,7 +39,7 @@ export default defineSitemapEventHandler(() => {
     '/blog': '2025-12-12',
 
     // Offers
-    '/offers/3m-free': '2026-03-09',
+    '/offers/3m-free': '2026-04-17',
 
     // Legal
     '/privacy': '2025-12-25',
