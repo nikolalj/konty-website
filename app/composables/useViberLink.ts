@@ -6,14 +6,31 @@ export const useViberLink = () => {
     t('data.company.contact.phone').replace(/[\s()-]/g, '')
   )
 
-  // viber://chat?number=+E164 (with "+" encoded as %2B) is the format that
-  // works across clients: desktop Viber opens a chat directly; mobile Viber
-  // opens the contact card from which the user taps "Send message". The
-  // contact?number= action shows "Request unavailable" on desktop, so don't
-  // use it.
-  const viberLink = computed(
-    () => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`
-  )
+  const encodedNumber = computed(() => encodeURIComponent(phoneNumber.value))
 
-  return { phoneNumber, viberLink }
+  // Default href and desktop target. Viber Desktop opens a chat directly;
+  // Viber Mobile responds with "Request unavailable" for chat?number= and
+  // requires contact?number= instead — handled by buildViberClickHandler.
+  // Background: there is no documented Viber deep-link scheme that opens a
+  // chat with an arbitrary phone number on mobile; viber://pa?chatURI= is
+  // the only one-tap-to-chat path and requires a Viber Small Business
+  // Account (free; separate identity from the personal phone number).
+  const viberLink = computed(() => `viber://chat?number=${encodedNumber.value}`)
+
+  const viberLinkMobile = computed(() => `viber://contact?number=${encodedNumber.value}`)
+
+  // Click handler that swaps to the mobile URL when the device looks mobile.
+  // Use as @click on the <a href={viberLink}>; it preventDefaults and
+  // navigates to the mobile URL on touch devices.
+  const buildViberClickHandler = () => (e: MouseEvent) => {
+    if (typeof window === 'undefined') return
+    const isMobile =
+      window.matchMedia?.('(pointer: coarse)').matches
+      || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    if (!isMobile) return
+    e.preventDefault()
+    window.location.href = viberLinkMobile.value
+  }
+
+  return { phoneNumber, viberLink, viberLinkMobile, buildViberClickHandler }
 }

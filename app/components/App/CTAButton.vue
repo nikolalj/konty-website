@@ -81,7 +81,8 @@ const props = defineProps({
 
 const isExternal = computed(() => !props.scrollTarget && (props.external || props.variant === 'beach-primary'))
 
-const { viberLink } = useViberLink()
+const { viberLink, buildViberClickHandler } = useViberLink()
+const handleViberClick = buildViberClickHandler()
 
 const buttonTo = computed(() => {
   if (props.scrollTarget) return undefined
@@ -109,9 +110,14 @@ const getIcon = computed(() => {
   return 'i-lucide-mail'
 })
 
-function handleClick() {
+function handleClick(e: MouseEvent) {
   if (props.section && props.variant === 'primary') {
     track('get_a_demo_cta', { location: props.section })
+  }
+
+  // Mobile Viber rejects chat?number=; rewrite to contact?number= on click.
+  if (props.variant === 'beach-primary') {
+    handleViberClick(e)
   }
 
   if (props.scrollTarget && typeof window !== 'undefined') {
