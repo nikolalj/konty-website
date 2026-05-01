@@ -1614,6 +1614,9 @@
         }
       },
       "beachBar": {
+        "headerCta": {
+          "viber": "Message on Viber"
+        },
         "hero": {
           "badge": "New for the 2026 season",
           "title": "POS for beach bars that speeds up service and clears the queues",

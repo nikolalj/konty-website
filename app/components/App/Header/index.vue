@@ -120,21 +120,22 @@
           variant="beach-secondary"
           scroll-target="#beach-contact"
           section="header"
-          class="dark whitespace-nowrap hidden sm:inline-flex"
+          class="dark hidden sm:inline-flex"
           no-icon
         />
-        <!-- "Pišite nam na Viber": mobile (no icon) -->
+        <!-- Mobile: short Viber label, no icon -->
         <AppCTAButton
           variant="beach-primary"
           section="header"
-          class="dark whitespace-nowrap sm:hidden"
+          class="dark sm:hidden"
+          :custom-label="t('pages.solutions.beachBar.headerCta.viber')"
           no-icon
         />
-        <!-- "Pišite nam na Viber": desktop (with icon) -->
+        <!-- Desktop: full Viber label with icon -->
         <AppCTAButton
           variant="beach-primary"
           section="header"
-          class="dark whitespace-nowrap hidden sm:inline-flex"
+          class="dark hidden sm:inline-flex"
         />
       </template>
       <template v-else>

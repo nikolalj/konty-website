@@ -1614,6 +1614,9 @@
         }
       },
       "beachBar": {
+        "headerCta": {
+          "viber": "Pišite na Viber"
+        },
         "hero": {
           "badge": "Novo za sezonu 2026",
           "title": "POS za plažne barove koji ubrzava uslugu i smanjuje gužve",
