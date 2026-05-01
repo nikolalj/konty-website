@@ -1,18 +1,18 @@
 export const useViberLink = () => {
   const { t } = useI18n()
 
-  // Digits only with country code, no "+".
+  // Keep the "+" so the number stays in E.164 form for the deep link.
   const phoneNumber = computed(() =>
-    t('data.company.contact.phone').replace(/\D/g, '')
+    t('data.company.contact.phone').replace(/[\s()-]/g, '')
   )
 
-  // viber://contact?number=+E164 opens the contact card on mobile Viber and
-  // lets the user start a chat from there. Mobile Viber's chat?number= action
-  // throws "request unavailable" for numbers not already in the user's contacts;
-  // contact?number= works for non-contacts. Encoding the "+" as %2B avoids
-  // form-urlencoded "+ → space" quirks across clients.
+  // viber://chat?number=+E164 (with "+" encoded as %2B) is the format that
+  // works across clients: desktop Viber opens a chat directly; mobile Viber
+  // opens the contact card from which the user taps "Send message". The
+  // contact?number= action shows "Request unavailable" on desktop, so don't
+  // use it.
   const viberLink = computed(
-    () => `viber://contact?number=${encodeURIComponent('+' + phoneNumber.value)}`
+    () => `viber://chat?number=${encodeURIComponent(phoneNumber.value)}`
   )
 
   return { phoneNumber, viberLink }
