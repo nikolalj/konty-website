@@ -1,5 +1,5 @@
 <template>
-  <section id="beach-contact" class="relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 py-20 lg:py-28">
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 py-20 lg:py-28">
     <!-- Decorative elements -->
     <div class="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-white/5" />
     <div class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/[0.04]" />
@@ -45,7 +45,7 @@
           </div>
 
           <!-- Right: Form track — `light` locks the subtree to light mode regardless of theme, matching /demo form behavior -->
-          <div class="light rounded-2xl bg-white p-6 shadow-xl sm:p-8">
+          <div id="beach-contact" class="light scroll-mt-28 rounded-2xl bg-white p-6 shadow-xl sm:p-8">
             <BeachBarContactForm />
           </div>
         </div>

@@ -115,7 +115,7 @@
 
     <template #right>
       <template v-if="isBeachBarPage">
-        <AppCTAButton variant="beach-secondary" section="header" class="dark" no-icon />
+        <AppCTAButton variant="beach-secondary" scroll-target="#beach-contact" section="header" class="dark" no-icon />
         <AppCTAButton variant="beach-primary" section="header" class="dark" />
       </template>
       <template v-else>
