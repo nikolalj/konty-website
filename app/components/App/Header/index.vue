@@ -115,8 +115,27 @@
 
     <template #right>
       <template v-if="isBeachBarPage">
-        <AppCTAButton variant="beach-secondary" scroll-target="#beach-contact" section="header" class="dark" no-icon />
-        <AppCTAButton variant="beach-primary" section="header" class="dark" />
+        <!-- "Zakažite demo": desktop only -->
+        <AppCTAButton
+          variant="beach-secondary"
+          scroll-target="#beach-contact"
+          section="header"
+          class="dark whitespace-nowrap hidden sm:inline-flex"
+          no-icon
+        />
+        <!-- "Pišite nam na Viber": mobile (no icon) -->
+        <AppCTAButton
+          variant="beach-primary"
+          section="header"
+          class="dark whitespace-nowrap sm:hidden"
+          no-icon
+        />
+        <!-- "Pišite nam na Viber": desktop (with icon) -->
+        <AppCTAButton
+          variant="beach-primary"
+          section="header"
+          class="dark whitespace-nowrap hidden sm:inline-flex"
+        />
       </template>
       <template v-else>
         <AppCTAButton variant="secondary" section="header" class="dark" no-icon />

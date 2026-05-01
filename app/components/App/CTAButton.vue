@@ -115,9 +115,37 @@ function handleClick() {
   }
 
   if (props.scrollTarget && typeof window !== 'undefined') {
-    const el = document.querySelector(props.scrollTarget)
+    const el = document.querySelector<HTMLElement>(props.scrollTarget)
     if (!el) return
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+    // Use layout offset (offsetTop walk) instead of getBoundingClientRect — rects
+    // include ancestor `transform`s (UIAppear uses translate3d), but offsets are
+    // pure layout, so they stay stable regardless of animation state.
+    // Header is ~104px expanded / ~64px collapsed; 96px clears both with a buffer.
+    const HEADER_OFFSET = 96
+    const computeTarget = (): number => {
+      let top = 0
+      let cur: HTMLElement | null = el
+      while (cur) {
+        top += cur.offsetTop
+        cur = cur.offsetParent as HTMLElement | null
+      }
+      return Math.max(0, top - HEADER_OFFSET)
+    }
+
+    window.scrollTo({ top: computeTarget(), behavior: 'smooth' })
+
+    // The page above the target can shift after the click — lazy-loaded images
+    // (e.g. the hero AVIF) reserve no height until they decode, and lazy-hydrated
+    // sections can change layout. Smooth scroll then lands above the form and a
+    // second click "fixes" it. Re-measure after the scroll has settled and
+    // re-aim if the target moved.
+    setTimeout(() => {
+      const target = computeTarget()
+      if (Math.abs(window.scrollY - target) > 4) {
+        window.scrollTo({ top: target, behavior: 'smooth' })
+      }
+    }, 700)
 
     // Skip auto-focus on touch devices to avoid mobile keyboard popping up
     const isTouch = window.matchMedia('(pointer: coarse)').matches
