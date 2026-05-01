@@ -115,12 +115,12 @@
 
     <template #right>
       <template v-if="isBeachBarPage">
-        <!-- "Zakažite demo": desktop only -->
+        <!-- "Zakažite demo": all viewports -->
         <AppCTAButton
           variant="beach-secondary"
           scroll-target="#beach-contact"
           section="header"
-          class="dark hidden sm:inline-flex"
+          class="dark"
           no-icon
         />
         <!-- Mobile: short Viber label, no icon -->
