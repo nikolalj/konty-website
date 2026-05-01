@@ -87,31 +87,6 @@
       }
     },
     "demo": {
-      "benefits": {
-        "benefit1": {
-          "description": "We show only the features that solve your specific problems",
-          "title": "Personalized feature demonstration"
-        },
-        "benefit2": {
-          "description": "Demo is focused on your business type - restaurant, café, store, or other",
-          "title": "Tailored to your industry and business type"
-        },
-        "benefit3": {
-          "description": "Short, efficient meeting that respects your time",
-          "title": "Duration: approximately 30 minutes"
-        },
-        "benefit4": {
-          "description": "Direct communication with our expert - ask anything you're interested in",
-          "title": "Live Q&A"
-        },
-        "benefit5": {
-          "description": "If you're interested, we can plan implementation and transition right away",
-          "title": "Discuss next steps immediately"
-        },
-        "details": "Online (Zoom/Meet) or phone • English or local language • Weekdays 9am-6pm",
-        "subtitle": "Get a personalized demonstration tailored to your needs",
-        "title": "What to expect from the demo"
-      },
       "categorySelector": {
         "features": {
           "analytics": "Advanced analytics",
@@ -1707,8 +1682,8 @@
                   "description": "Automatically adjusted prices by date"
                 },
                 "language": {
-                  "title": "Serbian and English",
-                  "description": "Local and foreign tourists - everyone in their own language"
+                  "title": "Local and foreign tourists",
+                  "description": "Everyone books in their own language"
                 }
               }
             }

@@ -87,31 +87,6 @@
       }
     },
     "demo": {
-      "benefits": {
-        "benefit1": {
-          "description": "Pokazujemo samo one funkcije koje rješavaju vaše konkretne probleme",
-          "title": "Personalizirana demonstracija funkcionalnosti"
-        },
-        "benefit2": {
-          "description": "Demo je fokusiran na vaš tip poslovanja - restoran, kafić, prodavnica ili drugi objekat",
-          "title": "Prilagođeno vašoj industriji i tipu objekta"
-        },
-        "benefit3": {
-          "description": "Kratak, efikasan sastanak koji poštuje vaše vrijeme",
-          "title": "Trajanje: cca 30 minuta"
-        },
-        "benefit4": {
-          "description": "Direktna komunikacija sa našim ekspertom - pitajte bilo šta što vas interesuje",
-          "title": "Pitanja i odgovori uživo"
-        },
-        "benefit5": {
-          "description": "Ako ste zainteresovani, možemo odmah planirati implementaciju i prelazak",
-          "title": "Mogućnost da odmah dogovorite iduće korake"
-        },
-        "details": "Online (Zoom/Meet) ili telefonski • Srpski ili engleski • Radnim danima 9-18h",
-        "subtitle": "Dobijate personalizovanu demonstraciju prilagođenu vašim potrebama",
-        "title": "Šta očekivati od demo sastanka"
-      },
       "categorySelector": {
         "features": {
           "analytics": "Napredna analitika",
@@ -191,7 +166,7 @@
           "title": "Online video poziv"
         },
         "language": {
-          "description": "Srpski, crnogorski, bosanski ili engleski - kako ti odgovara.",
+          "description": "Demo može biti i na engleskom jeziku. Kako tebi odgovara.",
           "title": "Na tvom jeziku"
         },
         "participants": {
@@ -1679,10 +1654,22 @@
               "description": "Vaše ležaljke dobijaju sopstveni sajt na plazni.bar. Turisti biraju ležaljku na interaktivnoj mapi, rezervišu i plaćaju online. Vi dobijate svoju punu cijenu - proviziju plaća gost.",
               "features": ["Interaktivna mapa", "0 EUR za vas", "Potvrda emailom", "Kalendar"],
               "checklist": {
-                "map": { "title": "Interaktivna mapa plaže", "description": "Gost vidi tačno koju ležaljku rezerviše" },
-                "email": { "title": "Automatska potvrda emailom", "description": "Gost dobija potvrdu, vi dobijate rezervaciju na POS-u" },
-                "pricing": { "title": "Sezonske i vikend cijene", "description": "Automatski prilagođene cijene po datumu" },
-                "language": { "title": "Srpski i engleski", "description": "Domaći i strani turisti - svi na svom jeziku" }
+                "map": {
+                  "title": "Interaktivna mapa plaže",
+                  "description": "Gost vidi tačno koju ležaljku rezerviše"
+                },
+                "email": {
+                  "title": "Automatska potvrda emailom",
+                  "description": "Gost dobija potvrdu, vi dobijate rezervaciju na POS-u"
+                },
+                "pricing": {
+                  "title": "Sezonske i vikend cijene",
+                  "description": "Automatski prilagođene cijene po datumu"
+                },
+                "language": {
+                  "title": "Domaći i strani turisti",
+                  "description": "Svi rezervišu na svom jeziku"
+                }
               }
             }
           },
